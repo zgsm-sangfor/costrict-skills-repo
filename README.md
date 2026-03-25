@@ -1,4 +1,4 @@
-# Coding Hub
+# Costrict Skills Repo
 
 Coding 开发资源的一站式索引。聚合 1200+ 精选 MCP Servers、Skills、Rules、Prompts，覆盖前后端、DevOps、安全、AI/ML 等 11 个分类。
 
@@ -21,13 +21,13 @@ costrict-skills-repo/
 ├── platforms/                # 各平台 Skill + 子命令
 │   ├── claude-code/          # Claude Code 格式
 │   │   ├── skills/coding-hub/SKILL.md
-│   │   └── commands/coding-hub/{search,browse,recommend,install}.md
+│   │   └── commands/coding-hub/{search,browse,recommend,install,update}.md
 │   ├── opencode/             # Opencode 格式
 │   │   ├── skills/coding-hub/SKILL.md
-│   │   └── command/coding-hub-{search,browse,recommend,install}.md
+│   │   └── command/coding-hub-{search,browse,recommend,install,update}.md
 │   └── costrict/             # Costrict 格式
 │       ├── skills/coding-hub/SKILL.md
-│       └── commands/coding-hub/coding-hub-{search,browse,recommend,install}.md
+│       └── commands/coding-hub/coding-hub-{search,browse,recommend,install,update}.md
 │
 ├── scripts/                  # 数据同步脚本
 │   ├── sync_mcp.py           # 从上游同步 MCP
@@ -95,6 +95,7 @@ cp platforms/claude-code/commands/coding-hub/*.md .claude/commands/coding-hub/
 - `/coding-hub:browse [分类]` — 浏览分类
 - `/coding-hub:recommend` — 基于当前项目推荐
 - `/coding-hub:install <名称>` — 安装资源
+- `/coding-hub:update` — 更新到最新版本
 
 ### Opencode
 
@@ -113,6 +114,7 @@ cp platforms/opencode/command/*.md .opencode/command/
 - `/coding-hub-browse [分类]` — 浏览分类
 - `/coding-hub-recommend` — 基于当前项目推荐
 - `/coding-hub-install <名称>` — 安装资源
+- `/coding-hub-update` — 更新到最新版本
 
 ### Costrict
 
@@ -131,6 +133,18 @@ cp platforms/costrict/commands/coding-hub/*.md .cospec/coding-hub/commands/
 - `/coding-hub-browse [分类]` — 浏览分类
 - `/coding-hub-recommend` — 基于当前项目推荐
 - `/coding-hub-install <名称>` — 安装资源
+- `/coding-hub-update` — 更新到最新版本
+
+### 更新
+
+安装后如需更新到最新版本，运行对应平台的更新命令即可：
+
+```
+/coding-hub:update              # Claude Code
+/coding-hub-update              # Opencode / Costrict
+```
+
+更新命令会从 GitHub 拉取最新的 skill 和子命令文件覆盖本地。
 
 ### 验证
 
