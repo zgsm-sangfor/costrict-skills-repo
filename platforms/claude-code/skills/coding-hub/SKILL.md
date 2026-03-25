@@ -3,7 +3,7 @@ name: coding-hub
 description: >
   Coding 资源一站式搜索与安装。聚合 MCP Servers、Skills、Rules、Prompts 索引，
   支持搜索、分类浏览、项目推荐、一键安装。
-  触发: /coding-hub search <query> | browse [category] | recommend | install <name> | uninstall <name>
+  触发: /coding-hub search <query> | browse [category] | recommend | install <name> | uninstall <name> | update
 ---
 
 # Coding Hub
