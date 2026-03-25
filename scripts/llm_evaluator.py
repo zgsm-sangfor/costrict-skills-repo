@@ -278,6 +278,86 @@ def _top_n(evaluated: list[dict]) -> list[dict]:
     return result
 
 
+def translate_descriptions(entries: list[dict]):
+    """Translate descriptions to Chinese for entries missing description_zh.
+
+    Modifies entries in-place. Uses cache to avoid re-translating.
+    Designed for Tier 1 skills that skip full LLM evaluation.
+    """
+    if not LLM_BASE_URL or not LLM_API_KEY:
+        return
+
+    cache = load_cache()
+    needs_translate = []
+
+    for e in entries:
+        cached = cache.get(e["id"])
+        if cached and cached.get("description_zh"):
+            e["description_zh"] = cached["description_zh"]
+        else:
+            needs_translate.append(e)
+
+    if not needs_translate:
+        return
+
+    logger.info(f"Translating {len(needs_translate)} Tier 1 descriptions to Chinese")
+
+    # Single LLM call — Tier 1 is small (~30 entries)
+    items = []
+    for s in needs_translate:
+        name = _sanitize_field(s["name"], max_len=100)
+        desc = _sanitize_field(s["description"], max_len=300)
+        items.append(f"- name: {name}\n  description: {desc}")
+    user_prompt = "Translate each description to concise Chinese (one sentence, max 50 chars):\n\n" + "\n".join(items)
+
+    url = f"{LLM_BASE_URL.rstrip('/')}/chat/completions"
+    payload = {
+        "model": LLM_MODEL,
+        "messages": [
+            {"role": "system", "content": "You translate software tool descriptions to concise Chinese. "
+             "Respond ONLY with a JSON array. Each element: {\"name\": \"...\", \"description_zh\": \"...\"}"},
+            {"role": "user", "content": user_prompt},
+        ],
+        "temperature": 0.1,
+        "max_tokens": 4096,
+    }
+
+    data = json.dumps(payload).encode()
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {LLM_API_KEY}",
+    }
+    req = Request(url, data=data, headers=headers, method="POST")
+
+    try:
+        with urlopen(req, timeout=300) as resp:
+            result = json.loads(resp.read().decode())
+            content = result["choices"][0]["message"]["content"].strip()
+            if content.startswith("```"):
+                content = content.split("\n", 1)[1].rsplit("```", 1)[0]
+            translations = json.loads(content)
+    except Exception as e:
+        logger.warning(f"Tier 1 translation failed: {e}")
+        return
+
+    trans_map = {t["name"]: t["description_zh"] for t in translations
+                 if isinstance(t, dict) and "name" in t and "description_zh" in t}
+    now_iso = datetime.now().isoformat()
+
+    for e in needs_translate:
+        zh = trans_map.get(e["name"], "")
+        if zh:
+            e["description_zh"] = zh
+            # Store in cache (create or update entry)
+            if e["id"] not in cache:
+                cache[e["id"]] = {}
+            cache[e["id"]]["description_zh"] = zh
+            cache[e["id"]]["evaluated_at"] = now_iso
+
+    save_cache(cache)
+    logger.info(f"Translated {len(trans_map)}/{len(needs_translate)} descriptions")
+
+
 if __name__ == "__main__":
     # Test with sample data
     sample = [

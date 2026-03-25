@@ -13,7 +13,7 @@ from utils import (
     to_kebab_case, save_index, deduplicate, logger, list_repo_files,
 )
 from skill_registry import discover_skills
-from llm_evaluator import evaluate_skills
+from llm_evaluator import evaluate_skills, translate_descriptions
 
 CATALOG_DIR = os.path.join(os.path.dirname(__file__), "..", "catalog", "skills")
 TODAY = date.today().isoformat()
@@ -174,6 +174,9 @@ def sync():
     tier1_entries.extend(parse_anthropic_skills())
     tier1_entries.extend(parse_ai_agent_skills())
     logger.info(f"Tier 1 total: {len(tier1_entries)} skills")
+
+    # Translate Tier 1 descriptions to Chinese
+    translate_descriptions(tier1_entries)
 
     # === Tier 2: Registry discovery + two-phase filtering ===
     tier2_entries = []
