@@ -1,0 +1,185 @@
+{
+  "K-Dense-AI/claude-scientific-skills": {
+    "owner": "K-Dense-AI",
+    "name": "claude-scientific-skills",
+    "branch": "main",
+    "enabled": true
+  },
+  "Jeffallan/claude-skills": {
+    "owner": "Jeffallan",
+    "name": "claude-skills",
+    "branch": "main",
+    "enabled": true
+  },
+  "ComposioHQ/awesome-claude-skills": {
+    "owner": "ComposioHQ",
+    "name": "awesome-claude-skills",
+    "branch": "main",
+    "enabled": true
+  },
+  "PleasePrompto/notebooklm-skill": {
+    "owner": "PleasePrompto",
+    "name": "notebooklm-skill",
+    "branch": "main",
+    "enabled": true
+  },
+  "davila7/claude-code-templates": {
+    "owner": "davila7",
+    "name": "claude-code-templates",
+    "branch": "main",
+    "enabled": true
+  },
+  "MicrosoftDocs/mcp": {
+    "owner": "MicrosoftDocs",
+    "name": "mcp",
+    "branch": "main",
+    "enabled": true
+  },
+  "daymade/claude-code-skills": {
+    "owner": "daymade",
+    "name": "claude-code-skills",
+    "branch": "main",
+    "enabled": true
+  },
+  "bradleygolden/claude-marketplace-elixir": {
+    "owner": "bradleygolden",
+    "name": "claude-marketplace-elixir",
+    "branch": "main",
+    "enabled": true
+  },
+  "athola/claude-night-market": {
+    "owner": "athola",
+    "name": "claude-night-market",
+    "branch": "main",
+    "enabled": true
+  },
+  "adrianpuiu/claude-skills-marketplace": {
+    "owner": "adrianpuiu",
+    "name": "claude-skills-marketplace",
+    "branch": "main",
+    "enabled": true
+  },
+  "mrgoonie/claudekit-skills": {
+    "owner": "mrgoonie",
+    "name": "claudekit-skills",
+    "branch": "main",
+    "enabled": true
+  },
+  "czlonkowski/n8n-skills": {
+    "owner": "czlonkowski",
+    "name": "n8n-skills",
+    "branch": "main",
+    "enabled": true
+  },
+  "lackeyjb/playwright-skill": {
+    "owner": "lackeyjb",
+    "name": "playwright-skill",
+    "branch": "main",
+    "enabled": true
+  },
+  "BrownFineSecurity/iothackbot": {
+    "owner": "BrownFineSecurity",
+    "name": "iothackbot",
+    "branch": "master",
+    "enabled": true
+  },
+  "zechenzhangAGI/AI-research-SKILLs": {
+    "owner": "zechenzhangAGI",
+    "name": "AI-research-SKILLs",
+    "branch": "main",
+    "enabled": true
+  },
+  "OneWave-AI/claude-skills": {
+    "owner": "OneWave-AI",
+    "name": "claude-skills",
+    "branch": "main",
+    "enabled": true
+  },
+  "antvis/Infographic": {
+    "owner": "antvis",
+    "name": "Infographic",
+    "branch": "master",
+    "skillsPath": "./",
+    "enabled": true
+  },
+  "anthropics/claude-code": {
+    "owner": "anthropics",
+    "name": "claude-code",
+    "branch": "main",
+    "enabled": true
+  },
+  "weipanux/seo-geo-blog-writer": {
+    "owner": "weipanux",
+    "name": "seo-geo-blog-writer",
+    "branch": "main",
+    "enabled": true
+  },
+  "Prat011/awesome-llm-skills": {
+    "owner": "Prat011",
+    "name": "awesome-llm-skills",
+    "branch": "main",
+    "enabled": true
+  },
+  "bear2u/my-skills": {
+    "owner": "bear2u",
+    "name": "my-skills",
+    "branch": "main",
+    "enabled": true
+  },
+  "huggingface/skills": {
+    "owner": "huggingface",
+    "name": "skills",
+    "branch": "main",
+    "enabled": true
+  },
+  "CloudAI-X/claude-workflow-v2": {
+    "owner": "CloudAI-X",
+    "name": "claude-workflow-v2",
+    "branch": "main",
+    "enabled": true
+  },
+  "OthmanAdi/planning-with-files": {
+    "owner": "OthmanAdi",
+    "name": "planning-with-files",
+    "branch": "main",
+    "enabled": true
+  },
+  "kepano/obsidian-skills": {
+    "owner": "kepano",
+    "name": "obsidian-skills",
+    "branch": "main",
+    "enabled": true
+  },
+  "GBSOSS/skill-from-masters": {
+    "owner": "GBSOSS",
+    "name": "skill-from-masters",
+    "branch": "main",
+    "skillsPath": "./skill-from-masters",
+    "enabled": true
+  },
+  "iamzhihuix/happy-claude-skills": {
+    "owner": "iamzhihuix",
+    "name": "happy-claude-skills",
+    "branch": "main",
+    "enabled": true
+  },
+  "anthropics/claude-plugins-official": {
+    "owner": "anthropics",
+    "name": "claude-plugins-official",
+    "branch": "main",
+    "enabled": true
+  },
+  "nextlevelbuilder/ui-ux-pro-max-skill": {
+    "owner": "nextlevelbuilder",
+    "name": "ui-ux-pro-max-skill",
+    "branch": "main",
+    "enabled": true
+  },
+  "moltbot/skills": {
+    "owner": "moltbot",
+    "name": "skills",
+    "branch": "main",
+    "skillsPath": "/skills",
+    "enabled": true
+  }
+}

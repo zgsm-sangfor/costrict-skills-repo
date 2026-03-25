@@ -17,19 +17,20 @@ def merge():
     for resource_type in TYPES:
         type_dir = os.path.join(CATALOG_DIR, resource_type)
 
-        # Load auto-synced index
+        # Load auto-synced index (includes Tier 1 + Tier 2 for skills)
         index_path = os.path.join(type_dir, "index.json")
         entries = load_index(index_path)
         logger.info(f"Loaded {len(entries)} entries from {resource_type}/index.json")
         all_entries.extend(entries)
 
-        # Load curated entries (these take priority in dedup)
+        # Load curated entries (Tier 3 — lowest priority in dedup)
         curated_path = os.path.join(type_dir, "curated.json")
         curated = load_index(curated_path)
-        logger.info(f"Loaded {len(curated)} entries from {resource_type}/curated.json")
-        all_entries.extend(curated)
+        if curated:
+            logger.info(f"Loaded {len(curated)} entries from {resource_type}/curated.json")
+            all_entries.extend(curated)
 
-    # Deduplicate by source_url (later entries win, so curated overrides auto-synced)
+    # Deduplicate by source_url + id (earlier entries take priority: Tier 1 > Tier 2 > Tier 3)
     deduped = deduplicate(all_entries)
 
     # Sort by stars descending

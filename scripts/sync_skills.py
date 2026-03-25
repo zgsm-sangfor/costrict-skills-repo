@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sync skills from anthropics/skills + Ai-Agent-Skills."""
+"""Sync skills from Tier 1 (anthropics/skills + Ai-Agent-Skills) + Tier 2 (Registry)."""
 
 import os
 import re
@@ -10,8 +10,10 @@ from datetime import date
 sys.path.insert(0, os.path.dirname(__file__))
 from utils import (
     fetch_raw_content, github_api, categorize, extract_tags,
-    to_kebab_case, save_index, logger,
+    to_kebab_case, save_index, deduplicate, logger,
 )
+from skill_registry import discover_skills
+from llm_evaluator import evaluate_skills
 
 CATALOG_DIR = os.path.join(os.path.dirname(__file__), "..", "catalog", "skills")
 TODAY = date.today().isoformat()
@@ -144,12 +146,30 @@ def parse_ai_agent_skills() -> list:
 
 
 def sync():
-    all_entries = []
-    all_entries.extend(parse_anthropic_skills())
-    all_entries.extend(parse_ai_agent_skills())
+    # === Tier 1: Full inclusion, no filtering ===
+    tier1_entries = []
+    tier1_entries.extend(parse_anthropic_skills())
+    tier1_entries.extend(parse_ai_agent_skills())
+    logger.info(f"Tier 1 total: {len(tier1_entries)} skills")
+
+    # === Tier 2: Registry discovery + two-phase filtering ===
+    tier2_entries = []
+    try:
+        candidates = discover_skills(tier1_entries)
+        if candidates:
+            tier2_entries = evaluate_skills(candidates)
+            logger.info(f"Tier 2 total: {len(tier2_entries)} skills (after LLM evaluation)")
+    except Exception as e:
+        logger.error(f"Tier 2 registry sync failed: {e}")
+        logger.info("Tier 2 registry sync skipped, continuing with Tier 1 only")
+
+    # === Merge: Tier 1 takes priority ===
+    all_entries = tier1_entries + tier2_entries
+    all_entries = deduplicate(all_entries)
 
     output_path = os.path.join(CATALOG_DIR, "index.json")
     save_index(all_entries, output_path)
+    logger.info(f"Final skills count: {len(all_entries)} (Tier 1: {len(tier1_entries)}, Tier 2: {len(tier2_entries)})")
 
 
 if __name__ == "__main__":

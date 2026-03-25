@@ -123,6 +123,27 @@ CATEGORY_MAP = {
     "vscode": "tooling",
 }
 
+# Spam patterns for skill filtering (case-insensitive)
+SPAM_PATTERNS = [
+    "viral", "prompt-ready", "copy-paste", "click-bait",
+    "get-rich", "make-money",
+]
+
+# Non-coding categories to exclude from skill registry
+NON_CODING_CATEGORIES = [
+    "marketing", "brand", "branding", "raffle", "invoice",
+    "resume", "cover-letter", "social-media", "content-writing",
+    "seo", "creative", "media", "communication", "writing",
+]
+
+# Coding-related keywords for skill registry Phase 1 filtering
+SKILL_CODING_KEYWORDS = [
+    "code", "develop", "engineer", "debug", "test", "deploy",
+    "build", "compile", "lint", "refactor", "api", "database",
+    "git", "docker", "ci", "cd", "terminal", "cli", "shell",
+    "script", "framework", "library", "sdk", "mcp", "skill", "agent",
+]
+
 # Coding-related keywords for prompt filtering
 CODING_KEYWORDS = [
     "code", "coding", "developer", "development", "engineer", "engineering",
@@ -248,13 +269,22 @@ def extract_tags(name: str, description: str = "") -> list:
 
 
 def deduplicate(entries: list) -> list:
-    """Deduplicate entries by id, preferring the entry with more stars."""
-    seen = {}
+    """Deduplicate entries by source_url + id (dual key). Earlier entries take priority."""
+    seen_urls = {}  # source_url -> entry
+    seen_ids = {}   # id -> entry
+    result = []
     for entry in entries:
         eid = entry.get("id", "")
-        if eid not in seen or entry.get("stars", 0) > seen[eid].get("stars", 0):
-            seen[eid] = entry
-    return list(seen.values())
+        url = entry.get("source_url", "")
+        # Check both keys — any match means duplicate
+        if (url and url in seen_urls) or (eid and eid in seen_ids):
+            continue
+        if url:
+            seen_urls[url] = entry
+        if eid:
+            seen_ids[eid] = entry
+        result.append(entry)
+    return result
 
 
 def to_kebab_case(name: str) -> str:
