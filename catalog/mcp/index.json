@@ -27,7 +27,7 @@
     "type": "mcp",
     "description": "Official Microsoft Playwright MCP server, enabling LLMs to interact with web pages through structured accessibility snapshots",
     "source_url": "https://github.com/microsoft/playwright-mcp",
-    "stars": 29651,
+    "stars": 29652,
     "category": "testing",
     "tags": [
       "playwright"
@@ -983,7 +983,7 @@
     "type": "mcp",
     "description": "🎖️ 🦀 🏠 🍎 Local-first system capturing screen/audio with timestamped indexing, SQL/embedding storage, semantic search, LLM-powered history analysis, and event-triggered actions - enables building context-aware AI agents through a NextJS plugin ecosystem.",
     "source_url": "https://github.com/mediar-ai/screenpipe",
-    "stars": 17544,
+    "stars": 17549,
     "category": "frontend",
     "tags": [
       "nextjs"
@@ -1279,7 +1279,7 @@
     "type": "mcp",
     "description": "官方参考实现，使用 Puppeteer 进行浏览器自动化和网页抓取。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
-    "stars": 82023,
+    "stars": 82030,
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -1301,7 +1301,7 @@
     "type": "mcp",
     "description": "集成 Apify 平台 3000+ 云工具，用于网站、电商、社交媒体等数据提取。",
     "source_url": "https://github.com/apify/actors-mcp-server",
-    "stars": 957,
+    "stars": 958,
     "category": "backend",
     "tags": [],
     "tech_stack": [],
@@ -1345,7 +1345,7 @@
     "type": "mcp",
     "description": "使用 Firecrawl 提取网页数据，支持 JavaScript 渲染。",
     "source_url": "https://github.com/mendableai/firecrawl-mcp-server",
-    "stars": 5848,
+    "stars": 5850,
     "category": "frontend",
     "tags": [
       "javascript",
@@ -1436,7 +1436,7 @@
     "type": "mcp",
     "description": "官方参考实现，灵活获取网页内容（HTML/JSON/MD），并为 AI 处理优化。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
-    "stars": 82023,
+    "stars": 82030,
     "category": "frontend",
     "tags": [],
     "tech_stack": [],
@@ -1806,7 +1806,7 @@
     "type": "mcp",
     "description": "Pydantic 出品，在安全的沙盒环境中运行 Python 代码，适合开发编程代理。",
     "source_url": "https://github.com/pydantic/pydantic-ai/tree/main/mcp-run-python",
-    "stars": 15766,
+    "stars": 15767,
     "category": "backend",
     "tags": [
       "python"
@@ -2082,7 +2082,7 @@
     "type": "mcp",
     "description": "统一AI编程助手的零配置MCP服务器，专为自主代理开发设计，简化多AI工具集成工作流程。",
     "source_url": "https://github.com/askbudi/roundtable",
-    "stars": 87,
+    "stars": 88,
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -2170,7 +2170,7 @@
     "type": "mcp",
     "description": "功能齐全的编码代理，依赖于使用语言服务器的符号化代码操作。",
     "source_url": "https://github.com/oraios/serena",
-    "stars": 22051,
+    "stars": 22054,
     "category": "mobile",
     "tags": [],
     "tech_stack": [],
@@ -2214,7 +2214,7 @@
     "type": "mcp",
     "description": "增强的文件系统和搜索工具，以及特定于编码的命令和提示。(也含命令行功能)",
     "source_url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
-    "stars": 5771,
+    "stars": 5773,
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -2576,7 +2576,7 @@
     "type": "mcp",
     "description": "GitHub 官方出品，让 AI 通过 API 深度集成 GitHub，实现自动化工作流等。",
     "source_url": "https://github.com/github/github-mcp-server",
-    "stars": 28244,
+    "stars": 28245,
     "category": "ai-ml",
     "tags": [
       "git"
@@ -2624,7 +2624,7 @@
     "type": "mcp",
     "description": "官方参考实现，集成 GitHub API，管理仓库、文件、PR 和 Issues。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
-    "stars": 82023,
+    "stars": 82030,
     "category": "backend",
     "tags": [
       "git"
@@ -2648,7 +2648,7 @@
     "type": "mcp",
     "description": "官方参考实现，直接操作本地 Git 仓库，进行读取、搜索和分析。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/git",
-    "stars": 82023,
+    "stars": 82030,
     "category": "tooling",
     "tags": [
       "git"
@@ -2672,7 +2672,7 @@
     "type": "mcp",
     "description": "官方参考实现，集成 GitLab API，进行项目管理和 CI/CD 操作。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/gitlab",
-    "stars": 82023,
+    "stars": 82030,
     "category": "devops",
     "tags": [
       "git"
@@ -3248,7 +3248,7 @@
     "type": "mcp",
     "description": "官方参考实现，集成 PostgreSQL，支持查询和模式分析。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/postgres",
-    "stars": 82023,
+    "stars": 82030,
     "category": "database",
     "tags": [
       "postgres"
@@ -3272,7 +3272,7 @@
     "type": "mcp",
     "description": "官方参考实现，与 Redis 键值存储进行交互。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/redis",
-    "stars": 82023,
+    "stars": 82030,
     "category": "database",
     "tags": [
       "redis"
@@ -3296,7 +3296,7 @@
     "type": "mcp",
     "description": "官方参考实现，操作 SQLite 数据库，并内置商业智能能力。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/sqlite",
-    "stars": 82023,
+    "stars": 82030,
     "category": "database",
     "tags": [],
     "tech_stack": [],
@@ -3318,7 +3318,7 @@
     "type": "mcp",
     "description": "通用数据库 MCP 服务器，可连接 MySQL, PostgreSQL, SQLite, DuckDB 等。",
     "source_url": "https://github.com/bytebase/dbhub/",
-    "stars": 2406,
+    "stars": 2408,
     "category": "database",
     "tags": [
       "postgres",
@@ -3365,7 +3365,7 @@
     "type": "mcp",
     "description": "NodeJS 中的 MySQL 数据库集成，具有可配置的访问控制和模式检查。",
     "source_url": "https://github.com/benborla/mcp-server-mysql",
-    "stars": 1411,
+    "stars": 1412,
     "category": "backend",
     "tags": [
       "mysql",
@@ -3528,7 +3528,7 @@
     "type": "mcp",
     "description": "读写 Airtable 数据库，带模式检查。",
     "source_url": "https://github.com/domdomegg/airtable-mcp-server",
-    "stars": 429,
+    "stars": 430,
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -4127,7 +4127,7 @@
     "type": "mcp",
     "description": "用于与 Google Sheets 交互的模型上下文协议服务器。提供创建、读取、更新和管理电子表格的工具。",
     "source_url": "https://github.com/xing5/mcp-google-sheets",
-    "stars": 763,
+    "stars": 764,
     "category": "backend",
     "tags": [
       "go"
@@ -4198,7 +4198,7 @@
     "type": "mcp",
     "description": "AWS 官方维护的一组 MCP 服务器合集，通过 Model Context Protocol（MCP）为 AI 助手提供对 AWS 文档、API、基础设施等资源的访问，帮助在任意支持 MCP 的环境中高效使用 AWS。",
     "source_url": "https://github.com/awslabs/mcp",
-    "stars": 8556,
+    "stars": 8557,
     "category": "devops",
     "tags": [
       "aws"
@@ -4244,7 +4244,7 @@
     "type": "mcp",
     "description": "官方参考实现，使用 Bedrock Agent Runtime 从 AWS 知识库检索信息。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/aws-kb-retrieval-server",
-    "stars": 82023,
+    "stars": 82030,
     "category": "devops",
     "tags": [
       "aws"
@@ -4512,7 +4512,7 @@
     "type": "mcp",
     "description": "用于 Kubernetes 的 MCP 服务器，使 AI 助手能通过自然语言与 K8s 集群交互。",
     "source_url": "https://github.com/rohitg00/kubectl-mcp-server",
-    "stars": 855,
+    "stars": 856,
     "category": "devops",
     "tags": [
       "kubernetes"
@@ -4832,7 +4832,7 @@
     "type": "mcp",
     "description": "官方参考实现，使用 Brave 的搜索 API 进行网页和本地搜索。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search",
-    "stars": 82023,
+    "stars": 82030,
     "category": "backend",
     "tags": [],
     "tech_stack": [],
@@ -5013,7 +5013,7 @@
     "type": "mcp",
     "description": "通过 Trieve 爬取、嵌入、分块、搜索和检索数据集信息。",
     "source_url": "https://github.com/devflowinc/trieve/tree/main/clients/mcp-server",
-    "stars": 2629,
+    "stars": 2630,
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -5470,7 +5470,7 @@
     "type": "mcp",
     "description": "一个基于多引擎搜索结果的模型上下文协议(MCP)服务器，支持免费网络搜索，无需API密钥。",
     "source_url": "https://github.com/Aas-ee/open-webSearch",
-    "stars": 853,
+    "stars": 854,
     "category": "backend",
     "tags": [],
     "tech_stack": [],
@@ -5648,7 +5648,7 @@
     "type": "mcp",
     "description": "官方参考实现，集成 Slack，AI 能管理频道、发消息。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/slack",
-    "stars": 82023,
+    "stars": 82030,
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -7183,7 +7183,7 @@
     "type": "mcp",
     "description": "MarkItDown MCP 工具访问 - 一个将多种文件格式（本地或远程）转换为 Markdown 以供 LLM 使用的库。",
     "source_url": "https://github.com/microsoft/markitdown/tree/main/packages/markitdown-mcp",
-    "stars": 92131,
+    "stars": 92144,
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -7227,7 +7227,7 @@
     "type": "mcp",
     "description": "官方参考实现，提供对本地文件系统的直接访问，带可配置权限。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
-    "stars": 82023,
+    "stars": 82030,
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -7249,7 +7249,7 @@
     "type": "mcp",
     "description": "官方参考实现，集成 Google Drive，用于列出、读取和搜索文件。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/gdrive",
-    "stars": 82023,
+    "stars": 82030,
     "category": "backend",
     "tags": [
       "go"
@@ -8317,7 +8317,7 @@
     "type": "mcp",
     "description": "Atlassian 产品 (Confluence 和 Jira) 的 MCP 服务器。支持 Cloud/Server/DC。提供全面的工具用于搜索、读取、创建和管理内容。",
     "source_url": "https://github.com/sooperset/mcp-atlassian",
-    "stars": 4725,
+    "stars": 4726,
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -8625,7 +8625,7 @@
     "type": "mcp",
     "description": "官方参考实现，使用多种模型进行 AI 图像生成。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/everart",
-    "stars": 82023,
+    "stars": 82030,
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -9183,7 +9183,7 @@
     "type": "mcp",
     "description": "官方参考实现，基于知识图谱的持久记忆系统。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
-    "stars": 82023,
+    "stars": 82030,
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -9249,7 +9249,7 @@
     "type": "mcp",
     "description": "GraphRAG 记忆服务器，支持自定义摄取、数据处理和搜索。",
     "source_url": "https://github.com/topoteretes/cognee/tree/main/cognee-mcp",
-    "stars": 14606,
+    "stars": 14608,
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -9449,7 +9449,7 @@
     "type": "mcp",
     "description": "使用各种图和向量存储的 AI 应用和 Agents 记忆管理器，允许从 30+ 数据源摄取。 (cognee-mcp 的开发分支)",
     "source_url": "https://github.com/topoteretes/cognee/tree/dev/cognee-mcp",
-    "stars": 14606,
+    "stars": 14608,
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -10003,7 +10003,7 @@
     "type": "mcp",
     "description": "Google Maps 集成，提供定位服务、路线规划和地点详情。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/google-maps",
-    "stars": 82023,
+    "stars": 82030,
     "category": "backend",
     "tags": [
       "go"
@@ -10159,7 +10159,7 @@
     "type": "mcp",
     "description": "用于与 Godot 游戏引擎交互的 MCP 服务器，提供编辑、运行、调试和管理 Godot 项目中场景的工具。",
     "source_url": "https://github.com/Coding-Solo/godot-mcp",
-    "stars": 2613,
+    "stars": 2616,
     "category": "backend",
     "tags": [
       "go"
@@ -10449,7 +10449,7 @@
     "type": "mcp",
     "description": "一句话给 AI Agent 装上全网搜索能力。一键安装 + 配置 13+ 平台工具（Twitter、Reddit、YouTube、GitHub、B站、小红书、抖音、微信公众号、LinkedIn 等），通过 mcporter 接入多个 MCP 服务。",
     "source_url": "https://github.com/Panniantong/Agent-Reach",
-    "stars": 10722,
+    "stars": 10728,
     "category": "ai-ml",
     "tags": [
       "git"
@@ -10539,7 +10539,7 @@
     "type": "mcp",
     "description": "展示 MCP 协议所有功能的 MCP 服务器。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/everything",
-    "stars": 82023,
+    "stars": 82030,
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -10583,7 +10583,7 @@
     "type": "mcp",
     "description": "官方参考实现，提供时间和时区转换能力。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
-    "stars": 82023,
+    "stars": 82030,
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -10605,7 +10605,7 @@
     "type": "mcp",
     "description": "官方参考实现，通过思考序列进行动态和反思性问题解决。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
-    "stars": 82023,
+    "stars": 82030,
     "category": "tooling",
     "tags": [],
     "tech_stack": [],

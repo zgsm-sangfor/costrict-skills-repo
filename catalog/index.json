@@ -26,7 +26,7 @@
     "type": "mcp",
     "description": "MarkItDown MCP 工具访问 - 一个将多种文件格式（本地或远程）转换为 Markdown 以供 LLM 使用的库。",
     "source_url": "https://github.com/microsoft/markitdown/tree/main/packages/markitdown-mcp",
-    "stars": 92131,
+    "stars": 92144,
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -48,7 +48,7 @@
     "type": "mcp",
     "description": "官方参考实现，使用 Puppeteer 进行浏览器自动化和网页抓取。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
-    "stars": 82023,
+    "stars": 82030,
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -70,7 +70,7 @@
     "type": "mcp",
     "description": "官方参考实现，灵活获取网页内容（HTML/JSON/MD），并为 AI 处理优化。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
-    "stars": 82023,
+    "stars": 82030,
     "category": "frontend",
     "tags": [],
     "tech_stack": [],
@@ -92,7 +92,7 @@
     "type": "mcp",
     "description": "官方参考实现，集成 GitHub API，管理仓库、文件、PR 和 Issues。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
-    "stars": 82023,
+    "stars": 82030,
     "category": "backend",
     "tags": [
       "git"
@@ -116,7 +116,7 @@
     "type": "mcp",
     "description": "官方参考实现，直接操作本地 Git 仓库，进行读取、搜索和分析。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/git",
-    "stars": 82023,
+    "stars": 82030,
     "category": "tooling",
     "tags": [
       "git"
@@ -140,7 +140,7 @@
     "type": "mcp",
     "description": "官方参考实现，集成 GitLab API，进行项目管理和 CI/CD 操作。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/gitlab",
-    "stars": 82023,
+    "stars": 82030,
     "category": "devops",
     "tags": [
       "git"
@@ -164,7 +164,7 @@
     "type": "mcp",
     "description": "官方参考实现，集成 PostgreSQL，支持查询和模式分析。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/postgres",
-    "stars": 82023,
+    "stars": 82030,
     "category": "database",
     "tags": [
       "postgres"
@@ -188,7 +188,7 @@
     "type": "mcp",
     "description": "官方参考实现，与 Redis 键值存储进行交互。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/redis",
-    "stars": 82023,
+    "stars": 82030,
     "category": "database",
     "tags": [
       "redis"
@@ -212,7 +212,7 @@
     "type": "mcp",
     "description": "官方参考实现，操作 SQLite 数据库，并内置商业智能能力。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/sqlite",
-    "stars": 82023,
+    "stars": 82030,
     "category": "database",
     "tags": [],
     "tech_stack": [],
@@ -234,7 +234,7 @@
     "type": "mcp",
     "description": "官方参考实现，使用 Bedrock Agent Runtime 从 AWS 知识库检索信息。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/aws-kb-retrieval-server",
-    "stars": 82023,
+    "stars": 82030,
     "category": "devops",
     "tags": [
       "aws"
@@ -258,7 +258,7 @@
     "type": "mcp",
     "description": "官方参考实现，使用 Brave 的搜索 API 进行网页和本地搜索。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search",
-    "stars": 82023,
+    "stars": 82030,
     "category": "backend",
     "tags": [],
     "tech_stack": [],
@@ -280,7 +280,7 @@
     "type": "mcp",
     "description": "官方参考实现，集成 Slack，AI 能管理频道、发消息。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/slack",
-    "stars": 82023,
+    "stars": 82030,
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -302,7 +302,7 @@
     "type": "mcp",
     "description": "官方参考实现，提供对本地文件系统的直接访问，带可配置权限。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
-    "stars": 82023,
+    "stars": 82030,
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -324,7 +324,7 @@
     "type": "mcp",
     "description": "官方参考实现，集成 Google Drive，用于列出、读取和搜索文件。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/gdrive",
-    "stars": 82023,
+    "stars": 82030,
     "category": "backend",
     "tags": [
       "go"
@@ -348,7 +348,7 @@
     "type": "mcp",
     "description": "官方参考实现，使用多种模型进行 AI 图像生成。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/everart",
-    "stars": 82023,
+    "stars": 82030,
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -370,7 +370,7 @@
     "type": "mcp",
     "description": "官方参考实现，基于知识图谱的持久记忆系统。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
-    "stars": 82023,
+    "stars": 82030,
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -392,7 +392,7 @@
     "type": "mcp",
     "description": "Google Maps 集成，提供定位服务、路线规划和地点详情。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/google-maps",
-    "stars": 82023,
+    "stars": 82030,
     "category": "backend",
     "tags": [
       "go"
@@ -416,7 +416,7 @@
     "type": "mcp",
     "description": "展示 MCP 协议所有功能的 MCP 服务器。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/everything",
-    "stars": 82023,
+    "stars": 82030,
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -438,7 +438,7 @@
     "type": "mcp",
     "description": "官方参考实现，提供时间和时区转换能力。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
-    "stars": 82023,
+    "stars": 82030,
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -460,7 +460,7 @@
     "type": "mcp",
     "description": "官方参考实现，通过思考序列进行动态和反思性问题解决。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
-    "stars": 82023,
+    "stars": 82030,
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -504,7 +504,7 @@
     "type": "mcp",
     "description": "Official Microsoft Playwright MCP server, enabling LLMs to interact with web pages through structured accessibility snapshots",
     "source_url": "https://github.com/microsoft/playwright-mcp",
-    "stars": 29651,
+    "stars": 29652,
     "category": "testing",
     "tags": [
       "playwright"
@@ -528,7 +528,7 @@
     "type": "mcp",
     "description": "GitHub 官方出品，让 AI 通过 API 深度集成 GitHub，实现自动化工作流等。",
     "source_url": "https://github.com/github/github-mcp-server",
-    "stars": 28244,
+    "stars": 28245,
     "category": "ai-ml",
     "tags": [
       "git"
@@ -552,7 +552,7 @@
     "type": "skill",
     "description": "Framework for building LLM-powered applications with agents, chains, and RAG. Supports multiple providers (OpenAI, Anthropic, Google), 500+ integrations, ReAct agents, tool calling, memory management, and vector store retrieval. Use for building chatbots, question-answering systems, autonomous agents, or RAG applications. Best for rapid prototyping and production deployments.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/agents-langchain",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "langchain",
@@ -580,7 +580,7 @@
     "type": "skill",
     "description": "Data framework for building LLM applications with RAG. Specializes in document ingestion (300+ connectors), indexing, and querying. Features vector indices, query engines, agents, and multi-modal support. Use for document Q&A, chatbots, knowledge retrieval, or building RAG pipelines. Best for data-centric LLM applications.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/agents-llamaindex",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "llamaindex",
@@ -607,7 +607,7 @@
     "type": "skill",
     "description": "Build AI agents that interact with computers like humans do - viewing screens, moving cursors, clicking buttons, and typing text. Covers Anthropic's Computer Use, OpenAI's Operator/CUA, and open-source alternatives. Critical focus on sandboxing, security, and handling the unique challenges of vision-based control. Use when: computer use, desktop automation agent, screen control AI, vision-based agent, GUI automation.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/computer-use-agents",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "computer-use",
@@ -636,7 +636,7 @@
     "type": "skill",
     "description": "GPU-accelerated data curation for LLM training. Supports text/image/video/audio. Features fuzzy deduplication (16× faster), quality filtering (30+ heuristics), semantic deduplication, PII redaction, NSFW detection. Scales across GPUs with RAPIDS. Use for preparing high-quality training datasets, cleaning web data, or deduplicating large corpora.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/data-processing-nemo-curator",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "nemo-curator",
@@ -665,7 +665,7 @@
     "type": "skill",
     "description": "Scalable data processing for ML workloads. Streaming execution across CPU/GPU, supports Parquet/CSV/JSON/images. Integrates with Ray Train, PyTorch, TensorFlow. Scales from single machine to 100s of nodes. Use for batch inference, data preprocessing, multi-modal data loading, or distributed ETL pipelines.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/data-processing-ray-data",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "ray",
@@ -694,7 +694,7 @@
     "type": "skill",
     "description": "Simplest distributed training API. 4 lines to add distributed support to any PyTorch script. Unified API for DeepSpeed/FSDP/Megatron/DDP. Automatic device placement, mixed precision (FP16/BF16/FP8). Interactive config, single launch command. HuggingFace ecosystem standard.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/distributed-training-accelerate",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "huggingface",
@@ -723,7 +723,7 @@
     "type": "skill",
     "description": "Trains large language models (2B-462B parameters) using NVIDIA Megatron-Core with advanced parallelism strategies. Use when training models >1B parameters, need maximum GPU efficiency (47% MFU on H100), or require tensor/pipeline/sequence/context/expert parallelism. Production-ready framework used for Nemotron, LLaMA, DeepSeek.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/distributed-training-megatron-core",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "megatron-core",
@@ -752,17 +752,14 @@
     "type": "skill",
     "description": "High-level PyTorch framework with Trainer class, automatic distributed training (DDP/FSDP/DeepSpeed), callbacks system, and minimal boilerplate. Scales from laptop to supercomputer with same code. Use when you want clean training loops with built-in best practices.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/distributed-training-pytorch-lightning",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
-      "pytorch-lightning",
+      "python",
       "pytorch",
-      "training-framework",
+      "deep-learning",
       "distributed-training",
-      "callbacks",
-      "deepspeed",
-      "fsdp",
-      "ddp"
+      "mlops"
     ],
     "tech_stack": [],
     "install": {
@@ -773,7 +770,7 @@
     },
     "source": "davila7/claude-code-templates",
     "last_synced": "2026-03-25",
-    "description_zh": "用高层PyTorch框架简化训练循环与分布式训练。"
+    "description_zh": "用PyTorch Lightning组织并扩展深度学习训练。"
   },
   {
     "id": "ray-train-skill",
@@ -781,7 +778,7 @@
     "type": "skill",
     "description": "Distributed training orchestration across clusters. Scales PyTorch/TensorFlow/HuggingFace from laptop to 1000s of nodes. Built-in hyperparameter tuning with Ray Tune, fault tolerance, elastic scaling. Use when training massive models across multiple machines or running distributed hyperparameter sweeps.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/distributed-training-ray-train",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "ray",
@@ -810,7 +807,7 @@
     "type": "skill",
     "description": "Compress large language models using knowledge distillation from teacher to student models. Use when deploying smaller models with retained performance, transferring GPT-4 capabilities to open-source models, or reducing inference costs. Covers temperature scaling, soft targets, reverse KLD, logit distillation, and MiniLLM training strategies.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/emerging-techniques-knowledge-distillation",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "knowledge-distillation",
@@ -838,7 +835,7 @@
     "type": "skill",
     "description": "Extend context windows of transformer models using RoPE, YaRN, ALiBi, and position interpolation techniques. Use when processing long documents (32k-128k+ tokens), extending pre-trained models beyond original context limits, or implementing efficient positional encodings. Covers rotary embeddings, attention biases, interpolation methods, and extrapolation strategies for LLMs.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/emerging-techniques-long-context",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "long-context",
@@ -867,7 +864,7 @@
     "type": "skill",
     "description": "Evaluates code generation models across HumanEval, MBPP, MultiPL-E, and 15+ benchmarks with pass@k metrics. Use when benchmarking code models, comparing coding abilities, testing multi-language support, or measuring code generation quality. Industry standard from BigCode Project used by HuggingFace leaderboards.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/evaluation-bigcode-evaluation-harness",
-    "stars": 23539,
+    "stars": 23541,
     "category": "testing",
     "tags": [
       "llm",
@@ -894,7 +891,7 @@
     "type": "skill",
     "description": "Evaluates LLMs across 60+ academic benchmarks (MMLU, HumanEval, GSM8K, TruthfulQA, HellaSwag). Use when benchmarking model quality, comparing models, reporting academic results, or tracking training progress. Industry standard used by EleutherAI, HuggingFace, and major labs. Supports HuggingFace, vLLM, APIs.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/evaluation-lm-evaluation-harness",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "llm",
@@ -921,7 +918,7 @@
     "type": "skill",
     "description": "Parameter-efficient fine-tuning for LLMs using LoRA, QLoRA, and 25+ methods. Use when fine-tuning large models (7B-70B) with limited GPU memory, when you need to train <1% of parameters with minimal accuracy loss, or for multi-adapter serving. HuggingFace's official library integrated with transformers ecosystem.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/fine-tuning-peft",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "llm",
@@ -948,7 +945,7 @@
     "type": "skill",
     "description": "Runs LLM inference on CPU, Apple Silicon, and consumer GPUs without NVIDIA hardware. Use for edge deployment, M1/M2/M3 Macs, AMD/Intel GPUs, or when CUDA is unavailable. Supports GGUF quantization (1.5-8 bit) for reduced memory and 4-10× speedup vs PyTorch on CPU.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/inference-serving-llama-cpp",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "llm",
@@ -975,7 +972,7 @@
     "type": "skill",
     "description": "Optimizes LLM inference with NVIDIA TensorRT for maximum throughput and lowest latency. Use for production deployment on NVIDIA GPUs (A100/H100), when you need 10-100x faster inference than PyTorch, or for serving models with quantization (FP8/INT4), in-flight batching, and multi-GPU scaling.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/inference-serving-tensorrt-llm",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "llm",
@@ -1002,7 +999,7 @@
     "type": "skill",
     "description": "Serves LLMs with high throughput using vLLM's PagedAttention and continuous batching. Use when deploying production LLM APIs, optimizing inference latency/throughput, or serving models with limited GPU memory. Supports OpenAI-compatible endpoints, quantization (GPTQ/AWQ/FP8), and tensor parallelism.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/inference-serving-vllm",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "vllm",
@@ -1029,7 +1026,7 @@
     "type": "skill",
     "description": "Track ML experiments, manage model registry with versioning, deploy models to production, and reproduce experiments with MLflow - framework-agnostic ML lifecycle platform",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/mlops-mlflow",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "mlflow",
@@ -1056,7 +1053,7 @@
     "type": "skill",
     "description": "Visualize training metrics, debug models with histograms, compare experiments, visualize model graphs, and profile performance with TensorBoard - Google's ML visualization toolkit",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/mlops-tensorboard",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "tensorboard",
@@ -1084,7 +1081,7 @@
     "type": "skill",
     "description": "Track ML experiments with automatic logging, visualize training in real-time, optimize hyperparameters with sweeps, and manage model registry with W&B - collaborative MLOps platform",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/mlops-weights-and-biases",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "wandb",
@@ -1113,7 +1110,7 @@
     "type": "skill",
     "description": "Educational GPT implementation in ~300 lines. Reproduces GPT-2 (124M) on OpenWebText. Clean, hackable code for learning transformers. By Andrej Karpathy. Perfect for understanding GPT architecture from scratch. Train on Shakespeare (CPU) or OpenWebText (multi-GPU).",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/model-architecture-nanogpt",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "nanogpt",
@@ -1140,7 +1137,7 @@
     "type": "skill",
     "description": "Provides PyTorch-native distributed LLM pretraining using torchtitan with 4D parallelism (FSDP2, TP, PP, CP). Use when pretraining Llama 3.1, DeepSeek V3, or custom models at scale from 8 to 512+ GPUs with Float8, torch.compile, and distributed checkpointing.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/model-architecture-torchtitan",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "torchtitan",
@@ -1169,7 +1166,7 @@
     "type": "skill",
     "description": "LLM observability platform for tracing, evaluation, and monitoring. Use when debugging LLM applications, evaluating model outputs against datasets, monitoring production systems, or building systematic testing pipelines for AI applications.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/observability-langsmith",
-    "stars": 23539,
+    "stars": 23541,
     "category": "testing",
     "tags": [
       "langsmith",
@@ -1198,7 +1195,7 @@
     "type": "skill",
     "description": "Open-source AI observability platform for LLM tracing, evaluation, and monitoring. Use when debugging LLM applications with detailed traces, running evaluations on datasets, or monitoring production AI systems with real-time insights.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/observability-phoenix",
-    "stars": 23539,
+    "stars": 23541,
     "category": "devops",
     "tags": [
       "observability",
@@ -1227,7 +1224,7 @@
     "type": "skill",
     "description": "Activation-aware weight quantization for 4-bit LLM compression with 3x speedup and minimal accuracy loss. Use when deploying large models (7B-70B) on limited GPU memory, when you need faster inference than GPTQ with better accuracy preservation, or for instruction-tuned and multimodal models. MLSys 2024 Best Paper Award winner.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/optimization-awq",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "awq",
@@ -1256,7 +1253,7 @@
     "type": "skill",
     "description": "Quantizes LLMs to 8-bit or 4-bit for 50-75% memory reduction with minimal accuracy loss. Use when GPU memory is limited, need to fit larger models, or want faster inference. Supports INT8, NF4, FP4 formats, QLoRA training, and 8-bit optimizers. Works with HuggingFace Transformers.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/optimization-bitsandbytes",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "bitsandbytes",
@@ -1286,7 +1283,7 @@
     "type": "skill",
     "description": "Optimizes transformer attention with Flash Attention for 2-4x speedup and 10-20x memory reduction. Use when training/running transformers with long sequences (>512 tokens), encountering GPU memory issues with attention, or need faster inference. Supports PyTorch native SDPA, flash-attn library, H100 FP8, and sliding window attention.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/optimization-flash-attention",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "flash-attention",
@@ -1315,7 +1312,7 @@
     "type": "skill",
     "description": "High-performance RLHF framework with Ray+vLLM acceleration. Use for PPO, GRPO, RLOO, DPO training of large models (7B-70B+). Built on Ray, vLLM, ZeRO-3. 2× faster than DeepSpeedChat with distributed architecture and GPU resource sharing.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/post-training-openrlhf",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "openrlhf",
@@ -1346,7 +1343,7 @@
     "type": "skill",
     "description": "Simple Preference Optimization for LLM alignment. Reference-free alternative to DPO with better performance (+6.4 points on AlpacaEval 2.0). No reference model needed, more efficient than DPO. Use for preference alignment when want simpler, faster training than DPO/PPO.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/post-training-simpo",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "simpo",
@@ -1373,7 +1370,7 @@
     "type": "skill",
     "description": "Fine-tune LLMs using reinforcement learning with TRL - SFT for instruction tuning, DPO for preference alignment, PPO/GRPO for reward optimization, and reward model training. Use when need RLHF, align model with preferences, or train from human feedback. Works with HuggingFace Transformers.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/post-training-trl-fine-tuning",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "trl",
@@ -1404,7 +1401,7 @@
     "type": "skill",
     "description": "Build complex AI systems with declarative programming, optimize prompts automatically, create modular RAG systems and agents with DSPy - Stanford NLP's framework for systematic LM programming",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/prompt-engineering-dspy",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "dspy",
@@ -1432,7 +1429,7 @@
     "type": "skill",
     "description": "Control LLM output with regex and grammars, guarantee valid JSON/XML/code generation, enforce structured formats, and build multi-step workflows with Guidance - Microsoft Research's constrained generation framework",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/prompt-engineering-guidance",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "guidance",
@@ -1462,7 +1459,7 @@
     "type": "skill",
     "description": "Extract structured data from LLM responses with Pydantic validation, retry failed extractions automatically, parse complex JSON with type safety, and stream partial results with Instructor - battle-tested structured output library",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/prompt-engineering-instructor",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "instructor",
@@ -1492,7 +1489,7 @@
     "type": "skill",
     "description": "Guarantee valid JSON/XML/code structure during generation, use Pydantic models for type-safe outputs, support local models (Transformers, vLLM), and maximize inference speed with Outlines - dottxt.ai's structured generation library",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/prompt-engineering-outlines",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "outlines",
@@ -1522,7 +1519,7 @@
     "type": "skill",
     "description": "High-performance vector similarity search engine for RAG and semantic search. Use when building production RAG systems requiring fast nearest neighbor search, hybrid search with filtering, or scalable vector storage with Rust-powered performance.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/rag-qdrant",
-    "stars": 23539,
+    "stars": 23541,
     "category": "database",
     "tags": [
       "qdrant",
@@ -1549,7 +1546,7 @@
     "type": "skill",
     "description": "Framework for state-of-the-art sentence, text, and image embeddings. Provides 5000+ pre-trained models for semantic similarity, clustering, and retrieval. Supports multilingual, domain-specific, and multimodal models. Use for generating embeddings for RAG, semantic search, or similarity tasks. Best for production embedding generation.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/rag-sentence-transformers",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "sentence-transformers",
@@ -1576,7 +1573,7 @@
     "type": "skill",
     "description": "NVIDIA's runtime safety framework for LLM applications. Features jailbreak detection, input/output validation, fact-checking, hallucination detection, PII filtering, toxicity detection. Uses Colang 2.0 DSL for programmable rails. Production-ready, runs on T4 GPU.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/safety-alignment-nemo-guardrails",
-    "stars": 23539,
+    "stars": 23541,
     "category": "security",
     "tags": [
       "nemo-guardrails",
@@ -1603,7 +1600,7 @@
     "type": "skill",
     "description": "Fast tokenizers optimized for research and production. Rust-based implementation tokenizes 1GB in <20 seconds. Supports BPE, WordPiece, and Unigram algorithms. Train custom vocabularies, track alignments, handle padding/truncation. Integrates seamlessly with transformers. Use when you need high-performance tokenization or custom tokenizer training.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/tokenization-huggingface-tokenizers",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "huggingface",
@@ -1630,7 +1627,7 @@
     "type": "skill",
     "description": "Language-independent tokenizer treating text as raw Unicode. Supports BPE and Unigram algorithms. Fast (50k sentences/sec), lightweight (6MB memory), deterministic vocabulary. Used by T5, ALBERT, XLNet, mBART. Train on raw text without pre-tokenization. Use when you need multilingual support, CJK languages, or reproducible tokenization.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/tokenization-sentencepiece",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "sentencepiece",
@@ -1657,7 +1654,7 @@
     "type": "skill",
     "description": "Expert in building voice AI applications - from real-time voice agents to voice-enabled apps. Covers OpenAI Realtime API, Vapi for voice agents, Deepgram for transcription, ElevenLabs for synthesis, LiveKit for real-time infrastructure, and WebRTC fundamentals. Knows how to build low-latency, production-ready voice experiences. Use when: voice ai, voice agent, speech to text, text to speech, realtime voice.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/voice-ai-development",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "voice-ai",
@@ -1684,7 +1681,7 @@
     "type": "skill",
     "description": "Expert in building 3D experiences for the web - Three.js, React Three Fiber, Spline, WebGL, and interactive 3D scenes. Covers product configurators, 3D portfolios, immersive websites, and bringing depth to web experiences. Use when: 3D website, three.js, WebGL, react three fiber, 3D experience.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/3d-web-experience",
-    "stars": 23539,
+    "stars": 23541,
     "category": "frontend",
     "tags": [
       "three-js",
@@ -1710,7 +1707,7 @@
     "type": "skill",
     "description": "Creating interactive data visualisations using d3.js. This skill should be used when creating custom charts, graphs, network diagrams, geographic visualisations, or any complex SVG-based data visualisation that requires fine-grained control over visual elements, transitions, or interactions. Use this for bespoke visualisations beyond standard charting libraries, whether in React, Vue, Svelte, vanilla JavaScript, or any other environment.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/claude-d3js-skill",
-    "stars": 23539,
+    "stars": 23541,
     "category": "frontend",
     "tags": [
       "d3.js",
@@ -1736,7 +1733,7 @@
     "type": "skill",
     "description": "Use when Codex is building or iterating on a web game (HTML/JS) and needs a reliable development + testing loop: implement small changes, run a Playwright-based test script with short input bursts and intentional pauses, inspect screenshots/text, and review console errors with render_game_to_text.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/develop-web-game",
-    "stars": 23539,
+    "stars": 23541,
     "category": "frontend",
     "tags": [
       "html",
@@ -1762,7 +1759,7 @@
     "type": "skill",
     "description": "Tailwind CSS v4 principles. CSS-first configuration, container queries, modern patterns, design token architecture.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/tailwind-patterns",
-    "stars": 23539,
+    "stars": 23541,
     "category": "frontend",
     "tags": [
       "tailwindcss",
@@ -1788,7 +1785,7 @@
     "type": "skill",
     "description": "Comprehensive PostgreSQL-specific table design reference covering data types, indexing, constraints, performance patterns, and advanced features",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/database/postgres-schema-design",
-    "stars": 23539,
+    "stars": 23541,
     "category": "database",
     "tags": [
       "postgres",
@@ -1814,14 +1811,14 @@
     "type": "skill",
     "description": "Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/database/supabase-postgres-best-practices",
-    "stars": 23539,
+    "stars": 23541,
     "category": "database",
     "tags": [
       "postgres",
       "supabase",
+      "sql",
       "query-optimization",
-      "schema-design",
-      "performance"
+      "schema-design"
     ],
     "tech_stack": [],
     "install": {
@@ -1832,7 +1829,7 @@
     },
     "source": "davila7/claude-code-templates",
     "last_synced": "2026-03-25",
-    "description_zh": "提供 Supabase 场景下的 Postgres 最佳实践。"
+    "description_zh": "用于优化Postgres查询、模式与配置。"
   },
   {
     "id": "design-to-code-skill",
@@ -1840,7 +1837,7 @@
     "type": "skill",
     "description": "Pixel-perfect Figma to React conversion using coderio. Generates production-ready code (TypeScript, Vite, TailwindCSS V4) with high visual fidelity. Features robust error handling, checkpoint recovery, and streamlined execution via helper script.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/design-to-code",
-    "stars": 23539,
+    "stars": 23541,
     "category": "frontend",
     "tags": [
       "figma",
@@ -1866,7 +1863,7 @@
     "type": "skill",
     "description": "API design principles and decision-making. REST vs GraphQL vs tRPC selection, response formats, versioning, pagination.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/api-patterns",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "api-design",
@@ -1892,7 +1889,7 @@
     "type": "skill",
     "description": "Specialized skill for building production-ready serverless applications on AWS. Covers Lambda functions, API Gateway, DynamoDB, SQS/SNS event-driven patterns, SAM/CDK deployment, and cold start optimization.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/aws-serverless",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "aws",
@@ -1922,7 +1919,7 @@
     "type": "skill",
     "description": "Expert patterns for Azure Functions development including isolated worker model, Durable Functions orchestration, cold start optimization, and production patterns. Covers .NET, Python, and Node.js programming models. Use when: azure function, azure functions, durable functions, azure serverless, function app.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/azure-functions",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "azure",
@@ -1950,7 +1947,7 @@
     "type": "skill",
     "description": "Comprehensive backend development guide for Node.js/Express/TypeScript microservices. Use when creating routes, controllers, services, repositories, middleware, or working with Express APIs, Prisma database access, Sentry error tracking, Zod validation, unifiedConfig, dependency injection, or async patterns. Covers layered architecture (routes → controllers → services → repositories), BaseController pattern, error handling, performance monitoring, testing strategies, and migration from legacy patterns.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/backend-dev-guidelines",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "nodejs",
@@ -1978,7 +1975,7 @@
     "type": "skill",
     "description": "BullMQ expert for Redis-backed job queues, background processing, and reliable async execution in Node.js/TypeScript applications. Use when: bullmq, bull queue, redis queue, background job, job queue.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/bullmq-specialist",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "bullmq",
@@ -2005,7 +2002,7 @@
     "type": "skill",
     "description": "ClickHouse database patterns, query optimization, analytics, and data engineering best practices for high-performance analytical workloads.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/cc-skill-clickhouse-io",
-    "stars": 23539,
+    "stars": 23541,
     "category": "database",
     "tags": [
       "clickhouse",
@@ -2032,7 +2029,7 @@
     "type": "skill",
     "description": "Frontend development patterns for React, Next.js, state management, performance optimization, and UI best practices.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/cc-skill-frontend-patterns",
-    "stars": 23539,
+    "stars": 23541,
     "category": "frontend",
     "tags": [
       "frontend",
@@ -2059,7 +2056,7 @@
     "type": "skill",
     "description": "Use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or implementing payment/sensitive features. Provides comprehensive security checklist and patterns.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/cc-skill-security-review",
-    "stars": 23539,
+    "stars": 23541,
     "category": "security",
     "tags": [
       "security",
@@ -2086,7 +2083,7 @@
     "type": "skill",
     "description": "Comprehensive code review skill for TypeScript, JavaScript, Python, Swift, Kotlin, Go. Includes automated code analysis, best practice checking, security scanning, and review checklist generation. Use when reviewing pull requests, providing code feedback, identifying issues, or ensuring code quality standards.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/code-reviewer",
-    "stars": 23539,
+    "stars": 23541,
     "category": "testing",
     "tags": [
       "code-review",
@@ -2117,7 +2114,7 @@
     "type": "skill",
     "description": "Design robust, scalable database schemas for SQL and NoSQL databases. Provides normalization guidelines, indexing strategies, migration patterns, constraint design, and performance optimization. Ensures data integrity, query performance, and maintainable data models.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/database-schema-designer",
-    "stars": 23539,
+    "stars": 23541,
     "category": "database",
     "tags": [
       "database",
@@ -2145,7 +2142,7 @@
     "type": "skill",
     "description": "Implements infrastructure as code using Terraform, Kubernetes, and cloud platforms. Designs scalable architectures, CI/CD pipelines, and observability solutions. Provides security-first DevOps practices and site reliability engineering guidance.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/devops-iac-engineer",
-    "stars": 23539,
+    "stars": 23541,
     "category": "devops",
     "tags": [
       "devops",
@@ -2174,7 +2171,7 @@
     "type": "skill",
     "description": "Docker containerization expert with deep knowledge of multi-stage builds, image optimization, container security, Docker Compose orchestration, and production deployment patterns. Use PROACTIVELY for Dockerfile optimization, container issues, image size problems, security hardening, networking, and orchestration challenges.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/docker-expert",
-    "stars": 23539,
+    "stars": 23541,
     "category": "devops",
     "tags": [
       "docker",
@@ -2201,7 +2198,7 @@
     "type": "skill",
     "description": "Complete guide for building MCP servers with FastMCP 3.0 - tools, resources, authentication, providers, middleware, and deployment. Use when creating Python MCP servers or integrating AI models with external tools and data.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/fastmcp-server",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "python",
@@ -2229,7 +2226,7 @@
     "type": "skill",
     "description": "Firebase gives you a complete backend in minutes - auth, database, storage, functions, hosting. But the ease of setup hides real complexity. Security rules are your last line of defense, and they're often wrong. Firestore queries are limited, and you learn this after you've designed your data model.  This skill covers Firebase Authentication, Firestore, Realtime Database, Cloud Functions, Cloud Storage, and Firebase Hosting. Key insight: Firebase is optimized for read-heavy, denormalized data. I",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/firebase",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "firebase",
@@ -2251,12 +2248,39 @@
     "description_zh": "介绍Firebase后端能力及安全规则与数据建模要点。"
   },
   {
+    "id": "frontend-dev-guidelines-skill",
+    "name": "frontend-dev-guidelines",
+    "type": "skill",
+    "description": "Frontend development guidelines for React/TypeScript applications. Modern patterns including Suspense, lazy loading, useSuspenseQuery, file organization with features directory, MUI v7 styling, TanStack Router, performance optimization, and TypeScript best practices. Use when creating components, pages, features, fetching data, styling, routing, or working with frontend code.",
+    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/frontend-dev-guidelines",
+    "stars": 23541,
+    "category": "frontend",
+    "tags": [
+      "react",
+      "typescript",
+      "mui",
+      "tanstack-router",
+      "suspense",
+      "frontend-architecture"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "git_clone",
+      "repo": "davila7/claude-code-templates",
+      "branch": "main",
+      "path": "cli-tool/components/skills/development/frontend-dev-guidelines"
+    },
+    "source": "davila7/claude-code-templates",
+    "last_synced": "2026-03-25",
+    "description_zh": "React与TypeScript前端开发最佳实践指南。"
+  },
+  {
     "id": "gcp-cloud-run-skill",
     "name": "gcp-cloud-run",
     "type": "skill",
     "description": "Specialized skill for building production-ready serverless applications on GCP. Covers Cloud Run services (containerized), Cloud Run Functions (event-driven), cold start optimization, and event-driven architecture with Pub/Sub.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/gcp-cloud-run",
-    "stars": 23539,
+    "stars": 23541,
     "category": "devops",
     "tags": [
       "gcp",
@@ -2283,7 +2307,7 @@
     "type": "skill",
     "description": "Inspect GitHub PR checks with gh, pull failing GitHub Actions logs, summarize failure context, then create a fix plan and implement after user approval. Use when a user asks to debug or fix failing PR CI/CD checks on GitHub Actions and wants a plan + code changes; for external checks (e.g., Buildkite), only report the details URL and mark them out of scope.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/gh-fix-ci",
-    "stars": 23539,
+    "stars": 23541,
     "category": "devops",
     "tags": [
       "github-actions",
@@ -2309,7 +2333,7 @@
     "type": "skill",
     "description": "Use when the user wants to create, generate, or set up a GitHub Actions workflow. Handles CI/CD pipelines, testing, deployment, linting, security scanning, release automation, Docker builds, scheduled tasks, and any custom workflow for any language or framework.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/github-actions-creator",
-    "stars": 23539,
+    "stars": 23541,
     "category": "devops",
     "tags": [
       "github-actions",
@@ -2331,12 +2355,38 @@
     "description_zh": "用于创建GitHub Actions工作流以实现CI/CD等自动化。"
   },
   {
+    "id": "github-workflow-automation-skill",
+    "name": "github-workflow-automation",
+    "type": "skill",
+    "description": "Automate GitHub workflows with AI assistance. Includes PR reviews, issue triage, CI/CD integration, and Git operations. Use when automating GitHub workflows, setting up PR review automation, creating GitHub Actions, or triaging issues.",
+    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/github-workflow-automation",
+    "stars": 23541,
+    "category": "devops",
+    "tags": [
+      "github",
+      "github-actions",
+      "ci-cd",
+      "automation",
+      "git"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "git_clone",
+      "repo": "davila7/claude-code-templates",
+      "branch": "main",
+      "path": "cli-tool/components/skills/development/github-workflow-automation"
+    },
+    "source": "davila7/claude-code-templates",
+    "last_synced": "2026-03-25",
+    "description_zh": "自动化GitHub流程，包括PR审查、议题分流与CI/CD。"
+  },
+  {
     "id": "hubspot-integration-skill",
     "name": "hubspot-integration",
     "type": "skill",
     "description": "Expert patterns for HubSpot CRM integration including OAuth authentication, CRM objects, associations, batch operations, webhooks, and custom objects. Covers Node.js and Python SDKs. Use when: hubspot, hubspot api, hubspot crm, hubspot integration, contacts api.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/hubspot-integration",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "hubspot",
@@ -2364,7 +2414,7 @@
     "type": "skill",
     "description": "Create custom external web service APIs for Moodle LMS. Use when implementing web services for course management, user tracking, quiz operations, or custom plugin functionality. Covers parameter validation, database operations, error handling, service registration, and Moodle coding standards.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/moodle-external-api-development",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "moodle",
@@ -2391,7 +2441,7 @@
     "type": "skill",
     "description": "Material-UI v7 component library patterns including sx prop styling, theme integration, responsive design, and MUI-specific hooks. Use when working with MUI components, styling with sx prop, theme customization, or MUI utilities.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/mui",
-    "stars": 23539,
+    "stars": 23541,
     "category": "frontend",
     "tags": [
       "mui",
@@ -2418,7 +2468,7 @@
     "type": "skill",
     "description": "Expert guidance for distributed NoSQL databases (Cassandra, DynamoDB). Focuses on mental models, query-first modeling, single-table design, and avoiding hot partitions in high-scale systems.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/nosql-expert",
-    "stars": 23539,
+    "stars": 23541,
     "category": "database",
     "tags": [
       "nosql",
@@ -2445,7 +2495,7 @@
     "type": "skill",
     "description": "Converts OpenAPI 3.0 JSON/YAML to TypeScript interfaces and type guards. This skill should be used when the user asks to generate types from OpenAPI, convert schema to TS, create API interfaces, or generate TypeScript types from an API specification.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/openapi-to-typescript",
-    "stars": 23539,
+    "stars": 23541,
     "category": "tooling",
     "tags": [
       "openapi",
@@ -2472,7 +2522,7 @@
     "type": "skill",
     "description": "Plan and build comprehensive Playwright E2E test suites with Page Object Model, authentication state persistence, custom fixtures, visual regression, and CI integration. Uses interview-driven planning to clarify critical user flows, auth strategy, test data approach, and parallelization before writing any tests.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/playwright-e2e-builder",
-    "stars": 23539,
+    "stars": 23541,
     "category": "testing",
     "tags": [
       "playwright",
@@ -2500,7 +2550,7 @@
     "type": "skill",
     "description": "Prisma ORM expert for schema design, migrations, query optimization, relations modeling, and database operations. Use PROACTIVELY for Prisma schema issues, migration problems, query performance, relation design, or database connection issues.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/prisma-expert",
-    "stars": 23539,
+    "stars": 23541,
     "category": "database",
     "tags": [
       "prisma",
@@ -2527,7 +2577,7 @@
     "type": "skill",
     "description": "Python development principles and decision-making. Framework selection, async patterns, type hints, project structure. Teaches thinking, not copying.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/python-patterns",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "python",
@@ -2553,7 +2603,7 @@
     "type": "skill",
     "description": "Modern React patterns and principles. Hooks, composition, performance, TypeScript best practices.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/react-patterns",
-    "stars": 23539,
+    "stars": 23541,
     "category": "frontend",
     "tags": [
       "react",
@@ -2579,7 +2629,7 @@
     "type": "skill",
     "description": "Modern React UI patterns for loading states, error handling, and data fetching. Use when building UI components, handling async data, or managing UI states.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/react-ui-patterns",
-    "stars": 23539,
+    "stars": 23541,
     "category": "frontend",
     "tags": [
       "react",
@@ -2605,7 +2655,7 @@
     "type": "skill",
     "description": "React useEffect best practices from official docs. Use when writing/reviewing useEffect, useState for derived values, data fetching, or state synchronization. Teaches when NOT to use Effect and better alternatives.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/react-useeffect",
-    "stars": 23539,
+    "stars": 23541,
     "category": "frontend",
     "tags": [
       "react",
@@ -2631,7 +2681,7 @@
     "type": "skill",
     "description": "Plan and build production-ready Rust CLI tools using clap for argument parsing, with subcommands, config file support, colored output, and proper error handling. Uses interview-driven planning to clarify commands, input/output formats, and distribution strategy before writing any code.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/rust-cli-builder",
-    "stars": 23539,
+    "stars": 23541,
     "category": "tooling",
     "tags": [
       "rust",
@@ -2659,7 +2709,7 @@
     "type": "skill",
     "description": "Expert patterns for Salesforce platform development including Lightning Web Components (LWC), Apex triggers and classes, REST/Bulk APIs, Connected Apps, and Salesforce DX with scratch orgs and 2nd generation packages (2GP). Use when: salesforce, sfdc, apex, lwc, lightning web components.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/salesforce-development",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "salesforce",
@@ -2687,7 +2737,7 @@
     "type": "skill",
     "description": "Comprehensive backend development skill for building scalable backend systems using NodeJS, Express, Go, Python, Postgres, GraphQL, REST APIs. Includes API scaffolding, database optimization, security implementation, and performance tuning. Use when designing APIs, optimizing database queries, implementing business logic, handling authentication/authorization, or reviewing backend code.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/senior-backend",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "nodejs",
@@ -2716,7 +2766,7 @@
     "type": "skill",
     "description": "World-class computer vision skill for image/video processing, object detection, segmentation, and visual AI systems. Expertise in PyTorch, OpenCV, YOLO, SAM, diffusion models, and vision transformers. Includes 3D vision, video analysis, real-time processing, and production deployment. Use when building vision AI systems, implementing object detection, training custom vision models, or optimizing inference pipelines.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/senior-computer-vision",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "computer-vision",
@@ -2745,7 +2795,7 @@
     "type": "skill",
     "description": "World-class data engineering skill for building scalable data pipelines, ETL/ELT systems, and data infrastructure. Expertise in Python, SQL, Spark, Airflow, dbt, Kafka, and modern data stack. Includes data modeling, pipeline orchestration, data quality, and DataOps. Use when designing data architectures, building data pipelines, optimizing data workflows, or implementing data governance.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/senior-data-engineer",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "python",
@@ -2774,7 +2824,7 @@
     "type": "skill",
     "description": "Comprehensive DevOps skill for CI/CD, infrastructure automation, containerization, and cloud platforms (AWS, GCP, Azure). Includes pipeline setup, infrastructure as code, deployment automation, and monitoring. Use when setting up pipelines, deploying applications, managing infrastructure, implementing monitoring, or optimizing deployment processes.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/senior-devops",
-    "stars": 23539,
+    "stars": 23541,
     "category": "devops",
     "tags": [
       "ci-cd",
@@ -2803,7 +2853,7 @@
     "type": "skill",
     "description": "Comprehensive frontend development skill for building modern, performant web applications using ReactJS, NextJS, TypeScript, Tailwind CSS. Includes component scaffolding, performance optimization, bundle analysis, and UI best practices. Use when developing frontend features, optimizing performance, implementing UI/UX designs, managing state, or reviewing frontend code.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/senior-frontend",
-    "stars": 23539,
+    "stars": 23541,
     "category": "frontend",
     "tags": [
       "react",
@@ -2831,7 +2881,7 @@
     "type": "skill",
     "description": "Comprehensive fullstack development skill for building complete web applications with React, Next.js, Node.js, GraphQL, and PostgreSQL. Includes project scaffolding, code quality analysis, architecture patterns, and complete tech stack guidance. Use when building new projects, analyzing code quality, implementing design patterns, or setting up development workflows.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/senior-fullstack",
-    "stars": 23539,
+    "stars": 23541,
     "category": "fullstack",
     "tags": [
       "react",
@@ -2860,7 +2910,7 @@
     "type": "skill",
     "description": "World-class ML engineering skill for productionizing ML models, MLOps, and building scalable ML systems. Expertise in PyTorch, TensorFlow, model deployment, feature stores, model monitoring, and ML infrastructure. Includes LLM integration, fine-tuning, RAG systems, and agentic AI. Use when deploying ML models, building ML platforms, implementing MLOps, or integrating LLMs into production systems.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/senior-ml-engineer",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "mlops",
@@ -2890,7 +2940,7 @@
     "type": "skill",
     "description": "Comprehensive QA and testing skill for quality assurance, test automation, and testing strategies for ReactJS, NextJS, NodeJS applications. Includes test suite generation, coverage analysis, E2E testing setup, and quality metrics. Use when designing test strategies, writing test cases, implementing test automation, performing manual testing, or analyzing test coverage.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/senior-qa",
-    "stars": 23539,
+    "stars": 23541,
     "category": "testing",
     "tags": [
       "qa",
@@ -2919,7 +2969,7 @@
     "type": "skill",
     "description": "Comprehensive security engineering skill for application security, penetration testing, security architecture, and compliance auditing. Includes security assessment tools, threat modeling, crypto implementation, and security automation. Use when designing security architecture, conducting penetration tests, implementing cryptography, or performing security audits.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/senior-security",
-    "stars": 23539,
+    "stars": 23541,
     "category": "security",
     "tags": [
       "security",
@@ -2946,7 +2996,7 @@
     "type": "skill",
     "description": "Get paid from day one. Payments, subscriptions, billing portal, webhooks, metered billing, Stripe Connect. The complete guide to implementing Stripe correctly, including all the edge cases that will bite you at 3am.  This isn't just API calls - it's the full payment system: handling failures, managing subscriptions, dealing with dunning, and keeping revenue flowing. Use when: stripe, payments, subscription, billing, checkout.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/stripe-integration",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "stripe",
@@ -2973,14 +3023,13 @@
     "type": "skill",
     "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/systematic-debugging",
-    "stars": 23539,
-    "category": "testing",
+    "stars": 23541,
+    "category": "tooling",
     "tags": [
       "debugging",
       "troubleshooting",
-      "testing",
-      "bug-fixing",
-      "diagnostics"
+      "root-cause-analysis",
+      "engineering-process"
     ],
     "tech_stack": [],
     "install": {
@@ -2991,7 +3040,7 @@
     },
     "source": "davila7/claude-code-templates",
     "last_synced": "2026-03-25",
-    "description_zh": "在提出修复前系统化分析缺陷与异常行为。"
+    "description_zh": "分阶段调试，先查根因再修复问题。"
   },
   {
     "id": "tdd-workflow-skill",
@@ -2999,7 +3048,7 @@
     "type": "skill",
     "description": "Test-Driven Development workflow principles. RED-GREEN-REFACTOR cycle.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/tdd-workflow",
-    "stars": 23539,
+    "stars": 23541,
     "category": "testing",
     "tags": [
       "tdd",
@@ -3024,7 +3073,7 @@
     "type": "skill",
     "description": "Auto-detect testing framework and run relevant tests. Identifies Jest, Vitest, Playwright, Cypress, pytest, Go test, and others. Can run all tests, specific file tests, or generate basic tests for new code. Usage - /test-detect, /test-detect src/auth/login.ts, /test-detect generate src/utils.ts",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/test-detect",
-    "stars": 23539,
+    "stars": 23541,
     "category": "testing",
     "tags": [
       "testing",
@@ -3052,7 +3101,7 @@
     "type": "skill",
     "description": "Run tests and systematically fix all failing tests using smart error grouping. Use when user asks to fix failing tests, mentions test failures, runs test suite and failures occur, or requests to make tests pass.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/test-fixing",
-    "stars": 23539,
+    "stars": 23541,
     "category": "testing",
     "tags": [
       "testing",
@@ -3077,7 +3126,7 @@
     "type": "skill",
     "description": "Jest testing patterns, factory functions, mocking strategies, and TDD workflow. Use when writing unit tests, creating test factories, or following TDD red-green-refactor cycle.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/testing-patterns",
-    "stars": 23539,
+    "stars": 23541,
     "category": "testing",
     "tags": [
       "testing",
@@ -3103,7 +3152,7 @@
     "type": "skill",
     "description": "Specialized skill for building production-ready Discord bots. Covers Discord.js (JavaScript) and Pycord (Python), gateway intents, slash commands, interactive components, rate limiting, and sharding.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/enterprise-communication/discord-bot-architect",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "discord",
@@ -3129,7 +3178,7 @@
     "type": "skill",
     "description": "Build Slack apps using the Bolt framework across Python, JavaScript, and Java. Covers Block Kit for rich UIs, interactive components, slash commands, event handling, OAuth installation flows, and Workflow Builder integration. Focus on best practices for production-ready Slack apps. Use when: slack bot, slack app, bolt framework, block kit, slash command.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/enterprise-communication/slack-bot-builder",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "slack",
@@ -3158,7 +3207,7 @@
     "type": "skill",
     "description": "API rules and filter expressions for PocketBase access control. Use when setting permissions, writing filter expressions, configuring who can access what, or debugging 403/404 responses. Covers all 5 rule types, filter syntax, operators, request/collection macros, and field modifiers.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/pocketbase/pb-api-rules",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "pocketbase",
@@ -3184,7 +3233,7 @@
     "type": "skill",
     "description": "Collection and schema design for PocketBase. Use when creating collections, designing schemas, adding fields, setting up relations, or choosing between base/auth/view collection types. Prevents wrong field types, documents zero-default behavior, and covers relation cascading.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/pocketbase/pb-collections",
-    "stars": 23539,
+    "stars": 23541,
     "category": "database",
     "tags": [
       "pocketbase",
@@ -3210,7 +3259,7 @@
     "type": "skill",
     "description": "Production deployment for PocketBase. Use when deploying PocketBase to a server, setting up Docker, configuring systemd, reverse proxy (nginx/Caddy), TLS, SMTP, backups, S3 storage, rate limiting, or hardening for production. Provides ready-to-use configs.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/pocketbase/pb-deploy",
-    "stars": 23539,
+    "stars": 23541,
     "category": "devops",
     "tags": [
       "pocketbase",
@@ -3239,7 +3288,7 @@
     "type": "skill",
     "description": "Server-side JavaScript hooks for PocketBase (pb_hooks). Use when writing custom routes, event hooks, cron jobs, sending emails, making HTTP requests, querying the database, or extending PocketBase with server-side logic. Covers the goja ES5 runtime, routing, middleware, all event hooks, DB queries, record operations, and global APIs.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/pocketbase/pb-hooks",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "pocketbase",
@@ -3267,7 +3316,7 @@
     "type": "skill",
     "description": "Schema migrations and versioning for PocketBase. Use when creating migrations, managing schema versions, syncing collections between environments, using automigrate, or creating collections programmatically. Covers migrate commands, migration file format, snapshot imports, and the _migrations tracking table.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/pocketbase/pb-migrations",
-    "stars": 23539,
+    "stars": 23541,
     "category": "database",
     "tags": [
       "pocketbase",
@@ -3293,7 +3342,7 @@
     "type": "skill",
     "description": "Manage Railway deployments - view logs, redeploy, restart, or remove deployments. Use for deployment lifecycle (remove, stop, redeploy, restart), deployment visibility (list, status, history), and troubleshooting (logs, errors, failures, crashes). NOT for deleting services - use railway-environment skill with isDeleted for that.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/railway/deployment",
-    "stars": 23539,
+    "stars": 23541,
     "category": "devops",
     "tags": [
       "railway",
@@ -3320,7 +3369,7 @@
     "type": "skill",
     "description": "Comprehensive Python library for astronomy and astrophysics. This skill should be used when working with astronomical data including celestial coordinates, physical units, FITS files, cosmological calculations, time systems, tables, world coordinate systems (WCS), and astronomical data analysis. Use when tasks involve coordinate transformations, unit conversions, FITS file manipulation, cosmological distance calculations, time scale conversions, or astronomical data processing.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/astropy",
-    "stars": 23539,
+    "stars": 23541,
     "category": "tooling",
     "tags": [
       "python",
@@ -3347,7 +3396,7 @@
     "type": "skill",
     "description": "Primary Python toolkit for molecular biology. Preferred for Python-based PubMed/NCBI queries (Bio.Entrez), sequence manipulation, file parsing (FASTA, GenBank, FASTQ, PDB), advanced BLAST workflows, structures, phylogenetics. For quick BLAST, use gget. For direct REST API, use pubmed-database.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/biopython",
-    "stars": 23539,
+    "stars": 23541,
     "category": "tooling",
     "tags": [
       "python",
@@ -3374,7 +3423,7 @@
     "type": "skill",
     "description": "Parallel/distributed computing. Scale pandas/NumPy beyond memory, parallel DataFrames/Arrays, multi-file processing, task graphs, for larger-than-RAM datasets and parallel workflows.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/dask",
-    "stars": 23539,
+    "stars": 23541,
     "category": "tooling",
     "tags": [
       "python",
@@ -3400,7 +3449,7 @@
     "type": "skill",
     "description": "Pythonic wrapper around RDKit with simplified interface and sensible defaults. Preferred for standard drug discovery: SMILES parsing, standardization, descriptors, fingerprints, clustering, 3D conformers, parallel processing. Returns native rdkit.Chem.Mol objects. For advanced control or custom parameters, use rdkit directly.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/datamol",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "python",
@@ -3426,7 +3475,7 @@
     "type": "skill",
     "description": "Molecular machine learning toolkit. Property prediction (ADMET, toxicity), GNNs (GCN, MPNN), MoleculeNet benchmarks, pretrained models, featurization, for drug discovery ML.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/deepchem",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "python",
@@ -3452,7 +3501,7 @@
     "type": "skill",
     "description": "DNAnexus cloud genomics platform. Build apps/applets, manage data (upload/download), dxpy Python SDK, run workflows, FASTQ/BAM/VCF, for genomics pipeline development and execution.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/dnanexus-integration",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "python",
@@ -3478,7 +3527,7 @@
     "type": "skill",
     "description": "Framework for computational fluid dynamics simulations using Python. Use when running fluid dynamics simulations including Navier-Stokes equations (2D/3D), shallow water equations, stratified flows, or when analyzing turbulence, vortex dynamics, or geophysical flows. Provides pseudospectral methods with FFT, HPC support, and comprehensive output analysis.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/fluidsim",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "python",
@@ -3504,7 +3553,7 @@
     "type": "skill",
     "description": "Python library for working with geospatial vector data including shapefiles, GeoJSON, and GeoPackage files. Use when working with geographic data for spatial analysis, geometric operations, coordinate transformations, spatial joins, overlay operations, choropleth mapping, or any task involving reading/writing/analyzing vector geographic data. Supports PostGIS databases, interactive maps, and integration with matplotlib/folium/cartopy. Use for tasks like buffer analysis, spatial joins between datasets, dissolving boundaries, clipping data, calculating areas/distances, reprojecting coordinate systems, creating maps, or converting between spatial file formats.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/geopandas",
-    "stars": 23539,
+    "stars": 23541,
     "category": "database",
     "tags": [
       "python",
@@ -3530,7 +3579,7 @@
     "type": "skill",
     "description": "Latch platform for bioinformatics workflows. Build pipelines with Latch SDK, @workflow/@task decorators, deploy serverless workflows, LatchFile/LatchDir, Nextflow/Snakemake integration.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/latchbio-integration",
-    "stars": 23539,
+    "stars": 23541,
     "category": "tooling",
     "tags": [
       "python",
@@ -3557,7 +3606,7 @@
     "type": "skill",
     "description": "Foundational plotting library. Create line plots, scatter, bar, histograms, heatmaps, 3D, subplots, export PNG/PDF/SVG, for scientific visualization and publication figures.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/matplotlib",
-    "stars": 23539,
+    "stars": 23541,
     "category": "tooling",
     "tags": [
       "python",
@@ -3583,7 +3632,7 @@
     "type": "skill",
     "description": "Run Python code in the cloud with serverless containers, GPUs, and autoscaling. Use when deploying ML models, running batch processing jobs, scheduling compute-intensive tasks, or serving APIs that require GPU acceleration or dynamic scaling.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/modal",
-    "stars": 23539,
+    "stars": 23541,
     "category": "devops",
     "tags": [
       "python",
@@ -3610,7 +3659,7 @@
     "type": "skill",
     "description": "Comprehensive toolkit for creating, analyzing, and visualizing complex networks and graphs in Python. Use when working with network/graph data structures, analyzing relationships between entities, computing graph algorithms (shortest paths, centrality, clustering), detecting communities, generating synthetic networks, or visualizing network topologies. Applicable to social networks, biological networks, transportation systems, citation networks, and any domain involving pairwise relationships.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/networkx",
-    "stars": 23539,
+    "stars": 23541,
     "category": "tooling",
     "tags": [
       "python",
@@ -3636,7 +3685,7 @@
     "type": "skill",
     "description": "Microscopy data management platform. Access images via Python, retrieve datasets, analyze pixels, manage ROIs/annotations, batch processing, for high-content screening and microscopy workflows.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/omero-integration",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "python",
@@ -3662,7 +3711,7 @@
     "type": "skill",
     "description": "Lab automation platform for Flex/OT-2 robots. Write Protocol API v2 protocols, liquid handling, hardware modules (heater-shaker, thermocycler), labware management, for automated pipetting workflows.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/opentrons-integration",
-    "stars": 23539,
+    "stars": 23541,
     "category": "tooling",
     "tags": [
       "python",
@@ -3688,7 +3737,7 @@
     "type": "skill",
     "description": "Cross-platform Python library for quantum computing, quantum machine learning, and quantum chemistry. Enables building and training quantum circuits with automatic differentiation, seamless integration with PyTorch/JAX/TensorFlow, and device-independent execution across simulators and quantum hardware (IBM, Amazon Braket, Google, Rigetti, IonQ, etc.). Use when working with quantum circuits, variational quantum algorithms (VQE, QAOA), quantum neural networks, hybrid quantum-classical models, molecular simulations, quantum chemistry calculations, or any quantum computing tasks requiring gradient-based optimization, hardware-agnostic programming, or quantum machine learning workflows.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/pennylane",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "python",
@@ -3715,7 +3764,7 @@
     "type": "skill",
     "description": "Interactive scientific and statistical data visualization library for Python. Use when creating charts, plots, or visualizations including scatter plots, line charts, bar charts, heatmaps, 3D plots, geographic maps, statistical distributions, financial charts, and dashboards. Supports both quick visualizations (Plotly Express) and fine-grained customization (graph objects). Outputs interactive HTML or static images (PNG, PDF, SVG).",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/plotly",
-    "stars": 23539,
+    "stars": 23541,
     "category": "frontend",
     "tags": [
       "python",
@@ -3741,7 +3790,7 @@
     "type": "skill",
     "description": "Fast DataFrame library (Apache Arrow). Select, filter, group_by, joins, lazy evaluation, CSV/Parquet I/O, expression API, for high-performance data analysis workflows.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/polars",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "python",
@@ -3768,7 +3817,7 @@
     "type": "skill",
     "description": "Cheminformatics toolkit for fine-grained molecular control. SMILES/SDF parsing, descriptors (MW, LogP, TPSA), fingerprints, substructure search, 2D/3D generation, similarity, reactions. For standard workflows with simpler interface, use datamol (wrapper around RDKit). Use rdkit for advanced control, custom sanitization, specialized algorithms.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/rdkit",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "python",
@@ -3795,7 +3844,7 @@
     "type": "skill",
     "description": "Single-cell RNA-seq analysis. Load .h5ad/10X data, QC, normalization, PCA/UMAP/t-SNE, Leiden clustering, marker genes, cell type annotation, trajectory, for scRNA-seq analysis.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/scanpy",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "python",
@@ -3822,7 +3871,7 @@
     "type": "skill",
     "description": "Biological data toolkit. Sequence analysis, alignments, phylogenetic trees, diversity metrics (alpha/beta, UniFrac), ordination (PCoA), PERMANOVA, FASTA/Newick I/O, for microbiome analysis.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/scikit-bio",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "python",
@@ -3849,7 +3898,7 @@
     "type": "skill",
     "description": "Machine learning in Python with scikit-learn. Use when working with supervised learning (classification, regression), unsupervised learning (clustering, dimensionality reduction), model evaluation, hyperparameter tuning, preprocessing, or building ML pipelines. Provides comprehensive reference documentation for algorithms, preprocessing techniques, pipelines, and best practices.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/scikit-learn",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "python",
@@ -3876,7 +3925,7 @@
     "type": "skill",
     "description": "Comprehensive toolkit for survival analysis and time-to-event modeling in Python using scikit-survival. Use this skill when working with censored survival data, performing time-to-event analysis, fitting Cox models, Random Survival Forests, Gradient Boosting models, or Survival SVMs, evaluating survival predictions with concordance index or Brier score, handling competing risks, or implementing any survival analysis workflow with the scikit-survival library.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/scikit-survival",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "python",
@@ -3903,7 +3952,7 @@
     "type": "skill",
     "description": "Statistical visualization. Scatter, box, violin, heatmaps, pair plots, regression, correlation matrices, KDE, faceted plots, for exploratory analysis and publication figures.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/seaborn",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "python",
@@ -3929,7 +3978,7 @@
     "type": "skill",
     "description": "Process-based discrete-event simulation framework in Python. Use this skill when building simulations of systems with processes, queues, resources, and time-based events such as manufacturing systems, service operations, network traffic, logistics, or any system where entities interact with shared resources over time.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/simpy",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "python",
@@ -3955,7 +4004,7 @@
     "type": "skill",
     "description": "Statistical modeling toolkit. OLS, GLM, logistic, ARIMA, time series, hypothesis tests, diagnostics, AIC/BIC, for rigorous statistical inference and econometric analysis.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/statsmodels",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "python",
@@ -3981,7 +4030,7 @@
     "type": "skill",
     "description": "Graph Neural Networks (PyG). Node/graph classification, link prediction, GCN, GAT, GraphSAGE, heterogeneous graphs, molecular property prediction, for geometric deep learning.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/torch_geometric",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "python",
@@ -4007,7 +4056,7 @@
     "type": "skill",
     "description": "Graph-based drug discovery toolkit. Molecular property prediction (ADMET), protein modeling, knowledge graph reasoning, molecular generation, retrosynthesis, GNNs (GIN, GAT, SchNet), 40+ datasets, for PyTorch-based ML on molecules, proteins, and biomedical graphs.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/torchdrug",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "python",
@@ -4033,7 +4082,7 @@
     "type": "skill",
     "description": "This skill should be used when working with pre-trained transformer models for natural language processing, computer vision, audio, or multimodal tasks. Use for text generation, classification, question answering, translation, summarization, image classification, object detection, speech recognition, and fine-tuning models on custom datasets.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/transformers",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "python",
@@ -4059,7 +4108,7 @@
     "type": "skill",
     "description": "UMAP dimensionality reduction. Fast nonlinear manifold learning for 2D/3D visualization, clustering preprocessing (HDBSCAN), supervised/parametric UMAP, for high-dimensional data.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/umap-learn",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "python",
@@ -4085,7 +4134,7 @@
     "type": "skill",
     "description": "Chunked N-D arrays for cloud storage. Compressed arrays, parallel I/O, S3/GCS integration, NumPy/Dask/Xarray compatible, for large-scale scientific computing pipelines.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/zarr-python",
-    "stars": 23539,
+    "stars": 23541,
     "category": "database",
     "tags": [
       "python",
@@ -4113,7 +4162,7 @@
     "type": "skill",
     "description": "Implement secure API design patterns including authentication, authorization, input validation, rate limiting, and protection against common API vulnerabilities",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/security/api-security-best-practices",
-    "stars": 23539,
+    "stars": 23541,
     "category": "security",
     "tags": [
       "api",
@@ -4140,7 +4189,7 @@
     "type": "skill",
     "description": "Expert at handling file uploads and cloud storage. Covers S3, Cloudflare R2, presigned URLs, multipart uploads, and image optimization. Knows how to handle large files without blocking. Use when: file upload, S3, R2, presigned URL, multipart.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/security/file-uploads",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "file-upload",
@@ -4163,39 +4212,12 @@
     "description_zh": "处理文件上传、云存储及大文件传输优化。"
   },
   {
-    "id": "code-review-skill",
-    "name": "code-review",
-    "type": "skill",
-    "description": "Perform code reviews following Sentry engineering practices. Use when reviewing pull requests, examining code changes, or providing feedback on code quality. Covers security, performance, testing, and design review.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/sentry/code-review",
-    "stars": 23539,
-    "category": "tooling",
-    "tags": [
-      "code-review",
-      "pull-requests",
-      "security",
-      "performance",
-      "testing",
-      "design"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/sentry/code-review"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-25",
-    "description_zh": "按工程规范进行代码审查并提供反馈。"
-  },
-  {
     "id": "find-bugs-skill",
     "name": "find-bugs",
     "type": "skill",
     "description": "Find bugs, security vulnerabilities, and code quality issues in local branch changes. Use when asked to review changes, find bugs, security review, or audit code on the current branch.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/sentry/find-bugs",
-    "stars": 23539,
+    "stars": 23541,
     "category": "testing",
     "tags": [
       "bug-finding",
@@ -4221,7 +4243,7 @@
     "type": "skill",
     "description": "Expert in building browser extensions that solve real problems - Chrome, Firefox, and cross-browser extensions. Covers extension architecture, manifest v3, content scripts, popup UIs, monetization strategies, and Chrome Web Store publishing. Use when: browser extension, chrome extension, firefox addon, extension, manifest v3.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/utilities/browser-extension-builder",
-    "stars": 23539,
+    "stars": 23541,
     "category": "frontend",
     "tags": [
       "browser-extension",
@@ -4243,12 +4265,38 @@
     "description_zh": "讲解跨浏览器扩展开发、架构与发布流程。"
   },
   {
+    "id": "playwright-skill-skill",
+    "name": "playwright-skill",
+    "type": "skill",
+    "description": "Complete browser automation with Playwright. Auto-detects dev servers, writes clean test scripts to /tmp. Test pages, fill forms, take screenshots, check responsive design, validate UX, test login flows, check links, automate any browser task. Use when user wants to test websites, automate browser interactions, validate web functionality, or perform any browser-based testing.",
+    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/utilities/playwright-skill",
+    "stars": 23541,
+    "category": "testing",
+    "tags": [
+      "playwright",
+      "browser-automation",
+      "e2e",
+      "testing",
+      "ui-testing"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "git_clone",
+      "repo": "davila7/claude-code-templates",
+      "branch": "main",
+      "path": "cli-tool/components/skills/utilities/playwright-skill"
+    },
+    "source": "davila7/claude-code-templates",
+    "last_synced": "2026-03-25",
+    "description_zh": "使用 Playwright 进行浏览器自动化与测试。"
+  },
+  {
     "id": "fastapi-endpoint-skill",
     "name": "fastapi-endpoint",
     "type": "skill",
     "description": "Plan and build production-ready FastAPI endpoints with async SQLAlchemy, Pydantic v2 models, dependency injection for auth, and pytest tests. Uses interview-driven planning to clarify data models, authentication method, pagination strategy, and caching before writing any code.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/web-development/fastapi-endpoint",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "fastapi",
@@ -4277,7 +4325,7 @@
     "type": "skill",
     "description": "Comprehensive React and Next.js performance optimization guide with 40+ rules for eliminating waterfalls, optimizing bundles, and improving rendering. Use when optimizing React apps, reviewing performance, or refactoring components.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/web-development/react-best-practices",
-    "stars": 23539,
+    "stars": 23541,
     "category": "frontend",
     "tags": [
       "react",
@@ -4305,7 +4353,7 @@
     "type": "skill",
     "description": "Expert patterns for Shopify app development including Remix/React Router apps, embedded apps with App Bridge, webhook handling, GraphQL Admin API, Polaris components, billing, and app extensions. Use when: shopify app, shopify, embedded app, polaris, app bridge.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/web-development/shopify-apps",
-    "stars": 23539,
+    "stars": 23541,
     "category": "fullstack",
     "tags": [
       "shopify",
@@ -4334,7 +4382,7 @@
     "type": "skill",
     "description": "Upstash QStash expert for serverless message queues, scheduled jobs, and reliable HTTP-based task delivery without managing infrastructure. Use when: qstash, upstash queue, serverless cron, scheduled http, message queue serverless.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/web-development/upstash-qstash",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "upstash",
@@ -4361,7 +4409,7 @@
     "type": "skill",
     "description": "Optimize website and web application performance including loading speed, Core Web Vitals, bundle size, caching strategies, and runtime performance",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/web-development/web-performance-optimization",
-    "stars": 23539,
+    "stars": 23541,
     "category": "frontend",
     "tags": [
       "performance",
@@ -4382,38 +4430,12 @@
     "description_zh": "优化网站性能，包括加载速度、缓存与运行时表现。"
   },
   {
-    "id": "github-workflow-automation-skill",
-    "name": "github-workflow-automation",
-    "type": "skill",
-    "description": "Automate GitHub workflows with AI assistance. Includes PR reviews, issue triage, CI/CD integration, and Git operations. Use when automating GitHub workflows, setting up PR review automation, creating GitHub Actions, or triaging issues.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/workflow-automation/github-workflow-automation",
-    "stars": 23539,
-    "category": "devops",
-    "tags": [
-      "github",
-      "github-actions",
-      "ci-cd",
-      "automation",
-      "git"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/workflow-automation/github-workflow-automation"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-25",
-    "description_zh": "自动化GitHub流程，包括PR审查、议题分流与CI/CD。"
-  },
-  {
     "id": "inngest-skill",
     "name": "inngest",
     "type": "skill",
     "description": "Inngest expert for serverless-first background jobs, event-driven workflows, and durable execution without managing queues or workers. Use when: inngest, serverless background job, event-driven workflow, step function, durable execution.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/workflow-automation/inngest",
-    "stars": 23539,
+    "stars": 23541,
     "category": "backend",
     "tags": [
       "inngest",
@@ -4439,7 +4461,7 @@
     "type": "skill",
     "description": "Tools are how AI agents interact with the world. A well-designed tool is the difference between an agent that works and one that hallucinates, fails silently, or costs 10x more tokens than necessary.  This skill covers tool design from schema to error handling. JSON Schema best practices, description writing that actually helps the LLM, validation, and the emerging MCP standard that's becoming the lingua franca for AI tools.  Key insight: Tool descriptions are more important than tool implementa",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/agent-tool-builder",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "ai-agents",
@@ -4465,7 +4487,7 @@
     "type": "skill",
     "description": "Multi-agent orchestration framework for autonomous AI collaboration. Use when building teams of specialized agents working together on complex tasks, when you need role-based agent collaboration with memory, or for production workflows requiring sequential/hierarchical execution. Built without LangChain dependencies for lean, fast execution.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/agents-crewai",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "crewai",
@@ -4492,7 +4514,7 @@
     "type": "skill",
     "description": "Design patterns for building autonomous coding agents. Covers tool integration, permission systems, browser automation, and human-in-the-loop workflows. Use when building AI agents, designing tool APIs, implementing permission systems, or creating autonomous coding assistants.",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/autonomous-agent-patterns",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "autonomous-agents",
@@ -4519,7 +4541,7 @@
     "type": "skill",
     "description": "Expert guidance for distributed training with DeepSpeed - ZeRO optimization stages, pipeline parallelism, FP16/BF16/FP8, 1-bit Adam, sparse attention",
     "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/distributed-training-deepspeed",
-    "stars": 23539,
+    "stars": 23541,
     "category": "ai-ml",
     "tags": [
       "deepspeed",
@@ -4542,69 +4564,12 @@
     "description_zh": "使用DeepSpeed进行大模型分布式训练优化。"
   },
   {
-    "id": "pytorch-fsdp-skill",
-    "name": "pytorch-fsdp",
-    "type": "skill",
-    "description": "Expert guidance for Fully Sharded Data Parallel training with PyTorch FSDP - parameter sharding, mixed precision, CPU offloading, FSDP2",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/distributed-training-pytorch-fsdp",
-    "stars": 23539,
-    "category": "ai-ml",
-    "tags": [
-      "pytorch",
-      "fsdp",
-      "distributed-training",
-      "sharding",
-      "mixed-precision",
-      "cpu-offloading",
-      "large-models"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/distributed-training-pytorch-fsdp"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-25",
-    "description_zh": "使用PyTorch FSDP进行参数分片式分布训练。"
-  },
-  {
-    "id": "model-merging-skill",
-    "name": "model-merging",
-    "type": "skill",
-    "description": "Merge multiple fine-tuned models using mergekit to combine capabilities without retraining. Use when creating specialized models by blending domain-specific expertise (math + coding + chat), improving performance beyond single models, or experimenting rapidly with model variants. Covers SLERP, TIES-Merging, DARE, Task Arithmetic, linear merging, and production deployment strategies.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/emerging-techniques-model-merging",
-    "stars": 23539,
-    "category": "ai-ml",
-    "tags": [
-      "model-merging",
-      "mergekit",
-      "slerp",
-      "ties",
-      "dare",
-      "task-arithmetic",
-      "llm",
-      "model-fusion"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/emerging-techniques-model-merging"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-25",
-    "description_zh": "使用mergekit合并多个微调模型能力而无需重训。"
-  },
-  {
     "id": "oraiosserena",
     "name": "oraios/serena",
     "type": "mcp",
     "description": "功能齐全的编码代理，依赖于使用语言服务器的符号化代码操作。",
     "source_url": "https://github.com/oraios/serena",
-    "stars": 22051,
+    "stars": 22054,
     "category": "mobile",
     "tags": [],
     "tech_stack": [],
@@ -4626,7 +4591,7 @@
     "type": "mcp",
     "description": "🎖️ 🦀 🏠 🍎 Local-first system capturing screen/audio with timestamped indexing, SQL/embedding storage, semantic search, LLM-powered history analysis, and event-triggered actions - enables building context-aware AI agents through a NextJS plugin ecosystem.",
     "source_url": "https://github.com/mediar-ai/screenpipe",
-    "stars": 17544,
+    "stars": 17549,
     "category": "frontend",
     "tags": [
       "nextjs"
@@ -4650,7 +4615,7 @@
     "type": "mcp",
     "description": "Pydantic 出品，在安全的沙盒环境中运行 Python 代码，适合开发编程代理。",
     "source_url": "https://github.com/pydantic/pydantic-ai/tree/main/mcp-run-python",
-    "stars": 15766,
+    "stars": 15767,
     "category": "backend",
     "tags": [
       "python"
@@ -4674,7 +4639,7 @@
     "type": "mcp",
     "description": "GraphRAG 记忆服务器，支持自定义摄取、数据处理和搜索。",
     "source_url": "https://github.com/topoteretes/cognee/tree/main/cognee-mcp",
-    "stars": 14606,
+    "stars": 14608,
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -4696,7 +4661,7 @@
     "type": "mcp",
     "description": "使用各种图和向量存储的 AI 应用和 Agents 记忆管理器，允许从 30+ 数据源摄取。 (cognee-mcp 的开发分支)",
     "source_url": "https://github.com/topoteretes/cognee/tree/dev/cognee-mcp",
-    "stars": 14606,
+    "stars": 14608,
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -4764,7 +4729,7 @@
     "type": "mcp",
     "description": "一句话给 AI Agent 装上全网搜索能力。一键安装 + 配置 13+ 平台工具（Twitter、Reddit、YouTube、GitHub、B站、小红书、抖音、微信公众号、LinkedIn 等），通过 mcporter 接入多个 MCP 服务。",
     "source_url": "https://github.com/Panniantong/Agent-Reach",
-    "stars": 10722,
+    "stars": 10728,
     "category": "ai-ml",
     "tags": [
       "git"
@@ -4810,7 +4775,7 @@
     "type": "mcp",
     "description": "AWS 官方维护的一组 MCP 服务器合集，通过 Model Context Protocol（MCP）为 AI 助手提供对 AWS 文档、API、基础设施等资源的访问，帮助在任意支持 MCP 的环境中高效使用 AWS。",
     "source_url": "https://github.com/awslabs/mcp",
-    "stars": 8556,
+    "stars": 8557,
     "category": "devops",
     "tags": [
       "aws"
@@ -4902,7 +4867,7 @@
     "type": "mcp",
     "description": "使用 Firecrawl 提取网页数据，支持 JavaScript 渲染。",
     "source_url": "https://github.com/mendableai/firecrawl-mcp-server",
-    "stars": 5848,
+    "stars": 5850,
     "category": "frontend",
     "tags": [
       "javascript",
@@ -4927,7 +4892,7 @@
     "type": "mcp",
     "description": "增强的文件系统和搜索工具，以及特定于编码的命令和提示。(也含命令行功能)",
     "source_url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
-    "stars": 5771,
+    "stars": 5773,
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -4995,7 +4960,7 @@
     "type": "mcp",
     "description": "Atlassian 产品 (Confluence 和 Jira) 的 MCP 服务器。支持 Cloud/Server/DC。提供全面的工具用于搜索、读取、创建和管理内容。",
     "source_url": "https://github.com/sooperset/mcp-atlassian",
-    "stars": 4725,
+    "stars": 4726,
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -5217,7 +5182,7 @@
     "type": "mcp",
     "description": "通过 Trieve 爬取、嵌入、分块、搜索和检索数据集信息。",
     "source_url": "https://github.com/devflowinc/trieve/tree/main/clients/mcp-server",
-    "stars": 2629,
+    "stars": 2630,
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -5239,7 +5204,7 @@
     "type": "mcp",
     "description": "用于与 Godot 游戏引擎交互的 MCP 服务器，提供编辑、运行、调试和管理 Godot 项目中场景的工具。",
     "source_url": "https://github.com/Coding-Solo/godot-mcp",
-    "stars": 2613,
+    "stars": 2616,
     "category": "backend",
     "tags": [
       "go"
@@ -5331,7 +5296,7 @@
     "type": "mcp",
     "description": "通用数据库 MCP 服务器，可连接 MySQL, PostgreSQL, SQLite, DuckDB 等。",
     "source_url": "https://github.com/bytebase/dbhub/",
-    "stars": 2406,
+    "stars": 2408,
     "category": "database",
     "tags": [
       "postgres",
@@ -5599,7 +5564,7 @@
     "type": "mcp",
     "description": "NodeJS 中的 MySQL 数据库集成，具有可配置的访问控制和模式检查。",
     "source_url": "https://github.com/benborla/mcp-server-mysql",
-    "stars": 1411,
+    "stars": 1412,
     "category": "backend",
     "tags": [
       "mysql",
@@ -5946,7 +5911,7 @@
     "type": "mcp",
     "description": "集成 Apify 平台 3000+ 云工具，用于网站、电商、社交媒体等数据提取。",
     "source_url": "https://github.com/apify/actors-mcp-server",
-    "stars": 957,
+    "stars": 958,
     "category": "backend",
     "tags": [],
     "tech_stack": [],
@@ -6102,7 +6067,7 @@
     "type": "mcp",
     "description": "用于 Kubernetes 的 MCP 服务器，使 AI 助手能通过自然语言与 K8s 集群交互。",
     "source_url": "https://github.com/rohitg00/kubectl-mcp-server",
-    "stars": 855,
+    "stars": 856,
     "category": "devops",
     "tags": [
       "kubernetes"
@@ -6126,7 +6091,7 @@
     "type": "mcp",
     "description": "一个基于多引擎搜索结果的模型上下文协议(MCP)服务器，支持免费网络搜索，无需API密钥。",
     "source_url": "https://github.com/Aas-ee/open-webSearch",
-    "stars": 853,
+    "stars": 854,
     "category": "backend",
     "tags": [],
     "tech_stack": [],
@@ -6264,7 +6229,7 @@
     "type": "mcp",
     "description": "用于与 Google Sheets 交互的模型上下文协议服务器。提供创建、读取、更新和管理电子表格的工具。",
     "source_url": "https://github.com/xing5/mcp-google-sheets",
-    "stars": 763,
+    "stars": 764,
     "category": "backend",
     "tags": [
       "go"
@@ -6839,7 +6804,8 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "用p5.js与种子随机生成原创算法艺术。"
   },
   {
     "id": "brand-guidelines-skill",
@@ -6862,7 +6828,8 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "为作品应用Anthropic官方品牌色与排版。"
   },
   {
     "id": "canvas-design-skill",
@@ -6885,7 +6852,8 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "创作原创静态视觉设计，输出PNG或PDF。"
   },
   {
     "id": "claude-api-skill",
@@ -6909,7 +6877,8 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "使用Claude API或Anthropic SDK开发应用。"
   },
   {
     "id": "doc-coauthoring-skill",
@@ -6932,7 +6901,8 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "用结构化流程协作文档、提案与技术说明。"
   },
   {
     "id": "docx-skill",
@@ -6956,7 +6926,8 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "创建、读取、编辑或处理Word文档。"
   },
   {
     "id": "frontend-design-skill",
@@ -6981,7 +6952,8 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "打造高品质、可上线的前端界面与页面。"
   },
   {
     "id": "internal-comms-skill",
@@ -7004,7 +6976,8 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "按公司偏好撰写各类内部沟通内容。"
   },
   {
     "id": "mcp-builder-skill",
@@ -7030,7 +7003,8 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "构建高质量MCP服务器以集成外部服务。"
   },
   {
     "id": "pdf-skill",
@@ -7053,7 +7027,8 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "处理PDF的读取、编辑、转换与合并等任务。"
   },
   {
     "id": "pptx-skill",
@@ -7076,7 +7051,8 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "创建、读取、编辑或解析PPTX演示文稿。"
   },
   {
     "id": "skill-creator-skill",
@@ -7099,7 +7075,8 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "创建、改进技能并评估其表现。"
   },
   {
     "id": "slack-gif-creator-skill",
@@ -7122,7 +7099,8 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "制作适配Slack的动画GIF。"
   },
   {
     "id": "theme-factory-skill",
@@ -7145,7 +7123,8 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "为幻灯片、文档或网页应用统一主题。"
   },
   {
     "id": "web-artifacts-builder-skill",
@@ -7171,7 +7150,8 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "用现代前端技术构建复杂HTML交互作品。"
   },
   {
     "id": "webapp-testing-skill",
@@ -7195,7 +7175,8 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "用Playwright测试本地Web应用并调试界面。"
   },
   {
     "id": "xlsx-skill",
@@ -7218,7 +7199,8 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "创建、读取、编辑或处理电子表格文件。"
   },
   {
     "id": "markuspfundsteinmcp-gsuite",
@@ -7357,6 +7339,28 @@
     "last_synced": "2026-03-25"
   },
   {
+    "id": "domdomeggairtable-mcp-server",
+    "name": "domdomegg/airtable-mcp-server",
+    "type": "mcp",
+    "description": "读写 Airtable 数据库，带模式检查。",
+    "source_url": "https://github.com/domdomegg/airtable-mcp-server",
+    "stars": 430,
+    "category": "ai-ml",
+    "tags": [],
+    "tech_stack": [],
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "@domdomeggairtable-mcp-server/mcp"
+        ]
+      }
+    },
+    "source": "awesome-mcp-zh",
+    "last_synced": "2026-03-25"
+  },
+  {
     "id": "pskill9web-search",
     "name": "pskill9/web-search",
     "type": "mcp",
@@ -7374,28 +7378,6 @@
         "command": "npx",
         "args": [
           "@pskill9web-search/mcp"
-        ]
-      }
-    },
-    "source": "awesome-mcp-zh",
-    "last_synced": "2026-03-25"
-  },
-  {
-    "id": "domdomeggairtable-mcp-server",
-    "name": "domdomegg/airtable-mcp-server",
-    "type": "mcp",
-    "description": "读写 Airtable 数据库，带模式检查。",
-    "source_url": "https://github.com/domdomegg/airtable-mcp-server",
-    "stars": 429,
-    "category": "ai-ml",
-    "tags": [],
-    "tech_stack": [],
-    "install": {
-      "method": "mcp_config",
-      "config": {
-        "command": "npx",
-        "args": [
-          "@domdomeggairtable-mcp-server/mcp"
         ]
       }
     },
@@ -15091,6 +15073,28 @@
     "last_synced": "2026-03-25"
   },
   {
+    "id": "roundtable",
+    "name": "Roundtable",
+    "type": "mcp",
+    "description": "统一AI编程助手的零配置MCP服务器，专为自主代理开发设计，简化多AI工具集成工作流程。",
+    "source_url": "https://github.com/askbudi/roundtable",
+    "stars": 88,
+    "category": "ai-ml",
+    "tags": [],
+    "tech_stack": [],
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "@roundtable/mcp"
+        ]
+      }
+    },
+    "source": "awesome-mcp-zh",
+    "last_synced": "2026-03-25"
+  },
+  {
     "id": "oxylabs",
     "name": "Oxylabs",
     "type": "mcp",
@@ -15106,28 +15110,6 @@
         "command": "npx",
         "args": [
           "@oxylabs/mcp"
-        ]
-      }
-    },
-    "source": "awesome-mcp-zh",
-    "last_synced": "2026-03-25"
-  },
-  {
-    "id": "roundtable",
-    "name": "Roundtable",
-    "type": "mcp",
-    "description": "统一AI编程助手的零配置MCP服务器，专为自主代理开发设计，简化多AI工具集成工作流程。",
-    "source_url": "https://github.com/askbudi/roundtable",
-    "stars": 87,
-    "category": "ai-ml",
-    "tags": [],
-    "tech_stack": [],
-    "install": {
-      "method": "mcp_config",
-      "config": {
-        "command": "npx",
-        "args": [
-          "@roundtable/mcp"
         ]
       }
     },
@@ -18225,7 +18207,8 @@
       ]
     },
     "source": "ai-agent-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "设计后端API、数据库架构与微服务系统。"
   },
   {
     "id": "database-design-aiskill",
@@ -18248,7 +18231,8 @@
       ]
     },
     "source": "ai-agent-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "设计数据库模式、迁移方案并优化查询。"
   },
   {
     "id": "llm-application-dev-aiskill",
@@ -18268,7 +18252,8 @@
       ]
     },
     "source": "ai-agent-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "开发基于大语言模型的应用与自动化功能。"
   },
   {
     "id": "code-documentation-aiskill",
@@ -18288,7 +18273,8 @@
       ]
     },
     "source": "ai-agent-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "编写代码文档、API说明、README与指南。"
   },
   {
     "id": "job-application-aiskill",
@@ -18308,7 +18294,8 @@
       ]
     },
     "source": "ai-agent-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "根据简历和风格撰写定制求职信与申请。"
   },
   {
     "id": "ask-questions-if-underspecified-aiskill",
@@ -18328,7 +18315,8 @@
       ]
     },
     "source": "ai-agent-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "在需求不明确时先澄清再实施。"
   },
   {
     "id": "best-practices-aiskill",
@@ -18348,7 +18336,8 @@
       ]
     },
     "source": "ai-agent-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "提供通用最佳实践指导。"
   },
   {
     "id": "changelog-generator-aiskill",
@@ -18371,7 +18360,8 @@
       ]
     },
     "source": "ai-agent-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "根据git提交自动生成面向用户的更新日志。"
   },
   {
     "id": "content-research-writer-aiskill",
@@ -18391,7 +18381,8 @@
       ]
     },
     "source": "ai-agent-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "通过研究与引用协助写作高质量内容。"
   },
   {
     "id": "lead-research-assistant-aiskill",
@@ -18411,7 +18402,8 @@
       ]
     },
     "source": "ai-agent-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "识别高质量销售线索并提供联系策略。"
   },
   {
     "id": "video-downloader-aiskill",
@@ -18431,7 +18423,8 @@
       ]
     },
     "source": "ai-agent-skills",
-    "last_synced": "2026-03-25"
+    "last_synced": "2026-03-25",
+    "description_zh": "下载YouTube等平台视频供离线使用。"
   },
   {
     "id": "alibaba-cloud-analyticdb-for-mysql",
