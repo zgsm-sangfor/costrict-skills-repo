@@ -11,7 +11,7 @@ permissions:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
 
     steps:
       - uses: actions/checkout@v4
@@ -22,6 +22,17 @@ jobs:
 
       - name: Install dependencies
         run: pip install requests
+
+      - name: Restore sync caches
+        uses: actions/cache@v4
+        with:
+          path: |
+            catalog/skills/.repo_cache.json
+            catalog/skills/.llm_cache.json
+            scripts/fallback_skill_repos.json
+          key: sync-caches-${{ github.run_number }}
+          restore-keys: |
+            sync-caches-
 
       - name: Sync MCP servers
         env:
