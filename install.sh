@@ -1,28 +1,48 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Coding Hub installer — auto-detects platform, installs skill + commands.
-# Usage: curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash
+# Coding Hub installer — requires explicit platform selection.
+# Usage: curl -fsSL .../install.sh | bash -s -- --platform <platform>
+#
+# Platforms: claude-code, opencode, costrict, vscode-costrict
 
 BASE_URL="https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main"
 COMMANDS="search browse recommend install uninstall update"
 
-# --- Platform detection ---
+# --- Parse arguments ---
 
-detect_platform() {
-  if [ -d "$HOME/.costrict" ] && \
-     { [ -n "${VSCODE_PID:-}" ] || [ "${TERM_PROGRAM:-}" = "vscode" ]; }; then
-    echo "vscode-costrict"
-  elif [ -d "$HOME/.costrict" ]; then
-    echo "costrict-cli"
-  elif [ -d "$HOME/.opencode" ]; then
-    echo "opencode"
-  else
-    echo "claude-code"
-  fi
-}
+PLATFORM=""
 
-PLATFORM=$(detect_platform)
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --platform|-p)
+      PLATFORM="$2"
+      shift 2
+      ;;
+    claude-code|opencode|costrict|vscode-costrict)
+      PLATFORM="$1"
+      shift
+      ;;
+    *)
+      echo "Unknown argument: $1" >&2
+      echo "" >&2
+      echo "Usage: bash install.sh --platform <platform>" >&2
+      echo "Platforms: claude-code, opencode, costrict, vscode-costrict" >&2
+      exit 1
+      ;;
+  esac
+done
+
+if [ -z "$PLATFORM" ]; then
+  echo "ERROR: --platform is required." >&2
+  echo "" >&2
+  echo "Usage:" >&2
+  echo "  curl -fsSL .../install.sh | bash -s -- --platform claude-code" >&2
+  echo "  curl -fsSL .../install.sh | bash -s -- --platform opencode" >&2
+  echo "  curl -fsSL .../install.sh | bash -s -- --platform costrict" >&2
+  echo "  curl -fsSL .../install.sh | bash -s -- --platform vscode-costrict" >&2
+  exit 1
+fi
 
 # --- Download helper ---
 
@@ -82,7 +102,7 @@ install_opencode() {
   echo "Try:  /coding-hub-search typescript"
 }
 
-install_costrict_cli() {
+install_costrict() {
   local skill_dir="$HOME/.costrict/skills/coding-hub"
   local cmd_dir=".costrict/coding-hub/commands"
   mkdir -p "$skill_dir" "$cmd_dir"
@@ -124,12 +144,17 @@ install_vscode_costrict() {
 
 # --- Main ---
 
-echo "Detected platform: $PLATFORM"
+echo "Platform: $PLATFORM"
 echo ""
 
 case "$PLATFORM" in
   claude-code)       install_claude_code ;;
   opencode)          install_opencode ;;
-  costrict-cli)      install_costrict_cli ;;
+  costrict)          install_costrict ;;
   vscode-costrict)   install_vscode_costrict ;;
+  *)
+    echo "ERROR: Unknown platform '$PLATFORM'" >&2
+    echo "Valid platforms: claude-code, opencode, costrict, vscode-costrict" >&2
+    exit 1
+    ;;
 esac

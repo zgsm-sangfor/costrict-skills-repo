@@ -30,10 +30,20 @@ Coding Hub 从 8 个上游源自动聚合、过滤、评估，让你和你的 Ag
 
 ## Quick Start
 
-一条命令安装，自动检测平台：
+一条命令安装，指定你的平台：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash
+# Claude Code
+curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash -s -- --platform claude-code
+
+# Opencode（在项目根目录执行）
+curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash -s -- --platform opencode
+
+# Costrict CLI（在项目根目录执行）
+curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash -s -- --platform costrict
+
+# VSCode Costrict 插件
+curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash -s -- --platform vscode-costrict
 ```
 
 安装完成后试试：
@@ -42,7 +52,7 @@ curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/m
 # Claude Code
 /coding-hub:search typescript
 
-# Opencode / Costrict
+# Opencode / Costrict CLI
 /coding-hub-search typescript
 ```
 
@@ -176,26 +186,40 @@ costrict-skills-repo/
 
 > **AI Agent 请阅读本节完成自动安装。** 请严格按照以下步骤执行，不要跳过任何一步。
 
+### 第 0 步: 识别你的运行平台
+
+安装脚本需要明确指定平台，请先确认你运行在哪个环境中：
+
+| 平台 | 如何判断 |
+|------|----------|
+| **Claude Code** | 你是 Claude，在终端 CLI 中运行，有 `~/.claude/` 目录 |
+| **Opencode** | 你运行在 Opencode 中，项目有 `.opencode/` 目录，skills 在 `~/.opencode/skills/` |
+| **Costrict CLI** | 你运行在 Costrict（Opencode 分支）中，skills 在 `~/.costrict/skills/` |
+| **VSCode Costrict** | 你运行在 VSCode 插件环境中（`VSCODE_PID` 或 `TERM_PROGRAM=vscode`），skills 在 `~/.costrict/skills/` |
+
+> **提示**: 如果不确定，检查你的 skills 加载路径：`~/.claude/skills/` → Claude Code，`~/.opencode/skills/` → Opencode，`~/.costrict/skills/` → Costrict CLI 或 VSCode Costrict。
+
 ### 第 1 步: 一键安装
 
-在终端中执行以下命令，脚本会自动检测当前运行平台并安装对应文件：
+确认平台后，执行对应命令（将 `<platform>` 替换为: `claude-code`、`opencode`、`costrict`、`vscode-costrict`）：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash -s -- --platform <platform>
 ```
 
-脚本的平台检测逻辑（按优先级）：
-1. `~/.costrict/` 存在 **且** VSCode 终端环境（`VSCODE_PID` 或 `TERM_PROGRAM=vscode`） → **VSCode Costrict 插件**
-2. `~/.costrict/` 存在 → **Costrict CLI**
-3. `~/.opencode/` 存在 → **Opencode**
-4. 以上都不匹配 → **Claude Code**（默认）
+示例：
+```bash
+# Claude Code
+curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash -s -- --platform claude-code
 
-> **重要**: Costrict 是 Opencode 的深度分支，用户机器上可能同时存在 `~/.opencode/` 和 `~/.costrict/`，所以 Costrict 必须优先检测。VSCode 插件与 Costrict CLI 共用 `~/.costrict/`，通过环境变量区分。
+# Opencode（在项目根目录执行）
+curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash -s -- --platform opencode
+```
 
 <details>
 <summary>如果无法执行 curl | bash（备选方案）</summary>
 
-根据检测到的平台，手动执行对应命令：
+根据你的平台，手动执行对应命令：
 
 **Claude Code:**（Skill + Commands 全部安装到全局目录）
 
@@ -210,11 +234,8 @@ done
 **Opencode:**（Skill 全局 + Commands 项目级）
 
 ```bash
-# Skill → 全局
 mkdir -p ~/.opencode/skills/coding-hub
 curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/opencode/skills/coding-hub/SKILL.md" -o ~/.opencode/skills/coding-hub/SKILL.md
-
-# Commands → 项目目录（在项目根目录执行）
 mkdir -p .opencode/command
 for cmd in search browse recommend install uninstall update; do
   curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/opencode/command/coding-hub-${cmd}.md" -o .opencode/command/coding-hub-${cmd}.md
@@ -224,11 +245,8 @@ done
 **Costrict CLI:**（Skill 全局 + Commands 项目级）
 
 ```bash
-# Skill → 全局
 mkdir -p ~/.costrict/skills/coding-hub
 curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/costrict/skills/coding-hub/SKILL.md" -o ~/.costrict/skills/coding-hub/SKILL.md
-
-# Commands → 项目目录（在项目根目录执行）
 mkdir -p .costrict/coding-hub/commands
 for cmd in search browse recommend install uninstall update; do
   curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/costrict/commands/coding-hub/coding-hub-${cmd}.md" -o .costrict/coding-hub/commands/coding-hub-${cmd}.md
