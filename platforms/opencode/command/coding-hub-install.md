@@ -28,7 +28,7 @@ $ARGUMENTS
 - 类型: MCP Server
 - 描述: xxx
 - 来源: xxx
-- 目标: .claude/settings.json (项目级)
+- 目标: .opencode/settings.json (项目级)
 
 确认安装？(Y/n/全局)
 ```
@@ -36,24 +36,24 @@ $ARGUMENTS
 5. 根据用户确认和类型执行安装：
 
 ### MCP (type == "mcp")
-- 默认写入 `.claude/settings.json`，用户选 "全局" 则写入 `~/.claude/settings.json`
+- 默认写入 `.opencode/settings.json`，用户选 "全局" 则写入 `~/.opencode/settings.json`
 - 读取现有 settings.json（不存在则创建 `{}`）
 - 将 `install.config` 合并到 `mcpServers` 字段
 - 如果 key 已存在，询问是否覆盖
 
 ### Skill (type == "skill")
 - 如果 `install.repo` 存在，执行 sparse checkout 或 clone + 复制
-- 目标: `~/.claude/skills/<id>/`
+- 目标: `~/.opencode/skills/<id>/`
 - 如果目录已存在，询问是否覆盖
 
 ### Rule (type == "rule")
 - 下载 `install.files` 中的文件
-- 默认保存到 `.claude/rules/<id>.md`，用户选 "全局" 则保存到 `~/.claude/rules/<id>.md`
+- 默认保存到 `.opencode/rules/<id>.md`，用户选 "全局" 则保存到 `~/.opencode/rules/<id>.md`
 - 如果是 .cursorrules 格式，保持原文本内容
 
 ### Prompt (type == "prompt")
 - 同 Rule 的安装逻辑
-- 保存到 `.claude/rules/<id>.md`
+- 保存到 `.opencode/rules/<id>.md`
 
 6. 安装完成后显示结果和使用说明
 
