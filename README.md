@@ -58,6 +58,8 @@ curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/m
 
 或者把这个仓库丢给你的 AI Agent，它会自动阅读 [For Agents](#for-agents) 部分完成安装。
 
+> **注意**: 目前仅 Claude Code 的 Agent 能可靠识别自身平台。其他平台（Opencode / Costrict / VSCode Costrict）建议由用户手动执行上方对应的安装命令。
+
 <details>
 <summary>手动安装（git clone）</summary>
 
@@ -185,6 +187,8 @@ costrict-skills-repo/
 ## For Agents
 
 > **AI Agent 请阅读本节完成自动安装。** 请严格按照以下步骤执行，不要跳过任何一步。
+>
+> **适用范围**: 本节的自动安装流程目前仅在 **Claude Code** 中验证可靠（Agent 能正确识别自身平台）。其他平台的 Agent 可能无法准确判断自己的运行环境，建议由用户手动执行 [Quick Start](#quick-start) 中对应平台的安装命令。
 
 ### 第 0 步: 识别你的运行平台
 
