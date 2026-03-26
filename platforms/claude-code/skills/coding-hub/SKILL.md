@@ -30,12 +30,15 @@ description: >
 
 解析用户输入，匹配以下命令模式：
 
-### search <query>
+### search <query> [type:mcp|skill|rule|prompt]
 
 1. 用 `curl -s` 获取索引 JSON
-2. 在 `name`、`description`、`tags` 中搜索关键词（不区分大小写）
-3. 结果按匹配度（匹配字段数量）+ stars 降序排列
-4. 展示前 10 条结果，格式：
+2. 从参数中提取可选的类型过滤 `type:<值>`，剩余部分作为搜索关键词
+   - 示例: `search typescript type:mcp` — 只搜索 MCP 类型
+3. 如果指定了类型过滤，先按 `type` 字段过滤索引
+4. 在 `name`、`description`、`tags` 中搜索关键词（不区分大小写）
+5. 结果按匹配度（匹配字段数量）+ stars 降序排列
+6. 展示前 10 条结果，格式：
 
 ```
 ## 搜索结果: "<query>"

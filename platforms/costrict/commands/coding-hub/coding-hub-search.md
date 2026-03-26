@@ -18,11 +18,15 @@ $ARGUMENTS
 
 ## 执行流程
 
-1. 从 `$ARGUMENTS` 中提取搜索关键词
+1. 从 `$ARGUMENTS` 中提取搜索关键词和可选的类型过滤参数
+   - 支持 `type:mcp`、`type:skill`、`type:rule`、`type:prompt` 过滤
+   - 示例: `/coding-hub-search typescript type:mcp` — 只搜索 MCP 类型
+   - 如果参数中包含 `type:<值>`，提取为过滤条件，剩余部分作为搜索关键词
 2. 获取索引 JSON
-3. 在每条记录的 `name`、`description`、`tags` 中搜索关键词（不区分大小写）
-4. 结果按匹配度（匹配字段数量）+ stars 降序排列
-5. 展示前 10 条结果，格式：
+3. 如果指定了类型过滤，先按 `type` 字段过滤索引
+4. 在每条记录的 `name`、`description`、`tags` 中搜索关键词（不区分大小写）
+5. 结果按匹配度（匹配字段数量）+ stars 降序排列
+6. 展示前 10 条结果，格式：
 
 ```
 ## 搜索结果: "<query>"
