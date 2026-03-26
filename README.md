@@ -33,11 +33,15 @@ Coding Hub 从 8 个上游源自动聚合、过滤、评估，让你和你的 Ag
 把这个仓库丢给你的 AI Agent，它会自动阅读 [For Agents](#for-agents) 部分并完成安装。或者手动安装：
 
 ```bash
-# Claude Code — 一键安装
+# 1. 克隆仓库
+git clone https://github.com/zgsm-sangfor/costrict-skills-repo.git
+cd costrict-skills-repo
+
+# 2. Claude Code — 安装 skill 和子命令
 cp -r platforms/claude-code/skills/coding-hub/ ~/.claude/skills/coding-hub/
 mkdir -p .claude/commands/coding-hub/ && cp platforms/claude-code/commands/coding-hub/*.md .claude/commands/coding-hub/
 
-# 试试看
+# 3. 试试看
 /coding-hub:search typescript
 ```
 
@@ -45,6 +49,10 @@ mkdir -p .claude/commands/coding-hub/ && cp platforms/claude-code/commands/codin
 <summary>Opencode / Costrict 安装</summary>
 
 ```bash
+# 先 clone 仓库（如果还没有的话）
+git clone https://github.com/zgsm-sangfor/costrict-skills-repo.git
+cd costrict-skills-repo
+
 # Opencode
 mkdir -p ~/.opencode/skills/coding-hub/
 cp platforms/opencode/skills/coding-hub/SKILL.md ~/.opencode/skills/coding-hub/
@@ -55,6 +63,24 @@ mkdir -p ~/.cospec/skills/coding-hub/
 cp platforms/costrict/skills/coding-hub/SKILL.md ~/.cospec/skills/coding-hub/
 mkdir -p .cospec/coding-hub/commands/ && cp platforms/costrict/commands/coding-hub/*.md .cospec/coding-hub/commands/
 ```
+
+</details>
+
+<details>
+<summary>网络问题？</summary>
+
+如果 GitHub 访问受限，可以设置代理后再 clone 和使用：
+
+```bash
+# HTTP 代理（根据你的代理端口修改）
+export https_proxy=http://127.0.0.1:7890
+
+# 或 Git 单独设置代理
+git config --global http.proxy http://127.0.0.1:7890
+git config --global https.proxy http://127.0.0.1:7890
+```
+
+后续 `/coding-hub:install` 等命令从 GitHub 拉取资源时同样需要网络通畅。
 
 </details>
 
@@ -82,10 +108,11 @@ mkdir -p .cospec/coding-hub/commands/ && cp platforms/costrict/commands/coding-h
 
 | | Claude Code | Opencode | Costrict |
 |---|---|---|---|
-| 搜索 | `/coding-hub:search <kw>` | `/coding-hub-search <kw>` | `/coding-hub-search <kw>` |
+| 搜索 | `/coding-hub:search <kw> [type:mcp]` | `/coding-hub-search <kw> [type:mcp]` | `/coding-hub-search <kw> [type:mcp]` |
 | 浏览 | `/coding-hub:browse [cat]` | `/coding-hub-browse [cat]` | `/coding-hub-browse [cat]` |
 | 推荐 | `/coding-hub:recommend` | `/coding-hub-recommend` | `/coding-hub-recommend` |
 | 安装 | `/coding-hub:install <name>` | `/coding-hub-install <name>` | `/coding-hub-install <name>` |
+| 卸载 | `/coding-hub:uninstall <name>` | `/coding-hub-uninstall <name>` | `/coding-hub-uninstall <name>` |
 | 更新 | `/coding-hub:update` | `/coding-hub-update` | `/coding-hub-update` |
 
 <details>
@@ -157,6 +184,7 @@ cp platforms/claude-code/commands/coding-hub/*.md .claude/commands/coding-hub/
 - `/coding-hub:browse [分类]` — 浏览分类
 - `/coding-hub:recommend` — 基于当前项目推荐
 - `/coding-hub:install <名称>` — 安装资源
+- `/coding-hub:uninstall <名称>` — 卸载资源
 - `/coding-hub:update` — 更新到最新版本
 
 ### Opencode
@@ -176,6 +204,7 @@ cp platforms/opencode/command/*.md .opencode/command/
 - `/coding-hub-browse [分类]` — 浏览分类
 - `/coding-hub-recommend` — 基于当前项目推荐
 - `/coding-hub-install <名称>` — 安装资源
+- `/coding-hub-uninstall <名称>` — 卸载资源
 - `/coding-hub-update` — 更新到最新版本
 
 ### Costrict
@@ -195,6 +224,7 @@ cp platforms/costrict/commands/coding-hub/*.md .cospec/coding-hub/commands/
 - `/coding-hub-browse [分类]` — 浏览分类
 - `/coding-hub-recommend` — 基于当前项目推荐
 - `/coding-hub-install <名称>` — 安装资源
+- `/coding-hub-uninstall <名称>` — 卸载资源
 - `/coding-hub-update` — 更新到最新版本
 
 ### 更新
