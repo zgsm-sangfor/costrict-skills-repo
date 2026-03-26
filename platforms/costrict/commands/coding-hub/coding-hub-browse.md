@@ -1,5 +1,5 @@
 ---
-description: '浏览 coding 资源分类。用法: /coding-hub-browse [category]'
+description: '浏览 coding 资源分类。用法: /coding-hub-browse [category] [type:mcp|skill|rule|prompt]'
 argument-hint: category name
 ---
 
@@ -16,6 +16,13 @@ $ARGUMENTS
 用 Bash 执行: `curl -s <URL>` 获取 JSON。
 
 ## 执行流程
+
+0. 从 `$ARGUMENTS` 中提取可选的类型过滤参数
+   - 支持 `type:mcp`、`type:skill`、`type:rule`、`type:prompt` 过滤
+   - 示例: `/coding-hub-browse type:skill` — 只浏览 Skill 类型
+   - 示例: `/coding-hub-browse backend type:mcp` — 只浏览 backend 分类下的 MCP
+   - 如果参数中包含 `type:<值>`，提取为过滤条件，剩余部分作为分类参数
+   - 如果指定了类型过滤，在执行后续步骤前先按 `type` 字段过滤索引
 
 ### 无参数时: 展示分类概览
 
