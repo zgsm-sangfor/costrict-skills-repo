@@ -16,7 +16,7 @@ argument-hint: (no arguments)
 1. **检测当前平台**
 
    按以下顺序检测，使用第一个匹配的平台：
-   - 检查 `~/.cospec/skills/coding-hub/SKILL.md` 是否存在 → Costrict
+   - 检查 `~/.costrict/skills/coding-hub/SKILL.md` 是否存在 → Costrict
    - 如果都不存在，默认使用 Costrict
 
 2. **下载最新文件**
@@ -25,12 +25,12 @@ argument-hint: (no arguments)
 
    ```bash
    # Skill（全局）
-   curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/costrict/skills/coding-hub/SKILL.md" -o ~/.cospec/skills/coding-hub/SKILL.md
+   curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/costrict/skills/coding-hub/SKILL.md" -o ~/.costrict/skills/coding-hub/SKILL.md
 
    # 子命令（项目级）
-   mkdir -p .cospec/coding-hub/commands/
+   mkdir -p .costrict/coding-hub/commands/
    for cmd in search browse recommend install uninstall update; do
-     curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/costrict/commands/coding-hub/coding-hub-${cmd}.md" -o ".cospec/coding-hub/commands/coding-hub-${cmd}.md"
+     curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/costrict/commands/coding-hub/coding-hub-${cmd}.md" -o ".costrict/coding-hub/commands/coding-hub-${cmd}.md"
    done
    ```
 
@@ -43,13 +43,13 @@ argument-hint: (no arguments)
 
    已从 GitHub 拉取最新版本：
 
-   - ~/.cospec/skills/coding-hub/SKILL.md
-   - .cospec/coding-hub/commands/coding-hub-search.md
-   - .cospec/coding-hub/commands/coding-hub-browse.md
-   - .cospec/coding-hub/commands/coding-hub-recommend.md
-   - .cospec/coding-hub/commands/coding-hub-install.md
-   - .cospec/coding-hub/commands/coding-hub-uninstall.md
-   - .cospec/coding-hub/commands/coding-hub-update.md
+   - ~/.costrict/skills/coding-hub/SKILL.md
+   - .costrict/coding-hub/commands/coding-hub-search.md
+   - .costrict/coding-hub/commands/coding-hub-browse.md
+   - .costrict/coding-hub/commands/coding-hub-recommend.md
+   - .costrict/coding-hub/commands/coding-hub-install.md
+   - .costrict/coding-hub/commands/coding-hub-uninstall.md
+   - .costrict/coding-hub/commands/coding-hub-update.md
    ```
 
 ## 错误处理

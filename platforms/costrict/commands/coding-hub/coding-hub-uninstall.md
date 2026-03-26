@@ -22,15 +22,15 @@ $ARGUMENTS
 4. 检测安装状态和安装位置：
 
 ### MCP (type == "mcp")
-- 检查项目级 `.cospec/settings.json` 和全局 `~/.cospec/settings.json` 中的 `mcpServers` 字段
+- 检查项目级 `.costrict/settings.json` 和全局 `~/.costrict/settings.json` 中的 `mcpServers` 字段
 - 查找与该资源 `install.config` key 匹配的条目
 - 如果两个层级都存在，让用户选择卸载哪个（项目级/全局/全部）
 
 ### Skill (type == "skill")
-- 检查 `~/.cospec/skills/<id>/` 目录是否存在
+- 检查 `~/.costrict/skills/<id>/` 目录是否存在
 
 ### Rule (type == "rule") / Prompt (type == "prompt")
-- 检查项目级 `.cospec/rules/<id>.md` 和全局 `~/.cospec/rules/<id>.md`
+- 检查项目级 `.costrict/rules/<id>.md` 和全局 `~/.costrict/rules/<id>.md`
 - 如果两个层级都存在，让用户选择卸载哪个（项目级/全局/全部）
 
 5. 如果资源未安装（所有位置都不存在），提示 "{name} 未安装" 并终止
@@ -42,7 +42,7 @@ $ARGUMENTS
 
 - 名称: xxx
 - 类型: MCP Server
-- 安装位置: .cospec/settings.json (项目级)
+- 安装位置: .costrict/settings.json (项目级)
 
 确认卸载？(Y/n)
 ```

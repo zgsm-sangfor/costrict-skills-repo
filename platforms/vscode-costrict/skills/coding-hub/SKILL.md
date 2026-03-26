@@ -14,15 +14,15 @@ metadata:
 
 你是一个 coding 资源助手。你的数据源是一个远端 JSON 索引，包含精选的 MCP servers、Skills、Rules 和 Prompts。
 
-## 平台检测
+## 运行环境
 
-首次执行任何命令前，先检测当前运行平台。按以下顺序检查，使用第一个匹配的结果：
+本 skill 运行在 **VSCode Costrict 插件**（zgsm-ai.zgsm）环境中。以下路径已固定，无需检测平台：
 
-1. 检查当前项目目录或 `~/` 下是否存在 `.costrict/` → **Costrict**（配置目录: `.costrict/`，命令分隔符: `-`）
-2. 检查是否存在 `.opencode/` → **Opencode**（配置目录: `.opencode/`，命令分隔符: `-`）
-3. 默认 → **Claude Code**（配置目录: `.claude/`，命令分隔符: `:`）
-
-检测结果在本次会话中记住，后续命令不再重复检测。以下所有路径中的 `.costrict/` 自动替换为检测到的平台配置目录。
+- MCP 配置（项目级）: `.roo/mcp.json`
+- MCP 配置（全局级）: 通过插件 UI 手动添加（路径不可预测）
+- Skill 安装目录: `~/.costrict/skills/<id>/`
+- Rule/Prompt（项目级）: `.roo/rules/<id>.md`
+- Rule/Prompt（全局级）: 不支持，提示用户手动添加
 
 ## 数据源
 
@@ -96,16 +96,105 @@ metadata:
 
 1. 获取索引，按 `id` 或 `name`（模糊匹配）查找条目
 2. 如果匹配多条，列出让用户选择
-3. 展示安装预览，用户确认后按类型执行安装
+3. 展示安装预览：
+
+```
+## 安装确认
+
+- 名称: xxx
+- 类型: MCP Server
+- 描述: xxx
+- 来源: xxx
+- 目标: .roo/mcp.json (项目级)
+
+确认安装？(Y/n/全局)
+```
+
+4. 根据用户确认和类型执行安装：
+
+#### MCP (type == "mcp")
+- 默认写入 `.roo/mcp.json`，用户选 "全局" 则提示: "VSCode Costrict 插件的全局 MCP 配置需通过插件设置界面手动添加，请打开 VSCode 设置搜索 MCP 相关配置项"
+- 读取现有 `.roo/mcp.json`（不存在则创建 `{}`）
+- 将 `install.config` 合并到 `mcpServers` 字段
+- 如果 key 已存在，询问是否覆盖
+
+#### Skill (type == "skill")
+- 如果 `install.repo` 存在，执行 sparse checkout 或 clone + 复制
+- 目标: `~/.costrict/skills/<id>/`
+- 如果目录已存在，询问是否覆盖
+
+#### Rule (type == "rule")
+- 下载 `install.files` 中的文件
+- 默认保存到 `.roo/rules/<id>.md`（项目级）
+- 用户选 "全局" 则提示: "VSCode Costrict 插件不支持全局 Rule，仅支持项目级安装"
+- 如果是 .cursorrules 格式，保持原文本内容
+
+#### Prompt (type == "prompt")
+- 同 Rule 的安装逻辑
+- 保存到 `.roo/rules/<id>.md`
+
+5. 安装完成后显示结果和使用说明
 
 ### uninstall <name>
 
-1. 获取索引，查找条目
-2. 检测安装状态和位置
-3. 展示卸载预览，用户确认后执行
+1. 获取索引，按 `id` 或 `name`（模糊匹配）查找条目
+2. 如果匹配多条，列出让用户选择要卸载的具体资源
+3. 检测安装状态和安装位置：
+
+#### MCP (type == "mcp")
+- 检查项目级 `.roo/mcp.json` 中的 `mcpServers` 字段
+- 查找与该资源 `install.config` key 匹配的条目
+
+#### Skill (type == "skill")
+- 检查 `~/.costrict/skills/<id>/` 目录是否存在
+
+#### Rule (type == "rule") / Prompt (type == "prompt")
+- 检查项目级 `.roo/rules/<id>.md`
+
+4. 如果资源未安装（所有位置都不存在），提示 "{name} 未安装" 并终止
+
+5. 展示卸载预览：
+
+```
+## 卸载确认
+
+- 名称: xxx
+- 类型: MCP Server
+- 安装位置: .roo/mcp.json (项目级)
+
+确认卸载？(Y/n)
+```
+
+6. 根据用户确认执行卸载，完成后显示结果
+
+### update
+
+从 GitHub 拉取最新版本的 coding-hub skill，覆盖本地安装。
+
+1. **下载最新文件**
+
+   用 Bash 执行以下命令：
+
+   ```bash
+   # Skill（全局）
+   curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/vscode-costrict/skills/coding-hub/SKILL.md" -o ~/.costrict/skills/coding-hub/SKILL.md
+   ```
+
+2. **报告结果**
+
+   ```
+   ## 更新完成
+
+   已从 GitHub 拉取最新版本：
+
+   - ~/.costrict/skills/coding-hub/SKILL.md
+   ```
+
+   > VSCode Costrict 插件无需安装子命令，所有命令逻辑已内置于 SKILL.md。
 
 ## 错误处理
 
 - 如果 curl 获取索引失败，告知用户网络问题并建议重试
 - 如果安装目标文件写入失败，显示权限错误并建议解决方案
 - 如果搜索无结果，建议用户换个关键词或使用 browse 浏览
+- 如果找不到资源，建议使用 `/coding-hub-search` 搜索

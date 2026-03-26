@@ -30,39 +30,42 @@ Coding Hub 从 8 个上游源自动聚合、过滤、评估，让你和你的 Ag
 
 ## Quick Start
 
-把这个仓库丢给你的 AI Agent，它会自动阅读 [For Agents](#for-agents) 部分，检测当前平台并完成安装。或者手动安装：
+一条命令安装，自动检测平台：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash
+```
+
+安装完成后试试：
+
+```bash
+# Claude Code
+/coding-hub:search typescript
+
+# Opencode / Costrict
+/coding-hub-search typescript
+```
+
+或者把这个仓库丢给你的 AI Agent，它会自动阅读 [For Agents](#for-agents) 部分完成安装。
+
+<details>
+<summary>手动安装（git clone）</summary>
 
 ```bash
 # 1. 克隆仓库
 git clone https://github.com/zgsm-sangfor/costrict-skills-repo.git
 cd costrict-skills-repo
 
-# 2. Claude Code — 安装 skill 和子命令
+# 2. Claude Code — Skill + Commands 全部安装到全局 skills 目录
 cp -r platforms/claude-code/skills/coding-hub/ ~/.claude/skills/coding-hub/
-mkdir -p .claude/commands/coding-hub/ && cp platforms/claude-code/commands/coding-hub/*.md .claude/commands/coding-hub/
+cp platforms/claude-code/commands/coding-hub/*.md ~/.claude/skills/coding-hub/
 
-# 3. 试试看
-/coding-hub:search typescript
+# 3. Opencode — Skill 全局，Commands 到项目目录
+# cp platforms/opencode/skills/coding-hub/SKILL.md ~/.opencode/skills/coding-hub/SKILL.md
+# cp platforms/opencode/command/coding-hub-*.md <your-project>/.opencode/command/
 ```
 
-<details>
-<summary>Opencode / Costrict 安装</summary>
-
-```bash
-# 先 clone 仓库（如果还没有的话）
-git clone https://github.com/zgsm-sangfor/costrict-skills-repo.git
-cd costrict-skills-repo
-
-# Opencode
-mkdir -p ~/.opencode/skills/coding-hub/
-cp platforms/opencode/skills/coding-hub/SKILL.md ~/.opencode/skills/coding-hub/
-mkdir -p .opencode/command/ && cp platforms/opencode/command/*.md .opencode/command/
-
-# Costrict
-mkdir -p ~/.cospec/skills/coding-hub/
-cp platforms/costrict/skills/coding-hub/SKILL.md ~/.cospec/skills/coding-hub/
-mkdir -p .cospec/coding-hub/commands/ && cp platforms/costrict/commands/coding-hub/*.md .cospec/coding-hub/commands/
-```
+其他平台见 [Platforms](#platforms) 章节的路径差异。
 
 </details>
 
@@ -104,7 +107,7 @@ git config --global https.proxy http://127.0.0.1:7890
 
 ## Platforms
 
-支持三个 AI Coding 平台，命令格式略有差异：
+支持四个 AI Coding 平台，命令格式略有差异：
 
 | | Claude Code | Opencode | Costrict |
 |---|---|---|---|
@@ -118,11 +121,15 @@ git config --global https.proxy http://127.0.0.1:7890
 <details>
 <summary>平台路径差异</summary>
 
-| | Claude Code | Opencode | Costrict |
-|---|---|---|---|
-| Skill 路径 | `~/.claude/skills/<name>/` | `~/.opencode/skills/<name>/` | `~/.cospec/skills/<name>/` |
-| Command 路径 | `.claude/commands/<ns>/` | `.opencode/command/` | `.cospec/<ns>/commands/` |
-| 命令分隔符 | `:` | `-` | `-` |
+| | Claude Code | Opencode | Costrict | VSCode Costrict |
+|---|---|---|---|---|
+| Skill 路径（全局） | `~/.claude/skills/coding-hub/` | `~/.opencode/skills/coding-hub/` | `~/.costrict/skills/coding-hub/` | `~/.costrict/skills/coding-hub/` |
+| Commands 路径 | 同上（全局） | `.opencode/command/`（项目级） | `.costrict/coding-hub/commands/`（项目级） | 无（内置于 SKILL.md） |
+| 命令分隔符 | `:` | `-` | `-` | `-` |
+
+- **Claude Code** 支持从全局 skills 目录加载子命令，一次安装所有项目可用
+- **Opencode / Costrict CLI** 的命令文件需要安装到每个项目目录，在项目根目录运行 `install.sh` 即可
+- **VSCode Costrict 插件** 所有命令逻辑内置于 SKILL.md，无需单独安装命令
 
 </details>
 
@@ -131,6 +138,7 @@ git config --global https.proxy http://127.0.0.1:7890
 
 ```
 costrict-skills-repo/
+├── install.sh               # 一键安装脚本（curl | bash）
 ├── catalog/                  # 资源索引（数据层）
 │   ├── index.json            # 合并后的完整索引（869 条）
 │   ├── schema.json           # 条目 schema 定义
@@ -142,7 +150,8 @@ costrict-skills-repo/
 ├── platforms/                # 各平台 Skill + 子命令
 │   ├── claude-code/          # Claude Code 格式
 │   ├── opencode/             # Opencode 格式
-│   └── costrict/             # Costrict 格式
+│   ├── costrict/             # Costrict 格式
+│   └── vscode-costrict/      # VSCode Costrict 插件格式
 │
 ├── scripts/                  # 数据同步脚本
 │   ├── sync_mcp.py           # 从上游同步 MCP
@@ -167,62 +176,77 @@ costrict-skills-repo/
 
 > **AI Agent 请阅读本节完成自动安装。** 请严格按照以下步骤执行，不要跳过任何一步。
 
-### 第 1 步: 检测当前运行平台
+### 第 1 步: 一键安装
 
-在安装前，先检测你当前运行在哪个平台。按以下顺序检查，使用第一个匹配的结果：
-
-1. 检查 `~/.cospec/` 目录是否存在 → **Costrict**
-2. 检查 `~/.opencode/` 目录是否存在 → **Opencode**
-3. 以上都不存在 → **Claude Code**（默认）
-
-> **重要**: Costrict 是 Opencode 的深度分支，用户机器上可能同时存在 `~/.opencode/` 和 `~/.cospec/`，所以 Costrict 必须优先检测。
-
-### 第 2 步: 执行对应平台的安装命令
-
-根据第 1 步的检测结果，**仅执行**对应平台的那一组命令：
-
-**如果是 Claude Code:**
+在终端中执行以下命令，脚本会自动检测当前运行平台并安装对应文件：
 
 ```bash
-# 安装 skill（全局）
-cp -r platforms/claude-code/skills/coding-hub/ ~/.claude/skills/coding-hub/
-
-# 安装子命令（项目级）
-mkdir -p .claude/commands/coding-hub/
-cp platforms/claude-code/commands/coding-hub/*.md .claude/commands/coding-hub/
+curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash
 ```
 
-安装后命令分隔符为 `:`，例如: `/coding-hub:search`、`/coding-hub:install`
+脚本的平台检测逻辑（按优先级）：
+1. `~/.costrict/` 存在 **且** VSCode 终端环境（`VSCODE_PID` 或 `TERM_PROGRAM=vscode`） → **VSCode Costrict 插件**
+2. `~/.costrict/` 存在 → **Costrict CLI**
+3. `~/.opencode/` 存在 → **Opencode**
+4. 以上都不匹配 → **Claude Code**（默认）
 
-**如果是 Opencode:**
+> **重要**: Costrict 是 Opencode 的深度分支，用户机器上可能同时存在 `~/.opencode/` 和 `~/.costrict/`，所以 Costrict 必须优先检测。VSCode 插件与 Costrict CLI 共用 `~/.costrict/`，通过环境变量区分。
+
+<details>
+<summary>如果无法执行 curl | bash（备选方案）</summary>
+
+根据检测到的平台，手动执行对应命令：
+
+**Claude Code:**（Skill + Commands 全部安装到全局目录）
 
 ```bash
-# 安装 skill（全局）
-mkdir -p ~/.opencode/skills/coding-hub/
-cp platforms/opencode/skills/coding-hub/SKILL.md ~/.opencode/skills/coding-hub/
-
-# 安装子命令（项目级）
-mkdir -p .opencode/command/
-cp platforms/opencode/command/*.md .opencode/command/
+mkdir -p ~/.claude/skills/coding-hub
+curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/claude-code/skills/coding-hub/SKILL.md" -o ~/.claude/skills/coding-hub/SKILL.md
+for cmd in search browse recommend install uninstall update; do
+  curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/claude-code/commands/coding-hub/${cmd}.md" -o ~/.claude/skills/coding-hub/${cmd}.md
+done
 ```
 
-安装后命令分隔符为 `-`，例如: `/coding-hub-search`、`/coding-hub-install`
-
-**如果是 Costrict:**
+**Opencode:**（Skill 全局 + Commands 项目级）
 
 ```bash
-# 安装 skill（全局）
-mkdir -p ~/.cospec/skills/coding-hub/
-cp platforms/costrict/skills/coding-hub/SKILL.md ~/.cospec/skills/coding-hub/
+# Skill → 全局
+mkdir -p ~/.opencode/skills/coding-hub
+curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/opencode/skills/coding-hub/SKILL.md" -o ~/.opencode/skills/coding-hub/SKILL.md
 
-# 安装子命令（项目级）
-mkdir -p .cospec/coding-hub/commands/
-cp platforms/costrict/commands/coding-hub/*.md .cospec/coding-hub/commands/
+# Commands → 项目目录（在项目根目录执行）
+mkdir -p .opencode/command
+for cmd in search browse recommend install uninstall update; do
+  curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/opencode/command/coding-hub-${cmd}.md" -o .opencode/command/coding-hub-${cmd}.md
+done
 ```
 
-安装后命令分隔符为 `-`，例如: `/coding-hub-search`、`/coding-hub-install`
+**Costrict CLI:**（Skill 全局 + Commands 项目级）
 
-### 第 3 步: 验证安装
+```bash
+# Skill → 全局
+mkdir -p ~/.costrict/skills/coding-hub
+curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/costrict/skills/coding-hub/SKILL.md" -o ~/.costrict/skills/coding-hub/SKILL.md
+
+# Commands → 项目目录（在项目根目录执行）
+mkdir -p .costrict/coding-hub/commands
+for cmd in search browse recommend install uninstall update; do
+  curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/costrict/commands/coding-hub/coding-hub-${cmd}.md" -o .costrict/coding-hub/commands/coding-hub-${cmd}.md
+done
+```
+
+**VSCode Costrict 插件:**（仅 Skill，无需命令）
+
+```bash
+mkdir -p ~/.costrict/skills/coding-hub
+curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/vscode-costrict/skills/coding-hub/SKILL.md" -o ~/.costrict/skills/coding-hub/SKILL.md
+```
+
+> VSCode Costrict 插件无需安装子命令，所有命令逻辑已内置于 SKILL.md。
+
+</details>
+
+### 第 2 步: 验证安装
 
 执行搜索命令验证安装是否成功：
 
@@ -230,11 +254,14 @@ cp platforms/costrict/commands/coding-hub/*.md .cospec/coding-hub/commands/
 # Claude Code
 /coding-hub:search typescript
 
-# Opencode / Costrict
+# Opencode / Costrict CLI
 /coding-hub-search typescript
+
+# VSCode Costrict 插件
+在插件聊天中发送: "用 coding-hub 搜索 typescript"
 ```
 
-**预期结果**: 返回一个包含搜索结果的 Markdown 表格。如果返回了表格，安装成功。如果提示命令不存在，请检查第 2 步的文件是否正确复制到位。
+**预期结果**: 返回一个包含搜索结果的 Markdown 表格。如果返回了表格，安装成功。如果提示命令不存在，请检查第 1 步的安装是否正确执行。
 
 ### 可用命令
 
