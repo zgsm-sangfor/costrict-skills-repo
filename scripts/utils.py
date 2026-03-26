@@ -310,18 +310,13 @@ def extract_tags(name: str, description: str = "") -> list:
 
 
 def deduplicate(entries: list) -> list:
-    """Deduplicate entries by source_url + id (dual key). Earlier entries take priority."""
-    seen_urls = {}  # source_url -> entry
+    """Deduplicate entries by id. Earlier entries take priority."""
     seen_ids = {}   # id -> entry
     result = []
     for entry in entries:
         eid = entry.get("id", "")
-        url = entry.get("source_url", "")
-        # Check both keys — any match means duplicate
-        if (url and url in seen_urls) or (eid and eid in seen_ids):
+        if eid and eid in seen_ids:
             continue
-        if url:
-            seen_urls[url] = entry
         if eid:
             seen_ids[eid] = entry
         result.append(entry)
