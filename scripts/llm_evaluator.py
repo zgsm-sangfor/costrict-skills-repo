@@ -172,6 +172,8 @@ def evaluate_skills(candidates: list[dict]) -> list[dict]:
                 c["category"] = cached.get("category", c["category"])
                 c["tags"] = cached.get("tags", c["tags"])
                 c["description_zh"] = cached.get("description_zh", "")
+                c["coding_relevance"] = cached["coding_relevance"]
+                c["quality_score"] = cached["quality_score"]
                 c["_score"] = _compute_score(
                     cached["coding_relevance"], cached["quality_score"], c["stars"]
                 )
@@ -249,6 +251,8 @@ def evaluate_skills(candidates: list[dict]) -> list[dict]:
                 c["category"] = r.get("suggested_category", c["category"])
                 c["tags"] = r.get("suggested_tags", c["tags"])
                 c["description_zh"] = r.get("description_zh", "")
+                c["coding_relevance"] = coding_rel
+                c["quality_score"] = quality
                 c["_score"] = _compute_score(coding_rel, quality, c["stars"])
                 evaluated.append(c)
 

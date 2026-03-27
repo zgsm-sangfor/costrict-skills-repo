@@ -9,10 +9,23 @@ from datetime import date
 
 sys.path.insert(0, os.path.dirname(__file__))
 from utils import (
-    fetch_raw_content, github_api, categorize, extract_tags,
-    to_kebab_case, save_index, deduplicate, logger, list_repo_files,
+    fetch_raw_content,
+    github_api,
+    categorize,
+    extract_tags,
+    to_kebab_case,
+    save_index,
+    load_index,
+    deduplicate,
+    logger,
+    list_repo_files,
 )
-from skill_registry import discover_skills, hard_filter, has_coding_keyword, parse_skill_content
+from skill_registry import (
+    discover_skills,
+    hard_filter,
+    has_coding_keyword,
+    parse_skill_content,
+)
 from llm_evaluator import evaluate_skills, translate_descriptions
 
 CATALOG_DIR = os.path.join(os.path.dirname(__file__), "..", "catalog", "skills")
@@ -69,24 +82,26 @@ def parse_anthropic_skills() -> list:
         tags = extract_tags(name, description)
         category = categorize(name, description, tags)
 
-        entries.append({
-            "id": f"{to_kebab_case(skill_name)}-skill",
-            "name": name,
-            "type": "skill",
-            "description": description,
-            "source_url": f"https://github.com/anthropics/skills/tree/main/skills/{skill_name}",
-            "stars": 500,
-            "category": category,
-            "tags": tags + ["anthropic", "official"],
-            "tech_stack": [],
-            "install": {
-                "method": "git_clone",
-                "repo": "https://github.com/anthropics/skills.git",
-                "files": [f"skills/{skill_name}/"]
-            },
-            "source": "anthropics-skills",
-            "last_synced": TODAY,
-        })
+        entries.append(
+            {
+                "id": f"{to_kebab_case(skill_name)}-skill",
+                "name": name,
+                "type": "skill",
+                "description": description,
+                "source_url": f"https://github.com/anthropics/skills/tree/main/skills/{skill_name}",
+                "stars": None,
+                "category": category,
+                "tags": tags + ["anthropic", "official"],
+                "tech_stack": [],
+                "install": {
+                    "method": "git_clone",
+                    "repo": "https://github.com/anthropics/skills.git",
+                    "files": [f"skills/{skill_name}/"],
+                },
+                "source": "anthropics-skills",
+                "last_synced": TODAY,
+            }
+        )
 
     logger.info(f"Parsed {len(entries)} skills from anthropics/skills")
     return entries
@@ -120,7 +135,9 @@ def parse_ai_agent_skills() -> list:
 
     try:
         raw_data = json.loads(content)
-        skills_data = raw_data.get("skills", raw_data) if isinstance(raw_data, dict) else raw_data
+        skills_data = (
+            raw_data.get("skills", raw_data) if isinstance(raw_data, dict) else raw_data
+        )
     except json.JSONDecodeError:
         logger.error("Failed to parse Ai-Agent-Skills skills.json")
         return []
@@ -147,7 +164,11 @@ def parse_ai_agent_skills() -> list:
         work_area = skill.get("workArea", "")
         description = skill.get("description", "")
         if not description:
-            description = f"Agent skill for {work_area}" if work_area else f"Agent skill: {skill_name}"
+            description = (
+                f"Agent skill for {work_area}"
+                if work_area
+                else f"Agent skill: {skill_name}"
+            )
 
         # Try to get description from SKILL.md frontmatter
         fm_match = re.match(r"^---\s*\n(.*?)\n---", skill_md, re.DOTALL)
@@ -159,26 +180,30 @@ def parse_ai_agent_skills() -> list:
         tags = extract_tags(skill_name, description)
         category = categorize(skill_name, description, tags)
 
-        entries.append({
-            "id": f"{to_kebab_case(skill_name)}-aiskill",
-            "name": skill_name,
-            "type": "skill",
-            "description": description,
-            "source_url": f"https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/{skill_name}",
-            "stars": 30,
-            "category": category,
-            "tags": tags,
-            "tech_stack": [],
-            "install": {
-                "method": "git_clone",
-                "repo": "https://github.com/skillcreatorai/Ai-Agent-Skills.git",
-                "files": [f"skills/{skill_name}/"]
-            },
-            "source": "ai-agent-skills",
-            "last_synced": TODAY,
-        })
+        entries.append(
+            {
+                "id": f"{to_kebab_case(skill_name)}-aiskill",
+                "name": skill_name,
+                "type": "skill",
+                "description": description,
+                "source_url": f"https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/{skill_name}",
+                "stars": None,
+                "category": category,
+                "tags": tags,
+                "tech_stack": [],
+                "install": {
+                    "method": "git_clone",
+                    "repo": "https://github.com/skillcreatorai/Ai-Agent-Skills.git",
+                    "files": [f"skills/{skill_name}/"],
+                },
+                "source": "ai-agent-skills",
+                "last_synced": TODAY,
+            }
+        )
 
-    logger.info(f"Parsed {len(entries)} skills from Ai-Agent-Skills ({skipped} catalog-only skipped)")
+    logger.info(
+        f"Parsed {len(entries)} skills from Ai-Agent-Skills ({skipped} catalog-only skipped)"
+    )
     return entries
 
 
@@ -202,7 +227,7 @@ def openclaw_extra_filter(name: str, description: str) -> str | None:
     if len(name) > 60:
         return "name too long"
     # Repeating character pattern: e.g. "asdasd", "abcabc", "12312"
-    if re.search(r'(.{2,})\1+', name):
+    if re.search(r"(.{2,})\1+", name):
         return "repeating pattern in name"
     if description.strip().lower() == name.strip().lower():
         return "description equals name"
@@ -219,11 +244,17 @@ def parse_openclaw_skills(tier1_entries: list) -> list[dict]:
 
     stars = _get_openclaw_stars()
 
+    # Get pushed_at for openclaw/skills repo
+    from utils import get_repo_meta
+
+    meta = get_repo_meta(f"https://github.com/{SKILLS_REPO}")
+    pushed_at = meta["pushed_at"] if meta else None
+
     tier1_urls = {e.get("source_url", "") for e in tier1_entries if e.get("source_url")}
     tier1_ids = {e.get("id", "") for e in tier1_entries if e.get("id")}
 
     # Regex for awesome list entry: - [name](url) - description
-    entry_re = re.compile(r'^-\s+\[([^\]]+)\]\(([^)]+)\)\s*[-–—]\s*(.+)$', re.MULTILINE)
+    entry_re = re.compile(r"^-\s+\[([^\]]+)\]\(([^)]+)\)\s*[-–—]\s*(.+)$", re.MULTILINE)
 
     candidates = []
     total_parsed = 0
@@ -244,7 +275,7 @@ def parse_openclaw_skills(tier1_entries: list) -> list[dict]:
             total_parsed += 1
 
             # Extract slug from URL: https://clawskills.sh/skills/author-skillname
-            slug_match = re.search(r'/skills/([^/?#]+)$', url)
+            slug_match = re.search(r"/skills/([^/?#]+)$", url)
             if not slug_match:
                 continue
             slug = slug_match.group(1)
@@ -273,7 +304,8 @@ def parse_openclaw_skills(tier1_entries: list) -> list[dict]:
                 "type": "skill",
                 "description": description,
                 "source_url": url,
-                "stars": stars,
+                "stars": 0,
+                "pushed_at": pushed_at,
                 "category": category,
                 "tags": tags,
                 "tech_stack": [],
@@ -311,22 +343,51 @@ def _supplement_openclaw_descriptions(candidates: list[dict]):
     """
     SKILLS_REPO = "openclaw/skills"
     updated = 0
+    attempted = 0
+    consecutive_failures = 0
     for c in candidates:
         if c.get("source") != "openclaw-skills":
             continue
         install_path = c.get("_openclaw_install_path", "")
         if not install_path:
             continue
+        if not _needs_openclaw_description_refresh(c.get("description", "")):
+            continue
+        attempted += 1
         skill_md = fetch_raw_content(
             SKILLS_REPO, f"{install_path}SKILL.md", quiet_404=True
         )
         if not skill_md:
+            consecutive_failures += 1
+            if consecutive_failures >= 8:
+                logger.warning(
+                    "openclaw: stopping description supplementation after repeated fetch failures"
+                )
+                break
             continue
+        consecutive_failures = 0
         parsed = parse_skill_content(skill_md, install_path)
-        if parsed and parsed.get("description") and len(parsed["description"]) > len(c["description"]):
+        if (
+            parsed
+            and parsed.get("description")
+            and len(parsed["description"]) > len(c["description"])
+        ):
             c["description"] = parsed["description"]
             updated += 1
-    logger.info(f"openclaw: supplemented {updated}/{sum(1 for c in candidates if c.get('source') == 'openclaw-skills')} descriptions from SKILL.md")
+    logger.info(
+        f"openclaw: supplemented {updated}/{attempted} targeted descriptions "
+        f"from SKILL.md"
+    )
+
+
+def _needs_openclaw_description_refresh(description: str) -> bool:
+    """Only fetch SKILL.md when the list description looks truncated or thin."""
+    desc = (description or "").strip()
+    if not desc:
+        return True
+    if desc.endswith(("...", "…")):
+        return True
+    return len(desc) < 80
 
 
 def sync():
@@ -363,7 +424,9 @@ def sync():
     try:
         if candidates:
             tier2_entries = evaluate_skills(candidates)
-            logger.info(f"Tier 2 total: {len(tier2_entries)} skills (after LLM evaluation)")
+            logger.info(
+                f"Tier 2 total: {len(tier2_entries)} skills (after LLM evaluation)"
+            )
     except Exception as e:
         logger.error(f"Tier 2 evaluation failed: {e}")
         logger.info("Tier 2 evaluation skipped, continuing with Tier 1 only")
@@ -373,8 +436,18 @@ def sync():
     all_entries = deduplicate(all_entries)
 
     output_path = os.path.join(CATALOG_DIR, "index.json")
+    existing_entries = load_index(output_path)
+    if not all_entries and existing_entries:
+        logger.warning(
+            "Skill sync produced 0 entries; keeping existing index to avoid clobbering "
+            "the last successful sync"
+        )
+        logger.info(f"Retained {len(existing_entries)} skills from existing index")
+        return
     save_index(all_entries, output_path)
-    logger.info(f"Final skills count: {len(all_entries)} (Tier 1: {len(tier1_entries)}, Tier 2: {len(tier2_entries)})")
+    logger.info(
+        f"Final skills count: {len(all_entries)} (Tier 1: {len(tier1_entries)}, Tier 2: {len(tier2_entries)})"
+    )
 
 
 if __name__ == "__main__":

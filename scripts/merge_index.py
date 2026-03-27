@@ -6,6 +6,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
 from utils import load_index, save_index, deduplicate, logger
+from health_scorer import compute_health
 
 CATALOG_DIR = os.path.join(os.path.dirname(__file__), "..", "catalog")
 TYPES = ["mcp", "skills", "rules", "prompts"]
@@ -33,8 +34,18 @@ def merge():
     # Deduplicate by source_url + id (earlier entries take priority: Tier 1 > Tier 2 > Tier 3)
     deduped = deduplicate(all_entries)
 
-    # Sort by stars descending
-    deduped.sort(key=lambda x: x.get("stars", 0), reverse=True)
+    # Compute health scores
+    for entry in deduped:
+        entry["health"] = compute_health(entry)
+
+    # Sort by health.score descending, ties broken by stars descending (nulls last)
+    deduped.sort(
+        key=lambda x: (
+            x.get("health", {}).get("score", 0),
+            x.get("stars") if x.get("stars") is not None else -1,
+        ),
+        reverse=True,
+    )
 
     output_path = os.path.join(CATALOG_DIR, "index.json")
     save_index(deduped, output_path)

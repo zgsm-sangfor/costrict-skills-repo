@@ -5,7 +5,7 @@
     "type": "skill",
     "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.",
     "source_url": "https://github.com/anthropics/skills/tree/main/skills/algorithmic-art",
-    "stars": 500,
+    "stars": null,
     "category": "backend",
     "tags": [
       "go",
@@ -21,8 +21,18 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "用p5.js与种子随机生成原创算法艺术。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "brand-guidelines-skill",
@@ -30,7 +40,7 @@
     "type": "skill",
     "description": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.",
     "source_url": "https://github.com/anthropics/skills/tree/main/skills/brand-guidelines",
-    "stars": 500,
+    "stars": null,
     "category": "tooling",
     "tags": [
       "anthropic",
@@ -45,8 +55,18 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "为作品应用Anthropic官方品牌色与排版。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "canvas-design-skill",
@@ -54,7 +74,7 @@
     "type": "skill",
     "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.",
     "source_url": "https://github.com/anthropics/skills/tree/main/skills/canvas-design",
-    "stars": 500,
+    "stars": null,
     "category": "tooling",
     "tags": [
       "anthropic",
@@ -69,8 +89,18 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "创作原创静态视觉设计，输出PNG或PDF。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "claude-api-skill",
@@ -78,7 +108,7 @@
     "type": "skill",
     "description": "Build apps with the Claude API or Anthropic SDK. TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`/`claude_agent_sdk`, or user asks to use Claude API, Anthropic SDKs, or Agent SDK. DO NOT TRIGGER when: code imports `openai`/other AI SDK, general programming, or ML/data-science tasks.",
     "source_url": "https://github.com/anthropics/skills/tree/main/skills/claude-api",
-    "stars": 500,
+    "stars": null,
     "category": "ai-ml",
     "tags": [
       "openai",
@@ -94,8 +124,18 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "使用Claude API或Anthropic SDK开发应用。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "doc-coauthoring-skill",
@@ -103,7 +143,7 @@
     "type": "skill",
     "description": "Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This workflow helps users efficiently transfer context, refine content through iteration, and verify the doc works for readers. Trigger when user mentions writing docs, creating proposals, drafting specs, or similar documentation tasks.",
     "source_url": "https://github.com/anthropics/skills/tree/main/skills/doc-coauthoring",
-    "stars": 500,
+    "stars": null,
     "category": "security",
     "tags": [
       "anthropic",
@@ -118,8 +158,18 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "用结构化流程协作文档、提案与技术说明。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "docx-skill",
@@ -127,7 +177,7 @@
     "type": "skill",
     "description": "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files). Triggers include: any mention of 'Word doc', 'word document', '.docx', or requests to produce professional documents with formatting like tables of contents, headings, page numbers, or letterheads. Also use when extracting or reorganizing content from .docx files, inserting or replacing images in documents, performing find-and-replace in Word files, working with tracked changes or comments, or converting content into a polished Word document. If the user asks for a 'report', 'memo', 'letter', 'template', or similar deliverable as a Word or .docx file, use this skill. Do NOT use for PDFs, spreadsheets, Google Docs, or general coding tasks unrelated to document generation.",
     "source_url": "https://github.com/anthropics/skills/tree/main/skills/docx",
-    "stars": 500,
+    "stars": null,
     "category": "backend",
     "tags": [
       "go",
@@ -143,8 +193,18 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "创建、读取、编辑或处理Word文档。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "frontend-design-skill",
@@ -152,7 +212,7 @@
     "type": "skill",
     "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
     "source_url": "https://github.com/anthropics/skills/tree/main/skills/frontend-design",
-    "stars": 500,
+    "stars": null,
     "category": "frontend",
     "tags": [
       "react",
@@ -169,8 +229,18 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "打造高品质、可上线的前端界面与页面。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "internal-comms-skill",
@@ -178,7 +248,7 @@
     "type": "skill",
     "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).",
     "source_url": "https://github.com/anthropics/skills/tree/main/skills/internal-comms",
-    "stars": 500,
+    "stars": null,
     "category": "tooling",
     "tags": [
       "anthropic",
@@ -193,8 +263,18 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "按公司偏好撰写各类内部沟通内容。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "mcp-builder-skill",
@@ -202,7 +282,7 @@
     "type": "skill",
     "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
     "source_url": "https://github.com/anthropics/skills/tree/main/skills/mcp-builder",
-    "stars": 500,
+    "stars": null,
     "category": "frontend",
     "tags": [
       "typescript",
@@ -220,8 +300,18 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "构建高质量MCP服务器以集成外部服务。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "pdf-skill",
@@ -229,7 +319,7 @@
     "type": "skill",
     "description": "Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks, creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images, and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file or asks to produce one, use this skill.",
     "source_url": "https://github.com/anthropics/skills/tree/main/skills/pdf",
-    "stars": 500,
+    "stars": null,
     "category": "tooling",
     "tags": [
       "anthropic",
@@ -244,8 +334,18 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "处理PDF的读取、编辑、转换与合并等任务。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "pptx-skill",
@@ -253,7 +353,7 @@
     "type": "skill",
     "description": "Use this skill any time a .pptx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting text from any .pptx file (even if the extracted content will be used elsewhere, like in an email or summary); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates, layouts, speaker notes, or comments. Trigger whenever the user mentions \\",
     "source_url": "https://github.com/anthropics/skills/tree/main/skills/pptx",
-    "stars": 500,
+    "stars": null,
     "category": "ai-ml",
     "tags": [
       "anthropic",
@@ -268,8 +368,18 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "创建、读取、编辑或解析PPTX演示文稿。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "skill-creator-skill",
@@ -277,7 +387,7 @@
     "type": "skill",
     "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
     "source_url": "https://github.com/anthropics/skills/tree/main/skills/skill-creator",
-    "stars": 500,
+    "stars": null,
     "category": "testing",
     "tags": [
       "anthropic",
@@ -292,8 +402,18 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "创建、改进技能并评估其表现。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "slack-gif-creator-skill",
@@ -301,7 +421,7 @@
     "type": "skill",
     "description": "Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like",
     "source_url": "https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator",
-    "stars": 500,
+    "stars": null,
     "category": "ai-ml",
     "tags": [
       "anthropic",
@@ -316,8 +436,18 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "制作适配Slack的动画GIF。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "theme-factory-skill",
@@ -325,7 +455,7 @@
     "type": "skill",
     "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
     "source_url": "https://github.com/anthropics/skills/tree/main/skills/theme-factory",
-    "stars": 500,
+    "stars": null,
     "category": "frontend",
     "tags": [
       "anthropic",
@@ -340,8 +470,18 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "为幻灯片、文档或网页应用统一主题。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "web-artifacts-builder-skill",
@@ -349,7 +489,7 @@
     "type": "skill",
     "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
     "source_url": "https://github.com/anthropics/skills/tree/main/skills/web-artifacts-builder",
-    "stars": 500,
+    "stars": null,
     "category": "frontend",
     "tags": [
       "react",
@@ -367,8 +507,18 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "用现代前端技术构建复杂HTML交互作品。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "webapp-testing-skill",
@@ -376,7 +526,7 @@
     "type": "skill",
     "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
     "source_url": "https://github.com/anthropics/skills/tree/main/skills/webapp-testing",
-    "stars": 500,
+    "stars": null,
     "category": "testing",
     "tags": [
       "playwright",
@@ -392,8 +542,18 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "用Playwright测试本地Web应用并调试界面。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "xlsx-skill",
@@ -401,7 +561,7 @@
     "type": "skill",
     "description": "Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .csv, or .tsv file (e.g., adding columns, computing formulas, formatting, charting, cleaning messy data); create a new spreadsheet from scratch or from other data sources; or convert between tabular file formats. Trigger especially when the user references a spreadsheet file by name or path — even casually (like \\",
     "source_url": "https://github.com/anthropics/skills/tree/main/skills/xlsx",
-    "stars": 500,
+    "stars": null,
     "category": "tooling",
     "tags": [
       "anthropic",
@@ -416,8 +576,18 @@
       ]
     },
     "source": "anthropics-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "创建、读取、编辑或处理电子表格文件。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "backend-development-aiskill",
@@ -425,7 +595,7 @@
     "type": "skill",
     "description": "Backend API design, database architecture, microservices patterns, and test-driven development. Use for designing APIs, database schemas, or backend system architecture.",
     "source_url": "https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/backend-development",
-    "stars": 30,
+    "stars": null,
     "category": "testing",
     "tags": [],
     "tech_stack": [],
@@ -437,8 +607,18 @@
       ]
     },
     "source": "ai-agent-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "设计后端API、数据库架构与微服务系统。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "database-design-aiskill",
@@ -446,7 +626,7 @@
     "type": "skill",
     "description": "Database schema design, optimization, and migration patterns for PostgreSQL, MySQL, and NoSQL databases. Use for designing schemas, writing migrations, or optimizing queries.",
     "source_url": "https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/database-design",
-    "stars": 30,
+    "stars": null,
     "category": "database",
     "tags": [
       "postgres",
@@ -461,8 +641,18 @@
       ]
     },
     "source": "ai-agent-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "设计数据库模式、迁移方案并优化查询。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "llm-application-dev-aiskill",
@@ -470,7 +660,7 @@
     "type": "skill",
     "description": "Building applications with Large Language Models - prompt engineering, RAG patterns, and LLM integration. Use for AI-powered features, chatbots, or LLM-based automation.",
     "source_url": "https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/llm-application-dev",
-    "stars": 30,
+    "stars": null,
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -482,8 +672,18 @@
       ]
     },
     "source": "ai-agent-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "开发基于大语言模型的应用与自动化功能。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "code-documentation-aiskill",
@@ -491,7 +691,7 @@
     "type": "skill",
     "description": "Writing effective code documentation - API docs, README files, inline comments, and technical guides. Use for documenting codebases, APIs, or writing developer guides.",
     "source_url": "https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/code-documentation",
-    "stars": 30,
+    "stars": null,
     "category": "documentation",
     "tags": [],
     "tech_stack": [],
@@ -503,71 +703,18 @@
       ]
     },
     "source": "ai-agent-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "编写代码文档、API说明、README与指南。"
-  },
-  {
-    "id": "job-application-aiskill",
-    "name": "job-application",
-    "type": "skill",
-    "description": "Write tailored cover letters and job applications using your CV and preferred style",
-    "source_url": "https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/job-application",
-    "stars": 30,
-    "category": "ai-ml",
-    "tags": [],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "https://github.com/skillcreatorai/Ai-Agent-Skills.git",
-      "files": [
-        "skills/job-application/"
-      ]
-    },
-    "source": "ai-agent-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "根据简历和风格撰写定制求职信与申请。"
-  },
-  {
-    "id": "ask-questions-if-underspecified-aiskill",
-    "name": "ask-questions-if-underspecified",
-    "type": "skill",
-    "description": "Clarify requirements before implementing. Do not use automatically, only when invoked explicitly.",
-    "source_url": "https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/ask-questions-if-underspecified",
-    "stars": 30,
-    "category": "tooling",
-    "tags": [],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "https://github.com/skillcreatorai/Ai-Agent-Skills.git",
-      "files": [
-        "skills/ask-questions-if-underspecified/"
-      ]
-    },
-    "source": "ai-agent-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "在需求不明确时先澄清再实施。"
-  },
-  {
-    "id": "best-practices-aiskill",
-    "name": "best-practices",
-    "type": "skill",
-    "description": ">-",
-    "source_url": "https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/best-practices",
-    "stars": 30,
-    "category": "tooling",
-    "tags": [],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "https://github.com/skillcreatorai/Ai-Agent-Skills.git",
-      "files": [
-        "skills/best-practices/"
-      ]
-    },
-    "source": "ai-agent-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "提供通用最佳实践指导。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "changelog-generator-aiskill",
@@ -575,7 +722,7 @@
     "type": "skill",
     "description": "Automatically creates user-facing changelogs from git commits by analyzing commit history, categorizing changes, and transforming technical commits into clear, customer-friendly release notes. Turns hours of manual changelog writing into minutes of automated generation.",
     "source_url": "https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/changelog-generator",
-    "stars": 30,
+    "stars": null,
     "category": "backend",
     "tags": [
       "go",
@@ -590,8 +737,18 @@
       ]
     },
     "source": "ai-agent-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "根据git提交自动生成面向用户的更新日志。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "content-research-writer-aiskill",
@@ -599,7 +756,7 @@
     "type": "skill",
     "description": "Assists in writing high-quality content by conducting research, adding citations, improving hooks, iterating on outlines, and providing real-time feedback on each section. Transforms your writing process from solo effort to collaborative partnership.",
     "source_url": "https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/content-research-writer",
-    "stars": 30,
+    "stars": null,
     "category": "documentation",
     "tags": [],
     "tech_stack": [],
@@ -611,8 +768,18 @@
       ]
     },
     "source": "ai-agent-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "通过研究与引用协助写作高质量内容。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "lead-research-assistant-aiskill",
@@ -620,7 +787,7 @@
     "type": "skill",
     "description": "Identifies high-quality leads for your product or service by analyzing your business, searching for target companies, and providing actionable contact strategies. Perfect for sales, business development, and marketing professionals.",
     "source_url": "https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/lead-research-assistant",
-    "stars": 30,
+    "stars": null,
     "category": "documentation",
     "tags": [],
     "tech_stack": [],
@@ -632,8 +799,18 @@
       ]
     },
     "source": "ai-agent-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "识别高质量销售线索并提供联系策略。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
     "id": "video-downloader-aiskill",
@@ -641,7 +818,7 @@
     "type": "skill",
     "description": "Downloads videos from YouTube and other platforms for offline viewing, editing, or archival. Handles various formats and quality options.",
     "source_url": "https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/video-downloader",
-    "stars": 30,
+    "stars": null,
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -653,4024 +830,110 @@
       ]
     },
     "source": "ai-agent-skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "下载YouTube等平台视频供离线使用。"
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 32,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 80,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
-    "id": "langchain-skill",
-    "name": "langchain",
+    "id": "job-application-aiskill",
+    "name": "job-application",
     "type": "skill",
-    "description": "Framework for building LLM-powered applications with agents, chains, and RAG. Supports multiple providers (OpenAI, Anthropic, Google), 500+ integrations, ReAct agents, tool calling, memory management, and vector store retrieval. Use for building chatbots, question-answering systems, autonomous agents, or RAG applications. Best for rapid prototyping and production deployments.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/agents-langchain",
-    "stars": 23575,
+    "description": "Write tailored cover letters and job applications using your CV and preferred style",
+    "source_url": "https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/job-application",
+    "stars": null,
     "category": "ai-ml",
-    "tags": [
-      "langchain",
-      "llm",
-      "rag",
-      "agents",
-      "tool-calling",
-      "vector-store",
-      "chatbots"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/agents-langchain"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于构建含代理、链路和RAG的LLM应用框架。"
-  },
-  {
-    "id": "llamaindex-skill",
-    "name": "llamaindex",
-    "type": "skill",
-    "description": "Data framework for building LLM applications with RAG. Specializes in document ingestion (300+ connectors), indexing, and querying. Features vector indices, query engines, agents, and multi-modal support. Use for document Q&A, chatbots, knowledge retrieval, or building RAG pipelines. Best for data-centric LLM applications.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/agents-llamaindex",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "llamaindex",
-      "rag",
-      "document-ingestion",
-      "vector-index",
-      "query-engine",
-      "knowledge-retrieval"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/agents-llamaindex"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "面向RAG的LLM数据框架，支持摄取索引查询。"
-  },
-  {
-    "id": "computer-use-agents-skill",
-    "name": "computer-use-agents",
-    "type": "skill",
-    "description": "Build AI agents that interact with computers like humans do - viewing screens, moving cursors, clicking buttons, and typing text. Covers Anthropic's Computer Use, OpenAI's Operator/CUA, and open-source alternatives. Critical focus on sandboxing, security, and handling the unique challenges of vision-based control. Use when: computer use, desktop automation agent, screen control AI, vision-based agent, GUI automation.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/computer-use-agents",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "computer-use",
-      "ai-agents",
-      "gui-automation",
-      "vision",
-      "sandboxing",
-      "security",
-      "openai",
-      "anthropic"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/computer-use-agents"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "构建可像人类一样操作电脑界面的智能体。"
-  },
-  {
-    "id": "nemo-curator-skill",
-    "name": "nemo-curator",
-    "type": "skill",
-    "description": "GPU-accelerated data curation for LLM training. Supports text/image/video/audio. Features fuzzy deduplication (16× faster), quality filtering (30+ heuristics), semantic deduplication, PII redaction, NSFW detection. Scales across GPUs with RAPIDS. Use for preparing high-quality training datasets, cleaning web data, or deduplicating large corpora.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/data-processing-nemo-curator",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "nemo-curator",
-      "data-curation",
-      "llm",
-      "gpu",
-      "rapids",
-      "deduplication",
-      "pii-redaction",
-      "multimodal"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/data-processing-nemo-curator"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于LLM训练的GPU加速多模态数据清洗。"
-  },
-  {
-    "id": "ray-data-skill",
-    "name": "ray-data",
-    "type": "skill",
-    "description": "Scalable data processing for ML workloads. Streaming execution across CPU/GPU, supports Parquet/CSV/JSON/images. Integrates with Ray Train, PyTorch, TensorFlow. Scales from single machine to 100s of nodes. Use for batch inference, data preprocessing, multi-modal data loading, or distributed ETL pipelines.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/data-processing-ray-data",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "ray",
-      "ray-data",
-      "distributed-computing",
-      "etl",
-      "batch-inference",
-      "data-processing",
-      "pytorch",
-      "tensorflow"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/data-processing-ray-data"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "面向机器学习工作负载的可扩展分布式数据处理。"
-  },
-  {
-    "id": "huggingface-accelerate-skill",
-    "name": "huggingface-accelerate",
-    "type": "skill",
-    "description": "Simplest distributed training API. 4 lines to add distributed support to any PyTorch script. Unified API for DeepSpeed/FSDP/Megatron/DDP. Automatic device placement, mixed precision (FP16/BF16/FP8). Interactive config, single launch command. HuggingFace ecosystem standard.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/distributed-training-accelerate",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "huggingface",
-      "accelerate",
-      "pytorch",
-      "distributed-training",
-      "deepspeed",
-      "fsdp",
-      "ddp",
-      "mixed-precision"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/distributed-training-accelerate"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "以极少代码为PyTorch脚本添加分布式训练支持。"
-  },
-  {
-    "id": "training-llms-megatron-skill",
-    "name": "training-llms-megatron",
-    "type": "skill",
-    "description": "Trains large language models (2B-462B parameters) using NVIDIA Megatron-Core with advanced parallelism strategies. Use when training models >1B parameters, need maximum GPU efficiency (47% MFU on H100), or require tensor/pipeline/sequence/context/expert parallelism. Production-ready framework used for Nemotron, LLaMA, DeepSeek.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/distributed-training-megatron-core",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "megatron-core",
-      "llm-training",
-      "nvidia",
-      "distributed-training",
-      "tensor-parallelism",
-      "pipeline-parallelism",
-      "model-parallelism",
-      "gpu"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/distributed-training-megatron-core"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "使用Megatron-Core训练超大规模语言模型。"
-  },
-  {
-    "id": "pytorch-lightning-skill",
-    "name": "pytorch-lightning",
-    "type": "skill",
-    "description": "High-level PyTorch framework with Trainer class, automatic distributed training (DDP/FSDP/DeepSpeed), callbacks system, and minimal boilerplate. Scales from laptop to supercomputer with same code. Use when you want clean training loops with built-in best practices.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/distributed-training-pytorch-lightning",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "python",
-      "pytorch",
-      "deep-learning",
-      "distributed-training",
-      "mlops"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/distributed-training-pytorch-lightning"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用PyTorch Lightning组织并扩展深度学习训练。"
-  },
-  {
-    "id": "ray-train-skill",
-    "name": "ray-train",
-    "type": "skill",
-    "description": "Distributed training orchestration across clusters. Scales PyTorch/TensorFlow/HuggingFace from laptop to 1000s of nodes. Built-in hyperparameter tuning with Ray Tune, fault tolerance, elastic scaling. Use when training massive models across multiple machines or running distributed hyperparameter sweeps.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/distributed-training-ray-train",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "ray",
-      "ray-train",
-      "distributed-training",
-      "orchestration",
-      "hyperparameter-tuning",
-      "fault-tolerance",
-      "pytorch",
-      "tensorflow"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/distributed-training-ray-train"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "在集群上编排可扩展且容错的分布式训练。"
-  },
-  {
-    "id": "knowledge-distillation-skill",
-    "name": "knowledge-distillation",
-    "type": "skill",
-    "description": "Compress large language models using knowledge distillation from teacher to student models. Use when deploying smaller models with retained performance, transferring GPT-4 capabilities to open-source models, or reducing inference costs. Covers temperature scaling, soft targets, reverse KLD, logit distillation, and MiniLLM training strategies.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/emerging-techniques-knowledge-distillation",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "knowledge-distillation",
-      "model-compression",
-      "llm",
-      "teacher-student",
-      "temperature-scaling",
-      "logit-distillation",
-      "inference-optimization"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/emerging-techniques-knowledge-distillation"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "通过知识蒸馏压缩模型并降低推理成本。"
-  },
-  {
-    "id": "long-context-skill",
-    "name": "long-context",
-    "type": "skill",
-    "description": "Extend context windows of transformer models using RoPE, YaRN, ALiBi, and position interpolation techniques. Use when processing long documents (32k-128k+ tokens), extending pre-trained models beyond original context limits, or implementing efficient positional encodings. Covers rotary embeddings, attention biases, interpolation methods, and extrapolation strategies for LLMs.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/emerging-techniques-long-context",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "long-context",
-      "transformers",
-      "rope",
-      "yarn",
-      "alibi",
-      "position-interpolation",
-      "attention",
-      "llm"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/emerging-techniques-long-context"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "通过位置编码技术扩展Transformer上下文窗口。"
-  },
-  {
-    "id": "evaluating-code-models-skill",
-    "name": "evaluating-code-models",
-    "type": "skill",
-    "description": "Evaluates code generation models across HumanEval, MBPP, MultiPL-E, and 15+ benchmarks with pass@k metrics. Use when benchmarking code models, comparing coding abilities, testing multi-language support, or measuring code generation quality. Industry standard from BigCode Project used by HuggingFace leaderboards.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/evaluation-bigcode-evaluation-harness",
-    "stars": 23575,
-    "category": "testing",
-    "tags": [
-      "llm",
-      "evaluation",
-      "code-generation",
-      "humaneval",
-      "mbpp",
-      "benchmarking"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/evaluation-bigcode-evaluation-harness"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "基于多项基准评测代码生成模型能力。"
-  },
-  {
-    "id": "evaluating-llms-harness-skill",
-    "name": "evaluating-llms-harness",
-    "type": "skill",
-    "description": "Evaluates LLMs across 60+ academic benchmarks (MMLU, HumanEval, GSM8K, TruthfulQA, HellaSwag). Use when benchmarking model quality, comparing models, reporting academic results, or tracking training progress. Industry standard used by EleutherAI, HuggingFace, and major labs. Supports HuggingFace, vLLM, APIs.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/evaluation-lm-evaluation-harness",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "llm",
-      "evaluation",
-      "lm-eval-harness",
-      "mmlu",
-      "gsm8k",
-      "benchmarking"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/evaluation-lm-evaluation-harness"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用标准评测框架测试LLM多项能力。"
-  },
-  {
-    "id": "peft-fine-tuning-skill",
-    "name": "peft-fine-tuning",
-    "type": "skill",
-    "description": "Parameter-efficient fine-tuning for LLMs using LoRA, QLoRA, and 25+ methods. Use when fine-tuning large models (7B-70B) with limited GPU memory, when you need to train <1% of parameters with minimal accuracy loss, or for multi-adapter serving. HuggingFace's official library integrated with transformers ecosystem.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/fine-tuning-peft",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "llm",
-      "peft",
-      "fine-tuning",
-      "lora",
-      "qlora",
-      "adapters"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/fine-tuning-peft"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用PEFT方法高效微调大语言模型。"
-  },
-  {
-    "id": "llama-cpp-skill",
-    "name": "llama-cpp",
-    "type": "skill",
-    "description": "Runs LLM inference on CPU, Apple Silicon, and consumer GPUs without NVIDIA hardware. Use for edge deployment, M1/M2/M3 Macs, AMD/Intel GPUs, or when CUDA is unavailable. Supports GGUF quantization (1.5-8 bit) for reduced memory and 4-10× speedup vs PyTorch on CPU.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/inference-serving-llama-cpp",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "llm",
-      "llama-cpp",
-      "inference",
-      "gguf",
-      "cpu-inference",
-      "edge-deployment"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/inference-serving-llama-cpp"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "在CPU和消费级硬件上运行LLM推理。"
-  },
-  {
-    "id": "tensorrt-llm-skill",
-    "name": "tensorrt-llm",
-    "type": "skill",
-    "description": "Optimizes LLM inference with NVIDIA TensorRT for maximum throughput and lowest latency. Use for production deployment on NVIDIA GPUs (A100/H100), when you need 10-100x faster inference than PyTorch, or for serving models with quantization (FP8/INT4), in-flight batching, and multi-GPU scaling.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/inference-serving-tensorrt-llm",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "llm",
-      "tensorrt-llm",
-      "nvidia",
-      "inference-optimization",
-      "quantization",
-      "gpu-serving"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/inference-serving-tensorrt-llm"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用TensorRT优化NVIDIA上LLM推理。"
-  },
-  {
-    "id": "serving-llms-vllm-skill",
-    "name": "serving-llms-vllm",
-    "type": "skill",
-    "description": "Serves LLMs with high throughput using vLLM's PagedAttention and continuous batching. Use when deploying production LLM APIs, optimizing inference latency/throughput, or serving models with limited GPU memory. Supports OpenAI-compatible endpoints, quantization (GPTQ/AWQ/FP8), and tensor parallelism.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/inference-serving-vllm",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "vllm",
-      "llm-serving",
-      "inference",
-      "openai-compatible",
-      "quantization",
-      "gpu"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/inference-serving-vllm"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用vLLM高吞吐部署大模型推理服务。"
-  },
-  {
-    "id": "mlflow-skill",
-    "name": "mlflow",
-    "type": "skill",
-    "description": "Track ML experiments, manage model registry with versioning, deploy models to production, and reproduce experiments with MLflow - framework-agnostic ML lifecycle platform",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/mlops-mlflow",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "mlflow",
-      "mlops",
-      "experiment-tracking",
-      "model-registry",
-      "deployment",
-      "reproducibility"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/mlops-mlflow"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用MLflow跟踪实验并管理模型生命周期。"
-  },
-  {
-    "id": "tensorboard-skill",
-    "name": "tensorboard",
-    "type": "skill",
-    "description": "Visualize training metrics, debug models with histograms, compare experiments, visualize model graphs, and profile performance with TensorBoard - Google's ML visualization toolkit",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/mlops-tensorboard",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "tensorboard",
-      "mlops",
-      "visualization",
-      "experiment-tracking",
-      "tensorflow",
-      "pytorch",
-      "profiling"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/mlops-tensorboard"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用TensorBoard可视化训练指标、模型图与性能分析。"
-  },
-  {
-    "id": "weights-and-biases-skill",
-    "name": "weights-and-biases",
-    "type": "skill",
-    "description": "Track ML experiments with automatic logging, visualize training in real-time, optimize hyperparameters with sweeps, and manage model registry with W&B - collaborative MLOps platform",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/mlops-weights-and-biases",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "wandb",
-      "weights-and-biases",
-      "mlops",
-      "experiment-tracking",
-      "hyperparameter-tuning",
-      "model-registry",
-      "pytorch",
-      "tensorflow"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/mlops-weights-and-biases"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用W&B跟踪实验、调参并管理模型注册表。"
-  },
-  {
-    "id": "nanogpt-skill",
-    "name": "nanogpt",
-    "type": "skill",
-    "description": "Educational GPT implementation in ~300 lines. Reproduces GPT-2 (124M) on OpenWebText. Clean, hackable code for learning transformers. By Andrej Karpathy. Perfect for understanding GPT architecture from scratch. Train on Shakespeare (CPU) or OpenWebText (multi-GPU).",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/model-architecture-nanogpt",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "nanogpt",
-      "gpt",
-      "transformer",
-      "pytorch",
-      "educational",
-      "llm-training"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/model-architecture-nanogpt"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "NanoGPT用极简代码帮助理解并训练GPT模型。"
-  },
-  {
-    "id": "distributed-llm-pretraining-torchtitan-skill",
-    "name": "distributed-llm-pretraining-torchtitan",
-    "type": "skill",
-    "description": "Provides PyTorch-native distributed LLM pretraining using torchtitan with 4D parallelism (FSDP2, TP, PP, CP). Use when pretraining Llama 3.1, DeepSeek V3, or custom models at scale from 8 to 512+ GPUs with Float8, torch.compile, and distributed checkpointing.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/model-architecture-torchtitan",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "torchtitan",
-      "pytorch",
-      "distributed-training",
-      "fsdp",
-      "tensor-parallelism",
-      "pipeline-parallelism",
-      "llm-pretraining",
-      "float8"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/model-architecture-torchtitan"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用TorchTitan进行大规模分布式LLM预训练。"
-  },
-  {
-    "id": "langsmith-observability-skill",
-    "name": "langsmith-observability",
-    "type": "skill",
-    "description": "LLM observability platform for tracing, evaluation, and monitoring. Use when debugging LLM applications, evaluating model outputs against datasets, monitoring production systems, or building systematic testing pipelines for AI applications.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/observability-langsmith",
-    "stars": 23575,
-    "category": "testing",
-    "tags": [
-      "langsmith",
-      "llmops",
-      "observability",
-      "tracing",
-      "evaluation",
-      "monitoring",
-      "testing",
-      "debugging"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/observability-langsmith"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "LangSmith用于LLM应用追踪、评测与监控。"
-  },
-  {
-    "id": "phoenix-observability-skill",
-    "name": "phoenix-observability",
-    "type": "skill",
-    "description": "Open-source AI observability platform for LLM tracing, evaluation, and monitoring. Use when debugging LLM applications with detailed traces, running evaluations on datasets, or monitoring production AI systems with real-time insights.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/observability-phoenix",
-    "stars": 23575,
-    "category": "devops",
-    "tags": [
-      "observability",
-      "llmops",
-      "tracing",
-      "monitoring",
-      "evaluation",
-      "opentelemetry",
-      "phoenix",
-      "arize"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/observability-phoenix"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于LLM追踪、评估与监控的开源可观测平台。"
-  },
-  {
-    "id": "awq-quantization-skill",
-    "name": "awq-quantization",
-    "type": "skill",
-    "description": "Activation-aware weight quantization for 4-bit LLM compression with 3x speedup and minimal accuracy loss. Use when deploying large models (7B-70B) on limited GPU memory, when you need faster inference than GPTQ with better accuracy preservation, or for instruction-tuned and multimodal models. MLSys 2024 Best Paper Award winner.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/optimization-awq",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "awq",
-      "quantization",
-      "llm",
-      "4-bit",
-      "inference",
-      "optimization",
-      "vllm",
-      "multimodal"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/optimization-awq"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于4位LLM压缩的激活感知权重量化方案。"
-  },
-  {
-    "id": "quantizing-models-bitsandbytes-skill",
-    "name": "quantizing-models-bitsandbytes",
-    "type": "skill",
-    "description": "Quantizes LLMs to 8-bit or 4-bit for 50-75% memory reduction with minimal accuracy loss. Use when GPU memory is limited, need to fit larger models, or want faster inference. Supports INT8, NF4, FP4 formats, QLoRA training, and 8-bit optimizers. Works with HuggingFace Transformers.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/optimization-bitsandbytes",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "bitsandbytes",
-      "quantization",
-      "llm",
-      "8-bit",
-      "4-bit",
-      "qlora",
-      "transformers",
-      "nf4",
-      "int8"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/optimization-bitsandbytes"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "使用bitsandbytes将模型量化到8位或4位以节省显存。"
-  },
-  {
-    "id": "optimizing-attention-flash-skill",
-    "name": "optimizing-attention-flash",
-    "type": "skill",
-    "description": "Optimizes transformer attention with Flash Attention for 2-4x speedup and 10-20x memory reduction. Use when training/running transformers with long sequences (>512 tokens), encountering GPU memory issues with attention, or need faster inference. Supports PyTorch native SDPA, flash-attn library, H100 FP8, and sliding window attention.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/optimization-flash-attention",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "flash-attention",
-      "transformers",
-      "pytorch",
-      "sdpa",
-      "optimization",
-      "memory-efficiency",
-      "long-context",
-      "inference"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/optimization-flash-attention"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "通过Flash Attention提升Transformer注意力速度与显存效率。"
-  },
-  {
-    "id": "openrlhf-training-skill",
-    "name": "openrlhf-training",
-    "type": "skill",
-    "description": "High-performance RLHF framework with Ray+vLLM acceleration. Use for PPO, GRPO, RLOO, DPO training of large models (7B-70B+). Built on Ray, vLLM, ZeRO-3. 2× faster than DeepSpeedChat with distributed architecture and GPU resource sharing.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/post-training-openrlhf",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "openrlhf",
-      "rlhf",
-      "ppo",
-      "grpo",
-      "rloo",
-      "dpo",
-      "ray",
-      "vllm",
-      "distributed-training",
-      "zero-3"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/post-training-openrlhf"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "基于Ray与vLLM加速的大规模RLHF训练框架。"
-  },
-  {
-    "id": "simpo-training-skill",
-    "name": "simpo-training",
-    "type": "skill",
-    "description": "Simple Preference Optimization for LLM alignment. Reference-free alternative to DPO with better performance (+6.4 points on AlpacaEval 2.0). No reference model needed, more efficient than DPO. Use for preference alignment when want simpler, faster training than DPO/PPO.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/post-training-simpo",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "simpo",
-      "preference-optimization",
-      "alignment",
-      "dpo",
-      "llm-training",
-      "post-training"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/post-training-simpo"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "一种无需参考模型的简单偏好优化训练方法。"
-  },
-  {
-    "id": "fine-tuning-with-trl-skill",
-    "name": "fine-tuning-with-trl",
-    "type": "skill",
-    "description": "Fine-tune LLMs using reinforcement learning with TRL - SFT for instruction tuning, DPO for preference alignment, PPO/GRPO for reward optimization, and reward model training. Use when need RLHF, align model with preferences, or train from human feedback. Works with HuggingFace Transformers.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/post-training-trl-fine-tuning",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "trl",
-      "huggingface",
-      "llm",
-      "fine-tuning",
-      "reinforcement-learning",
-      "rlhf",
-      "sft",
-      "dpo",
-      "ppo",
-      "grpo"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/post-training-trl-fine-tuning"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用TRL对大模型做SFT、DPO与RLHF微调。"
-  },
-  {
-    "id": "dspy-skill",
-    "name": "dspy",
-    "type": "skill",
-    "description": "Build complex AI systems with declarative programming, optimize prompts automatically, create modular RAG systems and agents with DSPy - Stanford NLP's framework for systematic LM programming",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/prompt-engineering-dspy",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "dspy",
-      "llm",
-      "rag",
-      "agents",
-      "declarative-programming",
-      "prompt-optimization",
-      "stanford-nlp"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/prompt-engineering-dspy"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用DSPy构建声明式RAG与智能体系统。"
-  },
-  {
-    "id": "guidance-skill",
-    "name": "guidance",
-    "type": "skill",
-    "description": "Control LLM output with regex and grammars, guarantee valid JSON/XML/code generation, enforce structured formats, and build multi-step workflows with Guidance - Microsoft Research's constrained generation framework",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/prompt-engineering-guidance",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "guidance",
-      "llm",
-      "structured-output",
-      "constrained-generation",
-      "regex",
-      "grammars",
-      "json",
-      "xml",
-      "workflow"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/prompt-engineering-guidance"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用Guidance约束LLM生成结构化输出。"
-  },
-  {
-    "id": "instructor-skill",
-    "name": "instructor",
-    "type": "skill",
-    "description": "Extract structured data from LLM responses with Pydantic validation, retry failed extractions automatically, parse complex JSON with type safety, and stream partial results with Instructor - battle-tested structured output library",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/prompt-engineering-instructor",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "instructor",
-      "llm",
-      "structured-output",
-      "pydantic",
-      "validation",
-      "json",
-      "data-extraction",
-      "type-safety",
-      "streaming"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/prompt-engineering-instructor"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用Instructor从LLM结果中提取结构化数据。"
-  },
-  {
-    "id": "outlines-skill",
-    "name": "outlines",
-    "type": "skill",
-    "description": "Guarantee valid JSON/XML/code structure during generation, use Pydantic models for type-safe outputs, support local models (Transformers, vLLM), and maximize inference speed with Outlines - dottxt.ai's structured generation library",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/prompt-engineering-outlines",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "outlines",
-      "llm",
-      "structured-generation",
-      "json-schema",
-      "pydantic",
-      "transformers",
-      "vllm",
-      "grammar-based-generation",
-      "type-safety"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/prompt-engineering-outlines"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用Outlines保证生成结果结构合法且类型安全。"
-  },
-  {
-    "id": "qdrant-vector-search-skill",
-    "name": "qdrant-vector-search",
-    "type": "skill",
-    "description": "High-performance vector similarity search engine for RAG and semantic search. Use when building production RAG systems requiring fast nearest neighbor search, hybrid search with filtering, or scalable vector storage with Rust-powered performance.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/rag-qdrant",
-    "stars": 23575,
-    "category": "database",
-    "tags": [
-      "qdrant",
-      "vector-search",
-      "semantic-search",
-      "embeddings",
-      "hnsw",
-      "rag"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/rag-qdrant"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "高性能向量相似度搜索引擎，适合生产级RAG与语义检索"
-  },
-  {
-    "id": "sentence-transformers-skill",
-    "name": "sentence-transformers",
-    "type": "skill",
-    "description": "Framework for state-of-the-art sentence, text, and image embeddings. Provides 5000+ pre-trained models for semantic similarity, clustering, and retrieval. Supports multilingual, domain-specific, and multimodal models. Use for generating embeddings for RAG, semantic search, or similarity tasks. Best for production embedding generation.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/rag-sentence-transformers",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "sentence-transformers",
-      "embeddings",
-      "semantic-similarity",
-      "retrieval",
-      "rag",
-      "multilingual"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/rag-sentence-transformers"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于文本和图像嵌入的框架，适合检索与相似度任务"
-  },
-  {
-    "id": "nemo-guardrails-skill",
-    "name": "nemo-guardrails",
-    "type": "skill",
-    "description": "NVIDIA's runtime safety framework for LLM applications. Features jailbreak detection, input/output validation, fact-checking, hallucination detection, PII filtering, toxicity detection. Uses Colang 2.0 DSL for programmable rails. Production-ready, runs on T4 GPU.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/safety-alignment-nemo-guardrails",
-    "stars": 23575,
-    "category": "security",
-    "tags": [
-      "nemo-guardrails",
-      "ai-safety",
-      "guardrails",
-      "jailbreak-detection",
-      "pii-filtering",
-      "colang"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/safety-alignment-nemo-guardrails"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "为LLM应用提供越狱检测与内容校验的安全框架"
-  },
-  {
-    "id": "huggingface-tokenizers-skill",
-    "name": "huggingface-tokenizers",
-    "type": "skill",
-    "description": "Fast tokenizers optimized for research and production. Rust-based implementation tokenizes 1GB in <20 seconds. Supports BPE, WordPiece, and Unigram algorithms. Train custom vocabularies, track alignments, handle padding/truncation. Integrates seamlessly with transformers. Use when you need high-performance tokenization or custom tokenizer training.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/tokenization-huggingface-tokenizers",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "huggingface",
-      "tokenizers",
-      "bpe",
-      "wordpiece",
-      "unigram",
-      "rust"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/tokenization-huggingface-tokenizers"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "高性能分词库，支持BPE等算法及自定义词表训练"
-  },
-  {
-    "id": "sentencepiece-skill",
-    "name": "sentencepiece",
-    "type": "skill",
-    "description": "Language-independent tokenizer treating text as raw Unicode. Supports BPE and Unigram algorithms. Fast (50k sentences/sec), lightweight (6MB memory), deterministic vocabulary. Used by T5, ALBERT, XLNet, mBART. Train on raw text without pre-tokenization. Use when you need multilingual support, CJK languages, or reproducible tokenization.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/tokenization-sentencepiece",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "sentencepiece",
-      "tokenization",
-      "bpe",
-      "unigram",
-      "multilingual",
-      "unicode"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/tokenization-sentencepiece"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "语言无关分词工具，支持多语种与原始文本训练"
-  },
-  {
-    "id": "voice-ai-development-skill",
-    "name": "voice-ai-development",
-    "type": "skill",
-    "description": "Expert in building voice AI applications - from real-time voice agents to voice-enabled apps. Covers OpenAI Realtime API, Vapi for voice agents, Deepgram for transcription, ElevenLabs for synthesis, LiveKit for real-time infrastructure, and WebRTC fundamentals. Knows how to build low-latency, production-ready voice experiences. Use when: voice ai, voice agent, speech to text, text to speech, realtime voice.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/voice-ai-development",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "voice-ai",
-      "webrtc",
-      "deepgram",
-      "elevenlabs",
-      "livekit",
-      "realtime-api"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/voice-ai-development"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "构建实时语音AI应用，涵盖转写、合成与实时通信"
-  },
-  {
-    "id": "3d-web-experience-skill",
-    "name": "3d-web-experience",
-    "type": "skill",
-    "description": "Expert in building 3D experiences for the web - Three.js, React Three Fiber, Spline, WebGL, and interactive 3D scenes. Covers product configurators, 3D portfolios, immersive websites, and bringing depth to web experiences. Use when: 3D website, three.js, WebGL, react three fiber, 3D experience.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/3d-web-experience",
-    "stars": 23575,
-    "category": "frontend",
-    "tags": [
-      "three-js",
-      "react-three-fiber",
-      "webgl",
-      "spline",
-      "3d"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/creative-design/3d-web-experience"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于构建基于Three.js与WebGL的网页3D体验。"
-  },
-  {
-    "id": "d3-viz-skill",
-    "name": "d3-viz",
-    "type": "skill",
-    "description": "Creating interactive data visualisations using d3.js. This skill should be used when creating custom charts, graphs, network diagrams, geographic visualisations, or any complex SVG-based data visualisation that requires fine-grained control over visual elements, transitions, or interactions. Use this for bespoke visualisations beyond standard charting libraries, whether in React, Vue, Svelte, vanilla JavaScript, or any other environment.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/claude-d3js-skill",
-    "stars": 23575,
-    "category": "frontend",
-    "tags": [
-      "d3.js",
-      "javascript",
-      "svg",
-      "data-visualization",
-      "charts"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/creative-design/claude-d3js-skill"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于使用d3.js创建交互式数据可视化图表。"
-  },
-  {
-    "id": "develop-web-game-skill",
-    "name": "develop-web-game",
-    "type": "skill",
-    "description": "Use when Codex is building or iterating on a web game (HTML/JS) and needs a reliable development + testing loop: implement small changes, run a Playwright-based test script with short input bursts and intentional pauses, inspect screenshots/text, and review console errors with render_game_to_text.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/develop-web-game",
-    "stars": 23575,
-    "category": "frontend",
-    "tags": [
-      "html",
-      "javascript",
-      "playwright",
-      "web-game",
-      "testing"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/creative-design/develop-web-game"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于网页游戏开发迭代与基于Playwright的测试。"
-  },
-  {
-    "id": "tailwind-patterns-skill",
-    "name": "tailwind-patterns",
-    "type": "skill",
-    "description": "Tailwind CSS v4 principles. CSS-first configuration, container queries, modern patterns, design token architecture.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/tailwind-patterns",
-    "stars": 23575,
-    "category": "frontend",
-    "tags": [
-      "tailwindcss",
-      "css",
-      "design-tokens",
-      "container-queries",
-      "frontend"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/creative-design/tailwind-patterns"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "Tailwind CSS v4实践，涵盖配置、容器查询与设计令牌。"
-  },
-  {
-    "id": "postgres-schema-design-skill",
-    "name": "postgres-schema-design",
-    "type": "skill",
-    "description": "Comprehensive PostgreSQL-specific table design reference covering data types, indexing, constraints, performance patterns, and advanced features",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/database/postgres-schema-design",
-    "stars": 23575,
-    "category": "database",
-    "tags": [
-      "postgres",
-      "schema-design",
-      "indexing",
-      "sql",
-      "performance"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/database/postgres-schema-design"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "提供 PostgreSQL 表设计与性能优化参考。"
-  },
-  {
-    "id": "supabase-postgres-best-practices-skill",
-    "name": "supabase-postgres-best-practices",
-    "type": "skill",
-    "description": "Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/database/supabase-postgres-best-practices",
-    "stars": 23575,
-    "category": "database",
-    "tags": [
-      "postgres",
-      "supabase",
-      "sql",
-      "query-optimization",
-      "schema-design"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/database/supabase-postgres-best-practices"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于优化Postgres查询、模式与配置。"
-  },
-  {
-    "id": "design-to-code-skill",
-    "name": "design-to-code",
-    "type": "skill",
-    "description": "Pixel-perfect Figma to React conversion using coderio. Generates production-ready code (TypeScript, Vite, TailwindCSS V4) with high visual fidelity. Features robust error handling, checkpoint recovery, and streamlined execution via helper script.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/design-to-code",
-    "stars": 23575,
-    "category": "frontend",
-    "tags": [
-      "figma",
-      "react",
-      "typescript",
-      "vite",
-      "tailwind"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/design-to-code"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "将 Figma 高保真转换为 React 生产代码。"
-  },
-  {
-    "id": "api-patterns-skill",
-    "name": "api-patterns",
-    "type": "skill",
-    "description": "API design principles and decision-making. REST vs GraphQL vs tRPC selection, response formats, versioning, pagination.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/api-patterns",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "api-design",
-      "rest-api",
-      "graphql",
-      "trpc",
-      "pagination"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/api-patterns"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "讲解 API 设计原则与技术选型模式。"
-  },
-  {
-    "id": "aws-serverless-skill",
-    "name": "aws-serverless",
-    "type": "skill",
-    "description": "Specialized skill for building production-ready serverless applications on AWS. Covers Lambda functions, API Gateway, DynamoDB, SQS/SNS event-driven patterns, SAM/CDK deployment, and cold start optimization.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/aws-serverless",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "aws",
-      "serverless",
-      "lambda",
-      "api-gateway",
-      "dynamodb",
-      "sqs",
-      "sns",
-      "sam",
-      "cdk"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/aws-serverless"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "构建AWS生产级无服务器应用的实践指南。"
-  },
-  {
-    "id": "azure-functions-skill",
-    "name": "azure-functions",
-    "type": "skill",
-    "description": "Expert patterns for Azure Functions development including isolated worker model, Durable Functions orchestration, cold start optimization, and production patterns. Covers .NET, Python, and Node.js programming models. Use when: azure function, azure functions, durable functions, azure serverless, function app.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/azure-functions",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "azure",
-      "azure-functions",
-      "durable-functions",
-      "dotnet",
-      "python",
-      "nodejs",
-      "serverless"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/azure-functions"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "涵盖Azure Functions开发与生产实践模式。"
-  },
-  {
-    "id": "backend-dev-guidelines-skill",
-    "name": "backend-dev-guidelines",
-    "type": "skill",
-    "description": "Comprehensive backend development guide for Node.js/Express/TypeScript microservices. Use when creating routes, controllers, services, repositories, middleware, or working with Express APIs, Prisma database access, Sentry error tracking, Zod validation, unifiedConfig, dependency injection, or async patterns. Covers layered architecture (routes → controllers → services → repositories), BaseController pattern, error handling, performance monitoring, testing strategies, and migration from legacy patterns.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/backend-dev-guidelines",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "nodejs",
-      "express",
-      "typescript",
-      "prisma",
-      "microservices",
-      "zod",
-      "sentry"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/backend-dev-guidelines"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "面向Node.js微服务的后端开发完整指南。"
-  },
-  {
-    "id": "bullmq-specialist-skill",
-    "name": "bullmq-specialist",
-    "type": "skill",
-    "description": "BullMQ expert for Redis-backed job queues, background processing, and reliable async execution in Node.js/TypeScript applications. Use when: bullmq, bull queue, redis queue, background job, job queue.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/bullmq-specialist",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "bullmq",
-      "redis",
-      "nodejs",
-      "typescript",
-      "queues",
-      "background-jobs"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/bullmq-specialist"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "专注Node.js中BullMQ与Redis任务队列实践。"
-  },
-  {
-    "id": "clickhouse-io-skill",
-    "name": "clickhouse-io",
-    "type": "skill",
-    "description": "ClickHouse database patterns, query optimization, analytics, and data engineering best practices for high-performance analytical workloads.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/cc-skill-clickhouse-io",
-    "stars": 23575,
-    "category": "database",
-    "tags": [
-      "clickhouse",
-      "database",
-      "sql",
-      "analytics",
-      "query-optimization",
-      "data-engineering"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/cc-skill-clickhouse-io"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "提供ClickHouse分析型数据库优化与实践。"
-  },
-  {
-    "id": "frontend-patterns-skill",
-    "name": "frontend-patterns",
-    "type": "skill",
-    "description": "Frontend development patterns for React, Next.js, state management, performance optimization, and UI best practices.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/cc-skill-frontend-patterns",
-    "stars": 23575,
-    "category": "frontend",
-    "tags": [
-      "frontend",
-      "react",
-      "nextjs",
-      "state-management",
-      "performance",
-      "ui"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/cc-skill-frontend-patterns"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "提供React与Next.js前端开发模式和优化实践。"
-  },
-  {
-    "id": "security-review-skill",
-    "name": "security-review",
-    "type": "skill",
-    "description": "Use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or implementing payment/sensitive features. Provides comprehensive security checklist and patterns.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/cc-skill-security-review",
-    "stars": 23575,
-    "category": "security",
-    "tags": [
-      "security",
-      "authentication",
-      "input-validation",
-      "secrets-management",
-      "api",
-      "payments"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/cc-skill-security-review"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "为认证、输入处理和敏感功能提供安全审查清单。"
-  },
-  {
-    "id": "code-reviewer-skill",
-    "name": "code-reviewer",
-    "type": "skill",
-    "description": "Comprehensive code review skill for TypeScript, JavaScript, Python, Swift, Kotlin, Go. Includes automated code analysis, best practice checking, security scanning, and review checklist generation. Use when reviewing pull requests, providing code feedback, identifying issues, or ensuring code quality standards.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/code-reviewer",
-    "stars": 23575,
-    "category": "testing",
-    "tags": [
-      "code-review",
-      "typescript",
-      "javascript",
-      "python",
-      "go",
-      "java",
-      "swift",
-      "kotlin",
-      "static-analysis",
-      "security"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/code-reviewer"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "为多语言代码提供分析、审查与质量检查。"
-  },
-  {
-    "id": "database-schema-designer-skill",
-    "name": "database-schema-designer",
-    "type": "skill",
-    "description": "Design robust, scalable database schemas for SQL and NoSQL databases. Provides normalization guidelines, indexing strategies, migration patterns, constraint design, and performance optimization. Ensures data integrity, query performance, and maintainable data models.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/database-schema-designer",
-    "stars": 23575,
-    "category": "database",
-    "tags": [
-      "database",
-      "schema-design",
-      "sql",
-      "nosql",
-      "indexing",
-      "migrations",
-      "data-modeling"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/database-schema-designer"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "设计可扩展的 SQL 与 NoSQL 数据库模式。"
-  },
-  {
-    "id": "devops-iac-engineer-skill",
-    "name": "devops-iac-engineer",
-    "type": "skill",
-    "description": "Implements infrastructure as code using Terraform, Kubernetes, and cloud platforms. Designs scalable architectures, CI/CD pipelines, and observability solutions. Provides security-first DevOps practices and site reliability engineering guidance.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/devops-iac-engineer",
-    "stars": 23575,
-    "category": "devops",
-    "tags": [
-      "devops",
-      "iac",
-      "terraform",
-      "kubernetes",
-      "ci-cd",
-      "observability",
-      "sre",
-      "cloud"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/devops-iac-engineer"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用 Terraform 与 Kubernetes 实现基础设施即代码。"
-  },
-  {
-    "id": "docker-expert-skill",
-    "name": "docker-expert",
-    "type": "skill",
-    "description": "Docker containerization expert with deep knowledge of multi-stage builds, image optimization, container security, Docker Compose orchestration, and production deployment patterns. Use PROACTIVELY for Dockerfile optimization, container issues, image size problems, security hardening, networking, and orchestration challenges.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/docker-expert",
-    "stars": 23575,
-    "category": "devops",
-    "tags": [
-      "docker",
-      "containers",
-      "docker-compose",
-      "image-optimization",
-      "container-security",
-      "deployment"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/docker-expert"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "专注 Docker 构建优化、编排、安全与部署。"
-  },
-  {
-    "id": "fastmcp-server-skill",
-    "name": "fastmcp-server",
-    "type": "skill",
-    "description": "Complete guide for building MCP servers with FastMCP 3.0 - tools, resources, authentication, providers, middleware, and deployment. Use when creating Python MCP servers or integrating AI models with external tools and data.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/fastmcp-server",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "python",
-      "mcp",
-      "fastmcp",
-      "ai",
-      "server",
-      "authentication",
-      "middleware"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/fastmcp-server"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "指导使用FastMCP构建含认证等能力的Python MCP服务。"
-  },
-  {
-    "id": "firebase-skill",
-    "name": "firebase",
-    "type": "skill",
-    "description": "Firebase gives you a complete backend in minutes - auth, database, storage, functions, hosting. But the ease of setup hides real complexity. Security rules are your last line of defense, and they're often wrong. Firestore queries are limited, and you learn this after you've designed your data model.  This skill covers Firebase Authentication, Firestore, Realtime Database, Cloud Functions, Cloud Storage, and Firebase Hosting. Key insight: Firebase is optimized for read-heavy, denormalized data. I",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/firebase",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "firebase",
-      "auth",
-      "firestore",
-      "functions",
-      "hosting",
-      "security-rules"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/firebase"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "介绍Firebase后端能力及安全规则与数据建模要点。"
-  },
-  {
-    "id": "frontend-dev-guidelines-skill",
-    "name": "frontend-dev-guidelines",
-    "type": "skill",
-    "description": "Frontend development guidelines for React/TypeScript applications. Modern patterns including Suspense, lazy loading, useSuspenseQuery, file organization with features directory, MUI v7 styling, TanStack Router, performance optimization, and TypeScript best practices. Use when creating components, pages, features, fetching data, styling, routing, or working with frontend code.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/frontend-dev-guidelines",
-    "stars": 23575,
-    "category": "frontend",
-    "tags": [
-      "react",
-      "typescript",
-      "mui",
-      "tanstack-router",
-      "suspense",
-      "frontend-architecture"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/frontend-dev-guidelines"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "React与TypeScript前端开发最佳实践指南。"
-  },
-  {
-    "id": "gcp-cloud-run-skill",
-    "name": "gcp-cloud-run",
-    "type": "skill",
-    "description": "Specialized skill for building production-ready serverless applications on GCP. Covers Cloud Run services (containerized), Cloud Run Functions (event-driven), cold start optimization, and event-driven architecture with Pub/Sub.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/gcp-cloud-run",
-    "stars": 23575,
-    "category": "devops",
-    "tags": [
-      "gcp",
-      "cloud-run",
-      "serverless",
-      "pubsub",
-      "containers",
-      "deployment"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/gcp-cloud-run"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "指导在GCP Cloud Run上构建生产级无服务器应用。"
-  },
-  {
-    "id": "gh-fix-ci-skill",
-    "name": "gh-fix-ci",
-    "type": "skill",
-    "description": "Inspect GitHub PR checks with gh, pull failing GitHub Actions logs, summarize failure context, then create a fix plan and implement after user approval. Use when a user asks to debug or fix failing PR CI/CD checks on GitHub Actions and wants a plan + code changes; for external checks (e.g., Buildkite), only report the details URL and mark them out of scope.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/gh-fix-ci",
-    "stars": 23575,
-    "category": "devops",
-    "tags": [
-      "github-actions",
-      "gh-cli",
-      "ci-cd",
-      "debugging",
-      "git"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/gh-fix-ci"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "检查PR失败的CI并总结问题后制定修复计划。"
-  },
-  {
-    "id": "github-actions-creator-skill",
-    "name": "github-actions-creator",
-    "type": "skill",
-    "description": "Use when the user wants to create, generate, or set up a GitHub Actions workflow. Handles CI/CD pipelines, testing, deployment, linting, security scanning, release automation, Docker builds, scheduled tasks, and any custom workflow for any language or framework.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/github-actions-creator",
-    "stars": 23575,
-    "category": "devops",
-    "tags": [
-      "github-actions",
-      "ci-cd",
-      "automation",
-      "deployment",
-      "docker",
-      "testing"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/github-actions-creator"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于创建GitHub Actions工作流以实现CI/CD等自动化。"
-  },
-  {
-    "id": "github-workflow-automation-skill",
-    "name": "github-workflow-automation",
-    "type": "skill",
-    "description": "Automate GitHub workflows with AI assistance. Includes PR reviews, issue triage, CI/CD integration, and Git operations. Use when automating GitHub workflows, setting up PR review automation, creating GitHub Actions, or triaging issues.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/github-workflow-automation",
-    "stars": 23575,
-    "category": "devops",
-    "tags": [
-      "github",
-      "github-actions",
-      "ci-cd",
-      "automation",
-      "git"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/github-workflow-automation"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "自动化GitHub流程，包括PR审查、议题分流与CI/CD。"
-  },
-  {
-    "id": "hubspot-integration-skill",
-    "name": "hubspot-integration",
-    "type": "skill",
-    "description": "Expert patterns for HubSpot CRM integration including OAuth authentication, CRM objects, associations, batch operations, webhooks, and custom objects. Covers Node.js and Python SDKs. Use when: hubspot, hubspot api, hubspot crm, hubspot integration, contacts api.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/hubspot-integration",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "hubspot",
-      "crm",
-      "oauth",
-      "webhooks",
-      "nodejs",
-      "python",
-      "api"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/hubspot-integration"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "涵盖HubSpot集成、认证、对象与Webhook。"
-  },
-  {
-    "id": "moodle-external-api-development-skill",
-    "name": "moodle-external-api-development",
-    "type": "skill",
-    "description": "Create custom external web service APIs for Moodle LMS. Use when implementing web services for course management, user tracking, quiz operations, or custom plugin functionality. Covers parameter validation, database operations, error handling, service registration, and Moodle coding standards.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/moodle-external-api-development",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "moodle",
-      "php",
-      "web-services",
-      "api",
-      "lms",
-      "plugin-development"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/moodle-external-api-development"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "开发Moodle外部Web服务API与插件功能。"
-  },
-  {
-    "id": "mui-skill",
-    "name": "mui",
-    "type": "skill",
-    "description": "Material-UI v7 component library patterns including sx prop styling, theme integration, responsive design, and MUI-specific hooks. Use when working with MUI components, styling with sx prop, theme customization, or MUI utilities.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/mui",
-    "stars": 23575,
-    "category": "frontend",
-    "tags": [
-      "mui",
-      "material-ui",
-      "react",
-      "sx",
-      "theming",
-      "responsive-design"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/mui"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "Material-UI组件、主题与响应式设计模式。"
-  },
-  {
-    "id": "nosql-expert-skill",
-    "name": "nosql-expert",
-    "type": "skill",
-    "description": "Expert guidance for distributed NoSQL databases (Cassandra, DynamoDB). Focuses on mental models, query-first modeling, single-table design, and avoiding hot partitions in high-scale systems.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/nosql-expert",
-    "stars": 23575,
-    "category": "database",
-    "tags": [
-      "nosql",
-      "cassandra",
-      "dynamodb",
-      "data-modeling",
-      "distributed-systems",
-      "single-table-design"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/nosql-expert"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "指导分布式NoSQL建模与高并发设计"
-  },
-  {
-    "id": "openapi-to-typescript-skill",
-    "name": "openapi-to-typescript",
-    "type": "skill",
-    "description": "Converts OpenAPI 3.0 JSON/YAML to TypeScript interfaces and type guards. This skill should be used when the user asks to generate types from OpenAPI, convert schema to TS, create API interfaces, or generate TypeScript types from an API specification.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/openapi-to-typescript",
-    "stars": 23575,
+    "tags": [],
+    "tech_stack": [],
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/skillcreatorai/Ai-Agent-Skills.git",
+      "files": [
+        "skills/job-application/"
+      ]
+    },
+    "source": "ai-agent-skills",
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 26,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 55,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
+  },
+  {
+    "id": "ask-questions-if-underspecified-aiskill",
+    "name": "ask-questions-if-underspecified",
+    "type": "skill",
+    "description": "Clarify requirements before implementing. Do not use automatically, only when invoked explicitly.",
+    "source_url": "https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/ask-questions-if-underspecified",
+    "stars": null,
     "category": "tooling",
-    "tags": [
-      "openapi",
-      "typescript",
-      "codegen",
-      "api",
-      "schema",
-      "type-guards"
-    ],
+    "tags": [],
     "tech_stack": [],
     "install": {
       "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/openapi-to-typescript"
+      "repo": "https://github.com/skillcreatorai/Ai-Agent-Skills.git",
+      "files": [
+        "skills/ask-questions-if-underspecified/"
+      ]
     },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "将OpenAPI规范转换为TypeScript类型"
+    "source": "ai-agent-skills",
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 26,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 55,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   },
   {
-    "id": "playwright-e2e-builder-skill",
-    "name": "playwright-e2e-builder",
+    "id": "best-practices-aiskill",
+    "name": "best-practices",
     "type": "skill",
-    "description": "Plan and build comprehensive Playwright E2E test suites with Page Object Model, authentication state persistence, custom fixtures, visual regression, and CI integration. Uses interview-driven planning to clarify critical user flows, auth strategy, test data approach, and parallelization before writing any tests.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/playwright-e2e-builder",
-    "stars": 23575,
-    "category": "testing",
-    "tags": [
-      "playwright",
-      "e2e",
-      "testing",
-      "typescript",
-      "page-object-model",
-      "visual-regression",
-      "ci"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/playwright-e2e-builder"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "规划并构建完整的Playwright端到端测试"
-  },
-  {
-    "id": "prisma-expert-skill",
-    "name": "prisma-expert",
-    "type": "skill",
-    "description": "Prisma ORM expert for schema design, migrations, query optimization, relations modeling, and database operations. Use PROACTIVELY for Prisma schema issues, migration problems, query performance, relation design, or database connection issues.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/prisma-expert",
-    "stars": 23575,
-    "category": "database",
-    "tags": [
-      "prisma",
-      "orm",
-      "database",
-      "migrations",
-      "schema-design",
-      "query-optimization"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/prisma-expert"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于Prisma建模、迁移与查询优化。"
-  },
-  {
-    "id": "python-patterns-skill",
-    "name": "python-patterns",
-    "type": "skill",
-    "description": "Python development principles and decision-making. Framework selection, async patterns, type hints, project structure. Teaches thinking, not copying.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/python-patterns",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "python",
-      "async",
-      "type-hints",
-      "project-structure",
-      "design-patterns"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/python-patterns"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "涵盖Python开发原则、异步与类型提示。"
-  },
-  {
-    "id": "react-patterns-skill",
-    "name": "react-patterns",
-    "type": "skill",
-    "description": "Modern React patterns and principles. Hooks, composition, performance, TypeScript best practices.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/react-patterns",
-    "stars": 23575,
-    "category": "frontend",
-    "tags": [
-      "react",
-      "typescript",
-      "hooks",
-      "composition",
-      "performance"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/react-patterns"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "涵盖现代React模式、性能与TS实践。"
-  },
-  {
-    "id": "react-ui-patterns-skill",
-    "name": "react-ui-patterns",
-    "type": "skill",
-    "description": "Modern React UI patterns for loading states, error handling, and data fetching. Use when building UI components, handling async data, or managing UI states.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/react-ui-patterns",
-    "stars": 23575,
-    "category": "frontend",
-    "tags": [
-      "react",
-      "ui",
-      "loading-states",
-      "error-handling",
-      "data-fetching"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/react-ui-patterns"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于React界面加载、错误与数据状态处理。"
-  },
-  {
-    "id": "react-useeffect-skill",
-    "name": "react-useeffect",
-    "type": "skill",
-    "description": "React useEffect best practices from official docs. Use when writing/reviewing useEffect, useState for derived values, data fetching, or state synchronization. Teaches when NOT to use Effect and better alternatives.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/react-useeffect",
-    "stars": 23575,
-    "category": "frontend",
-    "tags": [
-      "react",
-      "useeffect",
-      "state-management",
-      "data-fetching",
-      "best-practices"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/react-useeffect"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "讲解useEffect最佳实践及替代方案。"
-  },
-  {
-    "id": "rust-cli-builder-skill",
-    "name": "rust-cli-builder",
-    "type": "skill",
-    "description": "Plan and build production-ready Rust CLI tools using clap for argument parsing, with subcommands, config file support, colored output, and proper error handling. Uses interview-driven planning to clarify commands, input/output formats, and distribution strategy before writing any code.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/rust-cli-builder",
-    "stars": 23575,
+    "description": ">-",
+    "source_url": "https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/best-practices",
+    "stars": null,
     "category": "tooling",
-    "tags": [
-      "rust",
-      "cli",
-      "clap",
-      "terminal",
-      "command-line",
-      "error-handling",
-      "config"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/rust-cli-builder"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于构建生产级Rust命令行工具。"
-  },
-  {
-    "id": "salesforce-development-skill",
-    "name": "salesforce-development",
-    "type": "skill",
-    "description": "Expert patterns for Salesforce platform development including Lightning Web Components (LWC), Apex triggers and classes, REST/Bulk APIs, Connected Apps, and Salesforce DX with scratch orgs and 2nd generation packages (2GP). Use when: salesforce, sfdc, apex, lwc, lightning web components.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/salesforce-development",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "salesforce",
-      "apex",
-      "lwc",
-      "lightning-web-components",
-      "rest-api",
-      "bulk-api",
-      "sfdx"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/salesforce-development"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "面向Salesforce平台开发的模式与工具。"
-  },
-  {
-    "id": "senior-backend-skill",
-    "name": "senior-backend",
-    "type": "skill",
-    "description": "Comprehensive backend development skill for building scalable backend systems using NodeJS, Express, Go, Python, Postgres, GraphQL, REST APIs. Includes API scaffolding, database optimization, security implementation, and performance tuning. Use when designing APIs, optimizing database queries, implementing business logic, handling authentication/authorization, or reviewing backend code.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/senior-backend",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "nodejs",
-      "express",
-      "go",
-      "python",
-      "postgres",
-      "graphql",
-      "rest-api",
-      "api-design"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/senior-backend"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "构建可扩展后端系统并优化接口与数据库。"
-  },
-  {
-    "id": "senior-computer-vision-skill",
-    "name": "senior-computer-vision",
-    "type": "skill",
-    "description": "World-class computer vision skill for image/video processing, object detection, segmentation, and visual AI systems. Expertise in PyTorch, OpenCV, YOLO, SAM, diffusion models, and vision transformers. Includes 3D vision, video analysis, real-time processing, and production deployment. Use when building vision AI systems, implementing object detection, training custom vision models, or optimizing inference pipelines.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/senior-computer-vision",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "computer-vision",
-      "pytorch",
-      "opencv",
-      "yolo",
-      "sam",
-      "diffusion-models",
-      "vision-transformer",
-      "video-processing"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/senior-computer-vision"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "构建图像视频处理与视觉AI系统。"
-  },
-  {
-    "id": "senior-data-engineer-skill",
-    "name": "senior-data-engineer",
-    "type": "skill",
-    "description": "World-class data engineering skill for building scalable data pipelines, ETL/ELT systems, and data infrastructure. Expertise in Python, SQL, Spark, Airflow, dbt, Kafka, and modern data stack. Includes data modeling, pipeline orchestration, data quality, and DataOps. Use when designing data architectures, building data pipelines, optimizing data workflows, or implementing data governance.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/senior-data-engineer",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "python",
-      "sql",
-      "spark",
-      "airflow",
-      "dbt",
-      "kafka",
-      "etl",
-      "data-pipelines"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/senior-data-engineer"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "构建可扩展数据管道与现代数据基础设施。"
-  },
-  {
-    "id": "senior-devops-skill",
-    "name": "senior-devops",
-    "type": "skill",
-    "description": "Comprehensive DevOps skill for CI/CD, infrastructure automation, containerization, and cloud platforms (AWS, GCP, Azure). Includes pipeline setup, infrastructure as code, deployment automation, and monitoring. Use when setting up pipelines, deploying applications, managing infrastructure, implementing monitoring, or optimizing deployment processes.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/senior-devops",
-    "stars": 23575,
-    "category": "devops",
-    "tags": [
-      "ci-cd",
-      "infrastructure-as-code",
-      "containers",
-      "aws",
-      "gcp",
-      "azure",
-      "deployment",
-      "monitoring"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/senior-devops"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "建设CI/CD、自动化基础设施与云部署能力。"
-  },
-  {
-    "id": "senior-frontend-skill",
-    "name": "senior-frontend",
-    "type": "skill",
-    "description": "Comprehensive frontend development skill for building modern, performant web applications using ReactJS, NextJS, TypeScript, Tailwind CSS. Includes component scaffolding, performance optimization, bundle analysis, and UI best practices. Use when developing frontend features, optimizing performance, implementing UI/UX designs, managing state, or reviewing frontend code.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/senior-frontend",
-    "stars": 23575,
-    "category": "frontend",
-    "tags": [
-      "react",
-      "nextjs",
-      "typescript",
-      "tailwind",
-      "css",
-      "performance",
-      "bundle-analysis"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/senior-frontend"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "构建现代高性能前端Web应用。"
-  },
-  {
-    "id": "senior-fullstack-skill",
-    "name": "senior-fullstack",
-    "type": "skill",
-    "description": "Comprehensive fullstack development skill for building complete web applications with React, Next.js, Node.js, GraphQL, and PostgreSQL. Includes project scaffolding, code quality analysis, architecture patterns, and complete tech stack guidance. Use when building new projects, analyzing code quality, implementing design patterns, or setting up development workflows.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/senior-fullstack",
-    "stars": 23575,
-    "category": "fullstack",
-    "tags": [
-      "react",
-      "nextjs",
-      "nodejs",
-      "graphql",
-      "postgres",
-      "fullstack",
-      "architecture",
-      "code-quality"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/senior-fullstack"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "构建完整Web应用并提供全栈技术指导。"
-  },
-  {
-    "id": "senior-ml-engineer-skill",
-    "name": "senior-ml-engineer",
-    "type": "skill",
-    "description": "World-class ML engineering skill for productionizing ML models, MLOps, and building scalable ML systems. Expertise in PyTorch, TensorFlow, model deployment, feature stores, model monitoring, and ML infrastructure. Includes LLM integration, fine-tuning, RAG systems, and agentic AI. Use when deploying ML models, building ML platforms, implementing MLOps, or integrating LLMs into production systems.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/senior-ml-engineer",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "mlops",
-      "pytorch",
-      "tensorflow",
-      "model-deployment",
-      "feature-store",
-      "model-monitoring",
-      "rag",
-      "llm",
-      "fine-tuning"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/senior-ml-engineer"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "生产化部署机器学习模型并建设MLOps系统。"
-  },
-  {
-    "id": "senior-qa-skill",
-    "name": "senior-qa",
-    "type": "skill",
-    "description": "Comprehensive QA and testing skill for quality assurance, test automation, and testing strategies for ReactJS, NextJS, NodeJS applications. Includes test suite generation, coverage analysis, E2E testing setup, and quality metrics. Use when designing test strategies, writing test cases, implementing test automation, performing manual testing, or analyzing test coverage.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/senior-qa",
-    "stars": 23575,
-    "category": "testing",
-    "tags": [
-      "qa",
-      "testing",
-      "test-automation",
-      "e2e",
-      "react",
-      "nextjs",
-      "nodejs",
-      "coverage-analysis"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/senior-qa"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "制定测试策略并建设自动化测试体系。"
-  },
-  {
-    "id": "senior-security-skill",
-    "name": "senior-security",
-    "type": "skill",
-    "description": "Comprehensive security engineering skill for application security, penetration testing, security architecture, and compliance auditing. Includes security assessment tools, threat modeling, crypto implementation, and security automation. Use when designing security architecture, conducting penetration tests, implementing cryptography, or performing security audits.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/senior-security",
-    "stars": 23575,
-    "category": "security",
-    "tags": [
-      "security",
-      "appsec",
-      "penetration-testing",
-      "threat-modeling",
-      "cryptography",
-      "compliance"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/senior-security"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "涵盖应用安全、渗透测试与安全架构的综合技能。"
-  },
-  {
-    "id": "stripe-integration-skill",
-    "name": "stripe-integration",
-    "type": "skill",
-    "description": "Get paid from day one. Payments, subscriptions, billing portal, webhooks, metered billing, Stripe Connect. The complete guide to implementing Stripe correctly, including all the edge cases that will bite you at 3am.  This isn't just API calls - it's the full payment system: handling failures, managing subscriptions, dealing with dunning, and keeping revenue flowing. Use when: stripe, payments, subscription, billing, checkout.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/stripe-integration",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "stripe",
-      "payments",
-      "billing",
-      "webhooks",
-      "subscriptions",
-      "api-integration"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/stripe-integration"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "完整讲解Stripe支付、订阅与Webhook集成。"
-  },
-  {
-    "id": "systematic-debugging-skill",
-    "name": "systematic-debugging",
-    "type": "skill",
-    "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/systematic-debugging",
-    "stars": 23575,
-    "category": "tooling",
-    "tags": [
-      "debugging",
-      "troubleshooting",
-      "root-cause-analysis",
-      "engineering-process"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/systematic-debugging"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "分阶段调试，先查根因再修复问题。"
-  },
-  {
-    "id": "tdd-workflow-skill",
-    "name": "tdd-workflow",
-    "type": "skill",
-    "description": "Test-Driven Development workflow principles. RED-GREEN-REFACTOR cycle.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/tdd-workflow",
-    "stars": 23575,
-    "category": "testing",
-    "tags": [
-      "tdd",
-      "testing",
-      "unit-testing",
-      "red-green-refactor"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/tdd-workflow"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "讲解测试驱动开发的红绿重构流程。"
-  },
-  {
-    "id": "test-detect-skill",
-    "name": "test-detect",
-    "type": "skill",
-    "description": "Auto-detect testing framework and run relevant tests. Identifies Jest, Vitest, Playwright, Cypress, pytest, Go test, and others. Can run all tests, specific file tests, or generate basic tests for new code. Usage - /test-detect, /test-detect src/auth/login.ts, /test-detect generate src/utils.ts",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/test-detect",
-    "stars": 23575,
-    "category": "testing",
-    "tags": [
-      "testing",
-      "jest",
-      "vitest",
-      "playwright",
-      "cypress",
-      "pytest",
-      "go"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/test-detect"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "自动识别测试框架并运行或生成相关测试。"
-  },
-  {
-    "id": "test-fixing-skill",
-    "name": "test-fixing",
-    "type": "skill",
-    "description": "Run tests and systematically fix all failing tests using smart error grouping. Use when user asks to fix failing tests, mentions test failures, runs test suite and failures occur, or requests to make tests pass.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/test-fixing",
-    "stars": 23575,
-    "category": "testing",
-    "tags": [
-      "testing",
-      "debugging",
-      "test-automation",
-      "ci"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/test-fixing"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "运行测试并系统修复失败用例。"
-  },
-  {
-    "id": "testing-patterns-skill",
-    "name": "testing-patterns",
-    "type": "skill",
-    "description": "Jest testing patterns, factory functions, mocking strategies, and TDD workflow. Use when writing unit tests, creating test factories, or following TDD red-green-refactor cycle.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/testing-patterns",
-    "stars": 23575,
-    "category": "testing",
-    "tags": [
-      "testing",
-      "jest",
-      "unit-testing",
-      "mocking",
-      "tdd"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/development/testing-patterns"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "涵盖Jest测试模式、Mock与TDD流程。"
-  },
-  {
-    "id": "discord-bot-architect-skill",
-    "name": "discord-bot-architect",
-    "type": "skill",
-    "description": "Specialized skill for building production-ready Discord bots. Covers Discord.js (JavaScript) and Pycord (Python), gateway intents, slash commands, interactive components, rate limiting, and sharding.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/enterprise-communication/discord-bot-architect",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "discord",
-      "discord.js",
-      "pycord",
-      "javascript",
-      "python"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/enterprise-communication/discord-bot-architect"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "构建生产级 Discord 机器人，涵盖命令与分片。"
-  },
-  {
-    "id": "slack-bot-builder-skill",
-    "name": "slack-bot-builder",
-    "type": "skill",
-    "description": "Build Slack apps using the Bolt framework across Python, JavaScript, and Java. Covers Block Kit for rich UIs, interactive components, slash commands, event handling, OAuth installation flows, and Workflow Builder integration. Focus on best practices for production-ready Slack apps. Use when: slack bot, slack app, bolt framework, block kit, slash command.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/enterprise-communication/slack-bot-builder",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "slack",
-      "bolt",
-      "javascript",
-      "python",
-      "java",
-      "bot",
-      "oauth",
-      "block-kit"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/enterprise-communication/slack-bot-builder"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "使用Bolt框架构建生产级Slack应用与机器人。"
-  },
-  {
-    "id": "pocketbase-api-rules-skill",
-    "name": "PocketBase API Rules",
-    "type": "skill",
-    "description": "API rules and filter expressions for PocketBase access control. Use when setting permissions, writing filter expressions, configuring who can access what, or debugging 403/404 responses. Covers all 5 rule types, filter syntax, operators, request/collection macros, and field modifiers.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/pocketbase/pb-api-rules",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "pocketbase",
-      "access-control",
-      "authorization",
-      "api",
-      "filters"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/pocketbase/pb-api-rules"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于配置PocketBase接口权限、过滤规则并排查访问错误。"
-  },
-  {
-    "id": "pocketbase-collections-skill",
-    "name": "PocketBase Collections",
-    "type": "skill",
-    "description": "Collection and schema design for PocketBase. Use when creating collections, designing schemas, adding fields, setting up relations, or choosing between base/auth/view collection types. Prevents wrong field types, documents zero-default behavior, and covers relation cascading.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/pocketbase/pb-collections",
-    "stars": 23575,
-    "category": "database",
-    "tags": [
-      "pocketbase",
-      "schema",
-      "database",
-      "data-modeling",
-      "relations"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/pocketbase/pb-collections"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "设计PocketBase集合、字段类型、关系与模式结构。"
-  },
-  {
-    "id": "pocketbase-deploy-skill",
-    "name": "PocketBase Deploy",
-    "type": "skill",
-    "description": "Production deployment for PocketBase. Use when deploying PocketBase to a server, setting up Docker, configuring systemd, reverse proxy (nginx/Caddy), TLS, SMTP, backups, S3 storage, rate limiting, or hardening for production. Provides ready-to-use configs.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/pocketbase/pb-deploy",
-    "stars": 23575,
-    "category": "devops",
-    "tags": [
-      "pocketbase",
-      "docker",
-      "nginx",
-      "caddy",
-      "tls",
-      "smtp",
-      "s3",
-      "deployment"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/pocketbase/pb-deploy"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于PocketBase生产部署、代理、备份与安全加固配置。"
-  },
-  {
-    "id": "pocketbase-hooks-skill",
-    "name": "PocketBase Hooks",
-    "type": "skill",
-    "description": "Server-side JavaScript hooks for PocketBase (pb_hooks). Use when writing custom routes, event hooks, cron jobs, sending emails, making HTTP requests, querying the database, or extending PocketBase with server-side logic. Covers the goja ES5 runtime, routing, middleware, all event hooks, DB queries, record operations, and global APIs.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/pocketbase/pb-hooks",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "pocketbase",
-      "javascript",
-      "hooks",
-      "routes",
-      "middleware",
-      "cron",
-      "database"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/pocketbase/pb-hooks"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "编写PocketBase服务端钩子、路由、定时任务与扩展逻辑。"
-  },
-  {
-    "id": "pocketbase-migrations-skill",
-    "name": "PocketBase Migrations",
-    "type": "skill",
-    "description": "Schema migrations and versioning for PocketBase. Use when creating migrations, managing schema versions, syncing collections between environments, using automigrate, or creating collections programmatically. Covers migrate commands, migration file format, snapshot imports, and the _migrations tracking table.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/pocketbase/pb-migrations",
-    "stars": 23575,
-    "category": "database",
-    "tags": [
-      "pocketbase",
-      "migrations",
-      "schema",
-      "database",
-      "versioning"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/pocketbase/pb-migrations"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于PocketBase的模式迁移与版本管理。"
-  },
-  {
-    "id": "railway-deployment-skill",
-    "name": "railway-deployment",
-    "type": "skill",
-    "description": "Manage Railway deployments - view logs, redeploy, restart, or remove deployments. Use for deployment lifecycle (remove, stop, redeploy, restart), deployment visibility (list, status, history), and troubleshooting (logs, errors, failures, crashes). NOT for deleting services - use railway-environment skill with isDeleted for that.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/railway/deployment",
-    "stars": 23575,
-    "category": "devops",
-    "tags": [
-      "railway",
-      "deployment",
-      "logs",
-      "troubleshooting",
-      "redeploy",
-      "operations"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/railway/deployment"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "管理Railway部署、日志与故障排查。"
-  },
-  {
-    "id": "astropy-skill",
-    "name": "astropy",
-    "type": "skill",
-    "description": "Comprehensive Python library for astronomy and astrophysics. This skill should be used when working with astronomical data including celestial coordinates, physical units, FITS files, cosmological calculations, time systems, tables, world coordinate systems (WCS), and astronomical data analysis. Use when tasks involve coordinate transformations, unit conversions, FITS file manipulation, cosmological distance calculations, time scale conversions, or astronomical data processing.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/astropy",
-    "stars": 23575,
-    "category": "tooling",
-    "tags": [
-      "python",
-      "astropy",
-      "astronomy",
-      "fits",
-      "wcs",
-      "scientific-computing"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/astropy"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于天文学与天体物理数据处理的Python库。"
-  },
-  {
-    "id": "biopython-skill",
-    "name": "biopython",
-    "type": "skill",
-    "description": "Primary Python toolkit for molecular biology. Preferred for Python-based PubMed/NCBI queries (Bio.Entrez), sequence manipulation, file parsing (FASTA, GenBank, FASTQ, PDB), advanced BLAST workflows, structures, phylogenetics. For quick BLAST, use gget. For direct REST API, use pubmed-database.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/biopython",
-    "stars": 23575,
-    "category": "tooling",
-    "tags": [
-      "python",
-      "biopython",
-      "bioinformatics",
-      "ncbi",
-      "blast",
-      "sequence-analysis"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/biopython"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于分子生物学与序列分析的Python工具包。"
-  },
-  {
-    "id": "dask-skill",
-    "name": "dask",
-    "type": "skill",
-    "description": "Parallel/distributed computing. Scale pandas/NumPy beyond memory, parallel DataFrames/Arrays, multi-file processing, task graphs, for larger-than-RAM datasets and parallel workflows.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/dask",
-    "stars": 23575,
-    "category": "tooling",
-    "tags": [
-      "python",
-      "dask",
-      "parallel-computing",
-      "distributed-computing",
-      "data-processing"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/dask"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于并行和分布式处理大规模数据的Python框架。"
-  },
-  {
-    "id": "datamol-skill",
-    "name": "datamol",
-    "type": "skill",
-    "description": "Pythonic wrapper around RDKit with simplified interface and sensible defaults. Preferred for standard drug discovery: SMILES parsing, standardization, descriptors, fingerprints, clustering, 3D conformers, parallel processing. Returns native rdkit.Chem.Mol objects. For advanced control or custom parameters, use rdkit directly.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/datamol",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "python",
-      "rdkit",
-      "cheminformatics",
-      "drug-discovery",
-      "molecular-descriptors"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/datamol"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "基于RDKit的Python化药物发现分子工具包。"
-  },
-  {
-    "id": "deepchem-skill",
-    "name": "deepchem",
-    "type": "skill",
-    "description": "Molecular machine learning toolkit. Property prediction (ADMET, toxicity), GNNs (GCN, MPNN), MoleculeNet benchmarks, pretrained models, featurization, for drug discovery ML.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/deepchem",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "python",
-      "deepchem",
-      "molecular-ml",
-      "gnn",
-      "drug-discovery"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/deepchem"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于药物发现的分子机器学习工具包。"
-  },
-  {
-    "id": "dnanexus-integration-skill",
-    "name": "dnanexus-integration",
-    "type": "skill",
-    "description": "DNAnexus cloud genomics platform. Build apps/applets, manage data (upload/download), dxpy Python SDK, run workflows, FASTQ/BAM/VCF, for genomics pipeline development and execution.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/dnanexus-integration",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "python",
-      "dnanexus",
-      "dxpy",
-      "genomics",
-      "workflow-automation"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/dnanexus-integration"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "通过dxpy构建和运行DNAnexus基因组工作流。"
-  },
-  {
-    "id": "fluidsim-skill",
-    "name": "fluidsim",
-    "type": "skill",
-    "description": "Framework for computational fluid dynamics simulations using Python. Use when running fluid dynamics simulations including Navier-Stokes equations (2D/3D), shallow water equations, stratified flows, or when analyzing turbulence, vortex dynamics, or geophysical flows. Provides pseudospectral methods with FFT, HPC support, and comprehensive output analysis.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/fluidsim",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "python",
-      "cfd",
-      "navier-stokes",
-      "simulation",
-      "scientific-computing"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/fluidsim"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于流体动力学与湍流模拟的Python框架。"
-  },
-  {
-    "id": "geopandas-skill",
-    "name": "geopandas",
-    "type": "skill",
-    "description": "Python library for working with geospatial vector data including shapefiles, GeoJSON, and GeoPackage files. Use when working with geographic data for spatial analysis, geometric operations, coordinate transformations, spatial joins, overlay operations, choropleth mapping, or any task involving reading/writing/analyzing vector geographic data. Supports PostGIS databases, interactive maps, and integration with matplotlib/folium/cartopy. Use for tasks like buffer analysis, spatial joins between datasets, dissolving boundaries, clipping data, calculating areas/distances, reprojecting coordinate systems, creating maps, or converting between spatial file formats.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/geopandas",
-    "stars": 23575,
-    "category": "database",
-    "tags": [
-      "python",
-      "geopandas",
-      "geospatial",
-      "gis",
-      "pandas"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/geopandas"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "使用GeoPandas处理地理空间矢量数据分析任务"
-  },
-  {
-    "id": "latchbio-integration-skill",
-    "name": "latchbio-integration",
-    "type": "skill",
-    "description": "Latch platform for bioinformatics workflows. Build pipelines with Latch SDK, @workflow/@task decorators, deploy serverless workflows, LatchFile/LatchDir, Nextflow/Snakemake integration.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/latchbio-integration",
-    "stars": 23575,
-    "category": "tooling",
-    "tags": [
-      "python",
-      "bioinformatics",
-      "workflows",
-      "latch",
-      "nextflow",
-      "snakemake"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/latchbio-integration"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于构建和部署生信工作流及任务。"
-  },
-  {
-    "id": "matplotlib-skill",
-    "name": "matplotlib",
-    "type": "skill",
-    "description": "Foundational plotting library. Create line plots, scatter, bar, histograms, heatmaps, 3D, subplots, export PNG/PDF/SVG, for scientific visualization and publication figures.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/matplotlib",
-    "stars": 23575,
-    "category": "tooling",
-    "tags": [
-      "python",
-      "matplotlib",
-      "visualization",
-      "plotting",
-      "scientific-computing"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/matplotlib"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "Python基础绘图库，用于科研可视化。"
-  },
-  {
-    "id": "modal-skill",
-    "name": "modal",
-    "type": "skill",
-    "description": "Run Python code in the cloud with serverless containers, GPUs, and autoscaling. Use when deploying ML models, running batch processing jobs, scheduling compute-intensive tasks, or serving APIs that require GPU acceleration or dynamic scaling.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/modal",
-    "stars": 23575,
-    "category": "devops",
-    "tags": [
-      "python",
-      "serverless",
-      "containers",
-      "gpu",
-      "deployment",
-      "autoscaling"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/modal"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "在云端以无服务器方式运行Python与GPU任务。"
-  },
-  {
-    "id": "networkx-skill",
-    "name": "networkx",
-    "type": "skill",
-    "description": "Comprehensive toolkit for creating, analyzing, and visualizing complex networks and graphs in Python. Use when working with network/graph data structures, analyzing relationships between entities, computing graph algorithms (shortest paths, centrality, clustering), detecting communities, generating synthetic networks, or visualizing network topologies. Applicable to social networks, biological networks, transportation systems, citation networks, and any domain involving pairwise relationships.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/networkx",
-    "stars": 23575,
-    "category": "tooling",
-    "tags": [
-      "python",
-      "networkx",
-      "graphs",
-      "algorithms",
-      "data-analysis"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/networkx"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "Python图网络分析与图算法工具包。"
-  },
-  {
-    "id": "omero-integration-skill",
-    "name": "omero-integration",
-    "type": "skill",
-    "description": "Microscopy data management platform. Access images via Python, retrieve datasets, analyze pixels, manage ROIs/annotations, batch processing, for high-content screening and microscopy workflows.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/omero-integration",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "python",
-      "api",
-      "imaging",
-      "microscopy",
-      "data-processing"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/omero-integration"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "显微镜数据管理与图像分析集成平台。"
-  },
-  {
-    "id": "opentrons-integration-skill",
-    "name": "opentrons-integration",
-    "type": "skill",
-    "description": "Lab automation platform for Flex/OT-2 robots. Write Protocol API v2 protocols, liquid handling, hardware modules (heater-shaker, thermocycler), labware management, for automated pipetting workflows.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/opentrons-integration",
-    "stars": 23575,
-    "category": "tooling",
-    "tags": [
-      "python",
-      "robotics",
-      "automation",
-      "lab-automation",
-      "protocol-api"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/opentrons-integration"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于Opentrons实验机器人自动化协议开发。"
-  },
-  {
-    "id": "pennylane-skill",
-    "name": "pennylane",
-    "type": "skill",
-    "description": "Cross-platform Python library for quantum computing, quantum machine learning, and quantum chemistry. Enables building and training quantum circuits with automatic differentiation, seamless integration with PyTorch/JAX/TensorFlow, and device-independent execution across simulators and quantum hardware (IBM, Amazon Braket, Google, Rigetti, IonQ, etc.). Use when working with quantum circuits, variational quantum algorithms (VQE, QAOA), quantum neural networks, hybrid quantum-classical models, molecular simulations, quantum chemistry calculations, or any quantum computing tasks requiring gradient-based optimization, hardware-agnostic programming, or quantum machine learning workflows.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/pennylane",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "python",
-      "quantum-computing",
-      "machine-learning",
-      "pytorch",
-      "jax",
-      "tensorflow"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/pennylane"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于量子计算与量子机器学习的Python库。"
-  },
-  {
-    "id": "plotly-skill",
-    "name": "plotly",
-    "type": "skill",
-    "description": "Interactive scientific and statistical data visualization library for Python. Use when creating charts, plots, or visualizations including scatter plots, line charts, bar charts, heatmaps, 3D plots, geographic maps, statistical distributions, financial charts, and dashboards. Supports both quick visualizations (Plotly Express) and fine-grained customization (graph objects). Outputs interactive HTML or static images (PNG, PDF, SVG).",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/plotly",
-    "stars": 23575,
-    "category": "frontend",
-    "tags": [
-      "python",
-      "plotly",
-      "visualization",
-      "dashboard",
-      "charts"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/plotly"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于交互式科学与统计可视化的Python库。"
-  },
-  {
-    "id": "polars-skill",
-    "name": "polars",
-    "type": "skill",
-    "description": "Fast DataFrame library (Apache Arrow). Select, filter, group_by, joins, lazy evaluation, CSV/Parquet I/O, expression API, for high-performance data analysis workflows.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/polars",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "python",
-      "dataframe",
-      "apache-arrow",
-      "data-processing",
-      "parquet",
-      "analytics"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/polars"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "基于Apache Arrow的高性能DataFrame库。"
-  },
-  {
-    "id": "rdkit-skill",
-    "name": "rdkit",
-    "type": "skill",
-    "description": "Cheminformatics toolkit for fine-grained molecular control. SMILES/SDF parsing, descriptors (MW, LogP, TPSA), fingerprints, substructure search, 2D/3D generation, similarity, reactions. For standard workflows with simpler interface, use datamol (wrapper around RDKit). Use rdkit for advanced control, custom sanitization, specialized algorithms.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/rdkit",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "python",
-      "rdkit",
-      "cheminformatics",
-      "molecular-modeling",
-      "smiles",
-      "sdf"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/rdkit"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于分子解析、指纹、相似性与反应的化学信息学工具包。"
-  },
-  {
-    "id": "scanpy-skill",
-    "name": "scanpy",
-    "type": "skill",
-    "description": "Single-cell RNA-seq analysis. Load .h5ad/10X data, QC, normalization, PCA/UMAP/t-SNE, Leiden clustering, marker genes, cell type annotation, trajectory, for scRNA-seq analysis.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/scanpy",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "python",
-      "scanpy",
-      "single-cell",
-      "scrna-seq",
-      "bioinformatics",
-      "anndata"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/scanpy"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于单细胞RNA测序数据分析与聚类可视化的工具。"
-  },
-  {
-    "id": "scikit-bio-skill",
-    "name": "scikit-bio",
-    "type": "skill",
-    "description": "Biological data toolkit. Sequence analysis, alignments, phylogenetic trees, diversity metrics (alpha/beta, UniFrac), ordination (PCoA), PERMANOVA, FASTA/Newick I/O, for microbiome analysis.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/scikit-bio",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "python",
-      "scikit-bio",
-      "bioinformatics",
-      "microbiome",
-      "phylogenetics",
-      "sequence-analysis"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/scikit-bio"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于序列、系统发育与微生物组分析的生物信息学库。"
-  },
-  {
-    "id": "scikit-learn-skill",
-    "name": "scikit-learn",
-    "type": "skill",
-    "description": "Machine learning in Python with scikit-learn. Use when working with supervised learning (classification, regression), unsupervised learning (clustering, dimensionality reduction), model evaluation, hyperparameter tuning, preprocessing, or building ML pipelines. Provides comprehensive reference documentation for algorithms, preprocessing techniques, pipelines, and best practices.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/scikit-learn",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "python",
-      "scikit-learn",
-      "machine-learning",
-      "classification",
-      "regression",
-      "clustering"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/scikit-learn"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "Python机器学习库，支持分类、回归、聚类与建模流程。"
-  },
-  {
-    "id": "scikit-survival-skill",
-    "name": "scikit-survival",
-    "type": "skill",
-    "description": "Comprehensive toolkit for survival analysis and time-to-event modeling in Python using scikit-survival. Use this skill when working with censored survival data, performing time-to-event analysis, fitting Cox models, Random Survival Forests, Gradient Boosting models, or Survival SVMs, evaluating survival predictions with concordance index or Brier score, handling competing risks, or implementing any survival analysis workflow with the scikit-survival library.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/scikit-survival",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "python",
-      "scikit-survival",
-      "survival-analysis",
-      "cox-model",
-      "time-to-event",
-      "machine-learning"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/scikit-survival"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "用于删失数据与生存分析建模的Python工具包。"
-  },
-  {
-    "id": "seaborn-skill",
-    "name": "seaborn",
-    "type": "skill",
-    "description": "Statistical visualization. Scatter, box, violin, heatmaps, pair plots, regression, correlation matrices, KDE, faceted plots, for exploratory analysis and publication figures.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/seaborn",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "python",
-      "seaborn",
-      "visualization",
-      "data-analysis",
-      "statistics"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/seaborn"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "统计可视化库，适合探索分析与论文图表。"
-  },
-  {
-    "id": "simpy-skill",
-    "name": "simpy",
-    "type": "skill",
-    "description": "Process-based discrete-event simulation framework in Python. Use this skill when building simulations of systems with processes, queues, resources, and time-based events such as manufacturing systems, service operations, network traffic, logistics, or any system where entities interact with shared resources over time.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/simpy",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "python",
-      "simpy",
-      "simulation",
-      "discrete-event",
-      "modeling"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/simpy"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "Python离散事件仿真框架，适合队列与资源系统建模。"
-  },
-  {
-    "id": "statsmodels-skill",
-    "name": "statsmodels",
-    "type": "skill",
-    "description": "Statistical modeling toolkit. OLS, GLM, logistic, ARIMA, time series, hypothesis tests, diagnostics, AIC/BIC, for rigorous statistical inference and econometric analysis.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/statsmodels",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "python",
-      "statsmodels",
-      "statistics",
-      "time-series",
-      "econometrics"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/statsmodels"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "统计建模库，支持回归、时序与严谨推断分析。"
-  },
-  {
-    "id": "torch-geometric-skill",
-    "name": "torch-geometric",
-    "type": "skill",
-    "description": "Graph Neural Networks (PyG). Node/graph classification, link prediction, GCN, GAT, GraphSAGE, heterogeneous graphs, molecular property prediction, for geometric deep learning.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/torch_geometric",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "python",
-      "pytorch",
-      "torch-geometric",
-      "gnn",
-      "graph-learning"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/torch_geometric"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "图神经网络库，支持节点分类、链路预测等任务。"
-  },
-  {
-    "id": "torchdrug-skill",
-    "name": "torchdrug",
-    "type": "skill",
-    "description": "Graph-based drug discovery toolkit. Molecular property prediction (ADMET), protein modeling, knowledge graph reasoning, molecular generation, retrosynthesis, GNNs (GIN, GAT, SchNet), 40+ datasets, for PyTorch-based ML on molecules, proteins, and biomedical graphs.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/torchdrug",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "python",
-      "pytorch",
-      "drug-discovery",
-      "gnn",
-      "bioinformatics"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/torchdrug"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "面向药物发现的图学习工具包，支持分子与蛋白建模。"
-  },
-  {
-    "id": "transformers-skill",
-    "name": "transformers",
-    "type": "skill",
-    "description": "This skill should be used when working with pre-trained transformer models for natural language processing, computer vision, audio, or multimodal tasks. Use for text generation, classification, question answering, translation, summarization, image classification, object detection, speech recognition, and fine-tuning models on custom datasets.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/transformers",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "python",
-      "transformers",
-      "huggingface",
-      "nlp",
-      "deep-learning"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/transformers"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "预训练Transformer模型库，适用于文本、视觉与音频任务。"
-  },
-  {
-    "id": "umap-learn-skill",
-    "name": "umap-learn",
-    "type": "skill",
-    "description": "UMAP dimensionality reduction. Fast nonlinear manifold learning for 2D/3D visualization, clustering preprocessing (HDBSCAN), supervised/parametric UMAP, for high-dimensional data.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/umap-learn",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "python",
-      "umap",
-      "dimensionality-reduction",
-      "visualization",
-      "clustering"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/umap-learn"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "UMAP降维工具，适合高维数据可视化与聚类预处理。"
-  },
-  {
-    "id": "zarr-python-skill",
-    "name": "zarr-python",
-    "type": "skill",
-    "description": "Chunked N-D arrays for cloud storage. Compressed arrays, parallel I/O, S3/GCS integration, NumPy/Dask/Xarray compatible, for large-scale scientific computing pipelines.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/zarr-python",
-    "stars": 23575,
-    "category": "database",
-    "tags": [
-      "python",
-      "zarr",
-      "numpy",
-      "dask",
-      "xarray",
-      "cloud-storage",
-      "scientific-computing"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/scientific/zarr-python"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "提供适合云存储的分块压缩多维数组处理能力。"
-  },
-  {
-    "id": "api-security-best-practices-skill",
-    "name": "api-security-best-practices",
-    "type": "skill",
-    "description": "Implement secure API design patterns including authentication, authorization, input validation, rate limiting, and protection against common API vulnerabilities",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/security/api-security-best-practices",
-    "stars": 23575,
-    "category": "security",
-    "tags": [
-      "api",
-      "security",
-      "authentication",
-      "authorization",
-      "input-validation",
-      "rate-limiting"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/security/api-security-best-practices"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "实现安全API设计，包括鉴权、校验与限流。"
-  },
-  {
-    "id": "file-uploads-skill",
-    "name": "file-uploads",
-    "type": "skill",
-    "description": "Expert at handling file uploads and cloud storage. Covers S3, Cloudflare R2, presigned URLs, multipart uploads, and image optimization. Knows how to handle large files without blocking. Use when: file upload, S3, R2, presigned URL, multipart.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/security/file-uploads",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "file-upload",
-      "s3",
-      "cloudflare-r2",
-      "presigned-urls",
-      "multipart-upload",
-      "image-optimization",
-      "backend"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/security/file-uploads"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "处理文件上传、云存储及大文件传输优化。"
-  },
-  {
-    "id": "find-bugs-skill",
-    "name": "find-bugs",
-    "type": "skill",
-    "description": "Find bugs, security vulnerabilities, and code quality issues in local branch changes. Use when asked to review changes, find bugs, security review, or audit code on the current branch.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/sentry/find-bugs",
-    "stars": 23575,
-    "category": "testing",
-    "tags": [
-      "bug-finding",
-      "code-review",
-      "security",
-      "static-analysis",
-      "quality"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/sentry/find-bugs"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "审查分支改动以发现缺陷和安全问题。"
-  },
-  {
-    "id": "browser-extension-builder-skill",
-    "name": "browser-extension-builder",
-    "type": "skill",
-    "description": "Expert in building browser extensions that solve real problems - Chrome, Firefox, and cross-browser extensions. Covers extension architecture, manifest v3, content scripts, popup UIs, monetization strategies, and Chrome Web Store publishing. Use when: browser extension, chrome extension, firefox addon, extension, manifest v3.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/utilities/browser-extension-builder",
-    "stars": 23575,
-    "category": "frontend",
-    "tags": [
-      "browser-extension",
-      "chrome-extension",
-      "firefox",
-      "manifest-v3",
-      "content-scripts",
-      "javascript"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/utilities/browser-extension-builder"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "讲解跨浏览器扩展开发、架构与发布流程。"
-  },
-  {
-    "id": "playwright-skill-skill",
-    "name": "playwright-skill",
-    "type": "skill",
-    "description": "Complete browser automation with Playwright. Auto-detects dev servers, writes clean test scripts to /tmp. Test pages, fill forms, take screenshots, check responsive design, validate UX, test login flows, check links, automate any browser task. Use when user wants to test websites, automate browser interactions, validate web functionality, or perform any browser-based testing.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/utilities/playwright-skill",
-    "stars": 23575,
-    "category": "testing",
-    "tags": [
-      "playwright",
-      "browser-automation",
-      "e2e",
-      "testing",
-      "ui-testing"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/utilities/playwright-skill"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "使用 Playwright 进行浏览器自动化与测试。"
-  },
-  {
-    "id": "fastapi-endpoint-skill",
-    "name": "fastapi-endpoint",
-    "type": "skill",
-    "description": "Plan and build production-ready FastAPI endpoints with async SQLAlchemy, Pydantic v2 models, dependency injection for auth, and pytest tests. Uses interview-driven planning to clarify data models, authentication method, pagination strategy, and caching before writing any code.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/web-development/fastapi-endpoint",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "fastapi",
-      "python",
-      "sqlalchemy",
-      "pydantic",
-      "pytest",
-      "async",
-      "api",
-      "authentication"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/web-development/fastapi-endpoint"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "规划并构建生产级FastAPI接口与测试。"
-  },
-  {
-    "id": "react-best-practices-skill",
-    "name": "react-best-practices",
-    "type": "skill",
-    "description": "Comprehensive React and Next.js performance optimization guide with 40+ rules for eliminating waterfalls, optimizing bundles, and improving rendering. Use when optimizing React apps, reviewing performance, or refactoring components.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/web-development/react-best-practices",
-    "stars": 23575,
-    "category": "frontend",
-    "tags": [
-      "react",
-      "nextjs",
-      "performance",
-      "optimization",
-      "bundle-size",
-      "rendering",
-      "server-components"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/web-development/react-best-practices"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "提供React与Next.js性能优化最佳实践。"
-  },
-  {
-    "id": "shopify-apps-skill",
-    "name": "shopify-apps",
-    "type": "skill",
-    "description": "Expert patterns for Shopify app development including Remix/React Router apps, embedded apps with App Bridge, webhook handling, GraphQL Admin API, Polaris components, billing, and app extensions. Use when: shopify app, shopify, embedded app, polaris, app bridge.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/web-development/shopify-apps",
-    "stars": 23575,
-    "category": "fullstack",
-    "tags": [
-      "shopify",
-      "remix",
-      "react-router",
-      "app-bridge",
-      "graphql",
-      "polaris",
-      "webhooks",
-      "billing"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/web-development/shopify-apps"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "提供Shopify应用开发的完整实践模式。"
-  },
-  {
-    "id": "upstash-qstash-skill",
-    "name": "upstash-qstash",
-    "type": "skill",
-    "description": "Upstash QStash expert for serverless message queues, scheduled jobs, and reliable HTTP-based task delivery without managing infrastructure. Use when: qstash, upstash queue, serverless cron, scheduled http, message queue serverless.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/web-development/upstash-qstash",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "upstash",
-      "qstash",
-      "serverless",
-      "message-queue",
-      "cron",
-      "http"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/web-development/upstash-qstash"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "基于Upstash QStash实现无服务器队列与定时任务。"
-  },
-  {
-    "id": "web-performance-optimization-skill",
-    "name": "web-performance-optimization",
-    "type": "skill",
-    "description": "Optimize website and web application performance including loading speed, Core Web Vitals, bundle size, caching strategies, and runtime performance",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/web-development/web-performance-optimization",
-    "stars": 23575,
-    "category": "frontend",
-    "tags": [
-      "performance",
-      "core-web-vitals",
-      "frontend",
-      "caching",
-      "bundling"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/web-development/web-performance-optimization"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "优化网站性能，包括加载速度、缓存与运行时表现。"
-  },
-  {
-    "id": "inngest-skill",
-    "name": "inngest",
-    "type": "skill",
-    "description": "Inngest expert for serverless-first background jobs, event-driven workflows, and durable execution without managing queues or workers. Use when: inngest, serverless background job, event-driven workflow, step function, durable execution.",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/workflow-automation/inngest",
-    "stars": 23575,
-    "category": "backend",
-    "tags": [
-      "inngest",
-      "serverless",
-      "background-jobs",
-      "event-driven",
-      "durable-execution"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/workflow-automation/inngest"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "使用Inngest实现事件驱动的后台任务与持久执行。"
-  },
-  {
-    "id": "ckmui-styling-skill",
-    "name": "ckm:ui-styling",
-    "type": "skill",
-    "description": "Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating responsive layouts, adding accessible components (dialogs, dropdowns, forms, tables), customizing themes and colors, implementing dark mode, generating visual designs and posters, or establishing consistent styling patterns across applications.",
-    "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/main/.claude/skills/ui-styling",
-    "stars": 50784,
-    "category": "frontend",
-    "tags": [
-      "tailwind",
-      "css",
-      "shadcn-ui",
-      "radix-ui",
-      "accessibility",
-      "frontend"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
-      "branch": "main",
-      "path": ".claude/skills/ui-styling"
-    },
-    "source": "nextlevelbuilder/ui-ux-pro-max-skill",
-    "last_synced": "2026-03-26",
-    "description_zh": "用shadcn/ui与Tailwind构建美观无障碍界面。"
-  },
-  {
-    "id": "huggingface-gradio-skill",
-    "name": "huggingface-gradio",
-    "type": "skill",
-    "description": "Build Gradio web UIs and demos in Python. Use when creating or editing Gradio apps, components, event listeners, layouts, or chatbots.",
-    "source_url": "https://github.com/huggingface/skills/tree/main/skills/huggingface-gradio",
-    "stars": 9901,
-    "category": "frontend",
-    "tags": [
-      "python",
-      "gradio",
-      "ui",
-      "chatbot",
-      "huggingface"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "huggingface/skills",
-      "branch": "main",
-      "path": "skills/huggingface-gradio"
-    },
-    "source": "huggingface/skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "用Python构建Gradio网页界面与演示应用。"
-  },
-  {
-    "id": "transformers-js-skill",
-    "name": "transformers-js",
-    "type": "skill",
-    "description": "Use Transformers.js to run state-of-the-art machine learning models directly in JavaScript/TypeScript. Supports NLP (text classification, translation, summarization), computer vision (image classification, object detection), audio (speech recognition, audio classification), and multimodal tasks. Works in Node.js and browsers (with WebGPU/WASM) using pre-trained models from Hugging Face Hub.",
-    "source_url": "https://github.com/huggingface/skills/tree/main/skills/transformers-js",
-    "stars": 9901,
-    "category": "ai-ml",
-    "tags": [
-      "javascript",
-      "typescript",
-      "transformers.js",
-      "nodejs",
-      "browser",
-      "nlp",
-      "computer-vision",
-      "audio"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "huggingface/skills",
-      "branch": "main",
-      "path": "skills/transformers-js"
-    },
-    "source": "huggingface/skills",
-    "last_synced": "2026-03-26",
-    "description_zh": "在JavaScript/TypeScript中直接运行机器学习模型。"
-  },
-  {
-    "id": "agent-tool-builder-skill",
-    "name": "agent-tool-builder",
-    "type": "skill",
-    "description": "Tools are how AI agents interact with the world. A well-designed tool is the difference between an agent that works and one that hallucinates, fails silently, or costs 10x more tokens than necessary.  This skill covers tool design from schema to error handling. JSON Schema best practices, description writing that actually helps the LLM, validation, and the emerging MCP standard that's becoming the lingua franca for AI tools.  Key insight: Tool descriptions are more important than tool implementa",
-    "source_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/agent-tool-builder",
-    "stars": 23575,
-    "category": "ai-ml",
-    "tags": [
-      "ai-agents",
-      "tool-calling",
-      "json-schema",
-      "api-design",
-      "error-handling"
-    ],
-    "tech_stack": [],
-    "install": {
-      "method": "git_clone",
-      "repo": "davila7/claude-code-templates",
-      "branch": "main",
-      "path": "cli-tool/components/skills/ai-research/agent-tool-builder"
-    },
-    "source": "davila7/claude-code-templates",
-    "last_synced": "2026-03-26",
-    "description_zh": "讲解智能体工具设计、模式定义与错误处理。"
+    "tags": [],
+    "tech_stack": [],
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/skillcreatorai/Ai-Agent-Skills.git",
+      "files": [
+        "skills/best-practices/"
+      ]
+    },
+    "source": "ai-agent-skills",
+    "last_synced": "2026-03-27",
+    "health": {
+      "score": 20,
+      "signals": {
+        "popularity": 0,
+        "freshness": 0,
+        "quality": 30,
+        "installability": 60
+      },
+      "freshness_label": "abandoned",
+      "last_commit": null
+    }
   }
 ]

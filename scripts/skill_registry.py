@@ -13,11 +13,20 @@ from urllib.request import urlopen, Request
 from urllib.error import HTTPError, URLError
 
 import sys
+
 sys.path.insert(0, os.path.dirname(__file__))
 from utils import (
-    categorize, extract_tags, to_kebab_case, logger, github_api,
-    get_repo_info, list_repo_files, fetch_raw_content,
-    SPAM_PATTERNS, NON_CODING_CATEGORIES, SKILL_CODING_KEYWORDS,
+    categorize,
+    extract_tags,
+    to_kebab_case,
+    logger,
+    github_api,
+    get_repo_info,
+    list_repo_files,
+    fetch_raw_content,
+    SPAM_PATTERNS,
+    NON_CODING_CATEGORIES,
+    SKILL_CODING_KEYWORDS,
 )
 
 SCRIPTS_DIR = os.path.dirname(__file__)
@@ -96,7 +105,7 @@ def parse_skill_content(content: str, skill_dir: str) -> dict | None:
         name_m = re.search(r'name:\s*"?([^"\n]+)"?', frontmatter)
         desc_m = re.search(r'description:\s*[>|]?\s*\n?\s*"?([^"\n]+)"?', frontmatter)
         cat_m = re.search(r'category:\s*"?([^"\n]+)"?', frontmatter)
-        tags_m = re.search(r'tags:\s*\[([^\]]*)\]', frontmatter)
+        tags_m = re.search(r"tags:\s*\[([^\]]*)\]", frontmatter)
 
         if name_m:
             name = name_m.group(1).strip()
@@ -105,7 +114,11 @@ def parse_skill_content(content: str, skill_dir: str) -> dict | None:
         if cat_m:
             category = cat_m.group(1).strip()
         if tags_m:
-            tags = [t.strip().strip('"').strip("'") for t in tags_m.group(1).split(",") if t.strip()]
+            tags = [
+                t.strip().strip('"').strip("'")
+                for t in tags_m.group(1).split(",")
+                if t.strip()
+            ]
 
     if not name:
         name = os.path.basename(skill_dir) if skill_dir and skill_dir != "." else ""
@@ -150,7 +163,9 @@ def scan_repo_via_api(repo_slug: str, branch: str) -> list[dict]:
     return entries
 
 
-def hard_filter(candidate: dict, stars: int, tier1_urls: set, tier1_ids: set) -> str | None:
+def hard_filter(
+    candidate: dict, stars: int, tier1_urls: set, tier1_ids: set
+) -> str | None:
     """Apply Phase 1 hard rules. Returns None if pass, or rejection reason."""
     name = candidate["name"].lower()
     desc = candidate["description"].lower()
@@ -180,7 +195,9 @@ def hard_filter(candidate: dict, stars: int, tier1_urls: set, tier1_ids: set) ->
 def has_coding_keyword(candidate: dict) -> bool:
     """Check if candidate matches coding keywords using word boundaries."""
     text = f"{candidate['name']} {candidate['description']}".lower()
-    return any(re.search(r'\b' + re.escape(kw) + r'\b', text) for kw in SKILL_CODING_KEYWORDS)
+    return any(
+        re.search(r"\b" + re.escape(kw) + r"\b", text) for kw in SKILL_CODING_KEYWORDS
+    )
 
 
 def discover_skills(tier1_entries: list) -> list[dict]:
@@ -251,7 +268,9 @@ def discover_skills(tier1_entries: list) -> list[dict]:
 
         for entry in skill_entries:
             skill_id = f"{to_kebab_case(entry['name'])}-skill"
-            source_url = f"https://github.com/{repo_slug}/tree/{branch}/{entry['skill_dir']}"
+            source_url = (
+                f"https://github.com/{repo_slug}/tree/{branch}/{entry['skill_dir']}"
+            )
 
             candidate = {
                 "id": skill_id,
@@ -260,11 +279,16 @@ def discover_skills(tier1_entries: list) -> list[dict]:
                 "description": entry["description"],
                 "source_url": source_url,
                 "stars": stars,
+                "pushed_at": pushed_at,
                 "category": categorize(
-                    entry["name"], entry["description"],
-                    entry["tags"], entry.get("category", "")
+                    entry["name"],
+                    entry["description"],
+                    entry["tags"],
+                    entry.get("category", ""),
                 ),
-                "tags": entry["tags"] if entry["tags"] else extract_tags(entry["name"], entry["description"]),
+                "tags": entry["tags"]
+                if entry["tags"]
+                else extract_tags(entry["name"], entry["description"]),
                 "tech_stack": [],
                 "install": {
                     "method": "git_clone",
@@ -298,4 +322,6 @@ if __name__ == "__main__":
     results = discover_skills([])
     print(f"Discovered {len(results)} candidates")
     for r in results[:5]:
-        print(f"  {r['name']} ({r['source']}) stars={r['stars']} kw={r.get('_keyword_match')}")
+        print(
+            f"  {r['name']} ({r['source']}) stars={r['stars']} kw={r.get('_keyword_match')}"
+        )

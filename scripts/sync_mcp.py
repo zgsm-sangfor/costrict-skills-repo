@@ -10,14 +10,27 @@ from datetime import date
 
 sys.path.insert(0, os.path.dirname(__file__))
 from utils import (
-    fetch_raw_content, get_stars, categorize, extract_tags,
-    to_kebab_case, save_index, logger,
+    GITHUB_TOKEN,
+    fetch_raw_content,
+    get_repo_meta,
+    categorize,
+    extract_tags,
+    to_kebab_case,
+    save_index,
+    logger,
 )
 
 CATALOG_DIR = os.path.join(os.path.dirname(__file__), "..", "catalog", "mcp")
 SEED_PATH = os.path.join(CATALOG_DIR, "mcp_so_seed.json")
 MIN_STARS = 10
 TODAY = date.today().isoformat()
+README_ENRICH_LIMIT = int(
+    os.environ.get("MCP_README_ENRICH_LIMIT", "100" if not GITHUB_TOKEN else "1200")
+)
+
+
+def _load_repo_meta(repo_url: str) -> dict | None:
+    return get_repo_meta(repo_url)
 
 
 def normalize_github_url(url: str) -> str:
@@ -38,6 +51,10 @@ def load_seed() -> list:
     try:
         with open(SEED_PATH, "r") as f:
             data = json.load(f)
+        # Normalize stars: -1 (API failure sentinel) → None
+        for entry in data:
+            if entry.get("stars") is not None and entry["stars"] < 0:
+                entry["stars"] = None
         logger.info(f"Loaded {len(data)} entries from mcp.so seed")
         return data
     except (json.JSONDecodeError, IOError) as e:
@@ -81,29 +98,34 @@ def parse_awesome_mcp_servers_wong2() -> list:
         if "github.com" not in url:
             continue
 
-        stars = get_stars(url)
+        meta = _load_repo_meta(url)
+        stars = meta["stars"] if meta else None
+        pushed_at = meta["pushed_at"] if meta else None
         if stars == 0:
-            stars = -1
-        if stars > 0 and stars < MIN_STARS:
+            stars = None
+        if stars is not None and stars < MIN_STARS:
             continue
 
         tags = extract_tags(name, description)
         category = categorize(name, description, tags, current_category)
 
-        entries.append({
-            "id": to_kebab_case(name),
-            "name": name,
-            "type": "mcp",
-            "description": description,
-            "source_url": url,
-            "stars": stars,
-            "category": category,
-            "tags": tags,
-            "tech_stack": [],
-            "install": {"method": "manual"},
-            "source": "awesome-mcp-servers",
-            "last_synced": TODAY,
-        })
+        entries.append(
+            {
+                "id": to_kebab_case(name),
+                "name": name,
+                "type": "mcp",
+                "description": description,
+                "source_url": url,
+                "stars": stars,
+                "pushed_at": pushed_at,
+                "category": category,
+                "tags": tags,
+                "tech_stack": [],
+                "install": {"method": "manual"},
+                "source": "awesome-mcp-servers",
+                "last_synced": TODAY,
+            }
+        )
 
     logger.info(f"Parsed {len(entries)} MCP entries from wong2/awesome-mcp-servers")
     return entries
@@ -130,29 +152,34 @@ def parse_awesome_mcp_zh() -> list:
         if "github.com" not in url:
             continue
 
-        stars = get_stars(url)
+        meta = _load_repo_meta(url)
+        stars = meta["stars"] if meta else None
+        pushed_at = meta["pushed_at"] if meta else None
         if stars == 0:
-            stars = -1
-        if stars > 0 and stars < MIN_STARS:
+            stars = None
+        if stars is not None and stars < MIN_STARS:
             continue
 
         tags = extract_tags(name, description)
         category = categorize(name, description, tags)
 
-        entries.append({
-            "id": to_kebab_case(name),
-            "name": name,
-            "type": "mcp",
-            "description": description,
-            "source_url": url,
-            "stars": stars,
-            "category": category,
-            "tags": tags,
-            "tech_stack": [],
-            "install": {"method": "manual"},
-            "source": "awesome-mcp-zh",
-            "last_synced": TODAY,
-        })
+        entries.append(
+            {
+                "id": to_kebab_case(name),
+                "name": name,
+                "type": "mcp",
+                "description": description,
+                "source_url": url,
+                "stars": stars,
+                "pushed_at": pushed_at,
+                "category": category,
+                "tags": tags,
+                "tech_stack": [],
+                "install": {"method": "manual"},
+                "source": "awesome-mcp-zh",
+                "last_synced": TODAY,
+            }
+        )
 
     logger.info(f"Parsed {len(entries)} MCP entries from Awesome-MCP-ZH")
     return entries
@@ -167,13 +194,19 @@ def detect_placeholders(config: dict) -> tuple[str, dict]:
 
     for arg in args:
         if isinstance(arg, str):
-            matches = re.findall(r'<([A-Za-z][A-Za-z0-9_-]+)>', arg)
+            matches = re.findall(r"<([A-Za-z][A-Za-z0-9_-]+)>", arg)
             for m in matches:
-                hints[m] = f"Replace with actual {m.lower().replace('_', ' ').replace('-', ' ')}"
+                hints[m] = (
+                    f"Replace with actual {m.lower().replace('_', ' ').replace('-', ' ')}"
+                )
 
     for key, val in env.items():
         if isinstance(val, str):
-            if val == "" or re.match(r'^(YOUR_|your_)', val) or re.match(r'^<.+>$', val):
+            if (
+                val == ""
+                or re.match(r"^(YOUR_|your_)", val)
+                or re.match(r"^<.+>$", val)
+            ):
                 hints[key] = f"Set your {key}"
 
     if hints:
@@ -202,8 +235,7 @@ def extract_readme_mcp_config(github_url: str) -> dict | None:
 
     # Find JSON code blocks containing mcpServers
     json_blocks = re.findall(
-        r'```(?:json|jsonc|js|javascript)\s*\n(.*?)```',
-        readme, re.DOTALL
+        r"```(?:json|jsonc|js|javascript)\s*\n(.*?)```", readme, re.DOTALL
     )
 
     for block in json_blocks:
@@ -211,7 +243,7 @@ def extract_readme_mcp_config(github_url: str) -> dict | None:
             continue
         try:
             # Clean potential comments (// style) for jsonc
-            cleaned = re.sub(r'//.*$', '', block, flags=re.MULTILINE)
+            cleaned = re.sub(r"//.*$", "", block, flags=re.MULTILINE)
             parsed = json.loads(cleaned)
             servers = parsed.get("mcpServers", {})
             if not servers:
@@ -266,7 +298,9 @@ def merge_three_sources(seed: list, wong2: list, zh: list) -> list:
                     desc = entry.get("description", "")
                     existing_desc = existing.get("description", "")
                     # If ZH desc contains Chinese chars and existing doesn't
-                    if re.search(r'[\u4e00-\u9fff]', desc) and not re.search(r'[\u4e00-\u9fff]', existing_desc):
+                    if re.search(r"[\u4e00-\u9fff]", desc) and not re.search(
+                        r"[\u4e00-\u9fff]", existing_desc
+                    ):
                         existing["description_zh"] = desc
                 continue
 
@@ -281,7 +315,9 @@ def merge_three_sources(seed: list, wong2: list, zh: list) -> list:
         if norm_url in zh_descriptions and "description_zh" not in entry:
             zh_desc = zh_descriptions[norm_url]
             existing_desc = entry.get("description", "")
-            if re.search(r'[\u4e00-\u9fff]', zh_desc) and not re.search(r'[\u4e00-\u9fff]', existing_desc):
+            if re.search(r"[\u4e00-\u9fff]", zh_desc) and not re.search(
+                r"[\u4e00-\u9fff]", existing_desc
+            ):
                 entry["description_zh"] = zh_desc
 
     logger.info(f"Three-source merge: {len(result)} unique entries")
@@ -290,11 +326,27 @@ def merge_three_sources(seed: list, wong2: list, zh: list) -> list:
 
 def enrich_missing_configs(entries: list) -> list:
     """For entries without install config, try README mcpServers extraction."""
-    manual_entries = [e for e in entries if e.get("install", {}).get("method") == "manual"]
-    logger.info(f"Attempting README config extraction for {len(manual_entries)} manual entries...")
+    manual_entries = [
+        e for e in entries if e.get("install", {}).get("method") == "manual"
+    ]
+    manual_entries.sort(key=_readme_enrich_priority)
+    if README_ENRICH_LIMIT > 0:
+        probe_entries = manual_entries[:README_ENRICH_LIMIT]
+    else:
+        probe_entries = []
+
+    logger.info(
+        f"Attempting README config extraction for {len(probe_entries)}/{len(manual_entries)} "
+        "manual entries..."
+    )
+    if len(probe_entries) < len(manual_entries):
+        logger.info(
+            "README enrichment capped at "
+            f"{README_ENRICH_LIMIT} entries; prioritizing non-seed entries and higher-star repos"
+        )
 
     enriched_count = 0
-    for entry in manual_entries:
+    for entry in probe_entries:
         github_url = entry.get("source_url", "")
         if not github_url:
             continue
@@ -309,18 +361,41 @@ def enrich_missing_configs(entries: list) -> list:
             entry["install"]["placeholder_hints"] = placeholder_hints
         enriched_count += 1
 
-    logger.info(f"Enriched {enriched_count}/{len(manual_entries)} entries from README")
+    logger.info(
+        f"Enriched {enriched_count}/{len(probe_entries)} probed entries from README"
+    )
     return entries
+
+
+def _readme_enrich_priority(entry: dict) -> tuple:
+    """Prioritize non-seed entries first, then higher-star repos."""
+    source_rank = 0 if entry.get("source") != "mcp.so" else 1
+    stars = entry.get("stars")
+    star_rank = -(stars if stars is not None else -1)
+    return (source_rank, star_rank, entry.get("name", "").lower())
 
 
 def sync():
     # Load three sources
     seed = load_seed()
+    if not GITHUB_TOKEN:
+        logger.info(
+            "GITHUB_TOKEN not set; skipping GitHub API enrichment for awesome-list MCP repos"
+        )
     wong2 = parse_awesome_mcp_servers_wong2()
     zh = parse_awesome_mcp_zh()
 
+    logger.info(f"Source counts: seed={len(seed)}, wong2={len(wong2)}, zh={len(zh)}")
+
     # Three-source merge with dedup by GitHub URL
     merged = merge_three_sources(seed, wong2, zh)
+
+    # Log source distribution after merge
+    sources_after_merge = {}
+    for e in merged:
+        s = e.get("source", "unknown")
+        sources_after_merge[s] = sources_after_merge.get(s, 0) + 1
+    logger.info(f"After merge: {len(merged)} entries, sources={sources_after_merge}")
 
     # Enrich manual entries with README mcpServers extraction
     merged = enrich_missing_configs(merged)

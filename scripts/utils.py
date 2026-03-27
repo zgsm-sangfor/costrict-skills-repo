@@ -13,6 +13,7 @@ logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
 
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
+_github_api_disabled_until = 0.0
 
 CATEGORY_MAP = {
     # MCP categories (awesome-mcp-servers)
@@ -160,8 +161,16 @@ CODING_KEYWORDS = [
 
 def github_api(path: str) -> Optional[dict]:
     """Make a GitHub API request. Returns parsed JSON or None on error."""
+    global _github_api_disabled_until
+
+    if _github_api_disabled_until > time.time():
+        return None
+
     url = f"https://api.github.com/{path.lstrip('/')}"
-    headers = {"Accept": "application/vnd.github.v3+json"}
+    headers = {
+        "Accept": "application/vnd.github.v3+json",
+        "User-Agent": "coding-hub-sync",
+    }
     if GITHUB_TOKEN:
         headers["Authorization"] = f"token {GITHUB_TOKEN}"
     req = Request(url, headers=headers)
@@ -170,19 +179,27 @@ def github_api(path: str) -> Optional[dict]:
             with urlopen(req, timeout=30) as resp:
                 return json.loads(resp.read().decode())
         except HTTPError as e:
-            if e.code == 403:  # Rate limit
+            if e.code in (403, 429):  # Rate limit / abuse detection
+                wait = _retry_delay_seconds(e.headers, min(2 ** attempt, 60))
                 if GITHUB_TOKEN:
-                    reset = e.headers.get("X-RateLimit-Reset")
-                    if reset:
-                        wait = max(int(reset) - int(time.time()), 1)
-                        logger.warning(f"Rate limited, waiting {min(wait, 60)}s...")
-                        time.sleep(min(wait, 60))
+                    if attempt < 2:
+                        logger.warning(f"GitHub API rate limited, waiting {wait}s...")
+                        time.sleep(wait)
                         continue
                 else:
-                    logger.warning("Rate limited (no token). Skipping API call.")
-                    return None
+                    _github_api_disabled_until = time.time() + wait
+                    logger.warning(
+                        "GitHub API rate limited without token; "
+                        f"skipping repo metadata calls for {wait}s"
+                    )
+                return None
             elif e.code == 404:
                 return None
+            elif e.code >= 500 and attempt < 2:
+                wait = _retry_delay_seconds(e.headers, min(2 ** attempt, 30))
+                logger.warning(f"GitHub API temporary error {e.code}, retrying in {wait}s...")
+                time.sleep(wait)
+                continue
             logger.error(f"GitHub API error {e.code}: {url}")
             return None
         except (URLError, TimeoutError) as e:
@@ -192,15 +209,62 @@ def github_api(path: str) -> Optional[dict]:
     return None
 
 
-def get_repo_info(repo_slug: str) -> Optional[dict]:
-    """Get repo metadata (stars, pushed_at, default_branch). Returns None on error."""
+# Process-level cache for repo metadata (avoids duplicate API calls within a single sync run)
+_repo_meta_cache = {}
+_repo_readme_cache = {}
+
+
+def get_repo_meta(repo_url: str) -> Optional[dict]:
+    """Get comprehensive repo metadata from a GitHub URL. Returns None on error.
+
+    Single API call returns: stars, pushed_at, default_branch, topics, license, open_issues, has_readme.
+    Uses in-memory cache keyed by normalized owner/repo to avoid duplicate calls.
+    """
+    # Extract owner/repo from URL
+    match = re.search(r"github\.com/([^/]+/[^/]+?)(?:\.git)?(?:/|$|\?|#)", repo_url)
+    if not match:
+        return None
+
+    repo_slug = match.group(1).lower()  # Normalize to lowercase
+
+    # Check cache
+    if repo_slug in _repo_meta_cache:
+        return _repo_meta_cache[repo_slug]
+
+    # Fetch from API
     data = github_api(f"repos/{repo_slug}")
     if not data:
+        _repo_meta_cache[repo_slug] = None
+        return None
+
+    result = {
+        "stars": data.get("stargazers_count", 0),
+        "pushed_at": data.get("pushed_at"),
+        "default_branch": data.get("default_branch", "main"),
+        "topics": data.get("topics", []),
+        "has_readme": _probe_readme_exists(repo_slug, data.get("default_branch", "main"))
+        if GITHUB_TOKEN else False,
+        "license": data.get("license", {}).get("spdx_id") if data.get("license") else None,
+        "open_issues": data.get("open_issues_count", 0),
+    }
+
+    _repo_meta_cache[repo_slug] = result
+    return result
+
+
+def get_repo_info(repo_slug: str) -> Optional[dict]:
+    """Get repo metadata (stars, pushed_at, default_branch). Returns None on error.
+
+    DEPRECATED: Use get_repo_meta() instead. Kept for backward compatibility.
+    """
+    # Convert slug to URL format for get_repo_meta
+    meta = get_repo_meta(f"https://github.com/{repo_slug}")
+    if not meta:
         return None
     return {
-        "stars": data.get("stargazers_count", 0),
-        "pushed_at": data.get("pushed_at", ""),
-        "default_branch": data.get("default_branch", "main"),
+        "stars": meta["stars"],
+        "pushed_at": meta["pushed_at"] or "",
+        "default_branch": meta["default_branch"],
     }
 
 
@@ -219,14 +283,13 @@ def list_repo_files(repo_slug: str, branch: str = "main",
 
 
 def get_stars(repo_url: str) -> int:
-    """Get star count for a GitHub repo URL. Returns 0 on error."""
-    match = re.search(r"github\.com/([^/]+/[^/]+?)(?:\.git)?(?:/|$|\?|#)", repo_url)
-    if not match:
-        return 0
-    repo_path = match.group(1)
-    data = github_api(f"repos/{repo_path}")
-    if data and "stargazers_count" in data:
-        return data["stargazers_count"]
+    """Get star count for a GitHub repo URL. Returns 0 on error.
+
+    DEPRECATED: Use get_repo_meta() instead. Kept for backward compatibility.
+    """
+    meta = get_repo_meta(repo_url)
+    if meta and meta.get("stars") is not None:
+        return meta["stars"]
     return 0
 
 
@@ -239,24 +302,71 @@ def fetch_raw_content(repo: str, path: str, branch: str = "main",
                    If False (default), log at WARNING level.
     """
     url = f"https://raw.githubusercontent.com/{repo}/{branch}/{path}"
-    req = Request(url)
+    req = Request(url, headers={"User-Agent": "coding-hub-sync"})
     if GITHUB_TOKEN:
         req.add_header("Authorization", f"token {GITHUB_TOKEN}")
-    try:
-        with urlopen(req, timeout=30) as resp:
-            return resp.read().decode("utf-8", errors="replace")
-    except HTTPError as e:
-        if e.code == 404:
-            if quiet_404:
-                logger.debug(f"Not found (404): {url}")
-            else:
-                logger.warning(f"Not found (404): {url}")
-        else:
+
+    for attempt in range(3):
+        try:
+            with urlopen(req, timeout=30) as resp:
+                return resp.read().decode("utf-8", errors="replace")
+        except HTTPError as e:
+            if e.code == 404:
+                if quiet_404:
+                    logger.debug(f"Not found (404): {url}")
+                else:
+                    logger.warning(f"Not found (404): {url}")
+                return None
+            if e.code in (429, 500, 502, 503, 504) and attempt < 2:
+                wait = _retry_delay_seconds(e.headers, min(2 ** attempt, 30))
+                logger.warning(f"Fetch failed {e.code} for {url}, retrying in {wait}s...")
+                time.sleep(wait)
+                continue
             logger.error(f"Failed to fetch {url}: {e}")
-        return None
-    except (URLError, TimeoutError) as e:
-        logger.error(f"Failed to fetch {url}: {e}")
-        return None
+            return None
+        except (URLError, TimeoutError) as e:
+            logger.error(f"Failed to fetch {url}: {e}")
+            if attempt < 2:
+                time.sleep(2 ** attempt)
+                continue
+            return None
+
+    return None
+
+
+def _retry_delay_seconds(headers, default_wait: int) -> int:
+    """Best-effort retry delay from HTTP headers."""
+    if headers:
+        retry_after = headers.get("Retry-After")
+        if retry_after:
+            try:
+                return max(int(retry_after), 1)
+            except (TypeError, ValueError):
+                pass
+
+        reset = headers.get("X-RateLimit-Reset")
+        if reset:
+            try:
+                return max(int(reset) - int(time.time()), 1)
+            except (TypeError, ValueError):
+                pass
+
+    return max(default_wait, 1)
+
+
+def _probe_readme_exists(repo_slug: str, branch: str) -> bool:
+    """Probe common README paths once per repo to avoid misusing unrelated repo flags."""
+    cache_key = f"{repo_slug}@{branch}"
+    if cache_key in _repo_readme_cache:
+        return _repo_readme_cache[cache_key]
+
+    for candidate in ("README.md", "README", "readme.md", "Readme.md"):
+        if fetch_raw_content(repo_slug, candidate, branch, quiet_404=True) is not None:
+            _repo_readme_cache[cache_key] = True
+            return True
+
+    _repo_readme_cache[cache_key] = False
+    return False
 
 
 def categorize(name: str, description: str = "", tags: list = None,

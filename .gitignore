@@ -24,3 +24,4 @@ scripts/fallback_skill_repos.json
 
 # Playwright MCP local data
 .playwright-mcp/
+tests/

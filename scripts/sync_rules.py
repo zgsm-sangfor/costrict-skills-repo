@@ -59,7 +59,7 @@ def parse_awesome_cursorrules() -> list:
             "type": "rule",
             "description": description,
             "source_url": rule_url,
-            "stars": 178,  # Repo-level stars
+            "stars": None,
             "category": category,
             "tags": tags,
             "tech_stack": tags[:],
@@ -120,7 +120,7 @@ def parse_rules_optimized() -> list:
                 "type": "rule",
                 "description": description,
                 "source_url": f"https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/{subdir}",
-                "stars": 50,
+                "stars": None,
                 "category": category,
                 "tags": tags + [subdir.replace("-", " ")],
                 "tech_stack": [],
