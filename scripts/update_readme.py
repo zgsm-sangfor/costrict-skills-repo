@@ -1,17 +1,23 @@
 #!/usr/bin/env python3
-"""Update README.md resource counts from catalog/index.json."""
+"""Update README.md resource counts and featured section from catalog/index.json."""
 
 import json
 import math
 import os
 import re
+import subprocess
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 INDEX_PATH = os.path.join(ROOT, "catalog", "index.json")
 README_PATH = os.path.join(ROOT, "README.md")
+FEATURED_PATH = os.path.join(ROOT, "catalog", "featured.md")
 
 
 def main():
+    # 1. 生成精选内容
+    print("Generating featured content...")
+    subprocess.run(["python3", os.path.join(ROOT, "scripts", "generate_featured.py")], check=True)
+
     with open(INDEX_PATH, "r", encoding="utf-8") as f:
         entries = json.load(f)
 
@@ -57,6 +63,16 @@ def main():
             f"| {label} | {count} |",
             content,
         )
+
+    # 4. Update featured section
+    with open(FEATURED_PATH, "r", encoding="utf-8") as f:
+        featured_content = f.read()
+
+    # Replace featured section: from "## ⭐ 精选推荐" to the next "## " heading
+    pattern = r"(## ⭐ 精选推荐\n.*?)(\n## (?!⭐))"
+    if re.search(pattern, content, re.DOTALL):
+        content = re.sub(pattern, featured_content.rstrip() + "\n\n\\2", content, flags=re.DOTALL)
+        print("Featured section updated")
 
     if content != original:
         with open(README_PATH, "w", encoding="utf-8") as f:
