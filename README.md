@@ -36,27 +36,27 @@ Coding Hub 从 9 个上游源自动聚合、过滤、评估，让你和你的 Ag
 **macOS / Linux：**
 
 ```bash
-# Claude Code
-curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash -s -- --platform claude-code
-
-# Opencode（在项目根目录执行）
-curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash -s -- --platform opencode
-
 # Costrict CLI（在项目根目录执行）
 curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash -s -- --platform costrict
 
 # VSCode Costrict 插件
 curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash -s -- --platform vscode-costrict
+
+# Claude Code
+curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash -s -- --platform claude-code
+
+# Opencode（在项目根目录执行）
+curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash -s -- --platform opencode
 ```
 
 **Windows (PowerShell)：**
 
 ```powershell
-# Claude Code
+# Costrict CLI
 irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.ps1 | iex
 
 # 指定平台（如自动检测失败）
-& ([scriptblock]::Create((irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.ps1))) -Platform claude-code
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.ps1))) -Platform costrict
 ```
 
 安装完成后试试：
@@ -498,7 +498,7 @@ Skills 扩展 AI Agent 的专业能力。精选来自 Anthropic 官方、Hugging
 
 支持四个 AI Coding 平台，命令格式略有差异：
 
-| | Claude Code | Opencode | Costrict |
+| | Costrict | Opencode | Claude Code |
 |---|---|---|---|
 | 搜索 | `/coding-hub:search <kw> [type:mcp]` | `/coding-hub-search <kw> [type:mcp]` | `/coding-hub-search <kw> [type:mcp]` |
 | 浏览 | `/coding-hub:browse [cat]` | `/coding-hub-browse [cat]` | `/coding-hub-browse [cat]` |
@@ -510,15 +510,16 @@ Skills 扩展 AI Agent 的专业能力。精选来自 Anthropic 官方、Hugging
 <details>
 <summary>平台路径差异</summary>
 
-| | Claude Code | Opencode | Costrict | VSCode Costrict |
+| | Costrict | VSCode Costrict | Claude Code | Opencode |
 |---|---|---|---|---|
-| Skill 路径（全局） | `~/.claude/skills/coding-hub/` | `~/.opencode/skills/coding-hub/` | `~/.costrict/skills/coding-hub/` | `~/.costrict/skills/coding-hub/` |
-| Commands 路径 | 同上（全局） | `.opencode/command/`（项目级） | `.costrict/coding-hub/commands/`（项目级） | 无（内置于 SKILL.md） |
-| 命令分隔符 | `:` | `-` | `-` | `-` |
+| Skill 路径（全局） | `~/.costrict/skills/coding-hub/` | `~/.costrict/skills/coding-hub/` | `~/.claude/skills/coding-hub/` | `~/.opencode/skills/coding-hub/` |
+| Commands 路径 | `.costrict/coding-hub/commands/`（项目级） | 无（内置于 SKILL.md） | 同上（全局） | `.opencode/command/`（项目级） |
+| 命令分隔符 | `-` | `-` | `:` | `-` |
 
-- **Claude Code** 支持从全局 skills 目录加载子命令，一次安装所有项目可用
-- **Opencode / Costrict CLI** 的命令文件需要安装到每个项目目录，在项目根目录运行 `install.sh` 即可
+- **Costrict CLI** 的命令文件需要安装到每个项目目录，在项目根目录运行 `install.sh` 即可
 - **VSCode Costrict 插件** 所有命令逻辑内置于 SKILL.md，无需单独安装命令
+- **Claude Code** 支持从全局 skills 目录加载子命令，一次安装所有项目可用
+- **Opencode** 的命令文件需要安装到每个项目目录，在项目根目录运行 `install.sh` 即可
 
 </details>
 
@@ -617,6 +618,26 @@ curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/m
 <summary>如果无法执行 curl | bash（备选方案）</summary>
 
 根据你的平台，手动执行对应命令：
+**Costrict CLI:**（Skill 全局 + Commands 项目级）
+
+```bash
+mkdir -p ~/.costrict/skills/coding-hub
+curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/costrict/skills/coding-hub/SKILL.md" -o ~/.costrict/skills/coding-hub/SKILL.md
+mkdir -p .costrict/coding-hub/commands
+for cmd in search browse recommend install uninstall update; do
+  curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/costrict/commands/coding-hub/coding-hub-${cmd}.md" -o .costrict/coding-hub/commands/coding-hub-${cmd}.md
+done
+```
+
+**VSCode Costrict 插件:**（仅 Skill，无需命令）
+
+```bash
+mkdir -p ~/.costrict/skills/coding-hub
+curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/vscode-costrict/skills/coding-hub/SKILL.md" -o ~/.costrict/skills/coding-hub/SKILL.md
+```
+
+> VSCode Costrict 插件无需安装子命令，所有命令逻辑已内置于 SKILL.md。
+
 
 **Claude Code:**（Skill + Commands 全部安装到全局目录）
 
@@ -638,27 +659,6 @@ for cmd in search browse recommend install uninstall update; do
   curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/opencode/command/coding-hub-${cmd}.md" -o .opencode/command/coding-hub-${cmd}.md
 done
 ```
-
-**Costrict CLI:**（Skill 全局 + Commands 项目级）
-
-```bash
-mkdir -p ~/.costrict/skills/coding-hub
-curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/costrict/skills/coding-hub/SKILL.md" -o ~/.costrict/skills/coding-hub/SKILL.md
-mkdir -p .costrict/coding-hub/commands
-for cmd in search browse recommend install uninstall update; do
-  curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/costrict/commands/coding-hub/coding-hub-${cmd}.md" -o .costrict/coding-hub/commands/coding-hub-${cmd}.md
-done
-```
-
-**VSCode Costrict 插件:**（仅 Skill，无需命令）
-
-```bash
-mkdir -p ~/.costrict/skills/coding-hub
-curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/vscode-costrict/skills/coding-hub/SKILL.md" -o ~/.costrict/skills/coding-hub/SKILL.md
-```
-
-> VSCode Costrict 插件无需安装子命令，所有命令逻辑已内置于 SKILL.md。
-
 </details>
 
 ### 第 2 步: 验证安装
@@ -666,14 +666,14 @@ curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/
 执行搜索命令验证安装是否成功：
 
 ```
-# Claude Code
-/coding-hub:search typescript
-
-# Opencode / Costrict CLI
+# Costrict CLI / Opencode
 /coding-hub-search typescript
 
 # VSCode Costrict 插件
 在插件聊天中发送: "用 coding-hub 搜索 typescript"
+
+# Claude Code
+/coding-hub:search typescript
 ```
 
 **预期结果**: 返回一个包含搜索结果的 Markdown 表格。如果返回了表格，安装成功。如果提示命令不存在，请检查第 1 步的安装是否正确执行。
@@ -703,12 +703,6 @@ curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/
 
 如果你喜欢 Coding Hub 的理念，不妨试试我们的旗舰产品 **[Costrict](https://github.com/zgsm-ai/costrict)** —— 一个更强大的 AI Coding Agent 平台：
 
-- ✨ **开箱即用** — 预装 Coding Hub 全部资源，无需手动配置
-- 🎯 **智能推荐** — 基于项目上下文自动推荐 MCP/Skill/Rule
-- 🔧 **可视化配置** — 无需手写 JSON，点击即可安装和管理
-- 🌐 **多模型支持** — Claude / GPT / Qwen / DeepSeek 任意切换
-- 🔒 **本地优先** — 数据隐私完全掌控，支持私有部署
-
 [立即体验 Costrict →](https://github.com/zgsm-ai/costrict)
 
 ---
@@ -720,5 +714,3 @@ curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/
 - 资源与 coding 相关
 - 提供准确的 `source_url`、`description`、`tags`
 - 遵循 `catalog/schema.json` 定义的数据格式
-
-更多细节见 [CLAUDE.md](CLAUDE.md)。
