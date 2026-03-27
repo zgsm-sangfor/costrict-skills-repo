@@ -160,17 +160,27 @@ install_costrict() {
 
 install_vscode_costrict() {
   local skill_dir="$HOME/.costrict/skills/coding-hub"
-  mkdir -p "$skill_dir"
+  local cmd_dir=".roo/commands"
+  mkdir -p "$skill_dir" "$cmd_dir"
 
   echo "Downloading skill..."
   download "$BASE_URL/platforms/vscode-costrict/skills/coding-hub/SKILL.md" "$skill_dir/SKILL.md"
 
+  echo "Downloading commands to project dir..."
+  for cmd in $COMMANDS; do
+    download "$BASE_URL/platforms/vscode-costrict/commands/coding-hub/coding-hub-${cmd}.md" "$cmd_dir/coding-hub-${cmd}.md"
+  done
+
   echo ""
-  echo "=== Coding Hub installed (VSCode Costrict) ==="
+  echo "=== Coding Hub installed (VSCode Costrict / Roo Code) ==="
   echo ""
-  echo "Skill: $skill_dir/"
+  echo "Skill (global): $skill_dir/"
+  echo "Commands (project): $(pwd)/$cmd_dir/"
   echo ""
-  echo "Try:  ask your assistant to 'search typescript with coding-hub'"
+  echo "Note: Commands are installed to the current directory."
+  echo "      Run this script again in other projects to add commands there too."
+  echo ""
+  echo "Try:  /coding-hub-search typescript"
 }
 
 # --- Main ---

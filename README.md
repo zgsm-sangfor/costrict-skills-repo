@@ -65,7 +65,7 @@ irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/ins
 # Claude Code
 /coding-hub:search typescript
 
-# Opencode / Costrict CLI
+# Opencode / Costrict CLI / VSCode Costrict (Roo Code)
 /coding-hub-search typescript
 ```
 
@@ -509,14 +509,14 @@ Skills 扩展 AI Agent 的专业能力。精选来自 Anthropic 官方、Hugging
 
 支持四个 AI Coding 平台，命令格式略有差异：
 
-| | Costrict | Opencode | Claude Code |
-|---|---|---|---|
-| 搜索 | `/coding-hub:search <kw> [type:mcp]` | `/coding-hub-search <kw> [type:mcp]` | `/coding-hub-search <kw> [type:mcp]` |
-| 浏览 | `/coding-hub:browse [cat]` | `/coding-hub-browse [cat]` | `/coding-hub-browse [cat]` |
-| 推荐 | `/coding-hub:recommend` | `/coding-hub-recommend` | `/coding-hub-recommend` |
-| 安装 | `/coding-hub:install <name>` | `/coding-hub-install <name>` | `/coding-hub-install <name>` |
-| 卸载 | `/coding-hub:uninstall <name>` | `/coding-hub-uninstall <name>` | `/coding-hub-uninstall <name>` |
-| 更新 | `/coding-hub:update` | `/coding-hub-update` | `/coding-hub-update` |
+| | Costrict | Opencode | Claude Code | VSCode Costrict (Roo Code) |
+|---|---|---|---|---|
+| 搜索 | `/coding-hub:search <kw> [type:mcp]` | `/coding-hub-search <kw> [type:mcp]` | `/coding-hub-search <kw> [type:mcp]` | `/coding-hub-search <kw> [type:mcp]` |
+| 浏览 | `/coding-hub:browse [cat]` | `/coding-hub-browse [cat]` | `/coding-hub-browse [cat]` | `/coding-hub-browse [cat]` |
+| 推荐 | `/coding-hub:recommend` | `/coding-hub-recommend` | `/coding-hub-recommend` | `/coding-hub-recommend` |
+| 安装 | `/coding-hub:install <name>` | `/coding-hub-install <name>` | `/coding-hub-install <name>` | `/coding-hub-install <name>` |
+| 卸载 | `/coding-hub:uninstall <name>` | `/coding-hub-uninstall <name>` | `/coding-hub-uninstall <name>` | `/coding-hub-uninstall <name>` |
+| 更新 | `/coding-hub:update` | `/coding-hub-update` | `/coding-hub-update` | `/coding-hub-update` |
 
 <details>
 <summary>平台路径差异</summary>
@@ -524,11 +524,11 @@ Skills 扩展 AI Agent 的专业能力。精选来自 Anthropic 官方、Hugging
 | | Costrict | VSCode Costrict | Claude Code | Opencode |
 |---|---|---|---|---|
 | Skill 路径（全局） | `~/.costrict/skills/coding-hub/` | `~/.costrict/skills/coding-hub/` | `~/.claude/skills/coding-hub/` | `~/.opencode/skills/coding-hub/` |
-| Commands 路径 | `.costrict/coding-hub/commands/`（项目级） | 无（内置于 SKILL.md） | 同上（全局） | `.opencode/command/`（项目级） |
+| Commands 路径 | `.costrict/coding-hub/commands/`（项目级） | `.roo/commands/`（项目级） | 同上（全局） | `.opencode/command/`（项目级） |
 | 命令分隔符 | `-` | `-` | `:` | `-` |
 
 - **Costrict CLI** 的命令文件需要安装到每个项目目录，在项目根目录运行 `install.sh` 即可
-- **VSCode Costrict 插件** 所有命令逻辑内置于 SKILL.md，无需单独安装命令
+- **VSCode Costrict 插件 (Roo Code)** 支持 Roo Code 原生 slash commands，命令文件安装到 `.roo/commands/`，通过 `/coding-hub-update` 自动下载
 - **Claude Code** 支持从全局 skills 目录加载子命令，一次安装所有项目可用
 - **Opencode** 的命令文件需要安装到每个项目目录，在项目根目录运行 `install.sh` 即可
 

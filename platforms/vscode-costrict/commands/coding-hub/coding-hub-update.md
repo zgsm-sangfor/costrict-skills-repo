@@ -1,0 +1,50 @@
+---
+description: '更新 coding-hub skill 和子命令到最新版本。用法: /coding-hub-update'
+---
+
+# Coding Hub - Update
+
+从 GitHub 拉取最新版本的 coding-hub skill 和子命令，覆盖本地安装。
+
+## 源地址
+
+基础 URL: `https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main`
+
+## 执行流程
+
+1. **下载最新文件**
+
+   用 Bash 执行以下命令：
+
+   ```bash
+   # Skill（全局）— 注意用 $HOME 展开路径
+   mkdir -p $HOME/.costrict/skills/coding-hub
+   curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/vscode-costrict/skills/coding-hub/SKILL.md" -o $HOME/.costrict/skills/coding-hub/SKILL.md
+
+   # 子命令（项目级）— 安装到 .roo/commands/
+   mkdir -p .roo/commands
+   for cmd in search browse recommend install uninstall update; do
+     curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/vscode-costrict/commands/coding-hub/coding-hub-${cmd}.md" -o ".roo/commands/coding-hub-${cmd}.md"
+   done
+   ```
+
+2. **报告结果**
+
+   ```
+   ## 更新完成
+
+   已从 GitHub 拉取最新版本：
+
+   - $HOME/.costrict/skills/coding-hub/SKILL.md
+   - .roo/commands/coding-hub-search.md
+   - .roo/commands/coding-hub-browse.md
+   - .roo/commands/coding-hub-recommend.md
+   - .roo/commands/coding-hub-install.md
+   - .roo/commands/coding-hub-uninstall.md
+   - .roo/commands/coding-hub-update.md
+   ```
+
+## 错误处理
+
+- 如果 curl 下载失败（`-f` 标志会让 curl 在 HTTP 错误如 404/500 时返回非零退出码），提示用户检查网络并重试
+- 如果目标目录不存在（未安装过），提示用户先执行安装
