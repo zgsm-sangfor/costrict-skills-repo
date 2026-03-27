@@ -18,8 +18,13 @@
         "type": "object",
         "required": ["method"],
         "properties": {
-          "method": { "type": "string", "enum": ["mcp_config", "git_clone", "download_file"] },
+          "method": { "type": "string", "enum": ["mcp_config", "mcp_config_template", "manual", "git_clone", "download_file"] },
           "config": { "type": "object" },
+          "placeholder_hints": {
+            "type": "object",
+            "description": "Map of placeholder name to user-friendly description, e.g. {\"PATH_TO_API_DOT_JSON\": \"TypeDoc generated API JSON file path\"}",
+            "additionalProperties": { "type": "string" }
+          },
           "target_dir": { "type": "string" },
           "files": { "type": "array", "items": { "type": "string" } },
           "repo": { "type": "string" }

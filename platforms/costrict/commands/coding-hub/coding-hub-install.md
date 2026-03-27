@@ -39,8 +39,35 @@ $ARGUMENTS
 ### MCP (type == "mcp")
 - 默认写入 `.costrict/settings.json`，用户选 "全局" 则写入 `~/.costrict/settings.json`
 - 读取现有 settings.json（不存在则创建 `{}`）
-- 将 `install.config` 合并到 `mcpServers` 字段
+- 根据 `install.method` 分三种情况处理：
+
+#### method == "mcp_config"
+- 将 `install.config` 直接合并到 `mcpServers` 字段
 - 如果 key 已存在，询问是否覆盖
+
+#### method == "mcp_config_template"
+- 将 `install.config` 写入 `mcpServers` 字段
+- **安装后提示用户需要替换占位符**，展示 `install.placeholder_hints` 中的每个占位符及说明
+- 格式示例：
+```
+⚠️ 该 MCP 需要配置以下参数才能正常使用：
+
+- FIGMA_API_KEY: Set your FIGMA_API_KEY
+- PATH_TO_API_DOT_JSON: Replace with actual path to api dot json
+
+请编辑配置文件替换以上占位符。
+```
+
+#### method == "manual"
+- **不写入 mcpServers**
+- 告知用户该 MCP 需要手动配置，展示 `source_url` 供用户查看安装说明
+- 格式示例：
+```
+该 MCP 需要手动配置，请参考项目文档：
+🔗 https://github.com/xxx/yyy
+
+请按照 README 中的说明配置 mcpServers。
+```
 
 ### Skill (type == "skill")
 - 如果 `install.repo` 存在，执行 sparse checkout 或 clone + 复制
