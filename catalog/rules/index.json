@@ -4086,5 +4086,1146 @@
     },
     "source": "awesome-cursorrules",
     "last_synced": "2026-03-27"
+  },
+  {
+    "id": "ai-powered-code-review-rule21",
+    "name": "Ai Powered Code Review (Rules 2.1)",
+    "type": "rule",
+    "description": "AI驱动的智能代码审查规则 - 基于机器学习的代码质量分析和自动化审查流程",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "ai-ml",
+    "tags": [
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/ai-powered-code-review.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "analyze-issue-rule21",
+    "name": "Analyze Issue (Rules 2.1)",
+    "type": "rule",
+    "description": "GitHub issue analysis and implementation specification - GitHub问题分析和实现规范",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "git",
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/analyze-issue.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "backend-dev-rule21",
+    "name": "Backend Dev (Rules 2.1)",
+    "type": "rule",
+    "description": "Backend development workflow with Java/Python/Node.js - 后端开发完整工作流",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "backend",
+    "tags": [
+      "python",
+      "java",
+      "nodejs",
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/backend-dev.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "bug-fix-rule21",
+    "name": "Bug Fix (Rules 2.1)",
+    "type": "rule",
+    "description": "Complete bug-fixing workflow from issue to PR - 从问题到PR的完整Bug修复工作流",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/bug-fix.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "changelog-management-rule21",
+    "name": "Changelog Management (Rules 2.1)",
+    "type": "rule",
+    "description": "AI-powered changelog management with automatic generation and version tracking - AI驱动的变更日志管理",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "ai-ml",
+    "tags": [
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/changelog-management.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "code-quality-check-rule21",
+    "name": "Code Quality Check (Rules 2.1)",
+    "type": "rule",
+    "description": "AI-powered cross-language code quality check with intelligent analysis - AI驱动的跨语言代码质量检查",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "ai-ml",
+    "tags": [
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/code-quality-check.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "code-review-rule21",
+    "name": "Code Review (Rules 2.1)",
+    "type": "rule",
+    "description": "Multi-role pull request review checklist - 多角色拉取请求审查清单",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/code-review.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "commit-rule21",
+    "name": "Commit (Rules 2.1)",
+    "type": "rule",
+    "description": "Unified comprehensive commit workflow (standard + fast + AI) - 统一全面提交工作流（标准 + 快速 + AI）",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "ai-ml",
+    "tags": [
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/commit.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "context-loader-rule21",
+    "name": "Context Loader (Rules 2.1)",
+    "type": "rule",
+    "description": "AI-powered intelligent project context loader with deep analysis - AI驱动的智能项目上下文加载器",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "ai-ml",
+    "tags": [
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/context-loader.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "create-docs-rule21",
+    "name": "Create Docs (Rules 2.1)",
+    "type": "rule",
+    "description": "Comprehensive documentation generation - 全面的文档生成",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "documentation",
+    "tags": [
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/create-docs.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "custom-command-builder-rule21",
+    "name": "Custom Command Builder (Rules 2.1)",
+    "type": "rule",
+    "description": "AI-powered custom command builder with intelligent templates - AI驱动的自定义命令构建器",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "ai-ml",
+    "tags": [
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/custom-command-builder.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "feedback-enhanced-rule21",
+    "name": "Feedback Enhanced (Rules 2.1)",
+    "type": "rule",
+    "description": "Enhanced feedback mechanism with 1-hour timeout - 增强反馈机制，1小时超时",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/feedback-enhanced.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "frontend-dev-rule21",
+    "name": "Frontend Dev (Rules 2.1)",
+    "type": "rule",
+    "description": "Frontend development workflow with Vue/React/TypeScript - 前端开发完整工作流",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "frontend",
+    "tags": [
+      "react",
+      "vue",
+      "typescript",
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/frontend-dev.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "implement-task-rule21",
+    "name": "Implement Task (Rules 2.1)",
+    "type": "rule",
+    "description": "Methodical task implementation approach - 系统化任务实现方法",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/implement-task.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "intelligent-project-management-rule21",
+    "name": "Intelligent Project Management (Rules 2.1)",
+    "type": "rule",
+    "description": "智能项目管理系统 - 整合阶段管理、工作流编排、智能推荐和记忆系统",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/intelligent-project-management.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "intelligent-workflow-orchestration-rule21",
+    "name": "Intelligent Workflow Orchestration (Rules 2.1)",
+    "type": "rule",
+    "description": "企业级工作流编排规则 - 大型团队和复杂项目的高级智能编排",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/intelligent-workflow-orchestration.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "mcp-debugging-enhanced-rule21",
+    "name": "Mcp Debugging Enhanced (Rules 2.1)",
+    "type": "rule",
+    "description": "AI-powered MCP debugging and diagnostics with intelligent analysis - AI驱动的MCP调试和诊断工具",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "ai-ml",
+    "tags": [
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/mcp-debugging-enhanced.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "mcp-intelligent-strategy-rule21",
+    "name": "Mcp Intelligent Strategy (Rules 2.1)",
+    "type": "rule",
+    "description": "MCP工具智能使用策略 - 专注于MCP工具的优先使用和高效执行",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/mcp-intelligent-strategy.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "mcp-unified-management-rule21",
+    "name": "Mcp Unified Management (Rules 2.1)",
+    "type": "rule",
+    "description": "MCP统一管理策略 - 整合检测、推荐、配置、同步等所有MCP功能的统一管理",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/mcp-unified-management.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "mcp-zero-config-detection-rule21",
+    "name": "Mcp Zero Config Detection (Rules 2.1)",
+    "type": "rule",
+    "description": "MCP零配置检测和提醒策略 - 检测用户是否缺少MCP配置并主动提醒引导",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/mcp-zero-config-detection.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "mermaid-rule21",
+    "name": "Mermaid (Rules 2.1)",
+    "type": "rule",
+    "description": "Mermaid diagram generation for various visualizations - Mermaid图表生成工具",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "ai-ml",
+    "tags": [
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/mermaid.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "root-cause-analysis-rule21",
+    "name": "Root Cause Analysis (Rules 2.1)",
+    "type": "rule",
+    "description": "AI-powered root cause analysis with Five Whys methodology - AI驱动的根因分析方法",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "ai-ml",
+    "tags": [
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/root-cause-analysis.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "systematic-debugging-rule21",
+    "name": "Systematic Debugging (Rules 2.1)",
+    "type": "rule",
+    "description": "AI-powered systematic debugging with intelligent troubleshooting - AI驱动的系统化调试方法",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules",
+    "stars": null,
+    "category": "ai-ml",
+    "tags": [
+      "project rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/systematic-debugging.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "ai-agent-intelligence-core-rule21",
+    "name": "Ai Agent Intelligence Core (Rules 2.1)",
+    "type": "rule",
+    "description": "AI代理智能核心规则 - 统一智能决策引擎和工作流编排系统",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "ai-ml",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/ai-agent-intelligence-core.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "ai-ethical-boundaries-rule21",
+    "name": "Ai Ethical Boundaries (Rules 2.1)",
+    "type": "rule",
+    "description": "AI伦理边界规则 - 确保AI行为符合伦理标准和社会价值观",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "ai-ml",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/ai-ethical-boundaries.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "ai-thinking-protocol-rule21",
+    "name": "Ai Thinking Protocol (Rules 2.1)",
+    "type": "rule",
+    "description": "AI思维协议 - 智能思考深度调节和认知负载管理",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "ai-ml",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/ai-thinking-protocol.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "audit-logging-system-rule21",
+    "name": "Audit Logging System (Rules 2.1)",
+    "type": "rule",
+    "description": "审计日志系统 - 全面的操作审计和安全事件记录",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/audit-logging-system.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "backend-rules-rule21",
+    "name": "Backend Rules (Rules 2.1)",
+    "type": "rule",
+    "description": "后端开发AI助手规则 - 智能化企业级标准",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "ai-ml",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/backend-rules.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "brain-recorder-integration-rule21",
+    "name": "Brain Recorder Integration (Rules 2.1)",
+    "type": "rule",
+    "description": "Brain-Recorder Integration System (大脑-记录员集成系统) - 超级大脑与记录员系统的深度集成",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "ai-ml",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/brain-recorder-integration.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "context-recorder-advanced-rule21",
+    "name": "Context Recorder Advanced (Rules 2.1)",
+    "type": "rule",
+    "description": "Context Recorder Advanced (记录员高级功能) - 性能优化和智能增强",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/context-recorder-advanced.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "context-recorder-core-rule21",
+    "name": "Context Recorder Core (Rules 2.1)",
+    "type": "rule",
+    "description": "Context Recorder Core (记录员核心) - 核心定义、任务和主要规则",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/context-recorder-core.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "context-recorder-edge-cases-rule21",
+    "name": "Context Recorder Edge Cases (Rules 2.1)",
+    "type": "rule",
+    "description": "Context Recorder Edge Cases (记录员边界情况) - 边界情况和错误处理",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/context-recorder-edge-cases.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "context-recorder-system-rule21",
+    "name": "Context Recorder System (Rules 2.1)",
+    "type": "rule",
+    "description": "Context Recorder System (记录员系统) - 模块化索引文件",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/context-recorder-system.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "context-recorder-templates-rule21",
+    "name": "Context Recorder Templates (Rules 2.1)",
+    "type": "rule",
+    "description": "Context Recorder Templates (记录员模板) - 模板定义和归档配置",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/context-recorder-templates.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "context-systems-integration-rule21",
+    "name": "Context Systems Integration (Rules 2.1)",
+    "type": "rule",
+    "description": "Context Systems Integration",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/context-systems-integration.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "context7-preload-standard-rule21",
+    "name": "Context7 Preload Standard (Rules 2.1)",
+    "type": "rule",
+    "description": "Context7 知识预载标准 - 修复Bug与新项目启动前的前置步骤",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/context7-preload-standard.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "disaster-recovery-plan-rule21",
+    "name": "Disaster Recovery Plan (Rules 2.1)",
+    "type": "rule",
+    "description": "灾难恢复计划 - 应对数据丢失、系统故障和安全事件的完整恢复策略",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/disaster-recovery-plan.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "dynamic-thinking-depth-regulation-rule21",
+    "name": "Dynamic Thinking Depth Regulation (Rules 2.1)",
+    "type": "rule",
+    "description": "动态思考深度调节 - 基于任务复杂度和用户需求智能调节AI思考深度",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "ai-ml",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/dynamic-thinking-depth-regulation.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "error-recovery-system-rule21",
+    "name": "Error Recovery System (Rules 2.1)",
+    "type": "rule",
+    "description": "错误恢复机制 - 系统级错误检测和自动恢复策略",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/error-recovery-system.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "file-generation-safety-rules-rule21",
+    "name": "File Generation Safety Rules (Rules 2.1)",
+    "type": "rule",
+    "description": "文件生成安全规则 - 强制性用户确认机制，防止AI未经授权生成文件",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "ai-ml",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/file-generation-safety-rules.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "frontend-rules-rule21",
+    "name": "Frontend Rules (Rules 2.1)",
+    "type": "rule",
+    "description": "前端开发AI助手规则 - 智能化企业级标准，集成最新前端技术栈和智能MCP工具编排",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "ai-ml",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/frontend-rules.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "human-ai-collaboration-optimization-rule21",
+    "name": "Human Ai Collaboration Optimization (Rules 2.1)",
+    "type": "rule",
+    "description": "人机协同优化规则 - 认知互补和思维品质提升框架",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "ai-ml",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/human-ai-collaboration-optimization.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "intelligent-recommendation-engine-rule21",
+    "name": "Intelligent Recommendation Engine (Rules 2.1)",
+    "type": "rule",
+    "description": "智能推荐引擎 - 基于关键词匹配和上下文分析的阶段推荐系统",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/intelligent-recommendation-engine.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "knowledge-creation-discovery-framework-rule21",
+    "name": "Knowledge Creation Discovery Framework (Rules 2.1)",
+    "type": "rule",
+    "description": "知识创造发现框架 - 智能知识挖掘、创新思维和学习能力增强",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/knowledge-creation-discovery-framework.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "memory-system-integration-rule21",
+    "name": "Memory System Integration (Rules 2.1)",
+    "type": "rule",
+    "description": "记忆系统集成 - 项目记忆存储、管理和智能使用",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/memory-system-integration.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "multimodal-interaction-framework-rule21",
+    "name": "Multimodal Interaction Framework (Rules 2.1)",
+    "type": "rule",
+    "description": "多模态交互框架 - 支持文本、图像、语音等多种交互方式的智能处理",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/multimodal-interaction-framework.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "performance-monitoring-system-rule21",
+    "name": "Performance Monitoring System (Rules 2.1)",
+    "type": "rule",
+    "description": "性能监控系统 - 实时监控系统性能指标，优化资源使用和响应速度",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "devops",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/performance-monitoring-system.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "permission-control-system-rule21",
+    "name": "Permission Control System (Rules 2.1)",
+    "type": "rule",
+    "description": "权限控制系统 - 定义用户/AI/系统的角色权限和操作审计",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "ai-ml",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/permission-control-system.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "rule-conflict-resolution-rule21",
+    "name": "Rule Conflict Resolution (Rules 2.1)",
+    "type": "rule",
+    "description": "规则冲突解决和用户指令优先级管理 - 确保用户指令始终优先，解决规则间冲突",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/rule-conflict-resolution.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "rule-hot-reload-system-rule21",
+    "name": "Rule Hot Reload System (Rules 2.1)",
+    "type": "rule",
+    "description": "规则热更新机制 - 实时监控规则变化，动态加载更新，无需重启系统",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/rule-hot-reload-system.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "super-brain-system-rule21",
+    "name": "Super Brain System (Rules 2.1)",
+    "type": "rule",
+    "description": "超级大脑系统 - 智能项目管理激活机制和核心功能",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "ai-ml",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/super-brain-system.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "system-diagnostics-rule21",
+    "name": "System Diagnostics (Rules 2.1)",
+    "type": "rule",
+    "description": "系统诊断工具 - 全面的系统健康检查和故障排查框架",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/system-diagnostics.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "system-integration-config-rule21",
+    "name": "System Integration Config (Rules 2.1)",
+    "type": "rule",
+    "description": "系统集成配置 - 统一管理各个智能系统的集成和协调",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "tooling",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/system-integration-config.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
+  },
+  {
+    "id": "unified-rules-base-rule21",
+    "name": "Unified Rules Base (Rules 2.1)",
+    "type": "rule",
+    "description": "增强统一规则基准 - 确保不同AI工具功能完全一致，集成智能需求理解和深度讨论框架",
+    "source_url": "https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/global-rules",
+    "stars": null,
+    "category": "ai-ml",
+    "tags": [
+      "global rules"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/unified-rules-base.mdc"
+      ]
+    },
+    "source": "rules-2.1-optimized",
+    "last_synced": "2026-03-27"
   }
 ]
