@@ -21,9 +21,6 @@ catalog/skills/.repo_cache.json
 catalog/skills/.llm_cache.json
 scripts/fallback_skill_repos.json
 
-# Crawl caches
-catalog/mcp/crawl_state.json
-catalog/mcp/mcp_so_seed.json
 
 # Playwright MCP local data
 .playwright-mcp/
