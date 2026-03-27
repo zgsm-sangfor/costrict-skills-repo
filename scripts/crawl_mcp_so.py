@@ -27,6 +27,7 @@ TODAY = date.today().isoformat()
 
 CATEGORY_URL = "https://mcp.so/category/developer-tools"
 LATEST_URL = "https://mcp.so/servers?tag=latest"
+LATEST_CATEGORY_URL = "https://mcp.so/servers?tag=latest&category=developer-tools"
 BASE_URL = "https://mcp.so"
 
 USER_AGENT = (
@@ -35,6 +36,7 @@ USER_AGENT = (
 )
 
 CONSECUTIVE_KNOWN_STOP = 10
+MAX_INCREMENTAL_PAGES = 30
 REQUEST_DELAY = 1.0
 MAX_CONSECUTIVE_FAILURES = 5
 
@@ -386,10 +388,10 @@ def crawl_incremental():
     new_detail_paths = []
     consecutive_known = 0
 
-    for page_num in range(1, 500):
-        sep = "&" if "?" in LATEST_URL else "?"
-        url = f"{LATEST_URL}{sep}page={page_num}"
-        logger.info(f"Fetching latest page {page_num}")
+    for page_num in range(1, MAX_INCREMENTAL_PAGES + 1):
+        sep = "&" if "?" in LATEST_CATEGORY_URL else "?"
+        url = f"{LATEST_CATEGORY_URL}{sep}page={page_num}"
+        logger.info(f"Fetching latest page {page_num}/{MAX_INCREMENTAL_PAGES}")
 
         page_html = fetch_page(url)
         if not page_html:
@@ -418,6 +420,9 @@ def crawl_incremental():
             logger.info(f"No new entries on page {page_num}")
 
         time.sleep(REQUEST_DELAY)
+    else:
+        if consecutive_known < CONSECUTIVE_KNOWN_STOP:
+            logger.warning(f"Reached max incremental pages ({MAX_INCREMENTAL_PAGES}), stopping")
 
     if not new_detail_paths:
         logger.info("No new entries found")

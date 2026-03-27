@@ -36,6 +36,7 @@ jobs:
 
       - name: Crawl mcp.so (incremental)
         run: python scripts/crawl_mcp_so.py --mode incremental
+        timeout-minutes: 15
         continue-on-error: true
 
       - name: Sync MCP servers
