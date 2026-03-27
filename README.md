@@ -82,15 +82,6 @@ https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/README.
 执行对应的安装命令。安装完成后告诉我结果。
 ```
 
-<details>
-<summary>或者直接复制粘贴这条命令安装（无需 Agent）</summary>
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash
-```
-
-</details>
-
 ---
 
 
