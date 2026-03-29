@@ -75,6 +75,24 @@ else
   echo "Platform: $PLATFORM"
 fi
 
+# --- Resolve home directory (WSL-aware) ---
+# In WSL, $HOME is /home/user but VSCode extensions expect %USERPROFILE% on the Windows side.
+# This function returns the Windows USERPROFILE path (translated to WSL mount) when in WSL,
+# or $HOME otherwise.
+
+resolve_home() {
+  if grep -qi microsoft /proc/version 2>/dev/null; then
+    local win_home
+    win_home=$(cmd.exe /c "echo %USERPROFILE%" 2>/dev/null | tr -d '\r')
+    if [ -n "$win_home" ]; then
+      wslpath -u "$win_home"
+      return
+    fi
+    echo "WARNING: WSL detected but could not resolve Windows USERPROFILE. Falling back to \$HOME." >&2
+  fi
+  echo "$HOME"
+}
+
 # --- Download helper ---
 
 download() {
@@ -159,14 +177,16 @@ install_costrict() {
 }
 
 install_vscode_costrict() {
-  local skill_dir="$HOME/.costrict/skills/coding-hub"
-  local cmd_dir=".roo/commands"
+  local home_dir
+  home_dir=$(resolve_home)
+  local skill_dir="$home_dir/.costrict/skills/coding-hub"
+  local cmd_dir="$home_dir/.roo/commands"
   mkdir -p "$skill_dir" "$cmd_dir"
 
   echo "Downloading skill..."
   download "$BASE_URL/platforms/vscode-costrict/skills/coding-hub/SKILL.md" "$skill_dir/SKILL.md"
 
-  echo "Downloading commands to project dir..."
+  echo "Downloading commands (global)..."
   for cmd in $COMMANDS; do
     download "$BASE_URL/platforms/vscode-costrict/commands/coding-hub/coding-hub-${cmd}.md" "$cmd_dir/coding-hub-${cmd}.md"
   done
@@ -175,10 +195,9 @@ install_vscode_costrict() {
   echo "=== Coding Hub installed (VSCode Costrict / Roo Code) ==="
   echo ""
   echo "Skill (global): $skill_dir/"
-  echo "Commands (project): $(pwd)/$cmd_dir/"
+  echo "Commands (global): $cmd_dir/"
   echo ""
-  echo "Note: Commands are installed to the current directory."
-  echo "      Run this script again in other projects to add commands there too."
+  echo "All projects can now use these slash commands."
   echo ""
   echo "Try:  /coding-hub-search typescript"
 }

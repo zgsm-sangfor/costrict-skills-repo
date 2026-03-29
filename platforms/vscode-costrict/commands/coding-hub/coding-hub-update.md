@@ -21,10 +21,10 @@ description: '更新 coding-hub skill 和子命令到最新版本。用法: /cod
    mkdir -p $HOME/.costrict/skills/coding-hub
    curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/vscode-costrict/skills/coding-hub/SKILL.md" -o $HOME/.costrict/skills/coding-hub/SKILL.md
 
-   # 子命令（项目级）— 安装到 .roo/commands/
-   mkdir -p .roo/commands
+   # 子命令（全局）— 安装到 ~/.roo/commands/
+   mkdir -p $HOME/.roo/commands
    for cmd in search browse recommend install uninstall update; do
-     curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/vscode-costrict/commands/coding-hub/coding-hub-${cmd}.md" -o ".roo/commands/coding-hub-${cmd}.md"
+     curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/vscode-costrict/commands/coding-hub/coding-hub-${cmd}.md" -o "$HOME/.roo/commands/coding-hub-${cmd}.md"
    done
    ```
 
@@ -36,12 +36,12 @@ description: '更新 coding-hub skill 和子命令到最新版本。用法: /cod
    已从 GitHub 拉取最新版本：
 
    - $HOME/.costrict/skills/coding-hub/SKILL.md
-   - .roo/commands/coding-hub-search.md
-   - .roo/commands/coding-hub-browse.md
-   - .roo/commands/coding-hub-recommend.md
-   - .roo/commands/coding-hub-install.md
-   - .roo/commands/coding-hub-uninstall.md
-   - .roo/commands/coding-hub-update.md
+   - $HOME/.roo/commands/coding-hub-search.md
+   - $HOME/.roo/commands/coding-hub-browse.md
+   - $HOME/.roo/commands/coding-hub-recommend.md
+   - $HOME/.roo/commands/coding-hub-install.md
+   - $HOME/.roo/commands/coding-hub-uninstall.md
+   - $HOME/.roo/commands/coding-hub-update.md
    ```
 
 ## 错误处理
