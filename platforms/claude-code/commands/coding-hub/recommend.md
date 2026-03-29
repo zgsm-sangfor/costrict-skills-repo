@@ -8,12 +8,10 @@ $ARGUMENTS
 
 ---
 
-## 数据源
+## 数据处理（重要：用 Bash 预过滤，避免全量 JSON 进入上下文）
 
 索引 URL: `https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/catalog/index.json`
 本地备用: `/Volumes/Work/Projects/costrict-skills-repo/catalog/index.json`
-
-用 Bash 执行: `curl -s <URL>` 获取 JSON，如果失败则用 Read 读取本地备用路径。
 
 ## 执行流程
 
@@ -29,11 +27,16 @@ $ARGUMENTS
    - 读取 `Gemfile` → 提取 Ruby gem
    - 检查文件后缀: `.tsx`→react, `.vue`→vue, `.py`→python, `.go`→go, `.rs`→rust, `.swift`→swift, `.kt`→kotlin
    - 检查配置文件: `Dockerfile`→docker, `.github/workflows/`→ci-cd, `tsconfig.json`→typescript
+3. 下载索引到临时文件: `curl -s <URL> -o "$TMPDIR/coding-hub-index.json"`，如果失败则用本地备用路径
+4. 用 python 脚本预过滤（跨平台：macOS/Linux 用 python3，Windows 用 python，探测命令 `$(command -v python3 || command -v python)`）:
+   - 读取 JSON 文件
+   - 将检测到的项目 tags 与每条的 `tags` + `tech_stack` 做交集匹配
+   - 如果指定了 type 过滤，先按 type 字段过滤
+   - 按匹配标签数 + stars 降序排序
+   - 输出 top 10，每行格式: `name\ttype\tmatched_tags\tstars\tdescription`（TSV 纯文本）
+5. 将 bash 输出的 TSV 结果格式化为表格展示给用户
 
-2. 将识别到的技术栈与索引中每条的 `tags` 和 `tech_stack` 做交集匹配
-3. 如果指定了类型过滤，先按 `type` 字段过滤匹配结果
-4. 按匹配标签数 + stars 排序，展示 Top 10
-4. 展示格式：
+## 输出格式
 
 ```
 ## 项目推荐
@@ -45,4 +48,4 @@ $ARGUMENTS
 | 1 | xxx  | MCP  | python, fastapi | 1234 | xxx |
 ```
 
-5. 提示: "输入 `/coding-hub:install <名称>` 安装"
+6. 提示: "输入 `/coding-hub:install <名称>` 安装"

@@ -36,6 +36,12 @@ description: >
 - `tech_stack`: 技术栈数组
 - `install`: 安装信息
 
+**重要：数据预过滤策略**
+索引文件较大（5000+ 条目），禁止将全量 JSON 读入上下文。
+执行 search/browse/recommend 时，必须用 Bash 调用 python 脚本在 shell 侧完成过滤，
+只将过滤后的 top N 结果（纯文本）送入上下文进行格式化展示。
+Python 命令跨平台探测: `$(command -v python3 || command -v python)`
+
 ## 命令
 
 解析用户输入，匹配以下命令模式：

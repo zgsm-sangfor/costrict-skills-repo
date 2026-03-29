@@ -8,50 +8,67 @@ $ARGUMENTS
 
 ---
 
-## 数据源
+## 数据处理（重要：用 Bash 预过滤，避免全量 JSON 进入上下文）
 
 索引 URL: `https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/catalog/index.json`
 本地备用: `/Volumes/Work/Projects/costrict-skills-repo/catalog/index.json`
 
-用 Bash 执行: `curl -s <URL>` 获取 JSON，如果失败则用 Read 读取本地备用路径。
+从 `$ARGUMENTS` 中提取可选的分类参数和 `type:<值>` 过滤条件后，用 Bash 执行预过滤：
 
-## 执行流程
+1. 下载索引到临时文件: `curl -s <URL> -o "$TMPDIR/coding-hub-index.json"`，如果失败则用 Read 读取本地备用路径并保存到同一临时文件
+2. 用 python 脚本处理（跨平台：macOS/Linux 用 python3，Windows 用 python，探测命令 `$(command -v python3 || command -v python)`）
 
-0. 从 `$ARGUMENTS` 中提取可选的类型过滤参数
-   - 支持 `type:mcp`、`type:skill`、`type:rule`、`type:prompt` 过滤
-   - 示例: `/coding-hub:browse type:skill` — 只浏览 Skill 类型
-   - 示例: `/coding-hub:browse backend type:mcp` — 只浏览 backend 分类下的 MCP
-   - 如果参数中包含 `type:<值>`，提取为过滤条件，剩余部分作为分类参数
-   - 如果指定了类型过滤，在执行后续步骤前先按 `type` 字段过滤索引
+### 无参数时：分类概览
 
-### 无参数时: 展示分类概览
+用 Bash 执行以下 python 脚本（内联 `-c`）：
 
-1. 获取索引，按 `category` 分组计数
-2. 展示：
-
+```bash
+PY=$(command -v python3 || command -v python)
+$PY -c "
+import json, sys
+from collections import Counter
+data = json.load(open('$TMPDIR/coding-hub-index.json'))
+type_filter = sys.argv[1] if len(sys.argv) > 1 else ''
+if type_filter:
+    data = [x for x in data if x.get('type') == type_filter]
+counts = Counter(x.get('category','unknown') for x in data)
+for cat, cnt in sorted(counts.items(), key=lambda x: -x[1]):
+    print(f'{cat}\t{cnt}')
+" "${TYPE_FILTER}"
 ```
-## 资源分类
+
+将 TSV 输出格式化为表格：
 
 | 分类 | 数量 | 描述 |
 |------|------|------|
-| frontend | 42 | 前端框架与工具 |
-| backend | 38 | 后端框架与语言 |
-| fullstack | 5 | 全栈项目模板 |
-| mobile | 12 | 移动端开发 |
-| devops | 20 | 运维与部署 |
-| database | 15 | 数据库工具 |
-| testing | 18 | 测试框架与工具 |
-| security | 10 | 安全相关 |
-| ai-ml | 30 | AI 与机器学习 |
-| tooling | 50 | 开发工具链 |
-| documentation | 8 | 技术文档 |
+| ... | ... | （根据分类名补充中文描述） |
+
+提示: "输入 `/coding-hub:browse <分类名>` 查看详情"
+
+### 有参数时：展示该分类下条目
+
+用 Bash 执行以下 python 脚本（内联 `-c`）：
+
+```bash
+PY=$(command -v python3 || command -v python)
+$PY -c "
+import json, sys
+data = json.load(open('$TMPDIR/coding-hub-index.json'))
+category = sys.argv[1]
+type_filter = sys.argv[2] if len(sys.argv) > 2 else ''
+items = [x for x in data if x.get('category') == category]
+if type_filter:
+    items = [x for x in items if x.get('type') == type_filter]
+items.sort(key=lambda x: -(x.get('stars') or 0))
+for x in items:
+    print(f\"{x.get('name','')}\t{x.get('type','')}\t{x.get('stars') or 0}\t{x.get('description','')}\")
+" "${CATEGORY}" "${TYPE_FILTER}"
 ```
 
-3. 提示: "输入 `/coding-hub:browse <分类名>` 查看详情"
+将 TSV 输出格式化为表格：
 
-### 有参数时: 展示该分类下所有条目
+| 名称 | 类型 | Stars | 描述 |
+|------|------|-------|------|
+| ... | ... | ... | ... |
 
-1. 从 `$ARGUMENTS` 中提取分类名
-2. 过滤 `category == 参数`
-3. 按 type 分组展示，每组按 stars 降序
-4. 提示: "输入 `/coding-hub:install <名称>` 安装"
+提示: "输入 `/coding-hub:install <名称>` 安装"
