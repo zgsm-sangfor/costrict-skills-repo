@@ -10,8 +10,8 @@ $ARGUMENTS
 
 ## 数据源
 
-索引 URL: `https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/catalog/index.json`
-本地备用: `/Volumes/Work/Projects/costrict-skills-repo/catalog/index.json`
+索引 URL: `https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/catalog/index.json`
+本地备用: `/Volumes/Work/Projects/costrict-coding-hub/catalog/index.json`
 
 用 Bash 执行: `curl -s <URL>` 获取 JSON，如果失败则用 Read 读取本地备用路径。
 

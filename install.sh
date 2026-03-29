@@ -8,7 +8,7 @@ set -euo pipefail
 #
 # Platforms: claude-code, opencode, costrict, vscode-costrict
 
-BASE_URL="https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main"
+BASE_URL="https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main"
 COMMANDS="search browse recommend install uninstall update"
 
 # --- Auto-detect platform via process-injected env vars ---

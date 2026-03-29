@@ -4,9 +4,9 @@
     Coding Hub installer for Windows (PowerShell)
 .DESCRIPTION
     Usage:
-      irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.ps1 | iex
+      irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.ps1 | iex
       # Or with explicit platform:
-      & ([scriptblock]::Create((irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.ps1))) -Platform claude-code
+      & ([scriptblock]::Create((irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.ps1))) -Platform claude-code
 .PARAMETER Platform
     Target platform: claude-code, opencode, costrict, vscode-costrict
     If omitted, auto-detects via environment variables.
@@ -18,7 +18,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-$BaseUrl = "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main"
+$BaseUrl = "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main"
 $Commands = @("search", "browse", "recommend", "install", "uninstall", "update")
 
 # --- Auto-detect platform ---

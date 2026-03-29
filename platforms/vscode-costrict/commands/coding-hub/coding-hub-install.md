@@ -18,7 +18,7 @@ $ARGUMENTS
 
 ## 数据源
 
-索引 URL: `https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/catalog/index.json`
+索引 URL: `https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/catalog/index.json`
 
 用 Bash 执行: `curl -s <URL>` 获取 JSON。
 

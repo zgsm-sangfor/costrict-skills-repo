@@ -9,7 +9,7 @@ argument-hint: (no arguments)
 
 ## 源地址
 
-基础 URL: `https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main`
+基础 URL: `https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main`
 
 ## 执行流程
 
@@ -25,12 +25,12 @@ argument-hint: (no arguments)
 
    ```bash
    # Skill（全局）
-   curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/costrict/skills/coding-hub/SKILL.md" -o ~/.costrict/skills/coding-hub/SKILL.md
+   curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/costrict/skills/coding-hub/SKILL.md" -o ~/.costrict/skills/coding-hub/SKILL.md
 
    # 子命令（项目级）
    mkdir -p .costrict/coding-hub/commands/
    for cmd in search browse recommend install uninstall update; do
-     curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/costrict/commands/coding-hub/coding-hub-${cmd}.md" -o ".costrict/coding-hub/commands/coding-hub-${cmd}.md"
+     curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/costrict/commands/coding-hub/coding-hub-${cmd}.md" -o ".costrict/coding-hub/commands/coding-hub-${cmd}.md"
    done
    ```
 

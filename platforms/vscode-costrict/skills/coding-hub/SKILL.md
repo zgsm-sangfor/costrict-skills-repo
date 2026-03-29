@@ -26,7 +26,7 @@ metadata:
 
 ## 数据源
 
-索引 URL: `https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/catalog/index.json`
+索引 URL: `https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/catalog/index.json`
 
 每次执行命令时，用 `curl -s` 获取这个 JSON 文件。索引是一个数组，每个条目包含：
 - `id`: 唯一标识
@@ -241,12 +241,12 @@ Python 命令跨平台探测: `$(command -v python3 || command -v python)`
    ```bash
    # Skill（全局）— 注意用 $HOME 展开路径
    mkdir -p $HOME/.costrict/skills/coding-hub
-   curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/vscode-costrict/skills/coding-hub/SKILL.md" -o $HOME/.costrict/skills/coding-hub/SKILL.md
+   curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/vscode-costrict/skills/coding-hub/SKILL.md" -o $HOME/.costrict/skills/coding-hub/SKILL.md
 
    # 子命令（全局）— 安装到 ~/.roo/commands/
    mkdir -p $HOME/.roo/commands
    for cmd in search browse recommend install uninstall update; do
-     curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/vscode-costrict/commands/coding-hub/coding-hub-${cmd}.md" -o "$HOME/.roo/commands/coding-hub-${cmd}.md"
+     curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/vscode-costrict/commands/coding-hub/coding-hub-${cmd}.md" -o "$HOME/.roo/commands/coding-hub-${cmd}.md"
    done
    ```
 

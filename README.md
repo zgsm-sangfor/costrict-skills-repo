@@ -6,9 +6,9 @@
 <p><strong>5000+ 精选开发资源一站式索引</strong><br/>MCP Servers · Skills · Rules · Prompts</p>
 
 <p>
-  <a href="https://github.com/zgsm-sangfor/costrict-skills-repo/stargazers"><img src="https://img.shields.io/github/stars/zgsm-sangfor/costrict-skills-repo?style=flat-square&color=4A90D9" alt="Stars" /></a>
-  <a href="https://github.com/zgsm-sangfor/costrict-skills-repo/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zgsm-sangfor/costrict-skills-repo?style=flat-square" alt="License" /></a>
-  <a href="https://github.com/zgsm-sangfor/costrict-skills-repo/commits/main"><img src="https://img.shields.io/github/last-commit/zgsm-sangfor/costrict-skills-repo?style=flat-square" alt="Last Commit" /></a>
+  <a href="https://github.com/zgsm-sangfor/costrict-coding-hub/stargazers"><img src="https://img.shields.io/github/stars/zgsm-sangfor/costrict-coding-hub?style=flat-square&color=4A90D9" alt="Stars" /></a>
+  <a href="https://github.com/zgsm-sangfor/costrict-coding-hub/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zgsm-sangfor/costrict-coding-hub?style=flat-square" alt="License" /></a>
+  <a href="https://github.com/zgsm-sangfor/costrict-coding-hub/commits/main"><img src="https://img.shields.io/github/last-commit/zgsm-sangfor/costrict-coding-hub?style=flat-square" alt="Last Commit" /></a>
   <img src="https://img.shields.io/badge/resources-5061-2ECC71?style=flat-square" alt="Resources" />
 </p>
 
@@ -37,26 +37,26 @@ Coding Hub 从 9 个上游源自动聚合、过滤、评估，让你和你的 Ag
 
 ```bash
 # Costrict CLI（在项目根目录执行）
-curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash -s -- --platform costrict
+curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.sh | bash -s -- --platform costrict
 
 # VSCode Costrict 插件
-curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash -s -- --platform vscode-costrict
+curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.sh | bash -s -- --platform vscode-costrict
 
 # Claude Code
-curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash -s -- --platform claude-code
+curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.sh | bash -s -- --platform claude-code
 
 # Opencode（在项目根目录执行）
-curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash -s -- --platform opencode
+curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.sh | bash -s -- --platform opencode
 ```
 
 **Windows (PowerShell)：**
 
 ```powershell
 # Costrict CLI
-irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.ps1 | iex
 
 # 指定平台（如自动检测失败）
-& ([scriptblock]::Create((irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.ps1))) -Platform costrict
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.ps1))) -Platform costrict
 ```
 
 安装完成后试试：
@@ -76,7 +76,7 @@ irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/ins
 严格按照步骤完成 coding-hub 技能的安装。
 
 不要 clone 整个仓库，只需要读取这个 raw URL 的内容：
-https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/README.md
+https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/README.md
 
 根据你所在的平台（Claude Code / Opencode / Costrict CLI / VSCode Costrict），
 执行对应的安装命令。安装完成后告诉我结果。
@@ -534,7 +534,7 @@ Skills 扩展 AI Agent 的专业能力。精选来自 Anthropic 官方、Hugging
 <summary>项目结构</summary>
 
 ```
-costrict-skills-repo/
+costrict-coding-hub/
 ├── install.sh               # 一键安装脚本（macOS/Linux，curl | bash）
 ├── install.ps1              # 一键安装脚本（Windows，irm | iex）
 ├── catalog/                  # 资源索引（数据层）
@@ -575,13 +575,13 @@ costrict-skills-repo/
 **macOS / Linux：**
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.sh | bash
 ```
 
 **Windows (PowerShell)：**
 
 ```powershell
-irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.ps1 | iex
 ```
 
 脚本通过以下**进程级环境变量**自动识别平台（这些变量由各平台进程启动时注入，不会互相污染）：
@@ -599,26 +599,26 @@ irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/ins
 
 **macOS / Linux：**
 ```bash
-curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash -s -- --platform <platform>
+curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.sh | bash -s -- --platform <platform>
 ```
 
 **Windows (PowerShell)：**
 ```powershell
-& ([scriptblock]::Create((irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.ps1))) -Platform <platform>
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.ps1))) -Platform <platform>
 ```
 
 示例：
 ```bash
 # Claude Code (macOS/Linux)
-curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash -s -- --platform claude-code
+curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.sh | bash -s -- --platform claude-code
 
 # Opencode（在项目根目录执行）
-curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.sh | bash -s -- --platform opencode
+curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.sh | bash -s -- --platform opencode
 ```
 
 ```powershell
 # Claude Code (Windows)
-& ([scriptblock]::Create((irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/install.ps1))) -Platform claude-code
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.ps1))) -Platform claude-code
 ```
 
 <details>
@@ -629,10 +629,10 @@ curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/m
 
 ```bash
 mkdir -p ~/.costrict/skills/coding-hub
-curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/costrict/skills/coding-hub/SKILL.md" -o ~/.costrict/skills/coding-hub/SKILL.md
+curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/costrict/skills/coding-hub/SKILL.md" -o ~/.costrict/skills/coding-hub/SKILL.md
 mkdir -p .costrict/coding-hub/commands
 for cmd in search browse recommend install uninstall update; do
-  curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/costrict/commands/coding-hub/coding-hub-${cmd}.md" -o .costrict/coding-hub/commands/coding-hub-${cmd}.md
+  curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/costrict/commands/coding-hub/coding-hub-${cmd}.md" -o .costrict/coding-hub/commands/coding-hub-${cmd}.md
 done
 ```
 
@@ -640,7 +640,7 @@ done
 
 ```bash
 mkdir -p ~/.costrict/skills/coding-hub
-curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/vscode-costrict/skills/coding-hub/SKILL.md" -o ~/.costrict/skills/coding-hub/SKILL.md
+curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/vscode-costrict/skills/coding-hub/SKILL.md" -o ~/.costrict/skills/coding-hub/SKILL.md
 ```
 
 > VSCode Costrict 插件无需安装子命令，所有命令逻辑已内置于 SKILL.md。
@@ -650,9 +650,9 @@ curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/
 
 ```bash
 mkdir -p ~/.claude/skills/coding-hub
-curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/claude-code/skills/coding-hub/SKILL.md" -o ~/.claude/skills/coding-hub/SKILL.md
+curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/claude-code/skills/coding-hub/SKILL.md" -o ~/.claude/skills/coding-hub/SKILL.md
 for cmd in search browse recommend install uninstall update; do
-  curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/claude-code/commands/coding-hub/${cmd}.md" -o ~/.claude/skills/coding-hub/${cmd}.md
+  curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/claude-code/commands/coding-hub/${cmd}.md" -o ~/.claude/skills/coding-hub/${cmd}.md
 done
 ```
 
@@ -660,10 +660,10 @@ done
 
 ```bash
 mkdir -p ~/.opencode/skills/coding-hub
-curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/opencode/skills/coding-hub/SKILL.md" -o ~/.opencode/skills/coding-hub/SKILL.md
+curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/opencode/skills/coding-hub/SKILL.md" -o ~/.opencode/skills/coding-hub/SKILL.md
 mkdir -p .opencode/command
 for cmd in search browse recommend install uninstall update; do
-  curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/opencode/command/coding-hub-${cmd}.md" -o .opencode/command/coding-hub-${cmd}.md
+  curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/opencode/command/coding-hub-${cmd}.md" -o .opencode/command/coding-hub-${cmd}.md
 done
 ```
 </details>
@@ -700,7 +700,7 @@ done
 
 ### 数据源
 
-索引 URL: `https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/catalog/index.json`
+索引 URL: `https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/catalog/index.json`
 
 索引是 JSON 数组，每个条目包含 `id`, `name`, `type`(mcp/skill/rule/prompt), `description`, `source_url`, `stars`, `category`, `tags`, `tech_stack`, `install`。
 

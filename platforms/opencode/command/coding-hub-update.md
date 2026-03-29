@@ -8,7 +8,7 @@ description: '更新 coding-hub skill 和子命令到最新版本。用法: /cod
 
 ## 源地址
 
-基础 URL: `https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main`
+基础 URL: `https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main`
 
 ## 执行流程
 
@@ -24,12 +24,12 @@ description: '更新 coding-hub skill 和子命令到最新版本。用法: /cod
 
    ```bash
    # Skill（全局）
-   curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/opencode/skills/coding-hub/SKILL.md" -o ~/.opencode/skills/coding-hub/SKILL.md
+   curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/opencode/skills/coding-hub/SKILL.md" -o ~/.opencode/skills/coding-hub/SKILL.md
 
    # 子命令（项目级）
    mkdir -p .opencode/command/
    for cmd in search browse recommend install uninstall update; do
-     curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-skills-repo/main/platforms/opencode/command/coding-hub-${cmd}.md" -o ".opencode/command/coding-hub-${cmd}.md"
+     curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/opencode/command/coding-hub-${cmd}.md" -o ".opencode/command/coding-hub-${cmd}.md"
    done
    ```
 
