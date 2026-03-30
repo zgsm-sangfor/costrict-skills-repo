@@ -13,7 +13,6 @@ from utils import (
     github_api,
     categorize,
     extract_tags,
-    get_repo_languages,
     merge_topics_into_tags,
     to_kebab_case,
     save_index,
@@ -168,7 +167,6 @@ def parse_antigravity_skills() -> list:
     entries = []
     skipped = 0
     cat_filtered = 0
-    repo_languages = get_repo_languages(f"https://github.com/{REPO}")
     for skill in skills_data:
         if not isinstance(skill, dict):
             continue
@@ -210,7 +208,7 @@ def parse_antigravity_skills() -> list:
                 "stars": stars,
                 "category": category,
                 "tags": tags,
-                "tech_stack": repo_languages,
+                "tech_stack": [],
                 "install": {
                     "method": "git_clone",
                     "repo": f"https://github.com/{REPO}.git",
@@ -274,7 +272,7 @@ def parse_anthropic_skills() -> list:
                 "stars": None,
                 "category": category,
                 "tags": tags + ["anthropic", "official"],
-                "tech_stack": get_repo_languages("https://github.com/anthropics/skills"),
+                "tech_stack": [],
                 "install": {
                     "method": "git_clone",
                     "repo": "https://github.com/anthropics/skills.git",
@@ -372,7 +370,7 @@ def parse_ai_agent_skills() -> list:
                 "stars": None,
                 "category": category,
                 "tags": tags,
-                "tech_stack": get_repo_languages("https://github.com/skillcreatorai/Ai-Agent-Skills"),
+                "tech_stack": [],
                 "install": {
                     "method": "git_clone",
                     "repo": "https://github.com/skillcreatorai/Ai-Agent-Skills.git",
@@ -490,7 +488,7 @@ def parse_openclaw_skills(tier1_entries: list) -> list[dict]:
                 "pushed_at": pushed_at,
                 "category": category,
                 "tags": tags,
-                "tech_stack": get_repo_languages(url) if "github.com" in url else [],
+                "tech_stack": [],
                 "install": {
                     "method": "git_clone",
                     "repo": SKILLS_REPO,

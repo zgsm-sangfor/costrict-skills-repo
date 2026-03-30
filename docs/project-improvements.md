@@ -50,15 +50,41 @@
 - 做一次全量 backfill：遍历所有 stars>0 的条目，调 GitHub API 补充 topics + languages
 - 注意 rate limit：3037 条全量补需要 3000+ API 调用，有 token 的情况下约 30 分钟
 
-### 1.5 prompt 类型只有 2 条
+### 1.5 rules / prompts 被全局去重误杀
 
-**现状**：mcp=1628, skill=1225, rule=182, prompt=2。prompt 几乎是空的。
+**现状**：
+- `catalog/rules/index.json` 有 232 条，`curated` 后原始总量 236 条，但最终总目录里只剩 182 条
+- `catalog/prompts/index.json` 有 511 条，`curated` 后原始总量 513 条，但最终总目录里只剩 2 条
+
+这不是采集不到，而是 `merge_index.py` 走全局 `deduplicate()` 时，把 `source_url` 当成了强唯一键。  
+而 `rules/prompts` 这两类资源天然经常共用同一个仓库级 `source_url`：
+- `prompts.chat` 的大量 prompt 都指向同一个仓库 URL
+- `wonderful-prompts` 的编程类 prompt 也共用同一个 README URL
+- `rules-2.1-optimized` 同一目录下多个 rule 也会共用目录 URL
+
+结果就是：
+- `prompt` 基本退化成“每个源仓库只保留 1 条”，最终只剩 2 条
+- `rule` 也被压掉一批，本来 236 条只保留了 182 条
 
 **方案**：
-- 扩展上游源：awesome-chatgpt-prompts（67k stars）只同步了 2 条，应该是过滤太激进
-- `sync_prompts.py` 的 `is_coding_related()` 过滤把大量 prompt 排除了（因为很多 prompt 不带 coding 关键词但实际有用）
-- 放宽过滤条件，或者对 prompt 类型做专门的 relevance 判定
-- 中期考虑增加更多 prompt 上游源
+- 调整全局去重策略，不要对 `rule/prompt` 继续使用“仓库级 `source_url` 强唯一”
+- 去重主键改成按资源类型区分：
+  - `mcp`：优先按标准化 repo URL 去重
+  - `skill`：按 `id` + 子路径 / 资源路径去重
+  - `rule/prompt`：优先按 `id` 去重，`source_url` 只作为辅助信号，不作为硬去重键
+- 对 `rule/prompt` 补一个更细粒度的 `source_path` / `artifact_url` 字段，表示具体文件或具体章节来源
+- merge 前后增加类型级数据量校验。如果 `prompt` 从 500+ 被压到个位数，应直接告警或阻断提交
+
+### 1.6 prompt 类型只有 2 条只是表象
+
+**现状**：当前总目录里是 `mcp=1628, skill=1225, rule=182, prompt=2`，看起来像 prompt 源极少。
+
+**本质**：从原始同步结果看，prompt 并不少，真正的问题是 1.5 里的去重策略设计错误，不是上游覆盖面不足。
+
+**方案**：
+- 先修 1.5 的全局去重键设计，再重新评估 prompt 覆盖率
+- 在去重问题修好前，不要贸然把结论归因到 `sync_prompts.py` 过滤过严
+- 去重修复后再判断是否需要扩展 prompt 上游源、放宽 coding relevance 判定
 
 ---
 
@@ -180,6 +206,196 @@
 - 加 fallback 策略：LLM 不可用时，用 heuristic 评估（stars + freshness + has_readme 加权）替代
 - 或者把评估结果持久化到 `.llm_cache.json`，不依赖每次都调 LLM
 
+### 4.5 统一富化评分层，替代分散的 LLM 调用
+
+**现状**：
+- Tier 1 skill 单独做一次中文翻译
+- Tier 2 skill 单独做一次 LLM 评估
+- merge 阶段再对 tags 不足的条目做一次 LLM 补 tag
+
+这三步都在做“语义理解 + 元数据富化”，但现在分散在不同阶段、不同 prompt、不同缓存中：
+- 判断标准不统一
+- 不同类型资源治理强度不一致
+- 同一个条目可能被多次送进 LLM
+- `stars <= 50` 这类 repo 级硬过滤发生得过早，小仓库里的优质 skill 会被一刀砍掉
+
+**问题本质**：
+- 当前 Tier 2 是“repo 级硬门槛 + skill 级 LLM 评估”
+- 其中 `stars` 是仓库级信号，不是 skill 粒度信号，只适合做弱排序，不适合做一票否决
+- 这会导致“高热度 repo 里的普通 skill 容易进入下一轮，小众 repo 里的优质 skill 直接出局”
+
+**方案**：把现有零散的 LLM 逻辑升级为一层统一的 `Unified Enrichment + Scoring Layer`
+
+统一评分层不只输出一个总分，而是输出一组标准化字段：
+
+```
+{
+  "coding_relevance": 1-5,     # 与开发工作流的直接相关性
+  "content_quality": 1-5,      # 描述清晰度、信息密度、是否像真实可用资源
+  "specificity": 1-5,          # 内容是否具体，尤其适用于 rule/prompt
+  "installability_hint": 1-5,  # 语义上是否可直接使用；真正安装完整度仍由本地规则计算
+  "category": "...",           # 统一分类
+  "tags": ["..."],             # 规范化 tags
+  "description_zh": "...",     # 中文描述
+  "reason": "...",             # 一句解释
+  "confidence": 1-5            # 模型对自己判断的确信度
+}
+```
+
+其中仍应保留本地 deterministic 信号，不交给 LLM：
+- popularity：stars
+- freshness：最近 push 时间
+- installability：安装字段是否完整、路径是否明确
+- source_trust：官方源 / 成熟社区源 / 未知源
+- duplicate_status：是否重复
+- has_readme / license / languages 等仓库元信息
+
+最终由系统把“本地规则分”和“LLM 语义分”合成为 `final_score`，并产出决策：
+
+```
+decision = accept | review | reject
+```
+
+#### 为什么它比“给所有层挂一个 Tier 2”更合理
+
+不是把其他层也照抄 Tier 2，而是把 Tier 2 现有的粗暴门槛拆掉，重构成全类型通用的一层。
+
+好处：
+- 小仓库里的优质 skill 不会被 `stars <= 50` 直接打死
+- Tier 1 / Tier 2 / MCP / Rule / Prompt 都可以共享同一套语义富化能力
+- `category` / `tags` / `description_zh` / `reason` 的生成逻辑统一
+- 可以把目前分散的两到三次 LLM 调用收敛成一次 batch enrichment
+
+#### 不同类型共享字段，但权重不同
+
+统一的是评分框架，不是所有类型都用一套同权重公式。
+
+建议：
+
+- `skill`
+  - relevance 30
+  - quality 25
+  - installability 20
+  - maintainability 10
+  - source_trust 10
+  - popularity 5
+- `mcp`
+  - installability 30
+  - relevance 20
+  - maintainability 20
+  - quality 15
+  - source_trust 10
+  - popularity 5
+- `rule`
+  - relevance 30
+  - specificity 25
+  - direct_usability 20
+  - quality 15
+  - source_trust 10
+- `prompt`
+  - relevance 30
+  - specificity 30
+  - reproducibility 20
+  - quality 10
+  - source_trust 10
+
+这里 `popularity` 应从“生死线”降级为“弱排序信号”。
+
+#### 能否替代现有两层 LLM
+
+可以，基本可以。
+
+新的统一评分层可以一次返回：
+- 语义评分
+- `category`
+- `tags`
+- `description_zh`
+- `reason`
+
+这样可以收敛掉当前分散的几类调用：
+- Tier 1 description 翻译
+- Tier 2 skill 评估
+- merge 阶段的 tag 补全
+
+真正应该保留的不是“原有两层 LLM”，而是三段式结构：
+
+```
+最小硬过滤 -> 统一富化评分 -> 最终决策
+```
+
+其中“最小硬过滤”只保留这些便宜且确定的拦截：
+- 解析失败
+- 明显重复
+- 明显 spam
+- 明显非 coding
+- description 短到无法判断
+
+除此之外，尽量进入统一评分层，而不是在前面被 repo 级规则提前淘汰。
+
+#### 新流水线草图
+
+```
+source adapters
+  ↓
+normalize
+  - 统一 schema
+  - 统一 source_url / path
+  - 初始 category / tags / install 解析
+  ↓
+minimal hard filter
+  - parse failure
+  - duplicate
+  - spam
+  - obvious non-coding
+  - too-short-to-judge
+  ↓
+deterministic pre-score
+  - stars
+  - pushed_at
+  - license / readme / languages
+  - install completeness
+  - source trust
+  ↓
+unified enrichment + scoring
+  - coding_relevance
+  - content_quality
+  - specificity
+  - category normalization
+  - tags normalization
+  - description_zh
+  - confidence / reason
+  ↓
+decision engine
+  - accept
+  - review
+  - reject
+  ↓
+merge
+  - 全局去重
+  - 类型级数量校验
+  - curated 合并
+  ↓
+publish
+  - catalog/index.json
+  - README counts
+  - featured / search artifacts
+```
+
+#### 分阶段落地建议
+
+**Phase 1**
+- 去掉 Tier 2 的 `stars <= 50` 硬门槛，改成 pre-score 信号
+- 统一 LLM 输出结构，让 Tier 2 评估同时返回 `tags` / `category` / `description_zh`
+
+**Phase 2**
+- 让 Tier 1 也进入同一套 enrichment 流程，但只用于富化和排序，不做强过滤
+- merge 阶段移除单独的 tag enrichment 调用
+
+**Phase 3**
+- 把 MCP / Rule / Prompt 也接入统一评分层
+- 为不同类型配置不同权重和决策阈值
+- 把 `accept/review/reject` 引入 CI 完整性校验和精选生成流程
+
 ---
 
 ## 五、社区与增长
@@ -216,13 +432,15 @@
 | 优先级 | 改进项 | 影响面 | 工作量 | 状态 |
 |--------|--------|--------|--------|------|
 | **P0** | CI 加测试步骤 | 工程质量底线 | 小 | ✅ 已完成 — `.github/workflows/test.yml` |
-| **P0** | tags/tech_stack 全量 backfill | 搜索和推荐的核心依赖 | 中 | 待实施 |
+| **P0** | tags/tech_stack 全量 backfill | 搜索和推荐的核心依赖 | 中 | ✅ 已完成 — `llm_tagger.py` 批量 LLM 补 tag + `merge_index.py` enrichment 层补 tech_stack；sync 阶段保留 topics→tags 零成本富化，languages API 调用下沉到 merge 阶段避免 rate limit |
 | **P0** | category=other 修正 | 数据一致性 | 小 | ✅ 已完成 — `sync_skills.py` 映射修正 + `merge_index.py` 兜底修复 |
 | **P1** | 补 merge_index 等核心脚本测试 | 防止合并逻辑出 bug | 中 | ✅ 已完成 — `tests/test_merge_index.py` (6 cases) |
+| **P1** | 统一富化评分层（替代分散 LLM） | 数据治理一致性、减少误杀 | 中到大 | 待设计 / 待实施 |
 | **P1** | 四平台文件模板化 | 维护效率 | 中 | 待实施 |
 | **P1** | install.method=manual 批量优化 | 用户可安装率从 67% 提升 | 中 | 待实施 |
 | **P1** | 同步 CI 完整性检查 | 防数据丢失 | 小 | ✅ 已完成 — `sync.yml` merge 前校验各源数据 |
 | **P2** | abandoned 条目处理策略 | 质量感知 | 小 | 待实施 |
+| **P2** | 按类型重构去重主键 | 修复 rules/prompts 被误杀 | 中 | 待实施 |
 | **P2** | prompt 类型扩源 | 数据覆盖面 | 中 | 待实施 |
 | **P2** | 贡献指引 + 变更日志 | 社区增长 | 小 | 待实施 |
 | **P3** | 索引分片/API 化 | 性能（当前不紧急） | 大 | 待实施 |

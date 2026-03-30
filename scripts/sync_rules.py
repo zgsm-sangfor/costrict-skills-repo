@@ -10,7 +10,7 @@ from datetime import date
 sys.path.insert(0, os.path.dirname(__file__))
 from utils import (
     fetch_raw_content, github_api, categorize, extract_tags,
-    get_repo_languages, merge_topics_into_tags,
+    merge_topics_into_tags,
     to_kebab_case, save_index, logger,
 )
 
@@ -53,7 +53,6 @@ def parse_awesome_cursorrules() -> list:
 
         tags = extract_tags(name, description)
         category = categorize(name, description, tags)
-        tech_stack = get_repo_languages(rule_url) if "github.com" in rule_url else []
 
         entries.append({
             "id": f"{to_kebab_case(name)}-cursorrule",
@@ -64,7 +63,7 @@ def parse_awesome_cursorrules() -> list:
             "stars": None,
             "category": category,
             "tags": tags,
-            "tech_stack": tech_stack,
+            "tech_stack": [],
             "install": {
                 "method": "download_file",
                 "files": [raw_url]
@@ -125,7 +124,7 @@ def parse_rules_optimized() -> list:
                 "stars": None,
                 "category": category,
                 "tags": tags + [subdir.replace("-", " ")],
-                "tech_stack": get_repo_languages(f"https://github.com/Mr-chen-05/rules-2.1-optimized"),
+                "tech_stack": [],
                 "install": {
                     "method": "download_file",
                     "files": [raw_url]
