@@ -184,7 +184,7 @@ https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/README.m
 | 上游 | 来源 |
 |------|------|
 | MCP | [awesome-mcp-servers](https://github.com/wong2/awesome-mcp-servers) · [Awesome-MCP-ZH](https://github.com/yzfly/Awesome-MCP-ZH) · [mcp.so](https://mcp.so) |
-| Skills | [anthropics/skills](https://github.com/anthropics/skills) · [Ai-Agent-Skills](https://github.com/skillcreatorai/Ai-Agent-Skills) |
+| Skills | [anthropics/skills](https://github.com/anthropics/skills) · [Ai-Agent-Skills](https://github.com/skillcreatorai/Ai-Agent-Skills) · [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) |
 | Rules | [awesome-cursorrules](https://github.com/PatrickJS/awesome-cursorrules) · [rules-2.1-optimized](https://github.com/Mr-chen-05/rules-2.1-optimized) |
 | Prompts | [prompts.chat](https://github.com/f/prompts.chat) · [wonderful-prompts](https://github.com/langgptai/wonderful-prompts) |
 
@@ -202,7 +202,7 @@ https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/README.m
 | 类型 | 筛选策略 |
 |------|---------|
 | **MCP Servers** | 从 awesome-mcp-servers + Awesome-MCP-ZH + mcp.so 聚合，按独立仓库去重 |
-| **Skills** | Tier 1: anthropics/skills + Ai-Agent-Skills（全量）<br/>Tier 2: GitHub 搜索 + LLM 质量评估（TOP 300）<br/>Tier 3: 手工精选（curated.json） |
+| **Skills** | Tier 1: anthropics/skills + Ai-Agent-Skills + antigravity-awesome-skills（全量）<br/>Tier 2: GitHub 搜索 + LLM 质量评估（TOP 300）<br/>Tier 3: 手工精选（curated.json） |
 | **Rules** | awesome-cursorrules + rules-2.1-optimized，优先实用性和标签丰富度 |
 | **Prompts** | prompts.chat + wonderful-prompts，优先 coding 相关和中文资源 |
 
@@ -249,7 +249,7 @@ costrict-coding-hub/
 ├── install.sh               # 一键安装脚本（macOS/Linux，curl | bash）
 ├── install.ps1              # 一键安装脚本（Windows，irm | iex）
 ├── catalog/                  # 资源索引（数据层）
-│   ├── index.json            # 合并后的完整索引（869 条）
+│   ├── index.json            # 合并后的完整索引（3000+ 条）
 │   ├── schema.json           # 条目 schema 定义
 │   ├── mcp/                  # MCP Server 源数据
 │   ├── skills/               # Skill 源数据
