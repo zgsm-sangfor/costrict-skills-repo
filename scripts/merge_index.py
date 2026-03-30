@@ -33,7 +33,26 @@ def merge():
             all_entries.extend(curated)
 
     # Deduplicate by source_url + id (earlier entries take priority: Tier 1 > Tier 2 > Tier 3)
+    # Count pre-dedup entries by type for integrity check
+    pre_dedup_counts = {}
+    for entry in all_entries:
+        t = entry.get("type", "unknown")
+        pre_dedup_counts[t] = pre_dedup_counts.get(t, 0) + 1
+
     deduped = deduplicate(all_entries)
+
+    # Post-dedup integrity check: warn if any type lost >50%
+    post_dedup_counts = {}
+    for entry in deduped:
+        t = entry.get("type", "unknown")
+        post_dedup_counts[t] = post_dedup_counts.get(t, 0) + 1
+    for t, pre in pre_dedup_counts.items():
+        post = post_dedup_counts.get(t, 0)
+        drop_pct = (1 - post / pre) * 100 if pre > 0 else 0
+        if drop_pct > 50:
+            logger.warning(f"Dedup integrity: type={t} dropped {drop_pct:.0f}% ({pre} → {post})")
+        else:
+            logger.info(f"Dedup stats: type={t} {pre} → {post} (-{drop_pct:.0f}%)")
 
     # Fix invalid categories (e.g. "other" not in schema enum)
     VALID_CATEGORIES = {

@@ -466,17 +466,25 @@ def normalize_source_url(url: str) -> str:
 
 
 def deduplicate(entries: list) -> list:
-    """Deduplicate entries by id and source_url. Earlier entries take priority."""
+    """Deduplicate entries by id and source_url. Earlier entries take priority.
+
+    For rule/prompt types, only id-based dedup is applied (these types
+    legitimately share a single repo-level source_url across many entries).
+    For mcp/skill types, both id and source_url dedup are applied.
+    """
     seen_ids = {}    # id -> entry
     seen_urls = {}   # normalized_url -> entry
     result = []
+    # Types where multiple entries per source_url is expected
+    url_dedup_skip_types = {"rule", "prompt"}
     for entry in entries:
         eid = entry.get("id", "")
         if eid and eid in seen_ids:
             continue
 
         source_url = entry.get("source_url", "")
-        if source_url:
+        entry_type = entry.get("type", "")
+        if source_url and entry_type not in url_dedup_skip_types:
             norm = normalize_source_url(source_url)
             if norm in seen_urls:
                 continue

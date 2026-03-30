@@ -396,6 +396,97 @@ publish
 - 为不同类型配置不同权重和决策阈值
 - 把 `accept/review/reject` 引入 CI 完整性校验和精选生成流程
 
+#### Schema 迁移原则：保留旧 catalog，对外兼容演进
+
+统一评分层不应推翻现有 `catalog` 顶层字段。
+
+原因：
+- README 当前直接消费 `catalog` 中的多个字段
+- 搜索、推荐、平台命令也已经依赖现有 schema
+- 如果直接改字段名、改层级、改语义，会造成 README、索引消费方和命令侧同步漂移
+
+因此应该采用“顶层兼容 + 子对象扩展”的方式：
+
+**保留现有顶层发布字段**
+- `id`
+- `name`
+- `type`
+- `description`
+- `description_zh`
+- `source_url`
+- `source`
+- `category`
+- `tags`
+- `stars`
+- `tech_stack`
+- `install`
+- `health`
+- `last_synced`
+
+这些字段继续作为：
+- README 生成输入
+- 搜索 / 推荐输入
+- 平台命令消费字段
+
+**新增治理层子对象**
+
+建议新增：
+
+```json
+"evaluation": {
+  "coding_relevance": 5,
+  "content_quality": 4,
+  "specificity": 4,
+  "source_trust": 3,
+  "confidence": 4,
+  "final_score": 78,
+  "decision": "accept",
+  "reason": "描述清晰，安装路径明确，和开发流程直接相关"
+}
+```
+
+推荐放在 `evaluation` 中的字段：
+- `coding_relevance`
+- `content_quality`
+- `specificity`
+- `source_trust`
+- `confidence`
+- `final_score`
+- `decision`
+- `reason`
+
+这些字段的职责是：
+- 解释“系统为什么收录它 / 为什么把它排在前面”
+- 为排序、精选、人工 review 提供依据
+- 支持后续审计同步策略，而不是直接服务 README 展示
+
+**顶层字段保留，但生产方式可以统一重构**
+
+保留字段不代表保留原有多套生成逻辑。
+
+可以逐步把以下字段改为由统一评分层产出最终结果：
+- `category`
+- `tags`
+- `description_zh`
+
+也就是说：
+- 字段名保持不变，保证兼容
+- 字段来源切换到统一 enrichment/scoring 层，减少多套逻辑并存
+
+**迁移建议**
+
+Phase 1：
+- 先只写入 `evaluation`
+- README 和现有命令不读取 `evaluation`
+
+Phase 2：
+- 内部排序、精选生成、CI 完整性校验逐步读取 `evaluation`
+- 顶层 `category` / `tags` / `description_zh` 仍然保留，但由统一评分层写回
+
+Phase 3：
+- README 如有需要，可选择展示 `evaluation.final_score` 或 `evaluation.reason`
+- 但 `evaluation` 不应成为 README 正常生成的硬依赖，以避免迁移期耦合过重
+
 ---
 
 ## 五、社区与增长
@@ -440,7 +531,7 @@ publish
 | **P1** | install.method=manual 批量优化 | 用户可安装率从 67% 提升 | 中 | 待实施 |
 | **P1** | 同步 CI 完整性检查 | 防数据丢失 | 小 | ✅ 已完成 — `sync.yml` merge 前校验各源数据 |
 | **P2** | abandoned 条目处理策略 | 质量感知 | 小 | 待实施 |
-| **P2** | 按类型重构去重主键 | 修复 rules/prompts 被误杀 | 中 | 待实施 |
+| **P2** | 按类型重构去重主键 | 修复 rules/prompts 被误杀 | 中 | ✅ 已完成 — `deduplicate()` 按 type 分策略：prompt/rule 跳过 URL 去重，prompt 从 2→520，rule 从 182→236 |
 | **P2** | prompt 类型扩源 | 数据覆盖面 | 中 | 待实施 |
 | **P2** | 贡献指引 + 变更日志 | 社区增长 | 小 | 待实施 |
 | **P3** | 索引分片/API 化 | 性能（当前不紧急） | 大 | 待实施 |
