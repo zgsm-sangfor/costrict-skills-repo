@@ -112,6 +112,30 @@ class TestMergeIndex(unittest.TestCase):
         self.assertIn("score", result[0]["health"])
         self.assertIn("signals", result[0]["health"])
 
+    def test_merge_prefers_older_added_at_from_source_indexes(self):
+        entry = _make_entry(
+            "older-added", source_url="https://github.com/t/older-added"
+        )
+        entry["added_at"] = "2024-01-15"
+        self._write_index("mcp", [entry])
+        with open(os.path.join(self.tmpdir, "index.json"), "w") as f:
+            json.dump(
+                [
+                    {
+                        "id": "older-added",
+                        "type": "mcp",
+                        "source_url": "https://github.com/t/older-added",
+                        "added_at": "2026-03-25",
+                    }
+                ],
+                f,
+            )
+
+        merge_index.merge()
+        result = self._read_output()
+
+        self.assertEqual(result[0]["added_at"], "2024-01-15")
+
     def test_sorted_by_health_desc(self):
         self._write_index(
             "mcp",
@@ -183,7 +207,9 @@ class TestMergeIndex(unittest.TestCase):
     @unittest.mock.patch("merge_index.llm_translate_entries")
     @unittest.mock.patch("merge_index.llm_tag_entries")
     @unittest.mock.patch("merge_index.get_repo_languages")
-    def test_enrichment_languages_tech_stack(self, mock_langs, mock_llm, mock_translate):
+    def test_enrichment_languages_tech_stack(
+        self, mock_langs, mock_llm, mock_translate
+    ):
         """Entry with empty tech_stack gets API-enriched."""
         mock_llm.return_value = {}
         mock_langs.return_value = ["Python", "JavaScript"]
@@ -251,7 +277,9 @@ class TestMergeIndex(unittest.TestCase):
     @unittest.mock.patch("merge_index.llm_translate_entries")
     @unittest.mock.patch("merge_index.llm_tag_entries")
     @unittest.mock.patch("merge_index.get_repo_languages")
-    def test_dedup_integrity_warning_on_catastrophic_drop(self, mock_langs, mock_llm, mock_translate):
+    def test_dedup_integrity_warning_on_catastrophic_drop(
+        self, mock_langs, mock_llm, mock_translate
+    ):
         """When a type loses >50% of entries during dedup, a warning is logged."""
         mock_llm.return_value = {}
         mock_langs.return_value = []
