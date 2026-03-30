@@ -143,17 +143,27 @@ function Install-Costrict {
 
 function Install-VscodeCostrict {
     $skillDir = Join-Path $HOME ".costrict/skills/coding-hub"
+    $cmdDir = Join-Path $HOME ".roo/commands"
     New-Item -ItemType Directory -Path $skillDir -Force | Out-Null
+    New-Item -ItemType Directory -Path $cmdDir -Force | Out-Null
 
     Write-Host "Downloading skill..."
     Download-File "$BaseUrl/platforms/vscode-costrict/skills/coding-hub/SKILL.md" "$skillDir/SKILL.md"
 
+    Write-Host "Downloading commands (global)..."
+    foreach ($cmd in $Commands) {
+        Download-File "$BaseUrl/platforms/vscode-costrict/commands/coding-hub/coding-hub-$cmd.md" "$cmdDir/coding-hub-$cmd.md"
+    }
+
     Write-Host ""
     Write-Host "=== Coding Hub installed (VSCode Costrict) ==="
     Write-Host ""
-    Write-Host "Skill: $skillDir/"
+    Write-Host "Skill (global): $skillDir/"
+    Write-Host "Commands (global): $cmdDir/"
     Write-Host ""
-    Write-Host "Try:  ask your assistant to 'search typescript with coding-hub'"
+    Write-Host "All projects can now use these slash commands."
+    Write-Host ""
+    Write-Host "Try:  /coding-hub-search typescript"
 }
 
 # --- Main ---

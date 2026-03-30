@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 项目概述
 
-Coding Hub — 聚合 1200+ 精选 MCP Servers、Skills、Rules、Prompts 的开发资源索引。数据从 9 个上游源自动同步，支持 Claude Code、Opencode、Costrict 三个平台。
+Coding Hub — 聚合 3000+ 精选 MCP Servers、Skills、Rules、Prompts 的开发资源索引。数据从 9 个上游源自动同步，支持 Claude Code、Opencode、Costrict、VSCode Costrict 四个平台。
 
 ## 提交规范
 

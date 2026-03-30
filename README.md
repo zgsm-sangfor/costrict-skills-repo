@@ -231,11 +231,11 @@ https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/README.m
 | | Costrict | VSCode Costrict | Claude Code | Opencode |
 |---|---|---|---|---|
 | Skill 路径（全局） | `~/.costrict/skills/coding-hub/` | `~/.costrict/skills/coding-hub/` | `~/.claude/skills/coding-hub/` | `~/.opencode/skills/coding-hub/` |
-| Commands 路径 | `.costrict/coding-hub/commands/`（项目级） | `.roo/commands/`（项目级） | 同上（全局） | `.opencode/command/`（项目级） |
+| Commands 路径 | `.costrict/coding-hub/commands/`（项目级） | `~/.roo/commands/`（全局） | 同上（全局） | `.opencode/command/`（项目级） |
 | 命令分隔符 | `-` | `-` | `:` | `-` |
 
 - **Costrict CLI** 的命令文件需要安装到每个项目目录，在项目根目录运行 `install.sh` 即可
-- **VSCode Costrict 插件 (Roo Code)** 支持 Roo Code 原生 slash commands，命令文件安装到 `.roo/commands/`，通过 `/coding-hub-update` 自动下载
+- **VSCode Costrict 插件 (Roo Code)** 支持 Roo Code 原生 slash commands，命令文件安装到 `~/.roo/commands/`，通过 `/coding-hub-update` 自动下载
 - **Claude Code** 支持从全局 skills 目录加载子命令，一次安装所有项目可用
 - **Opencode** 的命令文件需要安装到每个项目目录，在项目根目录运行 `install.sh` 即可
 
@@ -346,14 +346,18 @@ for cmd in search browse recommend install uninstall update; do
 done
 ```
 
-**VSCode Costrict 插件:**（仅 Skill，无需命令）
+**VSCode Costrict 插件:**（Skill 全局 + Commands 全局）
 
 ```bash
 mkdir -p ~/.costrict/skills/coding-hub
 curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/vscode-costrict/skills/coding-hub/SKILL.md" -o ~/.costrict/skills/coding-hub/SKILL.md
+mkdir -p ~/.roo/commands
+for cmd in search browse recommend install uninstall update; do
+  curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/vscode-costrict/commands/coding-hub/coding-hub-${cmd}.md" -o ~/.roo/commands/coding-hub-${cmd}.md
+done
 ```
 
-> VSCode Costrict 插件无需安装子命令，所有命令逻辑已内置于 SKILL.md。
+> Roo Code 支持原生 slash commands，命令文件安装到全局 `~/.roo/commands/`。
 
 
 **Claude Code:**（Skill + Commands 全部安装到全局目录）

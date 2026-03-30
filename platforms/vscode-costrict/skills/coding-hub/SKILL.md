@@ -243,7 +243,7 @@ Python 命令跨平台探测: `$(command -v python3 || command -v python)`
    mkdir -p $HOME/.costrict/skills/coding-hub
    curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/vscode-costrict/skills/coding-hub/SKILL.md" -o $HOME/.costrict/skills/coding-hub/SKILL.md
 
-   # 子命令（全局）— 安装到 ~/.roo/commands/
+   # 子命令（全局）— 安装到 $HOME/.roo/commands/
    mkdir -p $HOME/.roo/commands
    for cmd in search browse recommend install uninstall update; do
      curl -sfL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/vscode-costrict/commands/coding-hub/coding-hub-${cmd}.md" -o "$HOME/.roo/commands/coding-hub-${cmd}.md"
