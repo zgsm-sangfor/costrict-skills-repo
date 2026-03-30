@@ -97,16 +97,16 @@ ANTIGRAVITY_CATEGORY_MAP = {
     "media": "documentation",
     # mobile
     "mobile": "mobile",
-    # other
-    "business": "other",
-    "marketing": "other",
-    "game-development": "other",
-    "blockchain": "other",
-    "health": "other",
-    "legal": "other",
-    "science": "other",
-    "architecture": "other",
-    "uncategorized": "other",
+    # misc — map to closest valid schema category instead of "other"
+    "business": "tooling",
+    "marketing": "documentation",
+    "game-development": "frontend",
+    "blockchain": "backend",
+    "health": "ai-ml",
+    "legal": "documentation",
+    "science": "ai-ml",
+    "architecture": "tooling",
+    "uncategorized": "tooling",
 }
 
 # OpenClaw: 10 coding-related category files from VoltAgent/awesome-openclaw-skills

@@ -5,7 +5,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
-from utils import load_index, save_index, deduplicate, logger
+from utils import load_index, save_index, deduplicate, categorize, extract_tags, logger
 from health_scorer import compute_health
 
 CATALOG_DIR = os.path.join(os.path.dirname(__file__), "..", "catalog")
@@ -33,6 +33,22 @@ def merge():
 
     # Deduplicate by source_url + id (earlier entries take priority: Tier 1 > Tier 2 > Tier 3)
     deduped = deduplicate(all_entries)
+
+    # Fix invalid categories (e.g. "other" not in schema enum)
+    VALID_CATEGORIES = {
+        "frontend", "backend", "fullstack", "mobile", "devops",
+        "database", "testing", "security", "ai-ml", "tooling", "documentation",
+    }
+    fixed_cats = 0
+    for entry in deduped:
+        if entry.get("category") not in VALID_CATEGORIES:
+            tags = entry.get("tags") or []
+            entry["category"] = categorize(
+                entry.get("name", ""), entry.get("description", ""), tags
+            )
+            fixed_cats += 1
+    if fixed_cats:
+        logger.info(f"Fixed {fixed_cats} entries with invalid category")
 
     # Compute health scores
     for entry in deduped:
