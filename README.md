@@ -3,13 +3,13 @@
 <div align="center">
 <img src="assets/title-card.jpg" alt="Coding Hub" />
 
-<p><strong>3000+ 精选开发资源一站式索引</strong><br/>MCP Servers · Skills · Rules · Prompts</p>
+<p><strong>3300+ 精选开发资源一站式索引</strong><br/>MCP Servers · Skills · Rules · Prompts</p>
 
 <p>
   <a href="https://github.com/zgsm-sangfor/costrict-coding-hub/stargazers"><img src="https://img.shields.io/github/stars/zgsm-sangfor/costrict-coding-hub?style=flat-square&color=4A90D9" alt="Stars" /></a>
   <a href="https://github.com/zgsm-sangfor/costrict-coding-hub/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zgsm-sangfor/costrict-coding-hub?style=flat-square" alt="License" /></a>
   <a href="https://github.com/zgsm-sangfor/costrict-coding-hub/commits/main"><img src="https://img.shields.io/github/last-commit/zgsm-sangfor/costrict-coding-hub?style=flat-square" alt="Last Commit" /></a>
-  <img src="https://img.shields.io/badge/resources-3037-2ECC71?style=flat-square" alt="Resources" />
+  <img src="https://img.shields.io/badge/resources-3329-2ECC71?style=flat-square" alt="Resources" />
 </p>
 
 <p>
@@ -87,13 +87,13 @@ https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/README.m
 
 ## ⭐ 精选推荐
 
-> 从 3037+ 资源中按使用场景精选。安装后用 `/coding-hub:search` 搜索完整索引，或 `/coding-hub:recommend` 获取项目级推荐。
+> 从 3329+ 资源中按使用场景精选。安装后用 `/coding-hub:search` 搜索完整索引，或 `/coding-hub:recommend` 获取项目级推荐。
 
 ### 🌐 浏览器 & 自动化
 
-- 🔌 **[modelcontextprotocol/server-puppeteer](https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer)** — 官方参考实现，使用 Puppeteer 进行浏览器自动化和网页抓取。 ⭐ 82.4k
-- 🔌 **[microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp)** — 微软官方出品，使用 Playwright 让 AI 精确控制网页，自动化抓取数据。 ⭐ 29.9k
-- 🔌 **[ScrapeGraphAI](https://github.com/ScrapeGraphAI/Scrapegraph-ai)** — AI-powered web scraping library that creates scraping pipelines using… ⭐ 23.1k
+- 🔌 **[modelcontextprotocol/server-puppeteer](https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer)** — 官方参考实现，使用 Puppeteer 进行浏览器自动化和网页抓取。 ⭐ 82.5k
+- 🔌 **[microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp)** — 微软官方出品，使用 Playwright 让 AI 精确控制网页，自动化抓取数据。 ⭐ 30.0k
+- 🔌 **[ScrapeGraphAI](https://github.com/ScrapeGraphAI/Scrapegraph-ai)** — AI-powered web scraping library that creates scraping pipelines using… ⭐ 23.2k
 - 🔌 **[Skyvern](https://github.com/Skyvern-AI/skyvern/tree/main/integrations/mcp)** — MCP Server to let Claude / your AI control the browser ⭐ 21.0k
 - 🎯 **[webapp-testing](https://github.com/anthropics/skills/tree/main/skills/webapp-testing)** — Toolkit for interacting with and testing local web applications using… `Anthropic 官方`
 - 🎯 **[llm-application-dev](https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/llm-application-dev)** — Building applications with Large Language Models - prompt… `社区精选`
@@ -103,7 +103,7 @@ https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/README.m
 ### 🐙 Git & 协作
 
 - 🔌 **[github/github-mcp-server](https://github.com/github/github-mcp-server)** — GitHub 官方出品，让 AI 通过 API 深度集成 GitHub，实现自动化工作流等。 ⭐ 28.4k
-- 🔌 **[Agent Reach](https://github.com/Panniantong/Agent-Reach)** — 一句话给 AI Agent 装上全网搜索能力。一键安装 + 配置 13+ 平台工具（Twitter、Reddit、YouTube、GitHu… ⭐ 12.2k
+- 🔌 **[Agent Reach](https://github.com/Panniantong/Agent-Reach)** — 一句话给 AI Agent 装上全网搜索能力。一键安装 + 配置 13+ 平台工具（Twitter、Reddit、YouTube、GitHu… ⭐ 13.3k
 - 🔌 **[idosal/git-mcp](https://github.com/idosal/git-mcp)** — 通用远程 MCP 服务器，用于连接任何 GitHub 仓库或项目以获取文档。 ⭐ 7.8k
 - 🔌 **[Chart](https://github.com/antvis/mcp-server-chart)** — 🤖 A Model Context Protocol server for generating visual charts using… ⭐ 3.9k
 - 🎯 **[changelog-generator](https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/changelog-generator)** — Automatically creates user-facing changelogs from git commits by… `社区精选`
@@ -125,7 +125,7 @@ https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/README.m
 ### 📚 文档 & 知识
 
 - 🔌 **[microsoft/markitdown](https://github.com/microsoft/markitdown/tree/main/packages/markitdown-mcp)** — MarkItDown MCP 工具访问 - 一个将多种文件格式（本地或远程）转换为 Markdown 以供 LLM 使用的库。 ⭐ 92.8k
-- 🔌 **[Context 7](https://github.com/upstash/context7-mcp)** — Context7 MCP - Up-to-date Docs For Any Cursor Prompt ⭐ 50.9k
+- 🔌 **[Context 7](https://github.com/upstash/context7-mcp)** — Context7 MCP - Up-to-date Docs For Any Cursor Prompt ⭐ 51.0k
 - 🔌 **[Basic Memory](https://github.com/basicmachines-co/basic-memory)** — 本地优先的知识管理系统，从 Markdown 文件构建语义图，实现跨对话持久记忆。 ⭐ 2.7k
 - 🔌 **[Markdownify MCP Server](https://github.com/zcaceres/markdownify-mcp)** — A Model Context Protocol server for converting almost anything to… ⭐ 2.5k
 - 🎯 **[slack-gif-creator](https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator)** — Knowledge and utilities for creating animated GIFs optimized for… `Anthropic 官方`
@@ -135,7 +135,7 @@ https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/README.m
 
 ### 🎨 前端 & 设计
 
-- 🔌 **[mediar-ai/screenpipe](https://github.com/mediar-ai/screenpipe)** — 本地优先系统，捕获屏幕/音频并带时间戳索引，SQL/嵌入存储，语义搜索，LLM 历史分析，事件触发动作。通过 NextJS 插件生态系统构建… ⭐ 17.6k
+- 🔌 **[mediar-ai/screenpipe](https://github.com/mediar-ai/screenpipe)** — 本地优先系统，捕获屏幕/音频并带时间戳索引，SQL/嵌入存储，语义搜索，LLM 历史分析，事件触发动作。通过 NextJS 插件生态系统构建… ⭐ 17.7k
 - 🔌 **[Framelink Figma MCP Server](https://github.com/GLips/Figma-Context-MCP)** — MCP server to provide Figma layout information to AI coding agents… ⭐ 14.0k
 - 🔌 **[XcodeBuildMCP](https://github.com/cameroncooke/XcodeBuildMCP)** — A Model Context Protocol (MCP) server that provides Xcode-related… ⭐ 4.9k
 - 🔌 **[21st.dev Magic AI Agent](https://github.com/21st-dev/magic-mcp)** — It's like v0 but in your Cursor/WindSurf/Cline. 21st dev Magic MCP… ⭐ 4.6k
@@ -150,8 +150,8 @@ https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/README.m
 - 🔌 **[PipedreamHQ/pipedream](https://github.com/PipedreamHQ/pipedream/tree/master/modelcontextprotocol)** — Pipedream 官方集成，一站式连接 2500+ API，集成 8000+ 工具，并管理用户服务器。 ⭐ 11.2k
 - 🔌 **[Supabase MCP Servers](https://github.com/supabase-community/mcp-supabase)** — A collection of MCP servers that connect LLMs to Supabase ⭐ 2.6k
 - 🔌 **[Supabase MCP Server](https://github.com/supabase-community/supabase-mcp)** — Connect Supabase to your AI assistants ⭐ 2.6k
-- 🎯 **[alpha-vantage](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/alpha-vantage)** — Access 20+ years of global financial data: equities, options, forex,… `antigravity-skills`
-- 🎯 **[analytics-product](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/analytics-product)** — Analytics de produto — PostHog, Mixpanel, eventos, funnels, cohorts,… `antigravity-skills`
+- 🎯 **[PocketBase API Rules](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/pocketbase/pb-api-rules)** — API rules and filter expressions for PocketBase access control. Use… `davila7/claude-code-templates`
+- 🎯 **[PocketBase Hooks](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/pocketbase/pb-hooks)** — Server-side JavaScript hooks for PocketBase (pb_hooks). Use when… `davila7/claude-code-templates`
 - 📋 **[Supabase Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/supabase)** — Cursor rules for Supabase with PostgreSQL and Edge Functions `精选`
 - 📋 **[Nodejs Mongodb Cursorrules Prompt File Tutorial Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nodejs-mongodb-cursorrules-prompt-file-tutorial)** — Node.js MongoDB .cursorrules prompt file tutorial `CursorRules`
 
@@ -160,7 +160,7 @@ https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/README.m
 - 🔌 **[Homebrew](https://github.com/Homebrew/brew/blob/HEAD/Library/Homebrew/mcp_server.rb)** — An MCP server for the Homebrew package manager. ⭐ 47.2k
 - 🔌 **[claude-cookbooks](https://github.com/anthropics/anthropic-cookbook)** — A collection of notebooks/recipes showcasing some fun and effective… ⭐ 36.6k
 - 🔌 **[FastMCP v2 🚀](https://github.com/jlowin/fastmcp)** — 🚀 The fast, Pythonic way to build MCP servers and clients ⭐ 24.0k
-- 🔌 **[Mastra/mcp](https://github.com/mastra-ai/mastra/tree/main/packages/mcp)** — Client implementation for Mastra, providing seamless integration with… ⭐ 22.4k
+- 🔌 **[Mastra/mcp](https://github.com/mastra-ai/mastra/tree/main/packages/mcp)** — Client implementation for Mastra, providing seamless integration with… ⭐ 22.5k
 - 🎯 **[algorithmic-art](https://github.com/anthropics/skills/tree/main/skills/algorithmic-art)** — Creating algorithmic art using p5.js with seeded randomness and… `Anthropic 官方`
 - 🎯 **[claude-api](https://github.com/anthropics/skills/tree/main/skills/claude-api)** — Build apps with the Claude API or Anthropic SDK. TRIGGER when: code… `Anthropic 官方`
 - 📋 **[Ai Powered Code Review (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules)** — AI驱动的智能代码审查规则 - 基于机器学习的代码质量分析和自动化审查流程 `Rules 2.1`
@@ -177,7 +177,7 @@ https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/README.m
 | MCP Server | 1628 | Model Context Protocol 服务器 |
 | Prompt | 2 | 开发者专用 Prompt |
 | Rule | 182 | 编码规范 / AI 辅助规则 |
-| Skill | 1225 | Agent Skill 扩展 |
+| Skill | 1517 | Agent Skill 扩展 |
 
 **数据来源**：从 9 个上游源自动聚合，每周通过 GitHub Actions 同步，过滤 star > 10 的 coding 相关资源。
 
