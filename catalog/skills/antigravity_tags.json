@@ -1,0 +1,1472 @@
+{
+  "2d-games-agskill": [
+    "godot",
+    "unity"
+  ],
+  "3d-games-agskill": [
+    "godot",
+    "unity",
+    "unreal"
+  ],
+  "acceptance-orchestrator-agskill": [
+    "ci-cd"
+  ],
+  "active-directory-attacks-agskill": [
+    "windows"
+  ],
+  "adhx-agskill": [
+    "llm"
+  ],
+  "advanced-evaluation-agskill": [
+    "ai",
+    "llm"
+  ],
+  "agent-evaluation-agskill": [
+    "ai",
+    "llm"
+  ],
+  "agent-manager-skill-agskill": [
+    "linux"
+  ],
+  "agent-memory-mcp-agskill": [
+    "ai"
+  ],
+  "agent-memory-systems-agskill": [
+    "ai"
+  ],
+  "agent-orchestration-improve-agent-agskill": [
+    "ai"
+  ],
+  "agent-orchestration-multi-agent-optimize-agskill": [
+    "ai"
+  ],
+  "agent-orchestrator-agskill": [
+    "ai"
+  ],
+  "agent-tool-builder-agskill": [
+    "ai",
+    "llm"
+  ],
+  "agentfolio-agskill": [
+    "ai"
+  ],
+  "ai-agent-development-agskill": [
+    "ai",
+    "langchain"
+  ],
+  "ai-agents-architect-agskill": [
+    "ai"
+  ],
+  "ai-analyzer-agskill": [
+    "ai",
+    "ml"
+  ],
+  "ai-engineer-agskill": [
+    "ai",
+    "llm",
+    "langchain"
+  ],
+  "ai-engineering-toolkit-agskill": [
+    "ai",
+    "llm"
+  ],
+  "ai-md-agskill": [
+    "ai",
+    "llm"
+  ],
+  "ai-ml-agskill": [
+    "ai",
+    "ml",
+    "llm"
+  ],
+  "ai-native-cli-agskill": [
+    "ai"
+  ],
+  "ai-product-agskill": [
+    "ai",
+    "llm"
+  ],
+  "ai-seo-agskill": [
+    "ai",
+    "llm"
+  ],
+  "airflow-dag-patterns-agskill": [
+    "airflow"
+  ],
+  "amplitude-automation-agskill": [
+    "javascript",
+    "nodejs"
+  ],
+  "android-jetpack-compose-expert-agskill": [
+    "kotlin"
+  ],
+  "api-documentation-agskill": [
+    "rest-api"
+  ],
+  "api-documentation-generator-agskill": [
+    "rest-api"
+  ],
+  "api-documenter-agskill": [
+    "rest-api"
+  ],
+  "api-security-best-practices-agskill": [
+    "oauth",
+    "jwt",
+    "rest-api"
+  ],
+  "api-testing-observability-api-mock-agskill": [
+    "rest-api"
+  ],
+  "apify-actor-development-agskill": [
+    "javascript",
+    "nodejs"
+  ],
+  "appdeploy-agskill": [
+    "aws",
+    "docker",
+    "vercel",
+    "netlify"
+  ],
+  "architecture-decision-records-agskill": [
+    "markdown"
+  ],
+  "asana-automation-agskill": [
+    "javascript",
+    "nodejs"
+  ],
+  "audio-transcriber-agskill": [
+    "llm",
+    "markdown"
+  ],
+  "auth-implementation-patterns-agskill": [
+    "oauth",
+    "jwt",
+    "saml"
+  ],
+  "autonomous-agents-agskill": [
+    "ai",
+    "llm",
+    "langchain"
+  ],
+  "backend-architect-agskill": [
+    "rest-api",
+    "aws",
+    "docker"
+  ],
+  "backend-development-feature-development-agskill": [
+    "ci-cd",
+    "git",
+    "docker",
+    "nodejs",
+    "python"
+  ],
+  "backend-security-coder-agskill": [
+    "jwt",
+    "oauth",
+    "saml",
+    "rest-api"
+  ],
+  "base-agskill": [
+    "sql"
+  ],
+  "bash-defensive-patterns-agskill": [
+    "linux",
+    "ci-cd"
+  ],
+  "bash-linux-agskill": [
+    "linux",
+    "macos"
+  ],
+  "bash-pro-agskill": [
+    "linux",
+    "ci-cd"
+  ],
+  "bash-scripting-agskill": [
+    "linux"
+  ],
+  "bdistill-behavioral-xray-agskill": [
+    "ai",
+    "llm"
+  ],
+  "bdistill-knowledge-extraction-agskill": [
+    "ai",
+    "llm"
+  ],
+  "billing-automation-agskill": [
+    "stripe"
+  ],
+  "bitbucket-automation-agskill": [
+    "git",
+    "ci-cd"
+  ],
+  "blockchain-developer-agskill": [
+    "web3",
+    "ethereum",
+    "solidity"
+  ],
+  "broken-authentication-agskill": [
+    "jwt",
+    "oauth"
+  ],
+  "browser-extension-builder-agskill": [
+    "javascript"
+  ],
+  "building-native-ui-agskill": [
+    "react",
+    "javascript"
+  ],
+  "busybox-on-windows-agskill": [
+    "linux",
+    "windows"
+  ],
+  "changelog-automation-agskill": [
+    "git",
+    "github-actions"
+  ],
+  "chat-widget-agskill": [
+    "websocket",
+    "react",
+    "nodejs"
+  ],
+  "chrome-extension-developer-agskill": [
+    "javascript"
+  ],
+  "circleci-automation-agskill": [
+    "ci-cd"
+  ],
+  "clarity-gate-agskill": [
+    "llm"
+  ],
+  "claude-ally-health-agskill": [
+    "claude",
+    "anthropic"
+  ],
+  "claude-code-expert-agskill": [
+    "claude",
+    "anthropic"
+  ],
+  "claude-code-guide-agskill": [
+    "claude",
+    "anthropic"
+  ],
+  "claude-d3js-skill-agskill": [
+    "javascript"
+  ],
+  "claude-in-chrome-troubleshooting-agskill": [
+    "claude",
+    "anthropic"
+  ],
+  "claude-monitor-agskill": [
+    "claude",
+    "anthropic"
+  ],
+  "claude-scientific-skills-agskill": [
+    "python",
+    "numpy",
+    "pandas",
+    "scipy"
+  ],
+  "claude-settings-audit-agskill": [
+    "claude",
+    "anthropic"
+  ],
+  "claude-speed-reader-agskill": [
+    "claude",
+    "anthropic"
+  ],
+  "claude-win11-speckit-update-skill-agskill": [
+    "windows"
+  ],
+  "closed-loop-delivery-agskill": [
+    "ci-cd"
+  ],
+  "cloudflare-workers-expert-agskill": [
+    "cloudflare",
+    "javascript"
+  ],
+  "cloudformation-best-practices-agskill": [
+    "aws",
+    "terraform"
+  ],
+  "code-reviewer-agskill": [
+    "ai"
+  ],
+  "codex-review-agskill": [
+    "ai"
+  ],
+  "comprehensive-review-pr-enhance-agskill": [
+    "git"
+  ],
+  "computer-use-agents-agskill": [
+    "ai"
+  ],
+  "computer-vision-expert-agskill": [
+    "ai",
+    "ml",
+    "tensorflow",
+    "pytorch"
+  ],
+  "conductor-setup-agskill": [
+    "ruby"
+  ],
+  "content-marketer-agskill": [
+    "ai"
+  ],
+  "context-agent-agskill": [
+    "ai"
+  ],
+  "context-compression-agskill": [
+    "ai",
+    "llm"
+  ],
+  "context-degradation-agskill": [
+    "ai",
+    "llm"
+  ],
+  "context-driven-development-agskill": [
+    "ai"
+  ],
+  "context-fundamentals-agskill": [
+    "ai",
+    "llm"
+  ],
+  "context-guardian-agskill": [
+    "ai"
+  ],
+  "context-manager-agskill": [
+    "ai"
+  ],
+  "context-window-management-agskill": [
+    "ai",
+    "llm"
+  ],
+  "conversation-memory-agskill": [
+    "ai",
+    "llm"
+  ],
+  "crewai-agskill": [
+    "ai",
+    "llm"
+  ],
+  "crypto-bd-agent-agskill": [
+    "ai",
+    "web3"
+  ],
+  "daily-news-report-agskill": [
+    "markdown"
+  ],
+  "data-engineer-agskill": [
+    "airflow",
+    "aws",
+    "gcp",
+    "azure"
+  ],
+  "data-engineering-data-pipeline-agskill": [
+    "airflow",
+    "kafka"
+  ],
+  "data-scientist-agskill": [
+    "ai",
+    "ml",
+    "python",
+    "pandas",
+    "numpy"
+  ],
+  "database-agskill": [
+    "sql",
+    "nosql"
+  ],
+  "database-admin-agskill": [
+    "postgres",
+    "mysql",
+    "mongodb",
+    "redis"
+  ],
+  "database-architect-agskill": [
+    "postgres",
+    "mysql",
+    "mongodb",
+    "sql",
+    "nosql"
+  ],
+  "database-design-agskill": [
+    "postgres",
+    "mysql",
+    "mongodb",
+    "sql",
+    "nosql"
+  ],
+  "database-optimizer-agskill": [
+    "postgres",
+    "mysql",
+    "mongodb",
+    "redis"
+  ],
+  "datadog-automation-agskill": [
+    "datadog"
+  ],
+  "deep-research-agskill": [
+    "ai"
+  ],
+  "defuddle-agskill": [
+    "markdown"
+  ],
+  "deployment-pipeline-design-agskill": [
+    "ci-cd"
+  ],
+  "deployment-procedures-agskill": [
+    "ci-cd",
+    "devops"
+  ],
+  "design-md-agskill": [
+    "markdown"
+  ],
+  "development-agskill": [
+    "javascript",
+    "typescript",
+    "python",
+    "react",
+    "nodejs"
+  ],
+  "devops-troubleshooter-agskill": [
+    "devops",
+    "kubernetes",
+    "docker",
+    "prometheus",
+    "grafana"
+  ],
+  "differential-review-agskill": [
+    "git",
+    "ci-cd"
+  ],
+  "distributed-debugging-debug-trace-agskill": [
+    "devops"
+  ],
+  "distributed-tracing-agskill": [
+    "prometheus"
+  ],
+  "docs-architect-agskill": [
+    "markdown",
+    "rest-api",
+    "graphql"
+  ],
+  "documentation-agskill": [
+    "markdown",
+    "rest-api",
+    "graphql"
+  ],
+  "documentation-generation-doc-generate-agskill": [
+    "markdown",
+    "rest-api",
+    "graphql"
+  ],
+  "documentation-templates-agskill": [
+    "markdown"
+  ],
+  "dotnet-architect-agskill": [
+    "sql"
+  ],
+  "dotnet-backend-agskill": [
+    "sql"
+  ],
+  "dotnet-backend-patterns-agskill": [
+    "rest-api"
+  ],
+  "dx-optimizer-agskill": [
+    "devops",
+    "git",
+    "docker",
+    "vite"
+  ],
+  "e2e-testing-patterns-agskill": [
+    "cypress",
+    "playwright",
+    "selenium",
+    "jest"
+  ],
+  "electron-development-agskill": [
+    "javascript",
+    "typescript",
+    "nodejs"
+  ],
+  "embedding-strategies-agskill": [
+    "ai",
+    "ml",
+    "huggingface",
+    "openai"
+  ],
+  "enhance-prompt-agskill": [
+    "ai",
+    "llm"
+  ],
+  "environment-setup-guide-agskill": [
+    "docker",
+    "git",
+    "nodejs",
+    "python"
+  ],
+  "error-debugging-error-analysis-agskill": [
+    "devops",
+    "sentry",
+    "datadog",
+    "prometheus"
+  ],
+  "error-debugging-error-trace-agskill": [
+    "devops",
+    "sentry",
+    "datadog",
+    "prometheus"
+  ],
+  "error-detective-agskill": [
+    "devops",
+    "sentry",
+    "datadog",
+    "prometheus"
+  ],
+  "error-diagnostics-error-analysis-agskill": [
+    "devops",
+    "sentry",
+    "datadog",
+    "prometheus"
+  ],
+  "error-diagnostics-error-trace-agskill": [
+    "sentry",
+    "datadog",
+    "prometheus",
+    "grafana"
+  ],
+  "event-sourcing-architect-agskill": [
+    "kafka",
+    "rabbitmq"
+  ],
+  "event-store-design-agskill": [
+    "postgres",
+    "mongodb",
+    "kafka"
+  ],
+  "expo-api-routes-agskill": [
+    "nodejs",
+    "express",
+    "rest-api"
+  ],
+  "expo-cicd-workflows-agskill": [
+    "github-actions",
+    "ci-cd"
+  ],
+  "expo-deployment-agskill": [
+    "vercel",
+    "aws",
+    "firebase"
+  ],
+  "expo-ui-jetpack-compose-agskill": [
+    "kotlin"
+  ],
+  "fal-audio-agskill": [
+    "ai",
+    "ml"
+  ],
+  "fal-generate-agskill": [
+    "ai",
+    "ml"
+  ],
+  "fal-image-edit-agskill": [
+    "ai",
+    "ml"
+  ],
+  "fal-platform-agskill": [
+    "ai",
+    "ml"
+  ],
+  "fal-upscale-agskill": [
+    "ai",
+    "ml"
+  ],
+  "fal-workflow-agskill": [
+    "ai",
+    "ml"
+  ],
+  "figma-automation-agskill": [
+    "figma"
+  ],
+  "finishing-a-development-branch-agskill": [
+    "git"
+  ],
+  "firebase-agskill": [
+    "firebase"
+  ],
+  "fp-async-agskill": [
+    "typescript",
+    "javascript",
+    "nodejs"
+  ],
+  "fp-data-transforms-agskill": [
+    "javascript",
+    "typescript",
+    "python"
+  ],
+  "fp-either-ref-agskill": [
+    "typescript",
+    "javascript"
+  ],
+  "fp-errors-agskill": [
+    "typescript",
+    "javascript"
+  ],
+  "fp-option-ref-agskill": [
+    "typescript",
+    "javascript"
+  ],
+  "fp-pipe-ref-agskill": [
+    "typescript",
+    "javascript"
+  ],
+  "fp-taskeither-ref-agskill": [
+    "typescript",
+    "javascript",
+    "nodejs"
+  ],
+  "fp-types-ref-agskill": [
+    "typescript",
+    "javascript"
+  ],
+  "framework-migration-code-migrate-agskill": [
+    "javascript",
+    "typescript",
+    "react",
+    "vue",
+    "nodejs"
+  ],
+  "framework-migration-deps-upgrade-agskill": [
+    "npm",
+    "yarn",
+    "pnpm",
+    "nodejs",
+    "javascript"
+  ],
+  "framework-migration-legacy-modernize-agskill": [
+    "docker",
+    "kubernetes",
+    "aws",
+    "azure",
+    "gcp"
+  ],
+  "freshdesk-automation-agskill": [
+    "rest-api",
+    "javascript",
+    "python"
+  ],
+  "freshservice-automation-agskill": [
+    "rest-api",
+    "javascript",
+    "python"
+  ],
+  "frontend-design-agskill": [
+    "figma",
+    "css",
+    "react",
+    "vue",
+    "svelte"
+  ],
+  "frontend-dev-guidelines-agskill": [
+    "react",
+    "vue",
+    "svelte",
+    "typescript",
+    "javascript"
+  ],
+  "frontend-security-coder-agskill": [
+    "javascript",
+    "typescript",
+    "oauth",
+    "jwt"
+  ],
+  "frontend-slides-agskill": [
+    "css",
+    "javascript"
+  ],
+  "full-stack-orchestration-full-stack-feature-agskill": [
+    "nodejs",
+    "react",
+    "nextjs",
+    "postgres",
+    "docker"
+  ],
+  "game-art-agskill": [
+    "unity",
+    "unreal"
+  ],
+  "game-audio-agskill": [
+    "unity",
+    "unreal"
+  ],
+  "game-design-agskill": [
+    "unity",
+    "unreal",
+    "godot"
+  ],
+  "game-development-agskill": [
+    "unity",
+    "unreal",
+    "godot"
+  ],
+  "gdb-cli-agskill": [
+    "linux"
+  ],
+  "gdpr-data-handling-agskill": [
+    "postgres",
+    "mysql",
+    "python",
+    "javascript"
+  ],
+  "gmail-automation-agskill": [
+    "oauth",
+    "rest-api",
+    "javascript",
+    "python"
+  ],
+  "grafana-dashboards-agskill": [
+    "grafana",
+    "prometheus",
+    "devops",
+    "kubernetes"
+  ],
+  "helpdesk-automation-agskill": [
+    "rest-api",
+    "javascript",
+    "python"
+  ],
+  "hierarchical-agent-memory-agskill": [
+    "claude",
+    "ai",
+    "llm"
+  ],
+  "hig-components-content-agskill": [
+    "swift",
+    "macos"
+  ],
+  "hig-components-controls-agskill": [
+    "swift",
+    "macos"
+  ],
+  "hig-components-layout-agskill": [
+    "swift",
+    "macos"
+  ],
+  "hig-components-menus-agskill": [
+    "swift",
+    "macos"
+  ],
+  "hig-components-search-agskill": [
+    "swift",
+    "macos"
+  ],
+  "hig-components-status-agskill": [
+    "swift",
+    "macos"
+  ],
+  "hig-components-system-agskill": [
+    "swift",
+    "macos"
+  ],
+  "hosted-agents-agskill": [
+    "docker"
+  ],
+  "hugging-face-cli-agskill": [
+    "huggingface"
+  ],
+  "hugging-face-community-evals-agskill": [
+    "huggingface"
+  ],
+  "hugging-face-dataset-viewer-agskill": [
+    "huggingface"
+  ],
+  "hugging-face-datasets-agskill": [
+    "huggingface",
+    "sql"
+  ],
+  "hugging-face-evaluation-agskill": [
+    "huggingface"
+  ],
+  "hugging-face-jobs-agskill": [
+    "huggingface",
+    "gcp",
+    "aws",
+    "kubernetes"
+  ],
+  "hugging-face-model-trainer-agskill": [
+    "huggingface",
+    "llm",
+    "ml"
+  ],
+  "hugging-face-paper-publisher-agskill": [
+    "huggingface"
+  ],
+  "hugging-face-papers-agskill": [
+    "huggingface"
+  ],
+  "hugging-face-tool-builder-agskill": [
+    "huggingface"
+  ],
+  "hugging-face-vision-trainer-agskill": [
+    "huggingface",
+    "ml"
+  ],
+  "incident-responder-agskill": [
+    "devops",
+    "sentry",
+    "datadog",
+    "grafana",
+    "prometheus"
+  ],
+  "incident-response-smart-fix-agskill": [
+    "devops",
+    "sentry",
+    "datadog",
+    "grafana",
+    "prometheus"
+  ],
+  "incident-runbook-templates-agskill": [
+    "devops"
+  ],
+  "ios-debugger-agent-agskill": [
+    "macos"
+  ],
+  "istio-traffic-management-agskill": [
+    "istio"
+  ],
+  "iterate-pr-agskill": [
+    "ci-cd",
+    "git"
+  ],
+  "jobgpt-agskill": [
+    "ai",
+    "llm"
+  ],
+  "k6-load-testing-agskill": [
+    "ci-cd"
+  ],
+  "langfuse-agskill": [
+    "ai",
+    "llm"
+  ],
+  "langgraph-agskill": [
+    "ai",
+    "langchain",
+    "llm"
+  ],
+  "laravel-expert-agskill": [
+    "php"
+  ],
+  "laravel-security-audit-agskill": [
+    "php"
+  ],
+  "latex-paper-conversion-agskill": [
+    "latex"
+  ],
+  "lightning-channel-factories-agskill": [
+    "ethereum",
+    "web3"
+  ],
+  "lightning-factory-explainer-agskill": [
+    "ethereum",
+    "web3"
+  ],
+  "lint-and-validate-agskill": [
+    "eslint"
+  ],
+  "linux-privilege-escalation-agskill": [
+    "linux"
+  ],
+  "linux-shell-scripting-agskill": [
+    "linux"
+  ],
+  "linux-troubleshooting-agskill": [
+    "linux"
+  ],
+  "llm-application-dev-ai-assistant-agskill": [
+    "ai",
+    "llm"
+  ],
+  "llm-application-dev-prompt-optimize-agskill": [
+    "ai",
+    "llm"
+  ],
+  "llm-evaluation-agskill": [
+    "ai",
+    "llm"
+  ],
+  "llm-ops-agskill": [
+    "ai",
+    "llm",
+    "langchain"
+  ],
+  "llm-prompt-optimizer-agskill": [
+    "ai",
+    "llm",
+    "openai",
+    "anthropic",
+    "claude"
+  ],
+  "local-llm-expert-agskill": [
+    "ai",
+    "llm"
+  ],
+  "machine-learning-ops-ml-pipeline-agskill": [
+    "ml",
+    "python",
+    "airflow",
+    "docker",
+    "kubernetes"
+  ],
+  "makepad-platform-agskill": [
+    "macos",
+    "windows",
+    "linux"
+  ],
+  "malware-analyst-agskill": [
+    "linux",
+    "windows"
+  ],
+  "maxia-agskill": [
+    "web3",
+    "ethereum"
+  ],
+  "mcp-builder-agskill": [
+    "ai",
+    "llm"
+  ],
+  "memory-forensics-agskill": [
+    "linux",
+    "windows"
+  ],
+  "memory-safety-patterns-agskill": [
+    "rust",
+    "go"
+  ],
+  "memory-systems-agskill": [
+    "ai",
+    "llm"
+  ],
+  "mermaid-expert-agskill": [
+    "markdown"
+  ],
+  "metasploit-framework-agskill": [
+    "linux"
+  ],
+  "microservices-patterns-agskill": [
+    "docker",
+    "kubernetes",
+    "grpc",
+    "rest-api",
+    "kafka"
+  ],
+  "ml-engineer-agskill": [
+    "ml",
+    "python",
+    "pytorch",
+    "tensorflow",
+    "docker"
+  ],
+  "ml-pipeline-workflow-agskill": [
+    "ml",
+    "python",
+    "airflow",
+    "docker",
+    "kubernetes"
+  ],
+  "mlops-engineer-agskill": [
+    "ml",
+    "kubernetes",
+    "python",
+    "docker",
+    "ci-cd"
+  ],
+  "mobile-games-agskill": [
+    "flutter",
+    "unity",
+    "swift",
+    "kotlin"
+  ],
+  "monorepo-architect-agskill": [
+    "npm",
+    "yarn",
+    "pnpm"
+  ],
+  "monorepo-management-agskill": [
+    "npm",
+    "yarn",
+    "pnpm"
+  ],
+  "moodle-external-api-development-agskill": [
+    "php",
+    "rest-api"
+  ],
+  "multi-platform-apps-multi-platform-agskill": [
+    "react",
+    "flutter",
+    "nodejs",
+    "rest-api"
+  ],
+  "multiplayer-agskill": [
+    "websocket",
+    "nodejs"
+  ],
+  "network-101-agskill": [
+    "linux",
+    "nginx"
+  ],
+  "network-engineer-agskill": [
+    "aws",
+    "azure",
+    "gcp",
+    "linux",
+    "docker"
+  ],
+  "new-rails-project-agskill": [
+    "ruby"
+  ],
+  "nft-standards-agskill": [
+    "ethereum",
+    "solidity",
+    "web3"
+  ],
+  "nosql-expert-agskill": [
+    "nosql",
+    "aws",
+    "mongodb"
+  ],
+  "observability-engineer-agskill": [
+    "prometheus",
+    "grafana",
+    "datadog",
+    "sentry",
+    "kubernetes"
+  ],
+  "observability-monitoring-monitor-setup-agskill": [
+    "prometheus",
+    "grafana",
+    "datadog",
+    "sentry"
+  ],
+  "observability-monitoring-slo-implement-agskill": [
+    "prometheus",
+    "grafana"
+  ],
+  "obsidian-bases-agskill": [
+    "markdown"
+  ],
+  "obsidian-cli-agskill": [
+    "markdown"
+  ],
+  "obsidian-clipper-template-creator-agskill": [
+    "markdown"
+  ],
+  "obsidian-markdown-agskill": [
+    "markdown"
+  ],
+  "os-scripting-agskill": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "oss-hunter-agskill": [
+    "git"
+  ],
+  "payment-integration-agskill": [
+    "stripe"
+  ],
+  "pc-games-agskill": [
+    "unity",
+    "unreal",
+    "godot"
+  ],
+  "plaid-fintech-agskill": [
+    "rest-api"
+  ],
+  "planning-with-files-agskill": [
+    "markdown"
+  ],
+  "polars-agskill": [
+    "python"
+  ],
+  "posix-shell-pro-agskill": [
+    "linux"
+  ],
+  "powershell-windows-agskill": [
+    "windows"
+  ],
+  "pr-writer-agskill": [
+    "git"
+  ],
+  "privilege-escalation-methods-agskill": [
+    "linux",
+    "windows"
+  ],
+  "progressive-estimation-agskill": [
+    "ai"
+  ],
+  "progressive-web-app-agskill": [
+    "javascript"
+  ],
+  "project-development-agskill": [
+    "llm"
+  ],
+  "prometheus-configuration-agskill": [
+    "prometheus"
+  ],
+  "prompt-caching-agskill": [
+    "llm"
+  ],
+  "prompt-engineer-agskill": [
+    "llm"
+  ],
+  "prompt-engineering-agskill": [
+    "llm"
+  ],
+  "prompt-engineering-patterns-agskill": [
+    "llm"
+  ],
+  "pydantic-ai-agskill": [
+    "python",
+    "ai",
+    "llm"
+  ],
+  "pydantic-models-py-agskill": [
+    "python"
+  ],
+  "pypict-skill-agskill": [
+    "python"
+  ],
+  "qiskit-agskill": [
+    "python"
+  ],
+  "radix-ui-design-system-agskill": [
+    "radix",
+    "react"
+  ],
+  "rag-engineer-agskill": [
+    "llm",
+    "langchain",
+    "openai",
+    "huggingface"
+  ],
+  "rag-implementation-agskill": [
+    "llm",
+    "openai",
+    "huggingface"
+  ],
+  "receiving-code-review-agskill": [
+    "git"
+  ],
+  "requesting-code-review-agskill": [
+    "git"
+  ],
+  "robius-app-architecture-agskill": [
+    "rust"
+  ],
+  "robius-event-action-agskill": [
+    "rust"
+  ],
+  "robius-matrix-integration-agskill": [
+    "rust"
+  ],
+  "robius-state-management-agskill": [
+    "rust"
+  ],
+  "robius-widget-patterns-agskill": [
+    "rust"
+  ],
+  "scientific-writing-agskill": [
+    "latex"
+  ],
+  "security-auditor-agskill": [
+    "devops"
+  ],
+  "seek-and-analyze-video-agskill": [
+    "ai",
+    "llm",
+    "ml"
+  ],
+  "segment-cdp-agskill": [
+    "javascript"
+  ],
+  "sendgrid-automation-agskill": [
+    "sendgrid"
+  ],
+  "sentry-automation-agskill": [
+    "sentry"
+  ],
+  "seo-content-agskill": [
+    "ai"
+  ],
+  "seo-geo-agskill": [
+    "ai",
+    "llm"
+  ],
+  "seo-image-gen-agskill": [
+    "ai"
+  ],
+  "server-management-agskill": [
+    "linux"
+  ],
+  "service-mesh-expert-agskill": [
+    "istio",
+    "kubernetes",
+    "devops"
+  ],
+  "service-mesh-observability-agskill": [
+    "istio",
+    "kubernetes",
+    "devops"
+  ],
+  "shadcn-agskill": [
+    "shadcn"
+  ],
+  "shellcheck-configuration-agskill": [
+    "linux"
+  ],
+  "skill-check-agskill": [
+    "claude"
+  ],
+  "skill-creator-agskill": [
+    "claude"
+  ],
+  "skill-developer-agskill": [
+    "claude"
+  ],
+  "skill-improver-agskill": [
+    "claude"
+  ],
+  "skill-rails-upgrade-agskill": [
+    "ruby"
+  ],
+  "skill-writer-agskill": [
+    "claude"
+  ],
+  "slo-implementation-agskill": [
+    "devops",
+    "grafana",
+    "prometheus"
+  ],
+  "solidity-security-agskill": [
+    "solidity",
+    "ethereum",
+    "web3"
+  ],
+  "spec-to-code-compliance-agskill": [
+    "solidity",
+    "ethereum",
+    "web3"
+  ],
+  "sql-optimization-patterns-agskill": [
+    "sql",
+    "postgres",
+    "mysql"
+  ],
+  "sql-pro-agskill": [
+    "sql",
+    "postgres",
+    "mysql",
+    "nosql"
+  ],
+  "sqlmap-database-pentesting-agskill": [
+    "sql",
+    "mysql",
+    "postgres"
+  ],
+  "ssh-penetration-testing-agskill": [
+    "linux"
+  ],
+  "stability-ai-agskill": [
+    "ai",
+    "ml"
+  ],
+  "stripe-automation-agskill": [
+    "stripe"
+  ],
+  "stripe-integration-agskill": [
+    "stripe"
+  ],
+  "team-collaboration-standup-notes-agskill": [
+    "git"
+  ],
+  "threejs-animation-agskill": [
+    "javascript"
+  ],
+  "threejs-fundamentals-agskill": [
+    "javascript"
+  ],
+  "threejs-geometry-agskill": [
+    "javascript"
+  ],
+  "threejs-interaction-agskill": [
+    "javascript"
+  ],
+  "threejs-lighting-agskill": [
+    "javascript"
+  ],
+  "threejs-loaders-agskill": [
+    "javascript"
+  ],
+  "threejs-materials-agskill": [
+    "javascript"
+  ],
+  "threejs-postprocessing-agskill": [
+    "javascript"
+  ],
+  "threejs-shaders-agskill": [
+    "javascript"
+  ],
+  "threejs-skills-agskill": [
+    "javascript"
+  ],
+  "threejs-textures-agskill": [
+    "javascript"
+  ],
+  "tmux-agskill": [
+    "linux"
+  ],
+  "turborepo-caching-agskill": [
+    "javascript",
+    "typescript"
+  ],
+  "twilio-communications-agskill": [
+    "twilio"
+  ],
+  "ui-ux-designer-agskill": [
+    "figma"
+  ],
+  "ui-ux-pro-max-agskill": [
+    "figma"
+  ],
+  "unity-developer-agskill": [
+    "unity"
+  ],
+  "unity-ecs-patterns-agskill": [
+    "unity"
+  ],
+  "unreal-engine-cpp-pro-agskill": [
+    "unreal"
+  ],
+  "vector-database-engineer-agskill": [
+    "postgres",
+    "nosql",
+    "ai",
+    "ml"
+  ],
+  "vector-index-tuning-agskill": [
+    "ai",
+    "ml"
+  ],
+  "vercel-automation-agskill": [
+    "vercel"
+  ],
+  "videodb-agskill": [
+    "ai"
+  ],
+  "videodb-skills-agskill": [
+    "ai"
+  ],
+  "vizcom-agskill": [
+    "ai"
+  ],
+  "voice-agents-agskill": [
+    "ai"
+  ],
+  "voice-ai-development-agskill": [
+    "ai"
+  ],
+  "voice-ai-engine-development-agskill": [
+    "ai",
+    "llm",
+    "python",
+    "fastapi",
+    "websocket"
+  ],
+  "vr-ar-agskill": [
+    "unity",
+    "unreal"
+  ],
+  "vulnerability-scanner-agskill": [
+    "devops",
+    "ci-cd"
+  ],
+  "web-artifacts-builder-agskill": [
+    "claude"
+  ],
+  "web-games-agskill": [
+    "javascript"
+  ],
+  "web-performance-optimization-agskill": [
+    "javascript",
+    "webpack",
+    "vite",
+    "nginx"
+  ],
+  "web-scraper-agskill": [
+    "python",
+    "playwright",
+    "selenium"
+  ],
+  "web3-testing-agskill": [
+    "web3",
+    "ethereum",
+    "solidity"
+  ],
+  "wiki-architect-agskill": [
+    "markdown"
+  ],
+  "wiki-onboarding-agskill": [
+    "markdown"
+  ],
+  "wiki-page-writer-agskill": [
+    "markdown"
+  ],
+  "wiki-vitepress-agskill": [
+    "markdown",
+    "vite"
+  ],
+  "windows-privilege-escalation-agskill": [
+    "windows"
+  ],
+  "windows-shell-reliability-agskill": [
+    "windows"
+  ],
+  "wordpress-penetration-testing-agskill": [
+    "php"
+  ],
+  "wordpress-theme-development-agskill": [
+    "php"
+  ],
+  "wordpress-woocommerce-development-agskill": [
+    "php"
+  ],
+  "workflow-automation-agskill": [
+    "airflow",
+    "celery",
+    "python"
+  ],
+  "workflow-orchestration-patterns-agskill": [
+    "airflow",
+    "celery",
+    "python"
+  ],
+  "yann-lecun-agskill": [
+    "ai",
+    "ml",
+    "pytorch"
+  ],
+  "yann-lecun-debate-agskill": [
+    "ai",
+    "llm",
+    "pytorch"
+  ],
+  "yann-lecun-filosofia-agskill": [
+    "ai",
+    "ml"
+  ],
+  "youtube-summarizer-agskill": [
+    "ai",
+    "llm"
+  ]
+}
