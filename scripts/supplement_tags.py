@@ -16,7 +16,10 @@ import time
 import urllib.request
 import urllib.error
 
-DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "***REMOVED***")
+DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
+if not DEEPSEEK_API_KEY:
+    print("ERROR: DEEPSEEK_API_KEY environment variable is required", file=sys.stderr)
+    sys.exit(1)
 DEEPSEEK_URL = "https://api.deepseek.com/v1/chat/completions"
 MODEL = "deepseek-chat"
 
