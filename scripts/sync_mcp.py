@@ -13,6 +13,8 @@ from utils import (
     GITHUB_TOKEN,
     fetch_raw_content,
     get_repo_meta,
+    get_repo_languages,
+    merge_topics_into_tags,
     categorize,
     extract_tags,
     to_kebab_case,
@@ -107,7 +109,10 @@ def parse_awesome_mcp_servers_wong2() -> list:
             continue
 
         tags = extract_tags(name, description)
+        if meta and meta.get("topics"):
+            tags = merge_topics_into_tags(tags, meta["topics"])
         category = categorize(name, description, tags, current_category)
+        tech_stack = get_repo_languages(url) if "github.com" in url else []
 
         entries.append(
             {
@@ -120,7 +125,7 @@ def parse_awesome_mcp_servers_wong2() -> list:
                 "pushed_at": pushed_at,
                 "category": category,
                 "tags": tags,
-                "tech_stack": [],
+                "tech_stack": tech_stack,
                 "install": {"method": "manual"},
                 "source": "awesome-mcp-servers",
                 "last_synced": TODAY,
@@ -161,7 +166,10 @@ def parse_awesome_mcp_zh() -> list:
             continue
 
         tags = extract_tags(name, description)
+        if meta and meta.get("topics"):
+            tags = merge_topics_into_tags(tags, meta["topics"])
         category = categorize(name, description, tags)
+        tech_stack = get_repo_languages(url) if "github.com" in url else []
 
         entries.append(
             {
@@ -174,7 +182,7 @@ def parse_awesome_mcp_zh() -> list:
                 "pushed_at": pushed_at,
                 "category": category,
                 "tags": tags,
-                "tech_stack": [],
+                "tech_stack": tech_stack,
                 "install": {"method": "manual"},
                 "source": "awesome-mcp-zh",
                 "last_synced": TODAY,
