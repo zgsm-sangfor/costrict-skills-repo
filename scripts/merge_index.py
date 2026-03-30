@@ -5,7 +5,8 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
-from utils import load_index, save_index, deduplicate, categorize, extract_tags, logger
+from utils import load_index, save_index, deduplicate, categorize, extract_tags, get_repo_languages, logger
+from llm_tagger import llm_tag_entries
 from health_scorer import compute_health
 
 CATALOG_DIR = os.path.join(os.path.dirname(__file__), "..", "catalog")
@@ -49,6 +50,35 @@ def merge():
             fixed_cats += 1
     if fixed_cats:
         logger.info(f"Fixed {fixed_cats} entries with invalid category")
+
+    # --- Enrichment: LLM tags + Languages API tech_stack ---
+    # Collect existing tag frequency for LLM reference vocabulary
+    all_existing_tags = []
+    for entry in deduped:
+        all_existing_tags.extend(entry.get("tags") or [])
+
+    # LLM tag enrichment for entries with <2 tags
+    tag_results = llm_tag_entries(deduped, existing_tag_freq=all_existing_tags)
+    if tag_results:
+        enriched_tags = 0
+        for entry in deduped:
+            eid = entry["id"]
+            if eid in tag_results and len(entry.get("tags") or []) < 2:
+                entry["tags"] = tag_results[eid]
+                enriched_tags += 1
+        if enriched_tags:
+            logger.info(f"LLM enriched tags for {enriched_tags} entries")
+
+    # Languages API enrichment for entries with empty tech_stack
+    enriched_ts = 0
+    for entry in deduped:
+        if not entry.get("tech_stack") and entry.get("source_url", ""):
+            langs = get_repo_languages(entry["source_url"])
+            if langs:
+                entry["tech_stack"] = langs
+                enriched_ts += 1
+    if enriched_ts:
+        logger.info(f"Languages API enriched tech_stack for {enriched_ts} entries")
 
     # Compute health scores
     for entry in deduped:

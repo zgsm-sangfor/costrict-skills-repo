@@ -3,6 +3,7 @@ import os
 import sys
 import tempfile
 import unittest
+import unittest.mock
 
 SCRIPTS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "scripts"))
 if SCRIPTS_DIR not in sys.path:
@@ -113,6 +114,67 @@ class TestMergeIndex(unittest.TestCase):
     def test_empty_type_dir_no_crash(self):
         # Only mcp has data, others are empty dirs
         self._write_index("mcp", [_make_entry("only", source_url="https://github.com/t/only")])
+
+        merge_index.merge()
+        result = self._read_output()
+
+        self.assertEqual(len(result), 1)
+
+    @unittest.mock.patch("merge_index.llm_tag_entries")
+    @unittest.mock.patch("merge_index.get_repo_languages")
+    def test_enrichment_llm_tags(self, mock_langs, mock_llm):
+        """Entry with empty tags gets LLM-enriched tags."""
+        mock_llm.return_value = {"empty-tags": ["python", "cli"]}
+        mock_langs.return_value = []
+        entry = _make_entry("empty-tags", source_url="https://github.com/t/empty-tags")
+        entry["tags"] = []
+        self._write_index("mcp", [entry])
+
+        merge_index.merge()
+        result = self._read_output()
+
+        self.assertEqual(result[0]["tags"], ["python", "cli"])
+
+    @unittest.mock.patch("merge_index.llm_tag_entries")
+    @unittest.mock.patch("merge_index.get_repo_languages")
+    def test_enrichment_languages_tech_stack(self, mock_langs, mock_llm):
+        """Entry with empty tech_stack gets API-enriched."""
+        mock_llm.return_value = {}
+        mock_langs.return_value = ["Python", "JavaScript"]
+        entry = _make_entry("no-ts", source_url="https://github.com/t/no-ts")
+        entry["tech_stack"] = []
+        self._write_index("mcp", [entry])
+
+        merge_index.merge()
+        result = self._read_output()
+
+        self.assertEqual(result[0]["tech_stack"], ["Python", "JavaScript"])
+
+    @unittest.mock.patch("merge_index.llm_tag_entries")
+    @unittest.mock.patch("merge_index.get_repo_languages")
+    def test_enrichment_no_overwrite(self, mock_langs, mock_llm):
+        """Already-populated entries are not overwritten."""
+        mock_llm.return_value = {"has-data": ["new-tag"]}
+        mock_langs.return_value = ["Go"]
+        entry = _make_entry("has-data", source_url="https://github.com/t/has-data")
+        entry["tags"] = ["react", "typescript"]
+        entry["tech_stack"] = ["TypeScript"]
+        self._write_index("mcp", [entry])
+
+        merge_index.merge()
+        result = self._read_output()
+
+        self.assertEqual(result[0]["tags"], ["react", "typescript"])
+        self.assertEqual(result[0]["tech_stack"], ["TypeScript"])
+
+    @unittest.mock.patch.dict(os.environ, {}, clear=True)
+    def test_enrichment_no_credentials_no_crash(self):
+        """No credentials → enrichment skipped, no crash."""
+        os.environ.pop("LLM_BASE_URL", None)
+        os.environ.pop("LLM_API_KEY", None)
+        os.environ.pop("GITHUB_TOKEN", None)
+        entry = _make_entry("nocred", source_url="https://github.com/t/nocred")
+        self._write_index("mcp", [entry])
 
         merge_index.merge()
         result = self._read_output()
