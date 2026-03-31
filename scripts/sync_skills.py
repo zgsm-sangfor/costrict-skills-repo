@@ -5,38 +5,66 @@ import os
 import re
 import sys
 import json
+from typing import Any
 from datetime import date
 
 sys.path.insert(0, os.path.dirname(__file__))
-from utils import (
-    fetch_raw_content,
-    github_api,
-    categorize,
-    extract_tags,
-    merge_topics_into_tags,
-    to_kebab_case,
-    save_index,
-    load_index,
-    deduplicate,
-    logger,
-    list_repo_files,
-)
-from skill_registry import (
-    discover_skills,
-    hard_filter,
-    has_coding_keyword,
-    parse_skill_content,
-)
-from llm_evaluator import evaluate_skills, translate_descriptions
+try:
+    from .utils import (
+        fetch_raw_content,
+        github_api,
+        categorize,
+        extract_tags,
+        merge_topics_into_tags,
+        to_kebab_case,
+        save_index,
+        load_index,
+        deduplicate,
+        logger,
+        list_repo_files,
+    )
+    from .skill_registry import (
+        discover_skills,
+        hard_filter,
+        has_coding_keyword,
+        parse_skill_content,
+    )
+    from .llm_evaluator import evaluate_skills, translate_descriptions
+    from .catalog_lifecycle import overlay_added_at, backfill_missing_added_at
+except ImportError:
+    from utils import (
+        fetch_raw_content,
+        github_api,
+        categorize,
+        extract_tags,
+        merge_topics_into_tags,
+        to_kebab_case,
+        save_index,
+        load_index,
+        deduplicate,
+        logger,
+        list_repo_files,
+    )
+    from skill_registry import (
+        discover_skills,
+        hard_filter,
+        has_coding_keyword,
+        parse_skill_content,
+    )
+    from llm_evaluator import evaluate_skills, translate_descriptions
+    from catalog_lifecycle import overlay_added_at, backfill_missing_added_at
 
 CATALOG_DIR = os.path.join(os.path.dirname(__file__), "..", "catalog", "skills")
 TODAY = date.today().isoformat()
 
 # Antigravity: upstream categories to skip (non-technical)
 ANTIGRAVITY_SKIP_CATEGORIES = {
-    "business", "marketing", "health", "legal",
+    "business",
+    "marketing",
+    "health",
+    "legal",
     "leiloeiro",  # Portuguese auction niche
-    "andruia",    # Personal brand AI series
+    "andruia",  # Personal brand AI series
 }
 
 # Antigravity: map upstream 58 categories → project 11 categories
@@ -125,7 +153,7 @@ OPENCLAW_CATEGORIES = {
 }
 
 
-def parse_antigravity_skills() -> list:
+def parse_antigravity_skills() -> list[dict[str, Any]]:
     """Parse sickn33/antigravity-awesome-skills via skills_index.json.
 
     Tier 1 source — full inclusion, no LLM filtering.
@@ -160,9 +188,13 @@ def parse_antigravity_skills() -> list:
         try:
             with open(tag_file) as f:
                 tag_supplement = json.load(f)
-            logger.info(f"Loaded {len(tag_supplement)} supplementary tags from antigravity_tags.json")
+            logger.info(
+                f"Loaded {len(tag_supplement)} supplementary tags from antigravity_tags.json"
+            )
         except (json.JSONDecodeError, OSError):
-            logger.warning("Failed to load antigravity_tags.json, continuing without supplements")
+            logger.warning(
+                "Failed to load antigravity_tags.json, continuing without supplements"
+            )
 
     entries = []
     skipped = 0
@@ -226,7 +258,7 @@ def parse_antigravity_skills() -> list:
     return entries
 
 
-def parse_anthropic_skills() -> list:
+def parse_anthropic_skills() -> list[dict[str, Any]]:
     """Parse anthropics/skills repository."""
     data = github_api("repos/anthropics/skills/contents/skills")
     if not data:
@@ -287,7 +319,7 @@ def parse_anthropic_skills() -> list:
     return entries
 
 
-def parse_ai_agent_skills() -> list:
+def parse_ai_agent_skills() -> list[dict[str, Any]]:
     """Parse skillcreatorai/Ai-Agent-Skills (house copy only).
 
     Uses Tree API to discover which skills actually have SKILL.md,
@@ -414,7 +446,7 @@ def openclaw_extra_filter(name: str, description: str) -> str | None:
     return None
 
 
-def parse_openclaw_skills(tier1_entries: list) -> list[dict]:
+def parse_openclaw_skills(tier1_entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """Parse coding-related skills from VoltAgent/awesome-openclaw-skills.
 
     Returns candidates ready for Tier 2 pipeline (hard_filter applied).
@@ -625,10 +657,20 @@ def sync():
         )
         logger.info(f"Retained {len(existing_entries)} skills from existing index")
         return
+    all_entries = overlay_added_at(all_entries, existing_entries, today=TODAY)
     save_index(all_entries, output_path)
     logger.info(
         f"Final skills count: {len(all_entries)} (Tier 1: {len(tier1_entries)}, Tier 2: {len(tier2_entries)})"
     )
+
+
+def backfill_index_added_at():
+    output_path = os.path.join(CATALOG_DIR, "index.json")
+    entries = load_index(output_path)
+    if not entries:
+        return
+    entries = backfill_missing_added_at(entries, today=TODAY)
+    save_index(entries, output_path)
 
 
 if __name__ == "__main__":

@@ -14,15 +14,18 @@ from utils import github_api, to_kebab_case, logger
 
 def parse_github_url(url: str) -> tuple:
     """Parse owner and repo from a GitHub URL. Exits on invalid URL."""
-    match = re.match(r"https?://github\.com/([^/]+)/([^/]+?)(?:\.git)?(?:/.*)?$", url.rstrip("/"))
+    match = re.match(
+        r"https?://github\.com/([^/]+)/([^/]+?)(?:\.git)?(?:/.*)?$", url.rstrip("/")
+    )
     if not match:
         logger.error(f"ERROR: only GitHub URLs are supported: {url}")
         sys.exit(1)
     return match.group(1), match.group(2)
 
 
-def build_install(resource_type: str, url: str, repo_name: str,
-                  owner: str = "") -> dict:
+def build_install(
+    resource_type: str, url: str, repo_name: str, owner: str = ""
+) -> dict:
     """Build install field based on resource type."""
     if resource_type == "mcp":
         scope = f"@{owner}/" if owner else ""
@@ -65,7 +68,9 @@ def generate_entry(url: str, resource_type: str, category: str) -> dict:
 
     description = repo_data.get("description") or ""
     if not description:
-        logger.warning("WARNING: repository has no description, maintainer should add one")
+        logger.warning(
+            "WARNING: repository has no description, maintainer should add one"
+        )
 
     entry = {
         "id": to_kebab_case(repo_name),
@@ -82,6 +87,9 @@ def generate_entry(url: str, resource_type: str, category: str) -> dict:
         "last_synced": date.today().isoformat(),
     }
 
+    if resource_type in {"mcp", "skill"}:
+        entry["added_at"] = date.today().isoformat()
+
     pushed_at = repo_data.get("pushed_at")
     if pushed_at:
         entry["pushed_at"] = pushed_at
@@ -90,17 +98,34 @@ def generate_entry(url: str, resource_type: str, category: str) -> dict:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate a curated entry from a GitHub URL")
+    parser = argparse.ArgumentParser(
+        description="Generate a curated entry from a GitHub URL"
+    )
     parser.add_argument("--url", required=True, help="GitHub repository URL")
-    parser.add_argument("--type", required=True, choices=["mcp", "skill", "rule", "prompt"],
-                        help="Resource type")
-    parser.add_argument("--category", required=True,
-                        choices=[
-                            "frontend", "backend", "fullstack", "mobile", "devops",
-                            "database", "testing", "security", "ai-ml", "tooling",
-                            "documentation",
-                        ],
-                        help="Resource category")
+    parser.add_argument(
+        "--type",
+        required=True,
+        choices=["mcp", "skill", "rule", "prompt"],
+        help="Resource type",
+    )
+    parser.add_argument(
+        "--category",
+        required=True,
+        choices=[
+            "frontend",
+            "backend",
+            "fullstack",
+            "mobile",
+            "devops",
+            "database",
+            "testing",
+            "security",
+            "ai-ml",
+            "tooling",
+            "documentation",
+        ],
+        help="Resource category",
+    )
     parser.add_argument("--reason", help="Recommendation reason (not saved in entry)")
     parser.add_argument("--output", help="Output file path (default: stdout)")
     args = parser.parse_args()

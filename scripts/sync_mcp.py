@@ -6,20 +6,38 @@ import json
 import os
 import re
 import sys
+from typing import Any
 from datetime import date
 
 sys.path.insert(0, os.path.dirname(__file__))
-from utils import (
-    GITHUB_TOKEN,
-    fetch_raw_content,
-    get_repo_meta,
-    merge_topics_into_tags,
-    categorize,
-    extract_tags,
-    to_kebab_case,
-    save_index,
-    logger,
-)
+try:
+    from .utils import (
+        GITHUB_TOKEN,
+        fetch_raw_content,
+        get_repo_meta,
+        merge_topics_into_tags,
+        categorize,
+        extract_tags,
+        to_kebab_case,
+        save_index,
+        load_index,
+        logger,
+    )
+    from .catalog_lifecycle import overlay_added_at, backfill_missing_added_at
+except ImportError:
+    from utils import (
+        GITHUB_TOKEN,
+        fetch_raw_content,
+        get_repo_meta,
+        merge_topics_into_tags,
+        categorize,
+        extract_tags,
+        to_kebab_case,
+        save_index,
+        load_index,
+        logger,
+    )
+    from catalog_lifecycle import overlay_added_at, backfill_missing_added_at
 
 CATALOG_DIR = os.path.join(os.path.dirname(__file__), "..", "catalog", "mcp")
 SEED_PATH = os.path.join(CATALOG_DIR, "mcp_so_seed.json")
@@ -30,7 +48,7 @@ README_ENRICH_LIMIT = int(
 )
 
 
-def _load_repo_meta(repo_url: str) -> dict | None:
+def _load_repo_meta(repo_url: str) -> dict[str, Any] | None:
     return get_repo_meta(repo_url)
 
 
@@ -44,7 +62,7 @@ def normalize_github_url(url: str) -> str:
     return url.lower()
 
 
-def load_seed() -> list:
+def load_seed() -> list[dict[str, Any]]:
     """Load mcp.so seed data as highest priority source."""
     if not os.path.exists(SEED_PATH):
         logger.warning(f"Seed file not found: {SEED_PATH}")
@@ -63,7 +81,7 @@ def load_seed() -> list:
         return []
 
 
-def parse_awesome_mcp_servers_wong2() -> list:
+def parse_awesome_mcp_servers_wong2() -> list[dict[str, Any]]:
     """Parse wong2/awesome-mcp-servers README.md.
     Format: - **[Name](url)** - Description"""
     content = fetch_raw_content("wong2/awesome-mcp-servers", "README.md")
@@ -133,7 +151,7 @@ def parse_awesome_mcp_servers_wong2() -> list:
     return entries
 
 
-def parse_awesome_mcp_zh() -> list:
+def parse_awesome_mcp_zh() -> list[dict[str, Any]]:
     """Parse yzfly/Awesome-MCP-ZH README.md (Markdown tables)."""
     content = fetch_raw_content("yzfly/Awesome-MCP-ZH", "README.md")
     if not content:
@@ -188,7 +206,7 @@ def parse_awesome_mcp_zh() -> list:
     return entries
 
 
-def detect_placeholders(config: dict) -> tuple[str, dict]:
+def detect_placeholders(config: dict[str, Any]) -> tuple[str, dict[str, str]]:
     """Detect placeholder patterns in install config.
     Returns (method, placeholder_hints)."""
     hints = {}
@@ -217,7 +235,7 @@ def detect_placeholders(config: dict) -> tuple[str, dict]:
     return "mcp_config", {}
 
 
-def extract_readme_mcp_config(github_url: str) -> dict | None:
+def extract_readme_mcp_config(github_url: str) -> dict[str, Any] | None:
     """Try to extract mcpServers config from a GitHub repo's README.
     Returns install config dict or None."""
     # Extract repo slug
@@ -268,12 +286,16 @@ def extract_readme_mcp_config(github_url: str) -> dict | None:
     return None
 
 
-def merge_three_sources(seed: list, wong2: list, zh: list) -> list:
+def merge_three_sources(
+    seed: list[dict[str, Any]],
+    wong2: list[dict[str, Any]],
+    zh: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
     """Merge three sources with dedup by GitHub URL.
     Priority: mcp.so seed > Awesome-MCP-ZH > wong2/awesome-mcp-servers.
     If lower priority has ZH description and higher doesn't, merge it."""
     # Index by normalized GitHub URL
-    url_map: dict[str, dict] = {}
+    url_map: dict[str, dict[str, Any]] = {}
     zh_descriptions: dict[str, str] = {}
 
     # Collect ZH descriptions first for merging
@@ -327,7 +349,7 @@ def merge_three_sources(seed: list, wong2: list, zh: list) -> list:
     return result
 
 
-def enrich_missing_configs(entries: list) -> list:
+def enrich_missing_configs(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """For entries without install config, try README mcpServers extraction."""
     manual_entries = [
         e for e in entries if e.get("install", {}).get("method") == "manual"
@@ -370,7 +392,7 @@ def enrich_missing_configs(entries: list) -> list:
     return entries
 
 
-def _readme_enrich_priority(entry: dict) -> tuple:
+def _readme_enrich_priority(entry: dict[str, Any]) -> tuple[int, int, str]:
     """Prioritize non-seed entries first, then higher-star repos."""
     source_rank = 0 if entry.get("source") != "mcp.so" else 1
     stars = entry.get("stars")
@@ -378,7 +400,7 @@ def _readme_enrich_priority(entry: dict) -> tuple:
     return (source_rank, star_rank, entry.get("name", "").lower())
 
 
-def _backfill_seed_stars(seed: list) -> list:
+def _backfill_seed_stars(seed: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """Backfill stars for seed entries where stars=None (previous API failures).
 
     - Queries GitHub API for entries with missing stars
@@ -415,7 +437,7 @@ def _backfill_seed_stars(seed: list) -> list:
         keep_set.add(id(entry))
         updated += 1
         if (i + 1) % 200 == 0:
-            logger.info(f"  Backfill progress: {i+1}/{len(need_backfill)}")
+            logger.info(f"  Backfill progress: {i + 1}/{len(need_backfill)}")
 
     # Build filtered seed: keep entries that had stars already, or passed backfill
     result = []
@@ -478,7 +500,18 @@ def sync():
     logger.info(f"Final: {len(merged)} MCP entries")
 
     output_path = os.path.join(CATALOG_DIR, "index.json")
+    existing_entries = load_index(output_path)
+    merged = overlay_added_at(merged, existing_entries, today=TODAY)
     save_index(merged, output_path)
+
+
+def backfill_index_added_at():
+    output_path = os.path.join(CATALOG_DIR, "index.json")
+    entries = load_index(output_path)
+    if not entries:
+        return
+    entries = backfill_missing_added_at(entries, today=TODAY)
+    save_index(entries, output_path)
 
 
 if __name__ == "__main__":

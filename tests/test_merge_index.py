@@ -112,6 +112,30 @@ class TestMergeIndex(unittest.TestCase):
         self.assertIn("score", result[0]["health"])
         self.assertIn("signals", result[0]["health"])
 
+    def test_merge_prefers_older_added_at_from_source_indexes(self):
+        entry = _make_entry(
+            "older-added", source_url="https://github.com/t/older-added"
+        )
+        entry["added_at"] = "2024-01-15"
+        self._write_index("mcp", [entry])
+        with open(os.path.join(self.tmpdir, "index.json"), "w") as f:
+            json.dump(
+                [
+                    {
+                        "id": "older-added",
+                        "type": "mcp",
+                        "source_url": "https://github.com/t/older-added",
+                        "added_at": "2026-03-25",
+                    }
+                ],
+                f,
+            )
+
+        merge_index.merge()
+        result = self._read_output()
+
+        self.assertEqual(result[0]["added_at"], "2024-01-15")
+
     def test_sorted_by_health_desc(self):
         self._write_index(
             "mcp",
@@ -165,11 +189,9 @@ class TestMergeIndex(unittest.TestCase):
 
     @unittest.mock.patch("merge_index.llm_translate_entries")
     @unittest.mock.patch("merge_index.llm_tag_entries")
-    @unittest.mock.patch("merge_index.get_repo_languages")
-    def test_enrichment_llm_tags(self, mock_langs, mock_llm, mock_translate):
+    def test_enrichment_llm_tags(self, mock_llm, mock_translate):
         """Entry with empty tags gets LLM-enriched tags."""
         mock_llm.return_value = {"empty-tags": ["python", "cli"]}
-        mock_langs.return_value = []
         mock_translate.return_value = {}
         entry = _make_entry("empty-tags", source_url="https://github.com/t/empty-tags")
         entry["tags"] = []
@@ -182,28 +204,9 @@ class TestMergeIndex(unittest.TestCase):
 
     @unittest.mock.patch("merge_index.llm_translate_entries")
     @unittest.mock.patch("merge_index.llm_tag_entries")
-    @unittest.mock.patch("merge_index.get_repo_languages")
-    def test_enrichment_languages_tech_stack(self, mock_langs, mock_llm, mock_translate):
-        """Entry with empty tech_stack gets API-enriched."""
-        mock_llm.return_value = {}
-        mock_langs.return_value = ["Python", "JavaScript"]
-        mock_translate.return_value = {}
-        entry = _make_entry("no-ts", source_url="https://github.com/t/no-ts")
-        entry["tech_stack"] = []
-        self._write_index("mcp", [entry])
-
-        merge_index.merge()
-        result = self._read_output()
-
-        self.assertEqual(result[0]["tech_stack"], ["Python", "JavaScript"])
-
-    @unittest.mock.patch("merge_index.llm_translate_entries")
-    @unittest.mock.patch("merge_index.llm_tag_entries")
-    @unittest.mock.patch("merge_index.get_repo_languages")
-    def test_enrichment_no_overwrite(self, mock_langs, mock_llm, mock_translate):
+    def test_enrichment_no_overwrite(self, mock_llm, mock_translate):
         """Already-populated entries are not overwritten."""
         mock_llm.return_value = {"has-data": ["new-tag"]}
-        mock_langs.return_value = ["Go"]
         mock_translate.return_value = {"has-data": "新标签"}
         entry = _make_entry("has-data", source_url="https://github.com/t/has-data")
         entry["tags"] = ["react", "typescript"]
@@ -220,11 +223,9 @@ class TestMergeIndex(unittest.TestCase):
 
     @unittest.mock.patch("merge_index.llm_translate_entries")
     @unittest.mock.patch("merge_index.llm_tag_entries")
-    @unittest.mock.patch("merge_index.get_repo_languages")
-    def test_enrichment_translation(self, mock_langs, mock_llm, mock_translate):
+    def test_enrichment_translation(self, mock_llm, mock_translate):
         """Entry without description_zh gets LLM-translated."""
         mock_llm.return_value = {}
-        mock_langs.return_value = []
         mock_translate.return_value = {"no-zh": "测试MCP服务器"}
         entry = _make_entry("no-zh", source_url="https://github.com/t/no-zh")
         self._write_index("mcp", [entry])
@@ -250,11 +251,11 @@ class TestMergeIndex(unittest.TestCase):
 
     @unittest.mock.patch("merge_index.llm_translate_entries")
     @unittest.mock.patch("merge_index.llm_tag_entries")
-    @unittest.mock.patch("merge_index.get_repo_languages")
-    def test_dedup_integrity_warning_on_catastrophic_drop(self, mock_langs, mock_llm, mock_translate):
+    def test_dedup_integrity_warning_on_catastrophic_drop(
+        self, mock_llm, mock_translate
+    ):
         """When a type loses >50% of entries during dedup, a warning is logged."""
         mock_llm.return_value = {}
-        mock_langs.return_value = []
         mock_translate.return_value = {}
         # This scenario shouldn't happen anymore with the fix, but the warning
         # mechanism should still work if triggered by other means.
