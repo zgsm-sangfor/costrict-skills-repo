@@ -27,7 +27,7 @@
 
 AI Coding Agent 越来越强，但找到合适的 MCP Server、Skill、Rule 仍然是碎片化的。
 
-Coding Hub 从 9 个上游源自动聚合、过滤、评估，让你和你的 Agent **一条命令就能搜索和安装**开发资源。
+Coding Hub 从多类上游源自动聚合、清洗、评估开发资源，让你和你的 Agent **一条命令就能搜索和安装**。
 
 ## Quick Start
 
@@ -185,37 +185,45 @@ https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/README.m
 | Rule | 236 | 编码规范 / AI 辅助规则 |
 | Skill | 1518 | Agent Skill 扩展 |
 
-**数据来源**：从 14 个上游源自动聚合，每周通过 GitHub Actions 同步并部署到 GitHub Pages CDN，过滤 star > 10 的 coding 相关资源。
+**数据来源**：由同步脚本从多类上游自动聚合；其中 Skills 的 Tier 2 还会通过 Registry 动态发现社区仓库。每周通过 GitHub Actions 同步，并发布到 GitHub Pages CDN。
 
 | 上游 | 来源 |
 |------|------|
 | MCP | [awesome-mcp-servers](https://github.com/wong2/awesome-mcp-servers) · [Awesome-MCP-ZH](https://github.com/yzfly/Awesome-MCP-ZH) · [mcp.so](https://mcp.so) |
-| Skills | [anthropics/skills](https://github.com/anthropics/skills) · [Ai-Agent-Skills](https://github.com/skillcreatorai/Ai-Agent-Skills) · [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) · [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) |
+| Skills | Tier 1: [anthropics/skills](https://github.com/anthropics/skills) · [Ai-Agent-Skills](https://github.com/skillcreatorai/Ai-Agent-Skills) · [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills)<br/>Tier 2: [awesome-repo-configs / skill_repos.json](https://github.com/Chat2AnyLLM/awesome-repo-configs) 动态发现社区仓库 · [awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills) · [openclaw/skills](https://github.com/openclaw/skills)<br/>Tier 3: `catalog/skills/curated.json` |
 | Rules | [awesome-cursorrules](https://github.com/PatrickJS/awesome-cursorrules) · [rules-2.1-optimized](https://github.com/Mr-chen-05/rules-2.1-optimized) |
 | Prompts | [prompts.chat](https://github.com/f/prompts.chat) · [wonderful-prompts](https://github.com/langgptai/wonderful-prompts) |
 
-### 📊 质量筛选标准
+### 📊 收录与评估流程
 
-我们通过三层过滤确保资源质量：
+为了尽量保证结果可用，我们采用的是“分来源清洗 + 统一评估”的方式：不同类型会先按各自来源特点做基础筛选，再进入统一的评分、治理和持续维护流程。
 
-**第一层：基础过滤**
-- ⭐ Star 数 > 10（活跃度指标）
-- 📅 最近 6 个月有更新（维护状态）
-- 🏷️ 明确标注为 coding 相关
+**第一层：来源侧清洗**
 
-**第二层：分类评估**
+- **MCP Servers**：从 `mcp.so seed + awesome-mcp-servers + Awesome-MCP-ZH` 聚合；对 awesome 列表里的 GitHub 仓库会补抓元数据，并保留基础活跃度筛选。
+- **Skills**：Tier 1 以官方 / 高质量来源为主；Tier 2 通过 `skill_repos.json` Registry 与 OpenClaw 发现候选，再过滤 spam、非 coding 分类和聚合仓库，并按确定性分数取 TOP 300。
+- **Rules**：直接解析 `awesome-cursorrules` 与 `rules-2.1-optimized` 的规则目录和 `.mdc` 文件，不额外套用统一的 star 门槛。
+- **Prompts**：`prompts.chat` 只保留面向开发者或命中 coding 关键词的条目；`wonderful-prompts` 只提取“编程”章节。
+
+**第二层：分类来源与去重策略**
 
 | 类型 | 筛选策略 |
 |------|---------|
-| **MCP Servers** | 从 awesome-mcp-servers + Awesome-MCP-ZH + mcp.so 聚合，按独立仓库去重 |
-| **Skills** | Tier 1: anthropics/skills + Ai-Agent-Skills + antigravity-awesome-skills（全量）<br/>Tier 2: GitHub 搜索 + LLM 质量评估（TOP 300）<br/>Tier 3: 手工精选（curated.json） |
-| **Rules** | awesome-cursorrules + rules-2.1-optimized，优先实用性和标签丰富度 |
-| **Prompts** | prompts.chat + wonderful-prompts，优先 coding 相关和中文资源 |
+| **MCP Servers** | `mcp.so seed > Awesome-MCP-ZH > awesome-mcp-servers` 三源合并，按 GitHub URL（`source_url`）去重；必要时补抓 README 中的 `mcpServers` 配置 |
+| **Skills** | Tier 1：官方 / 高质量来源经基础清洗后收录；Tier 2：Registry discovery + OpenClaw 候选，经确定性评分筛到 TOP 300；Tier 3：`curated.json` 作为最低优先级补充 |
+| **Rules** | `awesome-cursorrules` + `rules-2.1-optimized` 双源聚合；在 merge 阶段按 `id` 去重 |
+| **Prompts** | `prompts.chat` + `wonderful-prompts` 双源聚合；来源脚本先做 coding 相关过滤，merge 阶段按 `id` 去重 |
 
-**第三层：持续更新**
+**第三层：统一富化与评分治理**
+
+- `merge_index.py` 会先加载各类型 `index.json` 与 `curated.json`，按照 `Tier 1 > Tier 2 > Tier 3` 的优先级去重。
+- Layer 2（`unified_enrichment.py`）统一补齐 `coding_relevance`、`content_quality`、`specificity`、`source_trust`、`confidence` 等信号；有 LLM 或既有评估结果时优先复用，否则回落到启发式评分。
+- Layer 3（`scoring_governor.py`）按类型权重计算 `final_score`，并写入 `accept / review / reject` 决策；`health_scorer.py` 再基于 `popularity / freshness / quality / installability` 生成健康度分数用于排序。
+
+**持续维护**
 - 🤖 每周自动同步（GitHub Actions）
 - 🔄 自动去重和合并
-- 📈 动态更新 star 数和活跃度
+- 📈 动态更新 star 数、活跃度与评分信号
 - 🌐 GitHub Pages CDN 加速分发（单条 API ~1KB，搜索索引 ~2MB）
 
 ### 🔁 生命周期与增量维护
