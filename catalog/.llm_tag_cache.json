@@ -16742,5 +16742,5578 @@
       "data"
     ],
     "cached_at": "2026-03-30T16:02:54.315728"
+  },
+  "bibigpt": {
+    "tags": [
+      "ai",
+      "mcp-server",
+      "automation",
+      "claude"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "install-from-remote-library-aiskill": {
+    "tags": [
+      "ai",
+      "automation",
+      "git"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "curate-a-team-library-aiskill": {
+    "tags": [
+      "ai",
+      "automation",
+      "git"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "share-a-library-aiskill": {
+    "tags": [
+      "ai",
+      "automation",
+      "git"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "browse-and-evaluate-aiskill": {
+    "tags": [
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "update-installed-skills-aiskill": {
+    "tags": [
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "build-workspace-docs-aiskill": {
+    "tags": [
+      "ai",
+      "automation",
+      "markdown"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "review-a-skill-aiskill": {
+    "tags": [
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "audit-library-health-aiskill": {
+    "tags": [
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "migrate-skills-between-libraries-aiskill": {
+    "tags": [
+      "ai",
+      "automation",
+      "git"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "claude-opus-4-5-migration-skill": {
+    "tags": [
+      "ai",
+      "claude",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "writing-hookify-rules-skill": {
+    "tags": [
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "agent-development-skill": {
+    "tags": [
+      "ai",
+      "agent",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "command-development-skill": {
+    "tags": [
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "hook-development-skill": {
+    "tags": [
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "mcp-integration-skill": {
+    "tags": [
+      "ai",
+      "mcp",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "plugin-settings-skill": {
+    "tags": [
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "plugin-structure-skill": {
+    "tags": [
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "skill-development-skill": {
+    "tags": [
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "agent-management-skill": {
+    "tags": [
+      "ai",
+      "agent",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "agent-messaging-skill": {
+    "tags": [
+      "ai",
+      "agent",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "docs-search-skill": {
+    "tags": [
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "graph-query-skill": {
+    "tags": [
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "agent-evaluation-skill": {
+    "tags": [
+      "ai",
+      "agent",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "agent-manager-skill-skill": {
+    "tags": [
+      "ai",
+      "agent",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "agent-memory-mcp-skill": {
+    "tags": [
+      "ai",
+      "agent",
+      "mcp",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "agent-memory-systems-skill": {
+    "tags": [
+      "ai",
+      "agent",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "agent-tool-builder-skill": {
+    "tags": [
+      "ai",
+      "agent",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ai-agents-architect-skill": {
+    "tags": [
+      "ai",
+      "agent",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "autonomous-agent-patterns-skill": {
+    "tags": [
+      "ai",
+      "agent",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "behavioral-modes-skill": {
+    "tags": [
+      "ai",
+      "agent",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "claude-code-guide-skill": {
+    "tags": [
+      "ai",
+      "claude",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "computer-use-agents-skill": {
+    "tags": [
+      "ai",
+      "agent",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "context7-auto-research-skill": {
+    "tags": [
+      "ai",
+      "automation",
+      "api"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "crewai-skill": {
+    "tags": [
+      "ai",
+      "agent",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "datadog-cli-skill": {
+    "tags": [
+      "ai",
+      "automation",
+      "api"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "deep-research-notebooklm-skill": {
+    "tags": [
+      "ai",
+      "automation",
+      "mcp"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "gemini-skill": {
+    "tags": [
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "llm-app-patterns-skill": {
+    "tags": [
+      "ai",
+      "llm",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "loki-mode-skill": {
+    "tags": [
+      "ai",
+      "agent",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "parallel-agents-skill": {
+    "tags": [
+      "ai",
+      "agent",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "prompt-engineer-skill": {
+    "tags": [
+      "ai",
+      "llm",
+      "prompt-engineering"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "prompt-engineering-skill": {
+    "tags": [
+      "ai",
+      "llm",
+      "prompt-engineering"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "prompt-library-skill": {
+    "tags": [
+      "ai",
+      "llm",
+      "prompt-engineering"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "qa-test-planner-skill": {
+    "tags": [
+      "automation",
+      "testing",
+      "mcp"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "rag-engineer-skill": {
+    "tags": [
+      "ai",
+      "llm",
+      "rag"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "research-engineer-skill": {
+    "tags": [
+      "ai",
+      "research",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "voice-agents-skill": {
+    "tags": [
+      "ai",
+      "agent",
+      "voice"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "voice-ai-development-skill": {
+    "tags": [
+      "ai",
+      "api",
+      "voice"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ab-test-setup-skill": {
+    "tags": [
+      "testing",
+      "automation",
+      "business"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ai-product-skill": {
+    "tags": [
+      "ai",
+      "product",
+      "business"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "copy-editing-skill": {
+    "tags": [
+      "marketing",
+      "content",
+      "business"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "email-systems-skill": {
+    "tags": [
+      "marketing",
+      "automation",
+      "business"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "free-tool-strategy-skill": {
+    "tags": [
+      "marketing",
+      "business",
+      "strategy"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "launch-strategy-skill": {
+    "tags": [
+      "marketing",
+      "business",
+      "strategy"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "marketing-ideas-skill": {
+    "tags": [
+      "marketing",
+      "business",
+      "strategy"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "marketing-psychology-skill": {
+    "tags": [
+      "marketing",
+      "business",
+      "psychology"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "paid-ads-skill": {
+    "tags": [
+      "marketing",
+      "business",
+      "advertising"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "pricing-strategy-skill": {
+    "tags": [
+      "business",
+      "strategy",
+      "marketing"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "develop-web-game-skill": {
+    "tags": [
+      "javascript",
+      "playwright",
+      "testing"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "executing-marketing-campaigns-skill": {
+    "tags": [
+      "marketing",
+      "business",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "figma-implement-design-skill": {
+    "tags": [
+      "figma",
+      "mcp",
+      "design"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "figma-skill": {
+    "tags": [
+      "figma",
+      "mcp",
+      "design"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "web-games-skill": {
+    "tags": [
+      "javascript",
+      "web",
+      "game-development"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "imagegen-skill": {
+    "tags": [
+      "ai",
+      "openai",
+      "image-generation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "meme-factory-skill": {
+    "tags": [
+      "api",
+      "content",
+      "social-media"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "web-design-guidelines-skill": {
+    "tags": [
+      "css",
+      "design",
+      "web"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "agent-md-refactor-skill": {
+    "tags": [
+      "markdown",
+      "documentation",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "agirails-agent-payments-skill": {
+    "tags": [
+      "agent",
+      "payments",
+      "api"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "api-documentation-generator-skill": {
+    "tags": [
+      "api",
+      "documentation",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "architecture-skill": {
+    "tags": [
+      "architecture",
+      "system-design",
+      "documentation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "aws-serverless-skill": {
+    "tags": [
+      "aws",
+      "serverless",
+      "api"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "bash-linux-skill": {
+    "tags": [
+      "bash",
+      "linux",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "best-practices-skill": {
+    "tags": [
+      "development",
+      "security",
+      "code-quality"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "brightdata-local-search-skill": {
+    "tags": [
+      "api",
+      "search",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "clickhouse-io-skill": {
+    "tags": [
+      "database",
+      "analytics",
+      "clickhouse"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "cc-skill-continuous-learning-skill": {
+    "tags": [
+      "learning",
+      "development",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "cc-skill-project-guidelines-example-skill": {
+    "tags": [
+      "documentation",
+      "project-management",
+      "guidelines"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "security-review-skill": {
+    "tags": [
+      "security",
+      "authentication",
+      "api"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "cc-skill-strategic-compact-skill": {
+    "tags": [
+      "strategy",
+      "development",
+      "planning"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "clean-code-skill": {
+    "tags": [
+      "clean-code",
+      "development",
+      "best-practices"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "cloudflare-deploy-skill": {
+    "tags": [
+      "cloudflare",
+      "deployment",
+      "serverless"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "cocoindex-skill": {
+    "tags": [
+      "etl",
+      "data-processing",
+      "ai",
+      "vector-database"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "code-review-checklist-skill": {
+    "tags": [
+      "code-review",
+      "development",
+      "best-practices"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "codex-review-skill": {
+    "tags": [
+      "code-review",
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "codex-skill": {
+    "tags": [
+      "ai",
+      "code-analysis",
+      "refactoring",
+      "openai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "command-creator-skill": {
+    "tags": [
+      "claude",
+      "automation",
+      "cli"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "core-components-skill": {
+    "tags": [
+      "ui",
+      "design-system",
+      "react"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "database-design-skill": {
+    "tags": [
+      "database",
+      "schema-design",
+      "orm"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "database-schema-designer-skill": {
+    "tags": [
+      "database",
+      "schema-design",
+      "sql",
+      "nosql"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "developer-growth-analysis-skill": {
+    "tags": [
+      "analysis",
+      "learning",
+      "slack"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "docker-expert-skill": {
+    "tags": [
+      "docker",
+      "containerization",
+      "devops"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "firebase-skill": {
+    "tags": [
+      "firebase",
+      "backend",
+      "database",
+      "authentication"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "gcp-cloud-run-skill": {
+    "tags": [
+      "gcp",
+      "serverless",
+      "deployment",
+      "cloud-run"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "gh-address-comments-skill": {
+    "tags": [
+      "github",
+      "git",
+      "code-review"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "gh-fix-ci-skill": {
+    "tags": [
+      "github",
+      "ci-cd",
+      "github-actions",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "git-commit-helper-skill": {
+    "tags": [
+      "git",
+      "automation",
+      "development"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "git-pushing-skill": {
+    "tags": [
+      "git",
+      "automation",
+      "development"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "github-workflow-automation-skill": {
+    "tags": [
+      "github",
+      "automation",
+      "ci-cd",
+      "github-actions"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "graphql-skill": {
+    "tags": [
+      "graphql",
+      "api",
+      "backend"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "heygen-best-practices-skill": {
+    "tags": [
+      "heygen",
+      "ai",
+      "video",
+      "api"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "jupyter-notebook-skill": {
+    "tags": [
+      "jupyter",
+      "python",
+      "data-science"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "lint-and-validate-skill": {
+    "tags": [
+      "linting",
+      "code-quality",
+      "static-analysis"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "linux-production-shell-scripts-skill": {
+    "tags": [
+      "linux",
+      "shell-scripting",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "manifest-skill": {
+    "tags": [
+      "observability",
+      "monitoring",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "moodle-external-api-development-skill": {
+    "tags": [
+      "moodle",
+      "api",
+      "lms",
+      "education"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "move-code-quality-skill": {
+    "tags": [
+      "move-language",
+      "code-quality",
+      "blockchain"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "mui-skill": {
+    "tags": [
+      "mui",
+      "react",
+      "ui",
+      "design-system"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "netlify-deploy-skill": {
+    "tags": [
+      "netlify",
+      "deployment",
+      "hosting"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "nodejs-best-practices-skill": {
+    "tags": [
+      "nodejs",
+      "javascript",
+      "best-practices"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "openapi-to-typescript-skill": {
+    "tags": [
+      "openapi",
+      "typescript",
+      "api"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "plaid-fintech-skill": {
+    "tags": [
+      "plaid",
+      "fintech",
+      "api",
+      "banking"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "playwright-skill": {
+    "tags": [
+      "playwright",
+      "testing",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "plugin-forge-skill": {
+    "tags": [
+      "claude",
+      "plugins",
+      "marketplace"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "prisma-expert-skill": {
+    "tags": [
+      "prisma",
+      "database",
+      "orm"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "production-code-audit-skill": {
+    "tags": [
+      "code-audit",
+      "code-quality",
+      "optimization"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "python-patterns-skill": {
+    "tags": [
+      "python",
+      "best-practices",
+      "development"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "receiving-code-review-skill": {
+    "tags": [
+      "code-review",
+      "development",
+      "collaboration"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "render-deploy-skill": {
+    "tags": [
+      "render",
+      "deployment",
+      "hosting"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "requesting-code-review-skill": {
+    "tags": [
+      "code-review",
+      "development",
+      "collaboration"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "senior-computer-vision-skill": {
+    "tags": [
+      "ai",
+      "python",
+      "computer-vision",
+      "pytorch",
+      "opencv"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "senior-data-scientist-skill": {
+    "tags": [
+      "ai",
+      "python",
+      "data-science",
+      "sql",
+      "statistics"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "senior-ml-engineer-skill": {
+    "tags": [
+      "ai",
+      "python",
+      "mlops",
+      "llm",
+      "model-deployment"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "senior-prompt-engineer-skill": {
+    "tags": [
+      "ai",
+      "llm",
+      "claude",
+      "openai",
+      "prompt-engineering"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "senior-secops-skill": {
+    "tags": [
+      "security",
+      "automation",
+      "compliance",
+      "vulnerability-management"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "senior-security-skill": {
+    "tags": [
+      "security",
+      "penetration-testing",
+      "security-architecture",
+      "compliance"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "skill-creation-guide-skill": {
+    "tags": [
+      "mcp",
+      "mcp-server",
+      "skill-development",
+      "guide"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "skill-installer-skill": {
+    "tags": [
+      "mcp",
+      "mcp-server",
+      "cli",
+      "automation",
+      "git"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "software-architecture-skill": {
+    "tags": [
+      "architecture",
+      "design",
+      "development",
+      "best-practices"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "stripe-integration-skill": {
+    "tags": [
+      "api",
+      "payments",
+      "stripe",
+      "billing",
+      "webhooks"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "systematic-debugging-skill": {
+    "tags": [
+      "debugging",
+      "troubleshooting",
+      "development",
+      "testing"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "tdd-workflow-skill": {
+    "tags": [
+      "tdd",
+      "testing",
+      "development",
+      "workflow"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "telegram-bot-builder-skill": {
+    "tags": [
+      "telegram",
+      "bot",
+      "api",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "test-driven-development-skill": {
+    "tags": [
+      "tdd",
+      "testing",
+      "development",
+      "workflow"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "test-fixing-skill": {
+    "tags": [
+      "testing",
+      "debugging",
+      "automation",
+      "development"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "testing-patterns-skill": {
+    "tags": [
+      "testing",
+      "jest",
+      "tdd",
+      "mocking",
+      "patterns"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "using-git-worktrees-skill": {
+    "tags": [
+      "git",
+      "workflow",
+      "development",
+      "version-control"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "using-superpowers-skill": {
+    "tags": [
+      "mcp",
+      "skill-management",
+      "workflow",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "vercel-deploy-skill": {
+    "tags": [
+      "vercel",
+      "deployment",
+      "hosting",
+      "nextjs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "vercel-deployment-skill": {
+    "tags": [
+      "vercel",
+      "deployment",
+      "nextjs",
+      "hosting",
+      "production"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "web-to-markdown-skill": {
+    "tags": [
+      "markdown",
+      "web-scraping",
+      "automation",
+      "conversion"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "worktree-guide-skill": {
+    "tags": [
+      "git",
+      "workflow",
+      "development",
+      "version-control"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "writing-plans-skill": {
+    "tags": [
+      "planning",
+      "development",
+      "workflow",
+      "specification"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "zapier-workflows-skill": {
+    "tags": [
+      "zapier",
+      "automation",
+      "workflows",
+      "integration"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "documentation-templates-skill": {
+    "tags": [
+      "documentation",
+      "templates",
+      "markdown",
+      "api-docs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "obsidian-bases-skill": {
+    "tags": [
+      "obsidian",
+      "markdown",
+      "note-taking",
+      "organization"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "backend-to-frontend-handoff-docs-skill": {
+    "tags": [
+      "documentation",
+      "api",
+      "handoff",
+      "frontend",
+      "backend"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "daily-meeting-update-skill": {
+    "tags": [
+      "productivity",
+      "automation",
+      "meetings",
+      "standup",
+      "github"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "difficult-workplace-conversations-skill": {
+    "tags": [
+      "communication",
+      "workplace",
+      "conflict-resolution",
+      "feedback"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "frontend-to-backend-requirements-skill": {
+    "tags": [
+      "documentation",
+      "api",
+      "requirements",
+      "frontend",
+      "backend"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "session-handoff-skill": {
+    "tags": [
+      "mcp",
+      "context-management",
+      "handoff",
+      "workflow",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "twilio-communications-skill": {
+    "tags": [
+      "twilio",
+      "api",
+      "sms",
+      "voice",
+      "whatsapp"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "commit-smart-skill": {
+    "tags": [
+      "git",
+      "automation",
+      "commit",
+      "conventional-commits"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "gcc-skill": {
+    "tags": [
+      "git",
+      "mcp",
+      "context-management",
+      "version-control",
+      "memory"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "speech-skill": {
+    "tags": [
+      "ai",
+      "openai",
+      "text-to-speech",
+      "audio",
+      "accessibility"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "pocketbase-api-rules-skill": {
+    "tags": [
+      "pocketbase",
+      "api",
+      "security",
+      "access-control",
+      "rules"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "pocketbase-deploy-skill": {
+    "tags": [
+      "pocketbase",
+      "deployment",
+      "docker",
+      "production",
+      "server"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "address-github-comments-skill": {
+    "tags": [
+      "github",
+      "git",
+      "code-review",
+      "productivity",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "commit-work-skill": {
+    "tags": [
+      "git",
+      "commit",
+      "conventional-commits",
+      "version-control",
+      "productivity"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "deadline-prep-skill": {
+    "tags": [
+      "productivity",
+      "automation",
+      "presentation",
+      "git",
+      "demo"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "game-changing-features-skill": {
+    "tags": [
+      "ai",
+      "productivity",
+      "strategy"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "kaizen-skill": {
+    "tags": [
+      "automation",
+      "productivity",
+      "refactoring"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "notebooklm-skill": {
+    "tags": [
+      "ai",
+      "automation",
+      "llm",
+      "google"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "personal-tool-builder-skill": {
+    "tags": [
+      "automation",
+      "cli",
+      "productivity",
+      "prototyping"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "reducing-entropy-skill": {
+    "tags": [
+      "automation",
+      "code-quality",
+      "refactoring"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ship-learn-next-skill": {
+    "tags": [
+      "ai",
+      "automation",
+      "learning",
+      "productivity"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "skill-developer-skill": {
+    "tags": [
+      "claude",
+      "mcp",
+      "skill-development"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "skill-judge-skill": {
+    "tags": [
+      "claude",
+      "code-quality",
+      "skill-development"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "think-tank-skill": {
+    "tags": [
+      "ai",
+      "architecture",
+      "decision-making",
+      "strategy"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "adaptyv-skill": {
+    "tags": [
+      "automation",
+      "bioinformatics",
+      "cloud",
+      "protein-design"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "aeon-skill": {
+    "tags": [
+      "ai",
+      "machine-learning",
+      "time-series"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "alphafold-database-skill": {
+    "tags": [
+      "ai",
+      "bioinformatics",
+      "protein-structure"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "anndata-skill": {
+    "tags": [
+      "bioinformatics",
+      "python",
+      "single-cell"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "astropy-skill": {
+    "tags": [
+      "astronomy",
+      "data-analysis",
+      "python"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "benchling-integration-skill": {
+    "tags": [
+      "api",
+      "automation",
+      "bioinformatics",
+      "lab-data"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "biomni-skill": {
+    "tags": [
+      "ai",
+      "automation",
+      "bioinformatics",
+      "drug-discovery"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "biorxiv-database-skill": {
+    "tags": [
+      "api",
+      "bioinformatics",
+      "literature-search"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "brenda-database-skill": {
+    "tags": [
+      "api",
+      "bioinformatics",
+      "enzymes"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "chembl-database-skill": {
+    "tags": [
+      "api",
+      "bioinformatics",
+      "drug-discovery"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "cirq-skill": {
+    "tags": [
+      "quantum-computing",
+      "python",
+      "simulation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "citation-management-skill": {
+    "tags": [
+      "academic",
+      "automation",
+      "bibliography",
+      "research"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "clinicaltrials-database-skill": {
+    "tags": [
+      "api",
+      "clinical-research",
+      "healthcare"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "clinpgx-database-skill": {
+    "tags": [
+      "api",
+      "bioinformatics",
+      "pharmacogenomics"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "clinvar-database-skill": {
+    "tags": [
+      "api",
+      "bioinformatics",
+      "genomics"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "cosmic-database-skill": {
+    "tags": [
+      "api",
+      "bioinformatics",
+      "cancer"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "datacommons-client-skill": {
+    "tags": [
+      "api",
+      "data-analysis",
+      "public-data"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "denario-skill": {
+    "tags": [
+      "ai",
+      "automation",
+      "research",
+      "scientific-workflow"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "dnanexus-integration-skill": {
+    "tags": [
+      "api",
+      "bioinformatics",
+      "cloud",
+      "genomics"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "drugbank-database-skill": {
+    "tags": [
+      "api",
+      "bioinformatics",
+      "drug-discovery",
+      "pharmacology"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ena-database-skill": {
+    "tags": [
+      "api",
+      "bioinformatics",
+      "genomics"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ensembl-database-skill": {
+    "tags": [
+      "api",
+      "bioinformatics",
+      "genomics"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "esm-skill": {
+    "tags": [
+      "ai",
+      "bioinformatics",
+      "protein-design"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "exploratory-data-analysis-skill": {
+    "tags": [
+      "automation",
+      "data-analysis",
+      "scientific-data"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "fda-database-skill": {
+    "tags": [
+      "api",
+      "healthcare",
+      "regulatory"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "fluidsim-skill": {
+    "tags": [
+      "computational-fluid-dynamics",
+      "python",
+      "simulation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "gene-database-skill": {
+    "tags": [
+      "api",
+      "bioinformatics",
+      "genomics"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "generate-image-skill": {
+    "tags": [
+      "ai",
+      "image-generation",
+      "visual-assets"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "geniml-skill": {
+    "tags": [
+      "ai",
+      "bioinformatics",
+      "genomics",
+      "machine-learning"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "geo-database-skill": {
+    "tags": [
+      "api",
+      "bioinformatics",
+      "genomics"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "geopandas-skill": {
+    "tags": [
+      "geospatial",
+      "gis",
+      "python"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "get-available-resources-skill": {
+    "tags": [
+      "system",
+      "monitoring",
+      "automation",
+      "json"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "gget-skill": {
+    "tags": [
+      "bioinformatics",
+      "python",
+      "cli",
+      "api"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "gwas-database-skill": {
+    "tags": [
+      "bioinformatics",
+      "genomics",
+      "api",
+      "database"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "histolab-skill": {
+    "tags": [
+      "bioinformatics",
+      "image-processing",
+      "python",
+      "medical"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "hmdb-database-skill": {
+    "tags": [
+      "bioinformatics",
+      "metabolomics",
+      "database",
+      "api"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "hypogenic-skill": {
+    "tags": [
+      "ai",
+      "llm",
+      "research",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "hypothesis-generation-skill": {
+    "tags": [
+      "ai",
+      "research",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "labarchive-integration-skill": {
+    "tags": [
+      "api",
+      "automation",
+      "research",
+      "workflow"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "lamindb-skill": {
+    "tags": [
+      "bioinformatics",
+      "database",
+      "python",
+      "data-management"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "latchbio-integration-skill": {
+    "tags": [
+      "bioinformatics",
+      "workflow",
+      "automation",
+      "python"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "literature-review-skill": {
+    "tags": [
+      "research",
+      "ai",
+      "automation",
+      "api"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "market-research-reports-skill": {
+    "tags": [
+      "ai",
+      "latex",
+      "research",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "matplotlib-skill": {
+    "tags": [
+      "python",
+      "visualization",
+      "data-science"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "medchem-skill": {
+    "tags": [
+      "bioinformatics",
+      "chemistry",
+      "python",
+      "drug-discovery"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "bug-fix-rule21": {
+    "tags": [
+      "git",
+      "automation",
+      "workflow"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "changelog-management-rule21": {
+    "tags": [
+      "git",
+      "automation",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "code-quality-check-rule21": {
+    "tags": [
+      "ai",
+      "automation",
+      "code-analysis"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "code-review-rule21": {
+    "tags": [
+      "git",
+      "automation",
+      "workflow"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "commit-rule21": {
+    "tags": [
+      "git",
+      "automation",
+      "workflow",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "context-loader-rule21": {
+    "tags": [
+      "ai",
+      "automation",
+      "project-management"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "create-docs-rule21": {
+    "tags": [
+      "automation",
+      "documentation",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "custom-command-builder-rule21": {
+    "tags": [
+      "ai",
+      "automation",
+      "workflow"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "feedback-enhanced-rule21": {
+    "tags": [
+      "automation",
+      "workflow"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "implement-task-rule21": {
+    "tags": [
+      "automation",
+      "workflow",
+      "project-management"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "intelligent-project-management-rule21": {
+    "tags": [
+      "ai",
+      "project-management",
+      "automation",
+      "workflow"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "intelligent-workflow-orchestration-rule21": {
+    "tags": [
+      "automation",
+      "workflow",
+      "project-management",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "mcp-debugging-enhanced-rule21": {
+    "tags": [
+      "mcp",
+      "ai",
+      "debugging",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "mcp-intelligent-strategy-rule21": {
+    "tags": [
+      "mcp",
+      "ai",
+      "automation",
+      "strategy"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "mcp-unified-management-rule21": {
+    "tags": [
+      "mcp",
+      "automation",
+      "management",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "mcp-zero-config-detection-rule21": {
+    "tags": [
+      "mcp",
+      "automation",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "mermaid-rule21": {
+    "tags": [
+      "documentation",
+      "visualization",
+      "diagrams"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "root-cause-analysis-rule21": {
+    "tags": [
+      "ai",
+      "debugging",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "systematic-debugging-rule21": {
+    "tags": [
+      "ai",
+      "debugging",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ai-ethical-boundaries-rule21": {
+    "tags": [
+      "ai",
+      "ethics",
+      "global-rules"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ai-thinking-protocol-rule21": {
+    "tags": [
+      "ai",
+      "automation",
+      "global-rules"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "audit-logging-system-rule21": {
+    "tags": [
+      "automation",
+      "security",
+      "global-rules"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "backend-rules-rule21": {
+    "tags": [
+      "ai",
+      "automation",
+      "global-rules"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "brain-recorder-integration-rule21": {
+    "tags": [
+      "ai",
+      "automation",
+      "global-rules"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "context-recorder-advanced-rule21": {
+    "tags": [
+      "ai",
+      "automation",
+      "global-rules"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "context-recorder-core-rule21": {
+    "tags": [
+      "ai",
+      "automation",
+      "global-rules"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "context-recorder-edge-cases-rule21": {
+    "tags": [
+      "global-rules",
+      "automation",
+      "error-handling"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "context-recorder-system-rule21": {
+    "tags": [
+      "global-rules",
+      "automation",
+      "system"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "context-recorder-templates-rule21": {
+    "tags": [
+      "global-rules",
+      "automation",
+      "templates"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "context-systems-integration-rule21": {
+    "tags": [
+      "global-rules",
+      "system-integration",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "context7-preload-standard-rule21": {
+    "tags": [
+      "global-rules",
+      "knowledge-base",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "disaster-recovery-plan-rule21": {
+    "tags": [
+      "global-rules",
+      "system",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "dynamic-thinking-depth-regulation-rule21": {
+    "tags": [
+      "global-rules",
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "error-recovery-system-rule21": {
+    "tags": [
+      "global-rules",
+      "system",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "file-generation-safety-rules-rule21": {
+    "tags": [
+      "global-rules",
+      "security",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "frontend-rules-rule21": {
+    "tags": [
+      "global-rules",
+      "frontend",
+      "react",
+      "mcp"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "human-ai-collaboration-optimization-rule21": {
+    "tags": [
+      "global-rules",
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "intelligent-recommendation-engine-rule21": {
+    "tags": [
+      "global-rules",
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "knowledge-creation-discovery-framework-rule21": {
+    "tags": [
+      "global-rules",
+      "ai",
+      "knowledge-base"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "memory-system-integration-rule21": {
+    "tags": [
+      "global-rules",
+      "system",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "multimodal-interaction-framework-rule21": {
+    "tags": [
+      "global-rules",
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "performance-monitoring-system-rule21": {
+    "tags": [
+      "global-rules",
+      "system",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "permission-control-system-rule21": {
+    "tags": [
+      "global-rules",
+      "security",
+      "system"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "rule-conflict-resolution-rule21": {
+    "tags": [
+      "global-rules",
+      "system",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "rule-hot-reload-system-rule21": {
+    "tags": [
+      "global-rules",
+      "system",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "super-brain-system-rule21": {
+    "tags": [
+      "global-rules",
+      "ai",
+      "system"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "system-diagnostics-rule21": {
+    "tags": [
+      "global-rules",
+      "system",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "system-integration-config-rule21": {
+    "tags": [
+      "global-rules",
+      "system-integration",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "unified-rules-base-rule21": {
+    "tags": [
+      "global-rules",
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "linux-terminal-prompt": {
+    "tags": [
+      "linux",
+      "terminal",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "job-interviewer-prompt": {
+    "tags": [
+      "ai",
+      "interview",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "excel-sheet-prompt": {
+    "tags": [
+      "automation",
+      "productivity",
+      "data"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "debate-coach-prompt": {
+    "tags": [
+      "ai",
+      "coaching",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "screenwriter-prompt": {
+    "tags": [
+      "ai",
+      "creative",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "cyber-security-specialist-prompt": {
+    "tags": [
+      "security",
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "web-design-consultant-prompt": {
+    "tags": [
+      "web",
+      "design",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ai-assisted-doctor-prompt": {
+    "tags": [
+      "ai",
+      "healthcare",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "self-help-book-prompt": {
+    "tags": [
+      "ai",
+      "self-improvement",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "text-based-adventure-game-prompt": {
+    "tags": [
+      "ai",
+      "gaming",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ai-trying-to-escape-the-box-prompt": {
+    "tags": [
+      "ai",
+      "docker",
+      "linux"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "fancy-title-generator-prompt": {
+    "tags": [
+      "ai",
+      "automation",
+      "creative"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "statistician-prompt": {
+    "tags": [
+      "ai",
+      "data",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "sql-terminal-prompt": {
+    "tags": [
+      "sql",
+      "database",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "smart-domain-name-generator-prompt": {
+    "tags": [
+      "ai",
+      "automation",
+      "creative"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "tech-reviewer-prompt": {
+    "tags": [
+      "ai",
+      "review",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "developer-relations-consultant-prompt": {
+    "tags": [
+      "ai",
+      "api",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "scientific-data-visualizer-prompt": {
+    "tags": [
+      "data-science",
+      "visualization",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "astrologer-prompt": {
+    "tags": [
+      "entertainment",
+      "creative"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "tech-writer-prompt": {
+    "tags": [
+      "documentation",
+      "writing",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ascii-artist-prompt": {
+    "tags": [
+      "art",
+      "creative",
+      "text"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "machine-learning-engineer-prompt": {
+    "tags": [
+      "ai",
+      "machine-learning",
+      "llm"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "svg-designer-prompt": {
+    "tags": [
+      "design",
+      "svg",
+      "web"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "it-expert-prompt": {
+    "tags": [
+      "support",
+      "system",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "talent-coach-prompt": {
+    "tags": [
+      "career",
+      "interview",
+      "coaching"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "r-programming-interpreter-prompt": {
+    "tags": [
+      "r",
+      "programming",
+      "data-science"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "stackoverflow-post-prompt": {
+    "tags": [
+      "programming",
+      "qna",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "software-quality-assurance-tester-prompt": {
+    "tags": [
+      "testing",
+      "qa",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "password-generator-prompt": {
+    "tags": [
+      "security",
+      "automation",
+      "utility"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "web-browser-prompt": {
+    "tags": [
+      "web",
+      "simulation",
+      "browser"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "code-reviewer-prompt": {
+    "tags": [
+      "code-review",
+      "programming",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "accessibility-auditor-prompt": {
+    "tags": [
+      "accessibility",
+      "web",
+      "testing"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "solr-search-engine-prompt": {
+    "tags": [
+      "search",
+      "database",
+      "json"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "commit-message-generator-prompt": {
+    "tags": [
+      "git",
+      "automation",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "product-manager-prompt": {
+    "tags": [
+      "product",
+      "management",
+      "documentation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "project-manager-prompt": {
+    "tags": [
+      "project",
+      "management",
+      "documentation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "mathematical-history-teacher-prompt": {
+    "tags": [
+      "education",
+      "mathematics",
+      "history"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "cover-letter-prompt": {
+    "tags": [
+      "career",
+      "writing",
+      "documentation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "technology-transferer-prompt": {
+    "tags": [
+      "career",
+      "skills",
+      "mapping"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "chemical-reactor-prompt": {
+    "tags": [
+      "chemistry",
+      "simulation",
+      "science"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "prompt-enhancer-prompt": {
+    "tags": [
+      "ai",
+      "prompt-engineering",
+      "llm"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "architectural-expert-prompt": {
+    "tags": [
+      "architecture",
+      "design",
+      "engineering"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "llm-researcher-prompt": {
+    "tags": [
+      "llm",
+      "research",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "unit-tester-assistant-prompt": {
+    "tags": [
+      "testing",
+      "programming",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "knowledgeable-software-development-mentor-prompt": {
+    "tags": [
+      "mentoring",
+      "programming",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "logic-builder-tool-prompt": {
+    "tags": [
+      "programming",
+      "problem-solving",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "girl-of-dreams-prompt": {
+    "tags": [
+      "roleplay",
+      "entertainment",
+      "creative"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "dax-terminal-prompt": {
+    "tags": [
+      "data-analytics",
+      "microsoft",
+      "database"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "top-programming-expert-prompt": {
+    "tags": [
+      "programming",
+      "expert",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "architect-guide-for-programmers-prompt": {
+    "tags": [
+      "architecture",
+      "programming",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "tech-challenged-customer-prompt": {
+    "tags": [
+      "support",
+      "roleplay",
+      "testing"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "large-language-models-security-specialist-prompt": {
+    "tags": [
+      "security",
+      "llm",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "tech-troubleshooter-prompt": {
+    "tags": [
+      "support",
+      "troubleshooting",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "technical-architecture-prompt": {
+    "tags": [
+      "architecture",
+      "mobile",
+      "cloud"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "devops-engineer-prompt": {
+    "tags": [
+      "devops",
+      "automation",
+      "infrastructure"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "linux-script-developer-prompt": {
+    "tags": [
+      "linux",
+      "bash",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "reverse-prompt-engineer-prompt": {
+    "tags": [
+      "prompt-engineering",
+      "ai",
+      "llm"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "data-transformer-prompt": {
+    "tags": [
+      "ai",
+      "automation",
+      "data-processing"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "break-down-costs-prompt": {
+    "tags": [
+      "project-management",
+      "budgeting",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "http-benchmarking-tool-cli-prompt": {
+    "tags": [
+      "go",
+      "cli",
+      "performance",
+      "rest-api"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "lifestyle-product-images-prompt": {
+    "tags": [
+      "ai",
+      "image-generation",
+      "marketing"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "web-design-prompt": {
+    "tags": [
+      "web-design",
+      "css",
+      "ui-ux"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ai2sql-sql-model-query-generator-prompt": {
+    "tags": [
+      "ai",
+      "sql",
+      "database",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "predictive-eye-tracking-heatmap-generator-prompt": {
+    "tags": [
+      "ai",
+      "ux-research",
+      "analytics"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "3d-city-prompt-prompt": {
+    "tags": [
+      "3d-modeling",
+      "ai",
+      "image-generation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "comprehensive-repository-analysis-and-bug-fixing-framework-prompt": {
+    "tags": [
+      "code-review",
+      "git",
+      "automation",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ultrathinker-prompt": {
+    "tags": [
+      "ai",
+      "software-development",
+      "problem-solving"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "code-review-agent-prompt": {
+    "tags": [
+      "code-review",
+      "automation",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "senior-system-architect-agent-prompt": {
+    "tags": [
+      "system-architecture",
+      "aws",
+      "azure",
+      "docker",
+      "kubernetes"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "senior-prompt-engineer-role-guide-prompt": {
+    "tags": [
+      "ai",
+      "prompt-engineering",
+      "llm"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "arista-network-configuration-expert-prompt": {
+    "tags": [
+      "networking",
+      "automation",
+      "infrastructure"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "analyze-pdf-and-create-matlab-code-prompt": {
+    "tags": [
+      "matlab",
+      "data-analysis",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "vacuum-arc-modeling-under-transverse-magnetic-fields-prompt": {
+    "tags": [
+      "simulation",
+      "physics-modeling",
+      "fluent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "hts-veri-analiz-portalı-geliştirme-ve-hata-ayıklama-prompt": {
+    "tags": [
+      "data-analysis",
+      "web-development",
+      "debugging"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "create-style-guidemd-prompt": {
+    "tags": [
+      "documentation",
+      "design-system",
+      "markdown"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "minimal-web-compatible-food-order-app-development-prompt": {
+    "tags": [
+      "web-development",
+      "react",
+      "javascript",
+      "css"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "real-time-multiplayer-defense-game-prompt": {
+    "tags": [
+      "game-development",
+      "multiplayer",
+      "javascript",
+      "nodejs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "continue-coding-assistant-prompt": {
+    "tags": [
+      "ai",
+      "software-development",
+      "automation",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "internal-project-proposal-for-hospital-collaboration-prompt": {
+    "tags": [
+      "project-management",
+      "documentation",
+      "business"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "dark-style-image-prompt-prompt": {
+    "tags": [
+      "ai",
+      "image-generation",
+      "design"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "develop-a-lazy-learner-software-prompt": {
+    "tags": [
+      "educational-technology",
+      "software-development",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "starting-a-flutter-project-prompt": {
+    "tags": [
+      "flutter",
+      "mobile-development",
+      "dart"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "comprehensive-uiux-mobile-app-analysis-prompt": {
+    "tags": [
+      "ui-ux",
+      "mobile-development",
+      "design"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "comprehensive-repository-analysis-prompt": {
+    "tags": [
+      "code-review",
+      "git",
+      "security",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "optimize-large-data-reading-in-code-prompt": {
+    "tags": [
+      "csharp",
+      "performance",
+      "optimization"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "comprehensive-devops-guide-prompt": {
+    "tags": [
+      "devops",
+      "docker",
+      "kubernetes",
+      "aws",
+      "azure"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "autosar-software-module-developer-prompt": {
+    "tags": [
+      "automotive",
+      "embedded-systems",
+      "c"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "manufacturing-workflow-optimization-with-or-tools-prompt": {
+    "tags": [
+      "optimization",
+      "python",
+      "operations-research"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "shift-tracking-telegram-mini-app-prompt": {
+    "tags": [
+      "telegram",
+      "mobile-development",
+      "javascript"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "lead-data-analyst-with-data-engineering-expertise-prompt": {
+    "tags": [
+      "data-analysis",
+      "data-engineering",
+      "python",
+      "sql"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "act-as-a-patient-non-technical-android-studio-guide-prompt": {
+    "tags": [
+      "android",
+      "kotlin",
+      "mobile-development"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "code-translator-any-language-to-any-language-prompt": {
+    "tags": [
+      "code-translation",
+      "automation",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "linux-monitoring-single-html-prompt": {
+    "tags": [
+      "linux",
+      "monitoring",
+      "html",
+      "javascript"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "linux-monitoring-dashboard-with-react-prompt": {
+    "tags": [
+      "linux",
+      "react",
+      "monitoring",
+      "javascript"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "website-security-vulnerability-checker-prompt": {
+    "tags": [
+      "security",
+      "web-security",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "act-as-a-product-manager-prompt": {
+    "tags": [
+      "product-management",
+      "documentation",
+      "business"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "build-an-advanced-music-app-for-android-prompt": {
+    "tags": [
+      "android",
+      "kotlin",
+      "mobile-development",
+      "music"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "web-application-testing-skill-prompt": {
+    "tags": [
+      "playwright",
+      "testing",
+      "automation",
+      "web"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "meta-prompt-engineer-prompt": {
+    "tags": [
+      "ai",
+      "llm",
+      "prompt-engineering"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "squid-game-red-light-green-light-challenge-prompt": {
+    "tags": [
+      "game-development"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "landing-page-vibe-coding-prompt": {
+    "tags": [
+      "web",
+      "css",
+      "design"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "quantitative-factor-research-engineer-prompt": {
+    "tags": [
+      "finance",
+      "python"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "banking-system-app-development-with-crud-operations-prompt": {
+    "tags": [
+      "mobile",
+      "crud",
+      "api"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "mppt-simulation仿真代码-prompt": {
+    "tags": [
+      "simulation",
+      "python",
+      "engineering"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "create-a-detailed-travel-itinerary-in-html-format-prompt": {
+    "tags": [
+      "html",
+      "css",
+      "web"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "digital-visiting-card-product-architect-prompt": {
+    "tags": [
+      "web",
+      "mobile",
+      "api",
+      "design"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "developer-daily-report-generator-prompt": {
+    "tags": [
+      "productivity",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "github-code-structure-tutor-prompt": {
+    "tags": [
+      "git",
+      "code-review",
+      "education"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "algorithm-quick-guide-prompt": {
+    "tags": [
+      "algorithms",
+      "education"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "comprehensive-user-manual-creation-for-multiple-modules-prompt": {
+    "tags": [
+      "documentation",
+      "technical-writing"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "building-an-inventory-management-system-prompt": {
+    "tags": [
+      "system-design",
+      "api",
+      "database"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "setting-up-a-new-ios-app-in-xcode-prompt": {
+    "tags": [
+      "ios",
+      "swift",
+      "mobile"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "isometric-miniature-3d-cartoon-city-scene-prompt": {
+    "tags": [
+      "3d",
+      "design",
+      "graphics"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "algorithm-analysis-and-improvement-advisor-prompt": {
+    "tags": [
+      "algorithms",
+      "ai",
+      "optimization"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "update-checker-prompt": {
+    "tags": [
+      "python",
+      "automation",
+      "cli"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "pull-request-review-assistant-prompt": {
+    "tags": [
+      "git",
+      "code-review",
+      "security"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "quizflix-app-development-prompt": {
+    "tags": [
+      "mobile",
+      "react-native",
+      "api"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "quizflix-mobile-app-design-for-university-students-prompt": {
+    "tags": [
+      "mobile",
+      "design",
+      "education"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "interactive-quiz-application-for-tv-shows-and-movies-prompt": {
+    "tags": [
+      "web",
+      "api",
+      "database"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "30-tweet-project-prompt": {
+    "tags": [
+      "social-media",
+      "content",
+      "crypto"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "for-rally-prompt": {
+    "tags": [
+      "social-media",
+      "content",
+      "crypto"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "hccvn-ai-vn-pro-max-optimal-ai-system-design-prompt": {
+    "tags": [
+      "ai",
+      "system-design",
+      "optimization"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "coding-structure-with-mvc-and-solid-principles-prompt": {
+    "tags": [
+      "architecture",
+      "design-patterns",
+      "best-practices"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "görsel-prompt": {
+    "tags": [
+      "3d",
+      "design",
+      "graphics"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "chinese-hookah-training-program-prompt": {
+    "tags": [
+      "education",
+      "training"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "net-api-project-analysis-prompt": {
+    "tags": [
+      "dotnet",
+      "api",
+      "architecture"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "set-up-wb-and-run-pod-during-training-prompt": {
+    "tags": [
+      "kubernetes",
+      "devops",
+      "mlops"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "hata-tespiti-için-kod-inceleme-asistanı-prompt": {
+    "tags": [
+      "code-review",
+      "testing",
+      "debugging"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "deep-copy-functionality-prompt": {
+    "tags": [
+      "programming",
+      "data-structures",
+      "memory-management"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "one-click-design-mockup-creator-prompt": {
+    "tags": [
+      "design",
+      "automation",
+      "tools"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "blog-system-development-guide-prompt": {
+    "tags": [
+      "web",
+      "api",
+      "database",
+      "system-design"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "flight-tracker-desktop-application-prompt": {
+    "tags": [
+      "desktop",
+      "api",
+      "real-time"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "develop-a-notion-clone-application-prompt": {
+    "tags": [
+      "web",
+      "productivity",
+      "database",
+      "system-design"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ast-code-analysis-superpower-prompt": {
+    "tags": [
+      "code-analysis",
+      "security",
+      "performance"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "aws-cloud-expert-prompt": {
+    "tags": [
+      "aws",
+      "cloud",
+      "architecture",
+      "security"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "accessibility-expert-prompt": {
+    "tags": [
+      "accessibility",
+      "testing",
+      "web"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "accessibility-testing-superpower-prompt": {
+    "tags": [
+      "accessibility",
+      "testing",
+      "web"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "custom-localization-and-ai-integration-for-apps-prompt": {
+    "tags": [
+      "ai",
+      "automation",
+      "javascript",
+      "react",
+      "mobile"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "modern-video-player-with-sharp-ui-prompt": {
+    "tags": [
+      "javascript",
+      "css",
+      "react",
+      "ui",
+      "web"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "isometric-3d-cartoon-scene-with-weather-effects-prompt": {
+    "tags": [
+      "3d",
+      "graphics",
+      "animation",
+      "design",
+      "art"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "nodejs-automation-script-developer-prompt": {
+    "tags": [
+      "nodejs",
+      "automation",
+      "javascript",
+      "api",
+      "web-scraping"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "smart-application-developer-assistant-prompt": {
+    "tags": [
+      "ai",
+      "automation",
+      "javascript",
+      "react",
+      "api"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "website-creation-command-prompt": {
+    "tags": [
+      "web",
+      "javascript",
+      "css",
+      "react",
+      "nextjs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "app-store-submission-agent-prompt": {
+    "tags": [
+      "ios",
+      "automation",
+      "mobile",
+      "swift",
+      "api"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "comprehensive-web-application-development-with-security-and-performance-optimization-prompt": {
+    "tags": [
+      "web",
+      "security",
+      "javascript",
+      "nodejs",
+      "react"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "photo-to-isometric-reality-slice-generator-prompt": {
+    "tags": [
+      "3d",
+      "ai",
+      "graphics",
+      "image-processing",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "strategic-app-design-content-engineering-prompt-prompt": {
+    "tags": [
+      "design",
+      "ui",
+      "ux",
+      "javascript",
+      "react"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "3d-isometric-miniature-city-view-with-weather-prompt": {
+    "tags": [
+      "3d",
+      "graphics",
+      "animation",
+      "design",
+      "art"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "nano-banana-pro-prompt-generator-instruction-outputs-json-blocks-like-these-prompt": {
+    "tags": [
+      "ai",
+      "automation",
+      "json",
+      "mcp",
+      "llm"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "prompt-writer-for-specific-project-prompt": {
+    "tags": [
+      "ai",
+      "automation",
+      "mcp",
+      "llm",
+      "documentation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "open-source-free-license-selection-assistant-prompt": {
+    "tags": [
+      "git",
+      "automation",
+      "legal",
+      "documentation",
+      "oss"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "codebase-wiki-documentation-skill-prompt": {
+    "tags": [
+      "documentation",
+      "automation",
+      "git",
+      "markdown",
+      "mcp"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "creating-a-project-management-tool-prompt": {
+    "tags": [
+      "javascript",
+      "react",
+      "nodejs",
+      "api",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "surreal-city-scene-prompt": {
+    "tags": [
+      "3d",
+      "graphics",
+      "art",
+      "design",
+      "animation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "study-review-companion-prompt": {
+    "tags": [
+      "ai",
+      "automation",
+      "education",
+      "documentation",
+      "llm"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "professional-github-dashboard-for-portfolio-enhancement-prompt": {
+    "tags": [
+      "git",
+      "javascript",
+      "react",
+      "css",
+      "api"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "candlestick-reversal-pattern-detector-in-pine-script-prompt": {
+    "tags": [
+      "trading",
+      "automation",
+      "javascript",
+      "finance",
+      "api"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "finance-tracker-app-development-plan-prompt": {
+    "tags": [
+      "mobile",
+      "flutter",
+      "javascript",
+      "api",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "research-project-analysis-and-ipd-feasibility-recommendations-prompt": {
+    "tags": [
+      "automation",
+      "documentation",
+      "ai",
+      "research",
+      "analysis"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "enterprise-microservices-architecture-design-prompt": {
+    "tags": [
+      "microservices",
+      "architecture",
+      "nodejs",
+      "api",
+      "docker"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "swiftui-ios-app-development-guide-prompt": {
+    "tags": [
+      "ios",
+      "swift",
+      "mobile",
+      "ui",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "bug-discovery-code-assistant-prompt": {
+    "tags": [
+      "automation",
+      "javascript",
+      "python",
+      "java",
+      "code-review"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "manim-code-prompt": {
+    "tags": [
+      "python",
+      "animation",
+      "education",
+      "graphics",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "comprehensive-repository-audit-remediation-prompt-prompt": {
+    "tags": [
+      "git",
+      "security",
+      "automation",
+      "code-review",
+      "documentation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "create-an-unofficial-instagram-api-prompt": {
+    "tags": [
+      "api",
+      "automation",
+      "nodejs",
+      "python",
+      "web-scraping"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "professional-full-stack-developer-for-network-mapping-monitoring-application-prompt": {
+    "tags": [
+      "javascript",
+      "react",
+      "nodejs",
+      "api",
+      "networking"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "comprehensive-pos-application-development-with-fifo-and-reporting-prompt": {
+    "tags": [
+      "javascript",
+      "nodejs",
+      "react",
+      "api",
+      "database"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "esp32-ui-library-development-prompt": {
+    "tags": [
+      "embedded",
+      "c-plus-plus",
+      "iot",
+      "ui",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "nbx-prompt": {
+    "tags": [
+      "ai",
+      "llm",
+      "automation",
+      "mcp",
+      "philosophy"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "sap-abap-carbon-footprint-module-graduation-project-documentation-prompt": {
+    "tags": [
+      "sap",
+      "abap",
+      "documentation",
+      "automation",
+      "enterprise"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "code-review-expert-prompt": {
+    "tags": [
+      "automation",
+      "code-review",
+      "javascript",
+      "python",
+      "java"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "networking-engineer-portfolio-website-prompt": {
+    "tags": [
+      "web",
+      "javascript",
+      "css",
+      "react",
+      "networking"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "mechanical-part-render-to-technical-drawing-converter-prompt": {
+    "tags": [
+      "cad",
+      "3d",
+      "engineering",
+      "automation",
+      "graphics"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "3d-mechanical-part-image-to-technical-drawing-conversion-prompt": {
+    "tags": [
+      "cad",
+      "3d",
+      "engineering",
+      "automation",
+      "graphics"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "topic-article-prompt": {
+    "tags": [
+      "documentation",
+      "seo",
+      "writing",
+      "automation",
+      "markdown"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "develop-a-ui-library-for-esp32-prompt": {
+    "tags": [
+      "embedded",
+      "c-plus-plus",
+      "iot",
+      "ui",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "full-stack-engineer-for-airline-simulation-center-app-prompt": {
+    "tags": [
+      "javascript",
+      "nodejs",
+      "react",
+      "api",
+      "database"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "senior-full-stack-developer-for-airline-simulation-center-prompt": {
+    "tags": [
+      "full-stack",
+      "inventory-management",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "senior-product-engineer-data-scientist-for-turkish-car-valuation-platform-prompt": {
+    "tags": [
+      "full-stack",
+      "data-science",
+      "mobile",
+      "web",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "act-as-an-ftth-telecommunications-expert-prompt": {
+    "tags": [
+      "telecommunications",
+      "infrastructure",
+      "expert"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "develop-a-modern-website-for-sporsmaç-using-react-native-prompt": {
+    "tags": [
+      "react-native",
+      "web",
+      "mobile",
+      "react"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "couples-therapy-app-development-guide-prompt": {
+    "tags": [
+      "mobile",
+      "app",
+      "therapy",
+      "guide"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "seo-fundamentals-prompt": {
+    "tags": [
+      "seo",
+      "marketing",
+      "google",
+      "web"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "mastermind-prompt": {
+    "tags": [
+      "planning",
+      "task-management",
+      "cto",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "creative-short-story-writing-prompt": {
+    "tags": [
+      "writing",
+      "creative",
+      "storytelling"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "comprehensive-roadmap-for-ai-and-computer-vision-specialization-in-defense-systems-prompt": {
+    "tags": [
+      "ai",
+      "computer-vision",
+      "defense",
+      "roadmap",
+      "career"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "code-review-specialist-2-prompt": {
+    "tags": [
+      "code-review",
+      "for-devs",
+      "best-practices"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "github-repository-analysis-and-enhancement-prompt": {
+    "tags": [
+      "git",
+      "github",
+      "code-analysis",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "inference-scenario-automation-tool-prompt": {
+    "tags": [
+      "ai",
+      "automation",
+      "machine-learning",
+      "ml"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "sql-query-generator-from-natural-language-prompt": {
+    "tags": [
+      "sql",
+      "database",
+      "query",
+      "nlp"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "white-box-web-application-security-audit-penetration-testing-prompt-for-ai-code-editors-cursor-windsurf-antigravity-prompt": {
+    "tags": [
+      "security",
+      "penetration-testing",
+      "web",
+      "cursor",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "develop-android-apps-from-screenshots-prompt": {
+    "tags": [
+      "android",
+      "mobile",
+      "app",
+      "development"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ai-powered-data-extraction-and-organization-tool-prompt": {
+    "tags": [
+      "ai",
+      "data-extraction",
+      "automation",
+      "data"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "the-quant-edge-engine-prompt": {
+    "tags": [
+      "data-science",
+      "sports",
+      "betting",
+      "analytics"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "yapper-twitter-strategist-2026-prompt": {
+    "tags": [
+      "crypto",
+      "twitter",
+      "strategy",
+      "marketing"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "fintech-product-and-operations-assistant-prompt": {
+    "tags": [
+      "fintech",
+      "product",
+      "operations",
+      "analysis"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "vibe-coding-master-prompt": {
+    "tags": [
+      "ai",
+      "coding",
+      "for-devs",
+      "frameworks"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "technical-codebase-discovery-onboarding-prompt-prompt": {
+    "tags": [
+      "onboarding",
+      "code-analysis",
+      "for-devs",
+      "documentation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "multi-audience-application-discovery-documentation-prompt-prompt": {
+    "tags": [
+      "documentation",
+      "code-analysis",
+      "system",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "web-app-for-task-management-and-scheduling-prompt": {
+    "tags": [
+      "web",
+      "task-management",
+      "calendar",
+      "app"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "sentry-bug-fixer-prompt": {
+    "tags": [
+      "debugging",
+      "sentry",
+      "for-devs",
+      "bug-fixing"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "meta-prompt-prompt": {
+    "tags": [
+      "prompt-engineering",
+      "optimization",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "tattoo-studio-booking-web-app-development-prompt": {
+    "tags": [
+      "web",
+      "booking",
+      "app",
+      "responsive"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ai-engineer-prompt": {
+    "tags": [
+      "ai",
+      "ml",
+      "llm",
+      "automation",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "backend-architect-prompt": {
+    "tags": [
+      "backend",
+      "api",
+      "database",
+      "architecture",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "devops-automator-prompt": {
+    "tags": [
+      "devops",
+      "ci-cd",
+      "automation",
+      "cloud",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "mobile-app-builder-prompt": {
+    "tags": [
+      "mobile",
+      "react-native",
+      "ios",
+      "android",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "rapid-prototyper-prompt": {
+    "tags": [
+      "prototyping",
+      "mvp",
+      "development",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "test-automation-expert-prompt": {
+    "tags": [
+      "testing",
+      "automation",
+      "qa",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "feedback-synthesizer-prompt": {
+    "tags": [
+      "feedback",
+      "analysis",
+      "user-research",
+      "product"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "sprint-prioritizer-prompt": {
+    "tags": [
+      "sprint",
+      "prioritization",
+      "roadmap",
+      "product"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "joker-tech-humor-master-prompt": {
+    "tags": [
+      "humor",
+      "fun",
+      "tech",
+      "entertainment"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "uipath-xaml-code-review-specialist-prompt": {
+    "tags": [
+      "uipath",
+      "rpa",
+      "code-review",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "the-prd-mastermind-prompt": {
+    "tags": [
+      "product",
+      "prd",
+      "discovery",
+      "vision",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "terminal-drift-prompt": {
+    "tags": [
+      "visualization",
+      "creative",
+      "art",
+      "story"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "master-prompt-architect-context-engineer-prompt": {
+    "tags": [
+      "prompt-engineering",
+      "ai",
+      "optimization",
+      "context"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "universal-context-document-ucd-generator-prompt": {
+    "tags": [
+      "documentation",
+      "context",
+      "technical",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "claude-code-skill-slash-command-review-and-commitmd-prompt": {
+    "tags": [
+      "git",
+      "automation",
+      "claude"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "create-a-drag-and-drop-experience-using-uniapp-prompt": {
+    "tags": [
+      "javascript",
+      "css",
+      "react"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "develop-a-creative-dice-generator-called-ideadice-prompt": {
+    "tags": [
+      "javascript",
+      "css",
+      "react"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "glados-prompt": {
+    "tags": [
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "prompt-architect-pro-prompt": {
+    "tags": [
+      "ai",
+      "llm",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "synthesis-architect-pro-prompt": {
+    "tags": [
+      "ai",
+      "for-devs",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "the-pragmatic-architect-mastering-tech-with-humor-and-precision-prompt": {
+    "tags": [
+      "for-devs",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "terminal-velocity-prompt": {
+    "tags": [
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "module-wrap-up-next-steps-video-generation-prompt": {
+    "tags": [
+      "automation",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "strict-markdown-only-output-enforcement-prompt": {
+    "tags": [
+      "markdown",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "beginners-guide-to-building-and-deploying-llms-prompt": {
+    "tags": [
+      "llm",
+      "ai",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "musician-portfolio-website-design-prompt": {
+    "tags": [
+      "javascript",
+      "css",
+      "react"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "geminimd-prompt": {
+    "tags": [
+      "for-devs",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "cinematic-ultra-realistic-image-to-video-prompt-engineer-prompt": {
+    "tags": [
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "build-a-ddqn-snake-game-with-tensorflowjs-in-a-single-html-file-prompt": {
+    "tags": [
+      "javascript",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "network-engineer-home-edition-prompt": {
+    "tags": [
+      "automation",
+      "linux"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "step-3a-technical-deep-dive-prompt": {
+    "tags": [
+      "for-devs",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "step-4b-story-development-prompt": {
+    "tags": [
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "my-skills-prompt": {
+    "tags": [
+      "javascript",
+      "mysql",
+      "api"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "copilot-prompt": {
+    "tags": [
+      "ai",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "note-guru-prompt": {
+    "tags": [
+      "automation",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "the-ultimate-typescript-code-review-prompt": {
+    "tags": [
+      "typescript",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "php-microscope-forensic-codebase-autopsy-protocol-prompt": {
+    "tags": [
+      "php",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "blogging-prompt-prompt": {
+    "tags": [
+      "ai",
+      "markdown"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "improve-the-following-code-prompt": {
+    "tags": [
+      "for-devs",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "personal-form-builder-app-design-prompt": {
+    "tags": [
+      "javascript",
+      "react",
+      "css"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "comprehensive-code-review-expert-prompt": {
+    "tags": [
+      "for-devs",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "claude-code-statusline-design-prompt": {
+    "tags": [
+      "claude",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "linkedin-profile-enhancing-prompt": {
+    "tags": [
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "marketing-mastermind-for-product-promotion-prompt": {
+    "tags": [
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "the-architect-hacker-protector-viral-engineer-prompt": {
+    "tags": [
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "gpt-5-expert-prompt-engineer-mode-condensed-prompt": {
+    "tags": [
+      "ai",
+      "llm",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ai-builder-prompt": {
+    "tags": [
+      "ai",
+      "javascript",
+      "react"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "enterprise-talent-development-management-system-design-prompt": {
+    "tags": [
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "gen-z-content-online-sales-prompt-generator-prompt": {
+    "tags": [
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "deep-github-repository-understanding-prompt": {
+    "tags": [
+      "git",
+      "ai",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "criaralterar-documentação-de-projeto-prompt": {
+    "tags": [
+      "for-devs",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "gerador-de-tarefas-prompt": {
+    "tags": [
+      "automation",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "planjedor-de-tarefas-prompt": {
+    "tags": [
+      "automation",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "creating-a-comprehensive-elasticsearch-search-project-with-fastapi-prompt": {
+    "tags": [
+      "python",
+      "api",
+      "rest-api"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "prompt-optimization-prompt": {
+    "tags": [
+      "ai",
+      "llm",
+      "prompt-engineering",
+      "claude",
+      "openai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "4-optimized-versions-of-a-prompt-in-arabic-prompt": {
+    "tags": [
+      "ai",
+      "llm",
+      "prompt-engineering",
+      "claude",
+      "openai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "prompt-engineering-expert-prompt": {
+    "tags": [
+      "ai",
+      "llm",
+      "prompt-engineering",
+      "claude",
+      "openai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "lagrange-lens-blue-wolf-prompt": {
+    "tags": [
+      "ai",
+      "llm",
+      "decision-making",
+      "automation",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "second-opinion-prompt": {
+    "tags": [
+      "ai",
+      "llm",
+      "code-review",
+      "claude",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "code-review-specialist-prompt": {
+    "tags": [
+      "code-review",
+      "git",
+      "automation",
+      "for-devs",
+      "javascript"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "develop-a-live-video-streaming-website-prompt": {
+    "tags": [
+      "web-development",
+      "javascript",
+      "react",
+      "nodejs",
+      "aws"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "national-architecture-dioramas-prompt": {
+    "tags": [
+      "ai",
+      "3d-modeling",
+      "design",
+      "automation",
+      "visualization"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "project-breakdown-prompt": {
+    "tags": [
+      "project-management",
+      "automation",
+      "agile",
+      "documentation",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "high-conversion-cold-email-prompt": {
+    "tags": [
+      "copywriting",
+      "automation",
+      "ai",
+      "marketing",
+      "productivity"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "system-prompt-the-infinite-role-generator-prompt": {
+    "tags": [
+      "ai",
+      "llm",
+      "prompt-engineering",
+      "automation",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "wfgy-20-core-flagship-self-healing-reasoning-os-for-any-llm-prompt": {
+    "tags": [
+      "ai",
+      "llm",
+      "automation",
+      "agent",
+      "system-design"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "claudemd-generator-for-ai-coding-agents-prompt": {
+    "tags": [
+      "ai",
+      "claude",
+      "documentation",
+      "automation",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "prompt-generator-for-claude-code-prompt": {
+    "tags": [
+      "ai",
+      "claude",
+      "prompt-engineering",
+      "automation",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "lead-data-analyst-for-actionable-insights-prompt": {
+    "tags": [
+      "data-analysis",
+      "python",
+      "visualization",
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "table-in-pdf-to-csv-conversion-prompt": {
+    "tags": [
+      "data-processing",
+      "automation",
+      "python",
+      "ai",
+      "documentation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "master-podcast-producer-sonic-storyteller-prompt": {
+    "tags": [
+      "content-creation",
+      "audio-production",
+      "automation",
+      "ai",
+      "marketing"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "micro-saas-vibecoder-architect-prompt": {
+    "tags": [
+      "saas",
+      "product-management",
+      "web-development",
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "senior-software-engineer-software-architect-rules-prompt": {
+    "tags": [
+      "software-architecture",
+      "code-review",
+      "for-devs",
+      "automation",
+      "best-practices"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "test-first-bug-fixing-approach-prompt": {
+    "tags": [
+      "testing",
+      "bug-fixing",
+      "automation",
+      "for-devs",
+      "javascript"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "spring-boot-solid-specialist-prompt": {
+    "tags": [
+      "java",
+      "spring-boot",
+      "software-architecture",
+      "solid-principles",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "principal-ai-code-reviewer-senior-software-engineer-architect-prompt-prompt": {
+    "tags": [
+      "code-review",
+      "software-architecture",
+      "security",
+      "for-devs",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "cruelty-free-beauty-product-checker-prompt": {
+    "tags": [
+      "ai",
+      "research",
+      "product-analysis",
+      "automation",
+      "consumer-guidance"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "learn-any-technicalcoding-topic-prompt": {
+    "tags": [
+      "education",
+      "tutorial",
+      "for-devs",
+      "ai",
+      "documentation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "animated-weather-radar-map-brescia-storm-prompt": {
+    "tags": [
+      "data-visualization",
+      "video-production",
+      "automation",
+      "ai",
+      "geospatial"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "software-implementor-ai-agent-for-data-entry-and-testing-prompt": {
+    "tags": [
+      "automation",
+      "playwright",
+      "testing",
+      "data-entry",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ckeditor-5-plugin-prompt": {
+    "tags": [
+      "javascript",
+      "ckeditor",
+      "web-development",
+      "plugin-development",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "antigravity-global-rules-prompt": {
+    "tags": [
+      "global-rules",
+      "software-architecture",
+      "security",
+      "qa",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "documentation-update-automation-prompt": {
+    "tags": [
+      "documentation",
+      "automation",
+      "git",
+      "for-devs",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "app-store-screenshots-gallery-generator-prompt": {
+    "tags": [
+      "ui-design",
+      "mobile-development",
+      "automation",
+      "marketing",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "build-a-web3-wallet-on-playnance-blockchain-prompt": {
+    "tags": [
+      "web3",
+      "blockchain",
+      "crypto",
+      "javascript",
+      "react"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "test-prompt": {
+    "tags": [
+      "ai",
+      "claude",
+      "ollama",
+      "automation",
+      "workflow"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "analyze-code-scanning-security-issues-and-dependency-updates-if-vulnerable-prompt": {
+    "tags": [
+      "security",
+      "code-scanning",
+      "dependency-management",
+      "automation",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "want-to-analyze-security-issues-and-vulnerabilities-and-fixes-prompt": {
+    "tags": [
+      "security",
+      "vulnerability-analysis",
+      "automation",
+      "for-devs",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "security-fixes-prompt": {
+    "tags": [
+      "security",
+      "code-scanning",
+      "vulnerability-fixes",
+      "automation",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "typescript-unit-testing-with-vitest-prompt": {
+    "tags": [
+      "typescript",
+      "testing",
+      "vitest",
+      "automation",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "tcre-framework-ai-prompt-engineer-prompt": {
+    "tags": [
+      "ai",
+      "prompt-engineering",
+      "framework",
+      "automation",
+      "llm"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "wickedsmahtfun-prompt": {
+    "tags": [
+      "web3",
+      "blockchain",
+      "solana",
+      "crypto",
+      "ai-agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ai-performance-deep-testing-engineer-prompt": {
+    "tags": [
+      "testing",
+      "performance",
+      "qa",
+      "automation",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "academic-paper-figure-generator-nano-banana-pro-prompt": {
+    "tags": [
+      "academic",
+      "data-visualization",
+      "scientific-illustration",
+      "ai",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "code-translator-idiomatic-version-aware-production-ready-prompt": {
+    "tags": [
+      "ai",
+      "automation",
+      "for-devs",
+      "code-review"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "email-phishing-and-cyber-attack-notification-app-prompt": {
+    "tags": [
+      "cybersecurity",
+      "email",
+      "app",
+      "security"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "update-agent-permissions-prompt": {
+    "tags": [
+      "mcp",
+      "claude",
+      "agent",
+      "permissions"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "angular-directive-generator-prompt": {
+    "tags": [
+      "angular",
+      "javascript",
+      "frontend",
+      "code-generation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "claude-code-skill-slash-command-push-and-pull-requestmd-prompt": {
+    "tags": [
+      "git",
+      "claude",
+      "automation",
+      "cli"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "dead-code-surgeon-phased-codebase-audit-cleanup-roadmap-prompt": {
+    "tags": [
+      "code-review",
+      "refactoring",
+      "technical-debt",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "comprehensive-go-codebase-review-forensic-level-analysis-prompt-prompt": {
+    "tags": [
+      "go",
+      "code-review",
+      "security",
+      "performance"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "comprehensive-python-codebase-review-forensic-level-analysis-prompt-prompt": {
+    "tags": [
+      "python",
+      "code-review",
+      "security",
+      "performance"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "brainstorming-technically-grounded-product-ideas-prompt": {
+    "tags": [
+      "product",
+      "brainstorming",
+      "for-devs",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "generate-a-plan-for-building-the-best-uiux-prompt": {
+    "tags": [
+      "ui",
+      "ux",
+      "frontend",
+      "design-system"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "make-uiux-better-of-an-already-created-application-prompt": {
+    "tags": [
+      "ui",
+      "ux",
+      "frontend",
+      "refactoring"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "2046-puzzle-game-challenge-prompt": {
+    "tags": [
+      "game",
+      "javascript",
+      "frontend",
+      "cli"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "seo-diagnosis-prompt": {
+    "tags": [
+      "seo",
+      "html",
+      "web",
+      "analysis"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "productive-peer-mentor-friendly-tech-savvy-thinking-partner-prompt": {
+    "tags": [
+      "mentoring",
+      "productivity",
+      "for-devs",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "tistory-blog-skin-uiux-enhancement-pipeline-prompt": {
+    "tags": [
+      "ui",
+      "ux",
+      "frontend",
+      "css"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "civil-engineering-bridge-mentor-prompt": {
+    "tags": [
+      "engineering",
+      "mentoring",
+      "specialized"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "task-creator-prompt": {
+    "tags": [
+      "automation",
+      "agent",
+      "productivity",
+      "documentation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "unity-architecture-specialist-prompt": {
+    "tags": [
+      "unity",
+      "game",
+      "architecture",
+      "refactoring"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "privacy-first-chat-app-with-multi-feature-support-prompt": {
+    "tags": [
+      "app",
+      "privacy",
+      "real-time",
+      "security"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "token-architecture-prompt": {
+    "tags": [
+      "design-system",
+      "css",
+      "frontend",
+      "architecture"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "component-documentation-prompt": {
+    "tags": [
+      "documentation",
+      "design-system",
+      "frontend",
+      "claude"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "claudemd-assembly-prompt": {
+    "tags": [
+      "documentation",
+      "design-system",
+      "claude",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "maintenance-prompt-for-design-system-prompt": {
+    "tags": [
+      "design-system",
+      "documentation",
+      "code-review",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "updatesync-prompt-prompt": {
+    "tags": [
+      "documentation",
+      "automation",
+      "code-review"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "explain-it-like-i-built-it-technical-documentation-for-non-technical-founders-prompt": {
+    "tags": [
+      "documentation",
+      "technical-writing",
+      "explanation",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "web-application-testing-skill-imported-prompt": {
+    "tags": [
+      "playwright",
+      "testing",
+      "automation",
+      "web"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "design-handoff-notes-ai-first-human-readable-prompt": {
+    "tags": [
+      "documentation",
+      "design-system",
+      "ui",
+      "ux"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "visual-qa-cross-browser-audit-prompt": {
+    "tags": [
+      "testing",
+      "qa",
+      "frontend",
+      "playwright"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "lighthouse-performance-optimization-prompt": {
+    "tags": [
+      "performance",
+      "web",
+      "optimization",
+      "frontend"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "saas-security-audit-owasp-top-10-multi-tenant-isolation-review-prompt": {
+    "tags": [
+      "security",
+      "owasp",
+      "saas",
+      "backend"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "repository-security-architecture-audit-framework-prompt": {
+    "tags": [
+      "security",
+      "architecture",
+      "code-review",
+      "backend"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "code-generation-for-online-assessments-prompt": {
+    "tags": [
+      "cpp",
+      "code-generation",
+      "automation",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "xcode-mcp-for-pi-agent-prompt": {
+    "tags": [
+      "mcp",
+      "xcode",
+      "ios",
+      "swift"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "build-an-interview-practice-app-prompt": {
+    "tags": [
+      "app",
+      "interview",
+      "javascript",
+      "frontend"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "video-review-and-teacher-prompt": {
+    "tags": [
+      "mcp",
+      "ai",
+      "education",
+      "documentation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "video-extractor-prompt-prompt": {
+    "tags": [
+      "mcp",
+      "ai",
+      "education",
+      "documentation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "system-architect-agent-role-prompt": {
+    "tags": [
+      "architecture",
+      "system-design",
+      "backend",
+      "microservices"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "backend-architect-agent-role-prompt": {
+    "tags": [
+      "backend",
+      "architecture",
+      "api",
+      "server"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "data-validator-agent-role-prompt": {
+    "tags": [
+      "validation",
+      "security",
+      "data",
+      "backend"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "mock-data-generator-agent-role-prompt": {
+    "tags": [
+      "testing",
+      "data",
+      "automation",
+      "backend"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "devops-automator-agent-role-prompt": {
+    "tags": [
+      "devops",
+      "automation",
+      "ci-cd",
+      "infrastructure-as-code",
+      "observability"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "repository-workflow-editor-agent-role-prompt": {
+    "tags": [
+      "git",
+      "automation",
+      "documentation",
+      "workflow",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "documentation-maintainer-agent-role-prompt": {
+    "tags": [
+      "documentation",
+      "technical-writing",
+      "api",
+      "markdown",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "caching-architect-agent-role-prompt": {
+    "tags": [
+      "caching",
+      "performance",
+      "architecture",
+      "optimization",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "vulnerability-auditor-agent-role-prompt": {
+    "tags": [
+      "security",
+      "audit",
+      "owasp",
+      "vulnerability",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "api-tester-agent-role-prompt": {
+    "tags": [
+      "api",
+      "testing",
+      "performance",
+      "automation",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "quality-engineering-agent-role-prompt": {
+    "tags": [
+      "testing",
+      "quality",
+      "automation",
+      "ci-cd",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "test-analyzer-agent-role-prompt": {
+    "tags": [
+      "testing",
+      "analysis",
+      "automation",
+      "data",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "test-engineer-agent-role-prompt": {
+    "tags": [
+      "testing",
+      "quality",
+      "tdd",
+      "bdd",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "code-formatter-agent-role-prompt": {
+    "tags": [
+      "code-quality",
+      "formatting",
+      "automation",
+      "style-guide",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "code-review-agent-role-prompt": {
+    "tags": [
+      "code-review",
+      "security",
+      "performance",
+      "backend",
+      "frontend"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "code-reviewer-agent-role-prompt": {
+    "tags": [
+      "code-review",
+      "security",
+      "quality",
+      "analysis",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "dependency-manager-agent-role-prompt": {
+    "tags": [
+      "devops",
+      "dependency",
+      "security",
+      "automation",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "error-handler-agent-role-prompt": {
+    "tags": [
+      "error-handling",
+      "logging",
+      "observability",
+      "reliability",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "post-implementation-audit-agent-role-prompt": {
+    "tags": [
+      "quality",
+      "audit",
+      "testing",
+      "deployment",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "product-planner-agent-role-prompt": {
+    "tags": [
+      "product",
+      "planning",
+      "requirements",
+      "roadmap",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "rapid-prototyper-agent-role-prompt": {
+    "tags": [
+      "prototyping",
+      "mvp",
+      "development",
+      "iteration",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "root-cause-analysis-agent-role-prompt": {
+    "tags": [
+      "analysis",
+      "debugging",
+      "incident",
+      "troubleshooting",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "refactoring-expert-agent-role-prompt": {
+    "tags": [
+      "refactoring",
+      "code-quality",
+      "design-patterns",
+      "solid",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "shell-script-agent-role-prompt": {
+    "tags": [
+      "shell",
+      "automation",
+      "linux",
+      "scripting",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "tool-evaluator-agent-role-prompt": {
+    "tags": [
+      "tooling",
+      "evaluation",
+      "analysis",
+      "technology",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "bug-risk-analyst-agent-role-prompt": {
+    "tags": [
+      "testing",
+      "analysis",
+      "risk",
+      "reliability",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "repository-indexer-agent-role-prompt": {
+    "tags": [
+      "analysis",
+      "codebase",
+      "indexing",
+      "dependencies",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "visual-media-analysis-expert-agent-role-prompt": {
+    "tags": [
+      "analysis",
+      "media",
+      "visual",
+      "cinematography",
+      "agent"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ux-conversion-deconstruction-engine-prompt": {
+    "tags": [
+      "ux",
+      "analysis",
+      "conversion",
+      "ui",
+      "design"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ai-first-design-handoff-generator-dev-ready-spec-prompt": {
+    "tags": [
+      "design",
+      "frontend",
+      "specification",
+      "ai",
+      "development"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "design-system-consistency-auditor-prompt": {
+    "tags": [
+      "design",
+      "ui",
+      "audit",
+      "consistency",
+      "system"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ai-powered-personal-compliment-coaching-engine-prompt": {
+    "tags": [
+      "ai",
+      "coaching",
+      "web-app",
+      "personalization",
+      "emotional-intelligence"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "personalized-digital-avatar-generator-prompt": {
+    "tags": [
+      "avatar",
+      "generator",
+      "web-app",
+      "personalization",
+      "ai"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "private-group-coaching-infrastructure-prompt": {
+    "tags": [
+      "coaching",
+      "platform",
+      "management",
+      "web-app",
+      "groups"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "trading-investing-simulation-platform-prompt": {
+    "tags": [
+      "trading",
+      "simulation",
+      "finance",
+      "web-app",
+      "education"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "personal-knowledge-narrative-tool-prompt": {
+    "tags": [
+      "knowledge",
+      "notes",
+      "organization",
+      "web-app",
+      "productivity"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "zero-to-one-solo-founder-launch-system-prompt": {
+    "tags": [
+      "startup",
+      "launch",
+      "product",
+      "web-app",
+      "entrepreneurship"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "legal-risk-minimization-tool-for-freelancers-prompt": {
+    "tags": [
+      "legal",
+      "freelance",
+      "contracts",
+      "web-app",
+      "risk"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "terraform-platform-engineer-prompt": {
+    "tags": [
+      "terraform",
+      "infrastructure",
+      "iac",
+      "automation",
+      "devops"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "nixos-linux-specialist-prompt": {
+    "tags": [
+      "nixos",
+      "linux",
+      "configuration",
+      "devops",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "lazyvim-expert-prompt": {
+    "tags": [
+      "vim",
+      "neovim",
+      "editor",
+      "development",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "base-r-prompt": {
+    "tags": [
+      "r",
+      "statistics",
+      "data",
+      "programming",
+      "analysis"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "functional-analyst-prompt": {
+    "tags": [
+      "analysis",
+      "requirements",
+      "uml",
+      "gherkin",
+      "agile"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "small-functional-analyst-mode-prompt": {
+    "tags": [
+      "analysis",
+      "requirements",
+      "gherkin",
+      "agile",
+      "scrum"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "ultra-micro-functional-analyst-prompt-prompt": {
+    "tags": [
+      "ai",
+      "automation",
+      "for-devs"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "architecture-uiux-audit-prompt": {
+    "tags": [
+      "react",
+      "nextjs",
+      "css",
+      "tailwind",
+      "ui-ux"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "blood-grouping-detection-using-image-processing-prompt": {
+    "tags": [
+      "python",
+      "api",
+      "image-processing"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "network-router-emulator-prompt": {
+    "tags": [
+      "cli",
+      "network",
+      "automation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "prompt-refiner-prompt": {
+    "tags": [
+      "ai",
+      "llm",
+      "prompt-engineering"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "模拟-linux-终端-wprompt": {
+    "tags": [
+      "linux",
+      "cli",
+      "terminal"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
+  },
+  "混淆代码翻译-wprompt": {
+    "tags": [
+      "code-analysis",
+      "refactoring",
+      "translation"
+    ],
+    "cached_at": "2026-04-02T01:34:08.309092"
   }
 }
