@@ -10,7 +10,8 @@ $ARGUMENTS
 
 ## 数据处理（重要：用 Bash 预过滤，避免全量 JSON 进入上下文）
 
-索引 URL: `https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/catalog/search-index.json`
+索引 URL: `https://zgsm-sangfor.github.io/costrict-coding-hub/api/v1/search-index.json`
+Fallback URL: `https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/catalog/search-index.json`
 
 ## 执行流程
 
@@ -26,7 +27,7 @@ $ARGUMENTS
    - 读取 `Gemfile` → 提取 Ruby gem
    - 检查文件后缀: `.tsx`→react, `.vue`→vue, `.py`→python, `.go`→go, `.rs`→rust, `.swift`→swift, `.kt`→kotlin
    - 检查配置文件: `Dockerfile`→docker, `.github/workflows/`→ci-cd, `tsconfig.json`→typescript
-3. 下载索引到临时文件: `curl -s <URL> -o "$TMPDIR/coding-hub-index.json"`
+3. 下载索引到临时文件: `curl -sf <索引 URL> -o "$TMPDIR/coding-hub-index.json"` 如果失败则尝试 Fallback URL
 4. 用 python 脚本预过滤（跨平台：macOS/Linux 用 python3，Windows 用 python，探测命令 `$(command -v python3 || command -v python)`）:
    - 读取 JSON 文件
    - 将检测到的项目 tags 与每条的 `tags` + `tech_stack` 做交集匹配

@@ -10,16 +10,19 @@ $ARGUMENTS
 
 ## 数据源
 
-索引 URL: `https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/catalog/index.json`
+单条 API: `https://zgsm-sangfor.github.io/costrict-coding-hub/api/v1/{type}/{id}.json`
+全量索引 (fallback): `https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/catalog/index.json`
 本地备用: `/Volumes/Work/Projects/costrict-coding-hub/catalog/index.json`
-
-用 Bash 执行: `curl -s <URL>` 获取 JSON，如果失败则用 Read 读取本地备用路径。
 
 ## 执行流程
 
 1. 从 `$ARGUMENTS` 中提取资源名
-2. 获取索引，按 `id` 或 `name`（模糊匹配）查找条目
-3. 如果匹配多条，列出让用户选择
+2. 先尝试按 ID 从单条 API 获取（需先用搜索索引确定 type 和 id）：
+   - 用 `curl -sf https://zgsm-sangfor.github.io/costrict-coding-hub/api/v1/search-index.json` 下载搜索索引
+   - 用 Python 在 name/id 中模糊匹配，确定条目的 `type` 和 `id`
+   - 如果匹配到唯一条目，用 `curl -sf https://zgsm-sangfor.github.io/costrict-coding-hub/api/v1/{type}/{id}.json` 获取完整数据
+   - 如果匹配多条，列出让用户选择后再获取单条
+3. 如果 Pages API 不可用，fallback 到全量索引：`curl -s <全量索引 URL>` 获取 JSON，如果失败则用 Read 读取本地备用路径
 4. 展示安装预览：
 
 ```
