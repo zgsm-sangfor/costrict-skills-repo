@@ -49,7 +49,11 @@ README_ENRICH_LIMIT = int(
 
 
 def _load_repo_meta(repo_url: str) -> dict[str, Any] | None:
-    return get_repo_meta(repo_url)
+    try:
+        return get_repo_meta(repo_url)
+    except Exception as exc:
+        logger.warning(f"Failed to fetch repo meta for {repo_url}: {exc}")
+        return None
 
 
 def normalize_github_url(url: str) -> str:
