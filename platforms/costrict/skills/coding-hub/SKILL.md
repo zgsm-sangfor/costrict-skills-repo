@@ -111,8 +111,8 @@ Python 命令跨平台探测: `$(command -v python3 || command -v python)`
 
 1. 先用搜索索引按 `id` 或 `name`（模糊匹配）定位条目，获取 `type` 和 `id`
 2. 如果匹配多条，列出让用户选择
-3. 用单条 API 获取完整数据: `curl -sf "https://zgsm-sangfor.github.io/costrict-coding-hub/api/v1/{type}/{id}.json"`
-   - 如果失败，fallback 到全量索引: `curl -sf "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/catalog/index.json"` 并从中筛选
+3. 用单条 API 获取完整数据: `curl -sf --compressed "https://zgsm-sangfor.github.io/costrict-coding-hub/api/v1/{type}/{id}.json"`
+   - 如果失败，fallback 到全量索引: `curl -sf --compressed "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/catalog/index.json"` 并从中筛选
 4. 展示安装预览，用户确认后按类型执行安装
 
 ### uninstall <name>

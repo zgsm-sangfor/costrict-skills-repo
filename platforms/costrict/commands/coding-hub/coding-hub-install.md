@@ -18,9 +18,9 @@ $ARGUMENTS
 
 1. 从 `$ARGUMENTS` 中提取资源名
 2. 先尝试按 ID 从单条 API 获取（需先用搜索索引确定 type 和 id）：
-   - 用 `curl -sf https://zgsm-sangfor.github.io/costrict-coding-hub/api/v1/search-index.json` 下载搜索索引
+   - 用 `curl -sf --compressed https://zgsm-sangfor.github.io/costrict-coding-hub/api/v1/search-index.json` 下载搜索索引
    - 用 Python 在 name/id 中模糊匹配，确定条目的 `type` 和 `id`
-   - 如果匹配到唯一条目，用 `curl -sf https://zgsm-sangfor.github.io/costrict-coding-hub/api/v1/{type}/{id}.json` 获取完整数据
+   - 如果匹配到唯一条目，用 `curl -sf --compressed https://zgsm-sangfor.github.io/costrict-coding-hub/api/v1/{type}/{id}.json` 获取完整数据
    - 如果匹配多条，列出让用户选择后再获取单条
 3. 如果 Pages API 不可用，fallback 到全量索引：`curl -s <全量索引 URL>` 获取 JSON
 2. 获取索引，按 `id` 或 `name`（模糊匹配）查找条目

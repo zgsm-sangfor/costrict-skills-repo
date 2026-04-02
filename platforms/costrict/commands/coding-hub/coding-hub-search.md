@@ -20,7 +20,7 @@ Fallback URL: `https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hu
    - 支持 `type:mcp`、`type:skill`、`type:rule`、`type:prompt` 过滤
    - 示例: `/coding-hub-search typescript type:mcp` — 只搜索 MCP 类型
    - 如果参数中包含 `type:<值>`，提取为过滤条件，剩余部分作为搜索关键词
-2. 下载索引到临时文件: `curl -sf <索引 URL> -o "$TMPDIR/coding-hub-index.json"` 如果失败则尝试 Fallback URL
+2. 下载索引到临时文件: `curl -sf --compressed <索引 URL> -o "$TMPDIR/coding-hub-index.json"` 如果失败则尝试 Fallback URL
 3. 用 python 脚本过滤（跨平台：macOS/Linux 用 python3，Windows 用 python，探测命令 `$(command -v python3 || command -v python)`）:
    - 读取 JSON 文件
    - 在 name、description、tags 中搜索关键词（不区分大小写）

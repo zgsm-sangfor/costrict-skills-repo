@@ -28,7 +28,7 @@ Fallback URL: `https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hu
    - 读取 `Gemfile` → 提取 Ruby gem
    - 检查文件后缀: `.tsx`→react, `.vue`→vue, `.py`→python, `.go`→go, `.rs`→rust, `.swift`→swift, `.kt`→kotlin
    - 检查配置文件: `Dockerfile`→docker, `.github/workflows/`→ci-cd, `tsconfig.json`→typescript
-3. 下载索引到临时文件: `curl -sf <索引 URL> -o "$TMPDIR/coding-hub-index.json"`，如果失败则尝试 Fallback URL，仍失败则用本地备用路径
+3. 下载索引到临时文件: `curl -sf --compressed <索引 URL> -o "$TMPDIR/coding-hub-index.json"`，如果失败则尝试 Fallback URL，仍失败则用本地备用路径
 4. 用 python 脚本预过滤（跨平台：macOS/Linux 用 python3，Windows 用 python，探测命令 `$(command -v python3 || command -v python)`）:
    - 读取 JSON 文件
    - 将检测到的项目 tags 与每条的 `tags` + `tech_stack` 做交集匹配

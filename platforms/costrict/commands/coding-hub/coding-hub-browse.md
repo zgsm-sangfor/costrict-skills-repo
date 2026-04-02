@@ -16,7 +16,7 @@ Fallback URL: `https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hu
 
 从 `$ARGUMENTS` 中提取可选的分类参数和 `type:<值>` 过滤条件后，用 Bash 执行预过滤：
 
-1. 下载索引到临时文件: `curl -sf <索引 URL> -o "$TMPDIR/coding-hub-index.json"` 如果失败则尝试 Fallback URL
+1. 下载索引到临时文件: `curl -sf --compressed <索引 URL> -o "$TMPDIR/coding-hub-index.json"` 如果失败则尝试 Fallback URL
 2. 用 python 脚本处理（跨平台：macOS/Linux 用 python3，Windows 用 python，探测命令 `$(command -v python3 || command -v python)`）
 
 ### 无参数时：分类概览
