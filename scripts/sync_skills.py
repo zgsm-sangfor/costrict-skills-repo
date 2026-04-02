@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sync skills from Tier 1 (anthropics/skills + Ai-Agent-Skills + antigravity-awesome-skills) + Tier 2 (Registry)."""
+"""Sync skills from Tier 1 (anthropics/skills + Ai-Agent-Skills + antigravity-awesome-skills + vasilyu-skills) + Tier 2 (Registry)."""
 
 import os
 import re
@@ -151,6 +151,20 @@ OPENCLAW_CATEGORIES = {
     "data-and-analytics": "database",
 }
 
+# Vasilyu: prefix → category mapping for vasilyu1983/ai-agents-public skill dirs
+VASILYU_CATEGORY_MAP = {
+    "ai": "ai-ml",
+    "agents": "ai-ml",
+    "qa": "testing",
+    "software": "backend",
+    "dev": "tooling",
+    "data": "database",
+    "docs": "documentation",
+    "document": "documentation",
+    "ops": "devops",
+    "product": "tooling",
+}
+
 
 def parse_antigravity_skills() -> list[dict[str, Any]]:
     """Parse sickn33/antigravity-awesome-skills via skills_index.json.
@@ -253,6 +267,92 @@ def parse_antigravity_skills() -> list[dict[str, Any]]:
     logger.info(
         f"Parsed {len(entries)} skills from {REPO} "
         f"({skipped} skipped, {cat_filtered} non-tech filtered, stars={stars})"
+    )
+    return entries
+
+
+def parse_vasilyu_skills() -> list[dict[str, Any]]:
+    """Parse vasilyu1983/ai-agents-public shared skills via Tree API.
+
+    Tier 1 source — discovers SKILL.md under frameworks/shared-skills/skills/*/,
+    parses YAML frontmatter for name/description, falls back to dir name.
+    """
+    REPO = "vasilyu1983/ai-agents-public"
+    SKILL_PREFIX = "frameworks/shared-skills/skills/"
+
+    # Step 1: Tree API — discover all SKILL.md files
+    existing_files = list_repo_files(REPO, "main", pattern="SKILL.md")
+    skill_dirs = {}
+    for path in existing_files:
+        # e.g. "frameworks/shared-skills/skills/ai-code-review/SKILL.md" → "ai-code-review"
+        if path.startswith(SKILL_PREFIX) and path.endswith("/SKILL.md"):
+            remainder = path[len(SKILL_PREFIX):]
+            parts = remainder.split("/")
+            if len(parts) == 2 and parts[1].upper() == "SKILL.MD":
+                skill_dirs[parts[0]] = path
+
+    if not skill_dirs:
+        logger.warning(f"No SKILL.md files found in {REPO} under {SKILL_PREFIX}")
+        return []
+
+    # Fetch repo stars (single API call)
+    repo_info = github_api(f"repos/{REPO}")
+    stars = repo_info.get("stargazers_count", 0) if repo_info else 0
+
+    entries = []
+    fetch_failures = 0
+    for skill_dir_name, skill_path in sorted(skill_dirs.items()):
+        skill_md = fetch_raw_content(REPO, skill_path, quiet_404=True)
+
+        name = skill_dir_name
+        description = f"Agent skill: {skill_dir_name}"
+
+        if skill_md:
+            # Parse YAML frontmatter
+            fm_match = re.match(r"^---\s*\n(.*?)\n---", skill_md, re.DOTALL)
+            if fm_match:
+                frontmatter = fm_match.group(1)
+                name_match = re.search(r'name:\s*"?([^"\n]+)"?', frontmatter)
+                desc_match = re.search(r'description:\s*"?([^"\n]+)"?', frontmatter)
+                if name_match:
+                    name = name_match.group(1).strip()
+                if desc_match:
+                    description = desc_match.group(1).strip()
+        else:
+            fetch_failures += 1
+            continue
+
+        # Prefix-based category: split dir name by "-", take first segment
+        prefix = skill_dir_name.split("-")[0]
+        tags = extract_tags(name, description)
+        category = VASILYU_CATEGORY_MAP.get(prefix)
+        if not category:
+            category = categorize(name, description, tags)
+
+        entries.append(
+            {
+                "id": f"{to_kebab_case(skill_dir_name)}-vyskill",
+                "name": name,
+                "type": "skill",
+                "description": description,
+                "source_url": f"https://github.com/{REPO}/tree/main/{SKILL_PREFIX}{skill_dir_name}",
+                "stars": stars,
+                "category": category,
+                "tags": tags,
+                "tech_stack": [],
+                "install": {
+                    "method": "git_clone",
+                    "repo": f"https://github.com/{REPO}.git",
+                    "files": [f"{SKILL_PREFIX}{skill_dir_name}/"],
+                },
+                "source": "vasilyu-skills",
+                "last_synced": TODAY,
+            }
+        )
+
+    logger.info(
+        f"Parsed {len(entries)} skills from {REPO} "
+        f"({fetch_failures} fetch failures, stars={stars})"
     )
     return entries
 
@@ -633,6 +733,10 @@ def sync():
     tier1_entries.extend(parse_anthropic_skills())
     tier1_entries.extend(parse_ai_agent_skills())
     tier1_entries.extend(parse_antigravity_skills())
+    try:
+        tier1_entries.extend(parse_vasilyu_skills())
+    except Exception as e:
+        logger.error(f"Vasilyu skills sync failed: {e}")
     logger.info(f"Tier 1 total: {len(tier1_entries)} skills")
 
     # === Tier 2: Registry discovery + OpenClaw + deterministic filtering ===

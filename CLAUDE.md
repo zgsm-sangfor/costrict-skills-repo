@@ -85,7 +85,7 @@ README.md                                       ← 自动更新统计
 
 ### Skills 三层来源与去重
 
-- **Tier 1**（最高优先级）: anthropics/skills + Ai-Agent-Skills + antigravity-awesome-skills（全量收录，非技术类过滤）
+- **Tier 1**（最高优先级）: anthropics/skills + Ai-Agent-Skills + antigravity-awesome-skills + vasilyu1983/ai-agents-public（全量收录，非技术类过滤）
 - **Tier 2**: GitHub 搜索 + awesome-openclaw-skills → LLM 评估（TOP 300）
 - **Tier 3**（最低优先级）: `catalog/skills/curated.json` 手工精选
 

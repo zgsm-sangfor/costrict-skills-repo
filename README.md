@@ -190,7 +190,7 @@ https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/README.m
 | 上游 | 来源 |
 |------|------|
 | MCP | [awesome-mcp-servers](https://github.com/wong2/awesome-mcp-servers) · [Awesome-MCP-ZH](https://github.com/yzfly/Awesome-MCP-ZH) · [mcp.so](https://mcp.so) |
-| Skills | Tier 1: [anthropics/skills](https://github.com/anthropics/skills) · [Ai-Agent-Skills](https://github.com/skillcreatorai/Ai-Agent-Skills) · [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills)<br/>Tier 2: [awesome-repo-configs / skill_repos.json](https://github.com/Chat2AnyLLM/awesome-repo-configs) 动态发现社区仓库 · [awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills) · [openclaw/skills](https://github.com/openclaw/skills)<br/>Tier 3: `catalog/skills/curated.json` |
+| Skills | Tier 1: [anthropics/skills](https://github.com/anthropics/skills) · [Ai-Agent-Skills](https://github.com/skillcreatorai/Ai-Agent-Skills) · [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) · [ai-agents-public](https://github.com/vasilyu1983/ai-agents-public)<br/>Tier 2: [awesome-repo-configs / skill_repos.json](https://github.com/Chat2AnyLLM/awesome-repo-configs) 动态发现社区仓库 · [awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills) · [openclaw/skills](https://github.com/openclaw/skills)<br/>Tier 3: `catalog/skills/curated.json` |
 | Rules | [awesome-cursorrules](https://github.com/PatrickJS/awesome-cursorrules) · [rules-2.1-optimized](https://github.com/Mr-chen-05/rules-2.1-optimized) |
 | Prompts | [prompts.chat](https://github.com/f/prompts.chat) · [wonderful-prompts](https://github.com/langgptai/wonderful-prompts) |
 
@@ -201,7 +201,7 @@ https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/README.m
 **第一层：来源侧清洗**
 
 - **MCP Servers**：从 `mcp.so seed + awesome-mcp-servers + Awesome-MCP-ZH` 聚合；对 awesome 列表里的 GitHub 仓库会补抓元数据，并保留基础活跃度筛选。
-- **Skills**：Tier 1 以官方 / 高质量来源为主；Tier 2 通过 `skill_repos.json` Registry 与 OpenClaw 发现候选，再过滤 spam、非 coding 分类和聚合仓库，并按确定性分数取 TOP 300。
+- **Skills**：Tier 1 以官方 / 高质量来源为主（含 vasilyu1983/ai-agents-public 的 62 个领域专精技能）；Tier 2 通过 `skill_repos.json` Registry 与 OpenClaw 发现候选，再过滤 spam、非 coding 分类和聚合仓库，并按确定性分数取 TOP 300。
 - **Rules**：直接解析 `awesome-cursorrules` 与 `rules-2.1-optimized` 的规则目录和 `.mdc` 文件，不额外套用统一的 star 门槛。
 - **Prompts**：`prompts.chat` 只保留面向开发者或命中 coding 关键词的条目；`wonderful-prompts` 只提取“编程”章节。
 
