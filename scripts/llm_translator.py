@@ -13,6 +13,7 @@ import re
 import time
 import logging
 from datetime import datetime, timedelta
+from http.client import IncompleteRead
 from urllib.request import urlopen, Request
 from urllib.error import HTTPError, URLError
 
@@ -113,7 +114,7 @@ def _call_llm_batch(entries: list[dict]) -> dict[str, str]:
                 if content.startswith("```"):
                     content = content.split("\n", 1)[1].rsplit("```", 1)[0]
                 return json.loads(content)
-        except (HTTPError, URLError, TimeoutError) as e:
+        except (HTTPError, URLError, TimeoutError, IncompleteRead) as e:
             logger.warning(f"LLM translator API error (attempt {attempt+1}): {e}")
             if attempt < 2:
                 time.sleep(2 ** attempt)
@@ -255,7 +256,7 @@ def _call_llm_en_batch(entries: list[dict]) -> dict[str, str]:
                 if content.startswith("```"):
                     content = content.split("\n", 1)[1].rsplit("```", 1)[0]
                 return json.loads(content)
-        except (HTTPError, URLError, TimeoutError) as e:
+        except (HTTPError, URLError, TimeoutError, IncompleteRead) as e:
             logger.warning(f"LLM en-translator API error (attempt {attempt+1}): {e}")
             if attempt < 2:
                 time.sleep(2 ** attempt)
