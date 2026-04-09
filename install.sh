@@ -110,18 +110,22 @@ download() {
 
 install_claude_code() {
   local skill_dir="$HOME/.claude/skills/coding-hub"
-  mkdir -p "$skill_dir"
+  local cmd_dir="$HOME/.claude/commands/coding-hub"
+  mkdir -p "$skill_dir" "$cmd_dir"
 
-  echo "Downloading skill + commands..."
+  echo "Downloading skill..."
   download "$BASE_URL/platforms/claude-code/skills/coding-hub/SKILL.md" "$skill_dir/SKILL.md"
+
+  echo "Downloading commands..."
   for cmd in $COMMANDS; do
-    download "$BASE_URL/platforms/claude-code/commands/coding-hub/${cmd}.md" "$skill_dir/${cmd}.md"
+    download "$BASE_URL/platforms/claude-code/commands/coding-hub/${cmd}.md" "$cmd_dir/${cmd}.md"
   done
 
   echo ""
   echo "=== Coding Hub installed (Claude Code) ==="
   echo ""
-  echo "Skill + commands: $skill_dir/"
+  echo "Skill:    $skill_dir/"
+  echo "Commands: $cmd_dir/"
   echo ""
   echo "Try:  /coding-hub:search typescript"
 }
