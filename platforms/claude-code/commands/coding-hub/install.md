@@ -59,18 +59,30 @@ Structure:
 #### method == "mcp_config"
 - Merge `install.config` directly into the `mcpServers` field
 - If key already exists, ask whether to overwrite
+- If `install.config.env` contains any values → run **Post-Install Configuration Guide** (see below)
 
 #### method == "mcp_config_template"
-- Write `install.config` into `mcpServers` field
-- **After installation, prompt user about placeholders** — show each placeholder and hint from `install.placeholder_hints`
-- Format (in user's language):
+- Write `install.config` into `mcpServers` field first (so entry exists even if user skips config)
+- Then run **Post-Install Configuration Guide** (see below)
+
+#### Post-Install Configuration Guide
+
+When the installed MCP config contains `env` fields (API keys, tokens, connection strings, etc.):
+
+1. **Detect unconfigured env vars** — any env value that is empty, contains `<`, `YOUR_`, or placeholder-like patterns
+2. **Fetch the project README for setup guidance**:
+   - Use WebFetch on the entry's `source_url` with prompt: "Extract: 1) What API keys or environment variables are needed 2) How to obtain them (signup URL, steps) 3) Example configuration. Be concise, bullet points only."
+   - If `source_url` is a GitHub monorepo subpath and fetch fails, try the repo root URL instead
+3. **Present actionable guidance** to the user (in detected language):
 ```
 Structure:
-  Warning: "This MCP requires configuring the following parameters:"
-  Per placeholder:
-    - KEY_NAME: hint text
-  Instruction: "Please edit the config file to replace these placeholders."
+  Section: "Configuration Required"
+  Per env var:
+    - KEY_NAME: [guidance extracted from README — how to obtain, signup URL, etc.]
+  Action: "Would you like me to help you fill in these values now?"
 ```
+4. **If user provides values**, update the settings.json entry directly
+5. **If README is unavailable**, fall back to showing env var names and `source_url` link
 
 #### method == "manual"
 No pre-built install config in the index — infer install method from project README. Steps:
