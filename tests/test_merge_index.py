@@ -157,7 +157,7 @@ class TestMergeIndex(unittest.TestCase):
 
         self.assertEqual(result[0]["added_at"], "2024-01-15")
 
-    def test_sorted_by_health_desc(self):
+    def test_sorted_by_final_score_then_health_desc(self):
         low_entry = _make_entry(
             "low",
             stars=0,
@@ -279,6 +279,12 @@ class TestMergeIndex(unittest.TestCase):
 
         self.assertIn("evaluation", result[0])
         self.assertIn("health", result[0])
+        # Top-level scoring fields promoted from evaluation
+        self.assertIn("final_score", result[0])
+        self.assertIn("decision", result[0])
+        self.assertIsInstance(result[0]["final_score"], int)
+        self.assertGreater(result[0]["final_score"], 0)
+        self.assertIn(result[0]["decision"], ("accept", "review", "reject"))
 
     def test_dedup_integrity_stats_logged(self):
         """Merge logs per-type dedup stats."""
@@ -350,7 +356,7 @@ class TestSearchIndex(unittest.TestCase):
         expected_fields = {
             "id", "name", "type", "category", "tags", "tech_stack",
             "stars", "description", "description_zh", "source_url",
-            "install_method",
+            "install_method", "final_score", "decision",
         }
         self.assertEqual(set(result[0].keys()), expected_fields)
 
@@ -366,6 +372,9 @@ class TestSearchIndex(unittest.TestCase):
         self.assertNotIn("health", result[0])
         self.assertNotIn("install", result[0])
         self.assertNotIn("added_at", result[0])
+        # But lightweight scoring fields ARE included
+        self.assertIn("final_score", result[0])
+        self.assertIn("decision", result[0])
 
     def test_install_method_extracted(self):
         entry = _make_entry("a", source_url="https://github.com/t/a")

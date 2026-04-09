@@ -15,6 +15,7 @@ try:
         deduplicate,
         categorize,
         extract_tags,
+        normalize_source_url,
         logger,
     )
     from .enrichment_orchestrator import enrich_entries
@@ -31,6 +32,7 @@ except ImportError:
         deduplicate,
         categorize,
         extract_tags,
+        normalize_source_url,
         logger,
     )
     from enrichment_orchestrator import enrich_entries
@@ -44,6 +46,82 @@ except ImportError:
 CATALOG_DIR = os.path.join(os.path.dirname(__file__), "..", "catalog")
 TYPES = ["mcp", "skills", "rules", "prompts"]
 TODAY = date.today().isoformat()
+
+
+def overlay_curated_fields(entries: list) -> list:
+    """Merge supplementary fields from curated.json files into deduped entries.
+
+    For each entry in the deduped list, if a matching curated entry exists
+    (matched by id, with fallback to normalized source_url):
+      - tech_stack: union of curated + existing (curated values first, deduplicated)
+      - tags: append curated tags (deduplicated)
+      - Non-supplementary fields (name, description, stars, source_url, install,
+        evaluation) are NOT overwritten.
+
+    Curated entries with no match are appended as new entries.
+
+    This function is idempotent: calling it multiple times produces the same result.
+    """
+    # Build lookup maps over the deduped entries
+    id_to_entry: dict[str, Any] = {}
+    url_to_entry: dict[str, Any] = {}
+    for entry in entries:
+        eid = entry.get("id", "")
+        if eid:
+            id_to_entry[eid] = entry
+        surl = entry.get("source_url", "")
+        if surl:
+            url_to_entry[normalize_source_url(surl)] = entry
+
+    appended: list = []
+
+    for resource_type in TYPES:
+        curated_path = os.path.join(CATALOG_DIR, resource_type, "curated.json")
+        curated_entries = load_index(curated_path)
+        for curated in curated_entries:
+            cid = curated.get("id", "")
+            curl = curated.get("source_url", "")
+            norm_curl = normalize_source_url(curl) if curl else ""
+
+            # Find match: id first, then normalized source_url
+            target = None
+            if cid and cid in id_to_entry:
+                target = id_to_entry[cid]
+            elif norm_curl and norm_curl in url_to_entry:
+                target = url_to_entry[norm_curl]
+
+            if target is None:
+                # No match — append as new entry, track to prevent
+                # duplicates from subsequent curated entries in the loop
+                appended.append(curated)
+                if cid:
+                    id_to_entry[cid] = curated
+                if norm_curl:
+                    url_to_entry[norm_curl] = curated
+                continue
+
+            # Merge tech_stack: curated first, then existing, deduplicated
+            curated_ts = curated.get("tech_stack") or []
+            existing_ts = target.get("tech_stack") or []
+            merged_ts_seen: set = set()
+            merged_ts: list = []
+            for item in curated_ts + existing_ts:
+                if item not in merged_ts_seen:
+                    merged_ts_seen.add(item)
+                    merged_ts.append(item)
+            target["tech_stack"] = merged_ts
+
+            # Merge tags: append curated tags (deduplicated)
+            curated_tags = curated.get("tags") or []
+            existing_tags = target.get("tags") or []
+            existing_tags_set = set(existing_tags)
+            for tag in curated_tags:
+                if tag not in existing_tags_set:
+                    existing_tags.append(tag)
+                    existing_tags_set.add(tag)
+            target["tags"] = existing_tags
+
+    return entries + appended
 
 
 def _load_queue_state(queue_state_path: str) -> dict[str, Any]:
@@ -97,6 +175,9 @@ def merge():
             )
         else:
             logger.info(f"Dedup stats: type={t} {pre} → {post} (-{drop_pct:.0f}%)")
+
+    # Overlay supplementary fields (tech_stack, tags) from curated.json files
+    deduped = overlay_curated_fields(deduped)
 
     # Fix invalid categories
     VALID_CATEGORIES = {
@@ -153,6 +234,12 @@ def merge():
     deduped = apply_governance(deduped)
     logger.info(f"Governance complete: {len(deduped)} entries after filtering")
 
+    # Promote scoring fields to top level for easy consumption by search/browse/recommend
+    for entry in deduped:
+        ev = entry.get("evaluation") or {}
+        entry["final_score"] = ev.get("final_score", 0)
+        entry["decision"] = ev.get("decision", "review")
+
     # --- Lifecycle ---
     existing_output = backfill_missing_added_at(existing_output, today=TODAY)
     prior_entries = deduped + existing_output
@@ -177,9 +264,10 @@ def merge():
     with open(queue_state_path, "w", encoding="utf-8") as f:
         json.dump(queue_state, f, indent=2, ensure_ascii=False)
 
-    # Sort by health.score descending, ties broken by stars descending (nulls last)
+    # Sort by final_score descending, then health.score, then stars (nulls last)
     deduped.sort(
         key=lambda x: (
+            x.get("final_score", 0),
             x.get("health", {}).get("score", 0),
             x.get("stars") if x.get("stars") is not None else -1,
         ),
@@ -193,6 +281,7 @@ def merge():
     SEARCH_INDEX_FIELDS = (
         "id", "name", "type", "category", "tags", "tech_stack",
         "stars", "description", "description_zh", "source_url",
+        "final_score", "decision",
     )
     search_entries = []
     for entry in deduped:
