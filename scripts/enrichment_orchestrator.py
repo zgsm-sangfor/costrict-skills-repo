@@ -11,11 +11,13 @@ try:
     from .llm_translator import llm_translate_entries
     from .llm_evaluator import enrich_quality
     from .unified_enrichment import populate_signals
+    from .llm_techstack_tagger import tag_techstack
 except ImportError:
     from llm_tagger import llm_tag_entries
     from llm_translator import llm_translate_entries
     from llm_evaluator import enrich_quality
     from unified_enrichment import populate_signals
+    from llm_techstack_tagger import tag_techstack
 
 
 def enrich_entries(entries: list[dict[str, Any]]) -> None:
@@ -37,6 +39,15 @@ def enrich_entries(entries: list[dict[str, Any]]) -> None:
                 existing = set(entry.get("tags") or [])
                 new_tags = [t for t in tag_results[eid] if t not in existing]
                 entry["tags"] = (entry.get("tags") or []) + new_tags
+
+    # Step 1b: Tech stack tagging (only for entries missing tech_stack)
+    techstack_candidates = [e for e in entries if not e.get("tech_stack")]
+    techstack_results = tag_techstack(techstack_candidates)
+    if techstack_results:
+        for entry in entries:
+            eid = entry["id"]
+            if eid in techstack_results and not entry.get("tech_stack"):
+                entry["tech_stack"] = techstack_results[eid]
 
     # Step 2: Translation enrichment (only for entries missing description_zh)
     translate_results = llm_translate_entries(entries)
