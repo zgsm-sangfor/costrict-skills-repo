@@ -21149,5 +21149,57 @@
   "混淆代码翻译-wprompt": {
     "tech_stack": [],
     "cached_at": "2026-04-09T04:59:04.901614"
+  },
+  "manage-skills-agskill": {
+    "tech_stack": [
+      "openai",
+      "anthropic"
+    ],
+    "cached_at": "2026-04-10T04:45:27.807748"
+  },
+  "monte-carlo-monitor-creation-agskill": {
+    "tech_stack": [
+      "github-actions"
+    ],
+    "cached_at": "2026-04-10T04:45:27.807748"
+  },
+  "monte-carlo-prevent-agskill": {
+    "tech_stack": [
+      "postgres"
+    ],
+    "cached_at": "2026-04-10T04:45:27.807748"
+  },
+  "monte-carlo-push-ingestion-agskill": {
+    "tech_stack": [
+      "postgres",
+      "mongodb"
+    ],
+    "cached_at": "2026-04-10T04:45:27.807748"
+  },
+  "monte-carlo-validation-notebook-agskill": {
+    "tech_stack": [
+      "postgres"
+    ],
+    "cached_at": "2026-04-10T04:45:27.807748"
+  },
+  "prompt-generator-prompt": {
+    "tech_stack": [
+      "go",
+      "openai",
+      "langchain"
+    ],
+    "cached_at": "2026-04-10T04:45:27.807748"
+  },
+  "the-technical-co-founder-building-real-products-together-prompt": {
+    "tech_stack": [],
+    "cached_at": "2026-04-10T04:45:27.807748"
+  },
+  "ai-generated-patent-illustration-instructions-prompt": {
+    "tech_stack": [],
+    "cached_at": "2026-04-10T04:45:27.807748"
+  },
+  "web-app-security-code-review-owasp-public-test-prompt": {
+    "tech_stack": [],
+    "cached_at": "2026-04-10T04:45:27.807748"
   }
 }

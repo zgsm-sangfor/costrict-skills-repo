@@ -9,7 +9,7 @@
   <a href="https://github.com/zgsm-sangfor/costrict-coding-hub/stargazers"><img src="https://img.shields.io/github/stars/zgsm-sangfor/costrict-coding-hub?style=flat-square&color=4A90D9" alt="Stars" /></a>
   <a href="https://github.com/zgsm-sangfor/costrict-coding-hub/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zgsm-sangfor/costrict-coding-hub?style=flat-square" alt="License" /></a>
   <a href="https://github.com/zgsm-sangfor/costrict-coding-hub/commits/main"><img src="https://img.shields.io/github/last-commit/zgsm-sangfor/costrict-coding-hub?style=flat-square" alt="Last Commit" /></a>
-  <img src="https://img.shields.io/badge/resources-4025-2ECC71?style=flat-square" alt="Resources" />
+  <img src="https://img.shields.io/badge/resources-4032-2ECC71?style=flat-square" alt="Resources" />
 </p>
 
 <p>
@@ -99,10 +99,10 @@ https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/README.m
 
 | 类型 | 数量 | 说明 |
 |------|------:|------|
-| MCP Server | <!-- README_COUNT_MCP:START -->1628<!-- README_COUNT_MCP:END --> | Model Context Protocol 服务器 |
-| Prompt | <!-- README_COUNT_PROMPT:START -->528<!-- README_COUNT_PROMPT:END --> | 面向开发者的 Prompt |
+| MCP Server | <!-- README_COUNT_MCP:START -->1627<!-- README_COUNT_MCP:END --> | Model Context Protocol 服务器 |
+| Prompt | <!-- README_COUNT_PROMPT:START -->531<!-- README_COUNT_PROMPT:END --> | 面向开发者的 Prompt |
 | Rule | <!-- README_COUNT_RULE:START -->236<!-- README_COUNT_RULE:END --> | 编码规范与 AI 工作流规则 |
-| Skill | <!-- README_COUNT_SKILL:START -->1633<!-- README_COUNT_SKILL:END --> | 可复用的 Agent Skill |
+| Skill | <!-- README_COUNT_SKILL:START -->1638<!-- README_COUNT_SKILL:END --> | 可复用的 Agent Skill |
 
 ### 数据来源
 

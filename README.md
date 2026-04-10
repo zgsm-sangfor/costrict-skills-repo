@@ -9,7 +9,7 @@
   <a href="https://github.com/zgsm-sangfor/costrict-coding-hub/stargazers"><img src="https://img.shields.io/github/stars/zgsm-sangfor/costrict-coding-hub?style=flat-square&color=4A90D9" alt="Stars" /></a>
   <a href="https://github.com/zgsm-sangfor/costrict-coding-hub/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zgsm-sangfor/costrict-coding-hub?style=flat-square" alt="License" /></a>
   <a href="https://github.com/zgsm-sangfor/costrict-coding-hub/commits/main"><img src="https://img.shields.io/github/last-commit/zgsm-sangfor/costrict-coding-hub?style=flat-square" alt="Last Commit" /></a>
-  <img src="https://img.shields.io/badge/resources-4025-2ECC71?style=flat-square" alt="Resources" />
+  <img src="https://img.shields.io/badge/resources-4032-2ECC71?style=flat-square" alt="Resources" />
 </p>
 
 <p>
@@ -99,10 +99,10 @@ After installation, report which platform path was used and whether verification
 
 | Type | Count | Description |
 |------|------:|-------------|
-| MCP Server | <!-- README_COUNT_MCP:START -->1628<!-- README_COUNT_MCP:END --> | Model Context Protocol servers |
-| Prompt | <!-- README_COUNT_PROMPT:START -->528<!-- README_COUNT_PROMPT:END --> | Developer-focused prompts |
+| MCP Server | <!-- README_COUNT_MCP:START -->1627<!-- README_COUNT_MCP:END --> | Model Context Protocol servers |
+| Prompt | <!-- README_COUNT_PROMPT:START -->531<!-- README_COUNT_PROMPT:END --> | Developer-focused prompts |
 | Rule | <!-- README_COUNT_RULE:START -->236<!-- README_COUNT_RULE:END --> | Coding rules and AI workflow conventions |
-| Skill | <!-- README_COUNT_SKILL:START -->1633<!-- README_COUNT_SKILL:END --> | Reusable agent skills |
+| Skill | <!-- README_COUNT_SKILL:START -->1638<!-- README_COUNT_SKILL:END --> | Reusable agent skills |
 
 ### Data sources
 

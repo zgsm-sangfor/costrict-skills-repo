@@ -23546,5 +23546,75 @@
       "nextjs"
     ],
     "cached_at": "2026-04-09T04:58:54.059946"
+  },
+  "manage-skills-agskill": {
+    "tags": [
+      "ai",
+      "automation",
+      "cursor",
+      "claude",
+      "agent"
+    ],
+    "cached_at": "2026-04-10T04:45:21.381676"
+  },
+  "monte-carlo-monitor-creation-agskill": {
+    "tags": [
+      "mcp",
+      "automation",
+      "ci-cd",
+      "yaml",
+      "monitoring"
+    ],
+    "cached_at": "2026-04-10T04:45:21.381676"
+  },
+  "monte-carlo-prevent-agskill": {
+    "tags": [
+      "mcp",
+      "sql",
+      "dbt",
+      "data-observability",
+      "monitoring"
+    ],
+    "cached_at": "2026-04-10T04:45:21.381676"
+  },
+  "monte-carlo-push-ingestion-agskill": {
+    "tags": [
+      "mcp",
+      "data-warehouse",
+      "metadata",
+      "lineage",
+      "monitoring"
+    ],
+    "cached_at": "2026-04-10T04:45:21.381676"
+  },
+  "monte-carlo-validation-notebook-agskill": {
+    "tags": [
+      "mcp",
+      "sql",
+      "dbt",
+      "validation",
+      "notebook"
+    ],
+    "cached_at": "2026-04-10T04:45:21.381676"
+  },
+  "ai-generated-patent-illustration-instructions-prompt": {
+    "tags": [
+      "ai",
+      "design",
+      "patent",
+      "illustration",
+      "prompt"
+    ],
+    "cached_at": "2026-04-10T04:45:21.381676"
+  },
+  "web-app-security-code-review-owasp-public-test-prompt": {
+    "tags": [
+      "security",
+      "owasp",
+      "code-review",
+      "web-app",
+      "prompt"
+    ],
+    "cached_at": "2026-04-10T04:45:21.381676"
   }
 }
