@@ -32,6 +32,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Generate featured sections
+        run: python scripts/generate_featured.py
+
       - name: Build frontend data
         run: python scripts/build_frontend_data.py
 

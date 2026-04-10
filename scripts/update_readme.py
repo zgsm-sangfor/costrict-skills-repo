@@ -5,9 +5,7 @@ from __future__ import annotations
 import json
 import math
 import re
-import subprocess
 import sys
-from dataclasses import dataclass
 from pathlib import Path
 from typing import TypeAlias
 
@@ -15,8 +13,6 @@ CatalogEntry: TypeAlias = dict[str, object]
 
 ROOT = Path(__file__).resolve().parent.parent
 INDEX_PATH = ROOT / "catalog" / "index.json"
-FEATURED_SCRIPT_PATH = ROOT / "scripts" / "generate_featured.py"
-FEATURED_SECTION_MARKER = "README_FEATURED_SECTION"
 RESOURCE_BADGE_PATTERN = re.compile(r"resources-\d+-2ECC71")
 
 COUNT_MARKERS: dict[str, str] = {
@@ -27,19 +23,9 @@ COUNT_MARKERS: dict[str, str] = {
     "skill": "README_COUNT_SKILL",
 }
 
-
-@dataclass(frozen=True)
-class ReadmeSpec:
-    path: Path
-    featured_path: Path
-
-
-README_SPECS: tuple[ReadmeSpec, ...] = (
-    ReadmeSpec(path=ROOT / "README.md", featured_path=ROOT / "catalog" / "featured.md"),
-    ReadmeSpec(
-        path=ROOT / "README.zh-CN.md",
-        featured_path=ROOT / "catalog" / "featured.zh-CN.md",
-    ),
+README_PATHS: tuple[Path, ...] = (
+    ROOT / "README.md",
+    ROOT / "README.zh-CN.md",
 )
 
 
@@ -87,22 +73,8 @@ def _replace_between_markers(content: str, marker_name: str, replacement: str) -
     )
 
 
-def replace_featured_section(content: str, featured_content: str) -> str:
-    start = f"<!-- {FEATURED_SECTION_MARKER}:START -->"
-    end = f"<!-- {FEATURED_SECTION_MARKER}:END -->"
-    pattern = re.compile(rf"({re.escape(start)}\n)(.*?)(\n{re.escape(end)})", re.DOTALL)
-
-    if not pattern.search(content):
-        raise ValueError("Featured section markers not found")
-
-    cleaned = featured_content.rstrip()
-    return pattern.sub(
-        lambda match: f"{match.group(1)}{cleaned}{match.group(3)}", content, count=1
-    )
-
-
-def update_single_readme(readme_spec: ReadmeSpec, stats: dict[str, int]) -> bool:
-    content = readme_spec.path.read_text(encoding="utf-8")
+def update_single_readme(readme_path: Path, stats: dict[str, int]) -> bool:
+    content = readme_path.read_text(encoding="utf-8")
     original = content
 
     content = _replace_between_markers(
@@ -112,35 +84,27 @@ def update_single_readme(readme_spec: ReadmeSpec, stats: dict[str, int]) -> bool
         content = _replace_between_markers(content, COUNT_MARKERS[key], str(stats[key]))
 
     content = RESOURCE_BADGE_PATTERN.sub(f"resources-{stats['total']}-2ECC71", content)
-    featured_content = readme_spec.featured_path.read_text(encoding="utf-8")
-    content = replace_featured_section(content, featured_content)
 
     if content != original:
-        _ = readme_spec.path.write_text(content, encoding="utf-8")
+        _ = readme_path.write_text(content, encoding="utf-8")
         return True
     return False
 
 
 def update_readmes(
-    index_path: Path = INDEX_PATH, readme_specs: tuple[ReadmeSpec, ...] = README_SPECS
+    index_path: Path = INDEX_PATH, readme_paths: tuple[Path, ...] = README_PATHS
 ) -> list[Path]:
     stats = compute_stats(load_entries(index_path=index_path))
     updated_paths: list[Path] = []
 
-    for readme_spec in readme_specs:
-        if update_single_readme(readme_spec, stats):
-            updated_paths.append(readme_spec.path)
+    for readme_path in readme_paths:
+        if update_single_readme(readme_path, stats):
+            updated_paths.append(readme_path)
 
     return updated_paths
 
 
-def generate_featured_sections() -> None:
-    _ = subprocess.run([sys.executable, str(FEATURED_SCRIPT_PATH)], check=True)
-
-
 def main() -> None:
-    print("Generating localized featured sections...")
-    generate_featured_sections()
     updated_paths = update_readmes()
 
     if updated_paths:
