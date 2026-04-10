@@ -126,6 +126,7 @@ Parse user input and match the following command patterns:
    - On failure, fall back to full index
 4. Show install preview (translated to user's language):
    - Name, Type, Description (use description_zh or description per Language Rule), Source, Target path
+   - If type is rule/prompt/skill: show "✨ Supports customization — you can tailor this to your project after install" (do NOT show for MCP)
    - Prompt: confirm install (Y/n/global)
 
 5. Execute installation by type:
@@ -150,7 +151,22 @@ Parse user input and match the following command patterns:
 - Same install logic as Rule
 - Save to `.claude/rules/<id>.md`
 
-6. Show result and usage instructions after installation
+6. **Post-Install Customization** (skip for MCP type):
+
+**Rules / Prompts**: Ask user "Customize this for your project? (Y/n)" — if Y, ask "Describe what to adjust:" to collect instructions. If global install, warn that changes affect all projects.
+
+**Skills**: Read installed SKILL.md + scan project signals (package.json, pyproject.toml, CLAUDE.md, directory structure). Assess tech-stack fit:
+- High fit → still offer passive customization
+- Partial/severe mismatch → list mismatches, suggest specific adjustments, ask "Want me to apply? (Y/n/edit)"
+- No project signals → ask passively (same as rules)
+
+Warn that skills are global (`~/.claude/skills/`) — customization affects all projects.
+
+**Modification guardrails**: Preserve original structure, only modify relevant sections, maintain language/tone, don't delete unrelated content, never modify skill frontmatter. Wrap modified sections with `<!-- [customized]: "summary" -->` markers (skip markers for `.cursorrules` format).
+
+**Diff preview**: Show semantic summary of changes (by section, not line-by-line), then ask "Apply changes? (Y/n/edit)". Y = apply, n = keep original, edit = provide more instructions and iterate.
+
+7. Show result and usage instructions after installation
 
 ### uninstall <name>
 

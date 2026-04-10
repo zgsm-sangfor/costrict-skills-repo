@@ -45,9 +45,12 @@ Structure:
   - Description: (use description_zh or description per Language Rule)
   - Source: xxx
   - Target: .claude/settings.json (project-level)
+  - [if type is rule/prompt/skill]: "✨ Supports customization — you can tailor this to your project after install"
 
   Prompt: "Confirm install? (Y/n/global)"
 ```
+
+Do NOT show the customization hint for MCP type.
 
 5. Execute installation based on user confirmation and resource type:
 
@@ -129,7 +132,102 @@ Structure:
 - Same install logic as Rule
 - Save to `.claude/rules/<id>.md`
 
-6. After installation, show result and usage instructions (in user's language)
+6. **Post-Install Customization** (skip for MCP type)
+
+After the file is written to disk, offer customization based on resource type. The original file is already saved — customization modifies in place, so the user can always revert.
+
+### Rules / Prompts (passive ask)
+
+**Note**: If the user chose "global" install, warn them that customization will modify the global copy and affect all projects. Suggest they proceed only if the customization is broadly applicable.
+
+Ask the user:
+```
+"Customize this [rule/prompt] for your project? (Y/n)"
+```
+
+- If **Y** → ask: "Describe what to adjust:" and collect the user's instruction, then proceed to **Modification Execution** below
+- If **n** → go to step 7
+
+### Skills (active project-fit detection)
+
+**Important**: Skills are installed globally to `~/.claude/skills/<id>/`. Customization modifies this shared copy. If the user uses this skill across multiple projects, warn them that changes will apply everywhere. Suggest they proceed only if the customization is broadly applicable, or note they can manually copy to a project-local path if needed.
+
+Perform automatic project-fit analysis before asking:
+
+**Step A: Gather context**
+- Read the installed SKILL.md content (the file just written to `~/.claude/skills/<id>/`)
+- Scan the current project directory for signals:
+  - `package.json` → Node/frontend stack, dependencies, scripts
+  - `pyproject.toml` / `requirements.txt` → Python stack, dependencies
+  - `CLAUDE.md` → existing project conventions and instructions
+  - Directory structure → `src/`, `app/`, `tests/`, `lib/`, framework-specific folders
+- Extract the skill's assumed tech stack and conventions from its content
+
+**Step B: Assess fit**
+Compare the skill's assumptions against project signals. Classify into one of four outcomes:
+
+1. **High fit** — skill matches project stack and conventions well
+   → Tell the user the skill is a good fit
+   → Still ask: "Customize it further for your project? (Y/n)"
+2. **Partial mismatch** — skill mostly fits but some sections assume different tools/conventions
+   → Tell the user what mismatches were found (e.g., "The skill assumes Jest but your project uses Vitest")
+   → Suggest specific adjustments
+   → Ask: "Want me to apply these adjustments? (Y/n/edit)"
+3. **Severe mismatch** — skill assumes a fundamentally different stack
+   → Warn the user about the mismatches
+   → Suggest specific adjustments or recommend skipping customization
+   → Ask: "Want me to try adapting this skill? (Y/n/edit)"
+4. **No signals** — project directory has no recognizable tech stack indicators
+   → Ask passively (same as Rules/Prompts flow above)
+
+If the user confirms (Y) or provides edit instructions → proceed to **Modification Execution** below.
+
+### Modification Execution
+
+Apply these guardrails when modifying content:
+
+- **Preserve original structure** — keep the same heading hierarchy, section order, and formatting
+- **Only modify relevant sections** — do not touch unrelated rules or instructions
+- **Maintain original language and tone** — if the original is in English, keep modifications in English
+- **Do not delete content** — adjust or augment, never remove sections wholesale unless the user explicitly asks
+- **Skill frontmatter protection** — NEVER modify anything between the opening `---` and closing `---` frontmatter delimiters in skill files. Only modify body content below the frontmatter.
+
+Wrap every modified section with HTML comment markers (except `.cursorrules` format — see below):
+```
+<!-- [customized]: "brief summary of what was changed and why" -->
+(modified content here)
+<!-- [/customized] -->
+```
+
+These markers:
+- Document what was customized and the instruction that drove it
+- Allow future tools or users to identify customized sections
+- Must wrap the smallest meaningful section that changed (a paragraph, a list, a code block), not the entire file
+
+**Exception**: If the resource was originally in `.cursorrules` format, do NOT insert HTML comment markers — `.cursorrules` files may be parsed by tools that don't support HTML comments. Instead, silently apply the modifications without markers.
+
+### Diff Preview and Confirmation
+
+After generating modifications, present a **semantic summary** (not a line-by-line diff):
+
+```
+Structure:
+  Section: "Customization Preview"
+  Per changed area:
+    - "[Section/topic name]: [what changed and why]"
+  Example:
+    - "Testing conventions: Changed Jest references to Vitest to match your project"
+    - "File paths: Updated import paths from src/ to app/ per your project structure"
+
+  Prompt: "Apply changes? (Y/n/edit)"
+```
+
+Handle the response:
+- **Y** → write the modified content to disk, go to step 7
+- **n** → discard modifications, keep original file, go to step 7
+- **edit** → ask the user for additional instructions, loop back to **Modification Execution** with the new instructions appended to the original ones
+
+7. After installation (and optional customization), show result and usage instructions (in user's language)
 
 ## Error Handling
 
