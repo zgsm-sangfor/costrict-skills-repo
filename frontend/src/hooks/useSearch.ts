@@ -5,6 +5,73 @@ import type { CatalogItem, SearchIndexItem } from '../types'
 let cachedIndex: MiniSearch | null = null
 let cachedItems: Map<string, SearchIndexItem> | null = null
 
+const TOKEN_RE = /[\p{L}\p{N}]+/gu
+
+function normalizeText(value: string | undefined) {
+  return (value ?? '').toLowerCase().trim()
+}
+
+function extractTokens(query: string) {
+  const normalized = normalizeText(query)
+  const tokenMatches = normalized.match(TOKEN_RE) ?? []
+  const tokens = tokenMatches.filter(token => token.length >= 2)
+  return tokens.length > 0 ? Array.from(new Set(tokens)) : [normalized].filter(Boolean)
+}
+
+function countCoveredTokens(text: string, tokens: string[]) {
+  return tokens.reduce((count, token) => count + (text.includes(token) ? 1 : 0), 0)
+}
+
+function rerankResult(item: SearchIndexItem, query: string, baseScore: number) {
+  const normalizedQuery = normalizeText(query)
+  const tokens = extractTokens(query)
+  const anchorToken = tokens.reduce((longest, token) => (
+    token.length > longest.length ? token : longest
+  ), '')
+  const nameText = normalizeText(item.name)
+  const descriptionText = normalizeText([item.description, item.description_zh].filter(Boolean).join(' '))
+  const metaText = normalizeText([...(item.tags ?? []), ...(item.tech_stack ?? [])].join(' '))
+  const searchText = normalizeText(item.search_text)
+
+  const nameCoverage = countCoveredTokens(nameText, tokens)
+  const descriptionCoverage = countCoveredTokens(descriptionText, tokens)
+  const metaCoverage = countCoveredTokens(metaText, tokens)
+  const directCoverage = Math.max(nameCoverage, descriptionCoverage, metaCoverage)
+  const expandedCoverage = countCoveredTokens(searchText, tokens)
+
+  let score = baseScore
+
+  if (nameText.includes(normalizedQuery)) score += 140
+  if (descriptionText.includes(normalizedQuery)) score += 90
+  if (metaText.includes(normalizedQuery)) score += 50
+
+  score += nameCoverage * 36
+  score += descriptionCoverage * 20
+  score += metaCoverage * 12
+  score += expandedCoverage * 4
+
+  if (tokens.length > 1) {
+    if (nameCoverage === tokens.length) score += 80
+    if (descriptionCoverage === tokens.length) score += 50
+    if (metaCoverage === tokens.length) score += 25
+    if (expandedCoverage === tokens.length) score += 10
+
+    const anchorInDirectField = [nameText, descriptionText, metaText].some(text => text.includes(anchorToken))
+    if (anchorToken) {
+      if (anchorInDirectField) score += 24
+      else if (searchText.includes(anchorToken)) score -= 12
+      else score -= 28
+    }
+  }
+
+  // Keep search_text as recall expansion, but avoid letting expansion-only hits dominate.
+  if (directCoverage === 0 && expandedCoverage > 0) {
+    score -= 40
+  }
+
+  return score
+}
+
 export function useSearch(query: string) {
   const [results, setResults] = useState<CatalogItem[] | null>(null)
   const [searching, setSearching] = useState(false)
@@ -57,13 +124,19 @@ export function useSearch(query: string) {
     timerRef.current = setTimeout(async () => {
       const ms = await ensureIndex()
       const hits = ms.search(query).slice(0, 200)
-      const mapped = hits
+      const ranked = hits
         .map(hit => {
           const item = cachedItems?.get(hit.id)
-          return item ? (item as unknown as CatalogItem) : null
+          if (!item) return null
+          return {
+            item: item as unknown as CatalogItem,
+            score: rerankResult(item, query, hit.score),
+          }
         })
-        .filter(Boolean) as CatalogItem[]
-      setResults(mapped)
+        .filter((result): result is { item: CatalogItem, score: number } => result !== null)
+        .sort((a, b) => b.score - a.score)
+        .map(result => result.item)
+      setResults(ranked)
     }, 200)
 
     return () => clearTimeout(timerRef.current)
