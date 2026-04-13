@@ -1,8 +1,5 @@
-# Everything AI Coding
-
 <div align="center">
-<img src="assets/title-card.jpg" alt="Everything AI Coding" />
-
+<img src="assets/logo.png" alt="Everything AI Coding logo" width="600" />
 <p><strong><!-- README_APPROX_COUNT:START -->4000<!-- README_APPROX_COUNT:END -->+ 精选开发资源一站式索引</strong><br/>MCP Servers · Skills · Rules · Prompts</p>
 
 <p>
@@ -27,6 +24,7 @@
 </p>
 
 </div>
+<img src="assets/title-card.jpg" alt="Everything AI Coding title card" width="900" />
 
 ## 为什么选择 Everything AI Coding？
 
