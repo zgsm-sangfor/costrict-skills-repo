@@ -50055,5 +50055,258 @@
       "web应用开发"
     ],
     "cached_at": "2026-04-10T05:48:17.174929"
+  },
+  "yooteam-chatppt-mcp": {
+    "terms": [
+      "AI生成PPT",
+      "presentation generator AI",
+      "自动创建幻灯片",
+      "convert text to powerpoint",
+      "PPT模板生成",
+      "free office automation",
+      "文档转演示文稿"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "pi22by7-in-memoria": {
+    "terms": [
+      "codebase memory AI",
+      "持久化代码智能",
+      "semantic code search",
+      "跨会话代理记忆",
+      "代码模式学习",
+      "AI编程助手记忆",
+      "智能代码分析工具"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "jdu278-twenty-mcp-server": {
+    "terms": [
+      "CRM MCP integration",
+      "twenty CRM API",
+      "客户关系管理MCP",
+      "sales automation MCP",
+      "business data MCP server"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "runablehq-mcp-ctl": {
+    "terms": [
+      "MCP包管理器",
+      "manage MCP servers",
+      "MCP server manager CLI",
+      "MCP工具管理",
+      "npm MCP管理",
+      "跨平台MCP控制"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "effytech-freshservice-mcp": {
+    "terms": [
+      "Freshservice AI integration",
+      "ITSM MCP server",
+      "helpdesk automation MCP",
+      "服务台AI助手",
+      "ticketing system MCP"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "shunseven-mocxykit": {
+    "terms": [
+      "前端开发中间件",
+      "webpack proxy可视化",
+      "vite mock数据",
+      "HTTP代理管理工具",
+      "前端配置可视化",
+      "开发环境mock服务"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "firefly0512-spring-ai-mcp-deepseek": {
+    "terms": [
+      "Spring AI DeepSeek集成",
+      "Java AI MCP服务",
+      "DeepSeek客户端MCP",
+      "Spring Boot AI助手",
+      "Java大模型集成"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "reddit-devvit-mcp": {
+    "terms": [
+      "Reddit应用开发MCP",
+      "Devvit AI助手",
+      "Reddit bot开发工具",
+      "社区应用MCP服务器"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "nic01asfr-mcp-server-grist": {
+    "terms": [
+      "Grist API MCP集成",
+      "spreadsheet database MCP",
+      "电子表格API自动化",
+      "Grist数据查询工具"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "betterthantomorrow-calva-backseat-driver": {
+    "terms": [
+      "VS Code AI交互编程",
+      "Copilot增强工具",
+      "AI编程助手交互",
+      "Clojure开发AI助手",
+      "VS Code扩展AI代理"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "ggilligan12-kibana-mcp": {
+    "terms": [
+      "Kibana安全运维MCP",
+      "ELK stack MCP集成",
+      "日志分析AI助手",
+      "SecOps自动化工具",
+      "Kibana查询MCP"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "adfin": {
+    "terms": [
+      "支付平台集成",
+      "invoicing automation API",
+      "财务对账自动化",
+      "payment API integration",
+      "统一支付平台开发"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "driflyte": {
+    "terms": [
+      "网页知识检索AI",
+      "recursive web crawling",
+      "RAG知识库MCP",
+      "主题知识查询工具",
+      "OpenTelemetry MCP集成"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "gcore-cloud": {
+    "terms": [
+      "Gcore云服务MCP",
+      "cloud server automation",
+      "云平台API集成",
+      "基础设施自动化MCP"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "android-ui-verification-agskill": {
+    "terms": [
+      "Android自动化UI测试",
+      "ADB端到端测试",
+      "安卓模拟器UI验证",
+      "移动应用自动化测试",
+      "Android E2E testing"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "codebase-to-wordpress-converter-agskill": {
+    "terms": [
+      "React转WordPress主题",
+      "代码转WP主题工具",
+      "Next.js WordPress转换",
+      "像素完美主题生成",
+      "SEO优化主题转换"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "puzzle-activity-planner-agskill": {
+    "terms": [
+      "谜题活动策划AI",
+      "课堂活动生成器",
+      "派对游戏策划工具",
+      "教育活动自动化",
+      "puzzle generator links"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "rayden-code-agskill": {
+    "terms": [
+      "React组件代码生成",
+      "Rayden UI代码生成",
+      "design tokens代码",
+      "高级布局模式生成",
+      "TS React组件工具"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "rayden-use-agskill": {
+    "terms": [
+      "Figma组件自动化",
+      "design token强制执行",
+      "Figma MCP集成",
+      "UI设计维护工具",
+      "设计系统自动化"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "skill-optimizer-agskill": {
+    "terms": [
+      "Agent技能优化",
+      "SKILL.md诊断工具",
+      "Claude技能分析",
+      "AI代理性能优化",
+      "会话数据分析工具"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "vscode-extension-guide-en-agskill": {
+    "terms": [
+      "VS Code扩展开发指南",
+      "插件开发脚手架",
+      "Marketplace发布教程",
+      "VSCode插件开发",
+      "extension development guide"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "wordpress-centric-high-seo-optimized-blogwriting-skill-agskill": {
+    "terms": [
+      "WordPress博客写作",
+      "SEO优化内容生成",
+      "专业文章结构工具",
+      "WP-ready内容创建",
+      "高质量博客写作AI"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "astrologer-prompt": {
+    "terms": [
+      "星座解读AI",
+      "horoscope interpreter",
+      "占星术助手",
+      "zodiac sign meanings",
+      "行星位置解读"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "potato-critic-prompt": {
+    "terms": [
+      "逻辑漏洞查找",
+      "critical thinking prompt",
+      "辩论对手AI",
+      "逻辑错误检测",
+      "hostile critic AI"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
+  },
+  "stylelint-plugin-author-prompt": {
+    "terms": [
+      "Stylelint插件开发",
+      "PostCSS AST工具",
+      "CSS代码检查插件",
+      "TypeScript Stylelint",
+      "CSS linting规则开发"
+    ],
+    "cached_at": "2026-04-13T06:21:29.394881"
   }
 }

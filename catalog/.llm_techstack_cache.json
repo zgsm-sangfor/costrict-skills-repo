@@ -21201,5 +21201,88 @@
   "web-app-security-code-review-owasp-public-test-prompt": {
     "tech_stack": [],
     "cached_at": "2026-04-10T04:45:27.807748"
+  },
+  "adfin": {
+    "tech_stack": [
+      "nodejs",
+      "express"
+    ],
+    "cached_at": "2026-04-13T06:20:25.200263"
+  },
+  "driflyte": {
+    "tech_stack": [
+      "python",
+      "fastapi",
+      "langchain",
+      "openai"
+    ],
+    "cached_at": "2026-04-13T06:20:25.200263"
+  },
+  "gcore-cloud": {
+    "tech_stack": [
+      "nodejs",
+      "express"
+    ],
+    "cached_at": "2026-04-13T06:20:25.200263"
+  },
+  "codebase-to-wordpress-converter-agskill": {
+    "tech_stack": [
+      "react",
+      "nextjs",
+      "php"
+    ],
+    "cached_at": "2026-04-13T06:20:25.200263"
+  },
+  "puzzle-activity-planner-agskill": {
+    "tech_stack": [
+      "python",
+      "openai"
+    ],
+    "cached_at": "2026-04-13T06:20:25.200263"
+  },
+  "rayden-code-agskill": {
+    "tech_stack": [
+      "react",
+      "typescript"
+    ],
+    "cached_at": "2026-04-13T06:20:25.200263"
+  },
+  "rayden-use-agskill": {
+    "tech_stack": [],
+    "cached_at": "2026-04-13T06:20:25.200263"
+  },
+  "skill-optimizer-agskill": {
+    "tech_stack": [
+      "python",
+      "openai",
+      "anthropic"
+    ],
+    "cached_at": "2026-04-13T06:20:25.200263"
+  },
+  "vscode-extension-guide-en-agskill": {
+    "tech_stack": [
+      "typescript"
+    ],
+    "cached_at": "2026-04-13T06:20:25.200263"
+  },
+  "wordpress-centric-high-seo-optimized-blogwriting-skill-agskill": {
+    "tech_stack": [
+      "php"
+    ],
+    "cached_at": "2026-04-13T06:20:25.200263"
+  },
+  "potato-critic-prompt": {
+    "tech_stack": [
+      "openai",
+      "anthropic"
+    ],
+    "cached_at": "2026-04-13T06:20:25.200263"
+  },
+  "stylelint-plugin-author-prompt": {
+    "tech_stack": [
+      "typescript",
+      "go"
+    ],
+    "cached_at": "2026-04-13T06:20:25.200263"
   }
 }
