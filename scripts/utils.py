@@ -169,7 +169,7 @@ def github_api(path: str) -> Optional[dict]:
     url = f"https://api.github.com/{path.lstrip('/')}"
     headers = {
         "Accept": "application/vnd.github.v3+json",
-        "User-Agent": "coding-hub-sync",
+        "User-Agent": "everything-ai-coding-sync",
     }
     if GITHUB_TOKEN:
         headers["Authorization"] = f"token {GITHUB_TOKEN}"
@@ -328,7 +328,7 @@ def fetch_raw_content(repo: str, path: str, branch: str = "main",
                    If False (default), log at WARNING level.
     """
     url = f"https://raw.githubusercontent.com/{repo}/{branch}/{path}"
-    req = Request(url, headers={"User-Agent": "coding-hub-sync"})
+    req = Request(url, headers={"User-Agent": "everything-ai-coding-sync"})
     if GITHUB_TOKEN:
         req.add_header("Authorization", f"token {GITHUB_TOKEN}")
 

@@ -1,6 +1,6 @@
 ## ⭐ Featured Picks
 
-> Curated by use case from 4025+ resources. After installation, use `/coding-hub:search` to explore the full index or `/coding-hub:recommend` for project-aware suggestions.
+> Curated by use case from 4025+ resources. After installation, use `/everything-ai-coding:search` to explore the full index or `/everything-ai-coding:recommend` for project-aware suggestions.
 
 ### 🌐 Browser & Automation
 

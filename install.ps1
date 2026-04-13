@@ -1,12 +1,12 @@
 #Requires -Version 5.1
 <#
 .SYNOPSIS
-    Coding Hub installer for Windows (PowerShell)
+    Everything AI Coding installer for Windows (PowerShell)
 .DESCRIPTION
     Usage:
-      irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.ps1 | iex
+      irm https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/install.ps1 | iex
       # Or with explicit platform:
-      & ([scriptblock]::Create((irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.ps1))) -Platform claude-code
+      & ([scriptblock]::Create((irm https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/install.ps1))) -Platform claude-code
 .PARAMETER Platform
     Target platform: claude-code, opencode, costrict, vscode-costrict
     If omitted, auto-detects via environment variables.
@@ -18,7 +18,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-$BaseUrl = "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main"
+$BaseUrl = "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main"
 $Commands = @("search", "browse", "recommend", "install", "uninstall", "update")
 
 # --- Auto-detect platform ---
@@ -72,39 +72,39 @@ function Download-File {
 # --- Install per platform ---
 
 function Install-ClaudeCode {
-    $skillDir = Join-Path $HOME ".claude/skills/coding-hub"
+    $skillDir = Join-Path $HOME ".claude/skills/everything-ai-coding"
     New-Item -ItemType Directory -Path $skillDir -Force | Out-Null
 
     Write-Host "Downloading skill + commands..."
-    Download-File "$BaseUrl/platforms/claude-code/skills/coding-hub/SKILL.md" "$skillDir/SKILL.md"
+    Download-File "$BaseUrl/platforms/claude-code/skills/everything-ai-coding/SKILL.md" "$skillDir/SKILL.md"
     foreach ($cmd in $Commands) {
-        Download-File "$BaseUrl/platforms/claude-code/commands/coding-hub/$cmd.md" "$skillDir/$cmd.md"
+        Download-File "$BaseUrl/platforms/claude-code/commands/everything-ai-coding/$cmd.md" "$skillDir/$cmd.md"
     }
 
     Write-Host ""
-    Write-Host "=== Coding Hub installed (Claude Code) ==="
+    Write-Host "=== Everything AI Coding installed (Claude Code) ==="
     Write-Host ""
     Write-Host "Skill + commands: $skillDir/"
     Write-Host ""
-    Write-Host "Try:  /coding-hub:search typescript"
+    Write-Host "Try:  /everything-ai-coding:search typescript"
 }
 
 function Install-Opencode {
-    $skillDir = Join-Path $HOME ".opencode/skills/coding-hub"
+    $skillDir = Join-Path $HOME ".opencode/skills/everything-ai-coding"
     $cmdDir = Join-Path (Get-Location) ".opencode/command"
     New-Item -ItemType Directory -Path $skillDir -Force | Out-Null
     New-Item -ItemType Directory -Path $cmdDir -Force | Out-Null
 
     Write-Host "Downloading skill..."
-    Download-File "$BaseUrl/platforms/opencode/skills/coding-hub/SKILL.md" "$skillDir/SKILL.md"
+    Download-File "$BaseUrl/platforms/opencode/skills/everything-ai-coding/SKILL.md" "$skillDir/SKILL.md"
 
     Write-Host "Downloading commands to project dir..."
     foreach ($cmd in $Commands) {
-        Download-File "$BaseUrl/platforms/opencode/command/coding-hub-$cmd.md" "$cmdDir/coding-hub-$cmd.md"
+        Download-File "$BaseUrl/platforms/opencode/command/everything-ai-coding-$cmd.md" "$cmdDir/everything-ai-coding-$cmd.md"
     }
 
     Write-Host ""
-    Write-Host "=== Coding Hub installed (Opencode) ==="
+    Write-Host "=== Everything AI Coding installed (Opencode) ==="
     Write-Host ""
     Write-Host "Skill (global): $skillDir/"
     Write-Host "Commands (project): $cmdDir/"
@@ -112,25 +112,25 @@ function Install-Opencode {
     Write-Host "Note: Commands are installed to the current directory."
     Write-Host "      Run this script again in other projects to add commands there too."
     Write-Host ""
-    Write-Host "Try:  /coding-hub-search typescript"
+    Write-Host "Try:  /everything-ai-coding-search typescript"
 }
 
 function Install-Costrict {
-    $skillDir = Join-Path $HOME ".costrict/skills/coding-hub"
-    $cmdDir = Join-Path (Get-Location) ".costrict/coding-hub/commands"
+    $skillDir = Join-Path $HOME ".costrict/skills/everything-ai-coding"
+    $cmdDir = Join-Path (Get-Location) ".costrict/everything-ai-coding/commands"
     New-Item -ItemType Directory -Path $skillDir -Force | Out-Null
     New-Item -ItemType Directory -Path $cmdDir -Force | Out-Null
 
     Write-Host "Downloading skill..."
-    Download-File "$BaseUrl/platforms/costrict/skills/coding-hub/SKILL.md" "$skillDir/SKILL.md"
+    Download-File "$BaseUrl/platforms/costrict/skills/everything-ai-coding/SKILL.md" "$skillDir/SKILL.md"
 
     Write-Host "Downloading commands to project dir..."
     foreach ($cmd in $Commands) {
-        Download-File "$BaseUrl/platforms/costrict/commands/coding-hub/coding-hub-$cmd.md" "$cmdDir/coding-hub-$cmd.md"
+        Download-File "$BaseUrl/platforms/costrict/commands/everything-ai-coding/everything-ai-coding-$cmd.md" "$cmdDir/everything-ai-coding-$cmd.md"
     }
 
     Write-Host ""
-    Write-Host "=== Coding Hub installed (Costrict CLI) ==="
+    Write-Host "=== Everything AI Coding installed (Costrict CLI) ==="
     Write-Host ""
     Write-Host "Skill (global): $skillDir/"
     Write-Host "Commands (project): $cmdDir/"
@@ -138,32 +138,32 @@ function Install-Costrict {
     Write-Host "Note: Commands are installed to the current directory."
     Write-Host "      Run this script again in other projects to add commands there too."
     Write-Host ""
-    Write-Host "Try:  /coding-hub-search typescript"
+    Write-Host "Try:  /everything-ai-coding-search typescript"
 }
 
 function Install-VscodeCostrict {
-    $skillDir = Join-Path $HOME ".costrict/skills/coding-hub"
+    $skillDir = Join-Path $HOME ".costrict/skills/everything-ai-coding"
     $cmdDir = Join-Path $HOME ".roo/commands"
     New-Item -ItemType Directory -Path $skillDir -Force | Out-Null
     New-Item -ItemType Directory -Path $cmdDir -Force | Out-Null
 
     Write-Host "Downloading skill..."
-    Download-File "$BaseUrl/platforms/vscode-costrict/skills/coding-hub/SKILL.md" "$skillDir/SKILL.md"
+    Download-File "$BaseUrl/platforms/vscode-costrict/skills/everything-ai-coding/SKILL.md" "$skillDir/SKILL.md"
 
     Write-Host "Downloading commands (global)..."
     foreach ($cmd in $Commands) {
-        Download-File "$BaseUrl/platforms/vscode-costrict/commands/coding-hub/coding-hub-$cmd.md" "$cmdDir/coding-hub-$cmd.md"
+        Download-File "$BaseUrl/platforms/vscode-costrict/commands/everything-ai-coding/everything-ai-coding-$cmd.md" "$cmdDir/everything-ai-coding-$cmd.md"
     }
 
     Write-Host ""
-    Write-Host "=== Coding Hub installed (VSCode Costrict) ==="
+    Write-Host "=== Everything AI Coding installed (VSCode Costrict) ==="
     Write-Host ""
     Write-Host "Skill (global): $skillDir/"
     Write-Host "Commands (global): $cmdDir/"
     Write-Host ""
     Write-Host "All projects can now use these slash commands."
     Write-Host ""
-    Write-Host "Try:  /coding-hub-search typescript"
+    Write-Host "Try:  /everything-ai-coding-search typescript"
 }
 
 # --- Main ---

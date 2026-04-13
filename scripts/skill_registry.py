@@ -69,7 +69,7 @@ def save_repo_cache(cache: dict):
 def fetch_skill_repos() -> dict:
     """Fetch skill_repos.json from remote, fallback to local cache."""
     try:
-        req = Request(SKILL_REPOS_URL, headers={"User-Agent": "coding-hub-sync"})
+        req = Request(SKILL_REPOS_URL, headers={"User-Agent": "everything-ai-coding-sync"})
         with urlopen(req, timeout=30) as resp:
             data = json.loads(resp.read().decode())
             with open(FALLBACK_PATH, "w") as f:

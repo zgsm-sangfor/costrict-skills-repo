@@ -24,7 +24,7 @@ export default function Layout() {
       <nav className="glass sticky top-0 z-50 px-6 py-3 flex items-center justify-between rounded-none border-x-0 border-t-0">
         <div className="flex items-center gap-8">
           <Link to="/" className="text-xl font-bold text-gray-900 dark:text-white no-underline tracking-tight">
-            Coding Hub
+            Everything AI Coding
           </Link>
           <div className="hidden sm:flex items-center gap-1">
             {navItems.map(({ path, key }) => {
@@ -59,7 +59,7 @@ export default function Layout() {
             <img src={`${import.meta.env.BASE_URL}costrict_logo.png`} alt="Costrict" className="w-5 h-5 rounded-sm" />
           </a>
           <a
-            href="https://github.com/zgsm-sangfor/costrict-coding-hub"
+            href="https://github.com/zgsm-ai/everything-ai-coding"
             target="_blank"
             rel="noopener noreferrer"
             className="px-2.5 py-1.5 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-white/10 transition-colors inline-flex items-center"

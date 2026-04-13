@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Coding Hub installer
+# Everything AI Coding installer
 # Usage:
 #   curl -fsSL .../install.sh | bash -s -- --platform <platform>   (explicit)
 #   curl -fsSL .../install.sh | bash                                (auto-detect)
 #
 # Platforms: claude-code, opencode, costrict, vscode-costrict
 
-BASE_URL="https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main"
+BASE_URL="https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main"
 COMMANDS="search browse recommend install uninstall update"
 
 # --- Auto-detect platform via process-injected env vars ---
@@ -109,42 +109,42 @@ download() {
 # Claude Code is special: it loads sub .md files from skills dir as slash commands, so all-global works.
 
 install_claude_code() {
-  local skill_dir="$HOME/.claude/skills/coding-hub"
-  local cmd_dir="$HOME/.claude/commands/coding-hub"
+  local skill_dir="$HOME/.claude/skills/everything-ai-coding"
+  local cmd_dir="$HOME/.claude/commands/everything-ai-coding"
   mkdir -p "$skill_dir" "$cmd_dir"
 
   echo "Downloading skill..."
-  download "$BASE_URL/platforms/claude-code/skills/coding-hub/SKILL.md" "$skill_dir/SKILL.md"
+  download "$BASE_URL/platforms/claude-code/skills/everything-ai-coding/SKILL.md" "$skill_dir/SKILL.md"
 
   echo "Downloading commands..."
   for cmd in $COMMANDS; do
-    download "$BASE_URL/platforms/claude-code/commands/coding-hub/${cmd}.md" "$cmd_dir/${cmd}.md"
+    download "$BASE_URL/platforms/claude-code/commands/everything-ai-coding/${cmd}.md" "$cmd_dir/${cmd}.md"
   done
 
   echo ""
-  echo "=== Coding Hub installed (Claude Code) ==="
+  echo "=== Everything AI Coding installed (Claude Code) ==="
   echo ""
   echo "Skill:    $skill_dir/"
   echo "Commands: $cmd_dir/"
   echo ""
-  echo "Try:  /coding-hub:search typescript"
+  echo "Try:  /everything-ai-coding:search typescript"
 }
 
 install_opencode() {
-  local skill_dir="$HOME/.opencode/skills/coding-hub"
+  local skill_dir="$HOME/.opencode/skills/everything-ai-coding"
   local cmd_dir=".opencode/command"
   mkdir -p "$skill_dir" "$cmd_dir"
 
   echo "Downloading skill..."
-  download "$BASE_URL/platforms/opencode/skills/coding-hub/SKILL.md" "$skill_dir/SKILL.md"
+  download "$BASE_URL/platforms/opencode/skills/everything-ai-coding/SKILL.md" "$skill_dir/SKILL.md"
 
   echo "Downloading commands to project dir..."
   for cmd in $COMMANDS; do
-    download "$BASE_URL/platforms/opencode/command/coding-hub-${cmd}.md" "$cmd_dir/coding-hub-${cmd}.md"
+    download "$BASE_URL/platforms/opencode/command/everything-ai-coding-${cmd}.md" "$cmd_dir/everything-ai-coding-${cmd}.md"
   done
 
   echo ""
-  echo "=== Coding Hub installed (Opencode) ==="
+  echo "=== Everything AI Coding installed (Opencode) ==="
   echo ""
   echo "Skill (global): $skill_dir/"
   echo "Commands (project): $(pwd)/$cmd_dir/"
@@ -152,24 +152,24 @@ install_opencode() {
   echo "Note: Commands are installed to the current directory."
   echo "      Run this script again in other projects to add commands there too."
   echo ""
-  echo "Try:  /coding-hub-search typescript"
+  echo "Try:  /everything-ai-coding-search typescript"
 }
 
 install_costrict() {
-  local skill_dir="$HOME/.costrict/skills/coding-hub"
-  local cmd_dir=".costrict/coding-hub/commands"
+  local skill_dir="$HOME/.costrict/skills/everything-ai-coding"
+  local cmd_dir=".costrict/everything-ai-coding/commands"
   mkdir -p "$skill_dir" "$cmd_dir"
 
   echo "Downloading skill..."
-  download "$BASE_URL/platforms/costrict/skills/coding-hub/SKILL.md" "$skill_dir/SKILL.md"
+  download "$BASE_URL/platforms/costrict/skills/everything-ai-coding/SKILL.md" "$skill_dir/SKILL.md"
 
   echo "Downloading commands to project dir..."
   for cmd in $COMMANDS; do
-    download "$BASE_URL/platforms/costrict/commands/coding-hub/coding-hub-${cmd}.md" "$cmd_dir/coding-hub-${cmd}.md"
+    download "$BASE_URL/platforms/costrict/commands/everything-ai-coding/everything-ai-coding-${cmd}.md" "$cmd_dir/everything-ai-coding-${cmd}.md"
   done
 
   echo ""
-  echo "=== Coding Hub installed (Costrict CLI) ==="
+  echo "=== Everything AI Coding installed (Costrict CLI) ==="
   echo ""
   echo "Skill (global): $skill_dir/"
   echo "Commands (project): $(pwd)/$cmd_dir/"
@@ -177,33 +177,33 @@ install_costrict() {
   echo "Note: Commands are installed to the current directory."
   echo "      Run this script again in other projects to add commands there too."
   echo ""
-  echo "Try:  /coding-hub-search typescript"
+  echo "Try:  /everything-ai-coding-search typescript"
 }
 
 install_vscode_costrict() {
   local home_dir
   home_dir=$(resolve_home)
-  local skill_dir="$home_dir/.costrict/skills/coding-hub"
+  local skill_dir="$home_dir/.costrict/skills/everything-ai-coding"
   local cmd_dir="$home_dir/.roo/commands"
   mkdir -p "$skill_dir" "$cmd_dir"
 
   echo "Downloading skill..."
-  download "$BASE_URL/platforms/vscode-costrict/skills/coding-hub/SKILL.md" "$skill_dir/SKILL.md"
+  download "$BASE_URL/platforms/vscode-costrict/skills/everything-ai-coding/SKILL.md" "$skill_dir/SKILL.md"
 
   echo "Downloading commands (global)..."
   for cmd in $COMMANDS; do
-    download "$BASE_URL/platforms/vscode-costrict/commands/coding-hub/coding-hub-${cmd}.md" "$cmd_dir/coding-hub-${cmd}.md"
+    download "$BASE_URL/platforms/vscode-costrict/commands/everything-ai-coding/everything-ai-coding-${cmd}.md" "$cmd_dir/everything-ai-coding-${cmd}.md"
   done
 
   echo ""
-  echo "=== Coding Hub installed (VSCode Costrict / Roo Code) ==="
+  echo "=== Everything AI Coding installed (VSCode Costrict / Roo Code) ==="
   echo ""
   echo "Skill (global): $skill_dir/"
   echo "Commands (global): $cmd_dir/"
   echo ""
   echo "All projects can now use these slash commands."
   echo ""
-  echo "Try:  /coding-hub-search typescript"
+  echo "Try:  /everything-ai-coding-search typescript"
 }
 
 # --- Main ---

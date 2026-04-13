@@ -1,14 +1,14 @@
-# Coding Hub
+# Everything AI Coding
 
 <div align="center">
-<img src="assets/title-card.jpg" alt="Coding Hub" />
+<img src="assets/title-card.jpg" alt="Everything AI Coding" />
 
 <p><strong><!-- README_APPROX_COUNT:START -->4000<!-- README_APPROX_COUNT:END -->+ 精选开发资源一站式索引</strong><br/>MCP Servers · Skills · Rules · Prompts</p>
 
 <p>
-  <a href="https://github.com/zgsm-sangfor/costrict-coding-hub/stargazers"><img src="https://img.shields.io/github/stars/zgsm-sangfor/costrict-coding-hub?style=flat-square&color=4A90D9" alt="Stars" /></a>
-  <a href="https://github.com/zgsm-sangfor/costrict-coding-hub/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zgsm-sangfor/costrict-coding-hub?style=flat-square" alt="License" /></a>
-  <a href="https://github.com/zgsm-sangfor/costrict-coding-hub/commits/main"><img src="https://img.shields.io/github/last-commit/zgsm-sangfor/costrict-coding-hub?style=flat-square" alt="Last Commit" /></a>
+  <a href="https://github.com/zgsm-ai/everything-ai-coding/stargazers"><img src="https://img.shields.io/github/stars/zgsm-ai/everything-ai-coding?style=flat-square&color=4A90D9" alt="Stars" /></a>
+  <a href="https://github.com/zgsm-ai/everything-ai-coding/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zgsm-ai/everything-ai-coding?style=flat-square" alt="License" /></a>
+  <a href="https://github.com/zgsm-ai/everything-ai-coding/commits/main"><img src="https://img.shields.io/github/last-commit/zgsm-ai/everything-ai-coding?style=flat-square" alt="Last Commit" /></a>
   <img src="https://img.shields.io/badge/resources-4032-2ECC71?style=flat-square" alt="Resources" />
 </p>
 
@@ -19,7 +19,7 @@
 
 <p>
   <a href="#quick-start">快速开始</a> ·
-  <a href="https://zgsm-sangfor.github.io/costrict-coding-hub/">浏览目录</a> ·
+  <a href="https://zgsm-ai.github.io/everything-ai-coding/">浏览目录</a> ·
   <a href="#catalog-overview">目录概览</a> ·
   <a href="#platforms">平台支持</a> ·
   <a href="#for-agents">给 Agent 的安装说明</a> ·
@@ -28,11 +28,11 @@
 
 </div>
 
-## 为什么选择 Coding Hub？
+## 为什么选择 Everything AI Coding？
 
 AI Coding Agent 越来越强，但周边生态仍然很分散。想找到可靠的 MCP Server、可复用 Skill、实用 Rule 或 Prompt，通常要在多个仓库和格式之间反复跳转。
 
-Coding Hub 把这件事做成了一个持续更新的统一目录：自动同步上游资源、去重、富化元数据、补充质量信号，再把结果整理成可以被人和 Agent 直接搜索与安装的入口，让你 **一条命令就能发现并接入资源**。
+Everything AI Coding 把这件事做成了一个持续更新的统一目录：自动同步上游资源、去重、富化元数据、补充质量信号，再把结果整理成可以被人和 Agent 直接搜索与安装的入口，让你 **一条命令就能发现并接入资源**。
 
 <a id="quick-start"></a>
 ## 快速开始
@@ -43,36 +43,36 @@ Coding Hub 把这件事做成了一个持续更新的统一目录：自动同步
 
 ```bash
 # Costrict CLI（在项目根目录执行）
-curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.sh | bash -s -- --platform costrict
+curl -fsSL https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/install.sh | bash -s -- --platform costrict
 
 # VSCode Costrict 插件
-curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.sh | bash -s -- --platform vscode-costrict
+curl -fsSL https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/install.sh | bash -s -- --platform vscode-costrict
 
 # Claude Code
-curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.sh | bash -s -- --platform claude-code
+curl -fsSL https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/install.sh | bash -s -- --platform claude-code
 
 # Opencode（在项目根目录执行）
-curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.sh | bash -s -- --platform opencode
+curl -fsSL https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/install.sh | bash -s -- --platform opencode
 ```
 
 **Windows (PowerShell)**
 
 ```powershell
 # Costrict CLI
-irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/install.ps1 | iex
 
 # 自动检测失败时手动指定平台
-& ([scriptblock]::Create((irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.ps1))) -Platform costrict
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/install.ps1))) -Platform costrict
 ```
 
 安装后可以先试一个搜索命令：
 
 ```bash
 # Claude Code
-/coding-hub:search typescript
+/everything-ai-coding:search typescript
 
 # Opencode / Costrict CLI / VSCode Costrict (Roo Code)
-/coding-hub-search typescript
+/everything-ai-coding-search typescript
 ```
 
 <video src="https://github.com/user-attachments/assets/552d5405-48c9-4d26-9fb0-34a2715efa24" controls width="100%"></video>
@@ -81,16 +81,16 @@ irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/inst
 
 ```text
 你是一个自动安装助手。请访问下面的 URL，阅读其中的 "For Agents" 小节，
-然后严格按说明完成 Coding Hub 安装。
+然后严格按说明完成 Everything AI Coding 安装。
 
 不要 clone 仓库，只读取这个 raw 文件：
-https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/README.md
+https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/README.md
 
 安装结束后，请说明你使用了哪个平台路径，以及验证是否成功。
 ```
 
 <div align="center">
-<h3><a href="https://zgsm-sangfor.github.io/costrict-coding-hub/">浏览完整资源目录 →</a></h3>
+<h3><a href="https://zgsm-ai.github.io/everything-ai-coding/">浏览完整资源目录 →</a></h3>
 <p>通过交互式 Web 目录搜索、筛选和探索全部 4000+ 开发资源。</p>
 </div>
 
@@ -106,7 +106,7 @@ https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/README.m
 
 ### 数据来源
 
-Coding Hub 从多类上游源聚合资源，并通过 GitHub Pages 与 raw GitHub 提供可直接消费的数据接口。
+Everything AI Coding 从多类上游源聚合资源，并通过 GitHub Pages 与 raw GitHub 提供可直接消费的数据接口。
 
 | 类型 | 来源 |
 |------|------|
@@ -126,7 +126,7 @@ Coding Hub 从多类上游源聚合资源，并通过 GitHub Pages 与 raw GitHu
 <summary>项目结构</summary>
 
 ```text
-costrict-coding-hub/
+everything-ai-coding/
 ├── install.sh                    # macOS/Linux 一键安装脚本
 ├── install.ps1                   # Windows 一键安装脚本
 ├── catalog/                      # 生成后的资源目录数据
@@ -146,24 +146,24 @@ costrict-coding-hub/
 <a id="platforms"></a>
 ## 平台支持
 
-Coding Hub 当前支持四个 AI Coding 平台，共用同一份资源目录，但命令格式与安装路径略有差异。
+Everything AI Coding 当前支持四个 AI Coding 平台，共用同一份资源目录，但命令格式与安装路径略有差异。
 
 | | Claude Code | Costrict | Opencode | VSCode Costrict (Roo Code) |
 |---|---|---|---|---|
-| 搜索 | `/coding-hub:search <kw> [type:mcp]` | `/coding-hub-search <kw> [type:mcp]` | `/coding-hub-search <kw> [type:mcp]` | `/coding-hub-search <kw> [type:mcp]` |
-| 浏览 | `/coding-hub:browse [category]` | `/coding-hub-browse [category]` | `/coding-hub-browse [category]` | `/coding-hub-browse [category]` |
-| 推荐 | `/coding-hub:recommend` | `/coding-hub-recommend` | `/coding-hub-recommend` | `/coding-hub-recommend` |
-| 安装 | `/coding-hub:install <name>` | `/coding-hub-install <name>` | `/coding-hub-install <name>` | `/coding-hub-install <name>` |
-| 卸载 | `/coding-hub:uninstall <name>` | `/coding-hub-uninstall <name>` | `/coding-hub-uninstall <name>` | `/coding-hub-uninstall <name>` |
-| 更新 | `/coding-hub:update` | `/coding-hub-update` | `/coding-hub-update` | `/coding-hub-update` |
+| 搜索 | `/everything-ai-coding:search <kw> [type:mcp]` | `/everything-ai-coding-search <kw> [type:mcp]` | `/everything-ai-coding-search <kw> [type:mcp]` | `/everything-ai-coding-search <kw> [type:mcp]` |
+| 浏览 | `/everything-ai-coding:browse [category]` | `/everything-ai-coding-browse [category]` | `/everything-ai-coding-browse [category]` | `/everything-ai-coding-browse [category]` |
+| 推荐 | `/everything-ai-coding:recommend` | `/everything-ai-coding-recommend` | `/everything-ai-coding-recommend` | `/everything-ai-coding-recommend` |
+| 安装 | `/everything-ai-coding:install <name>` | `/everything-ai-coding-install <name>` | `/everything-ai-coding-install <name>` | `/everything-ai-coding-install <name>` |
+| 卸载 | `/everything-ai-coding:uninstall <name>` | `/everything-ai-coding-uninstall <name>` | `/everything-ai-coding-uninstall <name>` | `/everything-ai-coding-uninstall <name>` |
+| 更新 | `/everything-ai-coding:update` | `/everything-ai-coding-update` | `/everything-ai-coding-update` | `/everything-ai-coding-update` |
 
 <details>
 <summary>平台路径差异</summary>
 
 | | Claude Code | Costrict | VSCode Costrict | Opencode |
 |---|---|---|---|---|
-| 全局 Skill 路径 | `~/.claude/skills/coding-hub/` | `~/.costrict/skills/coding-hub/` | `~/.costrict/skills/coding-hub/` | `~/.opencode/skills/coding-hub/` |
-| 命令路径 | 同一全局目录 | `.costrict/coding-hub/commands/`（项目级） | `~/.roo/commands/`（全局） | `.opencode/command/`（项目级） |
+| 全局 Skill 路径 | `~/.claude/skills/everything-ai-coding/` | `~/.costrict/skills/everything-ai-coding/` | `~/.costrict/skills/everything-ai-coding/` | `~/.opencode/skills/everything-ai-coding/` |
+| 命令路径 | 同一全局目录 | `.costrict/everything-ai-coding/commands/`（项目级） | `~/.roo/commands/`（全局） | `.opencode/command/`（项目级） |
 | 分隔符 | `:` | `-` | `-` | `-` |
 
 - **Costrict CLI** 需要在每个项目根目录安装命令文件。
@@ -176,7 +176,7 @@ Coding Hub 当前支持四个 AI Coding 平台，共用同一份资源目录，�
 <a id="for-agents"></a>
 ## 给 Agent 的安装说明
 
-> 如果你是自动安装 Coding Hub 的 AI Agent，请严格按本节操作。
+> 如果你是自动安装 Everything AI Coding 的 AI Agent，请严格按本节操作。
 
 ### 第 1 步：运行安装脚本
 
@@ -185,13 +185,13 @@ Coding Hub 当前支持四个 AI Coding 平台，共用同一份资源目录，�
 **macOS / Linux**
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/install.sh | bash
 ```
 
 **Windows (PowerShell)**
 
 ```powershell
-irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/install.ps1 | iex
 ```
 
 自动识别依赖以下进程级环境变量：
@@ -208,28 +208,28 @@ irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/inst
 **macOS / Linux**
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.sh | bash -s -- --platform <platform>
+curl -fsSL https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/install.sh | bash -s -- --platform <platform>
 ```
 
 **Windows (PowerShell)**
 
 ```powershell
-& ([scriptblock]::Create((irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.ps1))) -Platform <platform>
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/install.ps1))) -Platform <platform>
 ```
 
 示例：
 
 ```bash
 # Claude Code (macOS/Linux)
-curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.sh | bash -s -- --platform claude-code
+curl -fsSL https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/install.sh | bash -s -- --platform claude-code
 
 # Opencode（在项目根目录执行）
-curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.sh | bash -s -- --platform opencode
+curl -fsSL https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/install.sh | bash -s -- --platform opencode
 ```
 
 ```powershell
 # Claude Code (Windows)
-& ([scriptblock]::Create((irm https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/install.ps1))) -Platform claude-code
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/install.ps1))) -Platform claude-code
 ```
 
 <details>
@@ -240,43 +240,43 @@ curl -fsSL https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/ma
 **Costrict CLI**（Skill 全局 + Commands 项目级）
 
 ```bash
-mkdir -p ~/.costrict/skills/coding-hub
-curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/costrict/skills/coding-hub/SKILL.md" -o ~/.costrict/skills/coding-hub/SKILL.md
-mkdir -p .costrict/coding-hub/commands
+mkdir -p ~/.costrict/skills/everything-ai-coding
+curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/costrict/skills/everything-ai-coding/SKILL.md" -o ~/.costrict/skills/everything-ai-coding/SKILL.md
+mkdir -p .costrict/everything-ai-coding/commands
 for cmd in search browse recommend install uninstall update; do
-  curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/costrict/commands/coding-hub/coding-hub-${cmd}.md" -o .costrict/coding-hub/commands/coding-hub-${cmd}.md
+  curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/costrict/commands/everything-ai-coding/everything-ai-coding-${cmd}.md" -o .costrict/everything-ai-coding/commands/everything-ai-coding-${cmd}.md
 done
 ```
 
 **VSCode Costrict 插件 / Roo Code**（Skill 全局 + Commands 全局）
 
 ```bash
-mkdir -p ~/.costrict/skills/coding-hub
-curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/vscode-costrict/skills/coding-hub/SKILL.md" -o ~/.costrict/skills/coding-hub/SKILL.md
+mkdir -p ~/.costrict/skills/everything-ai-coding
+curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/vscode-costrict/skills/everything-ai-coding/SKILL.md" -o ~/.costrict/skills/everything-ai-coding/SKILL.md
 mkdir -p ~/.roo/commands
 for cmd in search browse recommend install uninstall update; do
-  curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/vscode-costrict/commands/coding-hub/coding-hub-${cmd}.md" -o ~/.roo/commands/coding-hub-${cmd}.md
+  curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/vscode-costrict/commands/everything-ai-coding/everything-ai-coding-${cmd}.md" -o ~/.roo/commands/everything-ai-coding-${cmd}.md
 done
 ```
 
 **Claude Code**（Skill + Commands 全局安装）
 
 ```bash
-mkdir -p ~/.claude/skills/coding-hub
-curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/claude-code/skills/coding-hub/SKILL.md" -o ~/.claude/skills/coding-hub/SKILL.md
+mkdir -p ~/.claude/skills/everything-ai-coding
+curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/claude-code/skills/everything-ai-coding/SKILL.md" -o ~/.claude/skills/everything-ai-coding/SKILL.md
 for cmd in search browse recommend install uninstall update; do
-  curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/claude-code/commands/coding-hub/${cmd}.md" -o ~/.claude/skills/coding-hub/${cmd}.md
+  curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/claude-code/commands/everything-ai-coding/${cmd}.md" -o ~/.claude/skills/everything-ai-coding/${cmd}.md
 done
 ```
 
 **Opencode**（Skill 全局 + Commands 项目级）
 
 ```bash
-mkdir -p ~/.opencode/skills/coding-hub
-curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/opencode/skills/coding-hub/SKILL.md" -o ~/.opencode/skills/coding-hub/SKILL.md
+mkdir -p ~/.opencode/skills/everything-ai-coding
+curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/opencode/skills/everything-ai-coding/SKILL.md" -o ~/.opencode/skills/everything-ai-coding/SKILL.md
 mkdir -p .opencode/command
 for cmd in search browse recommend install uninstall update; do
-  curl -fsSL "https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/platforms/opencode/command/coding-hub-${cmd}.md" -o .opencode/command/coding-hub-${cmd}.md
+  curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/opencode/command/everything-ai-coding-${cmd}.md" -o .opencode/command/everything-ai-coding-${cmd}.md
 done
 ```
 
@@ -288,13 +288,13 @@ done
 
 ```text
 # Costrict CLI / Opencode
-/coding-hub-search typescript
+/everything-ai-coding-search typescript
 
 # VSCode Costrict 插件
-在聊天窗口发送："用 coding-hub 搜索 typescript"
+在聊天窗口发送："用 everything-ai-coding 搜索 typescript"
 
 # Claude Code
-/coding-hub:search typescript
+/everything-ai-coding:search typescript
 ```
 
 期望结果：返回一个 Markdown 表格，列出匹配资源。如果命令不存在，说明文件没有安装到正确的平台路径。
@@ -316,14 +316,14 @@ done
 
 | 用途 | URL |
 |------|-----|
-| 搜索索引 | `https://zgsm-sangfor.github.io/costrict-coding-hub/api/v1/search-index.json` |
-| 单条 API | `https://zgsm-sangfor.github.io/costrict-coding-hub/api/v1/{type}/{id}.json` |
-| 类型索引 | `https://zgsm-sangfor.github.io/costrict-coding-hub/api/v1/{type}/index.json` |
-| 全量索引回退地址 | `https://raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/catalog/index.json` |
+| 搜索索引 | `https://zgsm-ai.github.io/everything-ai-coding/api/v1/search-index.json` |
+| 单条 API | `https://zgsm-ai.github.io/everything-ai-coding/api/v1/{type}/{id}.json` |
+| 类型索引 | `https://zgsm-ai.github.io/everything-ai-coding/api/v1/{type}/index.json` |
+| 全量索引回退地址 | `https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/catalog/index.json` |
 
 ## 为什么推荐 Costrict？
 
-如果你喜欢 Coding Hub 的工作流，也可以试试 **[Costrict](https://github.com/zgsm-ai/costrict)** —— 我们更完整的 AI Coding Agent 平台，适合更强的自动化与团队协作场景。
+如果你喜欢 Everything AI Coding 的工作流，也可以试试 **[Costrict](https://github.com/zgsm-ai/costrict)** —— 我们更完整的 AI Coding Agent 平台，适合更强的自动化与团队协作场景。
 
 [立即了解 Costrict →](https://github.com/zgsm-ai/costrict)
 
@@ -338,7 +338,7 @@ done
 
 ## 免责声明
 
-Coding Hub 是一个第三方开源资源的索引与安装辅助项目。目录中的 MCP Server、Skill、Rule、Prompt 的版权与责任均归原作者所有。
+Everything AI Coding 是一个第三方开源资源的索引与安装辅助项目。目录中的 MCP Server、Skill、Rule、Prompt 的版权与责任均归原作者所有。
 
 本仓库 **不对** 第三方资源的安全性、可用性、准确性或合规性作任何保证。请在使用前自行审查源码与许可证；如果发现安全或版权问题，欢迎通过 Issue 反馈。
 

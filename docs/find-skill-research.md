@@ -1,7 +1,7 @@
 # Find-Skill Research Notes
 
 > Date: 2026-04-04  
-> Scope: current strengths of Coding Hub style find-skill, key bottlenecks, external reference systems, and the next expansion wave for MCP / skills / rules / prompts.
+> Scope: current strengths of Everything AI Coding style find-skill, key bottlenecks, external reference systems, and the next expansion wave for MCP / skills / rules / prompts.
 
 ## 1. Executive Summary
 
@@ -40,8 +40,8 @@ This is implemented across:
 
 - `scripts/merge_index.py`
 - `scripts/generate_pages.py`
-- `platforms/*/commands/coding-hub/*search*.md`
-- `platforms/*/commands/coding-hub/*recommend*.md`
+- `platforms/*/commands/everything-ai-coding/*search*.md`
+- `platforms/*/commands/everything-ai-coding/*recommend*.md`
 
 Why this matters:
 

@@ -18,24 +18,24 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 PLATFORMS = {
     "claude-code": {
-        "cmd_dir": "platforms/claude-code/commands/coding-hub",
+        "cmd_dir": "platforms/claude-code/commands/everything-ai-coding",
         "cmd_names": {"search": "search.md", "browse": "browse.md", "recommend": "recommend.md"},
-        "skill": "platforms/claude-code/skills/coding-hub/SKILL.md",
+        "skill": "platforms/claude-code/skills/everything-ai-coding/SKILL.md",
     },
     "opencode": {
         "cmd_dir": "platforms/opencode/command",
-        "cmd_names": {"search": "coding-hub-search.md", "browse": "coding-hub-browse.md", "recommend": "coding-hub-recommend.md"},
-        "skill": "platforms/opencode/skills/coding-hub/SKILL.md",
+        "cmd_names": {"search": "everything-ai-coding-search.md", "browse": "everything-ai-coding-browse.md", "recommend": "everything-ai-coding-recommend.md"},
+        "skill": "platforms/opencode/skills/everything-ai-coding/SKILL.md",
     },
     "costrict": {
-        "cmd_dir": "platforms/costrict/commands/coding-hub",
-        "cmd_names": {"search": "coding-hub-search.md", "browse": "coding-hub-browse.md", "recommend": "coding-hub-recommend.md"},
-        "skill": "platforms/costrict/skills/coding-hub/SKILL.md",
+        "cmd_dir": "platforms/costrict/commands/everything-ai-coding",
+        "cmd_names": {"search": "everything-ai-coding-search.md", "browse": "everything-ai-coding-browse.md", "recommend": "everything-ai-coding-recommend.md"},
+        "skill": "platforms/costrict/skills/everything-ai-coding/SKILL.md",
     },
     "vscode-costrict": {
-        "cmd_dir": "platforms/vscode-costrict/commands/coding-hub",
-        "cmd_names": {"search": "coding-hub-search.md", "browse": "coding-hub-browse.md", "recommend": "coding-hub-recommend.md"},
-        "skill": "platforms/vscode-costrict/skills/coding-hub/SKILL.md",
+        "cmd_dir": "platforms/vscode-costrict/commands/everything-ai-coding",
+        "cmd_names": {"search": "everything-ai-coding-search.md", "browse": "everything-ai-coding-browse.md", "recommend": "everything-ai-coding-recommend.md"},
+        "skill": "platforms/vscode-costrict/skills/everything-ai-coding/SKILL.md",
     },
 }
 
@@ -367,8 +367,8 @@ for r in results[:10]:
 class TestCommandIndexRouting(unittest.TestCase):
     """Verify search/browse/recommend use Pages search-index, install uses Pages per-entry API."""
 
-    PAGES_BASE = "zgsm-sangfor.github.io/costrict-coding-hub/api/v1"
-    RAW_BASE = "raw.githubusercontent.com/zgsm-sangfor/costrict-coding-hub/main/catalog"
+    PAGES_BASE = "zgsm-ai.github.io/everything-ai-coding/api/v1"
+    RAW_BASE = "raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/catalog"
 
     def _read(self, rel_path):
         p = ROOT / rel_path
@@ -397,10 +397,10 @@ class TestCommandIndexRouting(unittest.TestCase):
 
     def test_install_uses_pages_per_entry_api(self):
         install_files = {
-            "claude-code": "platforms/claude-code/commands/coding-hub/install.md",
-            "opencode": "platforms/opencode/command/coding-hub-install.md",
-            "costrict": "platforms/costrict/commands/coding-hub/coding-hub-install.md",
-            "vscode-costrict": "platforms/vscode-costrict/commands/coding-hub/coding-hub-install.md",
+            "claude-code": "platforms/claude-code/commands/everything-ai-coding/install.md",
+            "opencode": "platforms/opencode/command/everything-ai-coding-install.md",
+            "costrict": "platforms/costrict/commands/everything-ai-coding/everything-ai-coding-install.md",
+            "vscode-costrict": "platforms/vscode-costrict/commands/everything-ai-coding/everything-ai-coding-install.md",
         }
         for platform, path in install_files.items():
             content = self._read(path)
@@ -411,10 +411,10 @@ class TestCommandIndexRouting(unittest.TestCase):
 
     def test_install_has_full_index_fallback(self):
         install_files = {
-            "claude-code": "platforms/claude-code/commands/coding-hub/install.md",
-            "opencode": "platforms/opencode/command/coding-hub-install.md",
-            "costrict": "platforms/costrict/commands/coding-hub/coding-hub-install.md",
-            "vscode-costrict": "platforms/vscode-costrict/commands/coding-hub/coding-hub-install.md",
+            "claude-code": "platforms/claude-code/commands/everything-ai-coding/install.md",
+            "opencode": "platforms/opencode/command/everything-ai-coding-install.md",
+            "costrict": "platforms/costrict/commands/everything-ai-coding/everything-ai-coding-install.md",
+            "vscode-costrict": "platforms/vscode-costrict/commands/everything-ai-coding/everything-ai-coding-install.md",
         }
         for platform, path in install_files.items():
             content = self._read(path)
