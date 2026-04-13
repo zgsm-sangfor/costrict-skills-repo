@@ -97,7 +97,12 @@ jobs:
         continue-on-error: true
 
       - name: Generate catalog sub-directory READMEs
-        run: python scripts/generate_catalog_readme.py
+        run: |
+          if [ -s catalog/index.json ]; then
+            python scripts/generate_catalog_readme.py
+          else
+            echo "Skipping: catalog/index.json missing or empty"
+          fi
 
       - name: Update bilingual README files
         run: python scripts/update_readme.py
