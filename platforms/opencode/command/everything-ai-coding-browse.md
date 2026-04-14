@@ -20,7 +20,7 @@ Determine the output language using the following priority chain (first match wi
 Once determined, apply consistently:
 - **All output** (section titles, table headers, labels, helper text) MUST be in the detected language.
 - For the Description column in tables: use `description_zh` for Chinese, `description` for English.
-- Command references (e.g. `/everything-ai-coding-install <name>`) stay as-is regardless of language.
+- Command references (e.g. `/everything-ai-coding-install <id>`) stay as-is regardless of language.
 
 ## Data Sources
 
@@ -80,13 +80,13 @@ if type_filter:
     items = [x for x in items if x.get('type') == type_filter]
 items.sort(key=lambda x: -(x.get('stars') or 0))
 for x in items:
-    print(f\"{x.get('name','')}\t{x.get('type','')}\t{x.get('stars') or 0}\t{x.get('description','')}\t{x.get('description_zh','')}\")
+    print(f\"{x.get('id','')}\t{x.get('type','')}\t{x.get('stars') or 0}\t{x.get('description','')}\t{x.get('description_zh','')}\")
 " "${CATEGORY}" "${TYPE_FILTER}"
 ```
 
 Format TSV output as a table. If the category has obvious top entries with high confidence, prepend up to 3 "worth checking first" items with brief rationale (e.g. official source, significantly higher stars, clear install method).
 
-Output table columns: Name | Type | Stars | Description
+Output table columns: ID | Type | Stars | Description
 (Use `description_zh` for Chinese users, `description` for others — both are provided in the TSV as the last two columns)
 
-Footer: suggest `/everything-ai-coding-install <name>` to install; for verified recommendations, use `/everything-ai-coding-search` or `/everything-ai-coding-recommend`
+Footer: suggest `/everything-ai-coding-install <id>` to install; for verified recommendations, use `/everything-ai-coding-search` or `/everything-ai-coding-recommend`

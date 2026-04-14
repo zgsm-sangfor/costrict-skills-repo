@@ -1,6 +1,6 @@
 ---
-description: 'Install a coding resource. Usage: /everything-ai-coding-install <name>'
-argument-hint: resource name
+description: 'Install a coding resource. Usage: /everything-ai-coding-install <id>'
+argument-hint: resource id
 ---
 
 # Everything AI Coding - Install
@@ -30,10 +30,10 @@ Full index (fallback): `https://raw.githubusercontent.com/zgsm-ai/everything-ai-
 
 ## Execution Flow
 
-1. Extract resource name from `$ARGUMENTS`
+1. Extract resource ID from `$ARGUMENTS`
 2. Look up entry by ID via per-entry API (requires determining type and id from search index first):
    - Download search index: `curl -sf --compressed https://zgsm-ai.github.io/everything-ai-coding/api/v1/search-index.json`
-   - Fuzzy match on name/id with Python to determine the entry's `type` and `id`
+   - Exact match on `id` field first; if no exact match, fuzzy match on name/id with Python to determine the entry's `type` and `id`
    - If exactly one match found, fetch full data: `curl -sf --compressed https://zgsm-ai.github.io/everything-ai-coding/api/v1/{type}/{id}.json`
    - If multiple matches, list them and let the user choose, then fetch the selected one
 4. Show install preview (in user's language):

@@ -20,7 +20,7 @@ Once determined, apply consistently:
 - **All output** (section titles, table headers, labels, helper text) MUST be in the detected language.
 - For the Description column in tables: use `description_zh` for Chinese, `description` for English.
 - For candidate detail text (why-it-fits, basis): generate in the detected language.
-- Command references (e.g. `/everything-ai-coding:install <name>`) stay as-is regardless of language.
+- Command references (e.g. `/everything-ai-coding:install <id>`) stay as-is regardless of language.
 
 ## Data Sources
 
@@ -57,7 +57,7 @@ Full index fallback: `https://raw.githubusercontent.com/zgsm-ai/everything-ai-co
    - Match detected project tags against each entry's `tags` + `tech_stack`, supplement with lightweight recommendation keyword matching
    - If type filter specified, filter by `type` field first
    - Sort by matched tag count, then by stars
-   - Output top 15, each line: `id\tname\ttype\tmatched_tags\tstars\tinstall_method\tsource_url\tdescription\tdescription_zh` (TSV plain text)
+   - Output top 15, each line: `id\ttype\tmatched_tags\tstars\tinstall_method\tsource_url\tdescription\tdescription_zh` (TSV plain text)
 6. From shortlist, select top 3-5 candidates and fetch per-entry API for verification:
    - Prefer `source`, `evaluation`, `health`, `install`, `source_url`
    - Combine with current project stack to judge "does this truly fit the current project" — not just coincidental tag matches
@@ -88,15 +88,15 @@ Line: "Recommendation keywords: {keywords}"
 Section: "Top Candidates"
   (Only show gate-verified candidates. If none pass: "No high-confidence candidates yet")
   Per item:
-    - Name (Type)
+    - ID (Type)
     - Why it fits the current project: direct relationship with project stack or default scenario
     - Why worth checking: brief rationale (official source / clear install / best stack fit)
 
 Section: "Other Matches" (table)
-  Columns: # | Name | Type | Matched Tags | Stars | Install Method | Description
+  Columns: # | ID | Type | Matched Tags | Stars | Install Method | Description
   (Use description_zh for Chinese users, description for others)
 ```
 
 9. Footer prompt:
-   - If top candidates exist: suggest installing the top one, e.g. "To get started, try `/everything-ai-coding:install <name>`"
+   - If top candidates exist: suggest installing the top one, e.g. "To get started, try `/everything-ai-coding:install <id>`"
    - If no high-confidence candidates: explain that matches were found but none pass the confidence gate, suggest refining type/scenario or browsing candidates

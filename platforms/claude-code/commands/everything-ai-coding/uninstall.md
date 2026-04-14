@@ -1,5 +1,5 @@
 ---
-description: 'Uninstall an installed coding resource. Usage: /everything-ai-coding:uninstall <name>'
+description: 'Uninstall an installed coding resource. Usage: /everything-ai-coding:uninstall <id>'
 ---
 
 # Everything AI Coding - Uninstall

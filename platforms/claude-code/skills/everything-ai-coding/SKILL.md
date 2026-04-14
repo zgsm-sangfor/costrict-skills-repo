@@ -3,7 +3,7 @@ name: everything-ai-coding
 description: >
   One-stop search and install for coding resources. Aggregates MCP Servers, Skills, Rules, and Prompts.
   Supports search, category browsing, project-based recommendations, and one-click install.
-  Trigger: /everything-ai-coding:search <query> | /everything-ai-coding:browse [category] | /everything-ai-coding:recommend | /everything-ai-coding:install <name> | /everything-ai-coding:uninstall <name> | /everything-ai-coding:update <name>
+  Trigger: /everything-ai-coding:search <query> | /everything-ai-coding:browse [category] | /everything-ai-coding:recommend | /everything-ai-coding:install <id> | /everything-ai-coding:uninstall <id> | /everything-ai-coding:update <id>
 ---
 
 # Everything AI Coding
@@ -94,7 +94,7 @@ Parse user input and match the following command patterns:
 **With arguments**: Show entries in that category
 1. Filter by `category == argument`
 2. Group by type, sort each group by stars descending
-3. Suggest: use install <name> to install; browse is for exploration, not direct recommendation
+3. Suggest: use install <id> to install; browse is for exploration, not direct recommendation
 
 ### recommend [type:mcp|skill|rule|prompt]
 
@@ -118,7 +118,7 @@ Parse user input and match the following command patterns:
 10. Only gate-verified candidates enter the "Top Candidates" section; remaining results go to "Other Matches"
 11. Top candidates must explain both "why it fits the current project" and "why it's trustworthy", with install next step
 
-### install <name>
+### install <id>
 
 1. Look up entry via search index by `id` or `name` (fuzzy match) to get `type` and `id`
 2. If multiple matches, list them and let user choose
@@ -168,7 +168,7 @@ Warn that skills are global (`~/.claude/skills/`) — customization affects all 
 
 7. Show result and usage instructions after installation
 
-### uninstall <name>
+### uninstall <id>
 
 1. Fetch index, look up by `id` or `name` (fuzzy match)
 2. If multiple matches, list and let user choose
@@ -183,7 +183,7 @@ Warn that skills are global (`~/.claude/skills/`) — customization affects all 
 6. Show uninstall preview, prompt for confirmation
 7. Execute uninstall, report result
 
-### update <name>
+### update <id>
 
 1. Pull latest version of resource files from GitHub to overwrite local installation
 2. Supports updating itself (update everything-ai-coding) or other installed resources

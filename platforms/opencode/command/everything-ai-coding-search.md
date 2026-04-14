@@ -21,7 +21,7 @@ Once determined, apply consistently:
 - **All output** (section titles, table headers, labels, helper text) MUST be in the detected language.
 - For the Description column in tables: use `description_zh` for Chinese, `description` for English.
 - For candidate detail text (why-it-fits, basis): generate in the detected language.
-- Command references (e.g. `/everything-ai-coding-install <name>`) stay as-is regardless of language.
+- Command references (e.g. `/everything-ai-coding-install <id>`) stay as-is regardless of language.
 
 ## Data Sources
 
@@ -54,7 +54,7 @@ Extract the search query and optional type filter from $ARGUMENTS, then run Bash
    - Otherwise fall back to matching against `name`, `description`, `tags`, `tech_stack` separately (backward compatible)
    - If type filter specified, filter by `type` field first
    - Score each entry: count how many distinct keywords matched, use `stars` as tiebreaker
-   - Output top 30 candidates, each line: `id\tname\ttype\tcategory\tstars\tdescription\tdescription_zh` (TSV plain text)
+   - Output top 30 candidates, each line: `id\ttype\tcategory\tstars\tdescription\tdescription_zh` (TSV plain text)
 5. **Semantic reranking**: From the 30 candidates, YOU (Claude) read all entries' name + description and judge their relevance to the user's ORIGINAL query intent. Pick the top 5 most semantically relevant candidates. Consider:
    - Direct functional match (tool does exactly what user asked)
    - Closely related tools (solves the same problem from a different angle)
@@ -85,13 +85,13 @@ Line: "Search terms: original={original} | compressed={compressed} | alternative
 Section: "Top Candidates"
   (Only show gate-verified results. If none pass the gate, show: "No high-confidence candidates yet")
   Per item:
-    - Name (Type / Category)
+    - ID (Type / Category)
     - Why worth checking: relevance to user's query
     - Basis: brief understandable basis from source/quality/install feasibility
-    - Next step: `/everything-ai-coding-install <name>`
+    - Next step: `/everything-ai-coding-install <id>`
 
 Section: "Other Matches" (table)
-  Columns: # | Name | Type | Category | Stars | Install Method | Description
+  Columns: # | ID | Type | Category | Stars | Install Method | Description
   (Use description_zh for Chinese users, description for others)
 ```
 

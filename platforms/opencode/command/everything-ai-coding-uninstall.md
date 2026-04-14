@@ -1,6 +1,6 @@
 ---
-description: 'Uninstall an installed coding resource. Usage: /everything-ai-coding-uninstall <name>'
-argument-hint: resource name
+description: 'Uninstall an installed coding resource. Usage: /everything-ai-coding-uninstall <id>'
+argument-hint: resource id
 ---
 
 # Everything AI Coding - Uninstall

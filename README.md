@@ -218,8 +218,8 @@ Everything AI Coding supports four AI coding platforms. The resource catalog is 
 | Search | `/everything-ai-coding:search <kw> [type:mcp]` | `/everything-ai-coding-search <kw> [type:mcp]` | `/everything-ai-coding-search <kw> [type:mcp]` | `/everything-ai-coding-search <kw> [type:mcp]` |
 | Browse | `/everything-ai-coding:browse [category]` | `/everything-ai-coding-browse [category]` | `/everything-ai-coding-browse [category]` | `/everything-ai-coding-browse [category]` |
 | Recommend | `/everything-ai-coding:recommend` | `/everything-ai-coding-recommend` | `/everything-ai-coding-recommend` | `/everything-ai-coding-recommend` |
-| Install | `/everything-ai-coding:install <name>` | `/everything-ai-coding-install <name>` | `/everything-ai-coding-install <name>` | `/everything-ai-coding-install <name>` |
-| Uninstall | `/everything-ai-coding:uninstall <name>` | `/everything-ai-coding-uninstall <name>` | `/everything-ai-coding-uninstall <name>` | `/everything-ai-coding-uninstall <name>` |
+| Install | `/everything-ai-coding:install <id>` | `/everything-ai-coding-install <id>` | `/everything-ai-coding-install <id>` | `/everything-ai-coding-install <id>` |
+| Uninstall | `/everything-ai-coding:uninstall <id>` | `/everything-ai-coding-uninstall <id>` | `/everything-ai-coding-uninstall <id>` | `/everything-ai-coding-uninstall <id>` |
 | Update | `/everything-ai-coding:update` | `/everything-ai-coding-update` | `/everything-ai-coding-update` | `/everything-ai-coding-update` |
 
 <details>
@@ -371,8 +371,8 @@ Expected result: a Markdown table of matching resources. If the command is missi
 | `search <keyword> [type:mcp\|skill\|rule\|prompt]` | Search resources, optionally filtered by type |
 | `browse [category] [type:...]` | Browse by category |
 | `recommend [type:...]` | Recommend resources based on the current project stack |
-| `install <name>` | Install a resource |
-| `uninstall <name>` | Uninstall a resource |
+| `install <id>` | Install a resource |
+| `uninstall <id>` | Uninstall a resource |
 | `update` | Pull the latest Everything AI Coding files |
 
 #### Data endpoints

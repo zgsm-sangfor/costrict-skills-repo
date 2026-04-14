@@ -1,6 +1,6 @@
 ---
 description: 'Update everything-ai-coding skill and sub-commands to latest version. Usage: /everything-ai-coding-update'
-argument-hint: resource name
+argument-hint: resource id
 ---
 
 # Everything AI Coding - Update
