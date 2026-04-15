@@ -27,7 +27,7 @@ logger = logging.getLogger(__name__)
 CATALOG_DIR = os.path.join(os.path.dirname(__file__), "..", "catalog")
 CACHE_PATH = os.path.join(CATALOG_DIR, ".deep_review_cache.json")
 CACHE_EXPIRY_DAYS = 30
-CONTENT_TRUNCATE = 2000
+CONTENT_TRUNCATE = 6000
 
 LLM_BASE_URL = os.environ.get("LLM_BASE_URL", "")
 LLM_API_KEY = os.environ.get("LLM_API_KEY", "")
@@ -228,7 +228,7 @@ def _call_llm_reclassify(entry: dict[str, Any], content: str) -> Optional[dict[s
   type: {entry.get('type', '')}
   description: {entry.get('description', '')}
 
-ACTUAL CONTENT (first {CONTENT_TRUNCATE} chars):
+ACTUAL CONTENT (up to {CONTENT_TRUNCATE} chars):
 ---
 {content}
 ---"""
