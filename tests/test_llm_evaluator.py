@@ -46,8 +46,8 @@ class CacheMigrationTests(unittest.TestCase):
             # New cache file should have been created
             self.assertTrue(os.path.exists(new_path))
 
-    def test_migrated_entries_are_expired(self):
-        """Legacy entries get epoch evaluated_at so is_cache_valid returns False."""
+    def test_migrated_entries_trusted_as_legacy(self):
+        """Legacy entries without content_hash are trusted (backward compat)."""
         with tempfile.TemporaryDirectory() as tmpdir:
             old_path = os.path.join(tmpdir, "old_cache.json")
             new_path = os.path.join(tmpdir, "new_cache.json")
@@ -60,7 +60,14 @@ class CacheMigrationTests(unittest.TestCase):
                 cache = llm_evaluator.load_cache()
 
             migrated = cache["skill:test-id"]
-            self.assertFalse(llm_evaluator.is_cache_valid(migrated))
+            entry = {"name": "test", "description": "a tool"}
+            self.assertTrue(llm_evaluator.is_cache_valid(migrated, entry))
+
+    def test_content_hash_mismatch_invalidates_cache(self):
+        """Cache entry with different content_hash is invalid."""
+        cache_entry = {"coding_relevance": 4, "content_hash": "old_hash_val"}
+        entry = {"name": "changed", "description": "new description"}
+        self.assertFalse(llm_evaluator.is_cache_valid(cache_entry, entry))
 
     def test_old_cache_merged_into_partial_new_cache(self):
         """Old cache entries are merged even when new cache already has some entries."""

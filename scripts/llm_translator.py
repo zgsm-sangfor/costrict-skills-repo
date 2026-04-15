@@ -9,10 +9,11 @@ Reuses LLM_BASE_URL / LLM_API_KEY / LLM_MODEL environment variables.
 
 import os
 import json
+import hashlib
 import re
 import time
 import logging
-from datetime import datetime, timedelta
+from datetime import datetime
 from http.client import IncompleteRead
 from urllib.request import urlopen, Request
 from urllib.error import HTTPError, URLError
@@ -22,7 +23,6 @@ logger = logging.getLogger(__name__)
 CATALOG_DIR = os.path.join(os.path.dirname(__file__), "..", "catalog")
 CACHE_PATH = os.path.join(CATALOG_DIR, ".llm_translate_cache.json")
 EN_CACHE_PATH = os.path.join(CATALOG_DIR, ".llm_en_translate_cache.json")
-CACHE_EXPIRY_DAYS = 30
 BATCH_SIZE = 40
 
 
@@ -50,15 +50,17 @@ def _save_cache(cache: dict):
         json.dump(cache, f, indent=2, ensure_ascii=False)
 
 
-def _is_cache_valid(entry: dict) -> bool:
-    cached_at = entry.get("cached_at", "")
-    if not cached_at:
-        return False
-    try:
-        dt = datetime.fromisoformat(cached_at)
-        return datetime.now() - dt < timedelta(days=CACHE_EXPIRY_DAYS)
-    except ValueError:
-        return False
+def _content_hash(entry: dict) -> str:
+    raw = (entry.get("name", "") + "|" + entry.get("description", "")).encode()
+    return hashlib.md5(raw).hexdigest()[:12]
+
+
+def _is_cache_hit(cached: dict, entry: dict) -> bool:
+    """Content unchanged → hit. Legacy entries without hash → also hit."""
+    stored = cached.get("content_hash", "")
+    if not stored:
+        return True
+    return stored == _content_hash(entry)
 
 
 def _build_prompt(entries: list[dict]) -> str:
@@ -152,7 +154,7 @@ def llm_translate_entries(entries: list[dict]) -> dict[str, str]:
 
     for e in needs_translate:
         eid = e["id"]
-        if eid in cache and _is_cache_valid(cache[eid]):
+        if eid in cache and _is_cache_hit(cache[eid], e):
             result[eid] = cache[eid]["description_zh"]
         else:
             uncached.append(e)
@@ -173,7 +175,7 @@ def llm_translate_entries(entries: list[dict]) -> dict[str, str]:
                 zh = raw[eid].strip()
                 if zh:
                     result[eid] = zh
-                    cache[eid] = {"description_zh": zh, "cached_at": now_iso}
+                    cache[eid] = {"description_zh": zh, "content_hash": _content_hash(e), "cached_at": now_iso}
 
         _save_cache(cache)
         time.sleep(1)  # Rate limit courtesy
@@ -294,7 +296,7 @@ def llm_translate_to_english(entries: list[dict]) -> dict[str, str]:
 
     for e in needs_translate:
         eid = e["id"]
-        if eid in cache and _is_cache_valid(cache[eid]):
+        if eid in cache and _is_cache_hit(cache[eid], e):
             result[eid] = cache[eid]["description_en"]
         else:
             uncached.append(e)
@@ -315,7 +317,7 @@ def llm_translate_to_english(entries: list[dict]) -> dict[str, str]:
                 en = raw[eid].strip()
                 if en:
                     result[eid] = en
-                    cache[eid] = {"description_en": en, "cached_at": now_iso}
+                    cache[eid] = {"description_en": en, "content_hash": _content_hash(e), "cached_at": now_iso}
 
         _save_en_cache(cache)
         time.sleep(1)

@@ -74,13 +74,13 @@ class TestEnrichSearchTerms:
 
     @patch.dict(os.environ, {"LLM_BASE_URL": "http://llm.test/v1", "LLM_API_KEY": "key123"})
     @patch("llm_search_enricher._call_llm_batch")
-    def test_cache_expired_triggers_api(self, mock_llm):
-        """WHEN cache entry older than 30 days → re-generate via LLM."""
-        expired_date = (datetime.now() - timedelta(days=31)).isoformat()
+    def test_content_hash_mismatch_triggers_api(self, mock_llm):
+        """WHEN cache content_hash differs from current entry → re-generate via LLM."""
         cache = {
             "entry-old": {
                 "terms": ["old term"],
-                "cached_at": expired_date,
+                "content_hash": "stale_hash_value",
+                "cached_at": datetime.now().isoformat(),
             }
         }
         with open(self.cache_path, "w") as f:

@@ -8,10 +8,11 @@ Cache stored at catalog/.llm_tag_cache.json (separate from llm_evaluator cache).
 
 import os
 import json
+import hashlib
 import time
 import logging
 from collections import Counter
-from datetime import datetime, timedelta
+from datetime import datetime
 from urllib.request import urlopen, Request
 from urllib.error import HTTPError, URLError
 
@@ -19,7 +20,6 @@ logger = logging.getLogger(__name__)
 
 CATALOG_DIR = os.path.join(os.path.dirname(__file__), "..", "catalog")
 CACHE_PATH = os.path.join(CATALOG_DIR, ".llm_tag_cache.json")
-CACHE_EXPIRY_DAYS = 30
 BATCH_SIZE = 40
 
 
@@ -39,15 +39,17 @@ def _save_cache(cache: dict):
         json.dump(cache, f, indent=2, ensure_ascii=False)
 
 
-def _is_cache_valid(entry: dict) -> bool:
-    cached_at = entry.get("cached_at", "")
-    if not cached_at:
-        return False
-    try:
-        dt = datetime.fromisoformat(cached_at)
-        return datetime.now() - dt < timedelta(days=CACHE_EXPIRY_DAYS)
-    except ValueError:
-        return False
+def _content_hash(entry: dict) -> str:
+    raw = (entry.get("name", "") + "|" + entry.get("description", "")).encode()
+    return hashlib.md5(raw).hexdigest()[:12]
+
+
+def _is_cache_hit(cached: dict, entry: dict) -> bool:
+    """Content unchanged → hit. Legacy entries without hash → also hit."""
+    stored = cached.get("content_hash", "")
+    if not stored:
+        return True
+    return stored == _content_hash(entry)
 
 
 def _build_prompt(entries: list[dict], reference_vocab: list[str]) -> str:
@@ -176,7 +178,7 @@ def llm_tag_entries(entries: list[dict],
 
     for e in needs_tags:
         eid = e["id"]
-        if eid in cache and _is_cache_valid(cache[eid]):
+        if eid in cache and _is_cache_hit(cache[eid], e):
             result[eid] = cache[eid]["tags"]
         else:
             uncached.append(e)
@@ -198,7 +200,7 @@ def llm_tag_entries(entries: list[dict],
             if eid in raw and isinstance(raw[eid], list):
                 tags = _postprocess_tags(raw[eid])
                 result[eid] = tags
-                cache[eid] = {"tags": tags, "cached_at": now_iso}
+                cache[eid] = {"tags": tags, "content_hash": _content_hash(e), "cached_at": now_iso}
 
         _save_cache(cache)
 

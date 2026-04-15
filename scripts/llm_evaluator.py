@@ -3,6 +3,7 @@
 
 import os
 import json
+import hashlib
 import time
 import logging
 from typing import Any
@@ -15,7 +16,6 @@ logger = logging.getLogger(__name__)
 CATALOG_DIR = os.path.join(os.path.dirname(__file__), "..", "catalog")
 OLD_CACHE_PATH = os.path.join(CATALOG_DIR, "skills", ".llm_cache.json")
 CACHE_PATH = os.path.join(CATALOG_DIR, ".llm_eval_cache.json")
-CACHE_EXPIRY_DAYS = 30
 EVAL_DRY_RUN = os.environ.get("EVAL_DRY_RUN", "").lower() in ("true", "1", "yes")
 NEW_ENTRY_DAYS = 7  # In dry-run mode, only evaluate entries added within this window
 
@@ -238,9 +238,8 @@ Respond ONLY with a JSON array. Each element must have: id, coding_relevance, co
 def _migrate_old_cache_entry(old_val: dict[str, Any]) -> dict[str, Any] | None:
     """Convert legacy cache value (quality_score) to new schema (content_quality).
 
-    Migrated entries get evaluated_at set to epoch so they are treated as
-    expired by is_cache_valid() and re-evaluated on the next LLM-available run.
-    This avoids scoring penalties from missing signals (e.g. specificity).
+    Migrated entries lack content_hash, so is_cache_valid() trusts them
+    as legacy entries until they are re-evaluated naturally.
     """
     if not isinstance(old_val, dict):
         return None
@@ -253,7 +252,6 @@ def _migrate_old_cache_entry(old_val: dict[str, Any]) -> dict[str, Any] | None:
         "content_quality": old_val.get("quality_score", 0),
         "specificity": old_val.get("specificity", 0),
         "reasoning": old_val.get("reasoning", ""),
-        # Epoch timestamp → is_cache_valid() returns False → forces re-eval
         "evaluated_at": "2000-01-01T00:00:00",
         "evaluator": old_val.get("evaluator", "legacy_migration"),
     }
@@ -325,16 +323,17 @@ def save_cache(cache: dict[str, Any]):
         json.dump(cache, f, indent=2, ensure_ascii=False)
 
 
-def is_cache_valid(entry: dict[str, Any]) -> bool:
-    """Check if a cache entry is still valid (not expired)."""
-    evaluated_at = entry.get("evaluated_at", "")
-    if not evaluated_at:
-        return False
-    try:
-        eval_date = datetime.fromisoformat(evaluated_at)
-        return datetime.now() - eval_date < timedelta(days=CACHE_EXPIRY_DAYS)
-    except ValueError:
-        return False
+def _content_hash(entry: dict[str, Any]) -> str:
+    raw = (entry.get("name", "") + "|" + entry.get("description", "")).encode()
+    return hashlib.md5(raw).hexdigest()[:12]
+
+
+def is_cache_valid(cache_entry: dict[str, Any], entry: dict[str, Any]) -> bool:
+    """Content unchanged → valid. Legacy entries without hash → also valid."""
+    stored = cache_entry.get("content_hash", "")
+    if not stored:
+        return True
+    return stored == _content_hash(entry)
 
 
 def _sanitize_field(value: str, max_len: int = 200) -> str:
@@ -438,7 +437,7 @@ def enrich_quality(entries: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
 
         # Check cache (accept valid entries; stale entries used as fallback below)
         cache_key = f"{entry_type}:{entry_id}"
-        if cache_key in cache and is_cache_valid(cache[cache_key]):
+        if cache_key in cache and is_cache_valid(cache[cache_key], entry):
             results[entry_id] = cache[cache_key]
             continue
 
@@ -527,6 +526,7 @@ def enrich_quality(entries: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
                     "reasoning": r.get("reasoning", ""),
                     "evaluated_at": now_iso,
                     "evaluator": LLM_MODEL,
+                    "content_hash": _content_hash(entry),
                 }
 
                 if resource_type in ["mcp", "skill"]:
