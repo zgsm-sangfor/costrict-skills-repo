@@ -12,6 +12,7 @@ from pydantic import ValidationError
 from ai_resource_eval.api.types import (
     ContentSource,
     Decision,
+    EnrichmentData,
     EvalItem,
     EvalResult,
     HealthSignals,
@@ -175,6 +176,57 @@ class TestHealthSignals:
 
 
 # ===================================================================
+# EnrichmentData
+# ===================================================================
+
+
+class TestEnrichmentData:
+    """Tests for EnrichmentData enrichment output model."""
+
+    def test_all_fields(self):
+        e = EnrichmentData(
+            summary="A tool for database access",
+            summary_zh="数据库访问工具",
+            tags=["mcp-server", "database"],
+            tech_stack=["python", "fastapi"],
+            search_terms=["database", "数据库"],
+            highlights=["支持 15+ 数据库类型", "Docker 一键部署"],
+        )
+        assert e.summary == "A tool for database access"
+        assert e.summary_zh == "数据库访问工具"
+        assert len(e.tags) == 2
+        assert len(e.highlights) == 2
+
+    def test_defaults(self):
+        e = EnrichmentData()
+        assert e.summary == ""
+        assert e.summary_zh == ""
+        assert e.tags == []
+        assert e.tech_stack == []
+        assert e.search_terms == []
+        assert e.highlights == []
+
+    def test_partial_fields(self):
+        e = EnrichmentData(summary="test", tags=["a"])
+        assert e.summary == "test"
+        assert e.tags == ["a"]
+        assert e.tech_stack == []
+
+    def test_serialization_roundtrip(self):
+        e = EnrichmentData(
+            summary="test",
+            summary_zh="测试",
+            tags=["a", "b"],
+            tech_stack=["python"],
+            search_terms=["test", "测试"],
+            highlights=["亮点一"],
+        )
+        data = e.model_dump()
+        e2 = EnrichmentData.model_validate(data)
+        assert e == e2
+
+
+# ===================================================================
 # EvalResult
 # ===================================================================
 
@@ -244,6 +296,35 @@ class TestEvalResult:
         r = self._make_result(metrics=metrics)
         assert len(r.metrics) == 3
         assert r.metrics["doc_completeness"].score == 3
+
+    def test_enrichment_none_by_default(self):
+        r = self._make_result()
+        assert r.enrichment is None
+
+    def test_enrichment_present(self):
+        enrichment = EnrichmentData(
+            summary="test",
+            summary_zh="测试",
+            tags=["a"],
+        )
+        r = self._make_result(enrichment=enrichment)
+        assert r.enrichment is not None
+        assert r.enrichment.summary == "test"
+
+    def test_enrichment_none_explicit(self):
+        r = self._make_result(enrichment=None)
+        assert r.enrichment is None
+
+    def test_backward_compat_no_enrichment_key(self):
+        """Old cached results without enrichment key should deserialize fine."""
+        data = {
+            "entry_id": "test",
+            "metrics": {},
+            "final_score": 50.0,
+            "decision": "review",
+        }
+        r = EvalResult.model_validate(data)
+        assert r.enrichment is None
 
 
 # ===================================================================
@@ -375,3 +456,11 @@ class TestTaskConfig:
         """Individual metric weight must be <= 1."""
         with pytest.raises(ValidationError):
             MetricWeight(metric="test", weight=1.5)
+
+    def test_enrichment_default_true(self):
+        cfg = TaskConfig(task="test", metrics=_valid_metrics())
+        assert cfg.enrichment is True
+
+    def test_enrichment_explicit_false(self):
+        cfg = TaskConfig(task="test", metrics=_valid_metrics(), enrichment=False)
+        assert cfg.enrichment is False

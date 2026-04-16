@@ -130,6 +130,28 @@ class TestBuildSystemPrompt:
         assert isinstance(prompt, str)
         assert len(prompt) > 100
 
+    def test_enrichment_false_no_enrichment_section(self):
+        metrics = [CodingRelevance()]
+        prompt = build_system_prompt(metrics, enrichment=False)
+        assert "Enrichment Fields" not in prompt
+
+    def test_enrichment_true_has_enrichment_section(self):
+        metrics = [CodingRelevance()]
+        prompt = build_system_prompt(metrics, enrichment=True)
+        assert "Enrichment Fields" in prompt
+        assert "summary" in prompt
+        assert "summary_zh" in prompt
+        assert "tags" in prompt
+        assert "tech_stack" in prompt
+        assert "search_terms" in prompt
+        assert "highlights" in prompt
+
+    def test_enrichment_default_false(self):
+        """Default enrichment=False for backward compatibility."""
+        metrics = [CodingRelevance()]
+        prompt = build_system_prompt(metrics)
+        assert "Enrichment Fields" not in prompt
+
 
 class TestBuildOutputSchema:
     """Tests for build_output_schema()."""
@@ -156,6 +178,22 @@ class TestBuildOutputSchema:
         props = schema["properties"]["metrics"]["properties"]
         assert "$ref" in props["coding_relevance"]
         assert "MetricResult" in props["coding_relevance"]["$ref"]
+
+    def test_schema_no_enrichment_by_default(self):
+        schema = build_output_schema(["coding_relevance"])
+        assert "enrichment" not in schema["properties"]
+        assert "enrichment" not in schema["required"]
+
+    def test_schema_with_enrichment(self):
+        schema = build_output_schema(["coding_relevance"], enrichment=True)
+        assert "enrichment" in schema["properties"]
+        assert "enrichment" in schema["required"]
+        assert "EnrichmentData" in schema["$defs"]
+
+    def test_schema_with_enrichment_is_json_serialisable(self):
+        schema = build_output_schema(["coding_relevance"], enrichment=True)
+        json_str = json.dumps(schema)
+        assert isinstance(json_str, str)
 
 
 # ===================================================================
@@ -284,3 +322,21 @@ class TestLLMEvalResponse:
         json_str = resp.model_dump_json()
         resp2 = LLMEvalResponse.model_validate_json(json_str)
         assert resp == resp2
+
+    def test_enrichment_none_by_default(self, mock_response_data):
+        resp = LLMEvalResponse.model_validate(mock_response_data)
+        assert resp.enrichment is None
+
+    def test_enrichment_parsed(self, mock_response_data):
+        mock_response_data["enrichment"] = {
+            "summary": "A great tool",
+            "summary_zh": "很棒的工具",
+            "tags": ["tool"],
+            "tech_stack": ["python"],
+            "search_terms": ["tool", "工具"],
+            "highlights": ["功能强大"],
+        }
+        resp = LLMEvalResponse.model_validate(mock_response_data)
+        assert resp.enrichment is not None
+        assert resp.enrichment.summary == "A great tool"
+        assert resp.enrichment.tags == ["tool"]

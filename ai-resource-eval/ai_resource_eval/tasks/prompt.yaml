@@ -40,3 +40,4 @@ thresholds:
   review: 50
 
 rubric_major_version: 1
+enrichment: true

@@ -72,7 +72,19 @@ def _make_entry(
     )
 
 
-def _make_llm_metrics_response(score: int = 4) -> dict[str, Any]:
+_SAMPLE_ENRICHMENT = {
+    "summary": "A tool for testing",
+    "summary_zh": "测试工具",
+    "tags": ["testing", "tool"],
+    "tech_stack": ["python"],
+    "search_terms": ["testing", "测试"],
+    "highlights": ["功能强大", "易于使用"],
+}
+
+
+def _make_llm_metrics_response(
+    score: int = 4, *, include_enrichment: bool = False
+) -> dict[str, Any]:
     """Build a valid LLM response dict with all 6 metrics."""
     metric_names = [
         "coding_relevance",
@@ -82,7 +94,7 @@ def _make_llm_metrics_response(score: int = 4) -> dict[str, Any]:
         "specificity",
         "install_clarity",
     ]
-    return {
+    result: dict[str, Any] = {
         "metrics": {
             name: {
                 "score": score,
@@ -93,6 +105,9 @@ def _make_llm_metrics_response(score: int = 4) -> dict[str, Any]:
             for name in metric_names
         }
     }
+    if include_enrichment:
+        result["enrichment"] = dict(_SAMPLE_ENRICHMENT)
+    return result
 
 
 def _make_judge_result(score: int = 4) -> JudgeResult:
@@ -112,8 +127,9 @@ def _make_judge_result(score: int = 4) -> JudgeResult:
 class FakeJudge(BaseJudge):
     """A fake judge for testing that returns pre-configured results."""
 
-    def __init__(self, score: int = 4) -> None:
+    def __init__(self, score: int = 4, *, include_enrichment: bool = False) -> None:
         self._score = score
+        self._include_enrichment = include_enrichment
         self._call_count = 0
         self._lock = threading.Lock()
 
@@ -130,7 +146,9 @@ class FakeJudge(BaseJudge):
     ) -> tuple[str, int, int, int]:
         with self._lock:
             self._call_count += 1
-        response = _make_llm_metrics_response(self._score)
+        response = _make_llm_metrics_response(
+            self._score, include_enrichment=self._include_enrichment
+        )
         return json.dumps(response), 500, 200, 1200
 
     def _compute_cost(self, prompt_tokens: int, completion_tokens: int) -> float:
@@ -889,12 +907,15 @@ class TestMetricParsing:
         )
 
         jr = _make_judge_result(score=4)
-        result = runner._parse_metrics(jr)
+        parsed = runner._parse_metrics(jr)
 
-        assert result is not None
-        assert len(result) == 6
-        assert all(isinstance(v, MetricResult) for v in result.values())
-        assert result["coding_relevance"].score == 4
+        assert parsed is not None
+        metrics, enrichment = parsed
+        assert len(metrics) == 6
+        assert all(isinstance(v, MetricResult) for v in metrics.values())
+        assert metrics["coding_relevance"].score == 4
+        # No enrichment in default task_config (enrichment=True but no enrichment in response)
+        assert enrichment is None
 
     def test_parse_none_structured(self, task_config, fake_judge, tmp_path):
         """None structured response returns None."""
@@ -937,3 +958,164 @@ class TestMetricParsing:
             model_id="test",
         )
         assert runner._parse_metrics(jr) is None
+
+
+# ===================================================================
+# Enrichment parsing
+# ===================================================================
+
+
+class TestEnrichmentParsing:
+    """Test enrichment parsing from LLM response."""
+
+    def test_enrichment_parsed_when_present(self, task_config, fake_judge, tmp_path):
+        """When enrichment is in the response, it should be parsed."""
+        runner = EvalRunner(
+            task_config=task_config,
+            judge=fake_judge,
+            cache_dir=str(tmp_path / "cache"),
+        )
+
+        response = _make_llm_metrics_response(include_enrichment=True)
+        jr = JudgeResult(
+            content=json.dumps(response),
+            structured=response,
+            cost_usd=0.0,
+            prompt_tokens=0,
+            completion_tokens=0,
+            latency_ms=0,
+            model_id="test",
+        )
+        parsed = runner._parse_metrics(jr)
+        assert parsed is not None
+        metrics, enrichment = parsed
+        assert enrichment is not None
+        assert enrichment.summary == "A tool for testing"
+        assert enrichment.summary_zh == "测试工具"
+        assert enrichment.tags == ["testing", "tool"]
+
+    def test_enrichment_none_when_missing(self, task_config, fake_judge, tmp_path):
+        """When enrichment is not in response, enrichment=None but metrics parse fine."""
+        runner = EvalRunner(
+            task_config=task_config,
+            judge=fake_judge,
+            cache_dir=str(tmp_path / "cache"),
+        )
+
+        response = _make_llm_metrics_response(include_enrichment=False)
+        jr = JudgeResult(
+            content=json.dumps(response),
+            structured=response,
+            cost_usd=0.0,
+            prompt_tokens=0,
+            completion_tokens=0,
+            latency_ms=0,
+            model_id="test",
+        )
+        parsed = runner._parse_metrics(jr)
+        assert parsed is not None
+        metrics, enrichment = parsed
+        assert len(metrics) == 6
+        assert enrichment is None
+
+    def test_enrichment_malformed_degrades_gracefully(self, task_config, fake_judge, tmp_path):
+        """Malformed enrichment should not affect metrics parsing."""
+        runner = EvalRunner(
+            task_config=task_config,
+            judge=fake_judge,
+            cache_dir=str(tmp_path / "cache"),
+        )
+
+        response = _make_llm_metrics_response()
+        response["enrichment"] = "not a dict"
+        jr = JudgeResult(
+            content=json.dumps(response),
+            structured=response,
+            cost_usd=0.0,
+            prompt_tokens=0,
+            completion_tokens=0,
+            latency_ms=0,
+            model_id="test",
+        )
+        parsed = runner._parse_metrics(jr)
+        assert parsed is not None
+        metrics, enrichment = parsed
+        assert len(metrics) == 6
+        assert enrichment is None
+
+    def test_enrichment_disabled_skips_parsing(self, tmp_path):
+        """When enrichment=False in config, enrichment is not parsed."""
+        config = _make_task_config()
+        config = config.model_copy(update={"enrichment": False})
+        judge = FakeJudge(score=4, include_enrichment=True)
+
+        runner = EvalRunner(
+            task_config=config,
+            judge=judge,
+            cache_dir=str(tmp_path / "cache"),
+        )
+
+        response = _make_llm_metrics_response(include_enrichment=True)
+        jr = JudgeResult(
+            content=json.dumps(response),
+            structured=response,
+            cost_usd=0.0,
+            prompt_tokens=0,
+            completion_tokens=0,
+            latency_ms=0,
+            model_id="test",
+        )
+        parsed = runner._parse_metrics(jr)
+        assert parsed is not None
+        _, enrichment = parsed
+        assert enrichment is None
+
+    @patch("ai_resource_eval.runner.GitHubFetcher.fetch")
+    def test_full_pipeline_with_enrichment(self, mock_fetch, task_config, tmp_path):
+        """Full pipeline produces EvalResult with enrichment when judge returns it."""
+        mock_fetch.return_value = ("# README\nSome content", "hash123")
+
+        judge = FakeJudge(score=4, include_enrichment=True)
+        runner = EvalRunner(
+            task_config=task_config,
+            judge=judge,
+            cache_dir=str(tmp_path / "cache"),
+            concurrency=1,
+            interactive=False,
+        )
+
+        results = runner.run([_make_entry()])
+        assert len(results) == 1
+        r = results[0]
+        assert r.enrichment is not None
+        assert r.enrichment.summary == "A tool for testing"
+        assert r.enrichment.tags == ["testing", "tool"]
+
+    @patch("ai_resource_eval.runner.GitHubFetcher.fetch")
+    def test_enrichment_survives_cache_roundtrip(self, mock_fetch, task_config, tmp_path):
+        """Enrichment data is preserved when loaded from cache in incremental mode."""
+        mock_fetch.return_value = ("# README\nSame content", "same_hash")
+
+        judge = FakeJudge(score=4, include_enrichment=True)
+        runner = EvalRunner(
+            task_config=task_config,
+            judge=judge,
+            cache_dir=str(tmp_path / "cache"),
+            concurrency=1,
+            incremental=True,
+            interactive=False,
+        )
+
+        # First run: evaluates and caches
+        results1 = runner.run([_make_entry()])
+        assert len(results1) == 1
+        assert results1[0].enrichment is not None
+        assert results1[0].enrichment.summary == "A tool for testing"
+
+        # Second run: loads from cache
+        results2 = runner.run([_make_entry()])
+        assert len(results2) == 1
+        assert results2[0].model_id == "__cached__"
+        assert results2[0].enrichment is not None
+        assert results2[0].enrichment.summary == "A tool for testing"
+        assert results2[0].enrichment.tags == ["testing", "tool"]

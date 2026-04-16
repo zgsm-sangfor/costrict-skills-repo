@@ -118,6 +118,37 @@ class HealthSignals(BaseModel):
     source_trust: float = Field(0.0, ge=0, le=100)
 
 
+class EnrichmentData(BaseModel):
+    """Enrichment fields produced alongside evaluation metrics in a single LLM call."""
+
+    summary: str = Field("", description="Concise English summary (≤150 chars)")
+    summary_zh: str = Field("", description="Concise Chinese summary (≤100 chars)")
+    tags: list[str] = Field(default_factory=list, description="3-5 lowercase kebab-case tags")
+    tech_stack: list[str] = Field(default_factory=list, description="Languages/frameworks/tools")
+    search_terms: list[str] = Field(default_factory=list, description="3-5 bilingual search terms")
+    highlights: list[str] = Field(default_factory=list, description="2-3 Chinese feature highlights (≤60 chars each)")
+
+    @field_validator("summary")
+    @classmethod
+    def truncate_summary(cls, v: str) -> str:
+        return v[:150] if len(v) > 150 else v
+
+    @field_validator("summary_zh")
+    @classmethod
+    def truncate_summary_zh(cls, v: str) -> str:
+        return v[:100] if len(v) > 100 else v
+
+    @field_validator("highlights")
+    @classmethod
+    def truncate_highlights(cls, v: list[str]) -> list[str]:
+        return [h[:60] for h in v[:3]]
+
+    @field_validator("tags")
+    @classmethod
+    def normalize_tags(cls, v: list[str]) -> list[str]:
+        return [t.lower().strip() for t in v[:5]]
+
+
 class EvalResult(BaseModel):
     """Complete evaluation result for one catalog entry."""
 
@@ -125,6 +156,10 @@ class EvalResult(BaseModel):
     metrics: dict[str, MetricResult] = Field(
         default_factory=dict,
         description="Keyed by dimension name (e.g. 'coding_relevance')",
+    )
+    enrichment: EnrichmentData | None = Field(
+        None,
+        description="Enrichment fields from single LLM call (optional)",
     )
     health: HealthSignals = Field(default_factory=HealthSignals)
     llm_score: float | None = Field(
@@ -229,6 +264,10 @@ class TaskConfig(BaseModel):
         ge=0,
         le=1,
         description="Blend ratio: final = α × llm_score + (1-α) × health_score",
+    )
+    enrichment: bool = Field(
+        True,
+        description="When true, LLM prompt includes enrichment section for tags/summary/etc.",
     )
 
     @model_validator(mode="after")

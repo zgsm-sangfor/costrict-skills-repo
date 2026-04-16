@@ -23,6 +23,7 @@ from ai_resource_eval.api.judge import JudgeResult
 from ai_resource_eval.api.metric import BaseMetric
 from ai_resource_eval.api.types import (
     Decision,
+    EnrichmentData,
     EvalItem,
     EvalResult,
     HealthSignals,
@@ -105,10 +106,17 @@ class EvalRunner:
             self._metrics.append(metric)
             self._metric_weights[mw.metric] = mw.weight
 
+        # Enrichment flag from task config
+        self._enrichment = task_config.enrichment
+
         # Pre-build system prompt and schema (same for all entries)
-        self._system_prompt = build_system_prompt(self._metrics)
+        self._system_prompt = build_system_prompt(
+            self._metrics, enrichment=self._enrichment
+        )
         self._metric_names = [m.name for m in self._metrics]
-        self._output_schema = build_output_schema(self._metric_names)
+        self._output_schema = build_output_schema(
+            self._metric_names, enrichment=self._enrichment
+        )
 
         # Compute rubric version: "{major}.{sha8}"
         sha8 = hashlib.sha256(self._system_prompt.encode()).hexdigest()[:8]
@@ -289,13 +297,15 @@ class EvalRunner:
         # Accumulate cost
         self._total_cost_usd += judge_result.cost_usd
 
-        # 5. Parse LLM response into MetricResults
-        metric_results = self._parse_metrics(judge_result)
-        if metric_results is None:
+        # 5. Parse LLM response into MetricResults + enrichment
+        parsed = self._parse_metrics(judge_result)
+        if parsed is None:
             logger.warning(
                 "Failed to parse LLM response for %s, skipping", entry.id
             )
             return None
+
+        metric_results, enrichment = parsed
 
         # 6. Compute LLM score via ScoringGovernor
         llm_score = ScoringGovernor.compute_final_score(
@@ -340,6 +350,7 @@ class EvalRunner:
         eval_result = EvalResult(
             entry_id=entry.id,
             metrics=metric_results,
+            enrichment=enrichment,
             health=health,
             llm_score=llm_score,
             final_score=final_score,
@@ -630,10 +641,11 @@ class EvalRunner:
 
     def _parse_metrics(
         self, judge_result: JudgeResult
-    ) -> dict[str, MetricResult] | None:
-        """Parse the LLM response into MetricResult objects.
+    ) -> tuple[dict[str, MetricResult], EnrichmentData | None] | None:
+        """Parse the LLM response into MetricResult objects and optional enrichment.
 
-        Returns None if parsing fails or required metrics are missing.
+        Returns a (metrics, enrichment) tuple, or None if metric parsing fails.
+        Enrichment parse failure is non-fatal: returns (metrics, None).
         """
         if judge_result.structured is None:
             return None
@@ -642,15 +654,25 @@ class EvalRunner:
         if not isinstance(raw_metrics, dict):
             return None
 
-        result: dict[str, MetricResult] = {}
+        metrics: dict[str, MetricResult] = {}
         for name in self._metric_names:
             if name not in raw_metrics:
                 logger.warning("Missing metric %s in LLM response", name)
                 return None
             try:
-                result[name] = MetricResult.model_validate(raw_metrics[name])
+                metrics[name] = MetricResult.model_validate(raw_metrics[name])
             except Exception:
                 logger.warning("Invalid metric result for %s", name)
                 return None
 
-        return result
+        # Parse enrichment (non-fatal)
+        enrichment: EnrichmentData | None = None
+        if self._enrichment:
+            raw_enrichment = judge_result.structured.get("enrichment")
+            if raw_enrichment and isinstance(raw_enrichment, dict):
+                try:
+                    enrichment = EnrichmentData.model_validate(raw_enrichment)
+                except Exception:
+                    logger.debug("Failed to parse enrichment, continuing without it")
+
+        return metrics, enrichment
