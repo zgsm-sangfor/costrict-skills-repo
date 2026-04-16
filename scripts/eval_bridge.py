@@ -37,6 +37,8 @@ def map_result_to_entry(entry: dict[str, Any], result: dict[str, Any] | None) ->
     """Map an EvalResult dict onto a catalog entry (in-place).
 
     Flattens metric scores to integers (no evidence/missing/suggestion).
+    Maps enrichment fields (tags, summary, etc.) when present.
+    Converts health signals to README-compatible format.
     Preserves existing evaluation if result is None (harness skipped entry).
     """
     if result is None:
@@ -66,9 +68,50 @@ def map_result_to_entry(entry: dict[str, Any], result: dict[str, Any] | None) ->
 
     entry["evaluation"] = evaluation
 
-    # Map health signals
-    if result.get("health"):
-        entry["health"] = result["health"]
+    # ── Map enrichment fields ──────────────────────────────────────────
+    enrichment = result.get("enrichment")
+    if enrichment and isinstance(enrichment, dict):
+        if enrichment.get("tags"):
+            entry["tags"] = enrichment["tags"]
+        if enrichment.get("tech_stack"):
+            entry["tech_stack"] = enrichment["tech_stack"]
+        if enrichment.get("summary_zh"):
+            entry["description_zh"] = enrichment["summary_zh"]
+        if enrichment.get("search_terms"):
+            entry["search_terms"] = enrichment["search_terms"]
+        if enrichment.get("highlights"):
+            entry["highlights"] = enrichment["highlights"]
+        if enrichment.get("summary"):
+            entry["summary"] = enrichment["summary"]
+
+    # ── Map health signals (convert to README-compatible format) ──────
+    raw_health = result.get("health")
+    if raw_health and isinstance(raw_health, dict):
+        freshness = raw_health.get("freshness", 0.0)
+        popularity = raw_health.get("popularity", 0.0)
+        source_trust = raw_health.get("source_trust", 0.0)
+
+        # Compute aggregate score (mean of three signals, rounded)
+        health_score = round((freshness + popularity + source_trust) / 3)
+
+        # Derive freshness label
+        if freshness > 70:
+            freshness_label = "active"
+        elif freshness > 30:
+            freshness_label = "stale"
+        else:
+            freshness_label = "abandoned"
+
+        entry["health"] = {
+            "score": health_score,
+            "freshness_label": freshness_label,
+            "last_commit": entry.get("pushed_at"),
+            "signals": {
+                "freshness": freshness,
+                "popularity": popularity,
+                "source_trust": source_trust,
+            },
+        }
 
     # Top-level promotion (consumed by sort + downstream scripts)
     entry["final_score"] = result.get("final_score", 0)
