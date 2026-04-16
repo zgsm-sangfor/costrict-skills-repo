@@ -4,21 +4,18 @@
 import logging
 import sys
 import os
+from pathlib import Path
 from typing import Any
 
 sys.path.insert(0, os.path.dirname(__file__))
 try:
     from .llm_tagger import llm_tag_entries
     from .llm_translator import llm_translate_entries, llm_translate_to_english
-    from .llm_evaluator import enrich_quality
-    from .unified_enrichment import populate_signals
     from .llm_techstack_tagger import tag_techstack
     from .llm_search_enricher import enrich_search_terms
 except ImportError:
     from llm_tagger import llm_tag_entries
     from llm_translator import llm_translate_entries, llm_translate_to_english
-    from llm_evaluator import enrich_quality
-    from unified_enrichment import populate_signals
     from llm_techstack_tagger import tag_techstack
     from llm_search_enricher import enrich_search_terms
 
@@ -108,31 +105,32 @@ def enrich_entries(entries: list[dict[str, Any]]) -> None:
             if eid in translate_results and not entry.get("description_zh"):
                 entry["description_zh"] = translate_results[eid]
 
-    # Step 3: Quality evaluation (only for entries without evaluation)
-    eval_candidates = sum(
-        1 for entry in entries if not entry.get("evaluation", {}).get("coding_relevance")
-    )
-    logger.info(
-        f"Enrichment step 5/5a: quality evaluation starting for {eval_candidates} entries"
-    )
-    eval_results = enrich_quality(entries)
-    logger.info(
-        f"Enrichment step 5/5a complete: {len(eval_results)} entries received evaluation data"
-    )
-    if eval_results:
-        for entry in entries:
-            eid = entry["id"]
-            if eid in eval_results:
-                # Store LLM results temporarily for populate_signals
-                entry["_llm_eval"] = eval_results[eid]
+    # ── Step 5a: Quality evaluation via eval harness ──────────────────
+    incremental = os.environ.get("EVAL_INCREMENTAL", "true").lower() == "true"
+    try:
+        from eval_bridge import eval_and_map
+        logger.info("[5/5] Running eval harness (incremental=%s)...", incremental)
+        eval_and_map(
+            entries,
+            cache_dir=str(Path(__file__).resolve().parent.parent / ".eval_cache"),
+            incremental=incremental,
+        )
+    except ImportError:
+        logger.warning("[5/5] eval_bridge not available, falling back to legacy evaluator")
+        try:
+            from llm_evaluator import enrich_quality
+            from unified_enrichment import populate_signals
+            eval_map = enrich_quality(entries)
+            for entry in entries:
+                eid = entry["id"]
+                if eid in eval_map:
+                    entry.setdefault("evaluation", {}).update(eval_map[eid])
+                    entry["_llm_eval"] = eval_map[eid]
+                populate_signals(entry)
+        except Exception as exc:
+            logger.warning("Legacy evaluator also failed: %s", exc)
 
-    # Step 4: Populate signals (fills evaluation sub-object)
-    logger.info(f"Enrichment step 5/5b: signal population starting for {total_entries} entries")
-    for entry in entries:
-        populate_signals(entry)
-        entry.pop("_llm_eval", None)  # Clean up temp field
-        entry.pop("_prior_evaluation", None)  # Clean up fallback field
-    logger.info("Enrichment step 5/5b complete: signal population finished")
+    # ── Step 5b: (removed — harness computes signals internally) ─────
 
     # Step 5: Search term enrichment (generates search_terms for semantic recall)
     try:
