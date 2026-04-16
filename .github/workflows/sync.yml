@@ -113,7 +113,9 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
+            git stash --include-untracked
             git commit -m "[chore] 每周自动同步上游资源 $(date +%Y-%m-%d)"
             git pull --rebase
             git push
+            git stash pop || true
           fi
