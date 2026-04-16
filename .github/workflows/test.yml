@@ -18,8 +18,10 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install pytest
-        run: pip install pytest
+      - name: Install dependencies
+        run: |
+          pip install pytest
+          pip install -e ai-resource-eval
 
       - name: Run tests
         run: python -m pytest tests/ -v
