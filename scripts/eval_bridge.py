@@ -60,12 +60,6 @@ def map_result_to_entry(entry: dict[str, Any], result: dict[str, Any] | None) ->
     evaluation["rubric_version"] = result.get("rubric_version")
     evaluation["evaluated_at"] = result.get("evaluated_at")
 
-    # Preserve source_trust / confidence from prior enrichment if present
-    prior = entry.get("evaluation", {})
-    for keep_field in ("source_trust", "confidence", "reason"):
-        if keep_field in prior and keep_field not in evaluation:
-            evaluation[keep_field] = prior[keep_field]
-
     entry["evaluation"] = evaluation
 
     # ── Map enrichment fields ──────────────────────────────────────────

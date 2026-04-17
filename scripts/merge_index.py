@@ -213,8 +213,8 @@ def merge():
     # unchanged entries from losing their scores. Only overlay timestamps
     # into evaluation{} to avoid blocking enrich_quality() re-evaluation.
     existing_output = load_index(os.path.join(CATALOG_DIR, "index.json"))
-    _TIMESTAMP_KEYS = ("evaluated_at", "evaluator")
-    _SCORE_KEYS = ("coding_relevance", "content_quality", "specificity")
+    _TIMESTAMP_KEYS = ("evaluated_at", "model_id")
+    _SCORE_KEYS = ("coding_relevance", "doc_completeness", "specificity")
     existing_eval_map = {}
     for entry in existing_output:
         eid = entry.get("id")

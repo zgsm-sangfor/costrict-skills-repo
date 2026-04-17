@@ -13,21 +13,20 @@
       "stars": { "type": ["integer", "null"] },
       "pushed_at": { "type": ["string", "null"], "description": "ISO 8601 timestamp of last repo push" },
       "added_at": { "type": "string", "format": "date", "description": "Date when an MCP or Skill entry first joined the catalog" },
-      "coding_relevance": { "type": ["integer", "null"], "minimum": 1, "maximum": 5, "description": "LLM-scored coding relevance (1-5)" },
-      "quality_score": { "type": ["integer", "null"], "minimum": 1, "maximum": 5, "description": "LLM-scored quality (1-5)" },
       "evaluation": {
         "type": "object",
         "properties": {
           "coding_relevance": { "type": ["integer", "null"], "minimum": 1, "maximum": 5 },
-          "content_quality": { "type": ["integer", "null"], "minimum": 1, "maximum": 5 },
+          "doc_completeness": { "type": ["integer", "null"], "minimum": 1, "maximum": 5 },
+          "desc_accuracy": { "type": ["integer", "null"], "minimum": 1, "maximum": 5 },
+          "writing_quality": { "type": ["integer", "null"], "minimum": 1, "maximum": 5 },
           "specificity": { "type": ["integer", "null"], "minimum": 1, "maximum": 5 },
-          "source_trust": { "type": ["integer", "null"], "minimum": 1, "maximum": 5 },
-          "confidence": { "type": ["integer", "null"], "minimum": 1, "maximum": 5 },
-          "final_score": { "type": ["integer", "null"], "minimum": 0, "maximum": 100 },
+          "install_clarity": { "type": ["integer", "null"], "minimum": 1, "maximum": 5 },
+          "final_score": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
           "decision": { "type": ["string", "null"], "enum": ["accept", "review", "reject", null] },
-          "reason": { "type": ["string", "null"] },
-          "evaluated_at": { "type": ["string", "null"], "description": "ISO 8601 timestamp of evaluation" },
-          "evaluator": { "type": ["string", "null"], "description": "LLM model name or 'heuristic'" }
+          "model_id": { "type": ["string", "null"], "description": "LLM model name or '__cached__'" },
+          "rubric_version": { "type": ["string", "null"] },
+          "evaluated_at": { "type": ["string", "null"], "description": "ISO 8601 timestamp of evaluation" }
         }
       },
       "category": { "type": "string", "enum": ["frontend", "backend", "fullstack", "mobile", "devops", "database", "testing", "security", "ai-ml", "tooling", "documentation"] },
@@ -59,10 +58,9 @@
           "signals": {
             "type": "object",
             "properties": {
-              "popularity": { "type": "integer", "minimum": 0, "maximum": 100 },
-              "freshness": { "type": "integer", "minimum": 0, "maximum": 100 },
-              "quality": { "type": "integer", "minimum": 0, "maximum": 100 },
-              "installability": { "type": "integer", "minimum": 0, "maximum": 100 }
+              "freshness": { "type": "number", "minimum": 0, "maximum": 100 },
+              "popularity": { "type": "number", "minimum": 0, "maximum": 100 },
+              "source_trust": { "type": "number", "minimum": 0, "maximum": 100 }
             }
           },
           "freshness_label": { "type": "string", "enum": ["active", "stale", "abandoned"] },
