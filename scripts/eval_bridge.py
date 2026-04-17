@@ -54,7 +54,7 @@ def map_result_to_entry(entry: dict[str, Any], result: dict[str, Any] | None) ->
             evaluation[metric_name] = metric_data
 
     # Copy governance fields
-    evaluation["final_score"] = result.get("final_score", 0)
+    evaluation["final_score"] = round(result.get("final_score", 0))
     evaluation["decision"] = result.get("decision", "review")
     evaluation["model_id"] = result.get("model_id")
     evaluation["rubric_version"] = result.get("rubric_version")
@@ -102,14 +102,14 @@ def map_result_to_entry(entry: dict[str, Any], result: dict[str, Any] | None) ->
             "freshness_label": freshness_label,
             "last_commit": entry.get("pushed_at"),
             "signals": {
-                "freshness": freshness,
-                "popularity": popularity,
-                "source_trust": source_trust,
+                "freshness": round(freshness),
+                "popularity": round(popularity),
+                "source_trust": round(source_trust),
             },
         }
 
     # Top-level promotion (consumed by sort + downstream scripts)
-    entry["final_score"] = result.get("final_score", 0)
+    entry["final_score"] = round(result.get("final_score", 0))
     entry["decision"] = result.get("decision", "review")
 
 

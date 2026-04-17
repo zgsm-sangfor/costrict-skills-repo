@@ -314,7 +314,9 @@ def _render_table(entries: list[dict], zh: bool, has_stars: bool = False) -> str
         else:
             src_or_stars = source_label(e, zh)
 
-        parts = [str(i), entry_link(e), desc, src_or_stars, status, str(e.get("final_score", "—"))]
+        raw_score = e.get("final_score")
+        score_str = str(round(raw_score)) if isinstance(raw_score, (int, float)) else "—"
+        parts = [str(i), entry_link(e), desc, src_or_stars, status, score_str]
         if show_updated:
             parts.append(last_active(e))
         parts.append(cat)
@@ -358,7 +360,8 @@ def render_featured_details(entries: list[dict], zh: bool = False) -> str:
         desc_full = (e.get("description_zh") if zh else e.get("description")) or ""
         stars_str = f" ({format_stars(e.get('stars'))}★)" if e.get("stars") else ""
         url = e.get("source_url", "")
-        score = e.get("final_score", "—")
+        raw = e.get("final_score")
+        score = round(raw) if isinstance(raw, (int, float)) else "—"
         health_score = (e.get("health") or {}).get("score", "—")
         src = source_label(e, zh)
         active = last_active(e)
