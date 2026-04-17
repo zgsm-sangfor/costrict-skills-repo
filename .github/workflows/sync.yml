@@ -26,7 +26,8 @@ jobs:
           pip install -e ai-resource-eval
 
       - name: Restore sync caches
-        uses: actions/cache@v4
+        id: cache-restore
+        uses: actions/cache/restore@v4
         with:
           path: |
             catalog/skills/.repo_cache.json
@@ -113,9 +114,21 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git stash --include-untracked
             git commit -m "[chore] 每周自动同步上游资源 $(date +%Y-%m-%d)"
+            git stash --include-untracked
             git pull --rebase
             git push
             git stash pop || true
           fi
+
+      - name: Save sync caches
+        uses: actions/cache/save@v4
+        if: always() && steps.cache-restore.outputs.cache-hit != 'true'
+        with:
+          path: |
+            catalog/skills/.repo_cache.json
+            catalog/skills/.llm_cache.json
+            catalog/maintenance/incremental_recrawl_state.json
+            scripts/fallback_skill_repos.json
+            .eval_cache/
+          key: sync-caches-${{ github.run_number }}
