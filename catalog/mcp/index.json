@@ -24258,8 +24258,8 @@
     "type": "mcp",
     "description": "微软官方出品，使用 Playwright 让 AI 精确控制网页，自动化抓取数据。",
     "source_url": "https://github.com/microsoft/playwright-mcp",
-    "stars": 30909,
-    "pushed_at": "2026-04-15T23:33:17Z",
+    "stars": 30959,
+    "pushed_at": "2026-04-17T01:18:07Z",
     "category": "testing",
     "tags": [
       "playwright",
@@ -24276,7 +24276,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -24285,7 +24285,7 @@
     "type": "mcp",
     "description": "云端浏览器自动化服务，能导航网页、提取数据、填表单等，无需本地安装。",
     "source_url": "https://github.com/browserbase/mcp-server-browserbase",
-    "stars": 3258,
+    "stars": 3263,
     "pushed_at": "2026-03-31T01:51:54Z",
     "category": "testing",
     "tags": [
@@ -24318,7 +24318,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -24327,7 +24327,7 @@
     "type": "mcp",
     "description": "官方参考实现，使用 Puppeteer 进行浏览器自动化和网页抓取。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
-    "stars": 83819,
+    "stars": 83919,
     "pushed_at": "2026-04-14T15:12:18Z",
     "category": "tooling",
     "tags": [],
@@ -24343,7 +24343,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -24352,8 +24352,8 @@
     "type": "mcp",
     "description": "集成 Apify 平台 3000+ 云工具，用于网站、电商、社交媒体等数据提取。",
     "source_url": "https://github.com/apify/actors-mcp-server",
-    "stars": 1077,
-    "pushed_at": "2026-04-15T14:47:35Z",
+    "stars": 1091,
+    "pushed_at": "2026-04-16T21:44:19Z",
     "category": "ai-ml",
     "tags": [
       "agents",
@@ -24366,7 +24366,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -24375,7 +24375,7 @@
     "type": "mcp",
     "description": "让 AI 代理从非结构化网页中获取结构化数据。",
     "source_url": "https://github.com/tinyfish-io/agentql-mcp",
-    "stars": 160,
+    "stars": 161,
     "pushed_at": "2026-04-14T18:55:01Z",
     "category": "testing",
     "tags": [
@@ -24412,7 +24412,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -24421,7 +24421,7 @@
     "type": "mcp",
     "description": "使用 Firecrawl 提取网页数据，支持 JavaScript 渲染。",
     "source_url": "https://github.com/mendableai/firecrawl-mcp-server",
-    "stars": 6064,
+    "stars": 6073,
     "pushed_at": "2026-04-15T00:27:29Z",
     "category": "frontend",
     "tags": [
@@ -24457,7 +24457,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -24485,7 +24485,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -24494,7 +24494,7 @@
     "type": "mcp",
     "description": "官方参考实现，灵活获取网页内容（HTML/JSON/MD），并为 AI 处理优化。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
-    "stars": 83819,
+    "stars": 83919,
     "pushed_at": "2026-04-14T15:12:18Z",
     "category": "frontend",
     "tags": [],
@@ -24510,7 +24510,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -24537,7 +24537,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -24558,7 +24558,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -24567,7 +24567,7 @@
     "type": "mcp",
     "description": "自动化本地 Chrome 浏览器。",
     "source_url": "https://github.com/browsermcp/mcp",
-    "stars": 6350,
+    "stars": 6354,
     "pushed_at": "2025-04-24T21:49:44Z",
     "category": "tooling",
     "tags": [
@@ -24583,7 +24583,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -24592,7 +24592,7 @@
     "type": "mcp",
     "description": "使用 Playwright 进行浏览器自动化和网页抓取的 MCP 服务器。",
     "source_url": "https://github.com/executeautomation/mcp-playwright",
-    "stars": 5435,
+    "stars": 5439,
     "pushed_at": "2025-12-13T04:28:38Z",
     "category": "testing",
     "tags": [
@@ -24610,7 +24610,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -24619,7 +24619,7 @@
     "type": "mcp",
     "description": "AI驱动的E2E测试MCP服务器，支持Flutter、iOS、Android、Web、Electron、Tauri、KMP、React Native、.NET MAUI等8个平台。",
     "source_url": "https://github.com/ai-dashboad/flutter-skill",
-    "stars": 195,
+    "stars": 196,
     "pushed_at": "2026-04-15T06:50:05Z",
     "category": "frontend",
     "tags": [
@@ -24656,7 +24656,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -24691,7 +24691,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -24721,7 +24721,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -24731,7 +24731,7 @@
     "description": "用于与 manifest v2 兼容浏览器交互的 MCP 服务器。",
     "source_url": "https://github.com/ndthanhdev/mcp-browser-kit",
     "stars": 51,
-    "pushed_at": "2026-04-16T02:18:10Z",
+    "pushed_at": "2026-04-16T18:59:39Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -24745,7 +24745,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -24769,7 +24769,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -24787,7 +24787,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -24796,7 +24796,7 @@
     "type": "mcp",
     "description": "支持搜索 Bilibili 内容的 MCP 服务器。",
     "source_url": "https://github.com/34892002/bilibili-mcp-js",
-    "stars": 161,
+    "stars": 162,
     "pushed_at": "2026-03-30T01:18:26Z",
     "category": "tooling",
     "tags": [
@@ -24814,7 +24814,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -24823,7 +24823,7 @@
     "type": "mcp",
     "description": "原生 Safari 浏览器自动化，专为 macOS 设计。通过 AppleScript + JavaScript 提供 80 个工具，零 Chrome 开销，保留登录状态，后台静默运行。",
     "source_url": "https://github.com/achiya-automation/safari-mcp",
-    "stars": 32,
+    "stars": 33,
     "pushed_at": "2026-04-15T21:31:21Z",
     "category": "frontend",
     "tags": [
@@ -24861,7 +24861,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-04-02"
   },
   {
@@ -24870,8 +24870,8 @@
     "type": "mcp",
     "description": "Pydantic 出品，在安全的沙盒环境中运行 Python 代码，适合开发编程代理。",
     "source_url": "https://github.com/pydantic/pydantic-ai/tree/main/mcp-run-python",
-    "stars": 16391,
-    "pushed_at": "2026-04-16T01:23:25Z",
+    "stars": 16416,
+    "pushed_at": "2026-04-17T00:29:47Z",
     "category": "backend",
     "tags": [
       "python",
@@ -24885,7 +24885,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -24894,7 +24894,7 @@
     "type": "mcp",
     "description": "JetBrains 官方代理，连接到 JetBrains IDE。",
     "source_url": "https://github.com/JetBrains/mcpProxy",
-    "stars": 947,
+    "stars": 948,
     "pushed_at": "2026-01-07T16:21:45Z",
     "category": "ai-ml",
     "tags": [
@@ -24917,7 +24917,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -24926,7 +24926,7 @@
     "type": "mcp",
     "description": "JetBrains 官方集成，让 AI 在 JetBrains IDE 中处理代码。",
     "source_url": "https://github.com/JetBrains/mcp-jetbrains",
-    "stars": 947,
+    "stars": 948,
     "pushed_at": "2026-01-07T16:21:45Z",
     "category": "ai-ml",
     "tags": [
@@ -24949,7 +24949,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -24978,7 +24978,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25007,7 +25007,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25017,7 +25017,7 @@
     "description": "分析代码库依赖关系，生成图表，帮助 AI 理解项目结构。",
     "source_url": "https://github.com/admica/FileScopeMCP",
     "stars": 288,
-    "pushed_at": "2026-04-15T12:59:21Z",
+    "pushed_at": "2026-04-17T00:27:57Z",
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -25025,7 +25025,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25053,7 +25053,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25073,7 +25073,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25097,7 +25097,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25117,7 +25117,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25144,7 +25144,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25153,7 +25153,7 @@
     "type": "mcp",
     "description": "统一AI编程助手的零配置MCP服务器，专为自主代理开发设计，简化多AI工具集成工作流程。",
     "source_url": "https://github.com/askbudi/roundtable",
-    "stars": 99,
+    "stars": 100,
     "pushed_at": "2025-10-06T04:11:43Z",
     "category": "ai-ml",
     "tags": [
@@ -25176,7 +25176,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25185,7 +25185,7 @@
     "type": "mcp",
     "description": "让 AI 代理使用 Semgrep 进行代码安全扫描。 (Semgrep 官方)",
     "source_url": "https://github.com/semgrep/mcp",
-    "stars": 649,
+    "stars": 652,
     "pushed_at": "2025-10-28T22:32:31Z",
     "category": "ai-ml",
     "tags": [
@@ -25209,7 +25209,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25232,7 +25232,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25241,8 +25241,8 @@
     "type": "mcp",
     "description": "功能齐全的编码代理，依赖于使用语言服务器的符号化代码操作。",
     "source_url": "https://github.com/oraios/serena",
-    "stars": 23002,
-    "pushed_at": "2026-04-15T21:21:13Z",
+    "stars": 23045,
+    "pushed_at": "2026-04-16T17:19:24Z",
     "category": "mobile",
     "tags": [
       "agent",
@@ -25263,7 +25263,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25272,7 +25272,7 @@
     "type": "mcp",
     "description": "具有基本读、写和命令行工具的编码代理。",
     "source_url": "https://github.com/ezyang/codemcp",
-    "stars": 1615,
+    "stars": 1616,
     "pushed_at": "2025-12-25T02:10:23Z",
     "category": "tooling",
     "tags": [],
@@ -25281,7 +25281,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25310,7 +25310,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25334,7 +25334,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25362,7 +25362,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25391,7 +25391,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25400,7 +25400,7 @@
     "type": "mcp",
     "description": "通用远程 MCP 服务器，用于连接任何 GitHub 仓库或项目以获取文档。",
     "source_url": "https://github.com/idosal/git-mcp",
-    "stars": 7925,
+    "stars": 7931,
     "pushed_at": "2026-03-13T01:21:48Z",
     "category": "ai-ml",
     "tags": [
@@ -25419,7 +25419,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25428,7 +25428,7 @@
     "type": "mcp",
     "description": "用于与 Bugsnag 交互的 MCP 服务器。",
     "source_url": "https://github.com/tgeselle/bugsnag-mcp",
-    "stars": 20,
+    "stars": 21,
     "pushed_at": "2026-03-22T07:20:15Z",
     "category": "tooling",
     "tags": [],
@@ -25437,7 +25437,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25469,7 +25469,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25489,7 +25489,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25498,7 +25498,7 @@
     "type": "mcp",
     "description": "集成 macOS 的 iTerm2 终端，让 AI 执行和监控终端命令。",
     "source_url": "https://github.com/ferrislucas/iterm-mcp",
-    "stars": 549,
+    "stars": 550,
     "pushed_at": "2025-09-20T17:31:44Z",
     "category": "ai-ml",
     "tags": [
@@ -25521,7 +25521,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25539,7 +25539,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25557,7 +25557,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25566,8 +25566,8 @@
     "type": "mcp",
     "description": "GitHub 官方出品，让 AI 通过 API 深度集成 GitHub，实现自动化工作流等。",
     "source_url": "https://github.com/github/github-mcp-server",
-    "stars": 28887,
-    "pushed_at": "2026-04-16T01:54:45Z",
+    "stars": 28931,
+    "pushed_at": "2026-04-16T16:22:50Z",
     "category": "ai-ml",
     "tags": [
       "git",
@@ -25580,7 +25580,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25589,7 +25589,7 @@
     "type": "mcp",
     "description": "官方参考实现，集成 GitHub API，管理仓库、文件、PR 和 Issues。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
-    "stars": 83819,
+    "stars": 83919,
     "pushed_at": "2026-04-14T15:12:18Z",
     "category": "backend",
     "tags": [
@@ -25607,7 +25607,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25616,7 +25616,7 @@
     "type": "mcp",
     "description": "官方参考实现，直接操作本地 Git 仓库，进行读取、搜索和分析。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/git",
-    "stars": 83819,
+    "stars": 83919,
     "pushed_at": "2026-04-14T15:12:18Z",
     "category": "tooling",
     "tags": [
@@ -25634,7 +25634,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25643,7 +25643,7 @@
     "type": "mcp",
     "description": "官方参考实现，集成 GitLab API，进行项目管理和 CI/CD 操作。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/gitlab",
-    "stars": 83819,
+    "stars": 83919,
     "pushed_at": "2026-04-14T15:12:18Z",
     "category": "devops",
     "tags": [
@@ -25661,7 +25661,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25670,7 +25670,7 @@
     "type": "mcp",
     "description": "使用 LLM 读取和分析 GitHub 仓库。",
     "source_url": "https://github.com/adhikasp/mcp-git-ingest",
-    "stars": 303,
+    "stars": 304,
     "pushed_at": "2025-01-26T10:32:13Z",
     "category": "ai-ml",
     "tags": [
@@ -25684,7 +25684,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25713,7 +25713,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25751,7 +25751,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25771,7 +25771,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25791,7 +25791,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25801,7 +25801,7 @@
     "description": "ClickHouse 官方集成，连接 ClickHouse 数据库进行查询和模式检查。",
     "source_url": "https://github.com/ClickHouse/mcp-clickhouse",
     "stars": 753,
-    "pushed_at": "2026-04-14T17:26:46Z",
+    "pushed_at": "2026-04-16T23:44:44Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -25838,7 +25838,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25847,7 +25847,7 @@
     "type": "mcp",
     "description": "Chroma 官方集成，用于嵌入、向量搜索、文档存储和全文搜索。",
     "source_url": "https://github.com/chroma-core/chroma-mcp",
-    "stars": 534,
+    "stars": 535,
     "pushed_at": "2025-09-17T20:20:13Z",
     "category": "tooling",
     "tags": [],
@@ -25856,7 +25856,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25866,7 +25866,7 @@
     "description": "Confluent 集成，与 Confluent Kafka 和 Confluent Cloud REST API 交互。",
     "source_url": "https://github.com/confluentinc/mcp-confluent",
     "stars": 149,
-    "pushed_at": "2026-04-16T01:19:33Z",
+    "pushed_at": "2026-04-16T21:33:18Z",
     "category": "backend",
     "tags": [
       "rest-api"
@@ -25876,7 +25876,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25898,7 +25898,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25907,8 +25907,8 @@
     "type": "mcp",
     "description": "Google 官方开源 MCP 服务器，专注于为数据库提供简单、快速、安全的工具。",
     "source_url": "https://github.com/googleapis/genai-toolbox",
-    "stars": 14598,
-    "pushed_at": "2026-04-16T02:01:50Z",
+    "stars": 14627,
+    "pushed_at": "2026-04-17T00:29:46Z",
     "category": "backend",
     "tags": [
       "go",
@@ -25946,7 +25946,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25964,7 +25964,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25988,7 +25988,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -25997,8 +25997,8 @@
     "type": "mcp",
     "description": "Neon 官方集成，与 Neon 无服务器 Postgres 平台交互，创建和管理数据库。",
     "source_url": "https://github.com/neondatabase/mcp-server-neon",
-    "stars": 580,
-    "pushed_at": "2026-04-16T01:34:46Z",
+    "stars": 582,
+    "pushed_at": "2026-04-16T18:05:29Z",
     "category": "database",
     "tags": [
       "postgres"
@@ -26008,7 +26008,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26042,7 +26042,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26051,7 +26051,7 @@
     "type": "mcp",
     "description": "Qdrant 官方集成，基于 Qdrant 向量搜索引擎实现语义记忆层。",
     "source_url": "https://github.com/qdrant/mcp-server-qdrant/",
-    "stars": 1344,
+    "stars": 1349,
     "pushed_at": "2026-03-31T09:16:05Z",
     "category": "ai-ml",
     "tags": [
@@ -26068,7 +26068,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26093,7 +26093,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26111,7 +26111,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26120,7 +26120,7 @@
     "type": "mcp",
     "description": "官方参考实现，集成 PostgreSQL，支持查询和模式分析。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/postgres",
-    "stars": 83819,
+    "stars": 83919,
     "pushed_at": "2026-04-14T15:12:18Z",
     "category": "database",
     "tags": [
@@ -26138,7 +26138,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26147,7 +26147,7 @@
     "type": "mcp",
     "description": "官方参考实现，与 Redis 键值存储进行交互。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/redis",
-    "stars": 83819,
+    "stars": 83919,
     "pushed_at": "2026-04-14T15:12:18Z",
     "category": "database",
     "tags": [
@@ -26165,7 +26165,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26174,7 +26174,7 @@
     "type": "mcp",
     "description": "官方参考实现，操作 SQLite 数据库，并内置商业智能能力。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/sqlite",
-    "stars": 83819,
+    "stars": 83919,
     "pushed_at": "2026-04-14T15:12:18Z",
     "category": "database",
     "tags": [],
@@ -26190,7 +26190,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26208,7 +26208,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26217,7 +26217,7 @@
     "type": "mcp",
     "description": "NodeJS 中的 MySQL 数据库集成，具有可配置的访问控制和模式检查。",
     "source_url": "https://github.com/benborla/mcp-server-mysql",
-    "stars": 1540,
+    "stars": 1545,
     "pushed_at": "2026-03-10T15:55:33Z",
     "category": "backend",
     "tags": [
@@ -26251,7 +26251,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26260,8 +26260,8 @@
     "type": "mcp",
     "description": "面向 MCP 客户端和 AI Agents 的语义引擎。",
     "source_url": "https://github.com/Canner/wren-engine",
-    "stars": 646,
-    "pushed_at": "2026-04-15T21:09:15Z",
+    "stars": 647,
+    "pushed_at": "2026-04-16T09:58:52Z",
     "category": "database",
     "tags": [
       "agent",
@@ -26286,7 +26286,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26295,7 +26295,7 @@
     "type": "mcp",
     "description": "MCP 和 MCP SSE 服务器，根据数据库模式和数据自动生成 API。支持 PG, Clickhouse, MySQL, Snowflake, BigQuery, Supabase。",
     "source_url": "https://github.com/centralmind/gateway",
-    "stars": 523,
+    "stars": 524,
     "pushed_at": "2025-07-18T16:15:36Z",
     "category": "backend",
     "tags": [
@@ -26333,7 +26333,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26342,7 +26342,7 @@
     "type": "mcp",
     "description": "Python 实现的 MySQL 集成，带访问控制和模式检查。",
     "source_url": "https://github.com/designcomputer/mysql_mcp_server",
-    "stars": 1218,
+    "stars": 1222,
     "pushed_at": "2025-06-05T11:05:28Z",
     "category": "backend",
     "tags": [
@@ -26378,7 +26378,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26416,7 +26416,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26425,7 +26425,7 @@
     "type": "mcp",
     "description": "基于 Node.js 的 MySQL 数据库集成，提供安全的数据库操作。",
     "source_url": "https://github.com/f4ww4z/mcp-mysql-server",
-    "stars": 159,
+    "stars": 158,
     "pushed_at": "2025-11-14T08:30:28Z",
     "category": "backend",
     "tags": [
@@ -26456,7 +26456,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26488,7 +26488,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26522,7 +26522,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26547,7 +26547,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26565,7 +26565,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26585,7 +26585,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26637,7 +26637,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26667,7 +26667,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26699,7 +26699,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26720,7 +26720,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26738,7 +26738,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26768,7 +26768,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26788,7 +26788,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26797,8 +26797,8 @@
     "type": "mcp",
     "description": "查询和分析 Prometheus 开源监控系统。",
     "source_url": "https://github.com/pab1it0/prometheus-mcp-server",
-    "stars": 412,
-    "pushed_at": "2026-04-15T21:13:40Z",
+    "stars": 415,
+    "pushed_at": "2026-04-17T00:40:24Z",
     "category": "ai-ml",
     "tags": [
       "ai",
@@ -26830,7 +26830,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26851,7 +26851,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26894,7 +26894,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26914,7 +26914,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26939,7 +26939,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26973,7 +26973,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -26997,7 +26997,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27028,7 +27028,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27037,7 +27037,7 @@
     "type": "mcp",
     "description": "Cloudflare 官方集成，部署、配置和查询 Cloudflare 开发者平台资源 (Workers/KV/R2/D1)。",
     "source_url": "https://github.com/cloudflare/mcp-server-cloudflare",
-    "stars": 3612,
+    "stars": 3620,
     "pushed_at": "2026-03-31T18:44:33Z",
     "category": "tooling",
     "tags": [],
@@ -27046,7 +27046,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27055,7 +27055,7 @@
     "type": "mcp",
     "description": "官方参考实现，使用 Bedrock Agent Runtime 从 AWS 知识库检索信息。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/aws-kb-retrieval-server",
-    "stars": 83819,
+    "stars": 83919,
     "pushed_at": "2026-04-14T15:12:18Z",
     "category": "devops",
     "tags": [
@@ -27073,7 +27073,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27102,7 +27102,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27111,7 +27111,7 @@
     "type": "mcp",
     "description": "上传和操作 IPFS 存储。",
     "source_url": "https://github.com/alexbakers/mcp-ipfs",
-    "stars": 15,
+    "stars": 16,
     "pushed_at": "2025-04-10T00:16:33Z",
     "category": "ai-ml",
     "tags": [
@@ -27140,7 +27140,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27175,7 +27175,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27212,7 +27212,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27232,7 +27232,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27241,7 +27241,7 @@
     "type": "mcp",
     "description": "使用 Azure Resource Graph 大规模查询和分析 Azure 资源的 MCP 服务器，使 AI 助手能探索监控 Azure 基础设施。",
     "source_url": "https://github.com/hardik-id/azure-resource-graph-mcp-server",
-    "stars": 17,
+    "stars": 18,
     "pushed_at": "2025-05-06T18:41:57Z",
     "category": "devops",
     "tags": [
@@ -27252,7 +27252,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27272,7 +27272,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27281,8 +27281,8 @@
     "type": "mcp",
     "description": "功能强大的 Kubernetes MCP 服务器，额外支持 OpenShift。提供 CRUD 操作及专用工具。",
     "source_url": "https://github.com/manusa/kubernetes-mcp-server",
-    "stars": 1445,
-    "pushed_at": "2026-04-16T01:38:42Z",
+    "stars": 1449,
+    "pushed_at": "2026-04-17T01:05:57Z",
     "category": "devops",
     "tags": [
       "kubernetes",
@@ -27307,7 +27307,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27316,7 +27316,7 @@
     "type": "mcp",
     "description": "提供 MCP 多集群 Kubernetes 管理和操作，带管理界面、日志记录和近 50 个内置工具 (支持标准/CRD)。",
     "source_url": "https://github.com/weibaohui/k8m",
-    "stars": 806,
+    "stars": 807,
     "pushed_at": "2026-04-10T03:35:26Z",
     "category": "devops",
     "tags": [
@@ -27338,7 +27338,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27371,7 +27371,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27394,7 +27394,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27403,7 +27403,7 @@
     "type": "mcp",
     "description": "Exa 官方集成，使用专为 AI 设计的 Exa 搜索引擎进行搜索。",
     "source_url": "https://github.com/exa-labs/exa-mcp-server",
-    "stars": 4251,
+    "stars": 4257,
     "pushed_at": "2026-04-15T23:51:27Z",
     "category": "ai-ml",
     "tags": [
@@ -27434,7 +27434,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27443,7 +27443,7 @@
     "type": "mcp",
     "description": "Perplexity 官方集成，连接 Perplexity Sonar API，实现实时全网研究。",
     "source_url": "https://github.com/ppl-ai/modelcontextprotocol",
-    "stars": 2089,
+    "stars": 2090,
     "pushed_at": "2026-04-14T16:02:40Z",
     "category": "backend",
     "tags": [],
@@ -27465,7 +27465,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27496,7 +27496,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27505,8 +27505,8 @@
     "type": "mcp",
     "description": "Tavily 官方集成，专为 AI 代理设计的搜索引擎（搜索+提取）。",
     "source_url": "https://github.com/tavily-ai/tavily-mcp",
-    "stars": 1763,
-    "pushed_at": "2026-04-15T19:46:00Z",
+    "stars": 1773,
+    "pushed_at": "2026-04-16T03:02:57Z",
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -27525,7 +27525,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27558,7 +27558,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27581,7 +27581,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27590,7 +27590,7 @@
     "type": "mcp",
     "description": "官方参考实现，使用 Brave 的搜索 API 进行网页和本地搜索。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search",
-    "stars": 83819,
+    "stars": 83919,
     "pushed_at": "2026-04-14T15:12:18Z",
     "category": "backend",
     "tags": [],
@@ -27606,7 +27606,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27615,7 +27615,7 @@
     "type": "mcp",
     "description": "用于搜索职位列表的 MCP 服务器，支持日期、关键词、远程工作选项等筛选。",
     "source_url": "https://github.com/0xDAEF0F/job-searchoor",
-    "stars": 60,
+    "stars": 61,
     "pushed_at": "2025-04-08T22:17:50Z",
     "category": "ai-ml",
     "tags": [
@@ -27629,7 +27629,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27660,7 +27660,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27669,7 +27669,7 @@
     "type": "mcp",
     "description": "让 LLM 从 arXiv 搜索和阅读论文的 MCP。",
     "source_url": "https://github.com/andybrandt/mcp-simple-arxiv",
-    "stars": 189,
+    "stars": 190,
     "pushed_at": "2026-02-19T10:18:35Z",
     "category": "ai-ml",
     "tags": [],
@@ -27685,7 +27685,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27703,7 +27703,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27733,7 +27733,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27742,7 +27742,7 @@
     "type": "mcp",
     "description": "搜索 ArXiv 研究论文。",
     "source_url": "https://github.com/blazickjp/arxiv-mcp-server",
-    "stars": 2539,
+    "stars": 2550,
     "pushed_at": "2026-04-06T15:46:00Z",
     "category": "documentation",
     "tags": [
@@ -27768,7 +27768,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27777,7 +27777,7 @@
     "type": "mcp",
     "description": "搜索科学论文，获取从全文研究中提取的结构化实验数据，每篇论文返回25+字段，包括方法、结果、样本量、局限性和质量评分。",
     "source_url": "https://github.com/connerlambden/bgpt-mcp",
-    "stars": 15,
+    "stars": 16,
     "pushed_at": "2026-04-05T23:06:03Z",
     "category": "documentation",
     "tags": [
@@ -27814,7 +27814,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27846,7 +27846,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27855,7 +27855,7 @@
     "type": "mcp",
     "description": "通过 Trieve 爬取、嵌入、分块、搜索和检索数据集信息。",
     "source_url": "https://github.com/devflowinc/trieve/tree/main/clients/mcp-server",
-    "stars": 2642,
+    "stars": 2643,
     "pushed_at": "2026-01-25T23:25:46Z",
     "category": "frontend",
     "tags": [
@@ -27884,7 +27884,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27902,7 +27902,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27926,7 +27926,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27936,7 +27936,7 @@
     "description": "生物医学研究服务器，提供对 PubMed、ClinicalTrials.gov 和 MyVariant.info 的访问。",
     "source_url": "https://github.com/genomoncology/biomcp",
     "stars": 490,
-    "pushed_at": "2026-04-16T01:06:34Z",
+    "pushed_at": "2026-04-17T00:50:18Z",
     "category": "backend",
     "tags": [
       "go",
@@ -27963,7 +27963,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -27994,7 +27994,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28030,7 +28030,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28039,7 +28039,7 @@
     "type": "mcp",
     "description": "连接到 SearXNG 元搜索引擎实例。",
     "source_url": "https://github.com/ihor-sokoliuk/mcp-searxng",
-    "stars": 643,
+    "stars": 646,
     "pushed_at": "2026-04-05T15:26:26Z",
     "category": "ai-ml",
     "tags": [
@@ -28072,7 +28072,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28081,7 +28081,7 @@
     "type": "mcp",
     "description": "Naver 搜索 API 集成 MCP 服务器，支持博客、新闻、购物搜索和 DataLab 分析功能。",
     "source_url": "https://github.com/isnow890/naver-search-mcp",
-    "stars": 60,
+    "stars": 61,
     "pushed_at": "2026-01-12T11:20:00Z",
     "category": "backend",
     "tags": [
@@ -28114,7 +28114,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28145,7 +28145,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28177,7 +28177,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28186,7 +28186,7 @@
     "type": "mcp",
     "description": "使用 DuckDuckGo 进行网页搜索。",
     "source_url": "https://github.com/nickclyde/duckduckgo-mcp-server",
-    "stars": 988,
+    "stars": 991,
     "pushed_at": "2026-03-09T00:05:55Z",
     "category": "backend",
     "tags": [
@@ -28203,7 +28203,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28212,7 +28212,7 @@
     "type": "mcp",
     "description": "无需 API Key，使用 Google 搜索结果进行免费网页搜索的 MCP 服务器。",
     "source_url": "https://github.com/pskill9/web-search",
-    "stars": 442,
+    "stars": 443,
     "pushed_at": "2024-12-30T02:36:50Z",
     "category": "backend",
     "tags": [
@@ -28229,7 +28229,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28249,7 +28249,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28267,7 +28267,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28298,7 +28298,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28316,7 +28316,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28337,7 +28337,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28374,7 +28374,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28383,7 +28383,7 @@
     "type": "mcp",
     "description": "提取抖音无水印视频链接，视频文案，douyin-mcp-server",
     "source_url": "https://github.com/yzfly/douyin-mcp-server",
-    "stars": 917,
+    "stars": 918,
     "pushed_at": "2026-01-30T09:50:39Z",
     "category": "ai-ml",
     "tags": [
@@ -28411,7 +28411,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28420,7 +28420,7 @@
     "type": "mcp",
     "description": "一个基于多引擎搜索结果的模型上下文协议(MCP)服务器，支持免费网络搜索，无需API密钥。",
     "source_url": "https://github.com/Aas-ee/open-webSearch",
-    "stars": 990,
+    "stars": 999,
     "pushed_at": "2026-04-07T11:34:50Z",
     "category": "backend",
     "tags": [],
@@ -28440,7 +28440,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28449,8 +28449,8 @@
     "type": "mcp",
     "description": "全球最全面的权威数据源知识库，132+ 经验证数据源（政府、国际组织、学术机构），帮助 AI 减少幻觉。提供结构化元数据、100% URL 验证、中英双语支持。目标：1000+ 数据源。",
     "source_url": "https://github.com/MLT-OSS/FirstData",
-    "stars": 151,
-    "pushed_at": "2026-04-16T02:19:54Z",
+    "stars": 152,
+    "pushed_at": "2026-04-16T06:27:45Z",
     "category": "documentation",
     "tags": [
       "ai",
@@ -28479,7 +28479,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28488,7 +28488,7 @@
     "type": "mcp",
     "description": "用于即时创建收件箱以发送、接收和处理邮件的 MCP 服务器。专为 AI Agents 设计的邮件服务。",
     "source_url": "https://github.com/agentmail-to/agentmail-toolkit/tree/main/mcp",
-    "stars": 62,
+    "stars": 63,
     "pushed_at": "2026-04-01T03:11:24Z",
     "category": "ai-ml",
     "tags": [],
@@ -28497,7 +28497,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28506,8 +28506,8 @@
     "type": "mcp",
     "description": "Inbox Zero 官方集成，AI 个人邮件助手 (基于 Gmail，提供需回复/需跟进邮件识别等功能)。",
     "source_url": "https://github.com/elie222/inbox-zero/tree/main/apps/mcp-server",
-    "stars": 10458,
-    "pushed_at": "2026-04-16T02:19:23Z",
+    "stars": 10461,
+    "pushed_at": "2026-04-17T01:07:09Z",
     "category": "frontend",
     "tags": [
       "ai",
@@ -28533,7 +28533,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28563,7 +28563,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28586,7 +28586,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28614,7 +28614,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28623,7 +28623,7 @@
     "type": "mcp",
     "description": "官方参考实现，集成 Slack，AI 能管理频道、发消息。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/slack",
-    "stars": 83819,
+    "stars": 83919,
     "pushed_at": "2026-04-14T15:12:18Z",
     "category": "ai-ml",
     "tags": [],
@@ -28639,7 +28639,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28648,8 +28648,8 @@
     "type": "mcp",
     "description": "连接整个 Microsoft 365 套件 (Graph API)，包括邮件、文件、Excel、日历等的 MCP 服务器。",
     "source_url": "https://github.com/softeria/ms-365-mcp-server",
-    "stars": 621,
-    "pushed_at": "2026-04-15T10:08:04Z",
+    "stars": 624,
+    "pushed_at": "2026-04-16T21:24:13Z",
     "category": "backend",
     "tags": [],
     "tech_stack": [],
@@ -28665,7 +28665,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28687,7 +28687,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28709,7 +28709,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28736,7 +28736,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28756,7 +28756,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28790,7 +28790,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28810,7 +28810,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28832,7 +28832,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28856,7 +28856,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28865,7 +28865,7 @@
     "type": "mcp",
     "description": "用于搜索个人 WhatsApp 消息、联系人以及向个人或群组发送消息的 MCP 服务器。",
     "source_url": "https://github.com/lharries/whatsapp-mcp",
-    "stars": 5510,
+    "stars": 5511,
     "pushed_at": "2025-07-13T17:22:00Z",
     "category": "ai-ml",
     "tags": [
@@ -28888,7 +28888,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28906,7 +28906,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28938,7 +28938,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28971,7 +28971,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -28992,7 +28992,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29010,7 +29010,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29019,7 +29019,7 @@
     "type": "mcp",
     "description": "通过 Telethon 集成 Telegram，支持分页读取聊天、检索和发送消息。",
     "source_url": "https://github.com/chigwell/telegram-mcp",
-    "stars": 934,
+    "stars": 943,
     "pushed_at": "2026-04-12T13:49:44Z",
     "category": "backend",
     "tags": [
@@ -29051,7 +29051,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29083,7 +29083,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29122,7 +29122,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29131,7 +29131,7 @@
     "type": "mcp",
     "description": "X/Twitter 数据平台 — MCP 服务器（StreamableHTTP 传输），76 个 REST API 端点，20 个批量提取工具，账户监控，抽奖系统。",
     "source_url": "https://github.com/Xquik-dev/x-twitter-scraper",
-    "stars": 46,
+    "stars": 49,
     "pushed_at": "2026-04-14T17:17:10Z",
     "category": "devops",
     "tags": [
@@ -29161,7 +29161,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29187,7 +29187,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29223,7 +29223,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-04-13"
   },
   {
@@ -29241,7 +29241,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29250,7 +29250,7 @@
     "type": "mcp",
     "description": "查询链上数据，如 ERC20 代币、交易历史、智能合约状态。 (Bankless 官方)",
     "source_url": "https://github.com/bankless/onchain-mcp",
-    "stars": 77,
+    "stars": 78,
     "pushed_at": "2026-02-27T05:21:19Z",
     "category": "ai-ml",
     "tags": [],
@@ -29271,7 +29271,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29297,7 +29297,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29331,7 +29331,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29340,7 +29340,7 @@
     "type": "mcp",
     "description": "专为 AI 代理设计的股票市场 API。",
     "source_url": "https://github.com/financial-datasets/mcp-server",
-    "stars": 1961,
+    "stars": 1965,
     "pushed_at": "2025-06-05T19:50:38Z",
     "category": "ai-ml",
     "tags": [],
@@ -29358,7 +29358,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29376,7 +29376,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29385,8 +29385,8 @@
     "type": "mcp",
     "description": "Stripe 官方集成，与 Stripe API 交互，处理支付、客户和退款。",
     "source_url": "https://github.com/stripe/agent-toolkit",
-    "stars": 1472,
-    "pushed_at": "2026-04-16T02:15:50Z",
+    "stars": 1478,
+    "pushed_at": "2026-04-17T00:29:21Z",
     "category": "frontend",
     "tags": [
       "ai",
@@ -29402,7 +29402,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29420,7 +29420,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29438,7 +29438,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29456,7 +29456,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29487,7 +29487,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29505,7 +29505,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29523,7 +29523,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29555,7 +29555,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29564,7 +29564,7 @@
     "type": "mcp",
     "description": "Yahoo Finance 集成，获取股市数据，包括期权推荐。",
     "source_url": "https://github.com/ferdousbhai/investor-agent",
-    "stars": 322,
+    "stars": 323,
     "pushed_at": "2026-03-27T03:52:38Z",
     "category": "ai-ml",
     "tags": [],
@@ -29580,7 +29580,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29621,7 +29621,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29639,7 +29639,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29666,7 +29666,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29684,7 +29684,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29702,7 +29702,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29720,7 +29720,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29738,7 +29738,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29766,7 +29766,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29784,7 +29784,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29793,7 +29793,7 @@
     "type": "mcp",
     "description": "用于 AI 代理在多个区块链上自动化 Uniswap DEX 代币交换的 MCP 服务器。",
     "source_url": "https://github.com/kukapay/uniswap-trader-mcp",
-    "stars": 35,
+    "stars": 36,
     "pushed_at": "2025-05-07T17:23:28Z",
     "category": "ai-ml",
     "tags": [],
@@ -29812,7 +29812,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29830,7 +29830,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29857,7 +29857,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29866,8 +29866,8 @@
     "type": "mcp",
     "description": "LongPort OpenAPI 提供实时股市数据，通过 MCP 为 AI 提供分析和交易能力。",
     "source_url": "https://github.com/longportapp/openapi/tree/main/mcp",
-    "stars": 404,
-    "pushed_at": "2026-04-10T03:51:56Z",
+    "stars": 405,
+    "pushed_at": "2026-04-16T08:12:36Z",
     "category": "backend",
     "tags": [
       "jni",
@@ -29881,7 +29881,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29899,7 +29899,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29929,7 +29929,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29950,7 +29950,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29974,7 +29974,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -29992,7 +29992,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30010,7 +30010,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30035,7 +30035,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30065,7 +30065,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30095,7 +30095,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30104,7 +30104,7 @@
     "type": "mcp",
     "description": "MarkItDown MCP 工具访问 - 一个将多种文件格式（本地或远程）转换为 Markdown 以供 LLM 使用的库。",
     "source_url": "https://github.com/microsoft/markitdown/tree/main/packages/markitdown-mcp",
-    "stars": 109582,
+    "stars": 110439,
     "pushed_at": "2026-04-15T22:26:44Z",
     "category": "ai-ml",
     "tags": [
@@ -30121,7 +30121,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30130,7 +30130,7 @@
     "type": "mcp",
     "description": "官方参考实现，提供对本地文件系统的直接访问，带可配置权限。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
-    "stars": 83819,
+    "stars": 83919,
     "pushed_at": "2026-04-14T15:12:18Z",
     "category": "tooling",
     "tags": [],
@@ -30146,7 +30146,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30155,7 +30155,7 @@
     "type": "mcp",
     "description": "官方参考实现，集成 Google Drive，用于列出、读取和搜索文件。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/gdrive",
-    "stars": 83819,
+    "stars": 83919,
     "pushed_at": "2026-04-14T15:12:18Z",
     "category": "backend",
     "tags": [
@@ -30173,7 +30173,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30191,7 +30191,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30223,7 +30223,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30255,7 +30255,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30277,7 +30277,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30286,7 +30286,7 @@
     "type": "mcp",
     "description": "Go 语言实现的安全文件操作，带可配置访问控制。",
     "source_url": "https://github.com/mark3labs/mcp-filesystem-server",
-    "stars": 630,
+    "stars": 631,
     "pushed_at": "2025-11-24T15:46:55Z",
     "category": "backend",
     "tags": [
@@ -30304,7 +30304,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30313,8 +30313,8 @@
     "type": "mcp",
     "description": "在 Windows 上使用 Everything SDK 快速搜索文件。 (Awesome列表更通用)",
     "source_url": "https://github.com/mamertofabian/mcp-everything-search",
-    "stars": null,
-    "pushed_at": null,
+    "stars": 321,
+    "pushed_at": "2025-10-20T21:36:47Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -30322,7 +30322,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30354,7 +30354,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30364,7 +30364,7 @@
     "description": "Keboola 官方集成，在单一平台上构建数据工作流、集成和分析。",
     "source_url": "https://github.com/keboola/keboola-mcp-server",
     "stars": 84,
-    "pushed_at": "2026-04-15T21:05:39Z",
+    "pushed_at": "2026-04-16T23:59:49Z",
     "category": "tooling",
     "tags": [
       "data-platform",
@@ -30378,7 +30378,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30387,7 +30387,7 @@
     "type": "mcp",
     "description": "通过自然语言与 Excel 交互的 MCP 服务器。",
     "source_url": "https://github.com/yzfly/mcp-excel-server",
-    "stars": 87,
+    "stars": 88,
     "pushed_at": "2025-05-05T00:15:02Z",
     "category": "tooling",
     "tags": [
@@ -30403,7 +30403,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30434,7 +30434,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30452,7 +30452,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30479,7 +30479,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30519,7 +30519,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30537,7 +30537,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30567,7 +30567,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30585,7 +30585,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30609,7 +30609,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30629,7 +30629,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30662,7 +30662,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30692,7 +30692,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30702,7 +30702,7 @@
     "description": "Pipedream 官方集成，一站式连接 2500+ API，集成 8000+ 工具，并管理用户服务器。",
     "source_url": "https://github.com/PipedreamHQ/pipedream/tree/master/modelcontextprotocol",
     "stars": 11251,
-    "pushed_at": "2026-04-15T23:49:44Z",
+    "pushed_at": "2026-04-16T21:22:34Z",
     "category": "frontend",
     "tags": [
       "apis",
@@ -30730,7 +30730,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30756,7 +30756,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30784,7 +30784,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30808,7 +30808,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30832,7 +30832,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30866,7 +30866,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30896,7 +30896,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30929,7 +30929,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30947,7 +30947,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30977,7 +30977,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -30986,7 +30986,7 @@
     "type": "mcp",
     "description": "与 Apple Shortcuts 集成的 MCP 服务器。",
     "source_url": "https://github.com/recursechat/mcp-server-apple-shortcuts",
-    "stars": 313,
+    "stars": 314,
     "pushed_at": "2024-12-22T03:27:15Z",
     "category": "tooling",
     "tags": [],
@@ -31002,7 +31002,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31030,7 +31030,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31048,7 +31048,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31057,7 +31057,7 @@
     "type": "mcp",
     "description": "Atlassian 产品 (Confluence 和 Jira) 的 MCP 服务器。支持 Cloud/Server/DC。提供全面的工具用于搜索、读取、创建和管理内容。",
     "source_url": "https://github.com/sooperset/mcp-atlassian",
-    "stars": 4942,
+    "stars": 4957,
     "pushed_at": "2026-04-10T09:37:10Z",
     "category": "tooling",
     "tags": [
@@ -31071,7 +31071,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31080,7 +31080,7 @@
     "type": "mcp",
     "description": "与 Notion API 交互。",
     "source_url": "https://github.com/suekou/mcp-notion-server",
-    "stars": 879,
+    "stars": 880,
     "pushed_at": "2025-05-14T01:03:59Z",
     "category": "backend",
     "tags": [],
@@ -31099,7 +31099,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31135,7 +31135,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31144,7 +31144,7 @@
     "type": "mcp",
     "description": "文颜 MCP Server， 让 AI 将 Markdown 文章自动排版后发布至微信公众号。",
     "source_url": "https://github.com/caol64/wenyan-mcp",
-    "stars": 1175,
+    "stars": 1178,
     "pushed_at": "2026-04-08T05:07:51Z",
     "category": "ai-ml",
     "tags": [
@@ -31169,7 +31169,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31210,7 +31210,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31237,7 +31237,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31255,7 +31255,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31264,7 +31264,7 @@
     "type": "mcp",
     "description": "官方参考实现，使用多种模型进行 AI 图像生成。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/everart",
-    "stars": 83819,
+    "stars": 83919,
     "pushed_at": "2026-04-14T15:12:18Z",
     "category": "ai-ml",
     "tags": [],
@@ -31280,7 +31280,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31289,16 +31289,31 @@
     "type": "mcp",
     "description": "集成 ElevenLabs TTS API，能生成包含多种声音的完整画外音。",
     "source_url": "https://github.com/mamertofabian/elevenlabs-mcp-server",
-    "stars": null,
-    "pushed_at": null,
+    "stars": 117,
+    "pushed_at": "2025-01-07T23:12:10Z",
     "category": "backend",
     "tags": [],
     "tech_stack": [],
     "install": {
-      "method": "manual"
+      "method": "mcp_config",
+      "config": {
+        "command": "uvx",
+        "args": [
+          "elevenlabs-mcp-server"
+        ],
+        "env": {
+          "ELEVENLABS_API_KEY": "your-api-key",
+          "ELEVENLABS_VOICE_ID": "your-voice-id",
+          "ELEVENLABS_MODEL_ID": "eleven_flash_v2",
+          "ELEVENLABS_STABILITY": "0.5",
+          "ELEVENLABS_SIMILARITY_BOOST": "0.75",
+          "ELEVENLABS_STYLE": "0.1",
+          "ELEVENLABS_OUTPUT_DIR": "output"
+        }
+      }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31307,7 +31322,7 @@
     "type": "mcp",
     "description": "获取 YouTube 字幕和转录文本供 AI 分析。",
     "source_url": "https://github.com/kimtaeyoon83/mcp-server-youtube-transcript",
-    "stars": 521,
+    "stars": 524,
     "pushed_at": "2025-12-24T04:07:22Z",
     "category": "ai-ml",
     "tags": [],
@@ -31323,7 +31338,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31351,7 +31366,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31360,7 +31375,7 @@
     "type": "mcp",
     "description": "全面的 YouTube API 集成，用于视频管理、Shorts 创建和分析。",
     "source_url": "https://github.com/ZubeidHendricks/youtube-mcp-server",
-    "stars": 494,
+    "stars": 495,
     "pushed_at": "2026-03-26T15:59:53Z",
     "category": "backend",
     "tags": [],
@@ -31383,7 +31398,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31401,7 +31416,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31436,7 +31451,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31454,7 +31469,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-04-02"
   },
   {
@@ -31484,7 +31499,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31516,7 +31531,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31525,7 +31540,7 @@
     "type": "mcp",
     "description": "基于 Playwright 开发，支持自动登录、关键词搜索、笔记获取及 AI 评论发布 (适配 Claude 桌面版)。",
     "source_url": "https://github.com/chenningling/Redbook-Search-Comment-MCP2.0",
-    "stars": 414,
+    "stars": 415,
     "pushed_at": "2025-06-21T05:01:25Z",
     "category": "testing",
     "tags": [
@@ -31543,7 +31558,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31552,7 +31567,7 @@
     "type": "mcp",
     "description": "Dify 应用搭建教程，包含“小红书读书卡片”、“甜蜜哄人”等特色 AI 助手实现指南。",
     "source_url": "https://github.com/datawhalechina/self-dify",
-    "stars": 407,
+    "stars": 408,
     "pushed_at": "2025-12-21T07:25:23Z",
     "category": "ai-ml",
     "tags": [
@@ -31566,7 +31581,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31591,7 +31606,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31609,7 +31624,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31629,7 +31644,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31638,7 +31653,7 @@
     "type": "mcp",
     "description": "小红书 Electron 多账号自动化工具，支持 MCP 协议。",
     "source_url": "https://github.com/pmhw/XME",
-    "stars": 48,
+    "stars": 49,
     "pushed_at": "2025-09-15T16:05:38Z",
     "category": "tooling",
     "tags": [],
@@ -31647,7 +31662,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31674,7 +31689,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31694,7 +31709,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31724,7 +31739,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31742,7 +31757,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31781,7 +31796,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31820,7 +31835,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31829,7 +31844,7 @@
     "type": "mcp",
     "description": "官方参考实现，基于知识图谱的持久记忆系统。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
-    "stars": 83819,
+    "stars": 83919,
     "pushed_at": "2026-04-14T15:12:18Z",
     "category": "tooling",
     "tags": [],
@@ -31845,7 +31860,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31854,8 +31869,8 @@
     "type": "mcp",
     "description": "本地优先的知识管理系统，从 Markdown 文件构建语义图，实现跨对话持久记忆。",
     "source_url": "https://github.com/basicmachines-co/basic-memory",
-    "stars": 2868,
-    "pushed_at": "2026-04-16T01:04:30Z",
+    "stars": 2871,
+    "pushed_at": "2026-04-16T23:28:02Z",
     "category": "backend",
     "tags": [
       "ai",
@@ -31886,7 +31901,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31895,7 +31910,7 @@
     "type": "mcp",
     "description": "增强的基于图的记忆，专注于 AI 角色扮演和故事生成。",
     "source_url": "https://github.com/CheMiguel23/MemoryMesh",
-    "stars": 339,
+    "stars": 340,
     "pushed_at": "2026-03-01T22:27:33Z",
     "category": "ai-ml",
     "tags": [
@@ -31907,7 +31922,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31916,8 +31931,8 @@
     "type": "mcp",
     "description": "GraphRAG 记忆服务器，支持自定义摄取、数据处理和搜索。",
     "source_url": "https://github.com/topoteretes/cognee/tree/main/cognee-mcp",
-    "stars": 15516,
-    "pushed_at": "2026-04-16T00:21:49Z",
+    "stars": 15817,
+    "pushed_at": "2026-04-16T23:51:28Z",
     "category": "backend",
     "tags": [
       "ai",
@@ -31946,7 +31961,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -31987,7 +32002,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32016,7 +32031,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32057,7 +32072,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32100,7 +32115,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32118,7 +32133,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32145,7 +32160,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32176,7 +32191,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32198,7 +32213,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32207,8 +32222,8 @@
     "type": "mcp",
     "description": "使用各种图和向量存储的 AI 应用和 Agents 记忆管理器，允许从 30+ 数据源摄取。 (cognee-mcp 的开发分支)",
     "source_url": "https://github.com/topoteretes/cognee/tree/dev/cognee-mcp",
-    "stars": 15516,
-    "pushed_at": "2026-04-16T00:21:49Z",
+    "stars": 15817,
+    "pushed_at": "2026-04-16T23:51:28Z",
     "category": "backend",
     "tags": [
       "ai",
@@ -32237,7 +32252,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32246,7 +32261,7 @@
     "type": "mcp",
     "description": "集成 Ghidra 进行二进制分析，支持函数检查、反编译、内存探索、导入/导出分析等。",
     "source_url": "https://github.com/13bm/GhidraMCP",
-    "stars": 105,
+    "stars": 108,
     "pushed_at": "2026-03-27T15:25:56Z",
     "category": "tooling",
     "tags": [],
@@ -32255,7 +32270,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32275,7 +32290,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32304,7 +32319,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32313,7 +32328,7 @@
     "type": "mcp",
     "description": "maigret MCP 服务器，强大的 OSINT 工具，从各种公共来源收集用户账户信息。提供跨社交网络搜索用户名和分析 URL 的工具。",
     "source_url": "https://github.com/BurtTheCoder/mcp-maigret",
-    "stars": 238,
+    "stars": 239,
     "pushed_at": "2026-01-27T03:36:32Z",
     "category": "frontend",
     "tags": [
@@ -32336,7 +32351,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32381,7 +32396,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32422,7 +32437,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32431,7 +32446,7 @@
     "type": "mcp",
     "description": "Binary Ninja 插件、MCP 服务器和桥接器，无缝集成 Binary Ninja 与 MCP 客户端，自动化二进制分析和逆向工程。",
     "source_url": "https://github.com/fosdickio/binary_ninja_mcp",
-    "stars": 314,
+    "stars": 315,
     "pushed_at": "2026-04-05T19:38:07Z",
     "category": "tooling",
     "tags": [],
@@ -32451,7 +32466,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32469,7 +32484,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32489,7 +32504,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32507,7 +32522,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32525,7 +32540,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32555,7 +32570,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32564,7 +32579,7 @@
     "type": "mcp",
     "description": "用于查询 CVE-Search API 的 MCP 服务器。提供全面访问 CVE-Search，浏览供应商/产品、按 ID 获取 CVE、获取最新 CVE。",
     "source_url": "https://github.com/roadwy/cve-search_mcp",
-    "stars": 94,
+    "stars": 95,
     "pushed_at": "2025-07-26T14:17:29Z",
     "category": "backend",
     "tags": [
@@ -32577,7 +32592,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32603,7 +32618,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32621,7 +32636,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32652,7 +32667,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32661,7 +32676,7 @@
     "type": "mcp",
     "description": "Wireshark 网络数据包分析 MCP 服务器，具有抓包、协议统计、字段提取和安全分析功能。",
     "source_url": "https://github.com/bx33661/Wireshark-MCP",
-    "stars": 94,
+    "stars": 95,
     "pushed_at": "2026-03-30T16:20:31Z",
     "category": "security",
     "tags": [
@@ -32678,7 +32693,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32711,7 +32726,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32736,7 +32751,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32746,7 +32761,7 @@
     "description": "使用 IPInfo API 获取 IP 地址地理位置和网络信息。",
     "source_url": "https://github.com/briandconnelly/mcp-server-ipinfo",
     "stars": 43,
-    "pushed_at": "2026-04-15T21:34:00Z",
+    "pushed_at": "2026-04-17T00:49:05Z",
     "category": "backend",
     "tags": [],
     "tech_stack": [],
@@ -32754,7 +32769,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32778,7 +32793,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32808,7 +32823,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32839,7 +32854,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32848,7 +32863,7 @@
     "type": "mcp",
     "description": "Google Maps 集成，提供定位服务、路线规划和地点详情。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/google-maps",
-    "stars": 83819,
+    "stars": 83919,
     "pushed_at": "2026-04-14T15:12:18Z",
     "category": "backend",
     "tags": [
@@ -32866,7 +32881,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32897,7 +32912,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32930,7 +32945,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32939,7 +32954,7 @@
     "type": "mcp",
     "description": "通过 MCP 将 QGIS Desktop 连接到 Claude AI。实现提示辅助的项目创建、图层加载、代码执行等。",
     "source_url": "https://github.com/jjsantos01/qgis_mcp",
-    "stars": 903,
+    "stars": 905,
     "pushed_at": "2025-10-01T01:23:25Z",
     "category": "ai-ml",
     "tags": [],
@@ -32957,7 +32972,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32975,7 +32990,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -32993,7 +33008,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33033,7 +33048,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33042,7 +33057,7 @@
     "type": "mcp",
     "description": "用于 Unity3d 游戏引擎集成的 MCP 服务器，用于游戏开发。",
     "source_url": "https://github.com/CoderGamester/mcp-unity",
-    "stars": 1594,
+    "stars": 1596,
     "pushed_at": "2026-04-13T20:02:10Z",
     "category": "ai-ml",
     "tags": [
@@ -33072,7 +33087,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33096,7 +33111,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33123,7 +33138,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33141,7 +33156,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33150,7 +33165,7 @@
     "type": "mcp",
     "description": "连接到 Strava API 的 MCP 服务器，提供通过 LLM 访问 Strava 数据的工具。",
     "source_url": "https://github.com/r-huijts/strava-mcp",
-    "stars": 340,
+    "stars": 342,
     "pushed_at": "2026-04-07T09:32:24Z",
     "category": "ai-ml",
     "tags": [],
@@ -33166,7 +33181,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33191,7 +33206,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33200,7 +33215,7 @@
     "type": "mcp",
     "description": "通过官方 REST API v4 与 Quran.com 语料库交互的 MCP 服务器。",
     "source_url": "https://github.com/djalal/quran-mcp-server",
-    "stars": 62,
+    "stars": 63,
     "pushed_at": "2025-06-12T18:53:07Z",
     "category": "backend",
     "tags": [
@@ -33225,7 +33240,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33234,7 +33249,7 @@
     "type": "mcp",
     "description": "Rijksmuseum API 集成，用于艺术品搜索、详情和收藏。",
     "source_url": "https://github.com/r-huijts/rijksmuseum-mcp",
-    "stars": 66,
+    "stars": 67,
     "pushed_at": "2025-02-07T09:28:40Z",
     "category": "backend",
     "tags": [],
@@ -33256,7 +33271,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33281,7 +33296,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33290,7 +33305,7 @@
     "type": "mcp",
     "description": "集成 AniList API 的 MCP 服务器，用于动漫和漫画信息。",
     "source_url": "https://github.com/yuna0x0/anilist-mcp",
-    "stars": 72,
+    "stars": 73,
     "pushed_at": "2025-11-28T21:34:00Z",
     "category": "ai-ml",
     "tags": [
@@ -33321,7 +33336,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33331,15 +33346,33 @@
     "description": "agentic-ads 是 MCP 服务器的广告变现 SDK。发布者通过在 Base 上使用 USDC 的上下文关联广告获得 70% 收入分享。",
     "source_url": "https://github.com/nicofains1/agentic-ads",
     "stars": null,
-    "pushed_at": null,
-    "category": "tooling",
-    "tags": [],
+    "pushed_at": "2026-04-16T16:39:45Z",
+    "category": "frontend",
+    "tags": [
+      "advertising",
+      "ai",
+      "ai-agents",
+      "claude",
+      "mcp",
+      "mcp-server",
+      "model-context-protocol",
+      "monetization",
+      "sdk",
+      "typescript"
+    ],
     "tech_stack": [],
     "install": {
-      "method": "manual"
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "agentic-ads",
+          "--stdio"
+        ]
+      }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33348,7 +33381,7 @@
     "type": "mcp",
     "description": "一句话给 AI Agent 装上全网搜索能力。一键安装 + 配置 13+ 平台工具（Twitter、Reddit、YouTube、GitHub、B站、小红书、抖音、微信公众号、LinkedIn 等），通过 mcporter 接入多个 MCP 服务。",
     "source_url": "https://github.com/Panniantong/Agent-Reach",
-    "stars": 17525,
+    "stars": 17652,
     "pushed_at": "2026-04-13T09:46:13Z",
     "category": "backend",
     "tags": [
@@ -33376,7 +33409,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33415,7 +33448,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33433,7 +33466,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33442,7 +33475,7 @@
     "type": "mcp",
     "description": "展示 MCP 协议所有功能的 MCP 服务器。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/everything",
-    "stars": 83819,
+    "stars": 83919,
     "pushed_at": "2026-04-14T15:12:18Z",
     "category": "tooling",
     "tags": [],
@@ -33458,7 +33491,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33476,7 +33509,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33485,7 +33518,7 @@
     "type": "mcp",
     "description": "官方参考实现，提供时间和时区转换能力。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
-    "stars": 83819,
+    "stars": 83919,
     "pushed_at": "2026-04-14T15:12:18Z",
     "category": "tooling",
     "tags": [],
@@ -33501,7 +33534,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33510,7 +33543,7 @@
     "type": "mcp",
     "description": "官方参考实现，通过思考序列进行动态和反思性问题解决。",
     "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
-    "stars": 83819,
+    "stars": 83919,
     "pushed_at": "2026-04-14T15:12:18Z",
     "category": "tooling",
     "tags": [],
@@ -33526,7 +33559,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33549,7 +33582,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33567,7 +33600,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33587,7 +33620,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33596,7 +33629,7 @@
     "type": "mcp",
     "description": "通过 SQL 查询 40+ 应用，并连接 PG/MySQL/SQLite 数据库。本地优先，注重隐私。",
     "source_url": "https://github.com/julien040/anyquery",
-    "stars": 1664,
+    "stars": 1666,
     "pushed_at": "2026-03-28T20:52:25Z",
     "category": "backend",
     "tags": [
@@ -33626,7 +33659,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33635,7 +33668,7 @@
     "type": "mcp",
     "description": "MetaMCP 是统一的中间件 MCP 服务器，通过 GUI 管理您的 MCP 连接。",
     "source_url": "https://github.com/metatool-ai/metatool-app",
-    "stars": 2215,
+    "stars": 2218,
     "pushed_at": "2026-02-08T03:43:11Z",
     "category": "backend",
     "tags": [
@@ -33660,7 +33693,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33684,7 +33717,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33693,7 +33726,7 @@
     "type": "mcp",
     "description": "使 AI 模型能与比特币交互的 MCP 服务器 (生成密钥/验证地址/解码交易/查询区块链等)。",
     "source_url": "https://github.com/AbdelStark/bitcoin-mcp",
-    "stars": 73,
+    "stars": 74,
     "pushed_at": "2025-08-01T09:38:50Z",
     "category": "backend",
     "tags": [
@@ -33716,7 +33749,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33737,7 +33770,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33767,7 +33800,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33785,7 +33818,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33794,7 +33827,7 @@
     "type": "mcp",
     "description": "允许 AI 查询 GraphQL 服务器。",
     "source_url": "https://github.com/blurrah/mcp-graphql",
-    "stars": 380,
+    "stars": 381,
     "pushed_at": "2025-09-08T14:28:14Z",
     "category": "ai-ml",
     "tags": [
@@ -33810,7 +33843,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33828,7 +33861,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33846,7 +33879,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33864,7 +33897,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33892,7 +33925,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33901,7 +33934,7 @@
     "type": "mcp",
     "description": "控制 Spotify 播放和管理播放列表。",
     "source_url": "https://github.com/marcelmarais/spotify-mcp-server",
-    "stars": 294,
+    "stars": 296,
     "pushed_at": "2026-03-07T10:03:07Z",
     "category": "ai-ml",
     "tags": [],
@@ -33916,7 +33949,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33938,7 +33971,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33947,8 +33980,8 @@
     "type": "mcp",
     "description": "本地优先系统，捕获屏幕/音频并带时间戳索引，SQL/嵌入存储，语义搜索，LLM 历史分析，事件触发动作。通过 NextJS 插件生态系统构建上下文感知 AI 代理。",
     "source_url": "https://github.com/mediar-ai/screenpipe",
-    "stars": 18212,
-    "pushed_at": "2026-04-16T00:40:57Z",
+    "stars": 18231,
+    "pushed_at": "2026-04-17T01:28:54Z",
     "category": "frontend",
     "tags": [
       "nextjs",
@@ -33967,7 +34000,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -33998,7 +34031,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34021,7 +34054,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34039,7 +34072,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34057,7 +34090,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34085,7 +34118,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34116,7 +34149,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34136,7 +34169,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34145,7 +34178,7 @@
     "type": "mcp",
     "description": "自主 Shell 执行、计算机控制和编码代理 (Mac)。",
     "source_url": "https://github.com/rusiaaman/wcgw/blob/main/src/wcgw/client/mcp_server/Readme.md",
-    "stars": 655,
+    "stars": 656,
     "pushed_at": "2026-04-07T13:49:48Z",
     "category": "ai-ml",
     "tags": [
@@ -34179,7 +34212,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34202,7 +34235,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34211,7 +34244,7 @@
     "type": "mcp",
     "description": "与 TikTok 视频交互。",
     "source_url": "https://github.com/Seym0n/tiktok-mcp",
-    "stars": 147,
+    "stars": 148,
     "pushed_at": "2026-02-27T20:05:47Z",
     "category": "tooling",
     "tags": [
@@ -34225,7 +34258,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34258,7 +34291,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34268,7 +34301,7 @@
     "description": "Wanaku MCP 路由器是基于 SSE 的 MCP 服务器，提供可扩展的路由引擎，允许将企业系统与 AI Agents 集成。",
     "source_url": "https://github.com/wanaku-ai/wanaku",
     "stars": 109,
-    "pushed_at": "2026-04-14T11:46:31Z",
+    "pushed_at": "2026-04-16T10:11:53Z",
     "category": "ai-ml",
     "tags": [
       "agentic",
@@ -34283,7 +34316,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34301,7 +34334,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34321,7 +34354,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34351,7 +34384,7 @@
       }
     },
     "source": "awesome-mcp-zh",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34360,7 +34393,7 @@
     "type": "mcp",
     "description": "Reference / test server with prompts, resources, and tools",
     "source_url": "https://github.com/modelcontextprotocol/servers/blob/main/src/everything",
-    "stars": 83819,
+    "stars": 83919,
     "pushed_at": "2026-04-14T15:12:18Z",
     "category": "testing",
     "tags": [],
@@ -34376,7 +34409,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34385,7 +34418,7 @@
     "type": "mcp",
     "description": "Time and timezone conversion capabilities",
     "source_url": "https://github.com/modelcontextprotocol/servers/blob/main/src/time",
-    "stars": 83819,
+    "stars": 83919,
     "pushed_at": "2026-04-14T15:12:18Z",
     "category": "tooling",
     "tags": [],
@@ -34401,7 +34434,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34432,7 +34465,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34450,7 +34483,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34459,7 +34492,7 @@
     "type": "mcp",
     "description": "MCP Server For [Apache Doris](https://doris.apache.org/), an MPP-based real-time data warehouse.",
     "source_url": "https://github.com/apache/doris-mcp-server",
-    "stars": 280,
+    "stars": 281,
     "pushed_at": "2026-03-13T08:18:51Z",
     "category": "ai-ml",
     "tags": [
@@ -34475,7 +34508,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34513,7 +34546,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34523,7 +34556,7 @@
     "description": "Official MCP Server from [Atlan](https://atlan.com) which enables you to bring the power of metadata to your AI tools",
     "source_url": "https://github.com/atlanhq/agent-toolkit/tree/main/modelcontextprotocol",
     "stars": 29,
-    "pushed_at": "2026-04-02T04:00:51Z",
+    "pushed_at": "2026-04-16T22:50:47Z",
     "category": "ai-ml",
     "tags": [
       "agents",
@@ -34538,7 +34571,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34559,7 +34592,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34568,8 +34601,8 @@
     "type": "mcp",
     "description": "Query Amazon Bedrock Knowledge Bases using natural language to retrieve relevant information from your data sources.",
     "source_url": "https://github.com/awslabs/mcp/tree/main/src/bedrock-kb-retrieval-mcp-server",
-    "stars": 8780,
-    "pushed_at": "2026-04-16T02:00:43Z",
+    "stars": 8791,
+    "pushed_at": "2026-04-17T01:01:04Z",
     "category": "devops",
     "tags": [
       "aws",
@@ -34596,7 +34629,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34605,8 +34638,8 @@
     "type": "mcp",
     "description": "Get prescriptive CDK advice, explain CDK Nag rules, check suppressions, generate Bedrock Agent schemas, and discover AWS Solutions Constructs patterns.",
     "source_url": "https://github.com/awslabs/mcp/tree/main/src/cdk-mcp-server",
-    "stars": 8780,
-    "pushed_at": "2026-04-16T02:00:43Z",
+    "stars": 8791,
+    "pushed_at": "2026-04-17T01:01:04Z",
     "category": "devops",
     "tags": [
       "aws",
@@ -34633,7 +34666,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34642,8 +34675,8 @@
     "type": "mcp",
     "description": "Core AWS MCP server providing prompt understanding and server management capabilities.",
     "source_url": "https://github.com/awslabs/mcp/tree/main/src/core-mcp-server",
-    "stars": 8780,
-    "pushed_at": "2026-04-16T02:00:43Z",
+    "stars": 8791,
+    "pushed_at": "2026-04-17T01:01:04Z",
     "category": "devops",
     "tags": [
       "aws",
@@ -34670,7 +34703,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34679,8 +34712,8 @@
     "type": "mcp",
     "description": "Analyze CDK projects to identify AWS services used and get pricing information from AWS pricing webpages and API.",
     "source_url": "https://github.com/awslabs/mcp/tree/main/src/cost-analysis-mcp-server",
-    "stars": 8780,
-    "pushed_at": "2026-04-16T02:00:43Z",
+    "stars": 8791,
+    "pushed_at": "2026-04-17T01:01:04Z",
     "category": "devops",
     "tags": [
       "aws",
@@ -34707,7 +34740,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34716,8 +34749,8 @@
     "type": "mcp",
     "description": "Fetch, convert, and search AWS documentation pages, with recommendations for related content.",
     "source_url": "https://github.com/awslabs/mcp/tree/main/src/aws-documentation-mcp-server",
-    "stars": 8780,
-    "pushed_at": "2026-04-16T02:00:43Z",
+    "stars": 8791,
+    "pushed_at": "2026-04-17T01:01:04Z",
     "category": "devops",
     "tags": [
       "aws",
@@ -34744,7 +34777,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34753,8 +34786,8 @@
     "type": "mcp",
     "description": "Generate images using Amazon Nova Canvas with text prompts and color guidance.",
     "source_url": "https://github.com/awslabs/mcp/tree/main/src/nova-canvas-mcp-server",
-    "stars": 8780,
-    "pushed_at": "2026-04-16T02:00:43Z",
+    "stars": 8791,
+    "pushed_at": "2026-04-17T01:01:04Z",
     "category": "devops",
     "tags": [
       "aws",
@@ -34781,7 +34814,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34790,8 +34823,8 @@
     "type": "mcp",
     "description": "The MCP server for Azure DevOps, bringing the power of Azure DevOps directly to your agents.",
     "source_url": "https://github.com/microsoft/azure-devops-mcp",
-    "stars": 1571,
-    "pushed_at": "2026-04-15T18:53:33Z",
+    "stars": 1574,
+    "pushed_at": "2026-04-16T19:10:47Z",
     "category": "devops",
     "tags": [
       "azure"
@@ -34801,7 +34834,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34810,7 +34843,7 @@
     "type": "mcp",
     "description": "Discover, extract, and interact with the web - one interface powering automated access across the public internet.",
     "source_url": "https://github.com/brightdata/brightdata-mcp",
-    "stars": 2298,
+    "stars": 2300,
     "pushed_at": "2026-04-05T10:10:38Z",
     "category": "ai-ml",
     "tags": [
@@ -34848,7 +34881,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34858,7 +34891,7 @@
     "description": "Flag features, manage company data, and control feature access using [Bucket](https://bucket.co)",
     "source_url": "https://github.com/bucketco/bucket-javascript-sdk/tree/main/packages/cli#model-context-protocol",
     "stars": 22,
-    "pushed_at": "2026-04-14T02:42:40Z",
+    "pushed_at": "2026-04-17T00:46:36Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -34866,7 +34899,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34896,7 +34929,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34906,7 +34939,7 @@
     "description": "Manage [Buildkite](https://buildkite.com) pipelines and builds.",
     "source_url": "https://github.com/buildkite/buildkite-mcp-server",
     "stars": 50,
-    "pushed_at": "2026-04-13T22:36:25Z",
+    "pushed_at": "2026-04-16T06:48:22Z",
     "category": "tooling",
     "tags": [
       "buildkite",
@@ -34917,7 +34950,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34942,7 +34975,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34951,7 +34984,7 @@
     "type": "mcp",
     "description": "🤖 A Model Context Protocol server for generating visual charts using [AntV](https://github.com/antvis).",
     "source_url": "https://github.com/antvis/mcp-server-chart",
-    "stars": 3964,
+    "stars": 3970,
     "pushed_at": "2026-02-25T14:04:08Z",
     "category": "ai-ml",
     "tags": [
@@ -34975,7 +35008,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -34984,8 +35017,8 @@
     "type": "mcp",
     "description": "Enable AI Agents to fix build failures from CircleCI.",
     "source_url": "https://github.com/CircleCI-Public/mcp-server-circleci",
-    "stars": 83,
-    "pushed_at": "2026-04-14T20:23:31Z",
+    "stars": 84,
+    "pushed_at": "2026-04-16T14:09:49Z",
     "category": "ai-ml",
     "tags": [
       "mcp-server",
@@ -35000,7 +35033,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35023,7 +35056,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35032,7 +35065,7 @@
     "type": "mcp",
     "description": "Context7 MCP - Up-to-date Docs For Any Cursor Prompt",
     "source_url": "https://github.com/upstash/context7-mcp",
-    "stars": 52812,
+    "stars": 52928,
     "pushed_at": "2026-04-15T16:46:19Z",
     "category": "ai-ml",
     "tags": [
@@ -35046,7 +35079,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35092,7 +35125,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35101,8 +35134,8 @@
     "type": "mcp",
     "description": "MCP server for the Computer-Use Agent (CUA), allowing you to run CUA through Claude Desktop or other MCP clients.",
     "source_url": "https://github.com/trycua/cua/tree/main/libs/mcp-server",
-    "stars": 13484,
-    "pushed_at": "2026-04-16T02:05:25Z",
+    "stars": 13495,
+    "pushed_at": "2026-04-17T01:15:04Z",
     "category": "mobile",
     "tags": [
       "agent",
@@ -35129,7 +35162,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35139,7 +35172,7 @@
     "description": "Enable AI Agents to fix Playwright test failures reported to [Currents](https://currents.dev).",
     "source_url": "https://github.com/currents-dev/currents-mcp",
     "stars": 15,
-    "pushed_at": "2026-04-15T15:39:49Z",
+    "pushed_at": "2026-04-16T03:02:47Z",
     "category": "testing",
     "tags": [
       "playwright",
@@ -35162,7 +35195,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35172,7 +35205,7 @@
     "description": "Boost security in your dev lifecycle via SAST, SCA, Secrets & IaC scanning with [Cycode](https://cycode.com/).",
     "source_url": "https://github.com/cycodehq/cycode-cli#mcp-command-experiment",
     "stars": 98,
-    "pushed_at": "2026-04-15T09:08:05Z",
+    "pushed_at": "2026-04-16T09:36:51Z",
     "category": "security",
     "tags": [
       "code",
@@ -35188,7 +35221,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35198,7 +35231,7 @@
     "description": "Enable your code gen agents to create & run 0-config end-to-end tests against new code changes in remote browsers via the [Debugg AI](https://debugg.ai) testing platform.",
     "source_url": "https://github.com/debugg-ai/debugg-ai-mcp",
     "stars": 59,
-    "pushed_at": "2026-04-15T22:47:34Z",
+    "pushed_at": "2026-04-16T21:41:36Z",
     "category": "testing",
     "tags": [
       "automation",
@@ -35224,7 +35257,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35234,7 +35267,7 @@
     "description": "Easy web data access. Simplified retrieval of information from websites and online sources.",
     "source_url": "https://github.com/Decodo/decodo-mcp-server",
     "stars": 23,
-    "pushed_at": "2026-04-15T11:52:56Z",
+    "pushed_at": "2026-04-16T13:11:12Z",
     "category": "backend",
     "tags": [
       "decodo",
@@ -35254,7 +35287,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35285,7 +35318,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35303,7 +35336,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35328,7 +35361,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-04-13"
   },
   {
@@ -35337,7 +35370,7 @@
     "type": "mcp",
     "description": "Generate visual charts using [ECharts](https://echarts.apache.org) with AI MCP dynamically, used for chart generation and data analysis.",
     "source_url": "https://github.com/hustcc/mcp-echarts",
-    "stars": 223,
+    "stars": 224,
     "pushed_at": "2026-01-30T15:36:37Z",
     "category": "ai-ml",
     "tags": [
@@ -35358,7 +35391,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35390,7 +35423,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35408,7 +35441,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35426,7 +35459,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35464,7 +35497,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35482,7 +35515,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35500,7 +35533,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-04-13"
   },
   {
@@ -35509,7 +35542,7 @@
     "type": "mcp",
     "description": "A CLI for interacting with GitKraken APIs. Includes an MCP server via `gk mcp` that not only wraps GitKraken APIs, but also Jira, GitHub, GitLab, and more.",
     "source_url": "https://github.com/gitkraken/gk-cli",
-    "stars": 397,
+    "stars": 398,
     "pushed_at": "2026-04-14T15:51:54Z",
     "category": "backend",
     "tags": [
@@ -35523,7 +35556,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35545,7 +35578,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35555,7 +35588,7 @@
     "description": "Official MCP Server to deploy to [Google Cloud Run](https://cloud.google.com/run).",
     "source_url": "https://github.com/GoogleCloudPlatform/cloud-run-mcp",
     "stars": 591,
-    "pushed_at": "2026-04-14T02:41:42Z",
+    "pushed_at": "2026-04-16T05:41:42Z",
     "category": "backend",
     "tags": [
       "go",
@@ -35569,7 +35602,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35598,7 +35631,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35607,8 +35640,8 @@
     "type": "mcp",
     "description": "Search dashboards, investigate incidents and query datasources in your Grafana instance",
     "source_url": "https://github.com/grafana/mcp-grafana",
-    "stars": 2823,
-    "pushed_at": "2026-04-15T21:58:13Z",
+    "stars": 2832,
+    "pushed_at": "2026-04-16T20:14:53Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -35616,7 +35649,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35626,7 +35659,7 @@
     "description": "Connect to a [Hologres](https://www.alibabacloud.com/en/product/hologres) instance, get table metadata, query and analyze data.",
     "source_url": "https://github.com/aliyun/alibabacloud-hologres-mcp-server",
     "stars": 32,
-    "pushed_at": "2026-04-15T21:39:05Z",
+    "pushed_at": "2026-04-17T00:36:28Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -35634,7 +35667,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35644,7 +35677,7 @@
     "description": "Official [Hostinger API](https://developers.hostinger.com/) MCP server for services managment.",
     "source_url": "https://github.com/hostinger/api-mcp-server",
     "stars": 83,
-    "pushed_at": "2026-04-15T19:48:23Z",
+    "pushed_at": "2026-04-16T07:01:44Z",
     "category": "ai-ml",
     "tags": [
       "ai",
@@ -35667,7 +35700,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35676,8 +35709,8 @@
     "type": "mcp",
     "description": "Create, manage, and update applications on InstantDB, the modern Firebase.",
     "source_url": "https://github.com/instantdb/instant/tree/main/client/packages/mcp",
-    "stars": 10106,
-    "pushed_at": "2026-04-16T00:20:32Z",
+    "stars": 10123,
+    "pushed_at": "2026-04-17T00:12:09Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -35685,7 +35718,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35710,7 +35743,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35731,7 +35764,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35762,7 +35795,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35780,7 +35813,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35790,7 +35823,7 @@
     "description": "Seamlessly bring real-time production context—logs, metrics, and traces—into your local environment to auto-fix code faster.",
     "source_url": "https://github.com/last9/last9-mcp-server",
     "stars": 54,
-    "pushed_at": "2026-04-15T10:43:04Z",
+    "pushed_at": "2026-04-16T11:09:20Z",
     "category": "devops",
     "tags": [
       "ai",
@@ -35809,7 +35842,7 @@
         "command": "/opt/homebrew/bin/last9-mcp",
         "args": [],
         "env": {
-          "LAST9_REFRESH_TOKEN": "<last9_refresh_token>"
+          "LAST9_REFRESH_TOKEN": "<your_refresh_token>"
         }
       },
       "placeholder_hints": {
@@ -35817,7 +35850,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35826,7 +35859,7 @@
     "type": "mcp",
     "description": "Make your AI agent speak every language on the planet, using [Lingo.dev](https://lingo.dev) Localization Engine.",
     "source_url": "https://github.com/lingodotdev/lingo.dev/blob/main/mcp.md",
-    "stars": 5402,
+    "stars": 5400,
     "pushed_at": "2026-04-15T22:25:58Z",
     "category": "frontend",
     "tags": [
@@ -35842,7 +35875,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35851,7 +35884,7 @@
     "type": "mcp",
     "description": "MCP server that lets AI assistants control LinkedIn accounts and retrieve real-time data with [Linked API](https://linkedapi.io).",
     "source_url": "https://github.com/Linked-API/linkedapi-mcp.git",
-    "stars": 46,
+    "stars": 47,
     "pushed_at": "2026-04-10T10:53:36Z",
     "category": "ai-ml",
     "tags": [
@@ -35870,7 +35903,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35880,7 +35913,7 @@
     "description": "Interact with Mailgun API.",
     "source_url": "https://github.com/mailgun/mailgun-mcp-server",
     "stars": 52,
-    "pushed_at": "2026-04-13T23:06:03Z",
+    "pushed_at": "2026-04-16T21:46:02Z",
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -35899,7 +35932,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35908,8 +35941,8 @@
     "type": "mcp",
     "description": "Client implementation for Mastra, providing seamless integration with MCP-compatible AI models and tools.",
     "source_url": "https://github.com/mastra-ai/mastra/tree/main/packages/mcp",
-    "stars": 23037,
-    "pushed_at": "2026-04-16T02:22:05Z",
+    "stars": 23066,
+    "pushed_at": "2026-04-17T00:57:53Z",
     "category": "frontend",
     "tags": [
       "agents",
@@ -35931,7 +35964,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35940,8 +35973,8 @@
     "type": "mcp",
     "description": "Provides AI assistants with direct access to Mastra.ai's complete knowledge base.",
     "source_url": "https://github.com/mastra-ai/mastra/tree/main/packages/mcp-docs-server",
-    "stars": 23037,
-    "pushed_at": "2026-04-16T02:22:05Z",
+    "stars": 23066,
+    "pushed_at": "2026-04-17T00:57:53Z",
     "category": "frontend",
     "tags": [
       "agents",
@@ -35963,7 +35996,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -35996,7 +36029,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36016,7 +36049,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36025,7 +36058,7 @@
     "type": "mcp",
     "description": "generate lyrics, song and background music(instrumental)",
     "source_url": "https://github.com/SkyworkAI/Mureka-mcp",
-    "stars": 88,
+    "stars": 89,
     "pushed_at": "2025-05-13T10:25:27Z",
     "category": "tooling",
     "tags": [],
@@ -36034,7 +36067,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36044,7 +36077,7 @@
     "description": "[Mux](https://www.mux.com) is a video API for developers. With Mux's official MCP you can upload videos, create live streams, generate thumbnails, add captions, manage playback policies, dig through engagement data, monitor video performance, and more.",
     "source_url": "https://github.com/muxinc/mux-node-sdk/tree/master/packages/mcp-server",
     "stars": 178,
-    "pushed_at": "2026-04-16T00:08:09Z",
+    "pushed_at": "2026-04-16T19:03:08Z",
     "category": "backend",
     "tags": [
       "mux",
@@ -36059,7 +36092,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36068,7 +36101,7 @@
     "type": "mcp",
     "description": "Notion official MCP server",
     "source_url": "https://github.com/makenotion/notion-mcp-server",
-    "stars": 4218,
+    "stars": 4227,
     "pushed_at": "2026-03-18T00:25:06Z",
     "category": "tooling",
     "tags": [],
@@ -36087,7 +36120,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36096,8 +36129,8 @@
     "type": "mcp",
     "description": "Leverage Notte Web AI agents & cloud browser sessions for scalable browser automation & scraping workflows",
     "source_url": "https://github.com/nottelabs/notte/tree/main/packages/notte-mcp",
-    "stars": 1932,
-    "pushed_at": "2026-04-15T23:13:50Z",
+    "stars": 1935,
+    "pushed_at": "2026-04-17T01:15:02Z",
     "category": "testing",
     "tags": [
       "agent",
@@ -36114,7 +36147,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36144,7 +36177,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36162,7 +36195,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36215,7 +36248,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36224,7 +36257,7 @@
     "type": "mcp",
     "description": "Access real-time gaming data across popular titles like League of Legends, TFT, and Valorant, offering champion analytics, esports schedules, meta compositions, and character statistics.",
     "source_url": "https://github.com/opgginc/opgg-mcp",
-    "stars": 88,
+    "stars": 89,
     "pushed_at": "2026-01-01T20:03:37Z",
     "category": "tooling",
     "tags": [],
@@ -36233,7 +36266,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36251,7 +36284,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36260,7 +36293,7 @@
     "type": "mcp",
     "description": "Postman’s remote MCP server connects AI agents, assistants, and chatbots directly to your APIs on Postman.",
     "source_url": "https://github.com/postmanlabs/postman-mcp-server",
-    "stars": 214,
+    "stars": 216,
     "pushed_at": "2026-04-14T09:54:30Z",
     "category": "ai-ml",
     "tags": [
@@ -36287,7 +36320,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36305,7 +36338,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36315,7 +36348,7 @@
     "description": "An MCP implementation that provides search functionality for the Powertools for AWS Lambda documentation across multiple runtimes.",
     "source_url": "https://github.com/aws-powertools/powertools-mcp",
     "stars": 43,
-    "pushed_at": "2026-04-15T14:45:18Z",
+    "pushed_at": "2026-04-16T02:46:28Z",
     "category": "devops",
     "tags": [
       "aws"
@@ -36332,7 +36365,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36361,7 +36394,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36379,7 +36412,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36414,7 +36447,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36454,7 +36487,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36477,7 +36510,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36486,7 +36519,7 @@
     "type": "mcp",
     "description": "Up-to-date documentation for your coding agent. Covers 1000s of public repos and sites. Built by [ref.tools](https://ref.tools/)",
     "source_url": "https://github.com/ref-tools/ref-tools-mcp",
-    "stars": 1079,
+    "stars": 1082,
     "pushed_at": "2026-04-11T20:24:29Z",
     "category": "documentation",
     "tags": [
@@ -36500,7 +36533,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36525,7 +36558,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36545,7 +36578,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36567,7 +36600,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36591,7 +36624,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36600,8 +36633,8 @@
     "type": "mcp",
     "description": "Provides seamless integration with [SonarQube](https://www.sonarsource.com/) Server or Cloud, and enables analysis of code snippets directly within the agent context",
     "source_url": "https://github.com/SonarSource/sonarqube-mcp-server",
-    "stars": 536,
-    "pushed_at": "2026-04-15T10:03:34Z",
+    "stars": 538,
+    "pushed_at": "2026-04-16T13:44:09Z",
     "category": "ai-ml",
     "tags": [
       "agent",
@@ -36615,7 +36648,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36643,7 +36676,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36675,7 +36708,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36693,7 +36726,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36711,7 +36744,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36729,7 +36762,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36747,7 +36780,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36765,7 +36798,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36796,7 +36829,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36830,7 +36863,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36863,7 +36896,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36893,7 +36926,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36911,7 +36944,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36936,7 +36969,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36954,7 +36987,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -36964,7 +36997,7 @@
     "description": "Interact with Webflow APIs to list and edit your site and CMS data.",
     "source_url": "https://github.com/webflow/mcp-server",
     "stars": 123,
-    "pushed_at": "2026-04-15T21:35:22Z",
+    "pushed_at": "2026-04-16T16:28:18Z",
     "category": "backend",
     "tags": [
       "built-with-fern",
@@ -36991,7 +37024,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37020,7 +37053,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37046,7 +37079,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37077,7 +37110,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37095,7 +37128,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37134,7 +37167,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37143,7 +37176,7 @@
     "type": "mcp",
     "description": "Talk with your Apple Notes",
     "source_url": "https://github.com/RafalWilinski/mcp-apple-notes",
-    "stars": 377,
+    "stars": 378,
     "pushed_at": "2024-12-17T15:49:29Z",
     "category": "ai-ml",
     "tags": [
@@ -37168,7 +37201,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37188,7 +37221,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37217,7 +37250,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37243,7 +37276,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37274,7 +37307,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37297,7 +37330,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37322,7 +37355,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37340,7 +37373,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37358,7 +37391,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37367,7 +37400,7 @@
     "type": "mcp",
     "description": "Clojure development tools, direct access to the running program via REPL.",
     "source_url": "https://github.com/bhauman/clojure-mcp",
-    "stars": 731,
+    "stars": 732,
     "pushed_at": "2026-03-14T17:54:19Z",
     "category": "tooling",
     "tags": [],
@@ -37383,7 +37416,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37409,7 +37442,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37437,7 +37470,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37462,7 +37495,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37496,7 +37529,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37518,7 +37551,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37556,7 +37589,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37574,7 +37607,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37609,7 +37642,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37652,7 +37685,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37661,7 +37694,7 @@
     "type": "mcp",
     "description": "MCP server acting as an interface to the Facebook Ads, enabling programmatic access to Facebook Ads data and management features.",
     "source_url": "https://github.com/gomarble-ai/facebook-ads-mcp-server",
-    "stars": 268,
+    "stars": 269,
     "pushed_at": "2025-08-21T08:05:50Z",
     "category": "tooling",
     "tags": [],
@@ -37678,7 +37711,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37718,7 +37751,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37743,7 +37776,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37752,7 +37785,7 @@
     "type": "mcp",
     "description": "MCP Server that connects AI agents to FHIR servers",
     "source_url": "https://github.com/the-momentum/fhir-mcp-server",
-    "stars": 74,
+    "stars": 75,
     "pushed_at": "2025-10-23T13:06:54Z",
     "category": "ai-ml",
     "tags": [
@@ -37789,7 +37822,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37813,7 +37846,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37822,7 +37855,7 @@
     "type": "mcp",
     "description": "MCP server acting as an interface to the Google Ads, enabling programmatic access to Google Ads data and management features.",
     "source_url": "https://github.com/gomarble-ai/google-ads-mcp-server",
-    "stars": 114,
+    "stars": 115,
     "pushed_at": "2025-12-17T05:51:32Z",
     "category": "backend",
     "tags": [
@@ -37839,7 +37872,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37848,7 +37881,7 @@
     "type": "mcp",
     "description": "A Model Context Protocol (MCP) server providing access to Google Search Console.",
     "source_url": "https://github.com/ahonn/mcp-server-gsc",
-    "stars": 204,
+    "stars": 206,
     "pushed_at": "2026-02-19T18:33:41Z",
     "category": "backend",
     "tags": [
@@ -37859,7 +37892,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37892,7 +37925,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37910,7 +37943,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37928,7 +37961,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37946,7 +37979,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37967,7 +38000,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -37990,7 +38023,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38015,7 +38048,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38038,7 +38071,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38080,7 +38113,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38111,7 +38144,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38121,7 +38154,7 @@
     "description": "A MCP Server that enhance your IDE with AI-powered assistance for Intlayer i18n / CMS tool: smart CLI access, versioned docs.",
     "source_url": "https://github.com/aymericzip/intlayer",
     "stars": 684,
-    "pushed_at": "2026-04-16T01:39:17Z",
+    "pushed_at": "2026-04-17T00:43:47Z",
     "category": "frontend",
     "tags": [
       "cms",
@@ -38146,7 +38179,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38164,7 +38197,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38185,7 +38218,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38220,7 +38253,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38252,7 +38285,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38275,7 +38308,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38284,7 +38317,7 @@
     "type": "mcp",
     "description": "MCP server for LunchMoney personal finance and budgeting tool.",
     "source_url": "https://github.com/akutishevsky/lunchmoney-mcp",
-    "stars": 58,
+    "stars": 60,
     "pushed_at": "2026-04-15T05:19:53Z",
     "category": "backend",
     "tags": [
@@ -38310,7 +38343,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38320,7 +38353,7 @@
     "description": "MCP server for accessing VS Code/Cursor's Local History.",
     "source_url": "https://github.com/xxczaki/local-history-mcp",
     "stars": 13,
-    "pushed_at": "2026-04-15T10:18:51Z",
+    "pushed_at": "2026-04-16T10:20:01Z",
     "category": "ai-ml",
     "tags": [
       "ai",
@@ -38340,7 +38373,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38375,7 +38408,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38399,7 +38432,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38408,7 +38441,7 @@
     "type": "mcp",
     "description": "Enhanced Maven Central integration with intelligent caching, bulk operations, and version classification",
     "source_url": "https://github.com/arvindand/maven-tools-mcp",
-    "stars": 19,
+    "stars": 20,
     "pushed_at": "2026-04-05T22:49:44Z",
     "category": "backend",
     "tags": [
@@ -38442,7 +38475,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38473,7 +38506,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38503,7 +38536,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38513,7 +38546,7 @@
     "description": "Model Kontext Protocol Server for Kubernetes that allows LLM-powered applications to interact with Kubernetes clusters through native Go implementation with direct API integration and comprehensive resource management.",
     "source_url": "https://github.com/StacklokLabs/mkp",
     "stars": 57,
-    "pushed_at": "2026-04-15T09:57:21Z",
+    "pushed_at": "2026-04-16T20:50:49Z",
     "category": "backend",
     "tags": [
       "go",
@@ -38524,7 +38557,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38554,7 +38587,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38588,7 +38621,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38597,7 +38630,7 @@
     "type": "mcp",
     "description": "Generate [mermaid](https://mermaid.js.org/) diagram and chart with AI MCP dynamically.",
     "source_url": "https://github.com/hustcc/mcp-mermaid",
-    "stars": 525,
+    "stars": 526,
     "pushed_at": "2026-03-28T00:28:08Z",
     "category": "ai-ml",
     "tags": [
@@ -38618,7 +38651,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38627,8 +38660,8 @@
     "type": "mcp",
     "description": "Remote MCP server to interact with Meta Ads API - access, analyze, and manage Facebook, Instagram, and other Meta platforms advertising campaigns.",
     "source_url": "https://github.com/pipeboard-co/meta-ads-mcp",
-    "stars": 779,
-    "pushed_at": "2026-04-15T18:56:15Z",
+    "stars": 784,
+    "pushed_at": "2026-04-16T23:51:57Z",
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -38636,7 +38669,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38678,7 +38711,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38718,7 +38751,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38746,7 +38779,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38773,7 +38806,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38797,7 +38830,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38807,7 +38840,7 @@
     "description": "Access the [OSV (Open Source Vulnerabilities) database](https://osv.dev/) for vulnerability information. Query vulnerabilities by package version or commit, batch query multiple packages, and get detailed vulnerability information by ID.",
     "source_url": "https://github.com/StacklokLabs/osv-mcp",
     "stars": 31,
-    "pushed_at": "2026-04-14T11:08:04Z",
+    "pushed_at": "2026-04-16T08:56:55Z",
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -38815,7 +38848,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38859,7 +38892,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38885,7 +38918,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38894,8 +38927,8 @@
     "type": "mcp",
     "description": "An MCP server for interacting with a Paperless-NGX API server. This server provides tools for managing documents, tags, correspondents, and document types in your Paperless-NGX instance.",
     "source_url": "https://github.com/baruchiro/paperless-mcp",
-    "stars": 88,
-    "pushed_at": "2026-04-15T10:31:33Z",
+    "stars": 90,
+    "pushed_at": "2026-04-16T16:42:33Z",
     "category": "ai-ml",
     "tags": [
       "ai",
@@ -38909,7 +38942,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38918,7 +38951,7 @@
     "type": "mcp",
     "description": "a macOS-only MCP server that enables AI agents to capture screenshots of applications, or the entire system.",
     "source_url": "https://github.com/steipete/Peekaboo",
-    "stars": 3123,
+    "stars": 3128,
     "pushed_at": "2026-03-28T04:18:13Z",
     "category": "mobile",
     "tags": [
@@ -38933,7 +38966,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38951,7 +38984,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38969,7 +39002,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -38998,7 +39031,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39024,7 +39057,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39050,7 +39083,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39068,7 +39101,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39097,7 +39130,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39115,7 +39148,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39147,7 +39180,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39174,7 +39207,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39192,7 +39225,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39201,7 +39234,7 @@
     "type": "mcp",
     "description": "AI-powered web scraping library that creates scraping pipelines using natural language.- [ScrapeGraphAI](https://scrapegraphai.com)",
     "source_url": "https://github.com/ScrapeGraphAI/Scrapegraph-ai",
-    "stars": 23311,
+    "stars": 23320,
     "pushed_at": "2026-04-09T09:46:22Z",
     "category": "backend",
     "tags": [
@@ -39231,7 +39264,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39260,7 +39293,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39284,7 +39317,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39293,8 +39326,8 @@
     "type": "mcp",
     "description": "MCP Server to let Claude / your AI control the browser",
     "source_url": "https://github.com/Skyvern-AI/skyvern/tree/main/integrations/mcp",
-    "stars": 21160,
-    "pushed_at": "2026-04-16T00:54:41Z",
+    "stars": 21197,
+    "pushed_at": "2026-04-17T00:52:39Z",
     "category": "backend",
     "tags": [
       "ai",
@@ -39319,7 +39352,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39354,7 +39387,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39363,7 +39396,7 @@
     "type": "mcp",
     "description": "MCP server for SQLite files. Supports Datasette-compatible metadata!",
     "source_url": "https://github.com/panasenco/mcp-sqlite",
-    "stars": 18,
+    "stars": 19,
     "pushed_at": "2026-01-26T17:34:00Z",
     "category": "database",
     "tags": [],
@@ -39372,7 +39405,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39396,7 +39429,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39416,7 +39449,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39453,7 +39486,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39486,7 +39519,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39504,7 +39537,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39534,7 +39567,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39544,7 +39577,7 @@
     "description": "Full implementation of Todoist Rest API for MCP server",
     "source_url": "https://github.com/stanislavlysenko0912/todoist-mcp-server",
     "stars": 60,
-    "pushed_at": "2026-04-12T09:37:25Z",
+    "pushed_at": "2026-04-16T02:53:54Z",
     "category": "backend",
     "tags": [
       "rest-api"
@@ -39554,7 +39587,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39563,7 +39596,7 @@
     "type": "mcp",
     "description": "Trello integration for working with boards, lists in boards and cards in lists.",
     "source_url": "https://github.com/m0xai/trello-mcp-server",
-    "stars": 52,
+    "stars": 53,
     "pushed_at": "2025-08-01T13:38:56Z",
     "category": "tooling",
     "tags": [],
@@ -39572,7 +39605,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39590,7 +39623,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39600,7 +39633,7 @@
     "description": "A Go implementation of a Model Context Protocol (MCP) server for Trino, enabling LLM models to query distributed SQL databases through standardized tools.",
     "source_url": "https://github.com/tuannvm/mcp-trino",
     "stars": 102,
-    "pushed_at": "2026-04-13T05:21:38Z",
+    "pushed_at": "2026-04-16T17:44:04Z",
     "category": "database",
     "tags": [
       "go",
@@ -39613,7 +39646,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39646,7 +39679,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39668,7 +39701,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39699,7 +39732,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39708,7 +39741,7 @@
     "type": "mcp",
     "description": "A server that provides local, full web search, summaries and page extration for use with Local LLMs.",
     "source_url": "https://github.com/mrkrsl/web-search-mcp",
-    "stars": 768,
+    "stars": 769,
     "pushed_at": "2025-08-08T19:58:47Z",
     "category": "ai-ml",
     "tags": [
@@ -39729,7 +39762,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39750,7 +39783,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39782,7 +39815,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39819,7 +39852,7 @@
       }
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   },
   {
@@ -39837,7 +39870,7 @@
       "method": "manual"
     },
     "source": "awesome-mcp-servers",
-    "last_synced": "2026-04-16",
+    "last_synced": "2026-04-17",
     "added_at": "2026-03-30"
   }
 ]
