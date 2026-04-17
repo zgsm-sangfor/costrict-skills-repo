@@ -49,20 +49,26 @@ The search index is an array where each entry contains:
 - `id`: unique identifier
 - `name`: display name
 - `type`: mcp | skill | rule | prompt
-- `description`: English description
-- `description_zh`: Chinese description
-- `source_url`: source code URL
-- `stars`: GitHub star count
 - `category`: category (frontend/backend/fullstack/mobile/devops/database/testing/security/ai-ml/tooling/documentation)
 - `tags`: tag array
 - `tech_stack`: tech stack array
+- `stars`: GitHub star count
+- `description`: English description
+- `description_zh`: Chinese description
+- `source_url`: source code URL
+- `final_score`: blended score 0-100 (LLM 6 dims × 85% + health 15%)
+- `decision`: gate verdict — `accept` / `review` / `reject` (unevaluated entries default to `review`)
+- `freshness_label`: `active` / `stale` / `abandoned` — derived from last commit age
+- `install_method`: top-level install method string (e.g., `mcp_config`, `git_clone`, `manual`)
+- `search_text`: pre-built merged blob of name + description + description_zh + tags + tech_stack + search_terms; optimal match target
 
-Per-entry API returns full entry data, additionally including `install` information.
+Per-entry API returns full entry data, additionally including `install`, `highlights`, and per-dimension `weak_dims` information.
 
 **Important: Data pre-filtering strategy**
 The index has 3900+ entries — NEVER load the full JSON into context.
 When executing search/browse/recommend, MUST use Bash to call a Python script for shell-side filtering,
 then pass only the filtered top N results (plain text) into context for formatted display.
+Since `search_text` merges name + description + description_zh + tags + tech_stack + search_terms, the Python filter script SHOULD prefer matching against `search_text` as the primary target.
 Python command cross-platform detection: `$(command -v python3 || command -v python)`
 
 ## Commands
@@ -77,11 +83,16 @@ Parse user input and match the following command patterns:
 3. Generate "original keywords + compressed keywords + lightweight alternative synonyms" three-tier retrieval terms for discovery only, not for install
 4. If type filter specified, filter the index by `type` field first
 5. Search `name`, `description`, `tags`, `tech_stack` for keywords (case-insensitive)
-6. Sort by match count, then by stars, to form a shortlist
-7. Fetch per-entry API details for the top 3-5 candidates, check `source`, `evaluation`, `health`, `install` fields
-8. Only gate-verified candidates enter the "Top Candidates" section; search hits alone do not equal recommendations
-9. For broad intents (e.g. deploy / release / publish), prioritize direct-action results; don't mix in changelog / release note adjacent intents on the first screen
-10. Display as "Top Candidates + Other Matches" two-tier structure; top candidates must include rationale, trust basis, and install next step
+6. Order candidates by the lexicographic descending key `(match_count, freshness_label != "abandoned", final_score, stars)` — match count is the primary relevance signal; within equal relevance, non-abandoned entries outrank abandoned ones (sorting `True > False`); within the same relevance + freshness tier, `final_score` breaks ties ahead of `stars`. Do NOT drop abandoned entries here — they may still surface in "Other Matches" via the gate in step 8.
+7. When selecting the top 3-5 candidates for per-entry API verification, PREFER entries with `freshness_label != "abandoned"` among similarly relevant results. Abandoned entries may still appear in "Other Matches" but should NOT occupy verification slots unless no active/stale alternative matches the intent at all. Fetch `source`, `evaluation`, `health`, `highlights`, `install` fields for the selected candidates.
+8. **Top Candidates gate (explicit)**: an entry enters "Top Candidates" only when ALL of:
+   1. `final_score >= 70`, AND
+   2. `freshness_label != "abandoned"`, AND
+   3. at least one tag / keyword / search_text hit.
+   Entries that fail (1) or (2) may still appear under "Other Matches"; pure search hits alone do not equal recommendations. The numeric floor decouples the gate from the rubric's `accept`/`review` symbol — a strong `review` entry (e.g. an official but thin-docs tool) can still reach Top Candidates on score alone.
+9. **Rationale composition**: for each Top Candidate, derive the rationale from `entry.highlights[0:2]` joined with `"; "`. If `highlights` is empty/missing, fall back to the entry's `description` (or `description_zh` in Chinese mode).
+10. For broad intents (e.g. deploy / release / publish), prioritize direct-action results; don't mix in changelog / release note adjacent intents on the first screen
+11. Display as "Top Candidates + Other Matches" two-tier structure; top candidates must include rationale, trust basis, and install next step
 
 ### browse [category] [type:mcp|skill|rule|prompt]
 
@@ -111,12 +122,17 @@ Parse user input and match the following command patterns:
 3. Generate lightweight recommendation keywords from detected stack (e.g. `react performance`, `docker ci-cd`)
 4. Match detected stack tags against each entry's `tags` and `tech_stack`, supplemented by recommendation keyword matching
 5. If type filter specified, filter by `type` field
-6. Sort by matched tag count, then by stars, to form shortlist
-7. Fetch per-entry API for top 3-5 candidates; check project fit, source trust, quality signals, and install feasibility
-8. Unless user explicitly requests `type:mcp`, prioritize `skill/rule/prompt` that directly serve the project's implementation/constraints/workflow; don't let official MCP tools dominate just because they have stronger install signals
-9. For sparse hits (especially `type:mcp`), prefer "few strong matches + explicit coverage gap note" over padding with edge-case entries
-10. Only gate-verified candidates enter the "Top Candidates" section; remaining results go to "Other Matches"
-11. Top candidates must explain both "why it fits the current project" and "why it's trustworthy", with install next step
+6. Order candidates by the lexicographic descending key `(matched_tags, freshness_label != "abandoned", final_score, stars)` — matched tag/keyword count is the primary relevance signal; within equal relevance, non-abandoned entries outrank abandoned ones (sorting `True > False`); within the same relevance + freshness tier, `final_score` breaks ties ahead of `stars`. Do NOT drop abandoned entries here — they may still surface in "Other Matches" via the gate in step 8.
+7. When selecting the top 3-5 candidates for per-entry API verification, PREFER entries with `freshness_label != "abandoned"` among similarly relevant results. Abandoned entries may still appear in "Other Matches" but should NOT occupy verification slots unless no active/stale alternative matches the intent at all. Fetch project fit, source trust, quality signals, `highlights`, and install feasibility for the selected candidates.
+8. **Top Candidates gate (explicit)**: an entry enters "Top Candidates" only when ALL of:
+   1. `final_score >= 70`, AND
+   2. `freshness_label != "abandoned"`, AND
+   3. at least one tag / keyword / search_text hit.
+   Entries that fail (1) or (2) may still appear under "Other Matches". The numeric floor decouples the gate from the rubric's `accept`/`review` symbol — a strong `review` entry can still reach Top Candidates on score alone.
+9. **Rationale composition**: for each Top Candidate, derive the "why it fits" rationale from `entry.highlights[0:2]` joined with `"; "`. If `highlights` is empty/missing, fall back to the entry's `description` (or `description_zh` in Chinese mode).
+10. Unless user explicitly requests `type:mcp`, prioritize `skill/rule/prompt` that directly serve the project's implementation/constraints/workflow; don't let official MCP tools dominate just because they have stronger install signals
+11. For sparse hits (especially `type:mcp`), prefer "few strong matches + explicit coverage gap note" over padding with edge-case entries
+12. Top candidates must explain both "why it fits the current project" and "why it's trustworthy", with install next step
 
 ### install <id>
 
@@ -188,6 +204,27 @@ Warn that skills are global (`~/.claude/skills/`) — customization affects all 
 1. Pull latest version of resource files from GitHub to overwrite local installation
 2. Supports updating itself (update everything-ai-coding) or other installed resources
 3. Show update progress and result
+
+### Top Candidate warnings
+
+Warnings apply only to entries rendered in the "Top Candidates" section of `search` or `recommend`. Append each warning as a separate line immediately under the candidate's rationale, using the active output language.
+
+**Weak dimensions**: when a Top Candidate has a non-empty `weak_dims` array in its per-entry data, append one `⚠️` line per dimension using the active-language label.
+
+Bilingual label map:
+
+```
+coding_relevance → 编码相关度 / coding relevance
+doc_completeness → 文档完整度 / doc completeness
+desc_accuracy   → 描述准确度 / description accuracy
+writing_quality → 文档写作质量 / writing quality
+specificity     → 针对性 / specificity
+install_clarity → 安装步骤清晰度 / install clarity
+```
+
+Unknown-dimension fallback: if `weak_dims` contains a name not in the map (e.g. from a future rubric version), render the raw dimension name as the label — do not error or drop it.
+
+**Stale freshness**: when a Top Candidate has `freshness_label == "stale"`, append a `⚠️` line — Chinese mode "半年未更新", English mode "half a year without update". No warning is emitted when `freshness_label == "active"`; `"abandoned"` entries are already excluded by the Top Candidates gate.
 
 ## GitHub Network Detection
 

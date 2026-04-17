@@ -54,19 +54,23 @@ Full index fallback: `https://raw.githubusercontent.com/zgsm-ai/everything-ai-co
 4. Download index to temp file: `curl -sf --compressed <index URL> -o "$TMPDIR/everything-ai-coding-index.json"`, on failure try Fallback URL, then local fallback
 5. Pre-filter with Python (cross-platform: use `$(command -v python3 || command -v python)`):
    - Load JSON file
-   - Match detected project tags against each entry's `tags` + `tech_stack`, supplement with lightweight recommendation keyword matching
+   - Match detected project tags against each entry's `tags` + `tech_stack`, supplement with lightweight recommendation keyword matching (prefer `search_text` when available)
    - If type filter specified, filter by `type` field first
-   - Sort by matched tag count, then by stars
-   - Output top 15, each line: `id\ttype\tmatched_tags\tstars\tinstall_method\tsource_url\tdescription\tdescription_zh` (TSV plain text)
+   - Score each entry by the lexicographic descending key `(matched_tags, freshness_label != "abandoned", final_score, stars)` — `matched_tags` (number of distinct project tags/keywords hit) is the primary relevance signal; within equal relevance, non-abandoned entries outrank abandoned ones (sorting `True > False`); within the same relevance + freshness tier, `final_score` breaks ties ahead of `stars`. Treat missing `freshness_label` as not-abandoned and missing `final_score` as `0`. Do NOT drop abandoned entries here — the gate in step 7 handles them, and they may still surface in "Other Matches".
+   - Keep `freshness_label` in the TSV so step 6 can apply the freshness preference and step 8 can render the stale warning: emit `id\ttype\tmatched_tags\tstars\tfinal_score\tdecision\tfreshness_label\tinstall_method\tsource_url\tdescription\tdescription_zh` (output top 15)
 6. From shortlist, select top 3-5 candidates and fetch per-entry API for verification:
-   - Prefer `source`, `evaluation`, `health`, `install`, `source_url`
+   - **Freshness preference**: when two candidates are similarly relevant (same `matched_tags` count and comparable project fit), PREFER entries with `freshness_label != "abandoned"`. Abandoned entries can still appear in "Other Matches" but should NOT occupy verification slots unless no active/stale alternative matches the project at all. If the shortlist genuinely has no active/stale matches, it is acceptable to verify abandoned candidates and note the staleness in the output.
+   - Prefer `source`, `evaluation`, `health`, `install`, `source_url`, `tags`, `highlights`, `weak_dims`, `freshness_label`
    - Combine with current project stack to judge "does this truly fit the current project" — not just coincidental tag matches
 7. **Candidate Verification Gate (mandatory)**
-   - NEVER label all matches as "recommendations"
-   - A candidate enters the "Top Candidates" section ONLY when it satisfies: **clear project match + ≥1 trust signal + ≥1 actionable signal**
-   - Trust signal examples: official/curated source, well-known origin, notable quality/health signals
-   - Actionable signal examples: install method is defined, per-entry API provides complete install info
-   - If the gate is not met, output "project matches" or "worth checking" — never force the label "recommendation"
+   - NEVER label all matches as "recommendations" based solely on tag overlap or stars
+   - A candidate enters the "Top Candidates" section ONLY when ALL of the following hold:
+     1. `final_score >= 70`, AND
+     2. `freshness_label != "abandoned"`, AND
+     3. at least one tag / keyword / `search_text` hit.
+   - Entries failing (1) or (2) are routed to "Other Matches" — they MUST NOT appear in "Top Candidates".
+   - The numeric floor (≥70) decouples the gate from the rubric's `accept`/`review` symbol; a strong `review` entry can still reach Top Candidates on score alone. Treat missing `final_score` as `0` (i.e. not eligible).
+   - If no candidate passes the gate, output "project matches" or "worth checking" — never force the label "recommendation".
    - **Type bias correction**: without `type:mcp` constraint, do not let MCP entries dominate over more project-relevant skill/prompt/rule just because MCP has stronger official/install signals
    - **Sparse hit rule (especially `type:mcp`)**: if the current stack has no obvious specialized candidates, prefer "2 strong matches + explicit thin-coverage note" over padding the list with edge-case entries
 8. Format results as "Top Candidates + Other Matches" two-tier output, with these constraints:
@@ -74,6 +78,20 @@ Full index fallback: `https://raw.githubusercontent.com/zgsm-ai/everything-ai-co
    - Other Matches: default 2-4 supplementary items, do not expand into a long list
    - NEVER expose raw scoring fields or internal sort fields in the main response — translate into brief user-understandable rationale
    - NEVER repeat install commands under each entry — consolidate install actions into a final "suggested install" section
+   - **Rationale**: for each Top Candidate, derive the "why it fits" rationale from `highlights[0:2]` joined with `"; "`. If `highlights` is empty/missing, fall back to `description` (or `description_zh` in Chinese mode).
+   - **Weak-dimension warnings**: when a Top Candidate has a non-empty `weak_dims` array, append one `⚠️` line per weak dimension using the active-language label. Bilingual label map:
+
+     ```
+     coding_relevance → 编码相关度 / coding relevance
+     doc_completeness → 文档完整度 / doc completeness
+     desc_accuracy    → 描述准确度 / description accuracy
+     writing_quality  → 文档写作质量 / writing quality
+     specificity      → 针对性 / specificity
+     install_clarity  → 安装步骤清晰度 / install clarity
+     ```
+
+     Unknown-dimension fallback: if `weak_dims` contains a name not in the map (e.g. future rubric version), render the raw dimension name as the label — do not error or drop it.
+   - **Stale freshness warning**: when a Top Candidate has `freshness_label == "stale"`, append a `⚠️` line — Chinese mode `⚠️ 半年未更新`, English mode `⚠️ half a year without update`. No warning when `freshness_label == "active"`; `"abandoned"` entries are already excluded by the gate.
 
 ## Output Structure
 
