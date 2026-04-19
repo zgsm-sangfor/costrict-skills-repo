@@ -230,6 +230,7 @@ Everything AI Coding supports four AI coding platforms. The resource catalog is 
 | Install | `/everything-ai-coding:install <id>` | `/everything-ai-coding-install <id>` | `/everything-ai-coding-install <id>` | `/everything-ai-coding-install <id>` |
 | Uninstall | `/everything-ai-coding:uninstall <id>` | `/everything-ai-coding-uninstall <id>` | `/everything-ai-coding-uninstall <id>` | `/everything-ai-coding-uninstall <id>` |
 | Update | `/everything-ai-coding:update` | `/everything-ai-coding-update` | `/everything-ai-coding-update` | `/everything-ai-coding-update` |
+| Evo | `/everything-ai-coding:evo <id>` | `/everything-ai-coding-evo <id>` | `/everything-ai-coding-evo <id>` | `/everything-ai-coding-evo <id>` |
 
 <details>
 <summary>Platform path differences</summary>
@@ -383,6 +384,7 @@ Expected result: a Markdown table of matching resources. If the command is missi
 | `install <id>` | Install a resource |
 | `uninstall <id>` | Uninstall a resource |
 | `update` | Pull the latest Everything AI Coding files |
+| `evo <id>` | Evolve a locally installed skill / prompt / rule via a 7-dimension quality rubric (adapted from [darwin-skill](https://github.com/alchaincyf/darwin-skill)) |
 
 #### Data endpoints
 
@@ -411,6 +413,12 @@ Contributions are welcome. Open a PR against the appropriate directory under `ca
 - follows `catalog/schema.json`.
 
 If you need maintainers' context instead of quick-start instructions, see the repository wiki in [`docs/wiki/`](./docs/wiki/README.md).
+
+## Acknowledgments
+
+The `/everything-ai-coding:evo` command's quality rubric is adapted from **[darwin-skill](https://github.com/alchaincyf/darwin-skill)** by 花叔 (MIT License) — an autonomous skill optimization system inspired by Karpathy's autoresearch. darwin-skill first systematized a "structure + effectiveness" dual-evaluation framework for SKILL.md files with a ratchet mechanism for keeping only measurable improvements. Everything AI Coding simplifies it for on-demand client-side use: the dynamic live-testing dimension and the ratchet are deferred; the core dimensions (workflow clarity, instruction specificity, edge-case coverage, checkpoint design, overall architecture, etc.) are preserved and rewritten for our on-demand evo context. See [`docs/wiki/evo-rubric.md`](./docs/wiki/evo-rubric.md) for the full rubric specification.
+
+Thanks to 花叔 for making the ideas and the original skill publicly available.
 
 ## Disclaimer
 

@@ -230,6 +230,7 @@ Everything AI Coding 当前支持四个 AI Coding 平台，共用同一份资源
 | 安装 | `/everything-ai-coding:install <id>` | `/everything-ai-coding-install <id>` | `/everything-ai-coding-install <id>` | `/everything-ai-coding-install <id>` |
 | 卸载 | `/everything-ai-coding:uninstall <id>` | `/everything-ai-coding-uninstall <id>` | `/everything-ai-coding-uninstall <id>` | `/everything-ai-coding-uninstall <id>` |
 | 更新 | `/everything-ai-coding:update` | `/everything-ai-coding-update` | `/everything-ai-coding-update` | `/everything-ai-coding-update` |
+| 进化 | `/everything-ai-coding:evo <id>` | `/everything-ai-coding-evo <id>` | `/everything-ai-coding-evo <id>` | `/everything-ai-coding-evo <id>` |
 
 <details>
 <summary>平台路径差异</summary>
@@ -383,6 +384,7 @@ done
 | `install <名称>` | 安装资源 |
 | `uninstall <名称>` | 卸载资源 |
 | `update` | 更新到最新版本 |
+| `evo <id>` | 对已在本机装好的 skill / prompt / rule 做 7 维质量评分与改进（rubric 改编自 [darwin-skill](https://github.com/alchaincyf/darwin-skill)） |
 
 #### 数据接口
 
@@ -411,6 +413,12 @@ done
 - 数据格式符合 `catalog/schema.json`。
 
 如果你需要的是维护视角的上下文，而不是快速安装说明，可以继续看仓库内 wiki：[`docs/wiki/`](./docs/wiki/README.md)。
+
+## 致谢
+
+`/everything-ai-coding:evo` 命令的质量评分 rubric 改编自 **[darwin-skill](https://github.com/alchaincyf/darwin-skill)**（MIT License © 花叔）—— 一个受 Karpathy autoresearch 启发的自主 skill 优化系统。darwin-skill 首次在 SKILL.md 语境下系统化提出"结构 + 效果"双重评估与棘轮机制（只保留可测量的改进）。Everything AI Coding 在客户端按需场景下作了简化适配：暂缓动态实测维和棘轮机制，保留并重写了工作流清晰度、指令具体性、边界条件覆盖、检查点设计、整体架构等核心维度，以适配 evo 按需调用的交互节奏。完整 rubric 规范见 [`docs/wiki/evo-rubric.md`](./docs/wiki/evo-rubric.md)。
+
+感谢花叔把想法与原 skill 开源出来。
 
 ## 免责声明
 

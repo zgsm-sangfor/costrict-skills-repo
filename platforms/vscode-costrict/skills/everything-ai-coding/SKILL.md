@@ -3,7 +3,7 @@ name: everything-ai-coding
 description: >
   One-stop search and install for coding resources. Aggregates MCP Servers, Skills, Rules, and Prompts.
   Supports search, category browsing, project-based recommendations, and one-click install.
-  Trigger: /everything-ai-coding-search <query> | /everything-ai-coding-browse [category] | /everything-ai-coding-recommend | /everything-ai-coding-install <id> | /everything-ai-coding-uninstall <id> | /everything-ai-coding-update <id>
+  Trigger: /everything-ai-coding-search <query> | /everything-ai-coding-browse [category] | /everything-ai-coding-recommend | /everything-ai-coding-install <id> | /everything-ai-coding-uninstall <id> | /everything-ai-coding-update <id> | /everything-ai-coding-evo <id>
 ---
 
 # Everything AI Coding
@@ -182,6 +182,8 @@ Warn that skills are global (`~/.claude/skills/`) — customization affects all 
 
 **Diff preview**: Show semantic summary of changes (by section, not line-by-line), then ask "Apply changes? (Y/n/edit)". Y = apply, n = keep original, edit = provide more instructions and iterate.
 
+**Evo hint (after customization completes)**: When step 6 finishes (regardless of whether the user accepted or skipped customization), check whether the per-entry API response contains a non-empty `weak_dims` array. If so, display a one-block hint suggesting `/everything-ai-coding-evo <id>` for targeted improvement, listing the weak dimension labels in the active output language (use the existing bilingual label map from the "Top Candidate warnings" section). Do NOT display this hint for MCP-type resources. Do NOT display it when `weak_dims` is empty or missing. The hint is purely informational — it does not prompt for input.
+
 7. Show result and usage instructions after installation
 
 ### uninstall <id>
@@ -204,6 +206,32 @@ Warn that skills are global (`~/.claude/skills/`) — customization affects all 
 1. Pull latest version of resource files from GitHub to overwrite local installation
 2. Supports updating itself (update everything-ai-coding) or other installed resources
 3. Show update progress and result
+
+### evo <id>
+
+Client-side quality evolution for an already-installed skill / prompt / rule. Scores the local copy with a 7-dimension rubric (4-dimension for prompt/rule) adapted from [darwin-skill](https://github.com/alchaincyf/darwin-skill), lets the user pick weak dimensions to improve, generates targeted edits via LLM, and writes the approved changes back to the local copy. Does **not** touch the catalog, does **not** PR upstream, does **not** run in CI.
+
+**Applicability**:
+- Supported types: `skill`, `prompt`, `rule`
+- Refused type: `mcp` (configuration-only, no text body to improve)
+
+**Flow** (refer to the full command file `commands/everything-ai-coding/everything-ai-coding-evo.md` for detailed rubric, LLM prompt templates, and history.json schema):
+
+1. Parse `<id>` from arguments
+2. Resolve `type` via search index (reject if `mcp`)
+3. Locate local copy (`~/.claude/skills/<id>/SKILL.md` for skills; `.claude/rules/<id>.md` or `~/.claude/rules/<id>.md` for prompts/rules). If not installed, stop and suggest running install first.
+4. Static lint pre-flight (frontmatter integrity for skills; basic markdown sanity for all). Lint failure halts the flow — no LLM call.
+5. (Optional) Fetch per-entry API and display catalog `weak_dims` as a starting hint
+6. LLM scoring using the rubric in `docs/wiki/evo-rubric.md` — returns per-dimension score + rationale + suggestion + weighted total
+7. Display results ordered by score ascending; prompt user to pick dimensions: `all` / comma-separated numbers / `skip`
+8. LLM improvement call with selected dimensions as targets
+9. Diff preview (section-level semantic summary); prompt `Y/n/edit`
+10. On `Y`, write the improved content back to the local file; on `n`, leave unchanged; on `edit`, iterate with added instructions
+11. Append a history entry to `~/.claude/.evo/<id>/history.json` (open-field schema — see `docs/wiki/evo-rubric.md`)
+
+**Rubric source of truth**: `docs/wiki/evo-rubric.md` in the main repository.
+
+**Attribution**: Rubric adapted from [darwin-skill](https://github.com/alchaincyf/darwin-skill) by 花叔 (MIT License). See README acknowledgment.
 
 ### Top Candidate warnings
 

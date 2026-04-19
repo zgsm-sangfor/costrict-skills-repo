@@ -170,6 +170,49 @@ merge_index.py
 - `EVAL_DRY_RUN`（默认 `true`，reject 条目仅标记不删除）
 - `EVAL_INCREMENTAL`（CI 中硬编码 `true`，防止意外全量评估）
 
+## Evo 命令（客户端质量演化）
+
+`/everything-ai-coding:evo <id>` 对用户**本机已安装**的 skill / prompt / rule 做靶向质量改进。与 catalog 入库评分管线（`ai-resource-eval` 的 6 维）**架构分离、互不干扰**。
+
+**双 rubric 架构**：
+
+| 管线 | 位置 | Rubric | 触发 | 落点 |
+|------|------|--------|------|------|
+| Catalog 入库 | 服务端，CI | 6 维：coding_relevance / doc_completeness / desc_accuracy / writing_quality / specificity / install_clarity | 每周 cron + workflow_dispatch | per-entry API 的 `decision` / `weak_dims` |
+| Evo 质量演化 | 客户端，按需 | Skill 7 维 / Prompt+Rule 4 维（详见 `docs/wiki/evo-rubric.md`） | 用户 `/evo <id>` 或 install 后 weak_dims 非空时提示 | 用户本机副本 + `~/.claude/.evo/<id>/history.json` |
+
+**Evo Rubric 维度**（改编自 [darwin-skill](https://github.com/alchaincyf/darwin-skill)，MIT License © 花叔）：
+
+- **Skill（7 维 + 静态 lint）**：D1 Frontmatter.description 质量（10）/ D2 工作流清晰度（20）/ D3 指令具体性（20）/ D4 边界条件覆盖（15）/ D5 检查点设计（10）/ D6 资源整合度（5）/ D7 整体架构（20）
+- **Prompt / Rule（4 维）**：D2（31）/ D3（31）/ D6（8）/ D7（30），权重归一到 100
+- **静态 lint（0 token 预检）**：frontmatter 字段完整性 + markdown 合法性，lint 不过先修再评
+
+**本机数据落盘**：
+
+```
+~/.claude/.evo/<id>/history.json    # claude-code
+~/.opencode/.evo/<id>/history.json  # opencode
+~/.costrict/.evo/<id>/history.json  # costrict + vscode-costrict
+```
+
+history.json 使用 **开放字段 schema**（`dimensions` 是 map 而非固定 record），后期加新维度 / 新字段不破坏历史数据。rubric_version 当前为 `"1.0"`。
+
+**关键边界**：evo **不写 catalog、不发上游 PR、不跑在 CI**。完全客户端按需触发，LLM 成本发生在用户本机（沿用本机 Claude Code 环境的 LLM 会话）。
+
+### 后期增强项（未实施，保留扩展位）
+
+1. **动态实测表现维（25% 权重）**：真跑 skill + 测试用例对比 baseline 评价输出质量。依赖：测试用例管理（第一次 LLM 生成 + 本机缓存 + 增量扩充）。增量策略：`content_hash_before` 未变复用，变了用历史 baseline 用例重跑。
+2. **棘轮机制**：改后全维度重评，`final_score > baseline + ε` 才落盘，否则回滚到上次 SHA-256 快照。依赖：先验证当前 LLM 评估方差（DeepSeek 基准显示偏高但可信，方差未测）。
+3. **独立评分子 agent**：改动 agent 与评分 agent 分离，避免左右互搏。依赖：Agent SDK 的子 agent spawn 能力。
+4. **使用反馈 hook**（最后期，可能不做）：opt-in 记录 skill 调用 / 卸载事件，生成 `feedback-signal.json`，驱动"被动追踪 + 主动建议"的 Inbox。
+
+**增量更新保证**：上述所有增强项都满足"不破坏已有数据"——history.json 的开放 schema + content_hash 复用 + rubric_version 版本号使得新维度 / 新步骤只能追加字段、不能改语义。参考 darwin-skill 的棘轮 + SHA-256 快照思路。
+
+**源文件**：
+- 命令行为契约：`platforms/{platform}/commands/everything-ai-coding/.../evo.md`（claude-code）或 `everything-ai-coding-evo.md`（其他 3 平台）
+- Rubric 规范：`docs/wiki/evo-rubric.md`
+- Change proposal：`openspec/changes/add-evo-command/` 归档后迁到 `openspec/specs/evo-command/spec.md`
+
 ## 注意事项
 
 - `catalog/index.json`、各类型 `index.json`、`catalog/featured*.md` 由 CI 生成并提交，供 skill 命令与 README 渲染使用
