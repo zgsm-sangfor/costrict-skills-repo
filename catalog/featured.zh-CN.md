@@ -1,6 +1,6 @@
 ## ⭐ 精选推荐
 
-> 从 4025+ 资源中按使用场景精选。安装后可使用 `/everything-ai-coding:search` 搜索完整索引，或通过 `/everything-ai-coding:recommend` 获取项目级推荐。
+> 从 4025+ 资源中按使用场景精选。安装后可使用 `/eac:search` 搜索完整索引，或通过 `/eac:recommend` 获取项目级推荐。
 
 ### 🌐 浏览器与自动化
 

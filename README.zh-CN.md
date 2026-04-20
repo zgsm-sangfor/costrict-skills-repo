@@ -198,10 +198,10 @@ irm https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/install.
 
 ```bash
 # Claude Code
-/everything-ai-coding:search typescript
+/eac:search typescript
 
 # Opencode / Costrict CLI / VSCode Costrict (Roo Code)
-/everything-ai-coding-search typescript
+/eac-search typescript
 ```
 
 <video src="https://github.com/user-attachments/assets/552d5405-48c9-4d26-9fb0-34a2715efa24" controls width="100%"></video>
@@ -224,21 +224,21 @@ Everything AI Coding 当前支持四个 AI Coding 平台，共用同一份资源
 
 | | Claude Code | Costrict | Opencode | VSCode Costrict (Roo Code) |
 |---|---|---|---|---|
-| 搜索 | `/everything-ai-coding:search <kw> [type:mcp]` | `/everything-ai-coding-search <kw> [type:mcp]` | `/everything-ai-coding-search <kw> [type:mcp]` | `/everything-ai-coding-search <kw> [type:mcp]` |
-| 浏览 | `/everything-ai-coding:browse [category]` | `/everything-ai-coding-browse [category]` | `/everything-ai-coding-browse [category]` | `/everything-ai-coding-browse [category]` |
-| 推荐 | `/everything-ai-coding:recommend` | `/everything-ai-coding-recommend` | `/everything-ai-coding-recommend` | `/everything-ai-coding-recommend` |
-| 安装 | `/everything-ai-coding:install <id>` | `/everything-ai-coding-install <id>` | `/everything-ai-coding-install <id>` | `/everything-ai-coding-install <id>` |
-| 卸载 | `/everything-ai-coding:uninstall <id>` | `/everything-ai-coding-uninstall <id>` | `/everything-ai-coding-uninstall <id>` | `/everything-ai-coding-uninstall <id>` |
-| 更新 | `/everything-ai-coding:update` | `/everything-ai-coding-update` | `/everything-ai-coding-update` | `/everything-ai-coding-update` |
-| 进化 | `/everything-ai-coding:evo <id>` | `/everything-ai-coding-evo <id>` | `/everything-ai-coding-evo <id>` | `/everything-ai-coding-evo <id>` |
+| 搜索 | `/eac:search <kw> [type:mcp]` | `/eac-search <kw> [type:mcp]` | `/eac-search <kw> [type:mcp]` | `/eac-search <kw> [type:mcp]` |
+| 浏览 | `/eac:browse [category]` | `/eac-browse [category]` | `/eac-browse [category]` | `/eac-browse [category]` |
+| 推荐 | `/eac:recommend` | `/eac-recommend` | `/eac-recommend` | `/eac-recommend` |
+| 安装 | `/eac:install <id>` | `/eac-install <id>` | `/eac-install <id>` | `/eac-install <id>` |
+| 卸载 | `/eac:uninstall <id>` | `/eac-uninstall <id>` | `/eac-uninstall <id>` | `/eac-uninstall <id>` |
+| 更新 | `/eac:update` | `/eac-update` | `/eac-update` | `/eac-update` |
+| 进化 | `/eac:evo <id>` | `/eac-evo <id>` | `/eac-evo <id>` | `/eac-evo <id>` |
 
 <details>
 <summary>平台路径差异</summary>
 
 | | Claude Code | Costrict | VSCode Costrict | Opencode |
 |---|---|---|---|---|
-| 全局 Skill 路径 | `~/.claude/skills/everything-ai-coding/` | `~/.costrict/skills/everything-ai-coding/` | `~/.costrict/skills/everything-ai-coding/` | `~/.opencode/skills/everything-ai-coding/` |
-| 命令路径 | 同一全局目录 | `.costrict/everything-ai-coding/commands/`（项目级） | `~/.roo/commands/`（全局） | `.opencode/command/`（项目级） |
+| 全局 Skill 路径 | `~/.claude/skills/eac/` | `~/.costrict/skills/eac/` | `~/.costrict/skills/eac/` | `~/.opencode/skills/eac/` |
+| 命令路径 | 同一全局目录 | `.costrict/eac/commands/`（项目级） | `~/.roo/commands/`（全局） | `.opencode/command/`（项目级） |
 | 分隔符 | `:` | `-` | `-` | `-` |
 
 - **Costrict CLI** 需要在每个项目根目录安装命令文件。
@@ -315,43 +315,43 @@ curl -fsSL https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/i
 **Costrict CLI**（Skill 全局 + Commands 项目级）
 
 ```bash
-mkdir -p ~/.costrict/skills/everything-ai-coding
-curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/costrict/skills/everything-ai-coding/SKILL.md" -o ~/.costrict/skills/everything-ai-coding/SKILL.md
-mkdir -p .costrict/everything-ai-coding/commands
+mkdir -p ~/.costrict/skills/eac
+curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/costrict/skills/eac/SKILL.md" -o ~/.costrict/skills/eac/SKILL.md
+mkdir -p .costrict/eac/commands
 for cmd in search browse recommend install uninstall update; do
-  curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/costrict/commands/everything-ai-coding/everything-ai-coding-${cmd}.md" -o .costrict/everything-ai-coding/commands/everything-ai-coding-${cmd}.md
+  curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/costrict/commands/eac/eac-${cmd}.md" -o .costrict/eac/commands/eac-${cmd}.md
 done
 ```
 
 **VSCode Costrict 插件 / Roo Code**（Skill 全局 + Commands 全局）
 
 ```bash
-mkdir -p ~/.costrict/skills/everything-ai-coding
-curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/vscode-costrict/skills/everything-ai-coding/SKILL.md" -o ~/.costrict/skills/everything-ai-coding/SKILL.md
+mkdir -p ~/.costrict/skills/eac
+curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/vscode-costrict/skills/eac/SKILL.md" -o ~/.costrict/skills/eac/SKILL.md
 mkdir -p ~/.roo/commands
 for cmd in search browse recommend install uninstall update; do
-  curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/vscode-costrict/commands/everything-ai-coding/everything-ai-coding-${cmd}.md" -o ~/.roo/commands/everything-ai-coding-${cmd}.md
+  curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/vscode-costrict/commands/eac/eac-${cmd}.md" -o ~/.roo/commands/eac-${cmd}.md
 done
 ```
 
 **Claude Code**（Skill + Commands 全局安装）
 
 ```bash
-mkdir -p ~/.claude/skills/everything-ai-coding
-curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/claude-code/skills/everything-ai-coding/SKILL.md" -o ~/.claude/skills/everything-ai-coding/SKILL.md
+mkdir -p ~/.claude/skills/eac
+curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/claude-code/skills/eac/SKILL.md" -o ~/.claude/skills/eac/SKILL.md
 for cmd in search browse recommend install uninstall update; do
-  curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/claude-code/commands/everything-ai-coding/${cmd}.md" -o ~/.claude/skills/everything-ai-coding/${cmd}.md
+  curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/claude-code/commands/eac/${cmd}.md" -o ~/.claude/skills/eac/${cmd}.md
 done
 ```
 
 **Opencode**（Skill 全局 + Commands 项目级）
 
 ```bash
-mkdir -p ~/.opencode/skills/everything-ai-coding
-curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/opencode/skills/everything-ai-coding/SKILL.md" -o ~/.opencode/skills/everything-ai-coding/SKILL.md
+mkdir -p ~/.opencode/skills/eac
+curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/opencode/skills/eac/SKILL.md" -o ~/.opencode/skills/eac/SKILL.md
 mkdir -p .opencode/command
 for cmd in search browse recommend install uninstall update; do
-  curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/opencode/command/everything-ai-coding-${cmd}.md" -o .opencode/command/everything-ai-coding-${cmd}.md
+  curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/opencode/command/eac-${cmd}.md" -o .opencode/command/eac-${cmd}.md
 done
 ```
 
@@ -363,13 +363,13 @@ done
 
 ```text
 # Costrict CLI / Opencode
-/everything-ai-coding-search typescript
+/eac-search typescript
 
 # VSCode Costrict 插件
-在聊天窗口发送："用 everything-ai-coding 搜索 typescript"
+在聊天窗口发送："用 eac 搜索 typescript"
 
 # Claude Code
-/everything-ai-coding:search typescript
+/eac:search typescript
 ```
 
 期望结果：返回一个 Markdown 表格，列出匹配资源。如果命令不存在，说明文件没有安装到正确的平台路径。
@@ -416,7 +416,7 @@ done
 
 ## 致谢
 
-`/everything-ai-coding:evo` 命令的质量评分 rubric 改编自 **[darwin-skill](https://github.com/alchaincyf/darwin-skill)**（MIT License © 花叔）—— 一个受 Karpathy autoresearch 启发的自主 skill 优化系统。darwin-skill 首次在 SKILL.md 语境下系统化提出"结构 + 效果"双重评估与棘轮机制（只保留可测量的改进）。Everything AI Coding 在客户端按需场景下作了简化适配：暂缓动态实测维和棘轮机制，保留并重写了工作流清晰度、指令具体性、边界条件覆盖、检查点设计、整体架构等核心维度，以适配 evo 按需调用的交互节奏。完整 rubric 规范见 [`docs/wiki/evo-rubric.md`](./docs/wiki/evo-rubric.md)。
+`/eac:evo` 命令的质量评分 rubric 改编自 **[darwin-skill](https://github.com/alchaincyf/darwin-skill)**（MIT License © 花叔）—— 一个受 Karpathy autoresearch 启发的自主 skill 优化系统。darwin-skill 首次在 SKILL.md 语境下系统化提出"结构 + 效果"双重评估与棘轮机制（只保留可测量的改进）。Everything AI Coding 在客户端按需场景下作了简化适配：暂缓动态实测维和棘轮机制，保留并重写了工作流清晰度、指令具体性、边界条件覆盖、检查点设计、整体架构等核心维度，以适配 evo 按需调用的交互节奏。完整 rubric 规范见 [`docs/wiki/evo-rubric.md`](./docs/wiki/evo-rubric.md)。
 
 感谢花叔把想法与原 skill 开源出来。
 

@@ -1,6 +1,6 @@
 # Evo Rubric — 客户端质量演化评分标准
 
-本文档是 `/everything-ai-coding:evo` 命令所用评分体系的**规范源**。4 个平台的 evo 命令文件（claude-code / opencode / costrict / vscode-costrict）在此基础上撰写 LLM 评分与改进 prompt。
+本文档是 `/eac:evo` 命令所用评分体系的**规范源**。4 个平台的 evo 命令文件（claude-code / opencode / costrict / vscode-costrict）在此基础上撰写 LLM 评分与改进 prompt。
 
 **rubric 改编自**：[darwin-skill](https://github.com/alchaincyf/darwin-skill)（MIT License © 花叔）——darwin-skill 原 rubric 为 8 维（总分 100），包含"实测表现"动态测试维。本仓库在客户端按需场景下去除了该维，保留结构 + 写作导向的 7 维（适配 skill）与简化 4 维（适配 prompt/rule）。
 

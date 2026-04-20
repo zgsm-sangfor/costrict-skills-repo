@@ -97,14 +97,14 @@ function Rewrite-RepoUrls {
 # --- Install per platform ---
 
 function Install-ClaudeCode {
-    $skillDir = Join-Path $HOME ".claude/skills/everything-ai-coding"
+    $skillDir = Join-Path $HOME ".claude/skills/eac"
     New-Item -ItemType Directory -Path $skillDir -Force | Out-Null
 
     Write-Host "Downloading skill + commands..."
-    Download-File "$BaseUrl/platforms/claude-code/skills/everything-ai-coding/SKILL.md" "$skillDir/SKILL.md"
+    Download-File "$BaseUrl/platforms/claude-code/skills/eac/SKILL.md" "$skillDir/SKILL.md"
     Rewrite-RepoUrls "$skillDir/SKILL.md"
     foreach ($cmd in $Commands) {
-        Download-File "$BaseUrl/platforms/claude-code/commands/everything-ai-coding/$cmd.md" "$skillDir/$cmd.md"
+        Download-File "$BaseUrl/platforms/claude-code/commands/eac/$cmd.md" "$skillDir/$cmd.md"
         Rewrite-RepoUrls "$skillDir/$cmd.md"
     }
 
@@ -113,23 +113,23 @@ function Install-ClaudeCode {
     Write-Host ""
     Write-Host "Skill + commands: $skillDir/"
     Write-Host ""
-    Write-Host "Try:  /everything-ai-coding:search typescript"
+    Write-Host "Try:  /eac:search typescript"
 }
 
 function Install-Opencode {
-    $skillDir = Join-Path $HOME ".opencode/skills/everything-ai-coding"
+    $skillDir = Join-Path $HOME ".opencode/skills/eac"
     $cmdDir = Join-Path (Get-Location) ".opencode/command"
     New-Item -ItemType Directory -Path $skillDir -Force | Out-Null
     New-Item -ItemType Directory -Path $cmdDir -Force | Out-Null
 
     Write-Host "Downloading skill..."
-    Download-File "$BaseUrl/platforms/opencode/skills/everything-ai-coding/SKILL.md" "$skillDir/SKILL.md"
+    Download-File "$BaseUrl/platforms/opencode/skills/eac/SKILL.md" "$skillDir/SKILL.md"
     Rewrite-RepoUrls "$skillDir/SKILL.md"
 
     Write-Host "Downloading commands to project dir..."
     foreach ($cmd in $Commands) {
-        Download-File "$BaseUrl/platforms/opencode/command/everything-ai-coding-$cmd.md" "$cmdDir/everything-ai-coding-$cmd.md"
-        Rewrite-RepoUrls "$cmdDir/everything-ai-coding-$cmd.md"
+        Download-File "$BaseUrl/platforms/opencode/command/eac-$cmd.md" "$cmdDir/eac-$cmd.md"
+        Rewrite-RepoUrls "$cmdDir/eac-$cmd.md"
     }
 
     Write-Host ""
@@ -141,23 +141,23 @@ function Install-Opencode {
     Write-Host "Note: Commands are installed to the current directory."
     Write-Host "      Run this script again in other projects to add commands there too."
     Write-Host ""
-    Write-Host "Try:  /everything-ai-coding-search typescript"
+    Write-Host "Try:  /eac-search typescript"
 }
 
 function Install-Costrict {
-    $skillDir = Join-Path $HOME ".costrict/skills/everything-ai-coding"
-    $cmdDir = Join-Path (Get-Location) ".costrict/everything-ai-coding/commands"
+    $skillDir = Join-Path $HOME ".costrict/skills/eac"
+    $cmdDir = Join-Path (Get-Location) ".costrict/eac/commands"
     New-Item -ItemType Directory -Path $skillDir -Force | Out-Null
     New-Item -ItemType Directory -Path $cmdDir -Force | Out-Null
 
     Write-Host "Downloading skill..."
-    Download-File "$BaseUrl/platforms/costrict/skills/everything-ai-coding/SKILL.md" "$skillDir/SKILL.md"
+    Download-File "$BaseUrl/platforms/costrict/skills/eac/SKILL.md" "$skillDir/SKILL.md"
     Rewrite-RepoUrls "$skillDir/SKILL.md"
 
     Write-Host "Downloading commands to project dir..."
     foreach ($cmd in $Commands) {
-        Download-File "$BaseUrl/platforms/costrict/commands/everything-ai-coding/everything-ai-coding-$cmd.md" "$cmdDir/everything-ai-coding-$cmd.md"
-        Rewrite-RepoUrls "$cmdDir/everything-ai-coding-$cmd.md"
+        Download-File "$BaseUrl/platforms/costrict/commands/eac/eac-$cmd.md" "$cmdDir/eac-$cmd.md"
+        Rewrite-RepoUrls "$cmdDir/eac-$cmd.md"
     }
 
     Write-Host ""
@@ -169,23 +169,23 @@ function Install-Costrict {
     Write-Host "Note: Commands are installed to the current directory."
     Write-Host "      Run this script again in other projects to add commands there too."
     Write-Host ""
-    Write-Host "Try:  /everything-ai-coding-search typescript"
+    Write-Host "Try:  /eac-search typescript"
 }
 
 function Install-VscodeCostrict {
-    $skillDir = Join-Path $HOME ".costrict/skills/everything-ai-coding"
+    $skillDir = Join-Path $HOME ".costrict/skills/eac"
     $cmdDir = Join-Path $HOME ".roo/commands"
     New-Item -ItemType Directory -Path $skillDir -Force | Out-Null
     New-Item -ItemType Directory -Path $cmdDir -Force | Out-Null
 
     Write-Host "Downloading skill..."
-    Download-File "$BaseUrl/platforms/vscode-costrict/skills/everything-ai-coding/SKILL.md" "$skillDir/SKILL.md"
+    Download-File "$BaseUrl/platforms/vscode-costrict/skills/eac/SKILL.md" "$skillDir/SKILL.md"
     Rewrite-RepoUrls "$skillDir/SKILL.md"
 
     Write-Host "Downloading commands (global)..."
     foreach ($cmd in $Commands) {
-        Download-File "$BaseUrl/platforms/vscode-costrict/commands/everything-ai-coding/everything-ai-coding-$cmd.md" "$cmdDir/everything-ai-coding-$cmd.md"
-        Rewrite-RepoUrls "$cmdDir/everything-ai-coding-$cmd.md"
+        Download-File "$BaseUrl/platforms/vscode-costrict/commands/eac/eac-$cmd.md" "$cmdDir/eac-$cmd.md"
+        Rewrite-RepoUrls "$cmdDir/eac-$cmd.md"
     }
 
     Write-Host ""
@@ -196,7 +196,7 @@ function Install-VscodeCostrict {
     Write-Host ""
     Write-Host "All projects can now use these slash commands."
     Write-Host ""
-    Write-Host "Try:  /everything-ai-coding-search typescript"
+    Write-Host "Try:  /eac-search typescript"
 }
 
 # --- Main ---

@@ -18,24 +18,24 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 PLATFORMS = {
     "claude-code": {
-        "cmd_dir": "platforms/claude-code/commands/everything-ai-coding",
+        "cmd_dir": "platforms/claude-code/commands/eac",
         "cmd_names": {"search": "search.md", "browse": "browse.md", "recommend": "recommend.md"},
-        "skill": "platforms/claude-code/skills/everything-ai-coding/SKILL.md",
+        "skill": "platforms/claude-code/skills/eac/SKILL.md",
     },
     "opencode": {
         "cmd_dir": "platforms/opencode/command",
-        "cmd_names": {"search": "everything-ai-coding-search.md", "browse": "everything-ai-coding-browse.md", "recommend": "everything-ai-coding-recommend.md"},
-        "skill": "platforms/opencode/skills/everything-ai-coding/SKILL.md",
+        "cmd_names": {"search": "eac-search.md", "browse": "eac-browse.md", "recommend": "eac-recommend.md"},
+        "skill": "platforms/opencode/skills/eac/SKILL.md",
     },
     "costrict": {
-        "cmd_dir": "platforms/costrict/commands/everything-ai-coding",
-        "cmd_names": {"search": "everything-ai-coding-search.md", "browse": "everything-ai-coding-browse.md", "recommend": "everything-ai-coding-recommend.md"},
-        "skill": "platforms/costrict/skills/everything-ai-coding/SKILL.md",
+        "cmd_dir": "platforms/costrict/commands/eac",
+        "cmd_names": {"search": "eac-search.md", "browse": "eac-browse.md", "recommend": "eac-recommend.md"},
+        "skill": "platforms/costrict/skills/eac/SKILL.md",
     },
     "vscode-costrict": {
-        "cmd_dir": "platforms/vscode-costrict/commands/everything-ai-coding",
-        "cmd_names": {"search": "everything-ai-coding-search.md", "browse": "everything-ai-coding-browse.md", "recommend": "everything-ai-coding-recommend.md"},
-        "skill": "platforms/vscode-costrict/skills/everything-ai-coding/SKILL.md",
+        "cmd_dir": "platforms/vscode-costrict/commands/eac",
+        "cmd_names": {"search": "eac-search.md", "browse": "eac-browse.md", "recommend": "eac-recommend.md"},
+        "skill": "platforms/vscode-costrict/skills/eac/SKILL.md",
     },
 }
 
@@ -397,10 +397,10 @@ class TestCommandIndexRouting(unittest.TestCase):
 
     def test_install_uses_pages_per_entry_api(self):
         install_files = {
-            "claude-code": "platforms/claude-code/commands/everything-ai-coding/install.md",
-            "opencode": "platforms/opencode/command/everything-ai-coding-install.md",
-            "costrict": "platforms/costrict/commands/everything-ai-coding/everything-ai-coding-install.md",
-            "vscode-costrict": "platforms/vscode-costrict/commands/everything-ai-coding/everything-ai-coding-install.md",
+            "claude-code": "platforms/claude-code/commands/eac/install.md",
+            "opencode": "platforms/opencode/command/eac-install.md",
+            "costrict": "platforms/costrict/commands/eac/eac-install.md",
+            "vscode-costrict": "platforms/vscode-costrict/commands/eac/eac-install.md",
         }
         for platform, path in install_files.items():
             content = self._read(path)
@@ -411,10 +411,10 @@ class TestCommandIndexRouting(unittest.TestCase):
 
     def test_install_has_full_index_fallback(self):
         install_files = {
-            "claude-code": "platforms/claude-code/commands/everything-ai-coding/install.md",
-            "opencode": "platforms/opencode/command/everything-ai-coding-install.md",
-            "costrict": "platforms/costrict/commands/everything-ai-coding/everything-ai-coding-install.md",
-            "vscode-costrict": "platforms/vscode-costrict/commands/everything-ai-coding/everything-ai-coding-install.md",
+            "claude-code": "platforms/claude-code/commands/eac/install.md",
+            "opencode": "platforms/opencode/command/eac-install.md",
+            "costrict": "platforms/costrict/commands/eac/eac-install.md",
+            "vscode-costrict": "platforms/vscode-costrict/commands/eac/eac-install.md",
         }
         for platform, path in install_files.items():
             content = self._read(path)

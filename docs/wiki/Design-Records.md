@@ -131,4 +131,4 @@ wiki 负责稳定入口，不负责保存全部推理细节。
 
 结构性改动的 proposal / design / tasks 统一放在 `openspec/changes/<change-name>/` 下，完成后归档进 `openspec/specs/<capability>/`。近期活跃的设计稿：
 
-- **add-evo-command** — `/everything-ai-coding:evo` 客户端质量演化命令，rubric 改编自 [darwin-skill](https://github.com/alchaincyf/darwin-skill)。proposal + design + specs + tasks 均在 [`openspec/changes/add-evo-command/`](../../openspec/changes/add-evo-command/)。rubric 规范源 [`docs/wiki/evo-rubric.md`](./evo-rubric.md)。
+- **add-evo-command** — `/eac:evo` 客户端质量演化命令，rubric 改编自 [darwin-skill](https://github.com/alchaincyf/darwin-skill)。proposal + design + specs + tasks 均在 [`openspec/changes/add-evo-command/`](../../openspec/changes/add-evo-command/)。rubric 规范源 [`docs/wiki/evo-rubric.md`](./evo-rubric.md)。

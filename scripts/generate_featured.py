@@ -181,7 +181,7 @@ LANGUAGE_CONFIG: dict[Language, dict[str, str]] = {
         "title": "## ⭐ Featured Picks",
         "intro": (
             "> Curated by use case from {total}+ resources. After installation, use "
-            "`/everything-ai-coding:search` to explore the full index or `/everything-ai-coding:recommend` "
+            "`/eac:search` to explore the full index or `/eac:recommend` "
             "for project-aware suggestions."
         ),
         "legend": "> Legend: 🔌 MCP Server · 🎯 Skill · 📋 Rule · 💡 Prompt",
@@ -189,8 +189,8 @@ LANGUAGE_CONFIG: dict[Language, dict[str, str]] = {
     "zh": {
         "title": "## ⭐ 精选推荐",
         "intro": (
-            "> 从 {total}+ 资源中按使用场景精选。安装后可使用 `/everything-ai-coding:search` "
-            "搜索完整索引，或通过 `/everything-ai-coding:recommend` 获取项目级推荐。"
+            "> 从 {total}+ 资源中按使用场景精选。安装后可使用 `/eac:search` "
+            "搜索完整索引，或通过 `/eac:recommend` 获取项目级推荐。"
         ),
         "legend": "> 图例：🔌 MCP Server · 🎯 Skill · 📋 Rule · 💡 Prompt",
     },

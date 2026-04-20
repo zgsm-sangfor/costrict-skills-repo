@@ -136,17 +136,17 @@ rewrite_repo_urls() {
 # Claude Code is special: it loads sub .md files from skills dir as slash commands, so all-global works.
 
 install_claude_code() {
-  local skill_dir="$HOME/.claude/skills/everything-ai-coding"
-  local cmd_dir="$HOME/.claude/commands/everything-ai-coding"
+  local skill_dir="$HOME/.claude/skills/eac"
+  local cmd_dir="$HOME/.claude/commands/eac"
   mkdir -p "$skill_dir" "$cmd_dir"
 
   echo "Downloading skill..."
-  download "$BASE_URL/platforms/claude-code/skills/everything-ai-coding/SKILL.md" "$skill_dir/SKILL.md"
+  download "$BASE_URL/platforms/claude-code/skills/eac/SKILL.md" "$skill_dir/SKILL.md"
   rewrite_repo_urls "$skill_dir/SKILL.md"
 
   echo "Downloading commands..."
   for cmd in $COMMANDS; do
-    download "$BASE_URL/platforms/claude-code/commands/everything-ai-coding/${cmd}.md" "$cmd_dir/${cmd}.md"
+    download "$BASE_URL/platforms/claude-code/commands/eac/${cmd}.md" "$cmd_dir/${cmd}.md"
     rewrite_repo_urls "$cmd_dir/${cmd}.md"
   done
 
@@ -156,22 +156,22 @@ install_claude_code() {
   echo "Skill:    $skill_dir/"
   echo "Commands: $cmd_dir/"
   echo ""
-  echo "Try:  /everything-ai-coding:search typescript"
+  echo "Try:  /eac:search typescript"
 }
 
 install_opencode() {
-  local skill_dir="$HOME/.opencode/skills/everything-ai-coding"
+  local skill_dir="$HOME/.opencode/skills/eac"
   local cmd_dir=".opencode/command"
   mkdir -p "$skill_dir" "$cmd_dir"
 
   echo "Downloading skill..."
-  download "$BASE_URL/platforms/opencode/skills/everything-ai-coding/SKILL.md" "$skill_dir/SKILL.md"
+  download "$BASE_URL/platforms/opencode/skills/eac/SKILL.md" "$skill_dir/SKILL.md"
   rewrite_repo_urls "$skill_dir/SKILL.md"
 
   echo "Downloading commands to project dir..."
   for cmd in $COMMANDS; do
-    download "$BASE_URL/platforms/opencode/command/everything-ai-coding-${cmd}.md" "$cmd_dir/everything-ai-coding-${cmd}.md"
-    rewrite_repo_urls "$cmd_dir/everything-ai-coding-${cmd}.md"
+    download "$BASE_URL/platforms/opencode/command/eac-${cmd}.md" "$cmd_dir/eac-${cmd}.md"
+    rewrite_repo_urls "$cmd_dir/eac-${cmd}.md"
   done
 
   echo ""
@@ -183,22 +183,22 @@ install_opencode() {
   echo "Note: Commands are installed to the current directory."
   echo "      Run this script again in other projects to add commands there too."
   echo ""
-  echo "Try:  /everything-ai-coding-search typescript"
+  echo "Try:  /eac-search typescript"
 }
 
 install_costrict() {
-  local skill_dir="$HOME/.costrict/skills/everything-ai-coding"
-  local cmd_dir=".costrict/everything-ai-coding/commands"
+  local skill_dir="$HOME/.costrict/skills/eac"
+  local cmd_dir=".costrict/eac/commands"
   mkdir -p "$skill_dir" "$cmd_dir"
 
   echo "Downloading skill..."
-  download "$BASE_URL/platforms/costrict/skills/everything-ai-coding/SKILL.md" "$skill_dir/SKILL.md"
+  download "$BASE_URL/platforms/costrict/skills/eac/SKILL.md" "$skill_dir/SKILL.md"
   rewrite_repo_urls "$skill_dir/SKILL.md"
 
   echo "Downloading commands to project dir..."
   for cmd in $COMMANDS; do
-    download "$BASE_URL/platforms/costrict/commands/everything-ai-coding/everything-ai-coding-${cmd}.md" "$cmd_dir/everything-ai-coding-${cmd}.md"
-    rewrite_repo_urls "$cmd_dir/everything-ai-coding-${cmd}.md"
+    download "$BASE_URL/platforms/costrict/commands/eac/eac-${cmd}.md" "$cmd_dir/eac-${cmd}.md"
+    rewrite_repo_urls "$cmd_dir/eac-${cmd}.md"
   done
 
   echo ""
@@ -210,24 +210,24 @@ install_costrict() {
   echo "Note: Commands are installed to the current directory."
   echo "      Run this script again in other projects to add commands there too."
   echo ""
-  echo "Try:  /everything-ai-coding-search typescript"
+  echo "Try:  /eac-search typescript"
 }
 
 install_vscode_costrict() {
   local home_dir
   home_dir=$(resolve_home)
-  local skill_dir="$home_dir/.costrict/skills/everything-ai-coding"
+  local skill_dir="$home_dir/.costrict/skills/eac"
   local cmd_dir="$home_dir/.roo/commands"
   mkdir -p "$skill_dir" "$cmd_dir"
 
   echo "Downloading skill..."
-  download "$BASE_URL/platforms/vscode-costrict/skills/everything-ai-coding/SKILL.md" "$skill_dir/SKILL.md"
+  download "$BASE_URL/platforms/vscode-costrict/skills/eac/SKILL.md" "$skill_dir/SKILL.md"
   rewrite_repo_urls "$skill_dir/SKILL.md"
 
   echo "Downloading commands (global)..."
   for cmd in $COMMANDS; do
-    download "$BASE_URL/platforms/vscode-costrict/commands/everything-ai-coding/everything-ai-coding-${cmd}.md" "$cmd_dir/everything-ai-coding-${cmd}.md"
-    rewrite_repo_urls "$cmd_dir/everything-ai-coding-${cmd}.md"
+    download "$BASE_URL/platforms/vscode-costrict/commands/eac/eac-${cmd}.md" "$cmd_dir/eac-${cmd}.md"
+    rewrite_repo_urls "$cmd_dir/eac-${cmd}.md"
   done
 
   echo ""
@@ -238,7 +238,7 @@ install_vscode_costrict() {
   echo ""
   echo "All projects can now use these slash commands."
   echo ""
-  echo "Try:  /everything-ai-coding-search typescript"
+  echo "Try:  /eac-search typescript"
 }
 
 # --- Main ---

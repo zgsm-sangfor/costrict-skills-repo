@@ -198,10 +198,10 @@ After installation, try a search command:
 
 ```bash
 # Claude Code
-/everything-ai-coding:search typescript
+/eac:search typescript
 
 # Opencode / Costrict CLI / VSCode Costrict (Roo Code)
-/everything-ai-coding-search typescript
+/eac-search typescript
 ```
 
 <video src="https://github.com/user-attachments/assets/e58f0b08-73c0-4fba-ac95-138c8087a917" controls width="100%"></video>
@@ -224,21 +224,21 @@ Everything AI Coding supports four AI coding platforms. The resource catalog is 
 
 | | Claude Code | Costrict | Opencode | VSCode Costrict (Roo Code) |
 |---|---|---|---|---|
-| Search | `/everything-ai-coding:search <kw> [type:mcp]` | `/everything-ai-coding-search <kw> [type:mcp]` | `/everything-ai-coding-search <kw> [type:mcp]` | `/everything-ai-coding-search <kw> [type:mcp]` |
-| Browse | `/everything-ai-coding:browse [category]` | `/everything-ai-coding-browse [category]` | `/everything-ai-coding-browse [category]` | `/everything-ai-coding-browse [category]` |
-| Recommend | `/everything-ai-coding:recommend` | `/everything-ai-coding-recommend` | `/everything-ai-coding-recommend` | `/everything-ai-coding-recommend` |
-| Install | `/everything-ai-coding:install <id>` | `/everything-ai-coding-install <id>` | `/everything-ai-coding-install <id>` | `/everything-ai-coding-install <id>` |
-| Uninstall | `/everything-ai-coding:uninstall <id>` | `/everything-ai-coding-uninstall <id>` | `/everything-ai-coding-uninstall <id>` | `/everything-ai-coding-uninstall <id>` |
-| Update | `/everything-ai-coding:update` | `/everything-ai-coding-update` | `/everything-ai-coding-update` | `/everything-ai-coding-update` |
-| Evo | `/everything-ai-coding:evo <id>` | `/everything-ai-coding-evo <id>` | `/everything-ai-coding-evo <id>` | `/everything-ai-coding-evo <id>` |
+| Search | `/eac:search <kw> [type:mcp]` | `/eac-search <kw> [type:mcp]` | `/eac-search <kw> [type:mcp]` | `/eac-search <kw> [type:mcp]` |
+| Browse | `/eac:browse [category]` | `/eac-browse [category]` | `/eac-browse [category]` | `/eac-browse [category]` |
+| Recommend | `/eac:recommend` | `/eac-recommend` | `/eac-recommend` | `/eac-recommend` |
+| Install | `/eac:install <id>` | `/eac-install <id>` | `/eac-install <id>` | `/eac-install <id>` |
+| Uninstall | `/eac:uninstall <id>` | `/eac-uninstall <id>` | `/eac-uninstall <id>` | `/eac-uninstall <id>` |
+| Update | `/eac:update` | `/eac-update` | `/eac-update` | `/eac-update` |
+| Evo | `/eac:evo <id>` | `/eac-evo <id>` | `/eac-evo <id>` | `/eac-evo <id>` |
 
 <details>
 <summary>Platform path differences</summary>
 
 | | Claude Code | Costrict | VSCode Costrict | Opencode |
 |---|---|---|---|---|
-| Global skill path | `~/.claude/skills/everything-ai-coding/` | `~/.costrict/skills/everything-ai-coding/` | `~/.costrict/skills/everything-ai-coding/` | `~/.opencode/skills/everything-ai-coding/` |
-| Command path | same global dir | `.costrict/everything-ai-coding/commands/` (project) | `~/.roo/commands/` (global) | `.opencode/command/` (project) |
+| Global skill path | `~/.claude/skills/eac/` | `~/.costrict/skills/eac/` | `~/.costrict/skills/eac/` | `~/.opencode/skills/eac/` |
+| Command path | same global dir | `.costrict/eac/commands/` (project) | `~/.roo/commands/` (global) | `.opencode/command/` (project) |
 | Separator | `:` | `-` | `-` | `-` |
 
 - **Costrict CLI** installs command files per project, so run the installer in each repository root.
@@ -315,43 +315,43 @@ Run the platform-specific commands below if you need to download the files direc
 **Costrict CLI** (global skill + project commands)
 
 ```bash
-mkdir -p ~/.costrict/skills/everything-ai-coding
-curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/costrict/skills/everything-ai-coding/SKILL.md" -o ~/.costrict/skills/everything-ai-coding/SKILL.md
-mkdir -p .costrict/everything-ai-coding/commands
+mkdir -p ~/.costrict/skills/eac
+curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/costrict/skills/eac/SKILL.md" -o ~/.costrict/skills/eac/SKILL.md
+mkdir -p .costrict/eac/commands
 for cmd in search browse recommend install uninstall update; do
-  curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/costrict/commands/everything-ai-coding/everything-ai-coding-${cmd}.md" -o .costrict/everything-ai-coding/commands/everything-ai-coding-${cmd}.md
+  curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/costrict/commands/eac/eac-${cmd}.md" -o .costrict/eac/commands/eac-${cmd}.md
 done
 ```
 
 **VSCode Costrict extension / Roo Code** (global skill + global commands)
 
 ```bash
-mkdir -p ~/.costrict/skills/everything-ai-coding
-curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/vscode-costrict/skills/everything-ai-coding/SKILL.md" -o ~/.costrict/skills/everything-ai-coding/SKILL.md
+mkdir -p ~/.costrict/skills/eac
+curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/vscode-costrict/skills/eac/SKILL.md" -o ~/.costrict/skills/eac/SKILL.md
 mkdir -p ~/.roo/commands
 for cmd in search browse recommend install uninstall update; do
-  curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/vscode-costrict/commands/everything-ai-coding/everything-ai-coding-${cmd}.md" -o ~/.roo/commands/everything-ai-coding-${cmd}.md
+  curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/vscode-costrict/commands/eac/eac-${cmd}.md" -o ~/.roo/commands/eac-${cmd}.md
 done
 ```
 
 **Claude Code** (global skill + global commands)
 
 ```bash
-mkdir -p ~/.claude/skills/everything-ai-coding
-curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/claude-code/skills/everything-ai-coding/SKILL.md" -o ~/.claude/skills/everything-ai-coding/SKILL.md
+mkdir -p ~/.claude/skills/eac
+curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/claude-code/skills/eac/SKILL.md" -o ~/.claude/skills/eac/SKILL.md
 for cmd in search browse recommend install uninstall update; do
-  curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/claude-code/commands/everything-ai-coding/${cmd}.md" -o ~/.claude/skills/everything-ai-coding/${cmd}.md
+  curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/claude-code/commands/eac/${cmd}.md" -o ~/.claude/skills/eac/${cmd}.md
 done
 ```
 
 **Opencode** (global skill + project commands)
 
 ```bash
-mkdir -p ~/.opencode/skills/everything-ai-coding
-curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/opencode/skills/everything-ai-coding/SKILL.md" -o ~/.opencode/skills/everything-ai-coding/SKILL.md
+mkdir -p ~/.opencode/skills/eac
+curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/opencode/skills/eac/SKILL.md" -o ~/.opencode/skills/eac/SKILL.md
 mkdir -p .opencode/command
 for cmd in search browse recommend install uninstall update; do
-  curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/opencode/command/everything-ai-coding-${cmd}.md" -o .opencode/command/everything-ai-coding-${cmd}.md
+  curl -fsSL "https://raw.githubusercontent.com/zgsm-ai/everything-ai-coding/main/platforms/opencode/command/eac-${cmd}.md" -o .opencode/command/eac-${cmd}.md
 done
 ```
 
@@ -363,13 +363,13 @@ Run a search command to confirm that the commands are available:
 
 ```text
 # Costrict CLI / Opencode
-/everything-ai-coding-search typescript
+/eac-search typescript
 
 # VSCode Costrict extension
-Send this in the chat: "Search typescript with everything-ai-coding"
+Send this in the chat: "Search typescript with eac"
 
 # Claude Code
-/everything-ai-coding:search typescript
+/eac:search typescript
 ```
 
 Expected result: a Markdown table of matching resources. If the command is missing, the installation did not land in the correct platform path.
@@ -416,7 +416,7 @@ If you need maintainers' context instead of quick-start instructions, see the re
 
 ## Acknowledgments
 
-The `/everything-ai-coding:evo` command's quality rubric is adapted from **[darwin-skill](https://github.com/alchaincyf/darwin-skill)** by 花叔 (MIT License) — an autonomous skill optimization system inspired by Karpathy's autoresearch. darwin-skill first systematized a "structure + effectiveness" dual-evaluation framework for SKILL.md files with a ratchet mechanism for keeping only measurable improvements. Everything AI Coding simplifies it for on-demand client-side use: the dynamic live-testing dimension and the ratchet are deferred; the core dimensions (workflow clarity, instruction specificity, edge-case coverage, checkpoint design, overall architecture, etc.) are preserved and rewritten for our on-demand evo context. See [`docs/wiki/evo-rubric.md`](./docs/wiki/evo-rubric.md) for the full rubric specification.
+The `/eac:evo` command's quality rubric is adapted from **[darwin-skill](https://github.com/alchaincyf/darwin-skill)** by 花叔 (MIT License) — an autonomous skill optimization system inspired by Karpathy's autoresearch. darwin-skill first systematized a "structure + effectiveness" dual-evaluation framework for SKILL.md files with a ratchet mechanism for keeping only measurable improvements. Everything AI Coding simplifies it for on-demand client-side use: the dynamic live-testing dimension and the ratchet are deferred; the core dimensions (workflow clarity, instruction specificity, edge-case coverage, checkpoint design, overall architecture, etc.) are preserved and rewritten for our on-demand evo context. See [`docs/wiki/evo-rubric.md`](./docs/wiki/evo-rubric.md) for the full rubric specification.
 
 Thanks to 花叔 for making the ideas and the original skill publicly available.
 
