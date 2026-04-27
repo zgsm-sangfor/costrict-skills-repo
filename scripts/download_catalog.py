@@ -434,7 +434,7 @@ def _download_batch(
         entry_type = entry.get("type", "")
         downloader = DOWNLOADERS.get(entry_type)
         if not downloader:
-            return _kebab_case(entry.get("name", "unknown")), False, f"Unknown type: {entry_type}"
+            return _kebab_name(entry), False, f"Unknown type: {entry_type}"
         # Small sleep to avoid hammering GitHub raw
         time.sleep(0.15)
         if entry_type == "skill":
