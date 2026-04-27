@@ -255,4 +255,4 @@ AI驱动的智能项目上下文分析与加载规则，为开发工作流提供
 
 ---
 
-*自动生成 [catalog/index.json](../index.json). 最后更新: 2026-04-20*
+*自动生成 [catalog/index.json](../index.json). 最后更新: 2026-04-27*

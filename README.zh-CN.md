@@ -1,12 +1,12 @@
 <div align="center">
 <img src="assets/logo.png" alt="Everything AI Coding logo" width="600" />
-<p><strong><!-- README_APPROX_COUNT:START -->4000<!-- README_APPROX_COUNT:END -->+ 精选 AI 编程资源 — 浏览、评估、安装</strong><br/>MCP Servers · Skills · Rules · Prompts</p>
+<p><strong><!-- README_APPROX_COUNT:START -->4100<!-- README_APPROX_COUNT:END -->+ 精选 AI 编程资源 — 浏览、评估、安装</strong><br/>MCP Servers · Skills · Rules · Prompts</p>
 
 <p>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/stargazers"><img src="https://img.shields.io/github/stars/zgsm-ai/everything-ai-coding?style=flat-square&color=4A90D9" alt="Stars" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zgsm-ai/everything-ai-coding?style=flat-square" alt="License" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/commits/main"><img src="https://img.shields.io/github/last-commit/zgsm-ai/everything-ai-coding?style=flat-square" alt="Last Commit" /></a>
-  <img src="https://img.shields.io/badge/resources-4077-2ECC71?style=flat-square" alt="Resources" />
+  <img src="https://img.shields.io/badge/resources-4101-2ECC71?style=flat-square" alt="Resources" />
 </p>
 
 <p>
@@ -34,7 +34,7 @@ Everything AI Coding 是一个**持续更新的知识库**，从 9+ 个上游源
 <a id="knowledge-base"></a>
 ## 📚 知识库
 
-### [🔌 MCP 服务器](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->1628<!-- README_COUNT_MCP:END --> 个条目
+### [🔌 MCP 服务器](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->1630<!-- README_COUNT_MCP:END --> 个条目
 
 将 AI Agent 连接到外部工具、数据库和服务的 Model Context Protocol 服务器。
 
@@ -42,17 +42,17 @@ Everything AI Coding 是一个**持续更新的知识库**，从 9+ 个上游源
 | 名称 | ⭐ Stars | 评分 | 描述 |
 |------|----------|------|------|
 | [MCP Inspector](https://github.com/modelcontextprotocol/inspector) | 9.2k | 99 | 用于可视化测试和调试 MCP 服务器的开发者工具，支持 UI 和 CLI 界面。 |
-| [Desktop Commander MCP](https://github.com/wonderwhy-er/DesktopCommanderMCP) | 5.8k | 99 | MCP 服务器，让 AI 助手控制终端、编辑文件并在本地执行代码。 |
-| [Context 7](https://github.com/upstash/context7-mcp) | 53.2k | 98 | 为AI编程助手提供最新库文档和代码示例的MCP服务器。 |
-| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 31.1k | 98 | 基于 Playwright 的 MCP 服务器，让 AI 通过可访问性树自动化控制浏览器。 |
-| [github/github-mcp-server](https://github.com/github/github-mcp-server) | 29.1k | 98 | 官方 GitHub MCP 服务器，连接 AI 代理与 GitHub，实现仓库管理、代码分析和工作流自动化。 |
+| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 31.5k | 98 | 基于 Playwright 的 MCP 服务器，让 AI 通过无障碍树精确控制网页。 |
+| [github/github-mcp-server](https://github.com/github/github-mcp-server) | 29.3k | 98 | 官方 GitHub MCP 服务器，连接 AI 代理与 GitHub，实现仓库管理、代码分析和工作流自动化。 |
+| [topoteretes/cognee](https://github.com/topoteretes/cognee/tree/dev/cognee-mcp) | 16.8k | 98 | 为 AI 智能体提供记忆引擎的 MCP 服务器，支持知识图谱和向量存储的摄入、搜索与管理。 |
+| [Firecrawl](https://github.com/mendableai/firecrawl-mcp-server) | 6.1k | 98 | 通过 Firecrawl API 为 AI 代理提供网页搜索、抓取和交互工具的 MCP 服务器。 |
 <!-- README_TOP5_MCP:END -->
 
 [浏览全部 MCP 服务器 →](./catalog/mcp/) · [在线浏览 →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=mcp)
 
 ---
 
-### [🎯 Skills 技能](./catalog/skills/) — <!-- README_COUNT_SKILL:START -->1671<!-- README_COUNT_SKILL:END --> 个条目
+### [🎯 Skills 技能](./catalog/skills/) — <!-- README_COUNT_SKILL:START -->1676<!-- README_COUNT_SKILL:END --> 个条目
 
 AI 编程助手的可复用能力和工作流。
 
@@ -88,7 +88,7 @@ AI 编程助手的可复用能力和工作流。
 
 ---
 
-### [💡 Prompts 提示词](./catalog/prompts/) — <!-- README_COUNT_PROMPT:START -->542<!-- README_COUNT_PROMPT:END --> 个条目
+### [💡 Prompts 提示词](./catalog/prompts/) — <!-- README_COUNT_PROMPT:START -->559<!-- README_COUNT_PROMPT:END --> 个条目
 
 面向开发者的提示词模板，覆盖常见编码场景。
 

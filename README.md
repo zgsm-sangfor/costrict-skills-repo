@@ -1,12 +1,12 @@
 <div align="center">
 <img src="assets/logo.png" alt="Everything AI Coding logo" width="600" />
-<p><strong><!-- README_APPROX_COUNT:START -->4000<!-- README_APPROX_COUNT:END -->+ curated AI coding resources — browse, evaluate, install</strong><br/>MCP Servers · Skills · Rules · Prompts</p>
+<p><strong><!-- README_APPROX_COUNT:START -->4100<!-- README_APPROX_COUNT:END -->+ curated AI coding resources — browse, evaluate, install</strong><br/>MCP Servers · Skills · Rules · Prompts</p>
 
 <p>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/stargazers"><img src="https://img.shields.io/github/stars/zgsm-ai/everything-ai-coding?style=flat-square&color=4A90D9" alt="Stars" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zgsm-ai/everything-ai-coding?style=flat-square" alt="License" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/commits/main"><img src="https://img.shields.io/github/last-commit/zgsm-ai/everything-ai-coding?style=flat-square" alt="Last Commit" /></a>
-  <img src="https://img.shields.io/badge/resources-4077-2ECC71?style=flat-square" alt="Resources" />
+  <img src="https://img.shields.io/badge/resources-4101-2ECC71?style=flat-square" alt="Resources" />
 </p>
 
 <p>
@@ -34,7 +34,7 @@ Everything AI Coding is a **curated knowledge base** that continuously collects,
 <a id="knowledge-base"></a>
 ## 📚 Knowledge Base
 
-### [🔌 MCP Servers](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->1628<!-- README_COUNT_MCP:END --> entries
+### [🔌 MCP Servers](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->1630<!-- README_COUNT_MCP:END --> entries
 
 Model Context Protocol servers that connect AI agents to external tools, databases, and services.
 
@@ -42,17 +42,17 @@ Model Context Protocol servers that connect AI agents to external tools, databas
 | Name | ⭐ Stars | Score | Description |
 |------|----------|-------|-------------|
 | [MCP Inspector](https://github.com/modelcontextprotocol/inspector) | 9.2k | 99 | A developer tool for visually testing and debugging Model Context Pro… |
-| [Desktop Commander MCP](https://github.com/wonderwhy-er/DesktopCommanderMCP) | 5.8k | 99 | MCP server enabling AI assistants to control terminals, edit files, a… |
-| [Context 7](https://github.com/upstash/context7-mcp) | 53.2k | 98 | MCP server that fetches up-to-date library documentation and code exa… |
-| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 31.1k | 98 | An MCP server that enables AI agents to automate web browsers using P… |
-| [github/github-mcp-server](https://github.com/github/github-mcp-server) | 29.1k | 98 | An official MCP server that connects AI agents to GitHub for reposito… |
+| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 31.5k | 98 | MCP server for browser automation using Playwright's accessibility tr… |
+| [github/github-mcp-server](https://github.com/github/github-mcp-server) | 29.3k | 98 | An official MCP server that connects AI agents to GitHub for reposito… |
+| [topoteretes/cognee](https://github.com/topoteretes/cognee/tree/dev/cognee-mcp) | 16.8k | 98 | An MCP server that provides a memory engine for AI agents, enabling i… |
+| [Firecrawl](https://github.com/mendableai/firecrawl-mcp-server) | 6.1k | 98 | An MCP server that provides AI agents with tools to search, scrape, a… |
 <!-- README_TOP5_MCP:END -->
 
 [Browse all MCP servers →](./catalog/mcp/) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=mcp)
 
 ---
 
-### [🎯 Skills](./catalog/skills/) — <!-- README_COUNT_SKILL:START -->1671<!-- README_COUNT_SKILL:END --> entries
+### [🎯 Skills](./catalog/skills/) — <!-- README_COUNT_SKILL:START -->1676<!-- README_COUNT_SKILL:END --> entries
 
 Reusable agent capabilities and workflows for AI coding assistants.
 
@@ -88,7 +88,7 @@ Coding conventions and AI behavior guidelines for consistent development.
 
 ---
 
-### [💡 Prompts](./catalog/prompts/) — <!-- README_COUNT_PROMPT:START -->542<!-- README_COUNT_PROMPT:END --> entries
+### [💡 Prompts](./catalog/prompts/) — <!-- README_COUNT_PROMPT:START -->559<!-- README_COUNT_PROMPT:END --> entries
 
 Developer-focused prompt templates for common coding tasks.
 
