@@ -24,16 +24,16 @@
 
 ## 4. catalog schema 增量字段
 
-- [ ] 4.1 更新 catalog skill entry 的 schema 定义文件（若存在 `schemas/skill.json` 或类似），新增三个 optional 字段
-- [ ] 4.2 修改 `scripts/utils.py` 的 schema 校验逻辑（若有），允许 `install_count`/`skills_sh_url`/`skills_sh_scraped_at` 缺失但若存在则类型严格
-- [ ] 4.3 单元测试：覆盖字段全有 / 全无 / 部分缺失 / 类型错误 4 种场景
+- [x] 4.1 更新 catalog skill entry 的 schema 定义文件（若存在 `schemas/skill.json` 或类似），新增三个 optional 字段
+- [x] 4.2 修改 `scripts/utils.py` 的 schema 校验逻辑（若有），允许 `install_count`/`skills_sh_url`/`skills_sh_scraped_at` 缺失但若存在则类型严格
+- [x] 4.3 单元测试：覆盖字段全有 / 全无 / 部分缺失 / 类型错误 4 种场景
 
 ## 5. 评分管线接入
 
-- [ ] 5.1 修改 `enrichment_orchestrator.py` 或 `eval_bridge.py`：health.signals 输出新增 `install_popularity` 字段
-- [ ] 5.2 实现 `compute_install_popularity(install_count) -> 0..100`：使用 `min(100, log10(max(install_count,1)) / log10(100000) * 100)` 公式
-- [ ] 5.3 在权重表中添加 `install_popularity` 默认权重 0；支持 `HEALTH_W_INSTALL_POPULARITY` 环境变量覆盖
-- [ ] 5.4 验证 final_score 不变：跑一遍现有测试集，install_popularity 信号不影响默认评分
+- [x] 5.1 修改 `enrichment_orchestrator.py` 或 `eval_bridge.py`：health.signals 输出新增 `install_popularity` 字段
+- [x] 5.2 实现 `compute_install_popularity(install_count) -> 0..100`：使用 `min(100, log10(max(install_count,1)) / log10(100000) * 100)` 公式
+- [x] 5.3 在权重表中添加 `install_popularity` 默认权重 0；支持 `HEALTH_W_INSTALL_POPULARITY` 环境变量覆盖
+- [x] 5.4 验证 final_score 不变：跑一遍现有测试集，install_popularity 信号不影响默认评分
 
 ## 6. 增量评估管线
 

@@ -59,6 +59,9 @@ class EvalItem(BaseModel):
     description_zh: str | None = None
     search_terms: list[str] = Field(default_factory=list)
 
+    # skills.sh Tier 1 源新增字段：install_count 用于派生 install_popularity 信号
+    install_count: int | None = None
+
     # Existing evaluation / health data (from upstream catalog) — ignored by
     # this harness but accepted so we can round-trip catalog JSON.
     evaluation: dict[str, Any] | None = None
@@ -116,6 +119,8 @@ class HealthSignals(BaseModel):
     freshness: float = Field(0.0, ge=0, le=100)
     popularity: float = Field(0.0, ge=0, le=100)
     source_trust: float = Field(0.0, ge=0, le=100)
+    # 由 skills.sh 提供的 install_count 派生而来，仅做信号采集；默认权重 0 不参与 final_score
+    install_popularity: float = Field(0.0, ge=0, le=100)
 
 
 class EnrichmentData(BaseModel):
@@ -215,7 +220,8 @@ class HeuristicSignalWeight(BaseModel):
     """A single heuristic signal with its weight."""
 
     signal: str
-    weight: float = Field(..., gt=0, le=1)
+    # 允许 weight=0 表示「采集但不计入 final_score」（如 install_popularity 默认）
+    weight: float = Field(..., ge=0, le=1)
 
 
 class StarRoutingConfig(BaseModel):
@@ -280,10 +286,13 @@ class TaskConfig(BaseModel):
             )
 
         if self.heuristic_signals:
-            signal_sum = sum(s.weight for s in self.heuristic_signals)
-            if abs(signal_sum - 1.0) > 0.001:
-                raise ValueError(
-                    f"Heuristic signal weights must sum to 1.0 (±0.001), got {signal_sum:.4f}"
-                )
+            # 跳过 weight=0 的信号（如 install_popularity 默认）：仅采集不计入综合分
+            non_zero = [s for s in self.heuristic_signals if s.weight > 0]
+            if non_zero:
+                signal_sum = sum(s.weight for s in non_zero)
+                if abs(signal_sum - 1.0) > 0.001:
+                    raise ValueError(
+                        f"Heuristic signal weights must sum to 1.0 (±0.001), got {signal_sum:.4f}"
+                    )
 
         return self

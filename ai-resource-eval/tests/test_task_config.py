@@ -30,6 +30,8 @@ VALID_SIGNAL_NAMES = {
     "freshness",
     "popularity",
     "source_trust",
+    # skills.sh 派生的安装量信号；默认权重 0 仅采集（loader 自动注入）
+    "install_popularity",
 }
 
 # All 4 built-in task types.

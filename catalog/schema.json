@@ -68,7 +68,22 @@
         }
       },
       "source": { "type": "string" },
-      "last_synced": { "type": "string", "format": "date" }
+      "last_synced": { "type": "string", "format": "date" },
+      "install_count": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "skills.sh 累计安装次数；仅 skills.sh 数据源会写入，optional"
+      },
+      "skills_sh_url": {
+        "type": "string",
+        "format": "uri",
+        "description": "skills.sh 上对应 skill 的权威落点 URL；optional"
+      },
+      "skills_sh_scraped_at": {
+        "type": "string",
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?Z$",
+        "description": "skills.sh 数据抓取时间，ISO 8601 (e.g. 2026-01-30T04:51:07Z 或 .907Z)；optional"
+      }
     }
   }
 }

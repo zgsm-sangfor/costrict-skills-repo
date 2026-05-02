@@ -85,8 +85,11 @@ def map_result_to_entry(entry: dict[str, Any], result: dict[str, Any] | None) ->
         freshness = raw_health.get("freshness", 0.0)
         popularity = raw_health.get("popularity", 0.0)
         source_trust = raw_health.get("source_trust", 0.0)
+        # install_popularity：skills.sh 派生信号，默认权重 0 仅采集；缺失则视作 0
+        install_popularity = raw_health.get("install_popularity", 0.0)
 
         # Compute aggregate score (mean of three signals, rounded)
+        # install_popularity 不参与 health.score 聚合（保留旧含义不变）
         health_score = round((freshness + popularity + source_trust) / 3)
 
         # Derive freshness label
@@ -105,6 +108,7 @@ def map_result_to_entry(entry: dict[str, Any], result: dict[str, Any] | None) ->
                 "freshness": round(freshness),
                 "popularity": round(popularity),
                 "source_trust": round(source_trust),
+                "install_popularity": round(install_popularity),
             },
         }
 

@@ -116,6 +116,8 @@ class ScoringGovernor:
             "freshness": signals.freshness,
             "popularity": signals.popularity,
             "source_trust": signals.source_trust,
+            # install_popularity 默认权重 0，仅在 task config 配置非零权重时纳入
+            "install_popularity": signals.install_popularity,
         }
 
         return sum(

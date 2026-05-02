@@ -662,6 +662,65 @@ def skill_identity_key(entry: dict) -> tuple[str, str, str] | None:
 # winning entry even when a higher-priority source supplies the base record.
 _SKILLS_SH_MERGE_FIELDS = ("install_count", "skills_sh_url", "skills_sh_scraped_at")
 
+# ISO 8601 UTC timestamp pattern accepted by skills_sh_scraped_at:
+#   2026-01-30T04:51:07Z   或   2026-01-30T04:51:07.907Z
+_SKILLS_SH_TS_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?Z$")
+
+
+def validate_skill_optional_fields(entry: dict) -> list[str]:
+    """Validate the three optional skills.sh-contributed fields on a skill entry.
+
+    All three fields are optional (向后兼容旧条目)，缺失不会报错。
+    若存在则类型必须严格符合 catalog/schema.json：
+
+      - install_count       : int, ≥ 0
+      - skills_sh_url       : non-empty str (looks like http(s):// URL)
+      - skills_sh_scraped_at: ISO 8601 string e.g. ``2026-01-30T04:51:07Z`` 或 ``.907Z``
+
+    Returns a list of human-readable error messages (empty list = valid).
+
+    Note: This is a lightweight ad-hoc check intended to be cheap enough to call
+    inline from sync / merge pipelines. It does NOT attempt full URI parsing.
+    """
+    errors: list[str] = []
+    eid = entry.get("id", "<unknown>")
+
+    if "install_count" in entry:
+        v = entry["install_count"]
+        # bool is a subclass of int — disallow explicitly (True/False is not a count)
+        if isinstance(v, bool) or not isinstance(v, int):
+            errors.append(
+                f'entry "{eid}" install_count must be int, got {type(v).__name__}'
+            )
+        elif v < 0:
+            errors.append(f'entry "{eid}" install_count must be ≥ 0, got {v}')
+
+    if "skills_sh_url" in entry:
+        v = entry["skills_sh_url"]
+        if not isinstance(v, str):
+            errors.append(
+                f'entry "{eid}" skills_sh_url must be str, got {type(v).__name__}'
+            )
+        elif v and not (v.startswith("http://") or v.startswith("https://")):
+            errors.append(
+                f'entry "{eid}" skills_sh_url must look like an http(s) URL, got {v!r}'
+            )
+
+    if "skills_sh_scraped_at" in entry:
+        v = entry["skills_sh_scraped_at"]
+        if not isinstance(v, str):
+            errors.append(
+                f'entry "{eid}" skills_sh_scraped_at must be str, got {type(v).__name__}'
+            )
+        # Empty string is tolerated as "field present but unset" — sync_skills_sh.py
+        # initializes the field to "" before later filling it with the scraped time.
+        elif v and not _SKILLS_SH_TS_RE.match(v):
+            errors.append(
+                f'entry "{eid}" skills_sh_scraped_at not ISO 8601, got {v!r}'
+            )
+
+    return errors
+
 
 def _merge_skills_sh_fields(target: dict, donor: dict) -> None:
     """Copy non-empty skills.sh signal fields from donor onto target (target wins ties)."""

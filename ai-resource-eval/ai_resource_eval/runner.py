@@ -400,14 +400,16 @@ class EvalRunner:
     _SOURCE_TRUST_DEFAULT = 40  # unknown sources
 
     def _compute_health_signals(self, entry: EvalItem) -> HealthSignals:
-        """Compute freshness / popularity / source_trust from entry metadata."""
+        """Compute freshness / popularity / source_trust / install_popularity from entry metadata."""
         freshness = self._compute_freshness(entry)
         popularity = self._compute_popularity(entry)
         source_trust = self._compute_source_trust(entry)
+        install_popularity = self._compute_install_popularity(entry)
         return HealthSignals(
             freshness=freshness,
             popularity=popularity,
             source_trust=source_trust,
+            install_popularity=install_popularity,
         )
 
     @staticmethod
@@ -449,6 +451,24 @@ class EvalRunner:
         """Score 0-100 based on source field."""
         source = getattr(entry, "source", None) or ""
         return self._SOURCE_TRUST.get(source, self._SOURCE_TRUST_DEFAULT)
+
+    @staticmethod
+    def _compute_install_popularity(entry: EvalItem) -> float:
+        """Score 0-100 based on skills.sh install_count (log10 scale).
+
+        公式: ``min(100, log10(max(install_count, 1)) / log10(100000) * 100)``
+
+        约定: install_count = 100000 → 100 分；install_count ≤ 1 → 0 分。
+        无 install_count 字段或值为 0/None → 0 分。
+        """
+        install_count = getattr(entry, "install_count", None)
+        if not install_count or install_count <= 0:
+            return 0.0
+        # log10 标度归一到 [0, 100]，以 install_count=100000 为满分基准
+        return min(
+            100.0,
+            math.log10(max(install_count, 1)) / math.log10(100000) * 100.0,
+        )
 
     # ------------------------------------------------------------------
     # Fetching

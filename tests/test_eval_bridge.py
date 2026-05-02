@@ -273,6 +273,47 @@ class TestHealthFormatConversion:
         assert entry["health"]["freshness_label"] == "abandoned"
 
 
+class TestInstallPopularitySignal:
+    """install_popularity 信号采集（默认权重 0，仅观测）"""
+
+    def test_install_popularity_mapped_into_signals(self):
+        """harness 输出包含 install_popularity 时应写入 health.signals"""
+        from eval_bridge import map_result_to_entry
+
+        entry = _make_entries()[1]  # skill entry
+        result = _make_eval_result("test-skill-1")
+        # 模拟 harness 已计算的 install_popularity
+        result["health"] = {
+            "freshness": 80.0,
+            "popularity": 50.0,
+            "source_trust": 70.0,
+            "install_popularity": 80.0,  # 对应 install_count ≈ 10000
+        }
+        map_result_to_entry(entry, result)
+
+        signals = entry["health"]["signals"]
+        assert signals["install_popularity"] == 80
+        # health.score 仅由前 3 个信号聚合，不被 install_popularity 影响
+        assert entry["health"]["score"] == round((80 + 50 + 70) / 3)
+
+    def test_install_popularity_absent_defaults_to_zero(self):
+        """harness 输出未包含 install_popularity 时回填 0，保持向后兼容"""
+        from eval_bridge import map_result_to_entry
+
+        entry = _make_entries()[0]
+        result = _make_eval_result("test-mcp-1")
+        # 旧版 result 不含 install_popularity 字段
+        result["health"] = {
+            "freshness": 80.0,
+            "popularity": 50.0,
+            "source_trust": 70.0,
+        }
+        map_result_to_entry(entry, result)
+
+        signals = entry["health"]["signals"]
+        assert signals["install_popularity"] == 0
+
+
 class TestResolveTaskName:
     """Test task name resolution for built-in configs."""
 
