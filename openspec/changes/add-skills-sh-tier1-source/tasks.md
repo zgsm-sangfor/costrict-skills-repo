@@ -1,26 +1,26 @@
 ## 1. 探针与基线
 
-- [ ] 1.1 本地拉取 mastra JSON 一次（`curl -sLo /tmp/mastra.json`），统计 `install_count ≥ 1000` 条目数与字段分布，校准阈值预期
-- [ ] 1.2 本地脚本 dump：与现有 catalog 比对，估算与 antigravity 镜像、anthropics/skills 的重叠数量
-- [ ] 1.3 输出基线报告（写到 `docs/skills_sh_baseline.md`，本任务后续删除或归档），含：进库条目数、与既有源重叠数、Top 10 install_count 列表
+- [x] 1.1 本地拉取 mastra JSON 一次（`curl -sLo /tmp/mastra.json`），统计 `install_count ≥ 1000` 条目数与字段分布，校准阈值预期
+- [x] 1.2 本地脚本 dump：与现有 catalog 比对，估算与 antigravity 镜像、anthropics/skills 的重叠数量
+- [x] 1.3 输出基线报告（写到 `docs/skills_sh_baseline.md`，本任务后续删除或归档），含：进库条目数、与既有源重叠数、Top 10 install_count 列表
 
 ## 2. 核心 sync_skills_sh.py
 
-- [ ] 2.1 新建 `scripts/sync_skills_sh.py`，仅用 Python 标准库（urllib、json、os、hashlib、datetime）
-- [ ] 2.2 实现 `fetch_mastra_snapshot()`：GET raw.githubusercontent.com，支持 `If-None-Match` ETag header，缓存到 `.skills_sh_cache/mastra.json` + `.skills_sh_cache/etag.txt`
-- [ ] 2.3 实现 `fetch_skills_sh_paginated()`：分页调用 `https://skills.sh/api/skills/all-time?page=N` 直到 `hasMore=false`，作为降级路径
-- [ ] 2.4 实现 `should_use_fallback(snapshot)`：检查 `scrapedAt` 字段距今是否 > 7 天
-- [ ] 2.5 实现 `normalize_entry(raw)`：将 mastra/skills.sh entry 转换为 catalog skill schema，生成稳定 id（如 `<skillId>-<owner>`）
-- [ ] 2.6 实现 install_count 阈值过滤，环境变量 `SKILLS_SH_MIN_INSTALLS` 默认 1000
-- [ ] 2.7 输出 `catalog/skills/skills_sh_index.json`，结构与现有 `{antigravity,vasilyu}_index.json` 一致
-- [ ] 2.8 增量 diff：与上次输出对比，记录新增 / install_count 显著变化（±20%）/ 移除条目到 `.skills_sh_cache/diff.json`，供 merge_index 决定哪些进 LLM 评估
+- [x] 2.1 新建 `scripts/sync_skills_sh.py`，仅用 Python 标准库（urllib、json、os、hashlib、datetime）
+- [x] 2.2 实现 `fetch_mastra_snapshot()`：GET raw.githubusercontent.com，支持 `If-None-Match` ETag header，缓存到 `.skills_sh_cache/mastra.json` + `.skills_sh_cache/etag.txt`
+- [x] 2.3 实现 `fetch_skills_sh_paginated()`：分页调用 `https://skills.sh/api/skills/all-time?page=N` 直到 `hasMore=false`，作为降级路径
+- [x] 2.4 实现 `should_use_fallback(snapshot)`：检查 `scrapedAt` 字段距今是否 > 7 天
+- [x] 2.5 实现 `normalize_entry(raw)`：将 mastra/skills.sh entry 转换为 catalog skill schema，生成稳定 id（如 `<skillId>-<owner>`）
+- [x] 2.6 实现 install_count 阈值过滤，环境变量 `SKILLS_SH_MIN_INSTALLS` 默认 1000
+- [x] 2.7 输出 `catalog/skills/skills_sh_index.json`，结构与现有 `{antigravity,vasilyu}_index.json` 一致
+- [x] 2.8 增量 diff：与上次输出对比，记录新增 / install_count 显著变化（±20%）/ 移除条目到 `.skills_sh_cache/diff.json`，供 merge_index 决定哪些进 LLM 评估
 
 ## 3. merge_index.py 改造
 
-- [ ] 3.1 在 `scripts/utils.py` 新增 `source_priority(source_url) -> int` 函数，根据 host 与路径判定优先级（直接源 > skills.sh > antigravity > 其他）
-- [ ] 3.2 修改 `merge_index.py` 的去重逻辑：同 source_url 多源命中时按优先级保留最高，但合并 `install_count` / `skills_sh_url` / `skills_sh_scraped_at` 字段
-- [ ] 3.3 处理"镜像 source_url 与官方 source_url 指向同一 skill"的情况：当 skills.sh 提供 githubUrl，antigravity 镜像基于内容 hash 或 skill 名匹配为同一 skill，移除镜像 entry，保留官方
-- [ ] 3.4 单元测试：构造 5 种去重场景（仅 skills.sh / 仅镜像 / 双源 / 三源 / source_url 完全不同）
+- [x] 3.1 在 `scripts/utils.py` 新增 `source_priority(source_url) -> int` 函数，根据 host 与路径判定优先级（直接源 > skills.sh > antigravity > 其他）
+- [x] 3.2 修改 `merge_index.py` 的去重逻辑：同 source_url 多源命中时按优先级保留最高，但合并 `install_count` / `skills_sh_url` / `skills_sh_scraped_at` 字段
+- [x] 3.3 处理"镜像 source_url 与官方 source_url 指向同一 skill"的情况：当 skills.sh 提供 githubUrl，antigravity 镜像基于内容 hash 或 skill 名匹配为同一 skill，移除镜像 entry，保留官方
+- [x] 3.4 单元测试：构造 5 种去重场景（仅 skills.sh / 仅镜像 / 双源 / 三源 / source_url 完全不同）
 
 ## 4. catalog schema 增量字段
 

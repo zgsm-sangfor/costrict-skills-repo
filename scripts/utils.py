@@ -557,19 +557,177 @@ def normalize_source_url(url: str) -> str:
     return url
 
 
+# --- Source priority & cross-source skill dedup ---------------------------
+
+# Whitelist of "official org" hosts on github.com whose direct sources rank
+# higher than third-party mirrors. Conservative initial list — extend as needed.
+_OFFICIAL_ORG_HOSTS = {
+    "anthropics",
+    "vercel-labs",
+    "supermemoryai",
+}
+
+# Known antigravity-style mirror repos (owner/repo lowercased).
+_KNOWN_MIRRORS = {
+    "sickn33/antigravity-awesome-skills",
+}
+
+
+def _parse_owner_repo(url: str) -> tuple[str, str] | None:
+    """Extract (owner, repo) lowercased from a GitHub URL. Returns None if not GitHub."""
+    if not url:
+        return None
+    m = re.search(r"github\.com/([^/]+)/([^/#?]+)", url)
+    if not m:
+        return None
+    repo = m.group(2)
+    if repo.endswith(".git"):
+        repo = repo[:-4]
+    return (m.group(1).lower(), repo.lower())
+
+
+def source_priority(source_url: str) -> int:
+    """Return numeric priority for a source URL (higher = preferred).
+
+    Tiers (high → low):
+      1000 — Anthropic official (github.com/anthropics/*)
+      900  — Other official orgs (vercel-labs, supermemoryai, ...)
+      800  — skills.sh sourced direct repos (anchor `#skill=` and not a known mirror)
+      500  — Other (non-mirror) GitHub repos
+      200  — Known mirrors (sickn33/antigravity-awesome-skills)
+      100  — Non-GitHub / unparseable
+    """
+    pr = _parse_owner_repo(source_url)
+    if not pr:
+        return 100
+    owner, repo = pr
+    slug = f"{owner}/{repo}"
+    if slug in _KNOWN_MIRRORS:
+        return 200
+    if owner == "anthropics":
+        return 1000
+    if owner in _OFFICIAL_ORG_HOSTS:
+        return 900
+    if "#skill=" in (source_url or ""):
+        return 800
+    return 500
+
+
+def _extract_skill_name(entry: dict) -> str:
+    """Best-effort extraction of the skill name from an entry's source_url / name.
+
+    Preserves nested skill paths (e.g. ``game-development/2d-games``) so that
+    sibling skills under a shared parent directory don't collide on the same
+    identity key.
+    """
+    url = entry.get("source_url") or ""
+    m = re.search(r"#skill=([^&]+)", url)
+    if m:
+        return m.group(1).lower()
+    # Capture everything after `/skills/` up to query/fragment, preserving
+    # nested sub-paths. Strip trailing slashes so `.../skills/foo/` and
+    # `.../skills/foo` collapse to the same key.
+    m = re.search(r"/tree/[^/]+/skills/([^?#]+)", url)
+    if m:
+        return m.group(1).rstrip("/").lower()
+    return (entry.get("name") or "").lower()
+
+
+def skill_identity_key(entry: dict) -> tuple[str, str, str] | None:
+    """Cross-source identity for a skill entry.
+
+    Returns (owner, repo, skill_name) all lowercased — or None if entry is not
+    a skill, has no parseable GitHub URL, or no resolvable skill name.
+
+    For mirror repos (e.g. sickn33/antigravity-awesome-skills), the owner/repo
+    is rewritten to the upstream "anthropics/skills" so that mirror entries
+    collapse with the official entry under the same key.
+    """
+    if (entry.get("type") or "") != "skill":
+        return None
+    pr = _parse_owner_repo(entry.get("source_url") or "")
+    if not pr:
+        return None
+    owner, repo = pr
+    name = _extract_skill_name(entry)
+    if not name:
+        return None
+    if f"{owner}/{repo}" in _KNOWN_MIRRORS:
+        # Antigravity mirror is a snapshot of anthropics/skills — collapse to upstream
+        owner, repo = "anthropics", "skills"
+    return (owner, repo, name)
+
+
+# Fields contributed by skills.sh that should be carried over to the
+# winning entry even when a higher-priority source supplies the base record.
+_SKILLS_SH_MERGE_FIELDS = ("install_count", "skills_sh_url", "skills_sh_scraped_at")
+
+
+def _merge_skills_sh_fields(target: dict, donor: dict) -> None:
+    """Copy non-empty skills.sh signal fields from donor onto target (target wins ties)."""
+    for k in _SKILLS_SH_MERGE_FIELDS:
+        v = donor.get(k)
+        if v in (None, "", 0):
+            continue
+        if not target.get(k):
+            target[k] = v
+
+
 def deduplicate(entries: list) -> list:
-    """Deduplicate entries by id and source_url. Earlier entries take priority.
+    """Deduplicate entries.
+
+    Two-pass strategy:
+
+    1. **Skill identity collapse** — group entries with the same
+       `skill_identity_key` (owner, repo, skill_name) across different sources
+       (anthropics direct / skills.sh / antigravity mirror). Keep the entry
+       with the highest `source_priority`; merge skills.sh signal fields
+       (`install_count`, `skills_sh_url`, `skills_sh_scraped_at`) onto the
+       kept entry. Ties broken by input order (earlier wins).
+
+    2. **Legacy id/source_url dedup** — for everything else (and as a
+       safety net), keep the first entry per id and (for non-rule/prompt
+       types) per normalized source_url.
 
     For rule/prompt types, only id-based dedup is applied (these types
     legitimately share a single repo-level source_url across many entries).
-    For mcp/skill types, both id and source_url dedup are applied.
     """
-    seen_ids = {}    # id -> entry
-    seen_urls = {}   # normalized_url -> entry
-    result = []
-    # Types where multiple entries per source_url is expected
+    # --- Pass 1: skill identity collapse ----------------------------------
+    # Build groups keyed by skill_identity_key. Entries without a key pass through.
+    groups: dict[tuple[str, str, str], list[int]] = {}
+    keys_per_entry: list[tuple | None] = []
+    for idx, e in enumerate(entries):
+        key = skill_identity_key(e)
+        keys_per_entry.append(key)
+        if key is not None:
+            groups.setdefault(key, []).append(idx)
+
+    # For each group with >1 entry, choose the winner and mark losers.
+    losers: set[int] = set()
+    for key, idxs in groups.items():
+        if len(idxs) <= 1:
+            continue
+        # Sort by source_priority desc, then original order asc (stable tiebreak).
+        ranked = sorted(
+            idxs,
+            key=lambda i: (-source_priority(entries[i].get("source_url") or ""), i),
+        )
+        winner_idx = ranked[0]
+        winner = entries[winner_idx]
+        for j in ranked[1:]:
+            _merge_skills_sh_fields(winner, entries[j])
+            losers.add(j)
+        # Also pull skills.sh fields from the winner itself (idempotent if already set).
+        _merge_skills_sh_fields(winner, winner)
+
+    after_identity = [e for i, e in enumerate(entries) if i not in losers]
+
+    # --- Pass 2: legacy id + url dedup (first-wins) -----------------------
+    seen_ids: dict[str, dict] = {}
+    seen_urls: dict[str, dict] = {}
+    result: list = []
     url_dedup_skip_types = {"rule", "prompt"}
-    for entry in entries:
+    for entry in after_identity:
         eid = entry.get("id", "")
         if eid and eid in seen_ids:
             continue

@@ -266,6 +266,67 @@ class TestMergeIndex(unittest.TestCase):
         self.assertGreater(result[0]["final_score"], 0)
         self.assertIn(result[0]["decision"], ("accept", "review", "reject"))
 
+    def test_skills_sh_index_loaded_into_pool(self):
+        """skills_sh_index.json is picked up alongside skills/index.json and merged."""
+        # Anthropics direct entry in main skills index
+        direct = _make_entry(
+            "frontend-design-skill",
+            type="skill",
+            name="frontend-design",
+            source_url="https://github.com/anthropics/skills/tree/main/skills/frontend-design",
+        )
+        # skills.sh entry (different id, anchor URL, carries install_count)
+        sh_entry = _make_entry(
+            "frontend-design-anthropics-skills",
+            type="skill",
+            name="frontend-design",
+            source_url="https://github.com/anthropics/skills#skill=frontend-design",
+        )
+        sh_entry["install_count"] = 54321
+        sh_entry["skills_sh_url"] = "https://skills.sh/anthropics/skills/frontend-design"
+        sh_entry["skills_sh_scraped_at"] = "2026-01-30T04:51:07.907Z"
+
+        self._write_index("skills", [direct])
+        self._write_index("skills", [sh_entry], filename="skills_sh_index.json")
+
+        with unittest.mock.patch("merge_index.enrich_entries") as mock_enrich, \
+             unittest.mock.patch("merge_index.apply_governance") as mock_gov:
+            mock_enrich.side_effect = lambda x: x
+            mock_gov.side_effect = lambda x: x
+            merge_index.merge()
+        result = self._read_output()
+
+        # The two entries collapse into one — direct anthropics wins, skills.sh fields merged in.
+        assert len(result) == 1
+        kept = result[0]
+        assert kept["id"] == "frontend-design-skill"
+        assert kept["install_count"] == 54321
+        assert kept["skills_sh_url"] == "https://skills.sh/anthropics/skills/frontend-design"
+        assert kept["skills_sh_scraped_at"] == "2026-01-30T04:51:07.907Z"
+
+    def test_skills_sh_index_only_pickup(self):
+        """A skills.sh entry with no main-index sibling lands in catalog/index.json."""
+        sh_entry = _make_entry(
+            "lone-skill-vercel-labs-agent-skills",
+            type="skill",
+            name="lone-skill",
+            source_url="https://github.com/vercel-labs/agent-skills#skill=lone-skill",
+        )
+        sh_entry["install_count"] = 9999
+        self._write_index("skills", [], filename="index.json")
+        self._write_index("skills", [sh_entry], filename="skills_sh_index.json")
+
+        with unittest.mock.patch("merge_index.enrich_entries") as mock_enrich, \
+             unittest.mock.patch("merge_index.apply_governance") as mock_gov:
+            mock_enrich.side_effect = lambda x: x
+            mock_gov.side_effect = lambda x: x
+            merge_index.merge()
+        result = self._read_output()
+
+        assert len(result) == 1
+        assert result[0]["id"] == "lone-skill-vercel-labs-agent-skills"
+        assert result[0]["install_count"] == 9999
+
     def test_dedup_integrity_stats_logged(self):
         """Merge logs per-type dedup stats."""
         self._write_index(

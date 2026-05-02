@@ -147,6 +147,20 @@ def merge():
         logger.info(f"Loaded {len(entries)} entries from {resource_type}/index.json")
         all_entries.extend(entries)
 
+        # Load skills.sh sub-index (Tier 1 sibling source for skills only).
+        # Skill identity-aware dedup in utils.deduplicate() collapses these
+        # against the main index by source_priority, merging install_count /
+        # skills_sh_url / skills_sh_scraped_at onto the winning entry.
+        if resource_type == "skills":
+            skills_sh_path = os.path.join(type_dir, "skills_sh_index.json")
+            skills_sh_entries = load_index(skills_sh_path)
+            if skills_sh_entries:
+                logger.info(
+                    f"Loaded {len(skills_sh_entries)} entries from "
+                    f"{resource_type}/skills_sh_index.json"
+                )
+                all_entries.extend(skills_sh_entries)
+
         # Load curated entries (Tier 3 — lowest priority in dedup)
         curated_path = os.path.join(type_dir, "curated.json")
         curated = load_index(curated_path)
