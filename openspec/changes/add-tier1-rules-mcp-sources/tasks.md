@@ -51,9 +51,9 @@
 
 ## 7. 覆盖率审计扩展
 
-- [ ] 7.1 扩展 `scripts/popular_skills_expected.yaml`：增加 expected_mcp 与 expected_rules 两个分组，含 5-7 条经典 entry（如 `modelcontextprotocol/servers/fetch`、`React Cursor Rules` 等）
-- [ ] 7.2 修改 `scripts/audit_popular_coverage.py`：支持 mcp / rules 类型审计（与 skill 类型并列）
-- [ ] 7.3 报告输出 `docs/coverage_report.md` 加分组（Skills / MCP / Rules）
+- [x] 7.1 扩展 `scripts/popular_skills_expected.yaml`：增加 expected_mcp 与 expected_rules 两个分组，含 5-7 条经典 entry（如 `modelcontextprotocol/servers/fetch`、`React Cursor Rules` 等）
+- [x] 7.2 修改 `scripts/audit_popular_coverage.py`：支持 mcp / rules 类型审计（与 skill 类型并列）
+- [x] 7.3 报告输出 `docs/coverage_report.md` 加分组（Skills / MCP / Rules）
 
 ## 8. 增量评估保护
 
