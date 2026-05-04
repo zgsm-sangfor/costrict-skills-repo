@@ -68,10 +68,13 @@ class _CacheDirSandbox:
     def __enter__(self):
         cache_dir = os.path.join(self.tmp.name, ".skills_sh_cache")
         os.makedirs(cache_dir, exist_ok=True)
+        readme_dir = os.path.join(cache_dir, "readme")
+        os.makedirs(readme_dir, exist_ok=True)
         catalog_dir = os.path.join(self.tmp.name, "catalog", "skills")
         os.makedirs(catalog_dir, exist_ok=True)
         self._patches = [
             mock.patch.object(sss, "CACHE_DIR", cache_dir),
+            mock.patch.object(sss, "README_CACHE_DIR", readme_dir),
             mock.patch.object(sss, "MASTRA_CACHE_PATH", os.path.join(cache_dir, "mastra.json")),
             mock.patch.object(sss, "ETAG_PATH", os.path.join(cache_dir, "etag.txt")),
             mock.patch.object(sss, "DIFF_PATH", os.path.join(cache_dir, "diff.json")),
@@ -80,6 +83,8 @@ class _CacheDirSandbox:
                 "OUTPUT_PATH",
                 os.path.join(catalog_dir, "skills_sh_index.json"),
             ),
+            # 默认不发起 README fetch（要测试 README 行为请显式 stop 这个 patch）
+            mock.patch.object(sss, "SKIP_README", True),
         ]
         for p in self._patches:
             p.start()
@@ -345,6 +350,136 @@ class TestComputeDiff(unittest.TestCase):
         diff = sss.compute_diff(prev, new)
         self.assertEqual(diff["stable"], 1)
         self.assertEqual(diff["changed_install_count"], [])
+
+
+# ---------------------------------------------------------------------------
+# README fetch (GitHub API: /repos/{owner}/{repo}/readme)
+# ---------------------------------------------------------------------------
+
+
+class TestFetchReadme(unittest.TestCase):
+    def _b64(self, text):
+        import base64
+        return base64.b64encode(text.encode("utf-8")).decode("ascii")
+
+    def test_fetch_readme_success_writes_cache(self):
+        """200 OK + base64 → 解码、截断、落盘缓存。"""
+        with _CacheDirSandbox() as box:
+            payload = {"content": self._b64("# Hello\nworld"), "encoding": "base64"}
+            body = json.dumps(payload).encode("utf-8")
+            with mock.patch.object(
+                sss.urllib.request, "urlopen",
+                return_value=_make_response(body),
+            ):
+                content = sss._fetch_readme("foo", "bar")
+            self.assertIn("Hello", content)
+            self.assertTrue(os.path.exists(sss._readme_cache_path("foo", "bar")))
+
+    def test_fetch_readme_truncates_to_8000(self):
+        """超过 8000 字符的 README 被截断。"""
+        with _CacheDirSandbox() as box:
+            big = "x" * 12000
+            payload = {"content": self._b64(big), "encoding": "base64"}
+            body = json.dumps(payload).encode("utf-8")
+            with mock.patch.object(
+                sss.urllib.request, "urlopen",
+                return_value=_make_response(body),
+            ):
+                content = sss._fetch_readme("foo", "bar")
+            self.assertEqual(len(content), 8000)
+
+    def test_fetch_readme_404_returns_empty(self):
+        """404 → 输出 WARNING、返回空串、不落缓存。"""
+        with _CacheDirSandbox() as box:
+            err = urllib.error.HTTPError(
+                url="x", code=404, msg="Not Found", hdrs=None, fp=None
+            )
+            with mock.patch.object(sss.urllib.request, "urlopen", side_effect=err):
+                content = sss._fetch_readme("foo", "bar")
+            self.assertEqual(content, "")
+            self.assertFalse(os.path.exists(sss._readme_cache_path("foo", "bar")))
+
+    def test_fetch_readme_429_returns_empty(self):
+        """429 限流 → 返回空串，不阻断。"""
+        with _CacheDirSandbox() as box:
+            err = urllib.error.HTTPError(
+                url="x", code=429, msg="Too Many Requests", hdrs=None, fp=None
+            )
+            with mock.patch.object(sss.urllib.request, "urlopen", side_effect=err):
+                content = sss._fetch_readme("foo", "bar")
+            self.assertEqual(content, "")
+
+    def test_fetch_readme_cache_hit_no_network(self):
+        """缓存已存在 → 不发起网络请求。"""
+        with _CacheDirSandbox() as box:
+            # 预置缓存
+            cache_path = sss._readme_cache_path("foo", "bar")
+            os.makedirs(os.path.dirname(cache_path), exist_ok=True)
+            with open(cache_path, "w", encoding="utf-8") as f:
+                f.write("cached content")
+            with mock.patch.object(sss.urllib.request, "urlopen") as mu:
+                content = sss._fetch_readme("foo", "bar")
+            self.assertEqual(content, "cached content")
+            mu.assert_not_called()
+
+    def test_fetch_readme_url_error_returns_empty(self):
+        """网络错误 → 返回空串。"""
+        with _CacheDirSandbox() as box:
+            err = urllib.error.URLError(reason="connection refused")
+            with mock.patch.object(sss.urllib.request, "urlopen", side_effect=err):
+                content = sss._fetch_readme("foo", "bar")
+            self.assertEqual(content, "")
+
+
+class TestEnrichEntriesWithReadme(unittest.TestCase):
+    def test_dedupe_by_owner_repo(self):
+        """同 (owner, repo) 多 entry → 仅 fetch 一次。"""
+        with _CacheDirSandbox() as box:
+            entries = [
+                {"id": "a", "source_url": "https://github.com/foo/bar#skill=a",
+                 "description": "A"},
+                {"id": "b", "source_url": "https://github.com/foo/bar#skill=b",
+                 "description": "B"},
+                {"id": "c", "source_url": "https://github.com/baz/qux#skill=c",
+                 "description": "C"},
+            ]
+            with mock.patch.object(
+                sss, "_fetch_readme", side_effect=lambda o, r: f"README:{o}/{r}",
+            ) as mf:
+                sss._enrich_entries_with_readme(entries)
+            # 仅 2 个唯一 (owner, repo) → 2 次 fetch
+            self.assertEqual(mf.call_count, 2)
+            # 同 repo 的 entry 共享同一 README
+            self.assertEqual(entries[0]["description"], "README:foo/bar")
+            self.assertEqual(entries[1]["description"], "README:foo/bar")
+            self.assertEqual(entries[2]["description"], "README:baz/qux")
+
+    def test_fetch_failure_keeps_displayname(self):
+        """fetch 失败 → description 保持 displayName 占位。"""
+        with _CacheDirSandbox() as box:
+            entries = [
+                {"id": "a", "source_url": "https://github.com/foo/bar#skill=a",
+                 "description": "Display Name"},
+            ]
+            with mock.patch.object(sss, "_fetch_readme", return_value=""):
+                sss._enrich_entries_with_readme(entries)
+            self.assertEqual(entries[0]["description"], "Display Name")
+
+
+class TestNormalizeDisplayName(unittest.TestCase):
+    def test_display_name_preserved_separately(self):
+        """display_name 字段应单独保留 mastra 原值，便于回溯。"""
+        e = sss.normalize_entry({
+            "skillId": "foo",
+            "owner": "bar",
+            "repo": "baz",
+            "displayName": "Foo Skill",
+            "githubUrl": "https://github.com/bar/baz",
+            "installs": 5000,
+        })
+        self.assertEqual(e["display_name"], "Foo Skill")
+        # description 初值仍是 displayName 占位（main 里 README 才会覆写）
+        self.assertEqual(e["description"], "Foo Skill")
 
 
 if __name__ == "__main__":

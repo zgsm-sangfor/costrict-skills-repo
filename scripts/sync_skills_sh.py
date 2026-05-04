@@ -15,6 +15,7 @@
   降级路径仅在本地 mastra 缓存仍可用时打 stale 警告输出旧数据
 """
 
+import base64
 import json
 import os
 import re
@@ -27,10 +28,18 @@ from datetime import date, datetime, timezone
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
 CACHE_DIR = os.path.join(REPO_ROOT, ".skills_sh_cache")
+README_CACHE_DIR = os.path.join(CACHE_DIR, "readme")
 MASTRA_CACHE_PATH = os.path.join(CACHE_DIR, "mastra.json")
 ETAG_PATH = os.path.join(CACHE_DIR, "etag.txt")
 DIFF_PATH = os.path.join(CACHE_DIR, "diff.json")
 OUTPUT_PATH = os.path.join(REPO_ROOT, "catalog", "skills", "skills_sh_index.json")
+
+# README 截断长度（与 sync_skills.py 整体使用风格保持一致：fetch_raw_content
+# 不限长度，但下游 LLM 评估按截断 8000 chars 估算 ~2k tokens，避免 context 膨胀）
+README_MAX_CHARS = 8000
+
+# 环境变量：本地快速 dry-run 时跳过 README fetch（避免 ~30 个 GitHub API call）
+SKIP_README = os.environ.get("SKILLS_SH_SKIP_README", "").strip() in {"1", "true", "yes"}
 
 # 数据源 URL
 MASTRA_URL = (
@@ -132,6 +141,131 @@ def _load_local_cache_or_die() -> dict:
     except (json.JSONDecodeError, OSError) as e:
         print(f"ERROR: local cache corrupted: {e}")
         sys.exit(2)
+
+
+# ---------------------------------------------------------------------------
+# README fetch（GitHub API: /repos/{owner}/{repo}/readme）
+# ---------------------------------------------------------------------------
+
+def _readme_cache_path(owner: str, repo: str) -> str:
+    """README 缓存路径（与 mastra/diff 等 cache 在 .skills_sh_cache/ 下并列）。"""
+    safe_owner = _sanitize_id_segment(owner) or "unknown"
+    safe_repo = _sanitize_id_segment(repo) or "unknown"
+    return os.path.join(README_CACHE_DIR, f"{safe_owner}__{safe_repo}.md")
+
+
+def _read_readme_cache(owner: str, repo: str) -> str:
+    """命中缓存返回内容；未命中或损坏返回空串。"""
+    path = _readme_cache_path(owner, repo)
+    if not os.path.exists(path):
+        return ""
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return f.read()
+    except OSError:
+        return ""
+
+
+def _write_readme_cache(owner: str, repo: str, content: str) -> None:
+    """写入 README 缓存（覆盖式）。"""
+    if not content:
+        return
+    os.makedirs(README_CACHE_DIR, exist_ok=True)
+    path = _readme_cache_path(owner, repo)
+    try:
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(content)
+    except OSError as e:
+        print(f"WARNING: failed to write README cache for {owner}/{repo}: {e}")
+
+
+def _fetch_readme(owner: str, repo: str, timeout: int = 30) -> str:
+    """从 GitHub API 抓取 repo README，返回截断后的纯文本。
+
+    - 优先使用 `.skills_sh_cache/readme/<owner>__<repo>.md` 缓存（同 sync 内多个
+      skill 共享同一 repo README，缓存避免重复 API call）
+    - 失败（404 / 429 / 网络错误）输出 WARNING，返回空串，不阻断主流程
+    - 截断到 README_MAX_CHARS（与 sync_skills.py 风格对齐——sync_skills 走
+      raw.githubusercontent.com 不限长度，但本路径专为 LLM 评估服务，必须截断）
+    """
+    if not owner or not repo:
+        return ""
+
+    # 1. 尝试本地缓存
+    cached = _read_readme_cache(owner, repo)
+    if cached:
+        return cached
+
+    # 2. 调 GitHub API
+    api_url = f"https://api.github.com/repos/{owner}/{repo}/readme"
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "everything-ai-coding-skills-sh-sync",
+    }
+    gh_token = os.environ.get("GITHUB_TOKEN", "").strip()
+    if gh_token:
+        headers["Authorization"] = f"token {gh_token}"
+
+    req = urllib.request.Request(api_url, headers=headers, method="GET")
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            print(f"WARNING: README not found (404) for {owner}/{repo}")
+        elif e.code in (429, 403):
+            print(
+                f"WARNING: README fetch rate-limited ({e.code}) for {owner}/{repo}, "
+                f"continuing with empty content"
+            )
+        else:
+            print(f"WARNING: README fetch HTTP {e.code} for {owner}/{repo}: {e.reason}")
+        return ""
+    except urllib.error.URLError as e:
+        print(f"WARNING: README fetch URL error for {owner}/{repo}: {e.reason}")
+        return ""
+    except (json.JSONDecodeError, OSError) as e:
+        print(f"WARNING: README fetch parse error for {owner}/{repo}: {e}")
+        return ""
+
+    # 3. 解析 base64 content
+    encoded = data.get("content") or ""
+    encoding = (data.get("encoding") or "").lower()
+    if encoding != "base64" or not encoded:
+        print(
+            f"WARNING: README for {owner}/{repo} has unexpected encoding "
+            f"{encoding!r}, skipping"
+        )
+        return ""
+    try:
+        # base64 内容自带换行；标准库 b64decode 接受
+        content_bytes = base64.b64decode(encoded)
+        content = content_bytes.decode("utf-8", errors="replace")
+    except (ValueError, UnicodeDecodeError) as e:
+        print(f"WARNING: README base64 decode failed for {owner}/{repo}: {e}")
+        return ""
+
+    # 4. 截断
+    if len(content) > README_MAX_CHARS:
+        content = content[:README_MAX_CHARS]
+
+    # 5. 落盘缓存
+    _write_readme_cache(owner, repo, content)
+    return content
+
+
+def _extract_owner_repo_from_github_url(github_url: str) -> tuple[str, str]:
+    """从 https://github.com/{owner}/{repo} 抽取 (owner, repo)，失败返回 ('', '')。
+
+    与 normalize_entry 内 raw.get('owner')/raw.get('repo') 互补：mastra JSON
+    本身已带这两字段，但保留 URL 解析以兼容 fallback 路径数据。
+    """
+    if not github_url:
+        return "", ""
+    m = re.match(r"https://github\.com/([^/]+)/([^/#?]+)", github_url)
+    if not m:
+        return "", ""
+    return m.group(1), m.group(2)
 
 
 def fetch_skills_sh_paginated(timeout: int = 30) -> list:
@@ -257,7 +391,13 @@ def normalize_entry(raw: dict) -> dict:
         "id": _make_id(skill_id, owner, repo),
         "name": skill_id,
         "type": "skill",
-        "description": display_name,  # mastra 不提供长描述，先用 displayName 占位
+        # description 由 main() 在 README fetch 后注入：成功 → README 截断文本，
+        # 失败 → 退化为 displayName。display_name 字段单独保留 mastra 原值，
+        # 便于下游展示与回溯（与 catalog/skills/index.json 现有「description 即长
+        # 描述」的约定对齐：runner 在 GitHubFetcher 失败时按 content_fallback
+        # 走 entry.description 作为 LLM 评估输入）
+        "description": display_name,  # 占位，main() 会用 README 覆写
+        "display_name": display_name,
         "source_url": source_url,
         "stars": None,
         "pushed_at": None,
@@ -396,6 +536,16 @@ def main() -> int:
         seen_ids.add(entry["id"])
         entries.append(entry)
 
+    # 4.5 README 富化：按 (owner, repo) 去重 fetch，给 entry.description 注入
+    # 完整 README 内容，让 ai-resource-eval LLM 评估有正确依据。
+    # mastra/skills.sh 数据源仅提供 displayName 占位，repo 根 README 是最稳定
+    # 的描述来源（无 path 字段无法精确定位 monorepo 子目录 SKILL.md）。
+    if SKIP_README:
+        print("INFO: SKILLS_SH_SKIP_README=1, skipping README fetch (description "
+              "stays as displayName)")
+    else:
+        _enrich_entries_with_readme(entries)
+
     # 按 install_count 降序固定排序，保证输出 diff 友好
     entries.sort(key=lambda e: (-int(e.get("install_count") or 0), e.get("id", "")))
 
@@ -421,6 +571,65 @@ def main() -> int:
     print(f"INFO: wrote diff to {DIFF_PATH}")
 
     return 0
+
+
+def _enrich_entries_with_readme(entries: list) -> None:
+    """为每个 entry 注入 repo README 到 description（修改 in-place）。
+
+    实现：按 (owner, repo) 去重 fetch（同一 repo 多 skill 共享 README），
+    抓取后将 README 文本写入 entry.description；失败时 description 保持原 displayName 占位。
+    """
+    # 收集所有需要 fetch 的唯一 (owner, repo)
+    repo_keys: list[tuple[str, str]] = []
+    seen: set = set()
+    for entry in entries:
+        owner, repo = _extract_owner_repo_from_github_url(
+            entry.get("source_url", "").split("#")[0]
+        )
+        if not owner or not repo:
+            continue
+        key = (owner, repo)
+        if key in seen:
+            continue
+        seen.add(key)
+        repo_keys.append(key)
+
+    print(f"INFO: fetching READMEs for {len(repo_keys)} unique (owner, repo) pairs")
+
+    # Fetch 并构造 (owner, repo) -> readme 映射
+    readme_map: dict[tuple[str, str], str] = {}
+    cache_hits = 0
+    fetch_success = 0
+    fetch_fail = 0
+    for owner, repo in repo_keys:
+        # 在调用前判定缓存是否命中（用于统计；_fetch_readme 内部仍会再读一次）
+        if os.path.exists(_readme_cache_path(owner, repo)):
+            cache_hits += 1
+        content = _fetch_readme(owner, repo)
+        if content:
+            readme_map[(owner, repo)] = content
+            fetch_success += 1
+        else:
+            fetch_fail += 1
+
+    print(
+        f"INFO: README fetch summary — total={len(repo_keys)}, "
+        f"cache_hits={cache_hits}, success={fetch_success}, fail={fetch_fail}"
+    )
+
+    # 注入到 entries
+    enriched = 0
+    for entry in entries:
+        owner, repo = _extract_owner_repo_from_github_url(
+            entry.get("source_url", "").split("#")[0]
+        )
+        if not owner or not repo:
+            continue
+        readme = readme_map.get((owner, repo))
+        if readme:
+            entry["description"] = readme
+            enriched += 1
+    print(f"INFO: enriched {enriched}/{len(entries)} entries with README content")
 
 
 def _load_prev_output() -> list:
