@@ -161,6 +161,46 @@ def merge():
                 )
                 all_entries.extend(skills_sh_entries)
 
+        # Load mcp_registry sub-index (Tier 1 sibling source for mcp only).
+        # mcp identity-aware dedup in utils.deduplicate() collapses registry
+        # entries against GitHub URL sources by mcp_identity_key, merging
+        # mcp_registry_status / mcp_registry_published_at / mcp_remotes onto
+        # the winning entry. Sidecar absence is tolerated (logged at INFO).
+        if resource_type == "mcp":
+            mcp_registry_path = os.path.join(type_dir, "mcp_registry_index.json")
+            if os.path.exists(mcp_registry_path):
+                registry_entries = load_index(mcp_registry_path)
+                if registry_entries:
+                    logger.info(
+                        f"Loaded {len(registry_entries)} entries from "
+                        f"{resource_type}/mcp_registry_index.json"
+                    )
+                    all_entries.extend(registry_entries)
+            else:
+                logger.info(
+                    f"No {resource_type}/mcp_registry_index.json sidecar; "
+                    "skipping registry source"
+                )
+
+        # Load awesome-windsurfrules sub-index (Tier 1 sibling source for rules
+        # only). Currently no rule_identity_key — entries are deduped by id /
+        # source_url in Pass 2. Sidecar absence is tolerated.
+        if resource_type == "rules":
+            windsurfrules_path = os.path.join(type_dir, "windsurfrules_index.json")
+            if os.path.exists(windsurfrules_path):
+                wr_entries = load_index(windsurfrules_path)
+                if wr_entries:
+                    logger.info(
+                        f"Loaded {len(wr_entries)} entries from "
+                        f"{resource_type}/windsurfrules_index.json"
+                    )
+                    all_entries.extend(wr_entries)
+            else:
+                logger.info(
+                    f"No {resource_type}/windsurfrules_index.json sidecar; "
+                    "skipping windsurfrules source"
+                )
+
         # Load curated entries (Tier 3 — lowest priority in dedup)
         curated_path = os.path.join(type_dir, "curated.json")
         curated = load_index(curated_path)

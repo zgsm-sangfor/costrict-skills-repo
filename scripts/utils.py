@@ -5,6 +5,7 @@ import re
 import json
 import time
 import logging
+import urllib.parse
 from typing import Optional
 from urllib.request import urlopen, Request
 from urllib.error import HTTPError, URLError
@@ -572,6 +573,19 @@ _KNOWN_MIRRORS = {
     "sickn33/antigravity-awesome-skills",
 }
 
+# Recognized awesome-windsurfrules host repos (owner/repo lowercased).
+# Listed for readability; they fall into the default GitHub tier (500),
+# matching design.md §4.3.
+_WINDSURFRULES_REPOS = {
+    "schneidersam/awesome-windsurfrules",
+    "balqaasem/awesome-windsurfrules",
+}
+
+# registry.modelcontextprotocol.io entry source_url pattern.
+_MCP_REGISTRY_URL_RE = re.compile(
+    r"^https?://registry\.modelcontextprotocol\.io/v0/servers/(.+?)/?$"
+)
+
 
 def _parse_owner_repo(url: str) -> tuple[str, str] | None:
     """Extract (owner, repo) lowercased from a GitHub URL. Returns None if not GitHub."""
@@ -591,12 +605,19 @@ def source_priority(source_url: str) -> int:
 
     Tiers (high → low):
       1000 — Anthropic official (github.com/anthropics/*)
-      900  — Other official orgs (vercel-labs, supermemoryai, ...)
+      900  — Other official orgs (vercel-labs, supermemoryai, ...) /
+             registry.modelcontextprotocol.io entries
       800  — skills.sh sourced direct repos (anchor `#skill=` and not a known mirror)
-      500  — Other (non-mirror) GitHub repos
+      500  — Other (non-mirror) GitHub repos (incl. awesome-windsurfrules)
       200  — Known mirrors (sickn33/antigravity-awesome-skills)
       100  — Non-GitHub / unparseable
     """
+    # registry.modelcontextprotocol.io entries — official MCP registry tier.
+    # Recognized BEFORE _parse_owner_repo so the non-GitHub URL is not
+    # demoted to the 100 fallback.
+    if source_url and _MCP_REGISTRY_URL_RE.match(source_url):
+        return 900
+
     pr = _parse_owner_repo(source_url)
     if not pr:
         return 100
@@ -610,6 +631,10 @@ def source_priority(source_url: str) -> int:
         return 900
     if "#skill=" in (source_url or ""):
         return 800
+    # awesome-windsurfrules is a default-tier GitHub repo (kept explicit for
+    # readability; behaves identically to other 500-tier repos).
+    if slug in _WINDSURFRULES_REPOS:
+        return 500
     return 500
 
 
@@ -664,9 +689,115 @@ def skill_identity_key(entry: dict) -> tuple[str, str, str] | None:
     return (owner, repo, name)
 
 
+def mcp_identity_key(entry: dict) -> tuple[str, str, str] | None:
+    """Cross-source identity for an MCP server entry.
+
+    Strict matching, no owner-only fuzzy match. Rules (per
+    docs/tier1_rules_mcp_baseline.md §5):
+
+    - registry.modelcontextprotocol.io URL whose decoded server name matches
+      ``io.github.<owner>/<repo>`` → ``('github', owner/repo, '')`` so it can
+      collapse with a wong2 GitHub URL entry pointing at the SAME repo root.
+      Registry-supplied "io.github" identity is repo-root scoped — it does not
+      collapse with monorepo sub-path entries (those have non-empty sub_path).
+    - Other reverse-DNS registry names (e.g. ``com.microsoft/azure``) → an
+      independent ``('registry', registry_name, '')`` key. This avoids the
+      false positives flagged in baseline §4 (same owner, different product).
+    - Plain ``github.com/<owner>/<repo>`` URL → ``('github', owner/repo, '')``.
+    - GitHub URL with monorepo sub-path
+      (``.../tree/<branch>/src/foo`` or ``.../blob/<branch>/path/to/file``)
+      → ``('github', owner/repo, sub_path)`` so sibling sub-paths in a
+      monorepo do not collide on the same identity key.
+
+    Returns ``None`` for non-mcp entries or entries whose source_url cannot
+    be parsed (excluded from cross-source dedup).
+    """
+    if (entry.get("type") or "") != "mcp":
+        return None
+    su = entry.get("source_url") or ""
+    if not su:
+        return None
+
+    m = _MCP_REGISTRY_URL_RE.match(su)
+    if m:
+        registry_name = urllib.parse.unquote(m.group(1)).strip().lower()
+        if not registry_name:
+            return None
+        gh_match = re.match(r"^io\.github\.([^/]+)/([^/]+)$", registry_name)
+        if gh_match:
+            # Registry io.github.<owner>/<repo> identity is repo-root scoped
+            # (no sub-path) so it only collapses with the root-level GitHub
+            # URL entry for the same repo, never with a monorepo sub-path.
+            return ("github", f"{gh_match.group(1)}/{gh_match.group(2)}", "")
+        return ("registry", registry_name, "")
+
+    pr = _parse_owner_repo(su)
+    if pr:
+        owner, repo = pr
+        # Extract path after /tree/<branch>/ or /blob/<branch>/ for monorepo
+        # distinction. Strip query/fragment and trailing slashes; lowercased
+        # so casing differences don't fragment the same logical entry.
+        path_match = re.search(r"/(?:tree|blob)/[^/]+/(.+?)(?:[?#]|$)", su)
+        sub_path = path_match.group(1).rstrip("/").lower() if path_match else ""
+        return ("github", f"{owner}/{repo}", sub_path)
+    return None
+
+
+def rule_identity_key(entry: dict) -> tuple[str, str] | None:
+    """Cross-repo identity for an awesome-windsurfrules rule entry.
+
+    The same rule slug appears in BOTH SchneiderSam/awesome-windsurfrules and
+    balqaasem/awesome-windsurfrules (the latter is a fork mirror — per baseline
+    docs/tier1_rules_mcp_baseline.md §2, 103/108 SchneiderSam slugs overlap
+    with balqaasem and balqaasem has 0 unique entries). Their ids differ by a
+    repo_slug suffix, so legacy id-based dedup keeps both copies.
+
+    Returns ``('windsurfrules', slug)`` for type="rule" entries whose
+    source_url points at one of the two awesome-windsurfrules repos. The
+    slug is the directory immediately under ``rules/`` (or under
+    ``rules/global_rules/`` / ``rules/windsurfrules/``).
+
+    Returns ``None`` for non-rule entries, rules from other sources
+    (awesome-cursorrules, rules-2.1-optimized, ...), or rules whose URL we
+    cannot parse a slug from — those flow through unchanged.
+    """
+    if (entry.get("type") or "") != "rule":
+        return None
+    su = entry.get("source_url") or ""
+    pr = _parse_owner_repo(su)
+    if not pr:
+        return None
+    owner, repo = pr
+    slug_full = f"{owner}/{repo}"
+    if slug_full not in _WINDSURFRULES_REPOS:
+        return None
+    # Extract the rule slug from the URL path. Awesome-windsurfrules layout:
+    #   .../blob/<branch>/rules/<slug>/.windsurfrules
+    #   .../blob/<branch>/rules/global_rules/<slug>/...
+    #   .../blob/<branch>/rules/windsurfrules/<slug>/...
+    path_match = re.search(
+        r"/(?:tree|blob)/[^/]+/rules/(?:global_rules/|windsurfrules/)?([^/?#]+)",
+        su,
+    )
+    if not path_match:
+        return None
+    slug = path_match.group(1).strip().lower()
+    if not slug:
+        return None
+    return ("windsurfrules", slug)
+
+
 # Fields contributed by skills.sh that should be carried over to the
 # winning entry even when a higher-priority source supplies the base record.
 _SKILLS_SH_MERGE_FIELDS = ("install_count", "skills_sh_url", "skills_sh_scraped_at")
+
+# Fields contributed by registry.modelcontextprotocol.io that should be
+# carried over to the winning entry when a GitHub URL source wins.
+_MCP_REGISTRY_MERGE_FIELDS = (
+    "mcp_registry_status",
+    "mcp_registry_published_at",
+    "mcp_remotes",
+)
 
 # ISO 8601 UTC timestamp pattern accepted by skills_sh_scraped_at:
 #   2026-01-30T04:51:07Z   或   2026-01-30T04:51:07.907Z
@@ -738,17 +869,53 @@ def _merge_skills_sh_fields(target: dict, donor: dict) -> None:
             target[k] = v
 
 
+def _merge_mcp_registry_fields(target: dict, donor: dict) -> None:
+    """Copy non-empty registry.modelcontextprotocol.io fields from donor onto target.
+
+    Used when a GitHub URL entry wins identity collapse against a registry entry:
+    the registry-supplied metadata (status / published_at / remotes) is carried
+    onto the winner so consumers don't lose those signals. Existing non-empty
+    target values are preserved (target wins ties).
+    """
+    for k in _MCP_REGISTRY_MERGE_FIELDS:
+        v = donor.get(k)
+        if v in (None, "", [], {}):
+            continue
+        if not target.get(k):
+            target[k] = v
+
+
+def _identity_key_for_entry(entry: dict):
+    """Route an entry to its identity-collapse key by type.
+
+    Returns the key tuple or ``None`` (entry passes through identity collapse).
+    """
+    etype = entry.get("type") or ""
+    if etype == "skill":
+        return skill_identity_key(entry)
+    if etype == "mcp":
+        return mcp_identity_key(entry)
+    if etype == "rule":
+        return rule_identity_key(entry)
+    return None
+
+
 def deduplicate(entries: list) -> list:
     """Deduplicate entries.
 
     Two-pass strategy:
 
-    1. **Skill identity collapse** — group entries with the same
-       `skill_identity_key` (owner, repo, skill_name) across different sources
-       (anthropics direct / skills.sh / antigravity mirror). Keep the entry
-       with the highest `source_priority`; merge skills.sh signal fields
-       (`install_count`, `skills_sh_url`, `skills_sh_scraped_at`) onto the
+    1. **Cross-source identity collapse** — group entries by an entry-type
+       aware identity key (``skill_identity_key`` for skills, ``mcp_identity_key``
+       for mcp). Keep the entry with the highest `source_priority`; merge
+       sibling-source signal fields (skills.sh fields onto skill winners,
+       registry.modelcontextprotocol.io fields onto mcp winners) onto the
        kept entry. Ties broken by input order (earlier wins).
+
+       For mcp entries, **GitHub URL entries are preferred over registry URL
+       entries** so that the surviving ``source_url`` stays a useful GitHub
+       link (per spec catalog-entry-lifecycle); the registry's status /
+       published_at / remotes fields are merged onto the winner.
 
     2. **Legacy id/source_url dedup** — for everything else (and as a
        safety net), keep the first entry per id and (for non-rule/prompt
@@ -757,13 +924,11 @@ def deduplicate(entries: list) -> list:
     For rule/prompt types, only id-based dedup is applied (these types
     legitimately share a single repo-level source_url across many entries).
     """
-    # --- Pass 1: skill identity collapse ----------------------------------
-    # Build groups keyed by skill_identity_key. Entries without a key pass through.
-    groups: dict[tuple[str, str, str], list[int]] = {}
-    keys_per_entry: list[tuple | None] = []
+    # --- Pass 1: type-aware identity collapse -----------------------------
+    # Build groups keyed by per-type identity key. Entries without a key pass through.
+    groups: dict[tuple, list[int]] = {}
     for idx, e in enumerate(entries):
-        key = skill_identity_key(e)
-        keys_per_entry.append(key)
+        key = _identity_key_for_entry(e)
         if key is not None:
             groups.setdefault(key, []).append(idx)
 
@@ -772,18 +937,68 @@ def deduplicate(entries: list) -> list:
     for key, idxs in groups.items():
         if len(idxs) <= 1:
             continue
-        # Sort by source_priority desc, then original order asc (stable tiebreak).
-        ranked = sorted(
-            idxs,
-            key=lambda i: (-source_priority(entries[i].get("source_url") or ""), i),
-        )
+        # Determine entry type by inspecting first entry in group (all entries
+        # in a group share the same type by construction).
+        group_type = entries[idxs[0]].get("type") or ""
+
+        if group_type == "mcp":
+            # spec catalog-entry-lifecycle: GitHub URL entry SHALL be preserved
+            # and registry-supplied fields SHALL be merged onto it. So winner
+            # selection prefers GitHub URLs first, then source_priority desc,
+            # then original order.
+            def _mcp_rank(i: int) -> tuple:
+                su = entries[i].get("source_url") or ""
+                is_registry = bool(_MCP_REGISTRY_URL_RE.match(su))
+                return (
+                    1 if is_registry else 0,           # GitHub URL first
+                    -source_priority(su),              # then highest priority
+                    i,                                 # then original order
+                )
+            ranked = sorted(idxs, key=_mcp_rank)
+        elif group_type == "rule":
+            # awesome-windsurfrules cross-repo collapse — prefer SchneiderSam
+            # (canonical) over balqaasem (fork mirror). Both repos are in the
+            # default 500 GitHub tier so source_priority alone can't tiebreak;
+            # use an explicit canonical-repo bump.
+            def _rule_rank(i: int) -> tuple:
+                su = entries[i].get("source_url") or ""
+                pr = _parse_owner_repo(su)
+                slug = f"{pr[0]}/{pr[1]}" if pr else ""
+                # 0 = canonical (SchneiderSam), 1 = mirror (balqaasem), 2 = other
+                if slug == "schneidersam/awesome-windsurfrules":
+                    canonical_rank = 0
+                elif slug == "balqaasem/awesome-windsurfrules":
+                    canonical_rank = 1
+                else:
+                    canonical_rank = 2
+                return (
+                    canonical_rank,
+                    -source_priority(su),
+                    i,
+                )
+            ranked = sorted(idxs, key=_rule_rank)
+        else:
+            # Skills (and any future identity-keyed type) — pure source_priority.
+            ranked = sorted(
+                idxs,
+                key=lambda i: (
+                    -source_priority(entries[i].get("source_url") or ""),
+                    i,
+                ),
+            )
+
         winner_idx = ranked[0]
         winner = entries[winner_idx]
         for j in ranked[1:]:
-            _merge_skills_sh_fields(winner, entries[j])
+            if group_type == "skill":
+                _merge_skills_sh_fields(winner, entries[j])
+            elif group_type == "mcp":
+                _merge_mcp_registry_fields(winner, entries[j])
             losers.add(j)
-        # Also pull skills.sh fields from the winner itself (idempotent if already set).
-        _merge_skills_sh_fields(winner, winner)
+        if group_type == "skill":
+            # Idempotent self-merge so winners that already carry skills.sh
+            # fields keep them in canonical form.
+            _merge_skills_sh_fields(winner, winner)
 
     after_identity = [e for i, e in enumerate(entries) if i not in losers]
 

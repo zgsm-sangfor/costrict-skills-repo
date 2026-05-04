@@ -28,11 +28,11 @@
 
 ## 4. merge_index 整合
 
-- [ ] 4.1 修改 `scripts/merge_index.py`：mcp 类型分支加载 `catalog/mcp/mcp_registry_index.json`
-- [ ] 4.2 修改 `scripts/merge_index.py`：rules 类型分支加载 `catalog/rules/windsurfrules_index.json`
-- [ ] 4.3 在 `scripts/utils.py` 扩展 `source_priority()`：注册 `registry.modelcontextprotocol.io`（900）与 `awesome-windsurfrules`（500）
-- [ ] 4.4 实现 `mcp_identity_key(entry)`：严格匹配，**不做 owner-only fuzzy match**。规则：`io.github.<owner>/<repo>` → `('github', owner/repo)`（与 GitHub URL 源 dedup）；其他 reverse-DNS（如 `com.microsoft/azure`）→ 独立 `('registry', registry_name)` key（避免错误合并同 owner 不同 product）；GitHub URL → `('github', owner/repo)`。详见 docs/tier1_rules_mcp_baseline.md §5。
-- [ ] 4.5 单元测试：覆盖 mcp 跨源去重 4 场景（仅 registry / 仅 wong2 / 双源 / fuzzy match）+ rules 跨仓库去重 3 场景
+- [x] 4.1 修改 `scripts/merge_index.py`：mcp 类型分支加载 `catalog/mcp/mcp_registry_index.json`
+- [x] 4.2 修改 `scripts/merge_index.py`：rules 类型分支加载 `catalog/rules/windsurfrules_index.json`
+- [x] 4.3 在 `scripts/utils.py` 扩展 `source_priority()`：注册 `registry.modelcontextprotocol.io`（900）与 `awesome-windsurfrules`（500）
+- [x] 4.4 实现 `mcp_identity_key(entry)`：严格匹配，**不做 owner-only fuzzy match**。规则：`io.github.<owner>/<repo>` → `('github', owner/repo)`（与 GitHub URL 源 dedup）；其他 reverse-DNS（如 `com.microsoft/azure`）→ 独立 `('registry', registry_name)` key（避免错误合并同 owner 不同 product）；GitHub URL → `('github', owner/repo)`。详见 docs/tier1_rules_mcp_baseline.md §5。
+- [x] 4.5 单元测试：覆盖 mcp 跨源去重 4 场景（仅 registry / 仅 wong2 / 双源 / fuzzy match）+ rules 跨仓库去重 3 场景
 
 ## 5. catalog schema 增量字段
 
