@@ -63,10 +63,10 @@
 
 ## 9. spike：cursor.directory
 
-- [ ] 9.1 新建 `scripts/spike_cursor_directory.py`，探测候选路径：cursor.directory/api/* 各路径 / sitemap.xml / _next/data/ / 第三方 wrapper
-- [ ] 9.2 复核 GitHub repo `pontusab/directories` 的 src/data 实际数据规模
-- [ ] 9.3 输出 `docs/spike_cursor_directory.md` 报告：可行性评估 + 推荐下一步
-- [ ] 9.4 spike 结果分支：发现可行路径 → 在本 change 追加接入；不可行 → 记 follow-up change `spike-cursor-directory-extended`
+- [x] 9.1 新建 `scripts/spike_cursor_directory.py`，探测候选路径：cursor.directory/api/* 各路径 / sitemap.xml / _next/data/ / 第三方 wrapper
+- [x] 9.2 复核 GitHub repo `pontusab/directories` 的 src/data 实际数据规模
+- [x] 9.3 输出 `docs/spike_cursor_directory.md` 报告：可行性评估 + 推荐下一步
+- [x] 9.4 spike 结果分支：发现可行路径 → 在本 change 追加接入；不可行 → 记 follow-up change `spike-cursor-directory-extended`（实测：所有 `/api/*` 路径 404、`pontusab/directories` 仅 3 条种子 .ts、`cursor.directory` 是 App Router RSC，无 `__NEXT_DATA__`，sitemap 含 2615 个 `/plugins/*` URL 但完整字段需 RSC 反序列化或反向 Supabase 接口；已创建 follow-up change stub `openspec/changes/spike-cursor-directory-extended/proposal.md`，主 change 不接入）
 
 ## 10. spike：windsurf.com/editor/directory
 
