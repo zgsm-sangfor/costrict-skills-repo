@@ -6,7 +6,7 @@
   <a href="https://github.com/zgsm-ai/everything-ai-coding/stargazers"><img src="https://img.shields.io/github/stars/zgsm-ai/everything-ai-coding?style=flat-square&color=4A90D9" alt="Stars" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zgsm-ai/everything-ai-coding?style=flat-square" alt="License" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/commits/main"><img src="https://img.shields.io/github/last-commit/zgsm-ai/everything-ai-coding?style=flat-square" alt="Last Commit" /></a>
-  <img src="https://img.shields.io/badge/resources-4101-2ECC71?style=flat-square" alt="Resources" />
+  <img src="https://img.shields.io/badge/resources-4128-2ECC71?style=flat-square" alt="Resources" />
 </p>
 
 <p>
@@ -42,17 +42,17 @@ Model Context Protocol servers that connect AI agents to external tools, databas
 | Name | ⭐ Stars | Score | Description |
 |------|----------|-------|-------------|
 | [MCP Inspector](https://github.com/modelcontextprotocol/inspector) | 9.2k | 99 | A developer tool for visually testing and debugging Model Context Pro… |
-| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 31.5k | 98 | MCP server for browser automation using Playwright's accessibility tr… |
-| [github/github-mcp-server](https://github.com/github/github-mcp-server) | 29.3k | 98 | An official MCP server that connects AI agents to GitHub for reposito… |
-| [topoteretes/cognee](https://github.com/topoteretes/cognee/tree/dev/cognee-mcp) | 16.8k | 98 | An MCP server that provides a memory engine for AI agents, enabling i… |
-| [Firecrawl](https://github.com/mendableai/firecrawl-mcp-server) | 6.1k | 98 | An MCP server that provides AI agents with tools to search, scrape, a… |
+| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 32.0k | 98 | MCP server for browser automation using Playwright's accessibility tr… |
+| [github/github-mcp-server](https://github.com/github/github-mcp-server) | 29.5k | 98 | An official MCP server that connects AI agents to GitHub for reposito… |
+| [topoteretes/cognee](https://github.com/topoteretes/cognee/tree/dev/cognee-mcp) | 17.0k | 98 | MCP server for AI agent memory management with graph and vector stora… |
+| [IDA Pro MCP](https://github.com/mrexodia/ida-pro-mcp) | 6.7k | 98 | MCP server enabling AI-assisted reverse engineering in IDA Pro. |
 <!-- README_TOP5_MCP:END -->
 
 [Browse all MCP servers →](./catalog/mcp/) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=mcp)
 
 ---
 
-### [🎯 Skills](./catalog/skills/) — <!-- README_COUNT_SKILL:START -->1676<!-- README_COUNT_SKILL:END --> entries
+### [🎯 Skills](./catalog/skills/) — <!-- README_COUNT_SKILL:START -->1683<!-- README_COUNT_SKILL:END --> entries
 
 Reusable agent capabilities and workflows for AI coding assistants.
 
@@ -70,7 +70,7 @@ Reusable agent capabilities and workflows for AI coding assistants.
 
 ---
 
-### [📋 Rules](./catalog/rules/) — <!-- README_COUNT_RULE:START -->236<!-- README_COUNT_RULE:END --> entries
+### [📋 Rules](./catalog/rules/) — <!-- README_COUNT_RULE:START -->241<!-- README_COUNT_RULE:END --> entries
 
 Coding conventions and AI behavior guidelines for consistent development.
 
@@ -88,7 +88,7 @@ Coding conventions and AI behavior guidelines for consistent development.
 
 ---
 
-### [💡 Prompts](./catalog/prompts/) — <!-- README_COUNT_PROMPT:START -->559<!-- README_COUNT_PROMPT:END --> entries
+### [💡 Prompts](./catalog/prompts/) — <!-- README_COUNT_PROMPT:START -->574<!-- README_COUNT_PROMPT:END --> entries
 
 Developer-focused prompt templates for common coding tasks.
 
