@@ -25,6 +25,11 @@ jobs:
           pip install requests
           pip install -e ai-resource-eval
 
+      # 计算每周时间戳，用于 cache key 周期性失效（与 mastra 上游同步节奏对齐）
+      - name: Compute weekly cache stamp
+        id: week
+        run: echo "stamp=$(date -u +%Y-%U)" >> "$GITHUB_OUTPUT"
+
       - name: Restore sync caches
         id: cache-restore
         uses: actions/cache/restore@v4
@@ -35,9 +40,24 @@ jobs:
             catalog/maintenance/incremental_recrawl_state.json
             scripts/fallback_skill_repos.json
             .eval_cache/
-          key: sync-caches-${{ github.run_number }}
+          # cache key 含每周时间戳：周一新一轮 sync 时强制失效，避免上游 stale snapshot
+          key: sync-caches-${{ steps.week.outputs.stamp }}-${{ github.run_number }}
           restore-keys: |
+            sync-caches-${{ steps.week.outputs.stamp }}-
             sync-caches-
+
+      # skills.sh 缓存独立隔离：restore-keys 只含本周 stamp 前缀，禁止跨周回退。
+      # 修复点（P2-2）：sync-caches- 兜底前缀会让新一周首次运行错误恢复上周 .skills_sh_cache/，
+      # 上游 fetch 失败时 sync_skills_sh.py 会复用旧 snapshot，weekly stamp 失效语义被破坏。
+      - name: Restore skills.sh weekly cache
+        id: cache-restore-skills-sh
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            .skills_sh_cache/
+          key: skills-sh-cache-${{ steps.week.outputs.stamp }}-${{ github.run_number }}
+          restore-keys: |
+            skills-sh-cache-${{ steps.week.outputs.stamp }}-
 
       - name: Crawl mcp.so (incremental)
         run: python scripts/crawl_mcp_so.py --mode incremental
@@ -61,6 +81,15 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/sync_skills.py
         timeout-minutes: 30
+        continue-on-error: true
+
+      # skills.sh Tier 1 源：拉取 mastra-ai/skills-api 静态 JSON，零 rate limit
+      # 失败兜底：continue-on-error 保证 merge_index 仍能基于已有 skills_sh_index.json 跑
+      - name: Sync skills.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/sync_skills_sh.py
+        timeout-minutes: 10
         continue-on-error: true
 
       - name: Sync Prompts
@@ -106,6 +135,17 @@ jobs:
       - name: Update bilingual README files
         run: python scripts/update_readme.py
 
+      # 覆盖率审计：对照 popular_skills_expected.yaml 检查热门 skill 命中状态
+      # 当前脚本尚未实现（Section 8），continue-on-error 保证不阻断主流程
+      - name: Audit popular skill coverage
+        run: |
+          if [ -f scripts/audit_popular_coverage.py ]; then
+            python scripts/audit_popular_coverage.py
+          else
+            echo "INFO: scripts/audit_popular_coverage.py 尚未实现，跳过覆盖率审计"
+          fi
+        continue-on-error: true
+
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
@@ -131,4 +171,14 @@ jobs:
             catalog/maintenance/incremental_recrawl_state.json
             scripts/fallback_skill_repos.json
             .eval_cache/
-          key: sync-caches-${{ github.run_number }}
+          # 与 restore 一致：含每周时间戳，确保 stale 快照随周失效
+          key: sync-caches-${{ steps.week.outputs.stamp }}-${{ github.run_number }}
+
+      # skills.sh 缓存独立 save：与 restore 对齐，仅 weekly stamp 前缀
+      - name: Save skills.sh weekly cache
+        uses: actions/cache/save@v4
+        if: always() && steps.cache-restore-skills-sh.outputs.cache-hit != 'true'
+        with:
+          path: |
+            .skills_sh_cache/
+          key: skills-sh-cache-${{ steps.week.outputs.stamp }}-${{ github.run_number }}

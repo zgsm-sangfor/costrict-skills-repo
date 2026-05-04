@@ -368,6 +368,10 @@ def main() -> int:
         if fallback:
             print(f"INFO: fallback fetched {len(fallback)} entries from skills.sh")
             raw_skills = fallback
+            # 走 fallback 路径意味着抓取的不是 mastra 旧快照，而是 skills.sh 实时数据；
+            # 沿用 mastra scraped_at 会让下游误判为陈旧。改写为当前 UTC 时间戳。
+            scraped_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+            print(f"INFO: rewrite scraped_at to fallback fetch time: {scraped_at}")
 
     # 3. 阈值过滤
     filtered = [s for s in raw_skills if int(s.get("installs") or 0) >= min_installs]

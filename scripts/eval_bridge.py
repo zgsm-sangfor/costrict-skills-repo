@@ -6,11 +6,53 @@ fields (no evidence/missing/suggestion).
 """
 from __future__ import annotations
 
+import json
 import logging
 import os
+import re
+from pathlib import Path
 from typing import Any
+from urllib.parse import urlparse
 
 logger = logging.getLogger(__name__)
+
+# ---------------------------------------------------------------------------
+# Skills.sh 增量评估短路（Section 6）
+# ---------------------------------------------------------------------------
+#
+# 设计意图：
+#   skills.sh 上游每周输出的 install_count 抖动通常 < 20%，且 README 内容
+#   长期稳定（Tier 1 源条目均为成熟仓库）。对这类 stable 条目，可避免重复
+#   fetch + LLM 调用——直接复用 SQLite cache 中的 EvalResult。
+#
+# 缓存键完整性（P1 修复）：
+#   短路 lookup 复用 runner 的标准 cache key 语义：
+#       cache_key = SHA256("__full__" : content_hash : rubric_version)
+#   实现上以 (entry_id, rubric_version) 在 SQLite 中定位最近一条 row，
+#   读出其 content_hash，再用 EvalCache.make_key() 重建 cache_key + cache.get()
+#   走 expiry 校验。这保证：
+#     1. rubric v1→v2 升级后，旧 row 的 rubric_version 与当前不匹配 → 不复用
+#     2. 已过期 row 由 cache.get() 自然 miss
+#     3. 若 install_count 漂移在 ±20% 内，diff.json 视为「内容稳定」信号，
+#        允许复用历史 content_hash 对应的结果（这是 skills.sh 源的契约：
+#        当 install drift 小，README 大概率未变；上游真改 README 时通常伴随
+#        install 数量重新分布，会被 diff 识别为 changed）
+#
+# 触发条件（全部满足才短路）：
+#   1. entry 由 skills.sh 派生（具备 skills_sh_url 字段；merge_index 合并到
+#      高优先级 entry 后 source 字段会变，但 skills_sh_url 仍保留）
+#   2. 由 skills_sh_url 反推的 raw skills_sh id 不在 diff.json 的
+#      added/changed/removed 集合中
+#   3. SQLite cache 命中（含 rubric_version 校验 + expiry 校验）
+# ---------------------------------------------------------------------------
+
+INSTALL_COUNT_DRIFT_THRESHOLD = 0.20  # ±20% 视为 stable
+
+_DIFF_PATH_DEFAULT = Path(__file__).resolve().parent.parent / ".skills_sh_cache" / "diff.json"
+
+# skills.sh raw id 反推：与 sync_skills_sh._sanitize_id_segment / _make_id 同款逻辑
+# 必须与 sync_skills_sh.py 保持一致，否则 short-circuit 与 diff.json 比对不上
+_ID_INVALID_RE = re.compile(r"[^a-z0-9-]+")
 
 # ---------------------------------------------------------------------------
 # Config resolution
@@ -27,6 +69,284 @@ _TYPE_TO_TASK = {
 def resolve_task_name(resource_type: str) -> str:
     """Return the built-in task config name for a resource type."""
     return _TYPE_TO_TASK.get(resource_type, "skill")
+
+
+# ---------------------------------------------------------------------------
+# Skills.sh 增量短路 helpers（Section 6）
+# ---------------------------------------------------------------------------
+
+def _install_count_drift_within(
+    old: int | float | None,
+    new: int | float | None,
+    threshold: float = INSTALL_COUNT_DRIFT_THRESHOLD,
+) -> bool:
+    """判断 install_count 漂移是否 ≤ ±threshold（默认 ±20%）。
+
+    约定：
+    - 任一侧为 None / 0 / 负数：视为「不可比较」，返回 False（不短路）
+    - 两侧均为正数：按 |new-old|/old 计算
+    """
+    try:
+        o = float(old) if old is not None else 0.0
+        n = float(new) if new is not None else 0.0
+    except (TypeError, ValueError):
+        return False
+    if o <= 0 or n <= 0:
+        return False
+    return abs(n - o) / o <= threshold
+
+
+def load_skills_sh_diff(diff_path: str | os.PathLike[str] | None = None) -> dict[str, Any]:
+    """读取 .skills_sh_cache/diff.json；不存在或损坏返回空 dict。
+
+    返回结构（来自 sync_skills_sh.compute_diff）：
+      {
+        "added": [id, ...],
+        "changed_install_count": [{id, old, new, pct}, ...],
+        "removed": [id, ...],
+        "stable": <int>
+      }
+    """
+    path = Path(diff_path) if diff_path else _DIFF_PATH_DEFAULT
+    if not path.exists():
+        return {}
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if not isinstance(data, dict):
+            return {}
+        return data
+    except (OSError, json.JSONDecodeError) as exc:
+        logger.debug("Failed to read skills_sh diff at %s: %s", path, exc)
+        return {}
+
+
+def _diff_unstable_ids(diff: dict[str, Any]) -> set[str]:
+    """从 diff.json 提取「不稳定」id 集合（added / changed / removed 并集）。"""
+    if not diff:
+        return set()
+    unstable: set[str] = set()
+    unstable.update(diff.get("added") or [])
+    unstable.update(diff.get("removed") or [])
+    for item in diff.get("changed_install_count") or []:
+        if isinstance(item, dict) and item.get("id"):
+            unstable.add(item["id"])
+    return unstable
+
+
+def _sanitize_id_segment(s: str) -> str:
+    """与 sync_skills_sh._sanitize_id_segment 保持一致的清洗逻辑。"""
+    s = (s or "").lower().strip()
+    s = re.sub(r"[\s_]+", "-", s)
+    s = _ID_INVALID_RE.sub("-", s)
+    s = re.sub(r"-+", "-", s).strip("-")
+    return s
+
+
+def _make_skills_sh_raw_id(skill_id: str, owner: str, repo: str = "") -> str:
+    """与 sync_skills_sh._make_id 保持一致：<skillId>-<owner>[-<repo>]。
+
+    必须复用相同算法，否则 short-circuit 与 diff.json 的 id 集合无法对应。
+    """
+    sk = _sanitize_id_segment(skill_id) or "skill"
+    ow = _sanitize_id_segment(owner) or "unknown"
+    rp = _sanitize_id_segment(repo)
+    parts = [sk, ow]
+    if rp and rp != sk:
+        parts.append(rp)
+    return "-".join(parts)
+
+
+def _skills_sh_raw_id_from_entry(entry: dict[str, Any]) -> str | None:
+    """从 entry.skills_sh_url 反推 skills.sh raw id（diff.json 的同款 id）。
+
+    P2-1 修复点：merge_index 把 skills.sh row 合并到更高优先级 winner 后，
+    winner 的 id/source 已变（不再是 skills-sh），但 _merge_skills_sh_fields
+    会把 skills_sh_url 拷贝到 winner 上。因此用 skills_sh_url 反推的 raw id
+    是判定「这条 entry 是否对应某个 skills.sh row」的唯一稳定 key。
+
+    skills_sh_url 形态：``https://skills.sh/{owner}/{repo}/{skillId}``
+    返回 None 表示 entry 非 skills.sh 派生（无 url 或解析失败）。
+    """
+    url = entry.get("skills_sh_url") or ""
+    if not url:
+        return None
+    try:
+        parsed = urlparse(url)
+    except (TypeError, ValueError):
+        return None
+    if parsed.netloc.lower() != "skills.sh":
+        return None
+    parts = [p for p in parsed.path.split("/") if p]
+    if len(parts) < 3:
+        return None
+    owner, repo, skill_id = parts[0], parts[1], parts[2]
+    return _make_skills_sh_raw_id(skill_id, owner, repo)
+
+
+def _is_skills_sh_derived(entry: dict[str, Any]) -> bool:
+    """判定 entry 是否承载 skills.sh 派生数据。
+
+    放宽自原 ``source == "skills-sh"``：merge 后 winner 的 source 字段会被
+    高优先级源覆盖，但 skills_sh_url 字段会保留（见 utils._SKILLS_SH_MERGE_FIELDS）。
+    任何携带 skills_sh_url 的 entry 都视为 skills.sh 派生候选。
+    """
+    if (entry.get("source") or "") == "skills-sh":
+        return True
+    return bool(entry.get("skills_sh_url"))
+
+
+# 向后兼容别名：保持已有测试 / 外部调用点可用
+_is_skills_sh_entry = _is_skills_sh_derived
+
+
+def _lookup_cached_result(
+    cache: Any,
+    entry_id: str,
+    rubric_version: str | None = None,
+) -> dict[str, Any] | None:
+    """根据 entry_id (+ rubric_version) 在 SQLite cache 中复用历史 EvalResult。
+
+    P1 修复：先通过 (entry_id, rubric_version) 定位最近一条 row 的
+    content_hash，再用 EvalCache.make_key("__full__", content_hash, rubric_version)
+    重建标准 cache_key，最后调 cache.get() 走完整 expiry 校验。这样：
+
+    - rubric_version 不匹配（v1→v2 升级）→ 第一步 SELECT 为空 → 返回 None
+    - rubric 匹配但 row 已过期 → cache.get() 失败 → 返回 None
+    - 全部匹配 → 复用 result_json，标记 model_id="__cached__"
+
+    rubric_version 为 None 时退化为旧行为（仅按 entry_id 取最新），保留给
+    单元测试中无 runner 上下文的场景。
+    """
+    try:
+        from datetime import datetime, timezone
+
+        from ai_resource_eval.cache import EvalCache  # 延迟 import，避免硬依赖
+
+        conn = cache._conn()  # noqa: SLF001 — bridge 内部短路，访问私有连接
+
+        # 优先按 (entry_id, rubric_version) 定位；无 rubric 时退化为按 entry_id
+        if rubric_version:
+            row = conn.execute(
+                """
+                SELECT cache_key, content_hash, result_json, expires_at
+                FROM eval_cache
+                WHERE entry_id = ? AND rubric_version = ?
+                ORDER BY evaluated_at DESC
+                LIMIT 1
+                """,
+                (entry_id, rubric_version),
+            ).fetchone()
+        else:
+            row = conn.execute(
+                """
+                SELECT cache_key, content_hash, result_json, expires_at
+                FROM eval_cache
+                WHERE entry_id = ?
+                ORDER BY evaluated_at DESC
+                LIMIT 1
+                """,
+                (entry_id,),
+            ).fetchone()
+        if row is None:
+            return None
+
+        # 当 rubric 已知，重建 runner 标准 cache_key 并通过 cache.get() 走 expiry 校验。
+        # 这与 runner._check_cache 保持完全一致的失效语义。
+        if rubric_version:
+            content_hash = row["content_hash"]
+            cache_key = EvalCache.make_key(
+                metric="__full__",
+                content_hash=content_hash,
+                rubric_version=rubric_version,
+            )
+            cached_entry = cache.get(cache_key)
+            if cached_entry is None:
+                return None
+            try:
+                result = json.loads(cached_entry.result_json)
+            except (TypeError, ValueError):
+                return None
+        else:
+            # 兼容路径：手动做过期判定 + 解析 result_json
+            expires_at_str = row["expires_at"]
+            if expires_at_str:
+                ts = (
+                    expires_at_str.replace("Z", "+00:00")
+                    if expires_at_str.endswith("Z")
+                    else expires_at_str
+                )
+                try:
+                    expires_dt = datetime.fromisoformat(ts)
+                    if expires_dt.tzinfo is None:
+                        expires_dt = expires_dt.replace(tzinfo=timezone.utc)
+                    if expires_dt < datetime.now(timezone.utc):
+                        return None
+                except ValueError:
+                    return None
+            try:
+                result = json.loads(row["result_json"])
+            except (TypeError, ValueError):
+                return None
+
+        if not isinstance(result, dict):
+            return None
+        # 标记 cached 复用（与 runner 内部 `__cached__` 对齐，便于下游统计）
+        result["model_id"] = "__cached__"
+        return result
+    except Exception as exc:  # noqa: BLE001
+        logger.debug("Cache lookup failed for %s: %s", entry_id, exc)
+        return None
+
+
+def _select_short_circuit_entries(
+    entries: list[dict[str, Any]],
+    cache: Any,
+    diff: dict[str, Any] | None,
+    rubric_version: str | None = None,
+) -> tuple[dict[str, dict[str, Any]], list[dict[str, Any]]]:
+    """对 skills.sh 派生条目预筛短路：返回 (短路命中的 results, 仍需评估的 entries)。
+
+    短路条件（Section 6.1 + P1/P2-1 修复）：
+    - entry 携带 skills_sh_url（merge 后 winner 也保留此字段）
+    - 由 skills_sh_url 反推的 raw skills.sh id 不在 diff.json 的 unstable 集合
+    - cache 命中：rubric_version 匹配 + 未过期（走 runner 标准 cache_key）
+
+    cache 中查询使用 entry 的 catalog id（即 winner 的 id），因为 cache 在首次
+    评估时是用 catalog id 写入的；diff lookup 才使用 raw skills_sh id。
+    """
+    if cache is None:
+        return {}, list(entries)
+
+    unstable = _diff_unstable_ids(diff or {})
+    short_circuit: dict[str, dict[str, Any]] = {}
+    remaining: list[dict[str, Any]] = []
+
+    for entry in entries:
+        eid = entry.get("id")
+        if not eid:
+            remaining.append(entry)
+            continue
+        if not _is_skills_sh_derived(entry):
+            remaining.append(entry)
+            continue
+        # diff.json 提供时优先使用；缺失（首次 sync）则跳过短路、走完整评估
+        if not diff:
+            remaining.append(entry)
+            continue
+        # 优先用 skills_sh_url 反推的 raw id 比对 diff（覆盖 merged entry）；
+        # 若反推失败则退化用 catalog id（向后兼容尚未合并的 skills.sh-only entry）
+        raw_id = _skills_sh_raw_id_from_entry(entry) or eid
+        if raw_id in unstable:
+            remaining.append(entry)
+            continue
+        cached = _lookup_cached_result(cache, eid, rubric_version=rubric_version)
+        if cached is None:
+            remaining.append(entry)
+            continue
+        short_circuit[eid] = cached
+
+    return short_circuit, remaining
 
 
 # ---------------------------------------------------------------------------
@@ -121,19 +441,58 @@ def map_result_to_entry(entry: dict[str, Any], result: dict[str, Any] | None) ->
 # Harness invocation
 # ---------------------------------------------------------------------------
 
+def _compute_rubric_version_for_task(task_name: str) -> str | None:
+    """复算 task 当前 rubric_version（与 runner 内部计算保持一致）。
+
+    runner 在 __init__ 时算 ``rubric_version = f"{major}.{sha8(system_prompt)}"``，
+    这里复用同样的 prompt builder 和哈希方法，避免实例化完整 runner。
+    失败返回 None（短路改走 fallback：仅按 entry_id 取最新 row）。
+    """
+    try:
+        import hashlib
+
+        from ai_resource_eval.metrics.prompt_builder import (
+            build_system_prompt,
+            metric_registry,
+        )
+        from ai_resource_eval.tasks.loader import load_task_config
+    except ImportError:
+        return None
+
+    try:
+        cfg = load_task_config(task_name)
+    except (FileNotFoundError, ValueError):
+        return None
+    try:
+        metrics = [metric_registry.get(mw.metric) for mw in cfg.metrics]
+        prompt = build_system_prompt(metrics, enrichment=cfg.enrichment)
+        sha8 = hashlib.sha256(prompt.encode()).hexdigest()[:8]
+        return f"{cfg.rubric_major_version}.{sha8}"
+    except Exception as exc:  # noqa: BLE001
+        logger.debug("Failed to compute rubric_version for %s: %s", task_name, exc)
+        return None
+
+
 def run_eval(
     entries: list[dict[str, Any]],
     cache_dir: str = ".eval_cache",
     incremental: bool = True,
     concurrency: int = 4,
+    skills_sh_diff_path: str | os.PathLike[str] | None = None,
 ) -> dict[str, dict[str, Any]]:
     """Run the eval harness and return {entry_id: result_dict}.
 
     Groups entries by type and runs each group with its task config.
     Returns only entries that were successfully evaluated.
+
+    Skills.sh 短路（Section 6 + P1/P2-1 修复）：当 ``incremental=True`` 且
+    ``.skills_sh_cache/diff.json`` 存在时，对携带 skills_sh_url 且 raw id
+    不在 unstable 集合的条目，按当前 task 的 rubric_version 查 cache 复用
+    历史 EvalResult；rubric 升级后旧 row 自然 miss，runner 会重评。
     """
     try:
         from ai_resource_eval.api.types import EvalItem
+        from ai_resource_eval.cache import EvalCache
         from ai_resource_eval.runner import EvalRunner
         from ai_resource_eval.tasks.loader import load_task_config
     except ImportError:
@@ -144,21 +503,62 @@ def run_eval(
         )
         return {}
 
-    # Resolve judge from environment
-    judge = _build_judge()
-    if judge is None:
-        logger.warning("No LLM API key configured, skipping evaluation")
-        return {}
-
-    # Group entries by type
+    # 先按 type 分组（短路 / runner 都需要按 type 选 task config）
     groups: dict[str, list[dict]] = {}
     for entry in entries:
         t = entry.get("type", "skill")
         groups.setdefault(t, []).append(entry)
 
-    all_results: dict[str, dict[str, Any]] = {}
+    # ── Section 6 短路：按 type 计算 rubric_version 后过滤 ──
+    short_circuit_results: dict[str, dict[str, Any]] = {}
+    remaining_by_type: dict[str, list[dict]] = {t: list(g) for t, g in groups.items()}
 
-    for resource_type, group in groups.items():
+    if incremental:
+        diff = load_skills_sh_diff(skills_sh_diff_path)
+        if diff:
+            cache_path = Path(cache_dir)
+            cache_path.mkdir(parents=True, exist_ok=True)
+            try:
+                pre_cache = EvalCache(db_path=cache_path / "eval_cache.db")
+            except Exception as exc:  # noqa: BLE001
+                logger.debug("Failed to open cache for short-circuit: %s", exc)
+                pre_cache = None
+            if pre_cache is not None:
+                for resource_type, group in groups.items():
+                    task_name = resolve_task_name(resource_type)
+                    rubric_version = _compute_rubric_version_for_task(task_name)
+                    short, remaining = _select_short_circuit_entries(
+                        group, pre_cache, diff, rubric_version=rubric_version
+                    )
+                    short_circuit_results.update(short)
+                    remaining_by_type[resource_type] = remaining
+                if short_circuit_results:
+                    total_remaining = sum(len(v) for v in remaining_by_type.values())
+                    logger.info(
+                        "Skills.sh 短路：复用 cache %d 条 / 剩余待评估 %d 条",
+                        len(short_circuit_results),
+                        total_remaining,
+                    )
+
+    # 仍需评估的条目（按 type 已分组）
+    remaining_total = sum(len(v) for v in remaining_by_type.values())
+
+    # 全部短路命中：直接返回，节省 judge 初始化
+    if remaining_total == 0:
+        return short_circuit_results
+
+    # Resolve judge from environment
+    judge = _build_judge()
+    if judge is None:
+        logger.warning("No LLM API key configured, skipping evaluation")
+        # 即使无 key，仍可返回短路命中的 cache 结果
+        return short_circuit_results
+
+    all_results: dict[str, dict[str, Any]] = dict(short_circuit_results)
+
+    for resource_type, group in remaining_by_type.items():
+        if not group:
+            continue
         task_name = resolve_task_name(resource_type)
         try:
             task_config = load_task_config(task_name)
@@ -220,16 +620,20 @@ def eval_and_map(
     cache_dir: str = ".eval_cache",
     incremental: bool = True,
     concurrency: int = 4,
+    skills_sh_diff_path: str | os.PathLike[str] | None = None,
 ) -> None:
     """Run eval harness on entries and map results back in-place.
 
     This is the main entry point called from the pipeline.
+
+    skills_sh_diff_path 可选：默认读取项目根 ``.skills_sh_cache/diff.json``。
     """
     results = run_eval(
         entries,
         cache_dir=cache_dir,
         incremental=incremental,
         concurrency=concurrency,
+        skills_sh_diff_path=skills_sh_diff_path,
     )
 
     mapped = 0

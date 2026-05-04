@@ -66,7 +66,9 @@ class TestAllYamlFilesValid:
     @pytest.mark.parametrize("task_name", ALL_TASK_NAMES)
     def test_rubric_major_version(self, task_name: str):
         cfg = load_task_config(task_name)
-        assert cfg.rubric_major_version == 1
+        # 当前所有 task 同步在 v2（引入 install_popularity 信号后强制失效旧 cache）
+        assert cfg.rubric_major_version >= 1
+        assert cfg.rubric_major_version == 2
 
 
 # ===================================================================

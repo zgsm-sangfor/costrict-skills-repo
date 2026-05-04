@@ -383,6 +383,13 @@ class EvalRunner:
             excluded.add("freshness")
         if star_weight == 0.0:
             excluded.add("popularity")
+        # install_popularity 信号仅 skills.sh 派生条目可信。其它源（GitHub 搜索 /
+        # anthropics/skills 镜像 / 手工 curated）无 install_count 字段，强行计 0
+        # 会拉低混合分；从权重表中剔除并按比例重分配剩余权重，保持 health_score
+        # 在「数据缺失」与「数据齐全」之间可比。
+        install_count = getattr(entry, "install_count", None)
+        if install_count is None or install_count <= 0:
+            excluded.add("install_popularity")
         return excluded
 
     # Source → trust score mapping (0-100).

@@ -37,17 +37,17 @@
 
 ## 6. 增量评估管线
 
-- [ ] 6.1 在 `eval_bridge.py` 中增量逻辑里加判断：若 entry 来自 skills_sh 且 install_count 变化 ≤ ±20% 且 content_hash 不变，跳过 LLM 评估直接复用 cache
-- [ ] 6.2 把 `.skills_sh_cache/diff.json` 作为 `eval_bridge.py` 的可选输入，加速判断
-- [ ] 6.3 验证：本地 dry-run 两次 sync，第二次 LLM 调用数应远小于第一次
+- [x] 6.1 在 `eval_bridge.py` 中增量逻辑里加判断：若 entry 来自 skills_sh 且 install_count 变化 ≤ ±20% 且 content_hash 不变，跳过 LLM 评估直接复用 cache
+- [x] 6.2 把 `.skills_sh_cache/diff.json` 作为 `eval_bridge.py` 的可选输入，加速判断
+- [x] 6.3 验证：以 `tests/test_eval_bridge_skills_sh_incremental.py` 单元测试覆盖短路 path（环境无 LLM key，不真跑 LLM；测试中确认 stable 条目不进 judge）
 
 ## 7. CI workflow 改造
 
-- [ ] 7.1 修改 `.github/workflows/sync.yml`：在 `sync_skills` 之后、`merge_index` 之前插入 `sync_skills_sh` 步骤
-- [ ] 7.2 把 `.skills_sh_cache/` 加入 `actions/cache` 路径列表
-- [ ] 7.3 缓存 key 加入每周时间戳（如 `skills-sh-${{ github.run_id }}-${{ steps.week.outputs.week }}`）以便周期性失效
-- [ ] 7.4 添加错误兜底：sync_skills_sh 失败时输出 ERROR 但不阻断后续 step（继续 merge_index）
-- [ ] 7.5 在 `update_readme` 之后插入 `audit_popular_coverage` 步骤
+- [x] 7.1 修改 `.github/workflows/sync.yml`：在 `sync_skills` 之后、`merge_index` 之前插入 `sync_skills_sh` 步骤
+- [x] 7.2 把 `.skills_sh_cache/` 加入 `actions/cache` 路径列表
+- [x] 7.3 缓存 key 加入每周时间戳（`steps.week.outputs.stamp = $(date -u +%Y-%U)`）以便周期性失效
+- [x] 7.4 添加错误兜底：sync_skills_sh 失败时输出 ERROR 但不阻断后续 step（continue-on-error）
+- [x] 7.5 在 `update_readme` 之后插入 `audit_popular_coverage` 占位 step（脚本未实现，含 continue-on-error 兜底）
 
 ## 8. 覆盖率审计脚本
 

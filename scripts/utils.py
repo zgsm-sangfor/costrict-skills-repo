@@ -642,6 +642,12 @@ def skill_identity_key(entry: dict) -> tuple[str, str, str] | None:
     For mirror repos (e.g. sickn33/antigravity-awesome-skills), the owner/repo
     is rewritten to the upstream "anthropics/skills" so that mirror entries
     collapse with the official entry under the same key.
+
+    TODO(P2 codex review): 当 skills.sh 直接源覆盖了非 anthropics 的真实 owner（如
+    obra/superpowers），sickn33 镜像与 skills.sh entry 跨 owner 时不会 collapse，
+    会重复入库。需要扩展 _KNOWN_MIRRORS 的 collapse 逻辑：以 skills_sh_index.json
+    作为 skill_name → (real_owner, real_repo) lookup table，对镜像 entry 反向
+    查表后再 collapse。当前优先完成 Section 6/7 主任务，留 TODO 跟进。
     """
     if (entry.get("type") or "") != "skill":
         return None
