@@ -70,9 +70,9 @@
 
 ## 10. spike：windsurf.com/editor/directory
 
-- [ ] 10.1 新建 `scripts/spike_windsurf_directory.py`，探测：_next/data 路径 / sitemap.xml / 网页源码中 __NEXT_DATA__ JSON / 第三方 wrapper
-- [ ] 10.2 输出 `docs/spike_windsurf_directory.md` 报告
-- [ ] 10.3 spike 结果分支：发现可行路径 → 追加接入；不可行 → 推荐"放弃官网，依赖 awesome-windsurfrules"
+- [x] 10.1 新建 `scripts/spike_windsurf_directory.py`，探测：_next/data 路径 / sitemap.xml / 网页源码中 __NEXT_DATA__ JSON / 第三方 wrapper
+- [x] 10.2 输出 `docs/spike_windsurf_directory.md` 报告
+- [x] 10.3 spike 结果分支：发现可行路径 → 追加接入；不可行 → 推荐"放弃官网，依赖 awesome-windsurfrules"
 
 ## 11. 测试覆盖与本地验证
 
