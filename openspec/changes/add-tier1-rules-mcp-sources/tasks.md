@@ -76,11 +76,11 @@
 
 ## 11. 测试覆盖与本地验证
 
-- [ ] 11.1 全量测试 `python -m pytest tests/ ai-resource-eval/tests/ -v`，确保 0 回归
-- [ ] 11.2 本地跑 `python scripts/sync_mcp_registry.py`，确认输出 5K-8K 条目
-- [ ] 11.3 本地跑 `python scripts/sync_windsurfrules.py`，确认输出 100-300 条目
-- [ ] 11.4 本地跑 `python scripts/merge_index.py`，确认去重正确、新字段写入 catalog/index.json
-- [ ] 11.5 本地跑 `python scripts/audit_popular_coverage.py`，确认 mcp+rules 期望命中
+- [x] 11.1 全量测试 `python -m pytest tests/ ai-resource-eval/tests/ -v` → 945 passed 0 回归
+- [x] 11.2 本地跑 `python scripts/sync_mcp_registry.py` → 22,368 raw → 7,510 active+isLatest 写入（在 5K-8K 范围）
+- [x] 11.3 本地跑 `python scripts/sync_windsurfrules.py` → 214 entries（108+106，在 100-300 范围）
+- [x] 11.4 本地跑 `python scripts/merge_index.py` → mcp 9166→9066（-1%）/ rule 461→349（-24% windsurfrules cross-repo collapse 验证）/ skill 1851→1807 / prompt 586→574；新字段 mcp_registry_status / mcp_registry_published_at / mcp_remotes 写入 catalog/index.json
+- [x] 11.5 本地跑 `python scripts/audit_popular_coverage.py` → MCP 7/7 全部命中 / Rules 3/5（windsurfrules 接入后命中 +1）/ Skills 4/7
 
 ## 12. 文档与提交
 
