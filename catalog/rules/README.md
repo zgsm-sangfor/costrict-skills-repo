@@ -10,236 +10,236 @@
 
 | # | Name | Description | Source | Status | Score | Updated | Category | Tags |
 |---|---|---|---|---|---|---|---|---|
-| 1 | [Backend Rules (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/backend-rules.mdc) | A comprehensive rule set for configuring AI assistants to act as intelligent, en... | Rules 2.1 | 🟡 Stale | 89 | 2025-11-07 | ai-ml | `ai-coding-rules`, `backend-development`, `mcp-integration` |
-| 2 | [Feedback Enhanced (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/feedback-enhanced.mdc) | A rule-based system for structured, long-running feedback sessions between AI as... | Rules 2.1 | 🟡 Stale | 88 | 2025-11-07 | tooling | `mcp-server`, `feedback-system`, `developer-workflow` |
-| 3 | [Bug Fix (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/bug-fix.mdc) | A structured workflow rule guiding developers through the complete process of re... | Rules 2.1 | 🟡 Stale | 86 | 2025-11-07 | tooling | `bug-fix-workflow`, `git-workflow`, `testing` |
-| 4 | [Mcp Intelligent Strategy (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/mcp-intelligent-strategy.mdc) | A rule enforcing AI assistants to prioritize and intelligently orchestrate MCP t... | Rules 2.1 | 🟡 Stale | 86 | 2025-11-07 | tooling | `mcp-strategy`, `ai-assistant`, `workflow-automation` |
-| 5 | [File Generation Safety Rules (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/file-generation-safety-rules.mdc) | A mandatory security rule enforcing explicit user confirmation before AI assista... | Rules 2.1 | 🟡 Stale | 86 | 2025-11-07 | ai-ml | `security-rule`, `file-generation`, `mcp-permission` |
-| 6 | [Drupal 11 Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/drupal-11-cursorrules-prompt-file) | A CursorRules configuration file to enforce Drupal 11 coding standards and best ... | CursorRules | 🟡 Stale | 84 | 2026-05-02 | tooling | `cursorrules`, `drupal-11`, `php-standards` |
-| 7 | [Backend Dev (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/backend-dev.mdc) | A comprehensive workflow rule and guide for backend development across multiple ... | Rules 2.1 | 🟡 Stale | 84 | 2025-11-07 | backend | `workflow-rule`, `backend-development`, `api-design` |
-| 8 | [Code Quality Check (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/code-quality-check.mdc) | An AI-powered rule for automated, cross-language code quality analysis and autom... | Rules 2.1 | 🟡 Stale | 84 | 2025-11-07 | ai-ml | `code-quality`, `static-analysis`, `mcp-server` |
-| 9 | [Commit (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/commit.mdc) | A unified Git commit workflow supporting standard, fast, and AI-assisted commits... | Rules 2.1 | 🟡 Stale | 84 | 2025-11-07 | ai-ml | `git-commit`, `ai-assisted-coding`, `workflow-automation` |
-| 10 | [Context Loader (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/context-loader.mdc) | An AI-powered rule that analyzes project structure, tech stack, and configuratio... | Rules 2.1 | 🟡 Stale | 84 | 2025-11-07 | ai-ml | `context-loader`, `project-analysis`, `mcp-integration` |
-| 11 | [Custom Command Builder (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/custom-command-builder.mdc) | An AI-powered system for creating and managing custom automation commands within... | Rules 2.1 | 🟡 Stale | 84 | 2025-11-07 | ai-ml | `command-builder`, `workflow-automation`, `mcp-integration` |
-| 12 | [Frontend Dev (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/frontend-dev.mdc) | A structured workflow rule and guide for modern frontend development using Vue 3... | Rules 2.1 | 🟡 Stale | 84 | 2025-11-07 | frontend | `workflow-rule`, `frontend-dev`, `vue-react` |
-| 13 | [Mcp Debugging Enhanced (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/mcp-debugging-enhanced.mdc) | An AI-powered rule for debugging and diagnosing MCP (Model Context Protocol) ser... | Rules 2.1 | 🟡 Stale | 84 | 2025-11-07 | ai-ml | `mcp-debugging`, `ai-diagnostics`, `automated-fixes` |
-| 14 | [Systematic Debugging (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/systematic-debugging.mdc) | An AI-powered rule for systematic debugging that orchestrates tools and provides... | Rules 2.1 | 🟡 Stale | 84 | 2025-11-07 | ai-ml | `debugging`, `ai-assistant`, `rule-engine` |
-| 15 | [Beefreesdk Nocode Content Editor Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/beefreeSDK-nocode-content-editor-cursorrules-prompt-file) | Cursor rules file providing AI-assisted coding guidelines for integrating Beefre... | CursorRules | 🟡 Stale | 82 | 2026-05-02 | tooling | `cursor-rules`, `beefree-sdk`, `nocode-editor` |
-| 16 | [Analyze Issue (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/analyze-issue.mdc) | A structured rule and template for analyzing GitHub issues and generating detail... | Rules 2.1 | 🟡 Stale | 82 | 2025-11-07 | tooling | `github-issues`, `implementation-spec`, `project-management` |
-| 17 | [Changelog Management (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/changelog-management.mdc) | An AI-powered rule for automatically generating and managing changelogs from Git... | Rules 2.1 | 🟡 Stale | 82 | 2025-11-07 | ai-ml | `changelog-generator`, `git-automation`, `ai-documentation` |
-| 18 | [Intelligent Project Management (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/intelligent-project-management.mdc) | An AI-powered project management rule system enforcing a five-phase lifecycle (r... | Rules 2.1 | 🟡 Stale | 82 | 2025-11-07 | tooling | `project-management`, `rule-system`, `workflow-orchestration` |
-| 19 | [Mcp Zero Config Detection (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/mcp-zero-config-detection.mdc) | A rule that automatically detects missing MCP (Model Context Protocol) configura... | Rules 2.1 | 🟡 Stale | 82 | 2025-11-07 | tooling | `mcp-config`, `rule-engine`, `developer-onboarding` |
-| 20 | [Context Recorder System (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/context-recorder-system.mdc) | A modular AI context management system for structured recording of project decis... | Rules 2.1 | 🟡 Stale | 82 | 2025-11-07 | tooling | `context-management`, `ai-assistant`, `project-documentation` |
-| 21 | [Context7 Preload Standard (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/context7-preload-standard.mdc) | A rule standardizing knowledge preloading via Context7 before bug fixes or new p... | Rules 2.1 | 🟡 Stale | 82 | 2025-11-07 | tooling | `development-workflow`, `knowledge-preload`, `context7` |
-| 22 | [Error Recovery System (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/error-recovery-system.mdc) | A rule-based system providing automated error detection and recovery strategies ... | Rules 2.1 | 🟡 Stale | 82 | 2025-11-07 | tooling | `error-recovery`, `system-monitoring`, `backup-rollback` |
-| 23 | [Cursor Rules Pack V2 Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cursor-rules-pack-v2-cursorrules-prompt-file) | A sample pack of 7 production-tested Cursor rules for AI-assisted coding workflo... | CursorRules | 🟢 Active | 80 | 2026-05-02 | tooling | `cursor-rules`, `ai-coding`, `development-workflow` |
-| 24 | [Ai Powered Code Review (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/ai-powered-code-review.mdc) | An AI-powered rule for automated, multi-level code review integrating static/dyn... | Rules 2.1 | 🟡 Stale | 80 | 2025-11-07 | ai-ml | `ai-code-review`, `static-analysis`, `mcp-integration` |
-| 25 | [Frontend Rules (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/frontend-rules.mdc) | A comprehensive rule set for AI assistants to follow structured workflows and be... | Rules 2.1 | 🟡 Stale | 80 | 2025-11-07 | ai-ml | `ai-assistant-rules`, `frontend-development`, `mcp-orchestration` |
-| 26 | [Code Review (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/code-review.mdc) | A structured, multi-role checklist and workflow guide for conducting thorough pu... | Rules 2.1 | 🟡 Stale | 79 | 2025-11-07 | tooling | `code-review`, `pull-request`, `workflow-checklist` |
-| 27 | [Root Cause Analysis (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/root-cause-analysis.mdc) | An AI-powered rule for performing root cause analysis on software issues using t... | Rules 2.1 | 🟡 Stale | 79 | 2025-11-07 | ai-ml | `root-cause-analysis`, `five-whys`, `debugging` |
-| 28 | [Nextjs Supabase Shadcn Pwa Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file) | A comprehensive Cursor AI rules file for managing context and enforcing standard... | CursorRules | 🟡 Stale | 78 | 2026-05-02 | frontend | `cursor-rules`, `nextjs`, `supabase` |
-| 29 | [Intelligent Workflow Orchestration (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/intelligent-workflow-orchestration.mdc) | An AI-powered rule-based system for intelligent workflow orchestration in large-... | Rules 2.1 | 🟡 Stale | 78 | 2025-11-07 | tooling | `workflow-orchestration`, `enterprise-ai`, `project-management` |
-| 30 | [Context Recorder Edge Cases (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/context-recorder-edge-cases.mdc) | A rule defining error handling and edge-case management for a Context Recorder s... | Rules 2.1 | 🟡 Stale | 78 | 2025-11-07 | tooling | `context-recorder`, `error-handling`, `robustness-rules` |
-| 31 | [Memory System Integration (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/memory-system-integration.mdc) | A rule-based system for managing project memory, enabling semantic search and cr... | Rules 2.1 | 🟡 Stale | 78 | 2025-11-07 | tooling | `memory-system`, `project-context`, `semantic-search` |
-| 32 | [Code Pair Interviews Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/code-pair-interviews) | A Cursor AI .cursorrules prompt file designed to generate interview-ready, clean... | CursorRules | 🟡 Stale | 77 | 2026-05-02 | ai-ml | `cursor-ai`, `code-generation`, `interview-prep` |
-| 33 | [Code Style Consistency Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/code-style-consistency-cursorrules-prompt-file) | A Cursor AI prompt file that analyzes a codebase's existing patterns to ensure n... | CursorRules | 🟡 Stale | 77 | 2026-05-02 | tooling | `cursor-prompt`, `code-style`, `ai-code-generation` |
-| 34 | [Cpp Programming Guidelines Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cpp-programming-guidelines-cursorrules-prompt-file) | A .cursorrules file providing C++ coding standards and best practices for AI-ass... | CursorRules | 🟡 Stale | 77 | 2026-05-02 | ai-ml | `cursor-rules`, `cpp-style-guide`, `ai-coding-assistant` |
-| 35 | [Cypress Api Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cypress-api-testing-cursorrules-prompt-file) | A Cursor IDE prompt file for generating comprehensive Cypress API tests with JSO... | CursorRules | 🟡 Stale | 77 | 2026-05-02 | testing | `cursor-rule`, `cypress-testing`, `api-validation` |
-| 36 | [Cypress E2E Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cypress-e2e-testing-cursorrules-prompt-file) | A Cursor rules prompt file for generating reliable, TypeScript-aware Cypress end... | CursorRules | 🟡 Stale | 77 | 2026-05-02 | testing | `cursor-rules`, `cypress`, `e2e-testing` |
-| 37 | [Nextjs15 React19 Vercelai Tailwind Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs15-react19-vercelai-tailwind-cursorrules-prompt-file) | A Cursor IDE rules file to guide AI code generation for Next.js 15, React 19, Ve... | CursorRules | 🟡 Stale | 77 | 2026-05-02 | frontend | `cursor-ide`, `nextjs-15`, `react-19` |
-| 38 | [Playwright Accessibility Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-accessibility-testing-cursorrules-prompt-file) | A Cursor IDE prompt for generating Playwright and axe-core based accessibility t... | CursorRules | 🟡 Stale | 77 | 2026-05-02 | testing | `cursor-ide`, `playwright-testing`, `accessibility` |
-| 39 | [Playwright Integration Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-integration-testing-cursorrules-prompt-file) | A Cursor IDE prompt for generating Playwright integration tests with TypeScript ... | CursorRules | 🟡 Stale | 77 | 2026-05-02 | testing | `cursor-ide`, `playwright`, `integration-testing` |
-| 40 | [Python Llm Ml Workflow Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-llm-ml-workflow-cursorrules-prompt-file) | A Cursor IDE prompt file with coding standards and best practices for Python AI/... | CursorRules | 🟡 Stale | 77 | 2026-05-02 | backend | `cursor-ide`, `python-ml`, `llm-workflow` |
-| 41 | [Salesforce Apex Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/salesforce-apex-cursorrules-prompt-file) | A Cursor AI rules file that configures the assistant to generate high-quality, t... | CursorRules | 🟡 Stale | 77 | 2026-05-02 | tooling | `cursor-ai`, `salesforce-apex`, `code-style-guide` |
-| 42 | [Solidity Foundry Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/solidity-foundry-cursorrules-prompt-file) | A Cursor rules prompt file enforcing Solidity security and development best prac... | CursorRules | 🟡 Stale | 77 | 2026-05-02 | tooling | `cursor-rules`, `solidity`, `foundry` |
-| 43 | [Uikit Guidelines Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/uikit-guidelines-cursorrules-prompt-file) | A Cursor IDE rules file providing Swift/UIKit best practices for programmatic UI... | CursorRules | 🟡 Stale | 77 | 2026-05-02 | tooling | `cursor-ide`, `ios-development`, `swift` |
-| 44 | [Vitest Unit Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/vitest-unit-testing-cursorrules-prompt-file) | A Cursor IDE prompt file for generating comprehensive Vitest unit tests with Typ... | CursorRules | 🟡 Stale | 77 | 2026-05-02 | testing | `cursor-ide`, `vitest`, `unit-testing` |
-| 45 | [Context Recorder Core (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/context-recorder-core.mdc) | A rule-based system for AI agents to maintain structured project memory document... | Rules 2.1 | 🟡 Stale | 77 | 2025-11-07 | tooling | `context-recorder`, `project-memory`, `ai-agent-rules` |
-| 46 | [Permission Control System (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/permission-control-system.mdc) | A rule-based permission control and audit system defining access for Users, AI A... | Rules 2.1 | 🟡 Stale | 77 | 2025-11-07 | ai-ml | `permission-control`, `audit-log`, `rule-system` |
-| 47 | [Rule Conflict Resolution (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/rule-conflict-resolution.mdc) | A governance rule that prioritizes user instructions and resolves conflicts with... | Rules 2.1 | 🟡 Stale | 77 | 2025-11-07 | tooling | `rule-system`, `priority-management`, `conflict-resolution` |
-| 48 | [Rule Hot Reload System (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/rule-hot-reload-system.mdc) | A system for monitoring rule file changes and reloading them dynamically without... | Rules 2.1 | 🟡 Stale | 77 | 2025-11-07 | tooling | `rule-engine`, `hot-reload`, `file-monitoring` |
-| 49 | [Context Systems Integration (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/context-systems-integration.mdc) | A rule defining roles and workflows to integrate Context Loader, Recorder, and C... | Rules 2.1 | 🟡 Stale | 76 | 2025-11-07 | tooling | `mcp-rule`, `context-integration`, `workflow-automation` |
-| 50 | [Mcp Unified Management (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/mcp-unified-management.mdc) | A unified management rule for configuring, detecting, recommending, and synchron... | Rules 2.1 | 🟡 Stale | 75 | 2025-11-07 | tooling | `mcp-management`, `ai-coding-tools`, `configuration-sync` |
-| 51 | [Brain Recorder Integration (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/brain-recorder-integration.mdc) | A rule-based system that deeply integrates a decision-making 'Super Brain' with ... | Rules 2.1 | 🟡 Stale | 75 | 2025-11-07 | ai-ml | `rule-system`, `project-management`, `workflow-automation` |
-| 52 | [Intelligent Recommendation Engine (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/intelligent-recommendation-engine.mdc) | An AI-powered recommendation engine that analyzes user input and project context... | Rules 2.1 | 🟡 Stale | 75 | 2025-11-07 | tooling | `recommendation-engine`, `workflow-automation`, `project-management` |
-| 53 | [Chrome Extension Dev Js Typescript Cursorrules Pro Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/chrome-extension-dev-js-typescript-cursorrules-pro) | A Cursor IDE ruleset providing AI prompts and best practices for developing Chro... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ide`, `chrome-extension`, `typescript` |
-| 54 | [Code Guidelines Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/code-guidelines-cursorrules-prompt-file) | A .cursorrules prompt file containing guidelines for AI-assisted code editing to... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | tooling | `cursor-rules`, `code-guidelines`, `ai-coding-assistant` |
-| 55 | [Cursor Ai React Typescript Shadcn Ui Cursorrules P Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cursor-ai-react-typescript-shadcn-ui-cursorrules-p) | A Cursor IDE prompt file enforcing best practices for React, TypeScript, Shadcn ... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ide`, `react`, `typescript` |
-| 56 | [Cursorrules Cursor Ai Nextjs 14 Tailwind Seo Setup Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cursorrules-cursor-ai-nextjs-14-tailwind-seo-setup) | A Cursor AI prompt file for generating SEO-optimized Next.js 14 applications wit... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ai`, `nextjs-14`, `tailwind-css` |
-| 57 | [Go Servemux Rest Api Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/go-servemux-rest-api-cursorrules-prompt-file) | A Cursor AI prompt file for generating Go RESTful API code using the net/http pa... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | backend | `cursor-ai`, `go-rest-api`, `prompt-engineering` |
-| 58 | [Html Tailwind Css Javascript Cursorrules Prompt Fi Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/html-tailwind-css-javascript-cursorrules-prompt-fi) | A Cursor AI prompt file for generating clean, modern HTML, Tailwind CSS, and van... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ai`, `prompt-engineering`, `frontend` |
-| 59 | [Laravel Tall Stack Best Practices Cursorrules Prom Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/laravel-tall-stack-best-practices-cursorrules-prom) | A Cursor IDE prompt file containing best practices and coding rules for developi... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | backend | `cursor-ide`, `laravel-tall-stack`, `best-practices` |
-| 60 | [Nextjs Supabase Todo App Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-supabase-todo-app-cursorrules-prompt-file) | A Cursor IDE rules prompt file for generating a structured Todo application with... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ide`, `nextjs`, `supabase` |
-| 61 | [Nextjs Tailwind Typescript Apps Cursorrules Prompt Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-tailwind-typescript-apps-cursorrules-prompt) | A Cursor IDE prompt file to configure AI assistance for building Next.js applica... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ide`, `nextjs`, `typescript` |
-| 62 | [Python 312 Fastapi Best Practices Cursorrules Prom Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-312-fastapi-best-practices-cursorrules-prom) | A Cursor IDE prompt file enforcing Python 3.12 and FastAPI best practices for bu... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | backend | `cursor-ide`, `fastapi-best-practices`, `python-312` |
-| 63 | [Python Cursorrules Prompt File Best Practices Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-cursorrules-prompt-file-best-practices) | Best practices for Python .cursorrules files to enhance AI-assisted development ... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | backend | `cursor-rules`, `python-best-practices`, `ai-assisted-coding` |
-| 64 | [Python Developer Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-developer-cursorrules-prompt-file) | A Cursor IDE prompt file to guide AI-assisted development of Python command-line... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | backend | `cursor-ide`, `python-cli`, `ai-prompts` |
-| 65 | [Python Fastapi Best Practices Cursorrules Prompt F Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-fastapi-best-practices-cursorrules-prompt-f) | A Cursor IDE prompt file containing best practices and guidelines for developing... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | backend | `cursor-ide`, `fastapi`, `prompt-engineering` |
-| 66 | [React Components Creation Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-components-creation-cursorrules-prompt-file) | A Cursor AI prompt file that provides a structured workflow for creating consist... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ai`, `react`, `typescript` |
-| 67 | [React Nextjs Ui Development Cursorrules Prompt Fil Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-nextjs-ui-development-cursorrules-prompt-fil) | A Cursor AI assistant prompt file configured for React and Next.js (App Router) ... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ai`, `react`, `nextjs` |
-| 68 | [React Typescript Nextjs Nodejs Cursorrules Prompt  Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-typescript-nextjs-nodejs-cursorrules-prompt-) | A Cursor IDE prompt file providing AI coding guidelines for Web3 projects using ... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ide`, `web3-development`, `coding-guidelines` |
-| 69 | [Solidity Hardhat Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/solidity-hardhat-cursorrules-prompt-file) | A Cursor AI prompt file providing guidelines and best practices for secure Solid... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | tooling | `cursor-rules`, `solidity`, `hardhat` |
-| 70 | [Svelte 5 Vs Svelte 4 Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file) | A Cursor IDE prompt file detailing syntax and migration patterns from Svelte 4 t... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ide`, `svelte-migration`, `ai-prompt` |
-| 71 | [Sveltekit Tailwindcss Typescript Cursorrules Promp Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/sveltekit-tailwindcss-typescript-cursorrules-promp) | A Cursor IDE prompt file enforcing coding standards for SvelteKit, TypeScript, a... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ide`, `sveltekit`, `typescript` |
-| 72 | [Sveltekit Typescript Guide Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/sveltekit-typescript-guide-cursorrules-prompt-file) | A Cursor AI prompt file providing best-practice rules and templates for SvelteKi... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-rules`, `sveltekit`, `typescript` |
-| 73 | [Typescript Expo Jest Detox Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-expo-jest-detox-cursorrules-prompt-file) | A Cursor IDE prompt file providing rules and guidelines for developing TypeScrip... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ide`, `react-native`, `expo` |
-| 74 | [Typescript Nestjs Best Practices Cursorrules Promp Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-nestjs-best-practices-cursorrules-promp) | A Cursor AI prompt file containing best practice rules for writing TypeScript co... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-rules`, `typescript`, `nestjs` |
-| 75 | [Typescript Nextjs Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-nextjs-cursorrules-prompt-file) | A Cursor AI rule file providing prompts and guidelines for building TypeScript N... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ai`, `nextjs`, `typescript` |
-| 76 | [Typescript Nextjs React Tailwind Supabase Cursorru Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-nextjs-react-tailwind-supabase-cursorru) | A Cursor AI ruleset enforcing best practices for TypeScript, Next.js, React, Tai... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ai`, `coding-standards`, `nextjs` |
-| 77 | [Typescript Nextjs Supabase Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-nextjs-supabase-cursorrules-prompt-file) | A Cursor AI rules file providing coding conventions and prompts for TypeScript, ... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ai`, `nextjs`, `typescript` |
-| 78 | [Typescript Nodejs Nextjs App Cursorrules Prompt Fi Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-nodejs-nextjs-app-cursorrules-prompt-fi) | A Cursor AI prompt file providing rules and guidelines for building a full-stack... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ai`, `nextjs`, `typescript` |
-| 79 | [Typescript Nodejs Nextjs React Ui Css Cursorrules  Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-nodejs-nextjs-react-ui-css-cursorrules-) | A Cursor AI rules file providing coding standards and prompts for TypeScript, Ne... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ai`, `nextjs`, `typescript` |
-| 80 | [Typescript Nodejs React Vite Cursorrules Prompt Fi Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-nodejs-react-vite-cursorrules-prompt-fi) | A Cursor AI ruleset file enforcing coding standards and best practices for TypeS... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ai`, `typescript`, `react` |
-| 81 | [Typescript React Nextjs Cloudflare Cursorrules Pro Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-react-nextjs-cloudflare-cursorrules-pro) | A Cursor IDE rules prompt file for generating code following best practices for ... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ide`, `prompt-engineering`, `nextjs` |
-| 82 | [Typescript Shadcn Ui Nextjs Cursorrules Prompt Fil Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-shadcn-ui-nextjs-cursorrules-prompt-fil) | A Cursor AI prompt file enforcing coding standards for TypeScript, Next.js, and ... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ai`, `typescript-rules`, `nextjs` |
-| 83 | [Typescript Vuejs Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-vuejs-cursorrules-prompt-file) | A Cursor AI prompt file enforcing TypeScript and Vue.js best practices for code ... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ai`, `vuejs`, `typescript` |
-| 84 | [Typescript Zod Tailwind Nextjs Cursorrules Prompt  Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-zod-tailwind-nextjs-cursorrules-prompt-) | A Cursor IDE prompt file defining coding conventions and AI guidance for TypeScr... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ide`, `typescript`, `nextjs` |
-| 85 | [Typo3Cms Extension Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typo3cms-extension-cursorrules-prompt-file) | A Cursorrules prompt for scaffolding TYPO3 CMS extensions following modern PHP a... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | tooling | `cursorrules`, `typo3-cms`, `php-scaffolding` |
-| 86 | [Vue 3 Nuxt 3 Development Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/vue-3-nuxt-3-development-cursorrules-prompt-file) | A Cursor AI prompt file providing guidelines for generating code in Vue 3 and Nu... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-rules`, `vue-3`, `nuxt-3` |
-| 87 | [Vue 3 Nuxt 3 Typescript Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/vue-3-nuxt-3-typescript-cursorrules-prompt-file) | A Cursor AI rules file providing best-practice prompts for Vue 3, Nuxt 3, and Ty... | CursorRules | 🟡 Stale | 74 | 2026-05-02 | frontend | `cursor-ai`, `vue-3`, `nuxt-3` |
-| 88 | [Create Docs (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/create-docs.mdc) | A documentation generation rule providing templates, best practices, and automat... | Rules 2.1 | 🟡 Stale | 74 | 2025-11-07 | documentation | `documentation-generation`, `project-docs`, `markdown-templates` |
-| 89 | [Implement Task (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/implement-task.mdc) | A structured methodology and rule set for systematically planning and executing ... | Rules 2.1 | 🟡 Stale | 74 | 2025-11-07 | tooling | `task-implementation`, `development-workflow`, `project-management` |
-| 90 | [Mermaid (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/mermaid.mdc) | A utility rule for generating Mermaid diagrams within markdown documentation. | Rules 2.1 | 🟡 Stale | 74 | 2025-11-07 | ai-ml | `mermaid`, `diagram-generation`, `documentation` |
-| 91 | [Audit Logging System (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/audit-logging-system.mdc) | A comprehensive audit logging rule system for tracking operations, security even... | Rules 2.1 | 🟡 Stale | 74 | 2025-11-07 | tooling | `audit-logging`, `security-monitoring`, `rule-system` |
-| 92 | [Context Recorder Templates (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/context-recorder-templates.mdc) | Fallback templates for project documentation and archiving in a context recorder... | Rules 2.1 | 🟡 Stale | 74 | 2025-11-07 | tooling | `context-recorder`, `documentation-templates`, `project-memory` |
-| 93 | [Performance Monitoring System (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/performance-monitoring-system.mdc) | A rule-based configuration for real-time performance monitoring and optimization... | Rules 2.1 | 🟡 Stale | 74 | 2025-11-07 | devops | `performance-monitoring`, `global-rule`, `system-metrics` |
-| 94 | [Super Brain System (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/super-brain-system.mdc) | An AI agent management platform for intelligent project lifecycle management, de... | Rules 2.1 | 🟡 Stale | 74 | 2025-11-07 | ai-ml | `ai-agent-management`, `project-orchestration`, `workflow-automation` |
-| 95 | [System Integration Config (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/system-integration-config.mdc) | A configuration rule for orchestrating AI-powered systems like super brain, proj... | Rules 2.1 | 🟡 Stale | 74 | 2025-11-07 | tooling | `system-integration`, `ai-orchestration`, `rule-configuration` |
-| 96 | [Helium Mcp Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/helium-mcp-cursorrules-prompt-file) | Cursor rules for integrating Helium MCP's market data and analytics tools. | CursorRules | 🟢 Active | 72 | 2026-05-02 | tooling | `cursor-rules`, `mcp`, `market-data` |
-| 97 | [Cypress Integration Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cypress-integration-testing-cursorrules-prompt-file) | A Cursor AI prompt file for generating Cypress integration tests with TypeScript... | CursorRules | 🟡 Stale | 72 | 2026-05-02 | testing | `cursor-ai`, `cypress-testing`, `integration-testing` |
-| 98 | [Gherkin Style Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/gherkin-style-testing-cursorrules-prompt-file) | A Cursor rules prompt for generating human-readable Gherkin test scenarios from ... | CursorRules | 🟡 Stale | 72 | 2026-05-02 | testing | `cursor-prompt`, `gherkin`, `bdd` |
-| 99 | [Playwright Api Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-api-testing-cursorrules-prompt-file) | A Cursor IDE prompt for generating Playwright API tests with TypeScript and the ... | CursorRules | 🟡 Stale | 72 | 2026-05-02 | testing | `cursor-ide`, `playwright-testing`, `api-testing` |
-| 100 | [Playwright Defect Tracking Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-defect-tracking-cursorrules-prompt-file) | A Cursor rules prompt for generating structured Playwright defect tracking tests... | CursorRules | 🟡 Stale | 72 | 2026-05-02 | testing | `cursor-prompt`, `playwright-testing`, `defect-tracking` |
+| 1 | [Flutter & Dart Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/flutter-dart) | Cursor rules for Flutter and Dart development with best practices | Curated | — | 0 | 2025-10-24 | mobile | `flutter`, `dart`, `mobile` |
+| 2 | [Supabase Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/supabase) | Cursor rules for Supabase with PostgreSQL and Edge Functions | Curated | — | 0 | 2025-10-24 | database | `supabase`, `postgres`, `edge-functions` |
+| 3 | [Security Audit Rules](https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules) | AI-assisted security review rules covering OWASP, input validation, and authenti... | Curated | — | 0 | 2025-11-07 | security | `security`, `audit`, `owasp` |
+| 4 | [Technical Documentation Rules](https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules) | AI rules for generating and maintaining technical documentation | Curated | — | 0 | 2025-11-07 | documentation | `documentation`, `technical-writing`, `api-docs` |
+| 5 | [Android Jetpack Compose Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/android-jetpack-compose-cursorrules-prompt-file) | Cursor rules for android jetpack compose cursorrules prompt file development | CursorRules | — | 0 | 2026-05-02 | mobile | — |
+| 6 | [Angular Novo Elements Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/angular-novo-elements-cursorrules-prompt-file) | Angular Novo Elements .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `angular` |
+| 7 | [Angular Typescript Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/angular-typescript-cursorrules-prompt-file) | Angular TypeScript .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `angular`, `typescript` |
+| 8 | [Ascii Simulation Game Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/ascii-simulation-game-cursorrules-prompt-file) | ASCII Simulation Game .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | tooling | — |
+| 9 | [Aspnet Abp Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/aspnet-abp-cursorrules-prompt-file) | ABP framework .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | tooling | — |
+| 10 | [Astro Typescript Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/astro-typescript-cursorrules-prompt-file) | Astro TypeScript .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `typescript` |
+| 11 | [Beefreesdk Nocode Content Editor Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/beefreeSDK-nocode-content-editor-cursorrules-prompt-file) | Beefree SDK Integration Guide | CursorRules | — | 0 | 2026-05-02 | tooling | — |
+| 12 | [Chrome Extension Dev Js Typescript Cursorrules Pro Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/chrome-extension-dev-js-typescript-cursorrules-pro) | Chrome Extension Dev JS TypeScript .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `typescript` |
+| 13 | [Cloudflare Email Telegram Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cloudflare-email-telegram-cursorrules-prompt-file) | Cloudflare Email to Telegram | CursorRules | — | 0 | 2026-05-02 | ai-ml | — |
+| 14 | [Code Guidelines Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/code-guidelines-cursorrules-prompt-file) | Code Guidelines .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | tooling | — |
+| 15 | [Code Pair Interviews Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/code-pair-interviews) | Cursor AI code pair interviews .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | ai-ml | — |
+| 16 | [Code Style Consistency Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/code-style-consistency-cursorrules-prompt-file) | Code Style Consistency Prompt | CursorRules | — | 0 | 2026-05-02 | tooling | — |
+| 17 | [Convex Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/convex-cursorrules-prompt-file) | Cursor rules for convex cursorrules prompt file development | CursorRules | — | 0 | 2026-05-02 | tooling | — |
+| 18 | [Cpp Programming Guidelines Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cpp-programming-guidelines-cursorrules-prompt-file) | C++ Programming Guidelines for Cursor AI | CursorRules | — | 0 | 2026-05-02 | ai-ml | — |
+| 19 | [Cursor Ai React Typescript Shadcn Ui Cursorrules P Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cursor-ai-react-typescript-shadcn-ui-cursorrules-p) | Cursor AI React TypeScript Shadcn UI .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `react`, `typescript` |
+| 20 | [Cursor Rules Pack V2 Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cursor-rules-pack-v2-cursorrules-prompt-file) | Cursor Rules Pack v2 — Sample | CursorRules | — | 0 | 2026-05-02 | tooling | — |
+| 21 | [Cursorrules Cursor Ai Nextjs 14 Tailwind Seo Setup Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cursorrules-cursor-ai-nextjs-14-tailwind-seo-setup) | .cursorrules Cursor AI Next.js 14 Tailwind SEO setup .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `nextjs`, `tailwind` |
+| 22 | [Cursorrules Cursor Ai Wordpress Draft Macos Prompt Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cursorrules-cursor-ai-wordpress-draft-macos-prompt) | .cursorrules Cursor AI WordPress Draft MacOS prompt file | CursorRules | — | 0 | 2026-05-02 | ai-ml | — |
+| 23 | [Cursorrules File Cursor Ai Python Fastapi Api Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cursorrules-file-cursor-ai-python-fastapi-api) | .cursorrules file Cursor AI Python FastAPI API | CursorRules | — | 0 | 2026-05-02 | backend | `python`, `fastapi` |
+| 24 | [Cypress Accessibility Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cypress-accessibility-testing-cursorrules-prompt-file) | Cypress Accessibility Testing .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | testing | `cypress` |
+| 25 | [Cypress Api Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cypress-api-testing-cursorrules-prompt-file) | Cypress API Testing .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | testing | `cypress` |
+| 26 | [Cypress Defect Tracking Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cypress-defect-tracking-cursorrules-prompt-file) | Cypress Defect Tracking .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | testing | `cypress` |
+| 27 | [Cypress E2E Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cypress-e2e-testing-cursorrules-prompt-file) | Cypress End-to-End Testing .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | testing | `cypress` |
+| 28 | [Cypress Integration Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cypress-integration-testing-cursorrules-prompt-file) | Cypress Integration Testing Prompt | CursorRules | — | 0 | 2026-05-02 | testing | `cypress` |
+| 29 | [Deno Integration Techniques Cursorrules Prompt Fil Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/deno-integration-techniques-cursorrules-prompt-fil) | Deno Integration Techniques .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | tooling | — |
+| 30 | [Dragonruby Best Practices Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/dragonruby-best-practices-cursorrules-prompt-file) | DragonRuby Best Practices .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | backend | `go`, `ruby` |
+| 31 | [Drupal 11 Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/drupal-11-cursorrules-prompt-file) | Drupal 11 Awesome CursorRules | CursorRules | — | 0 | 2026-05-02 | tooling | — |
+| 32 | [Elixir Engineer Guidelines Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/elixir-engineer-guidelines-cursorrules-prompt-file) | Elixir Engineer Guidelines .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | backend | — |
+| 33 | [Elixir Phoenix Docker Setup Cursorrules Prompt Fil Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/elixir-phoenix-docker-setup-cursorrules-prompt-fil) | Elixir Phoenix Docker Setup .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | backend | `docker` |
+| 34 | [Engineering Ticket Template Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/engineering-ticket-template-cursorrules-prompt-file) | Engineering Ticket Template Prompt | CursorRules | — | 0 | 2026-05-02 | tooling | — |
+| 35 | [Es Module Nodejs Guidelines Cursorrules Prompt Fil Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/es-module-nodejs-guidelines-cursorrules-prompt-fil) | ES Module Node.js Guidelines .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | backend | `nodejs` |
+| 36 | [Flutter App Expert Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/flutter-app-expert-cursorrules-prompt-file) | Cursor rules for flutter app expert cursorrules prompt file development | CursorRules | — | 0 | 2026-05-02 | mobile | `flutter` |
+| 37 | [Flutter Riverpod Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/flutter-riverpod-cursorrules-prompt-file) | Cursor rules for flutter riverpod cursorrules prompt file development | CursorRules | — | 0 | 2026-05-02 | mobile | `flutter` |
+| 38 | [Gherkin Style Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/gherkin-style-testing-cursorrules-prompt-file) | Gherkin Style Testing Prompt | CursorRules | — | 0 | 2026-05-02 | testing | — |
+| 39 | [Git Conventional Commit Messages Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/git-conventional-commit-messages) | Conventional Commit Messages | CursorRules | — | 0 | 2026-05-02 | tooling | `git` |
+| 40 | [Github Code Quality Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/github-code-quality-cursorrules-prompt-file) | GitHub Code Quality .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | tooling | `git` |
+| 41 | [Github Cursorrules Prompt File Instructions Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/github-cursorrules-prompt-file-instructions) | GitHub .cursorrules prompt file instructions | CursorRules | — | 0 | 2026-05-02 | tooling | `git` |
+| 42 | [Go Backend Scalability Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/go-backend-scalability-cursorrules-prompt-file) | Go Backend Scalability .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | backend | `go` |
+| 43 | [Go Servemux Rest Api Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/go-servemux-rest-api-cursorrules-prompt-file) | Go ServeMux REST API .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | backend | `go`, `rest-api` |
+| 44 | [Go Temporal Dsl Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/go-temporal-dsl-prompt-file) | Cursor rules for go temporal dsl prompt file development | CursorRules | — | 0 | 2026-05-02 | backend | `go` |
+| 45 | [Graphical Apps Development Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/graphical-apps-development-cursorrules-prompt-file) | Graphical Apps Development .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | tooling | — |
+| 46 | [Helium Mcp Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/helium-mcp-cursorrules-prompt-file) | Helium MCP - Cursor rules | CursorRules | — | 0 | 2026-05-02 | tooling | — |
+| 47 | [How To Documentation Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/how-to-documentation-cursorrules-prompt-file) | How-To Documentation Prompt | CursorRules | — | 0 | 2026-05-02 | documentation | — |
+| 48 | [Html Tailwind Css Javascript Cursorrules Prompt Fi Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/html-tailwind-css-javascript-cursorrules-prompt-fi) | HTML Tailwind CSS JavaScript .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `javascript`, `java`, `tailwind` |
+| 49 | [Htmx Basic Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/htmx-basic-cursorrules-prompt-file) | Cursor rules for htmx basic cursorrules prompt file development | CursorRules | — | 0 | 2026-05-02 | tooling | — |
+| 50 | [Htmx Django Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/htmx-django-cursorrules-prompt-file) | Cursor rules for htmx django cursorrules prompt file development | CursorRules | — | 0 | 2026-05-02 | backend | `go`, `django` |
+| 51 | [Htmx Flask Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/htmx-flask-cursorrules-prompt-file) | Cursor rules for htmx flask cursorrules prompt file development | CursorRules | — | 0 | 2026-05-02 | backend | `flask` |
+| 52 | [Htmx Go Basic Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/htmx-go-basic-cursorrules-prompt-file) | Cursor rules for htmx go basic cursorrules prompt file development | CursorRules | — | 0 | 2026-05-02 | backend | `go` |
+| 53 | [Htmx Go Fiber Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/htmx-go-fiber-cursorrules-prompt-file) | Cursor rules for htmx go fiber cursorrules prompt file development | CursorRules | — | 0 | 2026-05-02 | backend | `go` |
+| 54 | [Java General Purpose Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/java-general-purpose-cursorrules-prompt-file) | Cursor rules for java general purpose cursorrules prompt file development | CursorRules | — | 0 | 2026-05-02 | backend | `java` |
+| 55 | [Java Springboot Jpa Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/java-springboot-jpa-cursorrules-prompt-file) | Cursor rules for java springboot jpa cursorrules prompt file development | CursorRules | — | 0 | 2026-05-02 | backend | `java` |
+| 56 | [Javascript Astro Tailwind Css Cursorrules Prompt F Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/javascript-astro-tailwind-css-cursorrules-prompt-f) | JavaScript Astro Tailwind CSS .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `javascript`, `java`, `tailwind` |
+| 57 | [Javascript Chrome Apis Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/javascript-chrome-apis-cursorrules-prompt-file) | JavaScript Chrome APIs .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `javascript`, `java` |
+| 58 | [Javascript Typescript Code Quality Cursorrules Pro Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/javascript-typescript-code-quality-cursorrules-pro) | JavaScript TypeScript Code Quality .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `typescript`, `javascript`, `java` |
+| 59 | [Jest Unit Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/jest-unit-testing-cursorrules-prompt-file) | Jest Unit Testing Prompt | CursorRules | — | 0 | 2026-05-02 | testing | `jest` |
+| 60 | [Knative Istio Typesense Gpu Cursorrules Prompt Fil Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/knative-istio-typesense-gpu-cursorrules-prompt-fil) | Knative Istio Typesense GPU .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | tooling | — |
+| 61 | [Kotlin Ktor Development Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/kotlin-ktor-development-cursorrules-prompt-file) | Cursor rules for kotlin ktor development cursorrules prompt file development | CursorRules | — | 0 | 2026-05-02 | mobile | `kotlin` |
+| 62 | [Kotlin Springboot Best Practices Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/kotlin-springboot-best-practices-cursorrules-prompt-file) | Cursor rules for kotlin springboot best practices cursorrules prompt file develo... | CursorRules | — | 0 | 2026-05-02 | backend | `kotlin` |
+| 63 | [Kubernetes Mkdocs Documentation Cursorrules Prompt Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/kubernetes-mkdocs-documentation-cursorrules-prompt) | Kubernetes MkDocs Documentation .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | devops | `kubernetes` |
+| 64 | [Laravel Php 83 Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/laravel-php-83-cursorrules-prompt-file) | Laravel PHP 8.3 .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | backend | `php` |
+| 65 | [Laravel Tall Stack Best Practices Cursorrules Prom Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/laravel-tall-stack-best-practices-cursorrules-prom) | Laravel TALL Stack Best Practices .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | backend | — |
+| 66 | [Linux Nvidia Cuda Python Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/linux-nvidia-cuda-python-cursorrules-prompt-file) | Linux NVIDIA CUDA Python .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | backend | `python` |
+| 67 | [Manifest Yaml Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/manifest-yaml-cursorrules-prompt-file) | Manifest Backend .manifestrules Prompt | CursorRules | — | 0 | 2026-05-02 | ai-ml | — |
+| 68 | [Medusa Cursorrules Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/medusa-cursorrules) | Cursor rules for medusa cursorrules development | CursorRules | — | 0 | 2026-05-02 | tooling | — |
+| 69 | [Nativescript Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nativescript-cursorrules-prompt-file) | Cursor rules for nativescript cursorrules prompt file development | CursorRules | — | 0 | 2026-05-02 | tooling | — |
+| 70 | [Netlify Official Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/netlify-official-cursorrules-prompt-file) | Cursor rules for netlify official cursorrules prompt file development | CursorRules | — | 0 | 2026-05-02 | tooling | — |
+| 71 | [Next Type Llm Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/next-type-llm) | What you can build | CursorRules | — | 0 | 2026-05-02 | ai-ml | — |
+| 72 | [Nextjs App Router Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-app-router-cursorrules-prompt-file) | Cursor rules for nextjs app router cursorrules prompt file development | CursorRules | — | 0 | 2026-05-02 | frontend | `nextjs` |
+| 73 | [Nextjs Material Ui Tailwind Css Cursorrules Prompt Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-material-ui-tailwind-css-cursorrules-prompt) | Next.js Material UI Tailwind CSS .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `nextjs`, `tailwind`, `css` |
+| 74 | [Nextjs React Tailwind Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-react-tailwind-cursorrules-prompt-file) | Next.js React Tailwind .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `react`, `nextjs`, `tailwind` |
+| 75 | [Nextjs React Typescript Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-react-typescript-cursorrules-prompt-file) | Next.js React TypeScript .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `react`, `nextjs`, `typescript` |
+| 76 | [Nextjs Seo Dev Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-seo-dev-cursorrules-prompt-file) | Next.js SEO Dev .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `nextjs` |
+| 77 | [Nextjs Supabase Shadcn Pwa Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file) | Cursor Rules for Project Context Management | CursorRules | — | 0 | 2026-05-02 | frontend | `nextjs`, `supabase` |
+| 78 | [Nextjs Supabase Todo App Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-supabase-todo-app-cursorrules-prompt-file) | Next.js Supabase Todo App .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `nextjs`, `supabase` |
+| 79 | [Nextjs Tailwind Typescript Apps Cursorrules Prompt Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-tailwind-typescript-apps-cursorrules-prompt) | Next.JS Tailwind TypeScript Apps .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `nextjs`, `typescript`, `tailwind` |
+| 80 | [Nextjs Typescript App Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-typescript-app-cursorrules-prompt-file) | Next.js TypeScript App .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `nextjs`, `typescript` |
+| 81 | [Nextjs Typescript Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-typescript-cursorrules-prompt-file) | Next.js TypeScript .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `nextjs`, `typescript` |
+| 82 | [Nextjs Typescript Tailwind Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-typescript-tailwind-cursorrules-prompt-file) | Next.js TypeScript Tailwind .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `nextjs`, `typescript`, `tailwind` |
+| 83 | [Nextjs Vercel Supabase Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-vercel-supabase-cursorrules-prompt-file) | Next.js Vercel Supabase .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `nextjs`, `supabase` |
+| 84 | [Nextjs Vercel Typescript Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-vercel-typescript-cursorrules-prompt-file) | Next.js Vercel TypeScript .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `nextjs`, `typescript` |
+| 85 | [Nextjs15 React19 Vercelai Tailwind Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs15-react19-vercelai-tailwind-cursorrules-prompt-file) | Next.js 15, React 19, Vercel AI SDK, Tailwind CSS .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `react`, `nextjs`, `tailwind` |
+| 86 | [Nodejs Mongodb Cursorrules Prompt File Tutorial Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nodejs-mongodb-cursorrules-prompt-file-tutorial) | Node.js MongoDB .cursorrules prompt file tutorial | CursorRules | — | 0 | 2026-05-02 | backend | `go`, `mongodb`, `nodejs` |
+| 87 | [Nodejs Mongodb Jwt Express React Cursorrules Promp Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nodejs-mongodb-jwt-express-react-cursorrules-promp) | Node.js MongoDB JWT Express React .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | frontend | `react`, `go`, `mongodb` |
+| 88 | [Optimize Dry Solid Principles Cursorrules Prompt F Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/optimize-dry-solid-principles-cursorrules-prompt-f) | Optimize DRY SOLID Principles .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | tooling | — |
+| 89 | [Optimize Rell Blockchain Code Cursorrules Prompt F Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/optimize-rell-blockchain-code-cursorrules-prompt-f) | Optimize Rell Blockchain Code .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | ai-ml | — |
+| 90 | [Pandas Scikit Learn Guide Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/pandas-scikit-learn-guide-cursorrules-prompt-file) | Pandas Scikit-Learn Guide .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | tooling | — |
+| 91 | [Plasticode Telegram Api Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/plasticode-telegram-api-cursorrules-prompt-file) | Plasticode Telegram API .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | backend | — |
+| 92 | [Playwright Accessibility Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-accessibility-testing-cursorrules-prompt-file) | Playwright Accessibility Testing Prompt | CursorRules | — | 0 | 2026-05-02 | testing | `playwright`, `testing`, `accessibility` |
+| 93 | [Playwright Api Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-api-testing-cursorrules-prompt-file) | Playwright API Testing Prompt | CursorRules | — | 0 | 2026-05-02 | testing | `playwright` |
+| 94 | [Playwright Defect Tracking Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-defect-tracking-cursorrules-prompt-file) | Playwright Defect Tracking Prompt | CursorRules | — | 0 | 2026-05-02 | testing | `playwright` |
+| 95 | [Playwright E2E Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-e2e-testing-cursorrules-prompt-file) | Playwright E2E Testing .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | testing | `playwright` |
+| 96 | [Playwright Integration Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-integration-testing-cursorrules-prompt-file) | Playwright Integration Testing Prompt | CursorRules | — | 0 | 2026-05-02 | testing | `playwright` |
+| 97 | [Pr Template Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/pr-template-cursorrules-prompt-file) | PR Template Prompt | CursorRules | — | 0 | 2026-05-02 | tooling | — |
+| 98 | [Project Epic Template Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/project-epic-template-cursorrules-prompt-file) | Project Epic Template Prompt | CursorRules | — | 0 | 2026-05-02 | tooling | — |
+| 99 | [Py Fast Api Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/py-fast-api) | What you can build | CursorRules | — | 0 | 2026-05-02 | backend | — |
+| 100 | [Pyqt6 Eeg Processing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/pyqt6-eeg-processing-cursorrules-prompt-file) | PyQt6 EEG Processing .cursorrules prompt file | CursorRules | — | 0 | 2026-05-02 | tooling | — |
 
 ## Top 10 — Install Guide
 
 <details>
-<summary>⭐ <strong>Backend Rules (Rules 2.1)</strong> — A comprehensive rule set for configuring AI assistants to ac...</summary>
+<summary>⭐ <strong>Flutter & Dart Rules</strong> (178★) — Cursor rules for Flutter and Dart development with best prac...</summary>
 
-A comprehensive rule set for configuring AI assistants to act as intelligent, enterprise-grade backend development experts.
+Cursor rules for Flutter and Dart development with best practices
 
 **Download**:
-- [backend-rules.mdc](https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/backend-rules.mdc)
+- [.cursorrules](https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/flutter-dart/.cursorrules)
 
-📊 Score: 89 · 🏥 Health: 35 · 🏷️ Tags: `ai-coding-rules`, `backend-development`, `mcp-integration`
-📅 Last active: 2025-11-07 · 📦 Source: Rules 2.1
+📊 Score: 0 · 🏥 Health: — · 🏷️ Tags: `flutter`, `dart`, `mobile`
+📅 Last active: 2025-10-24 · 📦 Source: Curated
 
 </details>
 
 <details>
-<summary>⭐ <strong>Feedback Enhanced (Rules 2.1)</strong> — A rule-based system for structured, long-running feedback se...</summary>
+<summary>⭐ <strong>Supabase Rules</strong> (178★) — Cursor rules for Supabase with PostgreSQL and Edge Functions</summary>
 
-A rule-based system for structured, long-running feedback sessions between AI assistants and developers during complex tasks.
+Cursor rules for Supabase with PostgreSQL and Edge Functions
 
 **Download**:
-- [feedback-enhanced.mdc](https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/feedback-enhanced.mdc)
+- [.cursorrules](https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/supabase/.cursorrules)
 
-📊 Score: 88 · 🏥 Health: 35 · 🏷️ Tags: `mcp-server`, `feedback-system`, `developer-workflow`
-📅 Last active: 2025-11-07 · 📦 Source: Rules 2.1
+📊 Score: 0 · 🏥 Health: — · 🏷️ Tags: `supabase`, `postgres`, `edge-functions`
+📅 Last active: 2025-10-24 · 📦 Source: Curated
 
 </details>
 
 <details>
-<summary>⭐ <strong>Bug Fix (Rules 2.1)</strong> — A structured workflow rule guiding developers through the co...</summary>
+<summary>⭐ <strong>Security Audit Rules</strong> (50★) — AI-assisted security review rules covering OWASP, input vali...</summary>
 
-A structured workflow rule guiding developers through the complete process of reproducing, analyzing, fixing, and submitting code for software bugs.
+AI-assisted security review rules covering OWASP, input validation, and authentication
 
 **Download**:
-- [bug-fix.mdc](https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/bug-fix.mdc)
+- [security-review.mdc](https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/security-review.mdc)
 
-📊 Score: 86 · 🏥 Health: 35 · 🏷️ Tags: `bug-fix-workflow`, `git-workflow`, `testing`
-📅 Last active: 2025-11-07 · 📦 Source: Rules 2.1
+📊 Score: 0 · 🏥 Health: — · 🏷️ Tags: `security`, `audit`, `owasp`
+📅 Last active: 2025-11-07 · 📦 Source: Curated
 
 </details>
 
 <details>
-<summary>⭐ <strong>Mcp Intelligent Strategy (Rules 2.1)</strong> — A rule enforcing AI assistants to prioritize and intelligent...</summary>
+<summary>⭐ <strong>Technical Documentation Rules</strong> (50★) — AI rules for generating and maintaining technical documentat...</summary>
 
-A rule enforcing AI assistants to prioritize and intelligently orchestrate MCP tools for coding and development tasks.
+AI rules for generating and maintaining technical documentation
 
 **Download**:
-- [mcp-intelligent-strategy.mdc](https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/mcp-intelligent-strategy.mdc)
+- [doc-generation.mdc](https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/doc-generation.mdc)
 
-📊 Score: 86 · 🏥 Health: 35 · 🏷️ Tags: `mcp-strategy`, `ai-assistant`, `workflow-automation`
-📅 Last active: 2025-11-07 · 📦 Source: Rules 2.1
+📊 Score: 0 · 🏥 Health: — · 🏷️ Tags: `documentation`, `technical-writing`, `api-docs`
+📅 Last active: 2025-11-07 · 📦 Source: Curated
 
 </details>
 
 <details>
-<summary>⭐ <strong>File Generation Safety Rules (Rules 2.1)</strong> — A mandatory security rule enforcing explicit user confirmati...</summary>
+<summary>⭐ <strong>Android Jetpack Compose Cursorrules Prompt File Rules</strong> — Cursor rules for android jetpack compose cursorrules prompt ...</summary>
 
-A mandatory security rule enforcing explicit user confirmation before AI assistants can generate or modify any files during development.
-
-**Download**:
-- [file-generation-safety-rules.mdc](https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/file-generation-safety-rules.mdc)
-
-📊 Score: 86 · 🏥 Health: 35 · 🏷️ Tags: `security-rule`, `file-generation`, `mcp-permission`
-📅 Last active: 2025-11-07 · 📦 Source: Rules 2.1
-
-</details>
-
-<details>
-<summary>⭐ <strong>Drupal 11 Cursorrules Prompt File Rules</strong> — A CursorRules configuration file to enforce Drupal 11 coding...</summary>
-
-A CursorRules configuration file to enforce Drupal 11 coding standards and best practices in AI-assisted code generation.
+Cursor rules for android jetpack compose cursorrules prompt file development
 
 **Download**:
-- [.cursorrules](https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/drupal-11-cursorrules-prompt-file/.cursorrules)
+- [.cursorrules](https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/android-jetpack-compose-cursorrules-prompt-file/.cursorrules)
 
-📊 Score: 84 · 🏥 Health: 38 · 🏷️ Tags: `cursorrules`, `drupal-11`, `php-standards`
+📊 Score: 0 · 🏥 Health: — · 🏷️ Tags: —
 📅 Last active: 2026-05-02 · 📦 Source: CursorRules
 
 </details>
 
 <details>
-<summary>⭐ <strong>Backend Dev (Rules 2.1)</strong> — A comprehensive workflow rule and guide for backend developm...</summary>
+<summary>⭐ <strong>Angular Novo Elements Cursorrules Prompt File Rules</strong> — Angular Novo Elements .cursorrules prompt file</summary>
 
-A comprehensive workflow rule and guide for backend development across multiple languages and frameworks.
+Angular Novo Elements .cursorrules prompt file
 
 **Download**:
-- [backend-dev.mdc](https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/backend-dev.mdc)
+- [.cursorrules](https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/angular-novo-elements-cursorrules-prompt-file/.cursorrules)
 
-📊 Score: 84 · 🏥 Health: 35 · 🏷️ Tags: `workflow-rule`, `backend-development`, `api-design`
-📅 Last active: 2025-11-07 · 📦 Source: Rules 2.1
+📊 Score: 0 · 🏥 Health: — · 🏷️ Tags: `angular`
+📅 Last active: 2026-05-02 · 📦 Source: CursorRules
 
 </details>
 
 <details>
-<summary>⭐ <strong>Code Quality Check (Rules 2.1)</strong> — An AI-powered rule for automated, cross-language code qualit...</summary>
+<summary>⭐ <strong>Angular Typescript Cursorrules Prompt File Rules</strong> — Angular TypeScript .cursorrules prompt file</summary>
 
-An AI-powered rule for automated, cross-language code quality analysis and automated fixes within a development workflow.
+Angular TypeScript .cursorrules prompt file
 
 **Download**:
-- [code-quality-check.mdc](https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/code-quality-check.mdc)
+- [.cursorrules](https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/angular-typescript-cursorrules-prompt-file/.cursorrules)
 
-📊 Score: 84 · 🏥 Health: 35 · 🏷️ Tags: `code-quality`, `static-analysis`, `mcp-server`
-📅 Last active: 2025-11-07 · 📦 Source: Rules 2.1
+📊 Score: 0 · 🏥 Health: — · 🏷️ Tags: `angular`, `typescript`
+📅 Last active: 2026-05-02 · 📦 Source: CursorRules
 
 </details>
 
 <details>
-<summary>⭐ <strong>Commit (Rules 2.1)</strong> — A unified Git commit workflow supporting standard, fast, and...</summary>
+<summary>⭐ <strong>Ascii Simulation Game Cursorrules Prompt File Rules</strong> — ASCII Simulation Game .cursorrules prompt file</summary>
 
-A unified Git commit workflow supporting standard, fast, and AI-assisted commits with integrated quality checks.
+ASCII Simulation Game .cursorrules prompt file
 
 **Download**:
-- [commit.mdc](https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/commit.mdc)
+- [.cursorrules](https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/ascii-simulation-game-cursorrules-prompt-file/.cursorrules)
 
-📊 Score: 84 · 🏥 Health: 35 · 🏷️ Tags: `git-commit`, `ai-assisted-coding`, `workflow-automation`
-📅 Last active: 2025-11-07 · 📦 Source: Rules 2.1
+📊 Score: 0 · 🏥 Health: — · 🏷️ Tags: —
+📅 Last active: 2026-05-02 · 📦 Source: CursorRules
 
 </details>
 
 <details>
-<summary>⭐ <strong>Context Loader (Rules 2.1)</strong> — An AI-powered rule that analyzes project structure, tech sta...</summary>
+<summary>⭐ <strong>Aspnet Abp Cursorrules Prompt File Rules</strong> — ABP framework .cursorrules prompt file</summary>
 
-An AI-powered rule that analyzes project structure, tech stack, and configuration to provide intelligent context for development workflows.
+ABP framework .cursorrules prompt file
 
 **Download**:
-- [context-loader.mdc](https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/context-loader.mdc)
+- [.cursorrules](https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/aspnet-abp-cursorrules-prompt-file/.cursorrules)
 
-📊 Score: 84 · 🏥 Health: 35 · 🏷️ Tags: `context-loader`, `project-analysis`, `mcp-integration`
-📅 Last active: 2025-11-07 · 📦 Source: Rules 2.1
+📊 Score: 0 · 🏥 Health: — · 🏷️ Tags: —
+📅 Last active: 2026-05-02 · 📦 Source: CursorRules
+
+</details>
+
+<details>
+<summary>⭐ <strong>Astro Typescript Cursorrules Prompt File Rules</strong> — Astro TypeScript .cursorrules prompt file</summary>
+
+Astro TypeScript .cursorrules prompt file
+
+**Download**:
+- [.cursorrules](https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/astro-typescript-cursorrules-prompt-file/.cursorrules)
+
+📊 Score: 0 · 🏥 Health: — · 🏷️ Tags: `typescript`
+📅 Last active: 2026-05-02 · 📦 Source: CursorRules
 
 </details>
 

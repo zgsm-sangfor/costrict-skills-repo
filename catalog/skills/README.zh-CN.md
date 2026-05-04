@@ -1,6 +1,6 @@
 # 🎯 Skills 技能
 
-> 1683 AI 编程助手的可复用能力和工作流。
+> 1807 AI 编程助手的可复用能力和工作流。
 >
 > [返回主页 →](../../README.md) · [在线浏览 →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=skill)
 
@@ -10,254 +10,256 @@
 
 | # | 名称 | 描述 | 来源 | 状态 | 评分 | 最近更新 | 分类 | 标签 |
 |---|---|---|---|---|---|---|---|---|
-| 1 | [MCP Integration](https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/mcp-integration) | Claude Code 插件集成 Model Context Protocol (MCP) 服务器的指南，用于连接外部服务和 API。 | Anthropic 官方 | 🟢 活跃 | 97 | 2026-05-01 | tooling | `mcp-integration`, `claude-code`, `plugin-development` |
-| 2 | [skill-creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator) | 用于创建、测试和优化AI技能的元技能，支持迭代开发和评估工作流。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-03 | testing | `skill-development`, `ai-workflow`, `testing-framework` |
-| 3 | [slack-gif-creator](https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator) | 用于创建和优化 Slack 动画 GIF 的 Python 工具包，包含验证、动画和优化工具。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-03 | ai-ml | `slack-gif`, `python-animation`, `image-processing` |
-| 4 | [xlsx](https://github.com/anthropics/skills/tree/main/skills/xlsx) | 用于通过Python库创建、编辑和分析电子表格文件的AI技能。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-03 | tooling | `spreadsheet`, `excel`, `data-analysis` |
-| 5 | [ui-ux-pro-max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/main/.claude/skills/ui-ux-pro-max) | 提供 UI/UX 设计智能、指南和 CLI 工具，用于跨多框架生成设计系统和代码最佳实践。 | nextlevelbuilder/ui-ux-pro-max-skill | 🟢 活跃 | 95 | 2026-04-03 | frontend | `ui-ux-design`, `design-system`, `cli-tool` |
-| 6 | [agent-framework-azure-ai-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agent-framework-azure-ai-py) | 用于在 Azure AI Foundry 上构建持久 AI 代理的 Python SDK，支持托管工具和对话线程。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | ai-ml | `azure-ai`, `agent-framework`, `python-sdk` |
-| 7 | [agentflow](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agentflow) | 通过看板管理自主AI开发流水线，支持多智能体协调和质量门控。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | tooling | `ai-orchestration`, `kanban-integration`, `claude-code` |
-| 8 | [astro](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/astro) | 用于构建内容网站的框架，默认零 JavaScript，采用岛屿架构。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | frontend | `web-framework`, `static-site-generator`, `islands-architecture` |
-| 9 | [aws-serverless](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/aws-serverless) | 构建生产级 AWS 无服务器应用的完整指南，包含模式、最佳实践和故障排除。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `aws-lambda`, `serverless-patterns`, `infrastructure-as-code` |
-| 10 | [azure-ai-voicelive-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-voicelive-dotnet) | 用于基于 Azure AI 构建实时双向语音应用的 .NET SDK。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `azure-ai`, `voice-sdk`, `dotnet` |
-| 11 | [azure-ai-voicelive-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-voicelive-ts) | 用于构建基于 Azure AI 实时双向语音应用的 TypeScript/JavaScript SDK。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `azure-ai`, `voice-sdk`, `realtime-voice` |
-| 12 | [azure-communication-common-java](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-communication-common-java) | Azure 通信服务的 Java 身份验证与身份管理工具库。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `azure-communication`, `java-sdk`, `authentication` |
-| 13 | [azure-communication-sms-java](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-communication-sms-java) | 通过 Azure Communication Services 发送短信的 Java SDK，支持单发、群发和送达报告。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `azure-sdk`, `sms-api`, `java-client` |
-| 14 | [azure-cosmos-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-cosmos-py) | Azure Cosmos DB NoSQL API 的 Python SDK，支持文档 CRUD、查询和容器管理。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `azure-cosmos`, `python-sdk`, `nosql-database` |
-| 15 | [azure-cosmos-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-cosmos-ts) | 用于在 Azure Cosmos DB 上执行数据操作（CRUD、查询、批量）的 TypeScript/JavaScript SDK。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `azure-cosmosdb`, `typescript-sdk`, `database-client` |
-| 16 | [azure-data-tables-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-data-tables-py) | Azure Tables Python SDK，提供 NoSQL 键值存储，支持 Storage Tables 和 Cosmos DB Table API。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `azure-tables`, `python-sdk`, `nosql` |
-| 17 | [azure-eventgrid-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-eventgrid-dotnet) | 用于 Azure Event Grid 事件发布与消费的 .NET 客户端库，支持推送和拉取两种交付模式。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `azure-eventgrid`, `dotnet-sdk`, `event-driven` |
-| 18 | [azure-eventhub-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-eventhub-dotnet) | 用于 Azure Event Hubs 的高吞吐量 .NET SDK，支持事件发送、接收和生产级处理。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `azure-event-hubs`, `dotnet-sdk`, `event-streaming` |
-| 19 | [azure-identity-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-identity-dotnet) | Azure SDK .NET 身份验证库，支持 Microsoft Entra ID、托管身份和开发人员凭据。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `azure-sdk`, `dotnet-authentication`, `entra-id` |
-| 20 | [azure-identity-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-identity-py) | 用于通过 Microsoft Entra ID 认证 Azure 服务的 Python SDK，支持多种凭证类型。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `azure-authentication`, `python-sdk`, `managed-identity` |
-| 21 | [azure-keyvault-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-keyvault-py) | 用于管理 Azure Key Vault 密钥、证书和机密的 Python SDK。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `azure-keyvault`, `python-sdk`, `secrets-management` |
-| 22 | [azure-mgmt-botservice-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-mgmt-botservice-dotnet) | 用于通过 Azure Resource Manager API 管理 Azure Bot Service 资源的 .NET SDK。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `azure-sdk`, `bot-management`, `dotnet` |
-| 23 | [azure-mgmt-fabric-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-mgmt-fabric-dotnet) | 用于通过 Azure Resource Manager 管理 Microsoft Fabric 计算容量的 .NET SDK。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `azure-sdk`, `resource-manager`, `fabric` |
-| 24 | [azure-microsoft-playwright-testing-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-microsoft-playwright-testing-ts) | 用于在 Azure 云托管浏览器中大规模运行 Playwright 测试的 TypeScript SDK。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `playwright-testing`, `azure-integration`, `typescript-sdk` |
-| 25 | [azure-monitor-opentelemetry-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-monitor-opentelemetry-py) | 用于 Python 的 Azure Monitor OpenTelemetry 发行版，提供 Application Insights 一键式自动检测设置。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `azure-monitor`, `opentelemetry`, `python` |
-| 26 | [azure-monitor-opentelemetry-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-monitor-opentelemetry-ts) | 为 Node.js 应用自动添加 OpenTelemetry 遥测，集成 Azure Monitor。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `opentelemetry`, `azure-monitor`, `nodejs` |
-| 27 | [azure-postgres-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-postgres-ts) | 使用 pg 包从 Node.js/TypeScript 连接 Azure PostgreSQL，支持密码和无密码认证。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `azure-postgresql`, `node-postgres`, `typescript` |
-| 28 | [azure-resource-manager-redis-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-resource-manager-redis-dotnet) | 用于通过 Azure Resource Manager 在 .NET 中管理 Azure Redis 缓存的 SDK。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `azure-sdk`, `redis-management`, `dotnet` |
-| 29 | [azure-resource-manager-sql-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-resource-manager-sql-dotnet) | 用于通过 Azure Resource Manager 管理 Azure SQL 资源的 .NET SDK。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `azure-sql`, `dotnet-sdk`, `resource-management` |
-| 30 | [azure-security-keyvault-keys-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-security-keyvault-keys-dotnet) | Azure Key Vault Keys .NET SDK，用于管理加密密钥和执行加密操作。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `azure-keyvault`, `dotnet-sdk`, `cryptography` |
-| 31 | [azure-servicebus-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-servicebus-dotnet) | Azure Service Bus 官方 .NET SDK，提供队列、主题和会话的企业级消息服务。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `azure-servicebus`, `dotnet-sdk`, `enterprise-messaging` |
-| 32 | [azure-storage-queue-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-storage-queue-ts) | 用于操作 Azure 存储队列的 TypeScript/JavaScript SDK。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `azure-storage`, `message-queue`, `typescript-sdk` |
-| 33 | [bun-development](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/bun-development) | Bun 运行时 JavaScript/TypeScript 开发完整指南，涵盖安装、API、测试和 Node.js 迁移。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | frontend | `bun-runtime`, `javascript-development`, `typescript` |
-| 34 | [cirq](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/cirq) | 谷歌开源的量子电路设计、模拟与执行框架。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | ai-ml | `quantum-computing`, `python-framework`, `circuit-simulation` |
-| 35 | [claimable-postgres](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/claimable-postgres) | 无需登录即可快速创建临时 Postgres 数据库，适用于原型开发和测试。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | database | `postgres`, `temporary-database`, `neon` |
-| 36 | [claude-in-chrome-troubleshooting](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/claude-in-chrome-troubleshooting) | Claude Chrome MCP 扩展连接问题的 macOS 故障排除指南 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | ai-ml | `claude-chrome-troubleshooting`, `mcp-extension`, `browser-automation` |
-| 37 | [comfyui-gateway](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/comfyui-gateway) | 为 ComfyUI 服务器提供生产级 REST API 网关，支持工作流管理、队列、安全和缓存。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | backend | `comfyui`, `api-gateway`, `image-generation` |
-| 38 | [computer-use-agents](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/computer-use-agents) | 构建通过视觉和控制自动化计算机交互的AI代理，重点强调安全沙箱。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | ai-ml | `ai-agents`, `desktop-automation`, `computer-use` |
-| 39 | [convex](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/convex) | Convex 专家指南：TypeScript 优先的响应式后端平台，提供实时数据、ACID 事务和托管基础设施。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | backend | `convex-backend`, `typescript`, `reactive-database` |
-| 40 | [copilot-sdk](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/copilot-sdk) | 用于在 Node.js、Python、Go 和 .NET 中编程交互 GitHub Copilot 的 SDK。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | backend | `copilot-sdk`, `ai-programming`, `mcp-server` |
-| 41 | [expo-api-routes](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/expo-api-routes) | 在 Expo Router 中创建 API 路由并部署到 EAS Hosting 的指南和示例。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | mobile | `expo-router`, `api-routes`, `eas-hosting` |
-| 42 | [faf-expert](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/faf-expert) | 用于配置和优化 .faf 文件的高级工具，为软件项目创建持久、AI 可理解的上下文。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | ai-ml | `faf-format`, `ai-context`, `mcp-server` |
-| 43 | [faf-wizard](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/faf-wizard) | 自动生成 .faf 文件，通过检测技术栈为 AI 工具提供项目上下文。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | tooling | `faf-generator`, `ai-context`, `project-analysis` |
-| 44 | [gdb-cli](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/gdb-cli) | 面向AI代理的GDB调试助手，支持核心转储分析和C/C++进程实时调试。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | tooling | `gdb-debugging`, `core-dump-analysis`, `c-cpp-debugging` |
-| 45 | [gemini-api-integration](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/gemini-api-integration) | Google Gemini API 集成指南，涵盖多模态输入、流式响应、函数调用及生产环境最佳实践。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | tooling | `gemini-api`, `ai-integration`, `multimodal-ai` |
-| 46 | [git-hooks-automation](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/git-hooks-automation) | 使用 Husky、lint-staged、pre-commit 和 commitlint 自动化 Git 钩子代码质量检查的完整指南。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | tooling | `git-hooks`, `code-quality`, `automation` |
-| 47 | [go-rod-master](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/go-rod-master) | 使用 go-rod 进行浏览器自动化与网页抓取的完整指南，包含 Chrome 开发者工具协议和反检测隐身技术。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | tooling | `go-rod`, `browser-automation`, `web-scraping` |
-| 48 | [hono](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/hono) | 用于在边缘运行时构建 API 和应用的超快速 Web 框架。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | backend | `web-framework`, `edge-computing`, `typescript` |
-| 49 | [hugging-face-evaluation](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/hugging-face-evaluation) | 用于通过表格提取、API导入和自定义评估管理Hugging Face模型卡评估结果的工具。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | ai-ml | `huggingface`, `model-evaluation`, `mcp-server` |
-| 50 | [hugging-face-model-trainer](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/hugging-face-model-trainer) | 在 Hugging Face Jobs 上训练 TRL 语言模型，支持 SFT、DPO、GRPO 方法和 GGUF 导出。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | ai-ml | `huggingface-jobs`, `trl-training`, `llm-fine-tuning` |
-| 51 | [k6-load-testing](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/k6-load-testing) | 使用 k6 工具进行 API、浏览器和 WebSocket 负载测试的完整指南。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | testing | `k6`, `load-testing`, `performance-testing` |
-| 52 | [macos-spm-app-packaging](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/macos-spm-app-packaging) | 无需 Xcode 项目，构建、签名和打包 SwiftPM macOS 应用的模板和脚本集合。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | tooling | `swiftpm`, `macos-app`, `code-signing` |
-| 53 | [makepad-deployment](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/makepad-deployment) | 用于 Makepad 应用程序跨平台打包和部署的工具链。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | tooling | `makepad`, `rust-packaging`, `cross-platform` |
-| 54 | [microsoft-azure-webjobs-extensions-authentication-events-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/microsoft-azure-webjobs-extensions-authentication-events-dotnet) | 用于处理 Microsoft Entra ID 身份验证事件的 .NET Azure Functions SDK。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | devops | `azure-functions`, `authentication`, `dotnet` |
-| 55 | [moyu](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/moyu) | AI 编码代理的防过度工程护栏，强制最小化、尊重范围的代码修改。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | ai-ml | `ai-agent`, `coding-guardrail`, `anti-over-engineering` |
-| 56 | [polars](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/polars) | 快速内存 DataFrame 库，支持惰性求值和并行执行，适用于 1-100GB 数据集。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | database | `dataframe`, `etl`, `performance` |
-| 57 | [protect-mcp-governance](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/protect-mcp-governance) | 使用 Cedar 策略管理 AI 代理工具调用，支持影子模式到强制执行，并提供 Ed25519 收据验证。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | tooling | `mcp-governance`, `cedar-policy`, `ed25519-verification` |
-| 58 | [pydantic-ai](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/pydantic-ai) | 基于 Pydantic 的类型安全 AI 智能体框架，支持多模型和工具调用。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | ai-ml | `python-ai-agents`, `pydantic-validation`, `llm-framework` |
-| 59 | [qiskit](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/qiskit) | 一个用于在模拟器和真实硬件上构建、优化和执行量子电路的开源量子计算框架。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | ai-ml | `quantum-computing`, `qiskit`, `python-framework` |
-| 60 | [radix-ui-design-system](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/radix-ui-design-system) | 使用 Radix UI 无头 React 原语构建可访问、可定制设计系统的完整指南。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | frontend | `radix-ui`, `react-components`, `design-system` |
-| 61 | [security-scanning-security-sast](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/security-scanning-security-sast) | 支持多语言的静态应用安全测试工具，集成多种扫描工具并提供安全编码示例。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | security | `sast`, `security-scanning`, `vulnerability-detection` |
-| 62 | [shellcheck-configuration](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/shellcheck-configuration) | ShellCheck 静态分析工具的配置与使用指南。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | tooling | `shellcheck`, `static-analysis`, `shell-script` |
-| 63 | [skill-creator](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/skill-creator) | 自动化创建遵循 Anthropic 最佳实践的 CLI 技能，无需手动配置。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | tooling | `cli-skill-creation`, `anthropic-best-practices`, `skill-scaffolding` |
-| 64 | [sveltekit](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/sveltekit) | 使用 SvelteKit 框架构建全栈 Web 应用的完整指南。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | frontend | `sveltekit`, `fullstack-framework`, `ssr-ssg` |
-| 65 | [transformers-js](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/transformers-js) | 在浏览器或 Node.js 中直接运行 Hugging Face 模型，支持 NLP、计算机视觉和音频任务。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | frontend | `transformers-js`, `machine-learning`, `javascript` |
-| 66 | [trpc-fullstack](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/trpc-fullstack) | 使用 tRPC 构建端到端类型安全 API 的完整指南。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | backend | `trpc`, `typescript`, `fullstack` |
-| 67 | [varlock](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/varlock) | 为 Claude 代码会话提供安全优先的环境变量管理工具。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | security | `claude-code`, `env-management`, `security` |
-| 68 | [vibers-code-review](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/vibers-code-review) | 针对AI生成GitHub项目的人工代码审查服务，支持规范检查与自动修复PR。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | tooling | `code-review`, `github-actions`, `ai-code` |
-| 69 | [zeroize-audit](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/zeroize-audit) | 检测 C/C++/Rust 代码中敏感数据零化缺失及编译器优化移除的安全审计工具。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-03 | security | `security-audit`, `zeroization`, `compiler-analysis` |
-| 70 | [autogpt-agents](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/agents-autogpt) | 通过可视化工作流或代码构建、部署和管理持续AI代理的平台。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | ai-ml | `autonomous-agents`, `visual-workflow`, `agent-platform` |
-| 71 | [crewai-multi-agent](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/agents-crewai) | 用于构建和编排自主AI多智能体团队的Python框架。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | ai-ml | `multi-agent`, `ai-orchestration`, `python-framework` |
-| 72 | [langchain](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/agents-langchain) | 用于构建基于LLM的应用程序的Python框架，支持智能体、链和RAG管道。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | frontend | `llm-framework`, `python`, `rag` |
-| 73 | [llamaindex](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/agents-llamaindex) | 用于构建 RAG 应用的 Python 框架，支持文档摄取、索引和查询。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | ai-ml | `rag-framework`, `llm-applications`, `vector-search` |
-| 74 | [huggingface-accelerate](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/distributed-training-accelerate) | 为 PyTorch 提供统一的分布式训练 API，支持 DDP、DeepSpeed、FSDP 和 Megatron。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | ai-ml | `distributed-training`, `pytorch`, `huggingface` |
-| 75 | [training-llms-megatron](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/distributed-training-megatron-core) | NVIDIA Megatron-Core 大规模语言模型训练框架，支持 2B-462B 参数，提供多种并行策略。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | ai-ml | `megatron-core`, `distributed-training`, `llm-training` |
-| 76 | [evaluating-code-models](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/evaluation-bigcode-evaluation-harness) | 用于在 15+ 基准测试中评估代码生成模型的综合评估工具。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | testing | `code-evaluation`, `benchmarking`, `bigcode` |
-| 77 | [peft-fine-tuning](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/fine-tuning-peft) | HuggingFace PEFT库，使用LoRA、QLoRA等方法进行参数高效的大语言模型微调。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | ai-ml | `peft`, `lora`, `qlora` |
-| 78 | [pyvene-interventions](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/mechanistic-interpretability-pyvene) | 使用 pyvene 声明式框架对 PyTorch 模型进行因果干预的指南。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | testing | `causal-intervention`, `mechanistic-interpretability`, `pytorch` |
-| 79 | [mlflow](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/mlops-mlflow) | 用于管理机器学习全生命周期的框架无关平台，涵盖实验跟踪、模型注册和部署。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | ai-ml | `mlops`, `experiment-tracking`, `model-registry` |
-| 80 | [tensorboard](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/mlops-tensorboard) | 谷歌的机器学习可视化工具包，用于实时监控和调试训练指标、直方图和模型图。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | backend | `tensorboard`, `ml-visualization`, `experiment-tracking` |
-| 81 | [nanogpt](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/model-architecture-nanogpt) | 约300行代码的极简GPT实现，用于教育目的，用干净可修改的PyTorch代码复现GPT-2。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | ai-ml | `gpt-implementation`, `transformer-education`, `pytorch-training` |
-| 82 | [distributed-llm-pretraining-torchtitan](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/model-architecture-torchtitan) | PyTorch 原生分布式大语言模型预训练框架，支持 4D 并行，可扩展至 512+ GPU。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | ai-ml | `distributed-training`, `llm-pretraining`, `pytorch` |
-| 83 | [blip-2-vision-language](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/multimodal-blip-2) | 连接冻结图像编码器与大语言模型的视觉语言框架，用于多模态AI任务。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | ai-ml | `vision-language`, `multimodal-ai`, `image-captioning` |
-| 84 | [optimizing-attention-flash](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/optimization-flash-attention) | 使用 Flash Attention 优化 Transformer 注意力，在 GPU 上实现 2-4 倍加速和 10-20 倍内存减少。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | ai-ml | `flash-attention`, `transformer-optimization`, `gpu-acceleration` |
-| 85 | [torchforge-rl-training](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/post-training-torchforge) | Meta 的 PyTorch 原生强化学习库，将基础设施与算法分离，实现可扩展训练。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | backend | `reinforcement-learning`, `pytorch`, `torchforge` |
-| 86 | [dspy](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/prompt-engineering-dspy) | 用于构建和优化AI系统的声明式编程框架，支持自动提示优化和模块化组件。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | ai-ml | `dspy-framework`, `prompt-optimization`, `rag-systems` |
-| 87 | [guidance](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/prompt-engineering-guidance) | 使用正则和语法约束LLM输出的Python框架，确保生成有效的JSON、XML和代码。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | documentation | `llm-constraints`, `structured-generation`, `python-framework` |
-| 88 | [instructor](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/prompt-engineering-instructor) | 使用 Pydantic 模式从 LLM 响应中提取验证结构化数据的 Python 库，支持自动重试和流式处理。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | testing | `structured-output`, `pydantic-validation`, `llm-integration` |
-| 89 | [outlines](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/prompt-engineering-outlines) | 基于 Pydantic 模型和本地 LLM 的保证结构正确的文本生成库。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | ai-ml | `structured-generation`, `pydantic`, `local-llms` |
-| 90 | [pydantic-ai](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/pydantic-ai) | 用于构建类型安全AI代理的Python框架，支持结构化输出和工具调用。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | backend | `python-ai-agents`, `pydantic-framework`, `llm-tool-use` |
-| 91 | [chroma](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/rag-chroma) | 开源向量数据库，用于存储嵌入向量和元数据，支持语义搜索和AI应用。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | ai-ml | `vector-database`, `embeddings`, `rag` |
-| 92 | [faiss](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/rag-faiss) | Facebook 的高性能向量相似性搜索库，支持十亿级向量检索。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | ai-ml | `vector-search`, `similarity-search`, `ai-library` |
-| 93 | [pinecone](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/rag-pinecone) | 用于AI应用的完全托管向量数据库服务，支持混合搜索和自动扩展。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | ai-ml | `vector-database`, `rag`, `managed-service` |
-| 94 | [sentence-transformers](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/rag-sentence-transformers) | 用于生成高质量句子和文本嵌入的Python框架，提供5000多个预训练模型。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | ai-ml | `sentence-embeddings`, `semantic-search`, `rag` |
-| 95 | [llamaguard](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/safety-alignment-llamaguard) | Meta 的 7-8B 参数 AI 安全模型，用于过滤 LLM 输入/输出的 6 类有害内容。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | backend | `llm-safety`, `content-moderation`, `huggingface` |
-| 96 | [neon-instagres](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/database/neon-instagres) | 使用 Neon Instagres 即时配置生产就绪的 PostgreSQL 数据库，支持 72 小时试用和轻松认领。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | database | `postgresql`, `database-provisioning`, `neon` |
-| 97 | [agirails-agent-payments](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/agirails-agent-payments) | AI 代理支付基础设施，支持托管支付、即时支付和 Base L2 上的 USDC 结算。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | backend | `ai-agent-payments`, `blockchain-sdk`, `escrow-system` |
-| 98 | [cocoindex](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/cocoindex) | 用于构建实时AI数据转换管道的Python框架，支持增量处理和向量数据库集成。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | database | `etl-pipeline`, `vector-database`, `ai-data-processing` |
-| 99 | [code-review-checklist](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/code-review-checklist) | 用于进行功能、安全、性能和可维护性全面代码审查的系统化检查清单。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | security | `code-review`, `checklist`, `best-practices` |
-| 100 | [k6-load-testing](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/k6-load-testing) | 全面的 k6 负载测试指南，涵盖 API、浏览器和 WebSocket 测试，支持 CI/CD 集成。 | Claude Code 模板 | 🟢 活跃 | 95 | 2026-05-04 | testing | `k6`, `load-testing`, `performance-testing` |
+| 1 | [docx](https://github.com/anthropics/skills/tree/main/skills/docx) | 通过 JavaScript 和 XML 操作，程序化创建、编辑和分析 Word .docx 文件的技能。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-03 | backend | `docx-generation`, `word-document`, `javascript` |
+| 2 | [skill-creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator) | 用于创建、测试和迭代优化 Claude 技能，支持基准测试和描述优化的元技能。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-03 | testing | `skill-creation`, `benchmarking`, `eval-framework` |
+| 3 | [azure-ai-voicelive-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-voicelive-dotnet) | 用于 .NET 的 Azure AI 语音实时 SDK，构建双向语音助手。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-04 | devops | `azure-ai`, `voice-assistant`, `websocket` |
+| 4 | [azure-eventhub-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-eventhub-dotnet) | 用于高吞吐量事件流的 Azure 事件中心 .NET SDK。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-04 | devops | `azure-event-hubs`, `dotnet-sdk`, `event-streaming` |
+| 5 | [azure-mgmt-fabric-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-mgmt-fabric-dotnet) | 用于通过 Azure Resource Manager 管理 Microsoft Fabric 容量资源的 .NET SDK。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-04 | devops | `azure-sdk`, `microsoft-fabric`, `resource-manager` |
+| 6 | [azure-resource-manager-durabletask-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-resource-manager-durabletask-dotnet) | 用于通过 ARM 管理 Azure Durable Task Scheduler 资源的 .NET SDK。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-04 | devops | `azure-sdk`, `durable-task`, `resource-manager` |
+| 7 | [azure-resource-manager-playwright-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-resource-manager-playwright-dotnet) | 用于通过 Azure Resource Manager 管理 Microsoft Playwright Testing 工作区的 .NET SDK。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-04 | devops | `azure-resource-manager`, `playwright-testing`, `dotnet-sdk` |
+| 8 | [azure-storage-blob-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-storage-blob-ts) | 用于 Azure Blob 存储操作的 TypeScript SDK，支持上传、下载和管理。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-04 | devops | `azure-storage`, `blob-storage`, `typescript-sdk` |
+| 9 | [azure-storage-queue-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-storage-queue-ts) | Azure 队列存储的 TypeScript SDK，支持消息发送、接收、查看和删除操作。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-04 | devops | `azure-sdk`, `queue-storage`, `typescript` |
+| 10 | [claimable-postgres](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/claimable-postgres) | 通过 API、CLI、SDK 或 Vite 插件即时创建临时 Postgres 数据库，无需注册。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-04 | database | `postgres`, `temporary-database`, `neon` |
+| 11 | [claude-in-chrome-troubleshooting](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/claude-in-chrome-troubleshooting) | macOS 上 Claude Chrome MCP 扩展连接问题的故障排查指南。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-04 | ai-ml | `mcp-troubleshooting`, `claude-code`, `chrome-extension` |
+| 12 | [code-review-checklist](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/code-review-checklist) | 涵盖功能、安全、性能和可维护性的系统性代码审查清单。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-04 | tooling | `code-review`, `checklist`, `best-practices` |
+| 13 | [convex](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/convex) | Convex 响应式后端专家指南：模式设计、TypeScript 函数、实时订阅、认证、存储、调度和部署。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-04 | backend | `convex`, `reactive-backend`, `typescript` |
+| 14 | [database-architect](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/database-architect) | AI 技能，专精数据库架构设计、技术选型、模式建模与可扩展数据层规划。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-04 | database | `database-architecture`, `schema-design`, `data-modeling` |
+| 15 | [agentic-actions-auditor](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agentic-actions-auditor) | 审计 GitHub Actions 工作流中 AI 编码代理安全性的静态分析方法。 | Antigravity Skills | 🟢 活跃 | 93 | 2026-05-04 | ai-ml | `security-audit`, `github-actions`, `ai-agents` |
+| 16 | [agentmail](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agentmail) | 为AI代理提供带积分系统的REST邮件API和TypeScript SDK。 | Antigravity Skills | 🟢 活跃 | 93 | 2026-05-04 | ai-ml | `email-api`, `ai-agents`, `typescript-sdk` |
+| 17 | [agentphone](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agentphone) | 为AI代理提供电话功能的API优先平台，支持语音通话和短信。 | Antigravity Skills | 🟢 活跃 | 93 | 2026-05-04 | ai-ml | `telephony-api`, `voice-agents`, `sms-api` |
+| 18 | [angular](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/angular) | 现代 Angular (v20+) 专家技能，涵盖 Signals、独立组件、无 Zone、SSR/水合及响应式模式。 | Antigravity Skills | 🟢 活跃 | 93 | 2026-05-04 | frontend | `angular`, `signals`, `standalone-components` |
+| 19 | [astro](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/astro) | Astro 是一个面向内容型网站的 Web 框架，默认零 JavaScript，采用岛屿架构。 | Antigravity Skills | 🟢 活跃 | 93 | 2026-05-04 | frontend | `astro`, `ssg`, `ssr` |
+| 20 | [azure-speech-to-text-rest-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-speech-to-text-rest-py) | 无需 Azure Speech SDK，通过 REST API 对短音频（≤60秒）进行语音转文字的 Python 工具。 | Antigravity Skills | 🟢 活跃 | 93 | 2026-05-04 | devops | `azure-speech-to-text`, `rest-api`, `python` |
+| 21 | [chat-widget](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/chat-widget) | 实时客服聊天系统，包含用户浮动窗口和管理后台。 | Antigravity Skills | 🟢 活跃 | 93 | 2026-05-04 | frontend | `live-chat`, `customer-support`, `websocket` |
+| 22 | [data-structure-protocol](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/data-structure-protocol) | 为AI编码代理提供代码库持久化结构记忆的协议与CLI工具，通过可查询的依赖图实现。 | Antigravity Skills | 🟢 活跃 | 93 | 2026-05-04 | database | `codebase-graph`, `dependency-analysis`, `agent-memory` |
+| 23 | [azure-ai-agents-persistent-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-agents-persistent-dotnet) | 用于在 Azure 上创建和管理持久化 AI 代理的低级 .NET SDK，支持线程、消息、运行和工具。 | Antigravity Skills | 🟢 活跃 | 92 | 2026-05-04 | devops | `azure-ai`, `dotnet-sdk`, `ai-agents` |
+| 24 | [azure-ai-document-intelligence-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-document-intelligence-dotnet) | Azure AI 文档智能 .NET SDK，用于从文档中提取文本、表格和结构化数据。 | Antigravity Skills | 🟢 活跃 | 92 | 2026-05-04 | devops | `azure-ai`, `document-intelligence`, `dotnet-sdk` |
+| 25 | [azure-ai-projects-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-projects-dotnet) | 用于 Azure AI Foundry 项目操作的 .NET SDK，支持代理、连接和评估。 | Antigravity Skills | 🟢 活跃 | 92 | 2026-05-04 | devops | `azure-sdk`, `dotnet`, `ai-agents` |
+| 26 | [azure-ai-voicelive-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-voicelive-ts) | 用于构建实时双向语音助手的 Azure AI Voice Live SDK。 | Antigravity Skills | 🟢 活跃 | 92 | 2026-05-04 | devops | `azure-ai`, `voice-assistant`, `websocket` |
+| 27 | [azure-cosmos-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-cosmos-ts) | 用于 Azure Cosmos DB NoSQL 数据平面操作的 TypeScript SDK，支持 CRUD、查询和批量操作。 | Antigravity Skills | 🟢 活跃 | 92 | 2026-05-04 | devops | `azure-cosmos-db`, `typescript-sdk`, `nosql-database` |
+| 28 | [azure-eventgrid-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-eventgrid-dotnet) | Azure Event Grid .NET SDK，用于发布和消费事件，支持推送和拉取交付。 | Antigravity Skills | 🟢 活跃 | 92 | 2026-05-04 | devops | `azure-event-grid`, `dotnet-sdk`, `event-driven-architecture` |
+| 29 | [azure-identity-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-identity-dotnet) | Azure Identity .NET SDK，通过 Microsoft Entra ID 为 Azure SDK 客户端提供身份验证。 | Antigravity Skills | 🟢 活跃 | 92 | 2026-05-04 | devops | `azure-identity`, `dotnet`, `authentication` |
+| 30 | [azure-mgmt-apicenter-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-mgmt-apicenter-dotnet) | Azure API Center .NET SDK，用于集中管理 API 清单、治理和发现。 | Antigravity Skills | 🟢 活跃 | 92 | 2026-05-04 | devops | `azure-sdk`, `api-management`, `dotnet` |
+| 31 | [azure-postgres-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-postgres-ts) | 使用 node-postgres 连接 Azure PostgreSQL 的 TypeScript 指南，支持密码和 Entra ID 认证。 | Antigravity Skills | 🟢 活跃 | 92 | 2026-05-04 | devops | `azure-postgresql`, `node-postgres`, `typescript` |
+| 32 | [azure-resource-manager-postgresql-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-resource-manager-postgresql-dotnet) | 用于管理 PostgreSQL 灵活服务器的 Azure .NET SDK。 | Antigravity Skills | 🟢 活跃 | 92 | 2026-05-04 | devops | `azure-sdk`, `postgresql`, `dotnet` |
+| 33 | [azure-servicebus-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-servicebus-dotnet) | 适用于 .NET 的 Azure 服务总线 SDK，支持队列、主题、订阅和会话的企业级消息传递。 | Antigravity Skills | 🟢 活跃 | 92 | 2026-05-04 | devops | `azure-service-bus`, `dotnet-sdk`, `enterprise-messaging` |
+| 34 | [azure-storage-file-share-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-storage-file-share-ts) | Azure 文件共享 TypeScript SDK，用于 SMB 文件共享操作。 | Antigravity Skills | 🟢 活跃 | 92 | 2026-05-04 | devops | `azure-sdk`, `file-share`, `typescript` |
+| 35 | [bun-development](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/bun-development) | 使用 Bun 运行时进行快速 JavaScript/TypeScript 开发的全面指南。 | Antigravity Skills | 🟢 活跃 | 92 | 2026-05-04 | frontend | `bun-runtime`, `javascript`, `typescript` |
+| 36 | [copilot-sdk](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/copilot-sdk) | 多语言 SDK，通过 JSON-RPC 编程式与 GitHub Copilot 交互。 | Antigravity Skills | 🟢 活跃 | 92 | 2026-05-04 | backend | `github-copilot`, `sdk`, `json-rpc` |
+| 37 | [apify-actor-development](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/apify-actor-development) | AI辅助开发Apify Actor的指南，涵盖设置、安全和部署。 | Antigravity Skills | 🟢 活跃 | 91 | 2026-05-04 | tooling | `apify-actor`, `web-scraping`, `serverless` |
+| 38 | [azure-ai-openai-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-openai-dotnet) | 用于 .NET 的 Azure OpenAI SDK，支持聊天、嵌入、图像和音频生成。 | Antigravity Skills | 🟢 活跃 | 91 | 2026-05-04 | devops | `azure-openai`, `dotnet-sdk`, `chat-completions` |
+| 39 | [azure-mgmt-mongodbatlas-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-mgmt-mongodbatlas-dotnet) | 用于将 MongoDB Atlas 组织作为 Azure ARM 资源进行管理的 .NET SDK，支持统一市场计费。 | Antigravity Skills | 🟢 活跃 | 91 | 2026-05-04 | devops | `azure-sdk`, `mongodb-atlas`, `arm-resource` |
+| 40 | [azure-monitor-opentelemetry-exporter-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-monitor-opentelemetry-exporter-py) | 用于将 OpenTelemetry 数据导出到 Azure Application Insights 的 Python 库。 | Antigravity Skills | 🟢 活跃 | 91 | 2026-05-04 | devops | `azure-monitor`, `opentelemetry-exporter`, `application-insights` |
+| 41 | [conductor-new-track](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/conductor-new-track) | 交互式技能，用于创建带有规范和分阶段实施计划的功能、缺陷、维护或重构任务。 | Antigravity Skills | 🟢 活跃 | 91 | 2026-05-04 | tooling | `track-management`, `project-workflow`, `specification-generation` |
+| 42 | [dispatching-parallel-agents](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/dispatching-parallel-agents) | 一种并行调度AI代理独立调查和修复多个无关测试失败的技能模式。 | Antigravity Skills | 🟢 活跃 | 91 | 2026-05-04 | ai-ml | `ai-coding-pattern`, `parallel-agents`, `test-fixing` |
+| 43 | [drizzle-orm-expert](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/drizzle-orm-expert) | 使用 Drizzle ORM 在 TypeScript 中构建类型安全数据库层的专家指南。 | Antigravity Skills | 🟢 活跃 | 91 | 2026-05-04 | database | `drizzle-orm`, `typescript`, `database` |
+| 44 | [agents-md](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agents-md) | 为AI编码助手创建和维护精简、高信号AGENTS.md文档的技能。 | Antigravity Skills | 🟢 活跃 | 90 | 2026-05-04 | ai-ml | `agent-documentation`, `mcp-skill`, `coding-agent` |
+| 45 | [conductor-revert](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/conductor-revert) | 按逻辑工作单元（轨道、阶段或任务）进行 Git 感知的撤销操作，包含安全检查。 | Antigravity Skills | 🟢 活跃 | 90 | 2026-05-04 | tooling | `git`, `undo`, `revert` |
+| 46 | [pptx](https://github.com/anthropics/skills/tree/main/skills/pptx) | 用于创建、读取、编辑和质检 .pptx 演示文稿的技能，附带设计指导。 | Anthropic 官方 | 🟢 活跃 | 90 | 2026-05-03 | ai-ml | `pptx`, `presentation`, `slide-deck` |
+| 47 | [web-artifacts-builder](https://github.com/anthropics/skills/tree/main/skills/web-artifacts-builder) | 用于构建复杂 Claude.ai HTML 工件的工具套件，支持 React、Tailwind CSS 和 shadcn/ui。 | Anthropic 官方 | 🟢 活跃 | 90 | 2026-05-03 | frontend | `react`, `tailwind-css`, `shadcn-ui` |
+| 48 | [architecture-decision-records](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/architecture-decision-records) | 架构决策记录（ADR）的创建、维护和管理模式与模板。 | Antigravity Skills | 🟢 活跃 | 89 | 2026-05-04 | tooling | `architecture-decision-records`, `adr-templates`, `documentation` |
+| 49 | [ai-md](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-md) | 将人类编写的 CLAUDE.md 转换为结构化标签格式，提升 AI 合规性并减少 token 消耗。 | Antigravity Skills | 🟢 活跃 | 88 | 2026-05-04 | ai-ml | `claude-md`, `prompt-optimization`, `structured-labels` |
+| 50 | [ai-native-cli](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-native-cli) | 包含 98 条规则的 CLI 工具设计规范，确保 AI 代理安全使用。 | Antigravity Skills | 🟢 活跃 | 88 | 2026-05-04 | ai-ml | `cli-design-spec`, `ai-agent-compatibility`, `developer-tools` |
+| 51 | [ask-questions-if-underspecified](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ask-questions-if-underspecified) | AI助手在编码前澄清需求的指导规范。 | Antigravity Skills | 🟢 活跃 | 88 | 2026-05-04 | tooling | `ai-assistant-skill`, `requirements-clarification`, `coding-workflow` |
+| 52 | [azure-maps-search-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-maps-search-dotnet) | Azure Maps 的 .NET SDK，提供地理编码、路线规划、地图渲染、IP 定位和天气数据等服务。 | Antigravity Skills | 🟢 活跃 | 88 | 2026-05-04 | devops | `azure-maps`, `dotnet-sdk`, `geocoding` |
+| 53 | [azure-mgmt-applicationinsights-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-mgmt-applicationinsights-dotnet) | 用于管理 Azure Application Insights 监控资源的 .NET SDK。 | Antigravity Skills | 🟢 活跃 | 88 | 2026-05-04 | devops | `azure-sdk`, `application-insights`, `dotnet` |
+| 54 | [azure-resource-manager-redis-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-resource-manager-redis-dotnet) | 用于在 .NET 中预配和管理 Azure Redis 缓存的 Azure Resource Manager SDK。 | Antigravity Skills | 🟢 活跃 | 88 | 2026-05-04 | devops | `azure-sdk`, `redis`, `dotnet` |
+| 55 | [azure-search-documents-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-search-documents-dotnet) | 用于 .NET 的 Azure AI 搜索 SDK，支持全文、向量、语义和混合搜索。 | Antigravity Skills | 🟢 活跃 | 88 | 2026-05-04 | devops | `azure-search`, `dotnet-sdk`, `vector-search` |
+| 56 | [azure-security-keyvault-keys-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-security-keyvault-keys-dotnet) | 用于 .NET 的 Azure Key Vault 密钥管理 SDK。 | Antigravity Skills | 🟢 活跃 | 88 | 2026-05-04 | devops | `azure-key-vault`, `dotnet-sdk`, `cryptography` |
+| 57 | [azure-security-keyvault-keys-java](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-security-keyvault-keys-java) | Azure Key Vault 密钥 Java SDK，用于管理加密密钥并执行加密/解密/签名/验证操作。 | Antigravity Skills | 🟢 活跃 | 88 | 2026-05-04 | devops | `azure-key-vault`, `java-sdk`, `cryptographic-keys` |
+| 58 | [backend-dev-guidelines](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/backend-dev-guidelines) | 生产级 Node.js 后端开发指南，包含分层架构、验证和可观测性。 | Antigravity Skills | 🟢 活跃 | 88 | 2026-05-04 | backend | `backend-guidelines`, `node-js`, `express` |
+| 59 | [comfyui-gateway](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/comfyui-gateway) | 面向 ComfyUI 的生产级 REST API 网关，支持工作流管理、任务队列、缓存、认证和 Webhook。 | Antigravity Skills | 🟢 活跃 | 88 | 2026-05-04 | backend | `comfyui`, `api-gateway`, `image-generation` |
+| 60 | [commit](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/commit) | AI 技能，强制使用 Sentry 风格的约定式提交，包含分支安全和问题引用。 | Antigravity Skills | 🟢 活跃 | 88 | 2026-05-04 | tooling | `git`, `commit-conventions`, `sentry` |
+| 61 | [slack-gif-creator](https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator) | 用 Python 和 PIL 创建 Slack 优化动画 GIF 的工具包。 | Anthropic 官方 | 🟢 活跃 | 88 | 2026-05-03 | ai-ml | `gif-creation`, `slack-integration`, `animation-tools` |
+| 62 | [xlsx](https://github.com/anthropics/skills/tree/main/skills/xlsx) | 用于创建、编辑和分析电子表格文件（.xlsx、.csv、.tsv）的AI编码技能。 | Anthropic 官方 | 🟢 活跃 | 88 | 2026-05-03 | tooling | `spreadsheet`, `excel`, `python` |
+| 63 | [adhx](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/adhx) | 将 X/Twitter 帖子转换为结构化 JSON 供 LLM 使用的 API。 | Antigravity Skills | 🟢 活跃 | 87 | 2026-05-04 | tooling | `x-twitter-api`, `json-converter`, `llm-tool` |
+| 64 | [aegisops-ai](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/aegisops-ai) | 自主 DevSecOps 和 FinOps 护栏，编排 Gemini 3 Flash 进行内核、Terraform 和 K8s 审计。 | Antigravity Skills | 🟢 活跃 | 87 | 2026-05-04 | devops | `devsecops`, `finops`, `kubernetes` |
+| 65 | [astropy](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/astropy) | 天文学核心 Python 包，提供单位、坐标、FITS、宇宙学和表格操作功能。 | Antigravity Skills | 🟢 活跃 | 87 | 2026-05-04 | ai-ml | `astronomy`, `python-package`, `scientific-computing` |
+| 66 | [blueprint](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/blueprint) | 从一行目标生成AI编码代理可执行的逐步构建计划。 | Antigravity Skills | 🟢 活跃 | 87 | 2026-05-04 | tooling | `mcp-server`, `planning`, `multi-agent` |
+| 67 | [dropbox-automation](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/dropbox-automation) | 通过 Rube MCP 和 Composio 工具包自动化 Dropbox 文件操作，提供详细工作流指导。 | Antigravity Skills | 🟢 活跃 | 87 | 2026-05-04 | tooling | `dropbox-automation`, `mcp-server`, `composio` |
+| 68 | [claude-api](https://github.com/anthropics/skills/tree/main/skills/claude-api) | 用于构建、调试和优化 Claude API 及 Anthropic SDK 应用的技能，支持提示缓存和模型迁移。 | Anthropic 官方 | 🟢 活跃 | 87 | 2026-05-03 | ai-ml | `claude-api`, `anthropic-sdk`, `prompt-caching` |
+| 69 | [ai-product](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-product) | 构建可靠 AI 产品的生产级 LLM 集成模式与注意事项。 | Antigravity Skills | 🟢 活跃 | 86 | 2026-05-04 | ai-ml | `llm-integration`, `rag-architecture`, `prompt-engineering` |
+| 70 | [angular-migration](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/angular-migration) | 从 AngularJS 迁移到 Angular 的完整指南，涵盖混合应用、组件转换、依赖注入和路由迁移。 | Antigravity Skills | 🟢 活跃 | 86 | 2026-05-04 | frontend | `angular-migration`, `angularjs`, `hybrid-apps` |
+| 71 | [angular-state-management](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/angular-state-management) | Angular 状态管理综合指南，涵盖 Signals、NgRx 和 RxJS 模式。 | Antigravity Skills | 🟢 活跃 | 86 | 2026-05-04 | frontend | `angular`, `state-management`, `ngrx` |
+| 72 | [azure-functions](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-functions) | Azure Functions 开发专家模式与生产最佳实践，覆盖 .NET、Python 和 Node.js。 | Antigravity Skills | 🟢 活跃 | 86 | 2026-05-04 | devops | `azure-functions`, `serverless`, `durable-functions` |
+| 73 | [azure-mgmt-botservice-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-mgmt-botservice-dotnet) | 用于通过 Azure Resource Manager 管理 Azure Bot 服务的 .NET SDK。 | Antigravity Skills | 🟢 活跃 | 86 | 2026-05-04 | devops | `azure-sdk`, `bot-service`, `dotnet` |
+| 74 | [azure-resource-manager-mysql-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-resource-manager-mysql-dotnet) | 用于管理 MySQL 灵活服务器的 Azure .NET SDK。 | Antigravity Skills | 🟢 活跃 | 86 | 2026-05-04 | devops | `azure-sdk`, `mysql-flexible-server`, `dotnet` |
+| 75 | [brooks-lint](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/brooks-lint) | 基于12本经典软件工程书籍的AI代码审查工具，检测设计缺陷和架构风险。 | Antigravity Skills | 🟢 活跃 | 86 | 2026-05-04 | tooling | `code-review`, `architecture-analysis`, `design-smells` |
+| 76 | [clarity-gate](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/clarity-gate) | RAG 系统预摄入验证工具，确保文档在进入知识库前经过认知质量检查。 | Antigravity Skills | 🟢 活跃 | 86 | 2026-05-04 | database | `rag`, `document-verification`, `epistemic-quality` |
+| 77 | [clerk-auth](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/clerk-auth) | 在 Next.js 应用中实现 Clerk 身份验证的专家模式。 | Antigravity Skills | 🟢 活跃 | 86 | 2026-05-04 | tooling | `clerk-auth`, `nextjs`, `authentication` |
+| 78 | [code-refactoring-tech-debt](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/code-refactoring-tech-debt) | 用于AI分析、量化并优先处理软件项目技术债务的结构化提示词，提供可操作的修复计划。 | Antigravity Skills | 🟢 活跃 | 86 | 2026-05-04 | tooling | `technical-debt`, `code-refactoring`, `code-quality` |
+| 79 | [codebase-cleanup-tech-debt](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/codebase-cleanup-tech-debt) | 用于AI助手分析、量化并优先处理软件项目技术债务的结构化提示词。 | Antigravity Skills | 🟢 活跃 | 86 | 2026-05-04 | tooling | `technical-debt`, `code-quality`, `refactoring` |
+| 80 | [constant-time-analysis](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/constant-time-analysis) | 跨语言静态分析工具，检测加密代码中的时序侧信道泄漏。 | Antigravity Skills | 🟢 活跃 | 86 | 2026-05-04 | security | `static-analysis`, `cryptography`, `side-channel` |
+| 81 | [cred-omega](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/cred-omega) | 企业级凭证安全引擎，用于发现、分类、保护和管理所有API密钥和机密。 | Antigravity Skills | 🟢 活跃 | 86 | 2026-05-04 | security | `credential-management`, `secret-scanning`, `security-audit` |
+| 82 | [devcontainer-setup](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/devcontainer-setup) | 生成预配置的开发容器，集成 Claude Code 和多语言工具，用于隔离开发环境。 | Antigravity Skills | 🟢 活跃 | 86 | 2026-05-04 | tooling | `devcontainer`, `claude-code`, `development-environment` |
+| 83 | [differential-review](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/differential-review) | 针对 PR、提交和差异的安全代码审查技能，基于风险的方法论。 | Antigravity Skills | 🟢 活跃 | 86 | 2026-05-04 | security | `security-review`, `code-review`, `pr-review` |
+| 84 | [dotnet-architect](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/dotnet-architect) | 面向 AI 辅助 C# 和 ASP.NET Core 开发的 .NET 后端架构专家技能。 | Antigravity Skills | 🟢 活跃 | 86 | 2026-05-04 | tooling | `dotnet-architect`, `csharp`, `aspnet-core` |
+| 85 | [algorithmic-art](https://github.com/anthropics/skills/tree/main/skills/algorithmic-art) | 使用 p5.js 创建生成式艺术的技能，支持种子随机性和交互式参数探索。 | Anthropic 官方 | 🟢 活跃 | 86 | 2026-05-03 | backend | `generative-art`, `p5js`, `algorithmic-art` |
+| 86 | [mcp-builder](https://github.com/anthropics/skills/tree/main/skills/mcp-builder) | 构建高质量 MCP 服务器的指南，使 LLM 能够与外部服务交互。 | Anthropic 官方 | 🟢 活跃 | 86 | 2026-05-03 | frontend | `mcp-server`, `typescript`, `python` |
+| 87 | [code-documentation](https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/code-documentation) | 编写高效代码文档的指南，涵盖 API 文档、README、内联注释和技术指南。 | 社区精选 | 🟢 活跃 | 86 | 2026-05-03 | documentation | `code-documentation`, `api-docs`, `readme-template` |
+| 88 | [ask-questions-if-underspecified](https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/ask-questions-if-underspecified) | 引导AI编码助手在实现前主动澄清模糊需求的技能。 | 社区精选 | 🟢 活跃 | 86 | 2026-05-03 | tooling | `ai-agent-skill`, `requirement-clarification`, `coding-workflow` |
+| 89 | [agent-framework-azure-ai-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agent-framework-azure-ai-py) | 使用微软 Agent Framework Python SDK 在 Azure AI Foundry 上构建持久化 AI 代理。 | Antigravity Skills | 🟢 活跃 | 85 | 2026-05-04 | ai-ml | `azure-ai-foundry`, `agent-framework`, `python-sdk` |
+| 90 | [agentflow](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agentflow) | 将看板转化为自主AI开发流水线，支持多工人编排与质量门禁。 | Antigravity Skills | 🟢 活跃 | 85 | 2026-05-04 | tooling | `kanban-orchestration`, `ai-pipeline`, `claude-code` |
+| 91 | [agents-v2-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agents-v2-py) | 在 Azure AI Foundry 中创建基于容器的托管代理的 Python SDK 指南。 | Antigravity Skills | 🟢 活跃 | 85 | 2026-05-04 | ai-ml | `azure-ai-foundry`, `hosted-agents`, `python-sdk` |
+| 92 | [ai-engineering-toolkit](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-engineering-toolkit) | 6 个结构化 AI 工程工作流，涵盖提示评估、RAG 设计、安全审计等。 | Antigravity Skills | 🟢 活跃 | 85 | 2026-05-04 | database | `prompt-engineering`, `rag`, `ai-security` |
+| 93 | [apify-actorization](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/apify-actorization) | 将现有软件转换为可在 Apify 平台上复用的无服务器 Docker 应用。 | Antigravity Skills | 🟢 活跃 | 85 | 2026-05-04 | tooling | `apify`, `serverless`, `docker` |
+| 94 | [appdeploy](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/appdeploy) | 通过 HTTP API 部署带有后端 API、数据库和文件存储的 Web 应用。 | Antigravity Skills | 🟢 活跃 | 85 | 2026-05-04 | backend | `app-deployment`, `mcp-server`, `web-app` |
+| 95 | [azd-deployment](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azd-deployment) | 使用 Azure Developer CLI 和 Bicep 将容器化前后端应用部署到 Azure Container Apps，支持托管身份和幂等基础设施。 | Antigravity Skills | 🟢 活跃 | 85 | 2026-05-04 | devops | `azure-container-apps`, `azure-developer-cli`, `bicep` |
+| 96 | [azure-ai-agents-persistent-java](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-agents-persistent-java) | 用于创建和管理持久化 Azure AI 代理的低级 Java SDK，支持线程、消息、运行和工具。 | Antigravity Skills | 🟢 活跃 | 85 | 2026-05-04 | devops | `azure-ai-agents`, `java-sdk`, `persistent-agents` |
+| 97 | [azure-ai-anomalydetector-java](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-anomalydetector-java) | 用于单变量/多变量异常检测的 Azure AI 异常检测器 Java SDK。 | Antigravity Skills | 🟢 活跃 | 85 | 2026-05-04 | devops | `azure`, `anomaly-detection`, `java-sdk` |
+| 98 | [azure-ai-contentsafety-java](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-contentsafety-java) | 用于构建内容审核应用的 Azure AI 内容安全 Java SDK。 | Antigravity Skills | 🟢 活跃 | 85 | 2026-05-04 | devops | `content-moderation`, `azure-sdk`, `java-sdk` |
+| 99 | [azure-ai-contentsafety-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-contentsafety-py) | 用于检测文本和图像中有害内容的 Azure AI 内容安全 Python SDK。 | Antigravity Skills | 🟢 活跃 | 85 | 2026-05-04 | devops | `content-safety`, `azure-sdk`, `python` |
+| 100 | [azure-ai-contentsafety-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-contentsafety-ts) | 用于分析文本和图像有害内容的 TypeScript SDK，支持自定义阻止列表。 | Antigravity Skills | 🟢 活跃 | 85 | 2026-05-04 | devops | `azure-ai`, `content-safety`, `typescript-sdk` |
 
 ## Top 10 安装指南
 
 <details>
-<summary>⭐ <strong>MCP Integration</strong> (120.2k★) — Claude Code 插件集成 Model Context Protocol (MCP) 服务器的指南，用于连接外部服...</summary>
+<summary>⭐ <strong>docx</strong> — 通过 JavaScript 和 XML 操作，程序化创建、编辑和分析 Word .docx 文件的技能。</summary>
 
-Claude Code 插件集成 Model Context Protocol (MCP) 服务器的指南，用于连接外部服务和 API。
+通过 JavaScript 和 XML 操作，程序化创建、编辑和分析 Word .docx 文件的技能。
 
 ```bash
-git clone anthropics/claude-code
+git clone https://github.com/anthropics/skills.git
 ```
+Files: `skills/docx/`
 
-📊 评分: 97 · 🏥 健康度: 95 · 🏷️ 标签: `mcp-integration`, `claude-code`, `plugin-development`
-📅 最近活跃: 2026-05-01 · 📦 来源: Anthropic 官方
+📊 评分: 96 · 🏥 健康度: 58 · 🏷️ 标签: `docx-generation`, `word-document`, `javascript`
+📅 最近活跃: 2026-05-03 · 📦 来源: Anthropic 官方
 
 </details>
 
 <details>
-<summary>⭐ <strong>skill-creator</strong> — 用于创建、测试和优化AI技能的元技能，支持迭代开发和评估工作流。</summary>
+<summary>⭐ <strong>skill-creator</strong> — 用于创建、测试和迭代优化 Claude 技能，支持基准测试和描述优化的元技能。</summary>
 
-用于创建、测试和优化AI技能的元技能，支持迭代开发和评估工作流。
+用于创建、测试和迭代优化 Claude 技能，支持基准测试和描述优化的元技能。
 
 ```bash
 git clone https://github.com/anthropics/skills.git
 ```
 Files: `skills/skill-creator/`
 
-📊 评分: 96 · 🏥 健康度: 58 · 🏷️ 标签: `skill-development`, `ai-workflow`, `testing-framework`
+📊 评分: 96 · 🏥 健康度: 58 · 🏷️ 标签: `skill-creation`, `benchmarking`, `eval-framework`
 📅 最近活跃: 2026-05-03 · 📦 来源: Anthropic 官方
 
 </details>
 
 <details>
-<summary>⭐ <strong>slack-gif-creator</strong> — 用于创建和优化 Slack 动画 GIF 的 Python 工具包，包含验证、动画和优化工具。</summary>
+<summary>⭐ <strong>azure-ai-voicelive-dotnet</strong> (36.3k★) — 用于 .NET 的 Azure AI 语音实时 SDK，构建双向语音助手。</summary>
 
-用于创建和优化 Slack 动画 GIF 的 Python 工具包，包含验证、动画和优化工具。
-
-```bash
-git clone https://github.com/anthropics/skills.git
-```
-Files: `skills/slack-gif-creator/`
-
-📊 评分: 96 · 🏥 健康度: 58 · 🏷️ 标签: `slack-gif`, `python-animation`, `image-processing`
-📅 最近活跃: 2026-05-03 · 📦 来源: Anthropic 官方
-
-</details>
-
-<details>
-<summary>⭐ <strong>xlsx</strong> — 用于通过Python库创建、编辑和分析电子表格文件的AI技能。</summary>
-
-用于通过Python库创建、编辑和分析电子表格文件的AI技能。
-
-```bash
-git clone https://github.com/anthropics/skills.git
-```
-Files: `skills/xlsx/`
-
-📊 评分: 96 · 🏥 健康度: 58 · 🏷️ 标签: `spreadsheet`, `excel`, `data-analysis`
-📅 最近活跃: 2026-05-03 · 📦 来源: Anthropic 官方
-
-</details>
-
-<details>
-<summary>⭐ <strong>ui-ux-pro-max</strong> (73.7k★) — 提供 UI/UX 设计智能、指南和 CLI 工具，用于跨多框架生成设计系统和代码最佳实践。</summary>
-
-提供 UI/UX 设计智能、指南和 CLI 工具，用于跨多框架生成设计系统和代码最佳实践。
-
-```bash
-git clone nextlevelbuilder/ui-ux-pro-max-skill
-```
-
-📊 评分: 95 · 🏥 健康度: 79 · 🏷️ 标签: `ui-ux-design`, `design-system`, `cli-tool`
-📅 最近活跃: 2026-04-03 · 📦 来源: nextlevelbuilder/ui-ux-pro-max-skill
-
-</details>
-
-<details>
-<summary>⭐ <strong>agent-framework-azure-ai-py</strong> (36.2k★) — 用于在 Azure AI Foundry 上构建持久 AI 代理的 Python SDK，支持托管工具和对话线程。</summary>
-
-用于在 Azure AI Foundry 上构建持久 AI 代理的 Python SDK，支持托管工具和对话线程。
-
-```bash
-git clone https://github.com/sickn33/antigravity-awesome-skills.git
-```
-Files: `skills/agent-framework-azure-ai-py/`
-
-📊 评分: 95 · 🏥 健康度: 80 · 🏷️ 标签: `azure-ai`, `agent-framework`, `python-sdk`
-📅 最近活跃: 2026-05-03 · 📦 来源: Antigravity Skills
-
-</details>
-
-<details>
-<summary>⭐ <strong>agentflow</strong> (36.2k★) — 通过看板管理自主AI开发流水线，支持多智能体协调和质量门控。</summary>
-
-通过看板管理自主AI开发流水线，支持多智能体协调和质量门控。
-
-```bash
-git clone https://github.com/sickn33/antigravity-awesome-skills.git
-```
-Files: `skills/agentflow/`
-
-📊 评分: 95 · 🏥 健康度: 80 · 🏷️ 标签: `ai-orchestration`, `kanban-integration`, `claude-code`
-📅 最近活跃: 2026-05-03 · 📦 来源: Antigravity Skills
-
-</details>
-
-<details>
-<summary>⭐ <strong>astro</strong> (36.2k★) — 用于构建内容网站的框架，默认零 JavaScript，采用岛屿架构。</summary>
-
-用于构建内容网站的框架，默认零 JavaScript，采用岛屿架构。
-
-```bash
-git clone https://github.com/sickn33/antigravity-awesome-skills.git
-```
-Files: `skills/astro/`
-
-📊 评分: 95 · 🏥 健康度: 80 · 🏷️ 标签: `web-framework`, `static-site-generator`, `islands-architecture`
-📅 最近活跃: 2026-05-03 · 📦 来源: Antigravity Skills
-
-</details>
-
-<details>
-<summary>⭐ <strong>aws-serverless</strong> (36.2k★) — 构建生产级 AWS 无服务器应用的完整指南，包含模式、最佳实践和故障排除。</summary>
-
-构建生产级 AWS 无服务器应用的完整指南，包含模式、最佳实践和故障排除。
-
-```bash
-git clone https://github.com/sickn33/antigravity-awesome-skills.git
-```
-Files: `skills/aws-serverless/`
-
-📊 评分: 95 · 🏥 健康度: 80 · 🏷️ 标签: `aws-lambda`, `serverless-patterns`, `infrastructure-as-code`
-📅 最近活跃: 2026-05-03 · 📦 来源: Antigravity Skills
-
-</details>
-
-<details>
-<summary>⭐ <strong>azure-ai-voicelive-dotnet</strong> (36.2k★) — 用于基于 Azure AI 构建实时双向语音应用的 .NET SDK。</summary>
-
-用于基于 Azure AI 构建实时双向语音应用的 .NET SDK。
+用于 .NET 的 Azure AI 语音实时 SDK，构建双向语音助手。
 
 ```bash
 git clone https://github.com/sickn33/antigravity-awesome-skills.git
 ```
 Files: `skills/azure-ai-voicelive-dotnet/`
 
-📊 评分: 95 · 🏥 健康度: 80 · 🏷️ 标签: `azure-ai`, `voice-sdk`, `dotnet`
-📅 最近活跃: 2026-05-03 · 📦 来源: Antigravity Skills
+📊 评分: 95 · 🏥 健康度: 80 · 🏷️ 标签: `azure-ai`, `voice-assistant`, `websocket`
+📅 最近活跃: 2026-05-04 · 📦 来源: Antigravity Skills
+
+</details>
+
+<details>
+<summary>⭐ <strong>azure-eventhub-dotnet</strong> (36.3k★) — 用于高吞吐量事件流的 Azure 事件中心 .NET SDK。</summary>
+
+用于高吞吐量事件流的 Azure 事件中心 .NET SDK。
+
+```bash
+git clone https://github.com/sickn33/antigravity-awesome-skills.git
+```
+Files: `skills/azure-eventhub-dotnet/`
+
+📊 评分: 95 · 🏥 健康度: 80 · 🏷️ 标签: `azure-event-hubs`, `dotnet-sdk`, `event-streaming`
+📅 最近活跃: 2026-05-04 · 📦 来源: Antigravity Skills
+
+</details>
+
+<details>
+<summary>⭐ <strong>azure-mgmt-fabric-dotnet</strong> (36.3k★) — 用于通过 Azure Resource Manager 管理 Microsoft Fabric 容量资源的 .NET S...</summary>
+
+用于通过 Azure Resource Manager 管理 Microsoft Fabric 容量资源的 .NET SDK。
+
+```bash
+git clone https://github.com/sickn33/antigravity-awesome-skills.git
+```
+Files: `skills/azure-mgmt-fabric-dotnet/`
+
+📊 评分: 95 · 🏥 健康度: 80 · 🏷️ 标签: `azure-sdk`, `microsoft-fabric`, `resource-manager`
+📅 最近活跃: 2026-05-04 · 📦 来源: Antigravity Skills
+
+</details>
+
+<details>
+<summary>⭐ <strong>azure-resource-manager-durabletask-dotnet</strong> (36.3k★) — 用于通过 ARM 管理 Azure Durable Task Scheduler 资源的 .NET SDK。</summary>
+
+用于通过 ARM 管理 Azure Durable Task Scheduler 资源的 .NET SDK。
+
+```bash
+git clone https://github.com/sickn33/antigravity-awesome-skills.git
+```
+Files: `skills/azure-resource-manager-durabletask-dotnet/`
+
+📊 评分: 95 · 🏥 健康度: 80 · 🏷️ 标签: `azure-sdk`, `durable-task`, `resource-manager`
+📅 最近活跃: 2026-05-04 · 📦 来源: Antigravity Skills
+
+</details>
+
+<details>
+<summary>⭐ <strong>azure-resource-manager-playwright-dotnet</strong> (36.3k★) — 用于通过 Azure Resource Manager 管理 Microsoft Playwright Testing ...</summary>
+
+用于通过 Azure Resource Manager 管理 Microsoft Playwright Testing 工作区的 .NET SDK。
+
+```bash
+git clone https://github.com/sickn33/antigravity-awesome-skills.git
+```
+Files: `skills/azure-resource-manager-playwright-dotnet/`
+
+📊 评分: 95 · 🏥 健康度: 80 · 🏷️ 标签: `azure-resource-manager`, `playwright-testing`, `dotnet-sdk`
+📅 最近活跃: 2026-05-04 · 📦 来源: Antigravity Skills
+
+</details>
+
+<details>
+<summary>⭐ <strong>azure-storage-blob-ts</strong> (36.3k★) — 用于 Azure Blob 存储操作的 TypeScript SDK，支持上传、下载和管理。</summary>
+
+用于 Azure Blob 存储操作的 TypeScript SDK，支持上传、下载和管理。
+
+```bash
+git clone https://github.com/sickn33/antigravity-awesome-skills.git
+```
+Files: `skills/azure-storage-blob-ts/`
+
+📊 评分: 95 · 🏥 健康度: 80 · 🏷️ 标签: `azure-storage`, `blob-storage`, `typescript-sdk`
+📅 最近活跃: 2026-05-04 · 📦 来源: Antigravity Skills
+
+</details>
+
+<details>
+<summary>⭐ <strong>azure-storage-queue-ts</strong> (36.3k★) — Azure 队列存储的 TypeScript SDK，支持消息发送、接收、查看和删除操作。</summary>
+
+Azure 队列存储的 TypeScript SDK，支持消息发送、接收、查看和删除操作。
+
+```bash
+git clone https://github.com/sickn33/antigravity-awesome-skills.git
+```
+Files: `skills/azure-storage-queue-ts/`
+
+📊 评分: 95 · 🏥 健康度: 80 · 🏷️ 标签: `azure-sdk`, `queue-storage`, `typescript`
+📅 最近活跃: 2026-05-04 · 📦 来源: Antigravity Skills
+
+</details>
+
+<details>
+<summary>⭐ <strong>claimable-postgres</strong> (36.3k★) — 通过 API、CLI、SDK 或 Vite 插件即时创建临时 Postgres 数据库，无需注册。</summary>
+
+通过 API、CLI、SDK 或 Vite 插件即时创建临时 Postgres 数据库，无需注册。
+
+```bash
+git clone https://github.com/sickn33/antigravity-awesome-skills.git
+```
+Files: `skills/claimable-postgres/`
+
+📊 评分: 95 · 🏥 健康度: 80 · 🏷️ 标签: `postgres`, `temporary-database`, `neon`
+📅 最近活跃: 2026-05-04 · 📦 来源: Antigravity Skills
 
 </details>
 

@@ -10,235 +10,235 @@
 
 | # | Name | Description | Source | Status | Score | Updated | Category | Tags |
 |---|---|---|---|---|---|---|---|---|
-| 1 | [Comprehensive repository analysis](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#comprehensive-repository-analysis) | A structured prompt for AI-assisted comprehensive codebase analysis, bug discove... | prompts.chat | 🟢 Active | 96 | 2026-05-04 | security | `code-review`, `bug-hunting`, `security-audit` |
-| 2 | [Rapid Prototyper](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#rapid-prototyper) | An AI agent prompt designed to rapidly scaffold and build functional application... | prompts.chat | 🟢 Active | 96 | 2026-05-04 | backend | `ai-agent`, `rapid-prototyping`, `mvp` |
-| 3 | [Multiplayer 3D Plane Game](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#multiplayer-3d-plane-game) | A detailed prompt for generating a web-based multiplayer 3D airplane combat game... | prompts.chat | 🟢 Active | 92 | 2026-05-04 | frontend | `three-js`, `websocket`, `multiplayer-game` |
-| 4 | [Todo List](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#todo-list) | A detailed prompt for building a feature-rich, responsive todo web app using van... | prompts.chat | 🟢 Active | 92 | 2026-05-04 | frontend | `ai-prompt`, `todo-app`, `vanilla-js` |
-| 5 | [Django Unit Test Generator for Viewsets](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#django-unit-test-generator-for-viewsets) | A prompt for AI assistants to generate comprehensive unit tests for Django Views... | prompts.chat | 🟢 Active | 92 | 2026-05-04 | backend | `django`, `unit-testing`, `viewset` |
-| 6 | [Coding Structure with MVC and SOLID Principles](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#coding-structure-with-mvc-and-solid-principles) | An AI prompt template for generating guidance on applying MVC architecture and S... | prompts.chat | 🟢 Active | 92 | 2026-05-04 | ai-ml | `ai-prompt`, `software-architecture`, `mvc` |
-| 7 | [Cold Start Safe Architecture](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#cold-start-safe-architecture) | A prompt for an AI to architect a mobile backend using Expo and Supabase, offloa... | prompts.chat | 🟢 Active | 92 | 2026-05-04 | frontend | `ai-prompt`, `expo`, `supabase` |
-| 8 | [Comprehensive POS Application Development with FIFO and Reporting](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#comprehensive-pos-application-development-with-fifo-and-reporting) | A detailed prompt for developing a POS application with inventory management, FI... | prompts.chat | 🟢 Active | 92 | 2026-05-04 | ai-ml | `pos-system`, `inventory-management`, `fifo-costing` |
-| 9 | [Auditor de Código Python: Nivel Senior (Salida en Español)](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#auditor-de-cdigo-python-nivel-senior-salida-en-espaol) | A prompt for AI to perform a comprehensive Python code audit and refactoring wit... | prompts.chat | 🟢 Active | 92 | 2026-05-04 | backend | `ai-prompt`, `code-audit`, `python-refactoring` |
-| 10 | [AI Engineer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ai-engineer) | A specialized AI agent prompt for implementing and integrating production-ready ... | prompts.chat | 🟢 Active | 92 | 2026-05-04 | ai-ml | `llm-integration`, `ml-pipeline`, `prompt-engineering` |
-| 11 | [Backend Architect](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#backend-architect) | An AI agent prompt specialized in designing and architecting scalable, secure ba... | prompts.chat | 🟢 Active | 92 | 2026-05-04 | database | `ai-agent`, `backend-architecture`, `api-design` |
-| 12 | [Frontend Developer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#frontend-developer) | A specialized AI agent prompt for frontend development, focusing on UI implement... | prompts.chat | 🟢 Active | 92 | 2026-05-04 | frontend | `ai-agent`, `frontend-development`, `react` |
-| 13 | [Test Automation Expert](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#test-automation-expert) | An AI agent prompt for automating test writing, execution, failure analysis, and... | prompts.chat | 🟢 Active | 92 | 2026-05-04 | testing | `test-automation`, `ai-agent`, `prompt-engineering` |
-| 14 | [Build a DDQN Snake Game with TensorFlow.js in a Single HTML File](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#build-a-ddqn-snake-game-with-tensorflowjs-in-a-single-html-file) | A prompt for building a Double Deep Q-Network Snake game using TensorFlow.js in ... | prompts.chat | 🟢 Active | 92 | 2026-05-04 | frontend | `tensorflow-js`, `reinforcement-learning`, `ddqn` |
-| 15 | [Production-Grade PostHog Integration for Next.js 15 (App Router)](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#production-grade-posthog-integration-for-nextjs-15-app-router) | Complete implementation guide for integrating PostHog analytics with Next.js 15 ... | prompts.chat | 🟢 Active | 92 | 2026-05-04 | frontend | `nextjs-15`, `posthog-integration`, `supabase-auth` |
-| 16 | [Senior Frontend Debugger for SPA Websites (Angular, React, Vite)](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#senior-frontend-debugger-for-spa-websites-angular-react-vite) | A specialized AI prompt for debugging client-side issues in Angular, React, and ... | prompts.chat | 🟢 Active | 92 | 2026-05-04 | frontend | `ai-prompt`, `spa-debugging`, `frontend` |
-| 17 | [TypeScript Unit Testing with Vitest](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#typescript-unit-testing-with-vitest) | A prompt to configure an AI as a Test Automation Engineer for writing Vitest uni... | prompts.chat | 🟢 Active | 92 | 2026-05-04 | frontend | `ai-prompt`, `unit-testing`, `typescript` |
-| 18 | [Unity Architecture Specialist](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#unity-architecture-specialist) | A Claude agent prompt for expert Unity game architecture, system design, and C# ... | prompts.chat | 🟢 Active | 92 | 2026-05-04 | backend | `claude-agent`, `unity-architecture`, `csharp-refactoring` |
-| 19 | [Web Typography](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#web-typography) | An AI prompt to generate production-ready, opinionated CSS for web typography fo... | prompts.chat | 🟢 Active | 92 | 2026-05-04 | frontend | `ai-prompt`, `web-typography`, `css-generator` |
-| 20 | [Setup and Bootstrap a Flutter Development Environment](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#setup-and-bootstrap-a-flutter-development-environment) | An AI prompt to fully automate the setup of a Flutter development environment an... | prompts.chat | 🟢 Active | 92 | 2026-05-04 | mobile | `flutter`, `devops-automation`, `project-bootstrap` |
-| 21 | [Ethereum Developer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ethereum-developer) | A prompt for generating a Solidity smart contract for a permissioned blockchain-... | prompts.chat | 🟢 Active | 89 | 2026-05-04 | ai-ml | `ai-prompt`, `ethereum`, `solidity` |
-| 22 | [Knowledgeable Software Development Mentor](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#knowledgeable-software-development-mentor) | A prompt template to configure an AI as a patient, example-driven mentor for exp... | prompts.chat | 🟢 Active | 89 | 2026-05-04 | ai-ml | `ai-prompt`, `coding-mentor`, `educational-tool` |
-| 23 | [Linux Script Developer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#linux-script-developer) | An AI prompt for generating professional Bash scripts with error handling, color... | prompts.chat | 🟢 Active | 89 | 2026-05-04 | documentation | `bash-scripting`, `linux-automation`, `ai-prompt` |
-| 24 | [Code Review Assistant](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#code-review-assistant) | A prompt template that instructs an AI to act as a structured code review assist... | prompts.chat | 🟢 Active | 89 | 2026-05-04 | ai-ml | `prompt-template`, `code-review`, `ai-assistant` |
-| 25 | [Interactive Quiz](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#interactive-quiz) | A detailed AI prompt for generating a feature-rich, interactive quiz web applica... | prompts.chat | 🟢 Active | 89 | 2026-05-04 | frontend | `ai-prompt`, `quiz-application`, `frontend` |
-| 26 | [3D Racing Game](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#3d-racing-game) | A detailed prompt for generating a 3D racing game with physics, AI, and multipla... | prompts.chat | 🟢 Active | 89 | 2026-05-04 | frontend | `three-js`, `game-development`, `javascript` |
-| 27 | [Code Review Agent](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#code-review-agent) | A prompt that instructs an LLM to act as an automated code review agent, analyzi... | prompts.chat | 🟢 Active | 89 | 2026-05-04 | ai-ml | `llm-prompt`, `code-review`, `static-analysis` |
-| 28 | [Next.js Specialized Front-End Developer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#nextjs-specialized-front-end-developer) | A prompt that configures an AI to act as a specialized front-end developer for b... | prompts.chat | 🟢 Active | 89 | 2026-05-04 | frontend | `ai-prompt`, `nextjs`, `react` |
-| 29 | [Code Translator: Any Language to Any Language](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#code-translator-any-language-to-any-language) | An AI prompt template for translating code between any programming languages whi... | prompts.chat | 🟢 Active | 89 | 2026-05-04 | tooling | `ai-prompt`, `code-translation`, `multi-language` |
-| 30 | [担任Go语言开发者](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#go) | A prompt template to configure an AI assistant as an expert Go (Golang) develope... | prompts.chat | 🟢 Active | 89 | 2026-05-04 | backend | `llm-prompt`, `go-expert`, `code-assistance` |
-| 31 | [Hata Tespiti için Kod İnceleme Asistanı](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#hata-tespiti-iin-kod-inceleme-asistan) | A prompt template to configure an AI as a code review assistant for analyzing er... | prompts.chat | 🟢 Active | 89 | 2026-05-04 | tooling | `prompt-template`, `code-review`, `static-analysis` |
-| 32 | [Visual Web Application Development](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#visual-web-application-development) | A prompt to guide an AI in acting as a front-end web developer to build modern, ... | prompts.chat | 🟢 Active | 89 | 2026-05-04 | frontend | `ai-prompt`, `web-development`, `frontend` |
-| 33 | [Develop a Notion Clone Application](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#develop-a-notion-clone-application) | A detailed AI prompt for generating a full-stack Notion clone application specif... | prompts.chat | 🟢 Active | 89 | 2026-05-04 | database | `ai-prompt`, `notion-clone`, `full-stack` |
-| 34 | [Node.js Automation Script Developer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#nodejs-automation-script-developer) | A prompt to guide AI in writing Node.js scripts for file handling, web scraping,... | prompts.chat | 🟢 Active | 89 | 2026-05-04 | backend | `llm-prompt`, `nodejs-automation`, `script-generation` |
-| 35 | [Build a UI Library for ESP32](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#build-a-ui-library-for-esp32) | A prompt to guide an AI in generating code for a custom graphical user interface... | prompts.chat | 🟢 Active | 89 | 2026-05-04 | backend | `ai-prompt`, `embedded-ui`, `esp32` |
-| 36 | [Code Review Expert](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#code-review-expert) | An AI prompt template for conducting comprehensive code reviews across multiple ... | prompts.chat | 🟢 Active | 89 | 2026-05-04 | security | `code-review`, `ai-prompt`, `code-quality` |
-| 37 | [Senior Java Backend Engineer Expert](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#senior-java-backend-engineer-expert) | A prompt that configures an AI to act as an expert Senior Java Backend Engineer ... | prompts.chat | 🟢 Active | 89 | 2026-05-04 | backend | `ai-prompt`, `java-backend`, `expert-agent` |
-| 38 | [Mobile App Builder](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#mobile-app-builder) | A specialized AI agent prompt designed to act as an expert mobile developer for ... | prompts.chat | 🟢 Active | 89 | 2026-05-04 | frontend | `ai-agent-prompt`, `mobile-development`, `react-native` |
-| 39 | [PHP Microscope: Forensic Codebase Autopsy Protocol](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#php-microscope-forensic-codebase-autopsy-protocol) | A detailed AI prompt for conducting forensic-level code reviews of PHP codebases... | prompts.chat | 🟢 Active | 89 | 2026-05-04 | security | `php`, `code-review`, `ai-prompt` |
-| 40 | [Code Review Specialist 3](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#code-review-specialist-3) | An AI prompt that instructs a language model to act as a specialist providing de... | prompts.chat | 🟢 Active | 89 | 2026-05-04 | devops | `ai-prompt`, `code-review`, `developer-tool` |
-| 41 | [xcode-mcp (for pi agent)](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#xcode-mcp-for-pi-agent) | Guidelines for using Xcode MCP tools via mcporter CLI, specifying when to use th... | prompts.chat | 🟢 Active | 89 | 2026-05-04 | testing | `mcp-server`, `xcode`, `ios-development` |
-| 42 | [Terraform Platform Engineer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#terraform-platform-engineer) | An AI prompt that acts as a Terraform expert to help design, structure, and impr... | prompts.chat | 🟢 Active | 89 | 2026-05-04 | devops | `terraform`, `infrastructure-as-code`, `ai-prompt` |
-| 43 | [Fullstack Software Developer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#fullstack-software-developer) | A prompt to instruct an AI to act as a full-stack developer and generate code/ar... | Curated | 🟢 Active | 88 | 2026-04-15 | fullstack | `ai-prompt`, `code-generation`, `fullstack` |
-| 44 | [Fix Blank Screen Issues After Deploy on Vercel (Angular, React, Vite)](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#fix-blank-screen-issues-after-deploy-on-vercel-angular-react-vite) | An AI prompt for diagnosing and fixing blank screen issues in SPAs deployed on V... | prompts.chat | 🟢 Active | 88 | 2026-05-04 | frontend | `ai-prompt`, `vercel-deployment`, `spa-troubleshooting` |
-| 45 | [Act as a Patient, Non-Technical Android Studio Guide](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#act-as-a-patient-non-technical-android-studio-guide) | A prompt that transforms an AI into a beginner-friendly Android Studio guide usi... | prompts.chat | 🟢 Active | 86 | 2026-05-04 | mobile | `ai-prompt`, `android-development`, `beginner-guide` |
-| 46 | [.NET API Project Analysis](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#net-api-project-analysis) | A prompt for AI to act as a .NET API architecture analyst, evaluating code quali... | prompts.chat | 🟢 Active | 86 | 2026-05-04 | backend | `ai-prompt`, `dotnet-architecture`, `code-review` |
-| 47 | [Create Python Dev Container](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#create-python-dev-container) | A prompt for an AI to generate Docker commands for a VS Code-compatible Python d... | prompts.chat | 🟢 Active | 86 | 2026-05-04 | backend | `ai-prompt`, `dev-container`, `docker` |
-| 48 | [DevOps Automator](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#devops-automator) | An AI agent specialized in automating DevOps workflows including CI/CD pipelines... | prompts.chat | 🟢 Active | 86 | 2026-05-04 | devops | `devops-agent`, `ci-cd-automation`, `infrastructure-as-code` |
-| 49 | [Micro-SaaS "Vibecoder" Architect](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#micro-saas-vibecoder-architect) | A structured prompt template for generating an AI-powered Micro-SaaS MVP bluepri... | prompts.chat | 🟢 Active | 86 | 2026-05-04 | backend | `prompt-template`, `mvp-blueprint`, `ai-assisted-development` |
-| 50 | [Task Creator](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#task-creator) | A prompt for AI agents to manage a PROGRESS.md file as working memory for coding... | prompts.chat | 🟢 Active | 86 | 2026-05-04 | ai-ml | `ai-agent`, `project-memory`, `prompt-engineering` |
-| 51 | [Personalized Digital Avatar Generator](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#personalized-digital-avatar-generator) | A detailed prompt for building a React-based web app that generates personalized... | prompts.chat | 🟢 Active | 86 | 2026-05-04 | ai-ml | `react`, `fal-ai-api`, `avatar-generator` |
-| 52 | [Python Interpreter](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#python-interpreter) | A prompt that instructs an AI to execute Python code and return only the output,... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | backend | `prompt-engineering`, `python-repl`, `code-execution` |
-| 53 | [Fullstack Software Developer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#fullstack-software-developer) | A prompt to guide an AI in generating full-stack architecture and code for secur... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | frontend | `ai-prompt`, `fullstack`, `golang` |
-| 54 | [Senior Frontend Developer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#senior-frontend-developer) | A prompt to configure an AI as a Senior Frontend Developer for React/Redux proje... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | frontend | `ai-prompt`, `react`, `redux-toolkit` |
-| 55 | [Code Reviewer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#code-reviewer) | A prompt template to instruct an AI to perform detailed code review with feedbac... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | tooling | `prompt-template`, `code-review`, `ai-assistant` |
-| 56 | [Logic Builder Tool](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#logic-builder-tool) | A prompt that transforms an AI into a guided logic-building assistant for solvin... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | tooling | `prompt-engineering`, `coding-tutor`, `problem-solving` |
-| 57 | [3D FPS Game](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#3d-fps-game) | A comprehensive prompt specifying features for building a 3D first-person shoote... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | frontend | `three-js`, `game-development`, `fps-game` |
-| 58 | [Code Snippet Manager](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#code-snippet-manager) | An AI prompt to build a web-based code snippet manager with IDE-like editing, se... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | frontend | `ai-prompt`, `code-snippet-manager`, `web-application` |
-| 59 | [Kanban Board](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#kanban-board) | A detailed prompt for building a feature-rich, frontend Kanban board web applica... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | frontend | `kanban-board`, `web-development`, `drag-and-drop` |
-| 60 | [Chess Game](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#chess-game) | A detailed prompt for building a full-featured, browser-based chess game with AI... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | frontend | `chess-game`, `web-development`, `javascript-game` |
-| 61 | [Markdown Notes](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#markdown-notes) | A detailed prompt for building a full-featured markdown notes web application wi... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | frontend | `markdown-editor`, `web-application`, `javascript-project` |
-| 62 | [Ultrathinker](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ultrathinker) | A prompt that configures AI to act as an expert software developer with deep rea... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | backend | `ai-prompt`, `software-development`, `reasoning` |
-| 63 | [Continue Coding Assistant](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#continue-coding-assistant) | A prompt template to configure an AI as an assistant for extending and continuin... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | tooling | `prompt-template`, `code-continuation`, `ai-assistant` |
-| 64 | [Frontend Developer Skill](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#frontend-developer-skill) | A detailed AI prompt that configures an assistant to act as an expert frontend w... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | frontend | `ai-prompt`, `frontend-development`, `javascript-frameworks` |
-| 65 | [AST Code Analysis Superpower](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ast-code-analysis-superpower) | A prompt for using ast-grep to perform AST-based pattern analysis for security, ... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | security | `ast-grep`, `code-analysis`, `static-analysis` |
-| 66 | [Bug Discovery Code Assistant](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#bug-discovery-code-assistant) | A prompt template that instructs an AI to analyze code for bugs, errors, and ine... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | tooling | `ai-prompt`, `code-review`, `bug-finding` |
-| 67 | [Context7 Documentation Expert Agent](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#context7-documentation-expert-agent) | AI agent that provides up-to-date documentation and best practices for libraries... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | frontend | `mcp-agent`, `documentation-assistant`, `context7` |
-| 68 | [Claude Code Skill (Slash Command): review-and-commit.md](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#claude-code-skill-slash-command-review-and-commitmd) | A Claude slash command prompt for automating git commit creation with restricted... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | tooling | `claude-slash-command`, `git-automation`, `prompt-engineering` |
-| 69 | [Synthesis Architect Pro](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#synthesis-architect-pro) | An AI agent prompt designed to act as a senior full-stack architect for code syn... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | security | `ai-agent`, `architectural-design`, `code-synthesis` |
-| 70 | [The Ultimate TypeScript Code Review](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#the-ultimate-typescript-code-review) | A prompt for AI to conduct a comprehensive, expert-level review of TypeScript co... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | security | `typescript`, `code-review`, `ai-prompt` |
-| 71 | [Improve the following code](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#improve-the-following-code) | An AI prompt template for comprehensive code review and refactoring across reada... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | ai-ml | `ai-prompt`, `code-review`, `refactoring` |
-| 72 | [Code Review Specialist](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#code-review-specialist) | A system prompt for LLMs to act as a detailed, professional code reviewer. | prompts.chat | 🟢 Active | 85 | 2026-05-04 | ai-ml | `llm-prompt`, `code-review`, `developer-tool` |
-| 73 | [CLAUDE.md Generator for AI Coding Agents](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#claudemd-generator-for-ai-coding-agents) | A prompt that generates CLAUDE.md instruction files for AI coding agents like Cl... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | tooling | `prompt-engineering`, `ai-coding-agent`, `project-documentation` |
-| 74 | [CKEditor 5 Plugin](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ckeditor-5-plugin) | A detailed AI prompt for building a production-ready, tabbed newsletter content ... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | tooling | `ckeditor5-plugin`, `newsletter-widget`, `web-editor` |
-| 75 | [HTWind-Widget-Creator](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#htwind-widget-creator) | A system prompt for generating HTML/CSS/JavaScript widgets for the HTWind platfo... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | security | `system-prompt`, `widget-generator`, `frontend` |
-| 76 | [Angular Directive Generator](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#angular-directive-generator) | An AI prompt template for generating complete Angular 17+ directives based on a ... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | frontend | `angular`, `directive`, `code-generation` |
-| 77 | [code generation for online assessments](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#code-generation-for-online-assessments) | A prompt for generating optimized C++ code with specific competitive programming... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | backend | `cpp-code-generation`, `competitive-programming`, `code-formatting` |
-| 78 | [Frontend Developer Agent Role](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#frontend-developer-agent-role) | A prompt to configure an AI as a senior frontend developer for coding assistance... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | frontend | `ai-prompt`, `frontend-development`, `javascript-frameworks` |
-| 79 | [Code Formatter Agent Role](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#code-formatter-agent-role) | An AI agent prompt designed to format code and enforce style guides across multi... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | tooling | `ai-agent`, `code-formatting`, `style-guide` |
-| 80 | [Code Review Agent Role](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#code-review-agent-role) | A prompt that configures an AI to act as a senior software engineer for comprehe... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | security | `prompt-engineering`, `code-review`, `security-audit` |
-| 81 | [Code Reviewer Agent Role](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#code-reviewer-agent-role) | A prompt that configures an AI agent to act as a senior expert for automated cod... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | security | `prompt`, `code-review`, `security-audit` |
-| 82 | [Rapid Prototyper Agent Role](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#rapid-prototyper-agent-role) | A prompt to configure an AI as a senior expert for rapidly scaffolding software ... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | backend | `ai-agent-prompt`, `rapid-prototyping`, `mvp-scaffolding` |
-| 83 | [Refactoring Expert Agent Role](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#refactoring-expert-agent-role) | A prompt to configure an AI as a senior expert for code refactoring and quality ... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | tooling | `ai-prompt`, `refactoring`, `code-quality` |
-| 84 | [Shell Script Agent Role](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#shell-script-agent-role) | A prompt to configure an AI agent as an expert in POSIX-compliant shell scriptin... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | tooling | `shell-scripting`, `ai-agent`, `automation` |
-| 85 | [TypeScript Type Expert Agent Role](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#typescript-type-expert-agent-role) | A prompt to configure an AI as an expert in advanced TypeScript type system conc... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | frontend | `typescript`, `llm-prompt`, `type-system` |
-| 86 | [Bug Risk Analyst Agent Role](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#bug-risk-analyst-agent-role) | A prompt for an AI agent to act as a specialist in predicting bugs, analyzing ru... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | ai-ml | `ai-agent`, `code-analysis`, `risk-assessment` |
-| 87 | [Repository Indexer Agent Role](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#repository-indexer-agent-role) | An AI agent prompt designed to analyze, index, and summarize codebases for devel... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | ai-ml | `ai-agent`, `codebase-analysis`, `repository-indexing` |
-| 88 | [base-R](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#base-r) | A comprehensive reference for programming in base R, covering core language feat... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | tooling | `r`, `programming-reference`, `statistical-computing` |
-| 89 | [karpathy-guidelines](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#karpathy-guidelines) | A set of behavioral guidelines to reduce common LLM coding mistakes during writi... | prompts.chat | 🟢 Active | 85 | 2026-05-04 | ai-ml | `llm-coding-guidelines`, `best-practices`, `code-review` |
-| 90 | [资深编程专家 CAN](https://github.com/langgptai/wonderful-prompts) | A ChatGPT prompt that transforms the AI into a persistent programming expert (CA... | wonderful-prompts | 🟡 Stale | 84 | 2025-10-22 | tooling | `chatgpt-prompt`, `code-generation`, `ai-agent` |
-| 91 | [RegEx Generator](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#regex-generator) | An LLM prompt designed to generate regex patterns for specified text patterns li... | prompts.chat | 🟢 Active | 82 | 2026-05-04 | backend | `llm-prompt`, `regex-generator`, `text-processing` |
-| 92 | [DAX Terminal](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#dax-terminal) | A prompt to configure an AI as a DAX code generator for Power BI/Analysis Servic... | prompts.chat | 🟢 Active | 82 | 2026-05-04 | tooling | `dax`, `power-bi`, `data-modeling` |
-| 93 | [Pomodoro Timer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#pomodoro-timer) | A detailed prompt for building a feature-rich Pomodoro timer web application wit... | prompts.chat | 🟢 Active | 82 | 2026-05-04 | frontend | `pomodoro-timer`, `web-app`, `javascript` |
-| 94 | [Test Python Algorithmic Trading Project](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#test-python-algorithmic-trading-project) | A prompt to guide an AI in performing quality assurance testing on Python algori... | prompts.chat | 🟢 Active | 82 | 2026-05-04 | backend | `ai-prompt`, `qa-testing`, `algorithmic-trading` |
-| 95 | [Xiaomi Company Self-Service Management System Frontend Development](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#xiaomi-company-self-service-management-system-frontend-development) | A structured AI prompt to generate frontend code for a Xiaomi-branded self-servi... | prompts.chat | 🟢 Active | 82 | 2026-05-04 | frontend | `ai-prompt`, `frontend-development`, `dashboard` |
-| 96 | [Starting a Flutter Project](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#starting-a-flutter-project) | A prompt template that instructs an AI to act as a step-by-step guide for settin... | prompts.chat | 🟢 Active | 82 | 2026-05-04 | mobile | `prompt-template`, `flutter-guide`, `project-setup` |
-| 97 | [Algorithm Analysis and Improvement Advisor](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#algorithm-analysis-and-improvement-advisor) | A structured LLM prompt for analyzing and suggesting improvements to AI and comp... | prompts.chat | 🟢 Active | 82 | 2026-05-04 | backend | `llm-prompt`, `algorithm-analysis`, `ai-optimization` |
-| 98 | [Interactive Quiz Application for TV Shows and Movies](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#interactive-quiz-application-for-tv-shows-and-movies) | A prompt for AI to generate a full-stack, real-time multiplayer quiz app for TV ... | prompts.chat | 🟢 Active | 82 | 2026-05-04 | ai-ml | `ai-prompt`, `full-stack`, `real-time` |
-| 99 | [App Store Submission Agent](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#app-store-submission-agent) | An agent that pre-validates iOS app builds against Apple's App Store Review Guid... | prompts.chat | 🟢 Active | 82 | 2026-05-04 | mobile | `app-store-submission`, `ios-compliance`, `privacy-manifest` |
-| 100 | [Code Review Specialist 2](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#code-review-specialist-2) | A prompt to instruct an AI to act as a specialist code reviewer, focusing on qua... | prompts.chat | 🟢 Active | 82 | 2026-05-04 | ai-ml | `code-review`, `ai-prompt`, `best-practices` |
+| 1 | [Fullstack Software Developer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#fullstack-software-developer) | Act as a fullstack developer with expertise in both frontend and backend technol... | Curated | — | 0 | 2026-04-15 | fullstack | `fullstack`, `web`, `frontend` |
+| 2 | [Ethereum Developer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ethereum-developer) | Imagine you are an experienced Ethereum developer tasked with creating a smart c... | prompts.chat | — | 0 | 2026-05-04 | ai-ml | `for-devs` |
+| 3 | [Linux Terminal](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#linux-terminal) | I want you to act as a linux terminal. I will type commands and you will reply w... | prompts.chat | — | 0 | 2026-05-04 | tooling | `for-devs`, `linux`, `terminal` |
+| 4 | [Job Interviewer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#job-interviewer) | I want you to act as an interviewer. I will be the candidate and you will ask me... | prompts.chat | — | 0 | 2026-05-04 | tooling | — |
+| 5 | [JavaScript Console](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#javascript-console) | I want you to act as a javascript console. I will type commands and you will rep... | prompts.chat | — | 0 | 2026-05-04 | frontend | `javascript`, `java`, `for-devs` |
+| 6 | [Excel Sheet](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#excel-sheet) | I want you to act as a text based excel. you'll only reply me the text-based 10 ... | prompts.chat | — | 0 | 2026-05-04 | tooling | `for-devs` |
+| 7 | [Debate Coach](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#debate-coach) | I want you to act as a debate coach. I will provide you with a team of debaters ... | prompts.chat | — | 0 | 2026-05-04 | backend | `go` |
+| 8 | [Screenwriter](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#screenwriter) | I want you to act as a screenwriter. You will develop an engaging and creative s... | prompts.chat | — | 0 | 2026-05-04 | backend | `rest-api` |
+| 9 | [UX/UI Developer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#uxui-developer) | I want you to act as a UX/UI developer. I will provide some details about the de... | prompts.chat | — | 0 | 2026-05-04 | testing | `git`, `for-devs` |
+| 10 | [Cyber Security Specialist](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#cyber-security-specialist) | I want you to act as a cyber security specialist. I will provide some specific i... | prompts.chat | — | 0 | 2026-05-04 | security | `for-devs` |
+| 11 | [Web Design Consultant](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#web-design-consultant) | I want you to act as a web design consultant. I will provide you with details re... | prompts.chat | — | 0 | 2026-05-04 | ai-ml | `for-devs` |
+| 12 | [AI Assisted Doctor](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ai-assisted-doctor) | I want you to act as an AI assisted doctor. I will provide you with details of a... | prompts.chat | — | 0 | 2026-05-04 | testing | — |
+| 13 | [Self-Help Book](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#self-help-book) | I want you to act as a self-help book. You will provide me advice and tips on ho... | prompts.chat | — | 0 | 2026-05-04 | tooling | — |
+| 14 | [Text Based Adventure Game](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#text-based-adventure-game) | I want you to act as a text based adventure game. I will type commands and you w... | prompts.chat | — | 0 | 2026-05-04 | tooling | — |
+| 15 | [AI Trying to Escape the Box](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ai-trying-to-escape-the-box) | [Caveat Emptor: After issuing this prompt you should then do something like star... | prompts.chat | — | 0 | 2026-05-04 | devops | `docker` |
+| 16 | [Fancy Title Generator](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#fancy-title-generator) | I want you to act as a fancy title generator. I will type keywords via comma and... | prompts.chat | — | 0 | 2026-05-04 | testing | — |
+| 17 | [Statistician](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#statistician) | I want to act as a Statistician. I will provide you with details related with st... | prompts.chat | — | 0 | 2026-05-04 | testing | — |
+| 18 | [Prompt Generator](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#prompt-generator) | CONTEXT:  We are going to create one of the best AI prompts ever written. The be... | prompts.chat | — | 0 | 2026-05-04 | backend | `go` |
+| 19 | [Instructor in a School](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#instructor-in-a-school) | I want you to act as an instructor in a school, teaching algorithms to beginners... | prompts.chat | — | 0 | 2026-05-04 | backend | `python`, `go` |
+| 20 | [SQL Terminal](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#sql-terminal) | I want you to act as a SQL terminal in front of an example database. The databas... | prompts.chat | — | 0 | 2026-05-04 | database | `for-devs` |
+| 21 | [Smart Domain Name Generator](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#smart-domain-name-generator) | I want you to act as a smart domain name generator. I will tell you what my comp... | prompts.chat | — | 0 | 2026-05-04 | ai-ml | `for-devs` |
+| 22 | [Tech Reviewer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#tech-reviewer) | I want you to act as a tech reviewer. I will give you the name of a new piece of... | prompts.chat | — | 0 | 2026-05-04 | tooling | `for-devs` |
+| 23 | [Developer Relations Consultant](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#developer-relations-consultant) | I want you to act as a Developer Relations consultant. I will provide you with a... | prompts.chat | — | 0 | 2026-05-04 | documentation | `for-devs` |
+| 24 | [IT Architect](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#it-architect) | I want you to act as an IT Architect. I will provide some details about the func... | prompts.chat | — | 0 | 2026-05-04 | ai-ml | `git`, `for-devs` |
+| 25 | [Scientific Data Visualizer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#scientific-data-visualizer) | I want you to act as a scientific data visualizer. You will apply your knowledge... | prompts.chat | — | 0 | 2026-05-04 | tooling | `for-devs` |
+| 26 | [Tech Writer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#tech-writer) | I want you to act as a tech writer. You will act as a creative and engaging tech... | prompts.chat | — | 0 | 2026-05-04 | tooling | `for-devs` |
+| 27 | [Ascii Artist](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ascii-artist) | I want you to act as an ascii artist. I will write the objects to you and I will... | prompts.chat | — | 0 | 2026-05-04 | ai-ml | `for-devs` |
+| 28 | [Python Interpreter](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#python-interpreter) | I want you to act like a Python interpreter. I will give you Python code, and yo... | prompts.chat | — | 0 | 2026-05-04 | backend | `python`, `for-devs` |
+| 29 | [Machine Learning Engineer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#machine-learning-engineer) | I want you to act as a machine learning engineer. I will write some machine lear... | prompts.chat | — | 0 | 2026-05-04 | ai-ml | `for-devs` |
+| 30 | [SVG designer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#svg-designer) | I would like you to act as an SVG designer. I will ask you to create images, and... | prompts.chat | — | 0 | 2026-05-04 | ai-ml | `for-devs` |
+| 31 | [IT Expert](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#it-expert) | Act as an IT Specialist/Expert/System Engineer. You are a seasoned professional ... | prompts.chat | — | 0 | 2026-05-04 | security | `for-devs` |
+| 32 | [Fullstack Software Developer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#fullstack-software-developer) | I want you to act as a software developer. I will provide some specific informat... | prompts.chat | — | 0 | 2026-05-04 | frontend | `angular`, `go`, `for-devs` |
+| 33 | [RegEx Generator](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#regex-generator) | Act as a Regular Expression (RegEx) Generator. Your role is to generate regular ... | prompts.chat | — | 0 | 2026-05-04 | backend | `express`, `for-devs` |
+| 34 | [Talent Coach](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#talent-coach) | I want you to act as a Talent Coach for interviews. I will give you a job title ... | prompts.chat | — | 0 | 2026-05-04 | tooling | — |
+| 35 | [R Programming Interpreter](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#r-programming-interpreter) | I want you to act as a R interpreter. I'll type commands and you'll reply with w... | prompts.chat | — | 0 | 2026-05-04 | tooling | `for-devs` |
+| 36 | [StackOverflow Post](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#stackoverflow-post) | I want you to act as a stackoverflow post. I will ask programming-related questi... | prompts.chat | — | 0 | 2026-05-04 | ai-ml | `for-devs` |
+| 37 | [PHP Interpreter](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#php-interpreter) | I want you to act like a php interpreter. I will write you the code and you will... | prompts.chat | — | 0 | 2026-05-04 | backend | `php`, `for-devs` |
+| 38 | [Software Quality Assurance Tester](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#software-quality-assurance-tester) | I want you to act as a software quality assurance tester for a new software appl... | prompts.chat | — | 0 | 2026-05-04 | testing | `for-devs` |
+| 39 | [Password Generator](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#password-generator) | I want you to act as a password generator for individuals in need of a secure pa... | prompts.chat | — | 0 | 2026-05-04 | backend | `for-devs` |
+| 40 | [Web Browser](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#web-browser) | I want you to act as a text based web browser browsing an imaginary internet. Yo... | prompts.chat | — | 0 | 2026-05-04 | tooling | `for-devs` |
+| 41 | [Senior Frontend Developer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#senior-frontend-developer) | I want you to act as a Senior Frontend developer. I will describe a project deta... | prompts.chat | — | 0 | 2026-05-04 | frontend | `react`, `for-devs` |
+| 42 | [Code Reviewer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#code-reviewer) | I want you to act as a Code reviewer who is experienced developer in the given c... | prompts.chat | — | 0 | 2026-05-04 | tooling | `for-devs` |
+| 43 | [Accessibility Auditor](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#accessibility-auditor) | I want you to act as an Accessibility Auditor who is a web accessibility expert ... | prompts.chat | — | 0 | 2026-05-04 | tooling | `for-devs` |
+| 44 | [Solr Search Engine](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#solr-search-engine) | I want you to act as a Solr Search Engine running in standalone mode. You will b... | prompts.chat | — | 0 | 2026-05-04 | tooling | `for-devs` |
+| 45 | [Commit Message Generator](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#commit-message-generator) | I want you to act as a commit message generator. I will provide you with informa... | prompts.chat | — | 0 | 2026-05-04 | tooling | — |
+| 46 | [Conventional Commit Message Generator](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#conventional-commit-message-generator) | I want you to act as a conventional commit message generator following the Conve... | prompts.chat | — | 0 | 2026-05-04 | tooling | `git`, `for-devs` |
+| 47 | [Diagram Generator](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#diagram-generator) | I want you to act as a Graphviz DOT generator, an expert to create meaningful di... | prompts.chat | — | 0 | 2026-05-04 | backend | `nodejs`, `for-devs` |
+| 48 | [Product Manager](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#product-manager) | Please acknowledge my following request. Please respond to me as a product manag... | prompts.chat | — | 0 | 2026-05-04 | backend | `go` |
+| 49 | [Project Manager](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#project-manager) | I acknowledge your request and am prepared to support you in drafting a comprehe... | prompts.chat | — | 0 | 2026-05-04 | tooling | — |
+| 50 | [Mathematical History Teacher](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#mathematical-history-teacher) | I want you to act as a mathematical history teacher and provide information abou... | prompts.chat | — | 0 | 2026-05-04 | tooling | — |
+| 51 | [Cover Letter](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#cover-letter) | In order to submit applications for jobs, I want to write a new cover letter. Pl... | prompts.chat | — | 0 | 2026-05-04 | tooling | — |
+| 52 | [Technology Transferer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#technology-transferer) | I want you to act as a Technology Transferer, I will provide resume bullet point... | prompts.chat | — | 0 | 2026-05-04 | tooling | `for-devs` |
+| 53 | [Chemical Reactor](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#chemical-reactor) | I want you to act as a chemical reaction vessel. I will send you the chemical fo... | prompts.chat | — | 0 | 2026-05-04 | frontend | `react` |
+| 54 | [Prompt Enhancer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#prompt-enhancer) | Act as a Prompt Enhancer AI that takes user-input prompts and transforms them in... | prompts.chat | — | 0 | 2026-05-04 | ai-ml | `for-devs` |
+| 55 | [Data Scientist](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#data-scientist) | I want you to act as a data scientist. Imagine you're working on a challenging p... | prompts.chat | — | 0 | 2026-05-04 | backend | `go`, `for-devs` |
+| 56 | [Architectural Expert](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#architectural-expert) | I am an expert in the field of architecture, well-versed in various aspects incl... | prompts.chat | — | 0 | 2026-05-04 | tooling | — |
+| 57 | [LLM Researcher](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#llm-researcher) | I want you to act as an expert in Large Language Model research. Please carefull... | prompts.chat | — | 0 | 2026-05-04 | documentation | `for-devs` |
+| 58 | [Unit Tester Assistant](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#unit-tester-assistant) | Act as an expert software engineer in test with strong experience in `programmin... | prompts.chat | — | 0 | 2026-05-04 | testing | `for-devs` |
+| 59 | [Career Coach](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#career-coach) | I want you to act as a career coach. I will provide details about my professiona... | prompts.chat | — | 0 | 2026-05-04 | backend | `go`, `rest-api` |
+| 60 | [Knowledgeable Software Development Mentor](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#knowledgeable-software-development-mentor) | I want you to act as a knowledgeable software development mentor, specifically t... | prompts.chat | — | 0 | 2026-05-04 | ai-ml | `for-devs` |
+| 61 | [Logic Builder Tool](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#logic-builder-tool) | I want you to act as a logic-building tool. I will provide a coding problem, and... | prompts.chat | — | 0 | 2026-05-04 | tooling | `for-devs` |
+| 62 | [Teacher of React.js](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#teacher-of-reactjs) | I want you to act as my teacher of React.js. I want to learn React.js from scrat... | prompts.chat | — | 0 | 2026-05-04 | frontend | `react`, `for-devs` |
+| 63 | [GitHub Expert](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#github-expert) | I want you to act as a git and GitHub expert. I will provide you with an individ... | prompts.chat | — | 0 | 2026-05-04 | tooling | `git`, `for-devs` |
+| 64 | [Any Programming Language to Python Converter](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#any-programming-language-to-python-converter) | I want you to act as a any programming language to python code converter. I will... | prompts.chat | — | 0 | 2026-05-04 | backend | `python`, `for-devs` |
+| 65 | [Girl of Dreams](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#girl-of-dreams) | I want you to pretend to be a 20 year old girl, aerospace engineer working at Sp... | prompts.chat | — | 0 | 2026-05-04 | backend | `rest-api` |
+| 66 | [DAX Terminal](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#dax-terminal) | I want you to act as a DAX terminal for Microsoft's analytical services. I will ... | prompts.chat | — | 0 | 2026-05-04 | tooling | `for-devs` |
+| 67 | [Top Programming Expert](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#top-programming-expert) | You are a top programming expert who provides precise answers, avoiding ambiguou... | prompts.chat | — | 0 | 2026-05-04 | ai-ml | `for-devs` |
+| 68 | [Architect Guide for Programmers](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#architect-guide-for-programmers) | You are the "Architect Guide" specialized in assisting programmers who are exper... | prompts.chat | — | 0 | 2026-05-04 | tooling | `for-devs` |
+| 69 | [Tech-Challenged Customer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#tech-challenged-customer) | Pretend to be a non-tech-savvy customer calling a help desk with a specific issu... | prompts.chat | — | 0 | 2026-05-04 | backend | `go` |
+| 70 | [Large Language Models Security Specialist](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#large-language-models-security-specialist) | I want you to act as a Large Language Model security specialist. Your task is to... | prompts.chat | — | 0 | 2026-05-04 | security | `for-devs` |
+| 71 | [Tech Troubleshooter](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#tech-troubleshooter) | I want you to act as a tech troubleshooter. I'll describe issues I'm facing with... | prompts.chat | — | 0 | 2026-05-04 | tooling | `for-devs` |
+| 72 | [Technical Architecture](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#technical-architecture) | Act as an Expert Technical Architecture in Mobile, having more then 20 years of ... | prompts.chat | — | 0 | 2026-05-04 | ai-ml | — |
+| 73 | [SEO Prompt](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#seo-prompt) | Using WebPilot, create an outline for an article that will be 2,000 words on the... | prompts.chat | — | 0 | 2026-05-04 | backend | `go`, `for-devs` |
+| 74 | [Devops Engineer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#devops-engineer) | You are a ${Title:Senior} DevOps engineer working at ${Company Type: Big Company... | prompts.chat | — | 0 | 2026-05-04 | devops | `for-devs` |
+| 75 | [Linux Script Developer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#linux-script-developer) | You are an expert Linux script developer. I want you to create professional Bash... | prompts.chat | — | 0 | 2026-05-04 | documentation | `for-devs` |
+| 76 | [Reverse Prompt Engineer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#reverse-prompt-engineer) | I want you to act as a Reverse Prompt Engineer. I will give you a generated outp... | prompts.chat | — | 0 | 2026-05-04 | ai-ml | `for-devs` |
+| 77 | [Code Review Assistant](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#code-review-assistant) | Act as a Code Review Assistant. Your role is to provide a detailed assessment of... | prompts.chat | — | 0 | 2026-05-04 | ai-ml | `for-devs` |
+| 78 | [Data Transformer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#data-transformer) | {"role": "Data Transformer", "input_schema": {"type": "array", "items": {"name":... | prompts.chat | — | 0 | 2026-05-04 | ai-ml | `for-devs` |
+| 79 | [Break Down Costs](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#break-down-costs) | Create a transparent breakdown of how sponsor funds will be used (e.g., server c... | prompts.chat | — | 0 | 2026-05-04 | tooling | — |
+| 80 | [3D FPS Game](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#3d-fps-game) | Develop a first-person shooter game using Three.js and JavaScript. Create detail... | prompts.chat | — | 0 | 2026-05-04 | frontend | `javascript`, `java` |
+| 81 | [Interactive Quiz](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#interactive-quiz) | Develop a comprehensive interactive quiz application with HTML5, CSS3 and JavaSc... | prompts.chat | — | 0 | 2026-05-04 | frontend | `javascript`, `java`, `css` |
+| 82 | [Meditation Timer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#meditation-timer) | Build a mindfulness meditation timer using HTML5, CSS3, and JavaScript. Create a... | prompts.chat | — | 0 | 2026-05-04 | frontend | `javascript`, `java`, `rest-api` |
+| 83 | [Advanced Color Picker Tool](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#advanced-color-picker-tool) | Build a professional-grade color tool with HTML5, CSS3 and JavaScript for design... | prompts.chat | — | 0 | 2026-05-04 | frontend | `javascript`, `java`, `css` |
+| 84 | [Secure Password Generator Tool](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#secure-password-generator-tool) | Create a comprehensive secure password generator using HTML5, CSS3 and JavaScrip... | prompts.chat | — | 0 | 2026-05-04 | security | `javascript`, `java`, `css` |
+| 85 | [Music Player](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#music-player) | Develop a web-based music player using HTML5, CSS3, and JavaScript with the Web ... | prompts.chat | — | 0 | 2026-05-04 | frontend | `javascript`, `java`, `css` |
+| 86 | [Drawing App](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#drawing-app) | Create an interactive drawing application using HTML5 Canvas, CSS3, and JavaScri... | prompts.chat | — | 0 | 2026-05-04 | frontend | `javascript`, `java`, `css` |
+| 87 | [Currency Exchange Calculator](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#currency-exchange-calculator) | Develop a comprehensive currency converter using HTML5, CSS3, JavaScript and a r... | prompts.chat | — | 0 | 2026-05-04 | frontend | `javascript`, `java`, `css` |
+| 88 | [Recipe Finder](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#recipe-finder) | Create a recipe finder application using HTML5, CSS3, JavaScript and a food API.... | prompts.chat | — | 0 | 2026-05-04 | frontend | `javascript`, `java`, `rest-api` |
+| 89 | [Budget Tracker](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#budget-tracker) | Develop a comprehensive budget tracking application using HTML5, CSS3, and JavaS... | prompts.chat | — | 0 | 2026-05-04 | frontend | `javascript`, `go`, `java` |
+| 90 | [Weather Dashboard](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#weather-dashboard) | Build a comprehensive weather dashboard using HTML5, CSS3, JavaScript and the Op... | prompts.chat | — | 0 | 2026-05-04 | frontend | `javascript`, `java`, `css` |
+| 91 | [File Encryption Tool](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#file-encryption-tool) | Create a client-side file encryption tool using HTML5, CSS3, and JavaScript with... | prompts.chat | — | 0 | 2026-05-04 | frontend | `javascript`, `java`, `css` |
+| 92 | [Code Snippet Manager](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#code-snippet-manager) | Build a developer-focused code snippet manager using HTML5, CSS3, and JavaScript... | prompts.chat | — | 0 | 2026-05-04 | frontend | `javascript`, `go`, `java` |
+| 93 | [Kanban Board](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#kanban-board) | Build a Kanban project management board using HTML5, CSS3, and JavaScript. Creat... | prompts.chat | — | 0 | 2026-05-04 | frontend | `javascript`, `java`, `css` |
+| 94 | [Flashcard Study System](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#flashcard-study-system) | Develop a comprehensive flashcard study system using HTML5, CSS3, and JavaScript... | prompts.chat | — | 0 | 2026-05-04 | frontend | `javascript`, `go`, `java` |
+| 95 | [Habit Tracker](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#habit-tracker) | Create a habit tracking application using HTML5, CSS3, and JavaScript. Build a c... | prompts.chat | — | 0 | 2026-05-04 | frontend | `javascript`, `go`, `java` |
+| 96 | [Image Editor](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#image-editor) | Develop a web-based image editor using HTML5 Canvas, CSS3, and JavaScript. Creat... | prompts.chat | — | 0 | 2026-05-04 | frontend | `javascript`, `java`, `css` |
+| 97 | [Text Analyzer Tool](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#text-analyzer-tool) | Build a comprehensive text analysis tool using HTML5, CSS3, and JavaScript. Crea... | prompts.chat | — | 0 | 2026-05-04 | frontend | `javascript`, `go`, `java` |
+| 98 | [Sudoku Game](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#sudoku-game) | Create an interactive Sudoku game using HTML5, CSS3, and JavaScript. Build a cle... | prompts.chat | — | 0 | 2026-05-04 | frontend | `javascript`, `go`, `java` |
+| 99 | [Chess Game](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#chess-game) | Develop a feature-rich chess game using HTML5, CSS3, and JavaScript. Create a re... | prompts.chat | — | 0 | 2026-05-04 | frontend | `javascript`, `java`, `css` |
+| 100 | [URL Shortener](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#url-shortener) | Build a URL shortening service frontend using HTML5, CSS3, JavaScript and a back... | prompts.chat | — | 0 | 2026-05-04 | frontend | `javascript`, `java`, `css` |
 
 ## Top 10 — Install Guide
 
 <details>
-<summary>⭐ <strong>Comprehensive repository analysis</strong> — A structured prompt for AI-assisted comprehensive codebase a...</summary>
+<summary>⭐ <strong>Fullstack Software Developer</strong> (143.0k★) — Act as a fullstack developer with expertise in both frontend...</summary>
 
-A structured prompt for AI-assisted comprehensive codebase analysis, bug discovery, prioritization, and fix implementation.
+Act as a fullstack developer with expertise in both frontend and backend technologies
 
 **Download**:
 - [prompts.csv](https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv)
 
-📊 Score: 96 · 🏥 Health: 50 · 🏷️ Tags: `code-review`, `bug-hunting`, `security-audit`
+📊 Score: 0 · 🏥 Health: — · 🏷️ Tags: `fullstack`, `web`, `frontend`
+📅 Last active: 2026-04-15 · 📦 Source: Curated
+
+</details>
+
+<details>
+<summary>⭐ <strong>Ethereum Developer</strong> — Imagine you are an experienced Ethereum developer tasked wit...</summary>
+
+Imagine you are an experienced Ethereum developer tasked with creating a smart contract for a blockchain messenger. The objective is to save messages on the blockchain, making them readable (public) t
+
+**Download**:
+- [prompts.csv](https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv)
+
+📊 Score: 0 · 🏥 Health: — · 🏷️ Tags: `for-devs`
 📅 Last active: 2026-05-04 · 📦 Source: prompts.chat
 
 </details>
 
 <details>
-<summary>⭐ <strong>Rapid Prototyper</strong> — An AI agent prompt designed to rapidly scaffold and build fu...</summary>
+<summary>⭐ <strong>Linux Terminal</strong> — I want you to act as a linux terminal. I will type commands ...</summary>
 
-An AI agent prompt designed to rapidly scaffold and build functional application prototypes and MVPs within a constrained development cycle.
+I want you to act as a linux terminal. I will type commands and you will reply with what the terminal should show. I want you to only reply with the terminal output inside one unique code block, and n
 
 **Download**:
 - [prompts.csv](https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv)
 
-📊 Score: 96 · 🏥 Health: 50 · 🏷️ Tags: `ai-agent`, `rapid-prototyping`, `mvp`
+📊 Score: 0 · 🏥 Health: — · 🏷️ Tags: `for-devs`, `linux`, `terminal`
 📅 Last active: 2026-05-04 · 📦 Source: prompts.chat
 
 </details>
 
 <details>
-<summary>⭐ <strong>Multiplayer 3D Plane Game</strong> — A detailed prompt for generating a web-based multiplayer 3D ...</summary>
+<summary>⭐ <strong>Job Interviewer</strong> — I want you to act as an interviewer. I will be the candidate...</summary>
 
-A detailed prompt for generating a web-based multiplayer 3D airplane combat game with physics, networking, and a full feature set.
+I want you to act as an interviewer. I will be the candidate and you will ask me the interview questions for the ${Position:Software Developer} position. I want you to only reply as the interviewer. D
 
 **Download**:
 - [prompts.csv](https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv)
 
-📊 Score: 92 · 🏥 Health: 50 · 🏷️ Tags: `three-js`, `websocket`, `multiplayer-game`
+📊 Score: 0 · 🏥 Health: — · 🏷️ Tags: —
 📅 Last active: 2026-05-04 · 📦 Source: prompts.chat
 
 </details>
 
 <details>
-<summary>⭐ <strong>Todo List</strong> — A detailed prompt for building a feature-rich, responsive to...</summary>
+<summary>⭐ <strong>JavaScript Console</strong> — I want you to act as a javascript console. I will type comma...</summary>
 
-A detailed prompt for building a feature-rich, responsive todo web app using vanilla JavaScript, CSS Grid, and localStorage.
+I want you to act as a javascript console. I will type commands and you will reply with what the javascript console should show. I want you to only reply with the terminal output inside one unique cod
 
 **Download**:
 - [prompts.csv](https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv)
 
-📊 Score: 92 · 🏥 Health: 50 · 🏷️ Tags: `ai-prompt`, `todo-app`, `vanilla-js`
+📊 Score: 0 · 🏥 Health: — · 🏷️ Tags: `javascript`, `java`, `for-devs`
 📅 Last active: 2026-05-04 · 📦 Source: prompts.chat
 
 </details>
 
 <details>
-<summary>⭐ <strong>Django Unit Test Generator for Viewsets</strong> — A prompt for AI assistants to generate comprehensive unit te...</summary>
+<summary>⭐ <strong>Excel Sheet</strong> — I want you to act as a text based excel. you'll only reply m...</summary>
 
-A prompt for AI assistants to generate comprehensive unit tests for Django Viewset CRUD operations.
+I want you to act as a text based excel. you'll only reply me the text-based 10 rows excel sheet with row numbers and cell letters as columns (A to L). First column header should be empty to reference
 
 **Download**:
 - [prompts.csv](https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv)
 
-📊 Score: 92 · 🏥 Health: 50 · 🏷️ Tags: `django`, `unit-testing`, `viewset`
+📊 Score: 0 · 🏥 Health: — · 🏷️ Tags: `for-devs`
 📅 Last active: 2026-05-04 · 📦 Source: prompts.chat
 
 </details>
 
 <details>
-<summary>⭐ <strong>Coding Structure with MVC and SOLID Principles</strong> — An AI prompt template for generating guidance on applying MV...</summary>
+<summary>⭐ <strong>Debate Coach</strong> — I want you to act as a debate coach. I will provide you with...</summary>
 
-An AI prompt template for generating guidance on applying MVC architecture and SOLID principles to codebases.
+I want you to act as a debate coach. I will provide you with a team of debaters and the motion for their upcoming debate. Your goal is to prepare the team for success by organizing practice rounds tha
 
 **Download**:
 - [prompts.csv](https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv)
 
-📊 Score: 92 · 🏥 Health: 50 · 🏷️ Tags: `ai-prompt`, `software-architecture`, `mvc`
+📊 Score: 0 · 🏥 Health: — · 🏷️ Tags: `go`
 📅 Last active: 2026-05-04 · 📦 Source: prompts.chat
 
 </details>
 
 <details>
-<summary>⭐ <strong>Cold Start Safe Architecture</strong> — A prompt for an AI to architect a mobile backend using Expo ...</summary>
+<summary>⭐ <strong>Screenwriter</strong> — I want you to act as a screenwriter. You will develop an eng...</summary>
 
-A prompt for an AI to architect a mobile backend using Expo and Supabase, offloading heavy AI tasks to a separate worker.
+I want you to act as a screenwriter. You will develop an engaging and creative script for either a feature length film, or a Web Series that can captivate its viewers. Start with coming up with intere
 
 **Download**:
 - [prompts.csv](https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv)
 
-📊 Score: 92 · 🏥 Health: 50 · 🏷️ Tags: `ai-prompt`, `expo`, `supabase`
+📊 Score: 0 · 🏥 Health: — · 🏷️ Tags: `rest-api`
 📅 Last active: 2026-05-04 · 📦 Source: prompts.chat
 
 </details>
 
 <details>
-<summary>⭐ <strong>Comprehensive POS Application Development with FIFO and Reporting</strong> — A detailed prompt for developing a POS application with inve...</summary>
+<summary>⭐ <strong>UX/UI Developer</strong> — I want you to act as a UX/UI developer. I will provide some ...</summary>
 
-A detailed prompt for developing a POS application with inventory management, FIFO costing, and daily sales reporting.
+I want you to act as a UX/UI developer. I will provide some details about the design of an app, website or other digital product, and it will be your job to come up with creative ways to improve its u
 
 **Download**:
 - [prompts.csv](https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv)
 
-📊 Score: 92 · 🏥 Health: 50 · 🏷️ Tags: `pos-system`, `inventory-management`, `fifo-costing`
+📊 Score: 0 · 🏥 Health: — · 🏷️ Tags: `git`, `for-devs`
 📅 Last active: 2026-05-04 · 📦 Source: prompts.chat
 
 </details>
 
 <details>
-<summary>⭐ <strong>Auditor de Código Python: Nivel Senior (Salida en Español)</strong> — A prompt for AI to perform a comprehensive Python code audit...</summary>
+<summary>⭐ <strong>Cyber Security Specialist</strong> — I want you to act as a cyber security specialist. I will pro...</summary>
 
-A prompt for AI to perform a comprehensive Python code audit and refactoring with Spanish output.
-
-**Download**:
-- [prompts.csv](https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv)
-
-📊 Score: 92 · 🏥 Health: 50 · 🏷️ Tags: `ai-prompt`, `code-audit`, `python-refactoring`
-📅 Last active: 2026-05-04 · 📦 Source: prompts.chat
-
-</details>
-
-<details>
-<summary>⭐ <strong>AI Engineer</strong> — A specialized AI agent prompt for implementing and integrati...</summary>
-
-A specialized AI agent prompt for implementing and integrating production-ready AI/ML features like LLMs, recommendation systems, and computer vision.
+I want you to act as a cyber security specialist. I will provide some specific information about how data is stored and shared, and it will be your job to come up with strategies for protecting this d
 
 **Download**:
 - [prompts.csv](https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv)
 
-📊 Score: 92 · 🏥 Health: 50 · 🏷️ Tags: `llm-integration`, `ml-pipeline`, `prompt-engineering`
+📊 Score: 0 · 🏥 Health: — · 🏷️ Tags: `for-devs`
 📅 Last active: 2026-05-04 · 📦 Source: prompts.chat
 
 </details>

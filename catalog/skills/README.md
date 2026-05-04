@@ -1,6 +1,6 @@
 # 🎯 Skills
 
-> 1683 Reusable agent capabilities and workflows for AI coding assistants.
+> 1807 Reusable agent capabilities and workflows for AI coding assistants.
 >
 > [Back to main →](../../README.md) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=skill)
 
@@ -10,254 +10,256 @@
 
 | # | Name | Description | Source | Status | Score | Updated | Category | Tags |
 |---|---|---|---|---|---|---|---|---|
-| 1 | [MCP Integration](https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/mcp-integration) | Guide for integrating Model Context Protocol (MCP) servers into Claude Code plug... | Anthropic Official | 🟢 Active | 97 | 2026-05-01 | tooling | `mcp-integration`, `claude-code`, `plugin-development` |
-| 2 | [skill-creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator) | An AI skill for creating, testing, and optimizing other AI skills through iterat... | Anthropic Official | 🟢 Active | 96 | 2026-05-03 | testing | `skill-development`, `ai-workflow`, `testing-framework` |
-| 3 | [slack-gif-creator](https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator) | A Python toolkit for creating and optimizing animated GIFs specifically for Slac... | Anthropic Official | 🟢 Active | 96 | 2026-05-03 | ai-ml | `slack-gif`, `python-animation`, `image-processing` |
-| 4 | [xlsx](https://github.com/anthropics/skills/tree/main/skills/xlsx) | An AI skill for creating, editing, and analyzing spreadsheet files (Excel/CSV) w... | Anthropic Official | 🟢 Active | 96 | 2026-05-03 | tooling | `spreadsheet`, `excel`, `data-analysis` |
-| 5 | [ui-ux-pro-max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/main/.claude/skills/ui-ux-pro-max) | A comprehensive AI skill providing UI/UX design intelligence, guidelines, and CL... | nextlevelbuilder/ui-ux-pro-max-skill | 🟢 Active | 95 | 2026-04-03 | frontend | `ui-ux-design`, `design-system`, `cli-tool` |
-| 6 | [agent-framework-azure-ai-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agent-framework-azure-ai-py) | Python SDK for building persistent AI agents on Azure AI Foundry with hosted too... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | ai-ml | `azure-ai`, `agent-framework`, `python-sdk` |
-| 7 | [agentflow](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agentflow) | Autonomous AI development pipeline orchestration through Kanban boards with mult... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | tooling | `ai-orchestration`, `kanban-integration`, `claude-code` |
-| 8 | [astro](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/astro) | A web framework for building fast, content-focused websites using Islands Archit... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | frontend | `web-framework`, `static-site-generator`, `islands-architecture` |
-| 9 | [aws-serverless](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/aws-serverless) | A comprehensive guide to building production-ready AWS serverless applications w... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `aws-lambda`, `serverless-patterns`, `infrastructure-as-code` |
-| 10 | [azure-ai-voicelive-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-voicelive-dotnet) | .NET SDK for building real-time, bidirectional voice AI applications using Azure... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `azure-ai`, `voice-sdk`, `dotnet` |
-| 11 | [azure-ai-voicelive-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-voicelive-ts) | TypeScript/JavaScript SDK for building real-time bidirectional voice AI applicat... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `azure-ai`, `voice-sdk`, `realtime-voice` |
-| 12 | [azure-communication-common-java](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-communication-common-java) | Java SDK utilities for authentication and identity management in Azure Communica... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `azure-communication`, `java-sdk`, `authentication` |
-| 13 | [azure-communication-sms-java](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-communication-sms-java) | Java SDK for sending SMS messages via Azure Communication Services with support ... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `azure-sdk`, `sms-api`, `java-client` |
-| 14 | [azure-cosmos-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-cosmos-py) | Python SDK for Azure Cosmos DB NoSQL API, enabling document CRUD operations, que... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `azure-cosmos`, `python-sdk`, `nosql-database` |
-| 15 | [azure-cosmos-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-cosmos-ts) | TypeScript/JavaScript SDK for performing data operations (CRUD, queries, bulk) o... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `azure-cosmosdb`, `typescript-sdk`, `database-client` |
-| 16 | [azure-data-tables-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-data-tables-py) | Python SDK for Azure Tables providing NoSQL key-value storage with CRUD operatio... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `azure-tables`, `python-sdk`, `nosql` |
-| 17 | [azure-eventgrid-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-eventgrid-dotnet) | .NET client library for publishing and consuming events with Azure Event Grid, s... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `azure-eventgrid`, `dotnet-sdk`, `event-driven` |
-| 18 | [azure-eventhub-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-eventhub-dotnet) | A .NET SDK for high-throughput sending and receiving of events with Azure Event ... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `azure-event-hubs`, `dotnet-sdk`, `event-streaming` |
-| 19 | [azure-identity-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-identity-dotnet) | .NET authentication library for Azure SDK clients using Microsoft Entra ID with ... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `azure-sdk`, `dotnet-authentication`, `entra-id` |
-| 20 | [azure-identity-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-identity-py) | Python SDK for authenticating Azure services using Microsoft Entra ID with multi... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `azure-authentication`, `python-sdk`, `managed-identity` |
-| 21 | [azure-keyvault-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-keyvault-py) | Python SDK for managing Azure Key Vault secrets, cryptographic keys, and certifi... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `azure-keyvault`, `python-sdk`, `secrets-management` |
-| 22 | [azure-mgmt-botservice-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-mgmt-botservice-dotnet) | .NET SDK for managing Azure Bot Service resources via Azure Resource Manager API... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `azure-sdk`, `bot-management`, `dotnet` |
-| 23 | [azure-mgmt-fabric-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-mgmt-fabric-dotnet) | A .NET SDK for managing Microsoft Fabric compute capacities via Azure Resource M... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `azure-sdk`, `resource-manager`, `fabric` |
-| 24 | [azure-microsoft-playwright-testing-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-microsoft-playwright-testing-ts) | TypeScript SDK for running Playwright tests at scale using Azure's cloud-hosted ... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `playwright-testing`, `azure-integration`, `typescript-sdk` |
-| 25 | [azure-monitor-opentelemetry-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-monitor-opentelemetry-py) | A Python distribution for one-line setup of Azure Application Insights with Open... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `azure-monitor`, `opentelemetry`, `python` |
-| 26 | [azure-monitor-opentelemetry-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-monitor-opentelemetry-ts) | Auto-instrument Node.js apps with OpenTelemetry for Azure Monitor telemetry. | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `opentelemetry`, `azure-monitor`, `nodejs` |
-| 27 | [azure-postgres-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-postgres-ts) | Connect to Azure PostgreSQL from Node.js/TypeScript with password and passwordle... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `azure-postgresql`, `node-postgres`, `typescript` |
-| 28 | [azure-resource-manager-redis-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-resource-manager-redis-dotnet) | Azure Resource Manager SDK for .NET to provision, configure, and manage Azure Ca... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `azure-sdk`, `redis-management`, `dotnet` |
-| 29 | [azure-resource-manager-sql-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-resource-manager-sql-dotnet) | .NET SDK for managing Azure SQL resources (servers, databases, pools) via Azure ... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `azure-sql`, `dotnet-sdk`, `resource-management` |
-| 30 | [azure-security-keyvault-keys-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-security-keyvault-keys-dotnet) | Azure Key Vault Keys SDK for .NET providing cryptographic key management and ope... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `azure-keyvault`, `dotnet-sdk`, `cryptography` |
-| 31 | [azure-servicebus-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-servicebus-dotnet) | Official .NET SDK for Azure Service Bus providing enterprise messaging with queu... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `azure-servicebus`, `dotnet-sdk`, `enterprise-messaging` |
-| 32 | [azure-storage-queue-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-storage-queue-ts) | TypeScript/JavaScript SDK for performing send, receive, peek, and delete operati... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `azure-storage`, `message-queue`, `typescript-sdk` |
-| 33 | [bun-development](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/bun-development) | Comprehensive guide for JavaScript/TypeScript development using the Bun runtime,... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | frontend | `bun-runtime`, `javascript-development`, `typescript` |
-| 34 | [cirq](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/cirq) | Google's open-source Python framework for creating, simulating, and executing qu... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | ai-ml | `quantum-computing`, `python-framework`, `circuit-simulation` |
-| 35 | [claimable-postgres](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/claimable-postgres) | Provision instant temporary Postgres databases with no login required, ideal for... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | database | `postgres`, `temporary-database`, `neon` |
-| 36 | [claude-in-chrome-troubleshooting](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/claude-in-chrome-troubleshooting) | Troubleshooting guide for fixing Claude in Chrome MCP extension connectivity iss... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | ai-ml | `claude-chrome-troubleshooting`, `mcp-extension`, `browser-automation` |
-| 37 | [comfyui-gateway](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/comfyui-gateway) | A production-ready REST API gateway that adds workflow management, queuing, secu... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | backend | `comfyui`, `api-gateway`, `image-generation` |
-| 38 | [computer-use-agents](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/computer-use-agents) | A comprehensive guide to building AI agents that automate computer interactions ... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | ai-ml | `ai-agents`, `desktop-automation`, `computer-use` |
-| 39 | [convex](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/convex) | Expert guide for Convex, a TypeScript-first reactive backend platform with real-... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | backend | `convex-backend`, `typescript`, `reactive-database` |
-| 40 | [copilot-sdk](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/copilot-sdk) | SDK for programmatically interacting with GitHub Copilot across Node.js, Python,... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | backend | `copilot-sdk`, `ai-programming`, `mcp-server` |
-| 41 | [expo-api-routes](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/expo-api-routes) | Guidelines and examples for creating server-side API routes in Expo Router appli... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | mobile | `expo-router`, `api-routes`, `eas-hosting` |
-| 42 | [faf-expert](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/faf-expert) | An advanced tool for configuring and optimizing .faf files to create persistent,... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | ai-ml | `faf-format`, `ai-context`, `mcp-server` |
-| 43 | [faf-wizard](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/faf-wizard) | Automatically generates .faf files to provide AI tools with project context by d... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | tooling | `faf-generator`, `ai-context`, `project-analysis` |
-| 44 | [gdb-cli](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/gdb-cli) | A GDB debugging assistant for AI agents that analyzes core dumps and debugs live... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | tooling | `gdb-debugging`, `core-dump-analysis`, `c-cpp-debugging` |
-| 45 | [gemini-api-integration](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/gemini-api-integration) | A comprehensive guide for integrating Google's Gemini AI API, covering setup, mu... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | tooling | `gemini-api`, `ai-integration`, `multimodal-ai` |
-| 46 | [git-hooks-automation](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/git-hooks-automation) | Comprehensive guide to automating code quality checks using Git hooks with Husky... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | tooling | `git-hooks`, `code-quality`, `automation` |
-| 47 | [go-rod-master](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/go-rod-master) | A comprehensive guide for browser automation and web scraping using the go-rod G... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | tooling | `go-rod`, `browser-automation`, `web-scraping` |
-| 48 | [hono](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/hono) | Ultrafast web framework for building APIs and apps that runs on edge runtimes li... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | backend | `web-framework`, `edge-computing`, `typescript` |
-| 49 | [hugging-face-evaluation](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/hugging-face-evaluation) | Tool for managing evaluation results in Hugging Face model cards via table extra... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | ai-ml | `huggingface`, `model-evaluation`, `mcp-server` |
-| 50 | [hugging-face-model-trainer](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/hugging-face-model-trainer) | Train TRL language models on Hugging Face Jobs with SFT, DPO, GRPO methods and G... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | ai-ml | `huggingface-jobs`, `trl-training`, `llm-fine-tuning` |
-| 51 | [k6-load-testing](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/k6-load-testing) | A comprehensive guide for writing and running load tests with the k6 tool for AP... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | testing | `k6`, `load-testing`, `performance-testing` |
-| 52 | [macos-spm-app-packaging](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/macos-spm-app-packaging) | Template and script collection for building, signing, and packaging SwiftPM-base... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | tooling | `swiftpm`, `macos-app`, `code-signing` |
-| 53 | [makepad-deployment](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/makepad-deployment) | Packaging and deployment tooling for Makepad applications across desktop, mobile... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | tooling | `makepad`, `rust-packaging`, `cross-platform` |
-| 54 | [microsoft-azure-webjobs-extensions-authentication-events-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/microsoft-azure-webjobs-extensions-authentication-events-dotnet) | .NET SDK for Azure Functions to handle Microsoft Entra ID authentication events ... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | devops | `azure-functions`, `authentication`, `dotnet` |
-| 55 | [moyu](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/moyu) | A behavioral guardrail skill for AI coding agents that prevents over-engineering... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | ai-ml | `ai-agent`, `coding-guardrail`, `anti-over-engineering` |
-| 56 | [polars](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/polars) | Fast in-memory DataFrame library for Python with lazy evaluation and parallel ex... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | database | `dataframe`, `etl`, `performance` |
-| 57 | [protect-mcp-governance](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/protect-mcp-governance) | Governs AI agent tool calls with Cedar policies, shadow-to-enforce rollout, and ... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | tooling | `mcp-governance`, `cedar-policy`, `ed25519-verification` |
-| 58 | [pydantic-ai](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/pydantic-ai) | A Python framework for building type-safe AI agents with Pydantic validation, to... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | ai-ml | `python-ai-agents`, `pydantic-validation`, `llm-framework` |
-| 59 | [qiskit](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/qiskit) | An open-source quantum computing framework for building, optimizing, and executi... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | ai-ml | `quantum-computing`, `qiskit`, `python-framework` |
-| 60 | [radix-ui-design-system](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/radix-ui-design-system) | A comprehensive guide for building accessible, customizable design systems using... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | frontend | `radix-ui`, `react-components`, `design-system` |
-| 61 | [security-scanning-security-sast](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/security-scanning-security-sast) | A comprehensive SAST tool for multi-language code vulnerability detection with t... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | security | `sast`, `security-scanning`, `vulnerability-detection` |
-| 62 | [shellcheck-configuration](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/shellcheck-configuration) | A comprehensive guide to configuring and using ShellCheck for static analysis of... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | tooling | `shellcheck`, `static-analysis`, `shell-script` |
-| 63 | [skill-creator](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/skill-creator) | Automates creation of CLI skills for AI assistants following Anthropic's best pr... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | tooling | `cli-skill-creation`, `anthropic-best-practices`, `skill-scaffolding` |
-| 64 | [sveltekit](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/sveltekit) | A comprehensive guide for building full-stack web applications using the SvelteK... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | frontend | `sveltekit`, `fullstack-framework`, `ssr-ssg` |
-| 65 | [transformers-js](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/transformers-js) | Run Hugging Face ML models directly in JavaScript/TypeScript for NLP, computer v... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | frontend | `transformers-js`, `machine-learning`, `javascript` |
-| 66 | [trpc-fullstack](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/trpc-fullstack) | A comprehensive guide to building end-to-end type-safe APIs with tRPC for TypeSc... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | backend | `trpc`, `typescript`, `fullstack` |
-| 67 | [varlock](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/varlock) | A security-focused tool for managing environment variables in Claude coding sess... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | security | `claude-code`, `env-management`, `security` |
-| 68 | [vibers-code-review](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/vibers-code-review) | Human code review service for AI-generated GitHub projects with spec compliance ... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | tooling | `code-review`, `github-actions`, `ai-code` |
-| 69 | [zeroize-audit](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/zeroize-audit) | Security audit tool that detects missing zeroization of sensitive data in C/C++/... | Antigravity Skills | 🟢 Active | 95 | 2026-05-03 | security | `security-audit`, `zeroization`, `compiler-analysis` |
-| 70 | [autogpt-agents](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/agents-autogpt) | A platform for building, deploying, and managing continuous AI agents via visual... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | ai-ml | `autonomous-agents`, `visual-workflow`, `agent-platform` |
-| 71 | [crewai-multi-agent](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/agents-crewai) | A Python framework for building and orchestrating teams of autonomous AI agents ... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | ai-ml | `multi-agent`, `ai-orchestration`, `python-framework` |
-| 72 | [langchain](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/agents-langchain) | A Python framework for building LLM applications with agents, chains, and RAG pi... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | frontend | `llm-framework`, `python`, `rag` |
-| 73 | [llamaindex](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/agents-llamaindex) | A comprehensive Python framework for building RAG applications with extensive do... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | ai-ml | `rag-framework`, `llm-applications`, `vector-search` |
-| 74 | [huggingface-accelerate](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/distributed-training-accelerate) | Simplifies distributed training for PyTorch with a unified API supporting DDP, D... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | ai-ml | `distributed-training`, `pytorch`, `huggingface` |
-| 75 | [training-llms-megatron](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/distributed-training-megatron-core) | NVIDIA Megatron-Core framework for distributed training of large language models... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | ai-ml | `megatron-core`, `distributed-training`, `llm-training` |
-| 76 | [evaluating-code-models](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/evaluation-bigcode-evaluation-harness) | A comprehensive evaluation harness for benchmarking code generation models acros... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | testing | `code-evaluation`, `benchmarking`, `bigcode` |
-| 77 | [peft-fine-tuning](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/fine-tuning-peft) | HuggingFace's PEFT library for parameter-efficient LLM fine-tuning using LoRA, Q... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | ai-ml | `peft`, `lora`, `qlora` |
-| 78 | [pyvene-interventions](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/mechanistic-interpretability-pyvene) | A guide for performing causal interventions on PyTorch models using pyvene's dec... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | testing | `causal-intervention`, `mechanistic-interpretability`, `pytorch` |
-| 79 | [mlflow](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/mlops-mlflow) | A framework-agnostic platform to manage the entire machine learning lifecycle, i... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | ai-ml | `mlops`, `experiment-tracking`, `model-registry` |
-| 80 | [tensorboard](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/mlops-tensorboard) | Google's visualization toolkit for monitoring and debugging machine learning exp... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | backend | `tensorboard`, `ml-visualization`, `experiment-tracking` |
-| 81 | [nanogpt](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/model-architecture-nanogpt) | Minimalist GPT implementation in ~300 lines for educational purposes, reproducin... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | ai-ml | `gpt-implementation`, `transformer-education`, `pytorch-training` |
-| 82 | [distributed-llm-pretraining-torchtitan](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/model-architecture-torchtitan) | PyTorch-native distributed LLM pretraining framework with 4D parallelism for sca... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | ai-ml | `distributed-training`, `llm-pretraining`, `pytorch` |
-| 83 | [blip-2-vision-language](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/multimodal-blip-2) | A vision-language framework connecting frozen image encoders with large language... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | ai-ml | `vision-language`, `multimodal-ai`, `image-captioning` |
-| 84 | [optimizing-attention-flash](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/optimization-flash-attention) | Optimizes transformer attention using Flash Attention for 2-4x speedup and 10-20... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | ai-ml | `flash-attention`, `transformer-optimization`, `gpu-acceleration` |
-| 85 | [torchforge-rl-training](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/post-training-torchforge) | Meta's PyTorch-native RL library separating infrastructure from algorithms for s... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | backend | `reinforcement-learning`, `pytorch`, `torchforge` |
-| 86 | [dspy](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/prompt-engineering-dspy) | A declarative programming framework for building and optimizing AI systems with ... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | ai-ml | `dspy-framework`, `prompt-optimization`, `rag-systems` |
-| 87 | [guidance](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/prompt-engineering-guidance) | A Python framework for constraining LLM outputs using regex and grammars to guar... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | documentation | `llm-constraints`, `structured-generation`, `python-framework` |
-| 88 | [instructor](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/prompt-engineering-instructor) | Python library for extracting validated structured data from LLM responses using... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | testing | `structured-output`, `pydantic-validation`, `llm-integration` |
-| 89 | [outlines](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/prompt-engineering-outlines) | A Python library for guaranteed structured text generation using Pydantic models... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | ai-ml | `structured-generation`, `pydantic`, `local-llms` |
-| 90 | [pydantic-ai](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/pydantic-ai) | Python framework for building type-safe AI agents with structured outputs, tool ... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | backend | `python-ai-agents`, `pydantic-framework`, `llm-tool-use` |
-| 91 | [chroma](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/rag-chroma) | Open-source vector database for storing embeddings and metadata with semantic se... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | ai-ml | `vector-database`, `embeddings`, `rag` |
-| 92 | [faiss](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/rag-faiss) | Facebook's high-performance library for billion-scale vector similarity search a... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | ai-ml | `vector-search`, `similarity-search`, `ai-library` |
-| 93 | [pinecone](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/rag-pinecone) | A fully managed vector database service for AI applications with hybrid search, ... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | ai-ml | `vector-database`, `rag`, `managed-service` |
-| 94 | [sentence-transformers](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/rag-sentence-transformers) | Python framework for generating high-quality sentence and text embeddings with 5... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | ai-ml | `sentence-embeddings`, `semantic-search`, `rag` |
-| 95 | [llamaguard](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/safety-alignment-llamaguard) | Meta's 7-8B parameter AI safety model for filtering LLM inputs/outputs across 6 ... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | backend | `llm-safety`, `content-moderation`, `huggingface` |
-| 96 | [neon-instagres](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/database/neon-instagres) | Instantly provisions production-ready PostgreSQL databases using Neon's Instagre... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | database | `postgresql`, `database-provisioning`, `neon` |
-| 97 | [agirails-agent-payments](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/agirails-agent-payments) | Payment infrastructure SDK for AI agents with escrow, instant payments, and USDC... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | backend | `ai-agent-payments`, `blockchain-sdk`, `escrow-system` |
-| 98 | [cocoindex](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/cocoindex) | A Python framework for building real-time AI data transformation pipelines with ... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | database | `etl-pipeline`, `vector-database`, `ai-data-processing` |
-| 99 | [code-review-checklist](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/code-review-checklist) | A systematic checklist for conducting comprehensive code reviews covering functi... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | security | `code-review`, `checklist`, `best-practices` |
-| 100 | [k6-load-testing](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/k6-load-testing) | Comprehensive guide for k6 load testing covering API, browser, and WebSocket tes... | Claude Code Templates | 🟢 Active | 95 | 2026-05-04 | testing | `k6`, `load-testing`, `performance-testing` |
+| 1 | [docx](https://github.com/anthropics/skills/tree/main/skills/docx) | A skill for programmatically creating, editing, and analyzing Word .docx files u... | Anthropic Official | 🟢 Active | 96 | 2026-05-03 | backend | `docx-generation`, `word-document`, `javascript` |
+| 2 | [skill-creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator) | A meta-skill for creating, testing, and iteratively improving Claude skills with... | Anthropic Official | 🟢 Active | 96 | 2026-05-03 | testing | `skill-creation`, `benchmarking`, `eval-framework` |
+| 3 | [azure-ai-voicelive-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-voicelive-dotnet) | Azure AI Voice Live SDK for .NET to build real-time bidirectional voice assistan... | Antigravity Skills | 🟢 Active | 95 | 2026-05-04 | devops | `azure-ai`, `voice-assistant`, `websocket` |
+| 4 | [azure-eventhub-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-eventhub-dotnet) | Azure Event Hubs .NET SDK for high-throughput event streaming. | Antigravity Skills | 🟢 Active | 95 | 2026-05-04 | devops | `azure-event-hubs`, `dotnet-sdk`, `event-streaming` |
+| 5 | [azure-mgmt-fabric-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-mgmt-fabric-dotnet) | .NET SDK for managing Microsoft Fabric capacity resources via Azure Resource Man... | Antigravity Skills | 🟢 Active | 95 | 2026-05-04 | devops | `azure-sdk`, `microsoft-fabric`, `resource-manager` |
+| 6 | [azure-resource-manager-durabletask-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-resource-manager-durabletask-dotnet) | .NET SDK for managing Azure Durable Task Scheduler resources via ARM. | Antigravity Skills | 🟢 Active | 95 | 2026-05-04 | devops | `azure-sdk`, `durable-task`, `resource-manager` |
+| 7 | [azure-resource-manager-playwright-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-resource-manager-playwright-dotnet) | .NET SDK for managing Microsoft Playwright Testing workspaces via Azure Resource... | Antigravity Skills | 🟢 Active | 95 | 2026-05-04 | devops | `azure-resource-manager`, `playwright-testing`, `dotnet-sdk` |
+| 8 | [azure-storage-blob-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-storage-blob-ts) | TypeScript SDK for Azure Blob Storage operations including upload, download, and... | Antigravity Skills | 🟢 Active | 95 | 2026-05-04 | devops | `azure-storage`, `blob-storage`, `typescript-sdk` |
+| 9 | [azure-storage-queue-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-storage-queue-ts) | TypeScript SDK for Azure Queue Storage message operations with authentication an... | Antigravity Skills | 🟢 Active | 95 | 2026-05-04 | devops | `azure-sdk`, `queue-storage`, `typescript` |
+| 10 | [claimable-postgres](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/claimable-postgres) | Provision instant temporary Postgres databases via API, CLI, SDK, or Vite plugin... | Antigravity Skills | 🟢 Active | 95 | 2026-05-04 | database | `postgres`, `temporary-database`, `neon` |
+| 11 | [claude-in-chrome-troubleshooting](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/claude-in-chrome-troubleshooting) | Troubleshooting guide for Claude in Chrome MCP extension connectivity issues on ... | Antigravity Skills | 🟢 Active | 95 | 2026-05-04 | ai-ml | `mcp-troubleshooting`, `claude-code`, `chrome-extension` |
+| 12 | [code-review-checklist](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/code-review-checklist) | A systematic checklist for thorough code reviews covering functionality, securit... | Antigravity Skills | 🟢 Active | 95 | 2026-05-04 | tooling | `code-review`, `checklist`, `best-practices` |
+| 13 | [convex](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/convex) | Expert guide for Convex reactive backend: schema, TypeScript functions, real-tim... | Antigravity Skills | 🟢 Active | 95 | 2026-05-04 | backend | `convex`, `reactive-backend`, `typescript` |
+| 14 | [database-architect](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/database-architect) | AI skill for expert database architecture design, technology selection, schema m... | Antigravity Skills | 🟢 Active | 95 | 2026-05-04 | database | `database-architecture`, `schema-design`, `data-modeling` |
+| 15 | [agentic-actions-auditor](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agentic-actions-auditor) | Static security analysis methodology for auditing GitHub Actions workflows that ... | Antigravity Skills | 🟢 Active | 93 | 2026-05-04 | ai-ml | `security-audit`, `github-actions`, `ai-agents` |
+| 16 | [agentmail](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agentmail) | REST API and TypeScript SDK providing email infrastructure for AI agents with ka... | Antigravity Skills | 🟢 Active | 93 | 2026-05-04 | ai-ml | `email-api`, `ai-agents`, `typescript-sdk` |
+| 17 | [agentphone](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agentphone) | API-first telephony platform for building AI phone agents with voice calls and S... | Antigravity Skills | 🟢 Active | 93 | 2026-05-04 | ai-ml | `telephony-api`, `voice-agents`, `sms-api` |
+| 18 | [angular](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/angular) | Modern Angular (v20+) expert skill covering Signals, Standalone Components, Zone... | Antigravity Skills | 🟢 Active | 93 | 2026-05-04 | frontend | `angular`, `signals`, `standalone-components` |
+| 19 | [astro](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/astro) | Astro is a web framework for content-rich websites with zero JS by default and i... | Antigravity Skills | 🟢 Active | 93 | 2026-05-04 | frontend | `astro`, `ssg`, `ssr` |
+| 20 | [azure-speech-to-text-rest-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-speech-to-text-rest-py) | Python REST API for Azure Speech-to-Text transcription of short audio files (≤60... | Antigravity Skills | 🟢 Active | 93 | 2026-05-04 | devops | `azure-speech-to-text`, `rest-api`, `python` |
+| 21 | [chat-widget](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/chat-widget) | A real-time support chat system with user widget and admin dashboard. | Antigravity Skills | 🟢 Active | 93 | 2026-05-04 | frontend | `live-chat`, `customer-support`, `websocket` |
+| 22 | [data-structure-protocol](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/data-structure-protocol) | A protocol and CLI tool that gives AI coding agents persistent structural memory... | Antigravity Skills | 🟢 Active | 93 | 2026-05-04 | database | `codebase-graph`, `dependency-analysis`, `agent-memory` |
+| 23 | [azure-ai-agents-persistent-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-agents-persistent-dotnet) | Low-level .NET SDK for creating and managing persistent AI agents with threads, ... | Antigravity Skills | 🟢 Active | 92 | 2026-05-04 | devops | `azure-ai`, `dotnet-sdk`, `ai-agents` |
+| 24 | [azure-ai-document-intelligence-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-document-intelligence-dotnet) | Azure AI Document Intelligence .NET SDK for extracting text, tables, and structu... | Antigravity Skills | 🟢 Active | 92 | 2026-05-04 | devops | `azure-ai`, `document-intelligence`, `dotnet-sdk` |
+| 25 | [azure-ai-projects-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-projects-dotnet) | .NET SDK for Azure AI Foundry project operations including agents, connections, ... | Antigravity Skills | 🟢 Active | 92 | 2026-05-04 | devops | `azure-sdk`, `dotnet`, `ai-agents` |
+| 26 | [azure-ai-voicelive-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-voicelive-ts) | Azure AI Voice Live SDK for building real-time bidirectional voice assistants in... | Antigravity Skills | 🟢 Active | 92 | 2026-05-04 | devops | `azure-ai`, `voice-assistant`, `websocket` |
+| 27 | [azure-cosmos-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-cosmos-ts) | TypeScript SDK for Azure Cosmos DB NoSQL data plane operations including CRUD, q... | Antigravity Skills | 🟢 Active | 92 | 2026-05-04 | devops | `azure-cosmos-db`, `typescript-sdk`, `nosql-database` |
+| 28 | [azure-eventgrid-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-eventgrid-dotnet) | Azure Event Grid .NET SDK for publishing and consuming events with push and pull... | Antigravity Skills | 🟢 Active | 92 | 2026-05-04 | devops | `azure-event-grid`, `dotnet-sdk`, `event-driven-architecture` |
+| 29 | [azure-identity-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-identity-dotnet) | Azure Identity SDK for .NET providing authentication via Microsoft Entra ID for ... | Antigravity Skills | 🟢 Active | 92 | 2026-05-04 | devops | `azure-identity`, `dotnet`, `authentication` |
+| 30 | [azure-mgmt-apicenter-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-mgmt-apicenter-dotnet) | Azure API Center .NET SDK for centralized API inventory management with governan... | Antigravity Skills | 🟢 Active | 92 | 2026-05-04 | devops | `azure-sdk`, `api-management`, `dotnet` |
+| 31 | [azure-postgres-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-postgres-ts) | TypeScript guide for connecting to Azure PostgreSQL Flexible Server using node-p... | Antigravity Skills | 🟢 Active | 92 | 2026-05-04 | devops | `azure-postgresql`, `node-postgres`, `typescript` |
+| 32 | [azure-resource-manager-postgresql-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-resource-manager-postgresql-dotnet) | Azure .NET SDK for managing PostgreSQL Flexible Server deployments. | Antigravity Skills | 🟢 Active | 92 | 2026-05-04 | devops | `azure-sdk`, `postgresql`, `dotnet` |
+| 33 | [azure-servicebus-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-servicebus-dotnet) | Azure Service Bus SDK for .NET enabling enterprise messaging with queues, topics... | Antigravity Skills | 🟢 Active | 92 | 2026-05-04 | devops | `azure-service-bus`, `dotnet-sdk`, `enterprise-messaging` |
+| 34 | [azure-storage-file-share-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-storage-file-share-ts) | Azure File Share TypeScript SDK for SMB file share operations. | Antigravity Skills | 🟢 Active | 92 | 2026-05-04 | devops | `azure-sdk`, `file-share`, `typescript` |
+| 35 | [bun-development](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/bun-development) | A comprehensive guide for fast JavaScript/TypeScript development using the Bun r... | Antigravity Skills | 🟢 Active | 92 | 2026-05-04 | frontend | `bun-runtime`, `javascript`, `typescript` |
+| 36 | [copilot-sdk](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/copilot-sdk) | Multi-language SDK for building apps that programmatically interact with GitHub ... | Antigravity Skills | 🟢 Active | 92 | 2026-05-04 | backend | `github-copilot`, `sdk`, `json-rpc` |
+| 37 | [apify-actor-development](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/apify-actor-development) | Guidelines for AI-assisted development of Apify Actors, covering setup, security... | Antigravity Skills | 🟢 Active | 91 | 2026-05-04 | tooling | `apify-actor`, `web-scraping`, `serverless` |
+| 38 | [azure-ai-openai-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-openai-dotnet) | Azure OpenAI SDK for .NET enabling chat, embeddings, image, and audio generation... | Antigravity Skills | 🟢 Active | 91 | 2026-05-04 | devops | `azure-openai`, `dotnet-sdk`, `chat-completions` |
+| 39 | [azure-mgmt-mongodbatlas-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-mgmt-mongodbatlas-dotnet) | .NET SDK to manage MongoDB Atlas organizations as Azure ARM resources with unifi... | Antigravity Skills | 🟢 Active | 91 | 2026-05-04 | devops | `azure-sdk`, `mongodb-atlas`, `arm-resource` |
+| 40 | [azure-monitor-opentelemetry-exporter-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-monitor-opentelemetry-exporter-py) | Python library for low-level OpenTelemetry export to Azure Application Insights. | Antigravity Skills | 🟢 Active | 91 | 2026-05-04 | devops | `azure-monitor`, `opentelemetry-exporter`, `application-insights` |
+| 41 | [conductor-new-track](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/conductor-new-track) | Interactive skill for creating structured feature, bug, chore, or refactor track... | Antigravity Skills | 🟢 Active | 91 | 2026-05-04 | tooling | `track-management`, `project-workflow`, `specification-generation` |
+| 42 | [dispatching-parallel-agents](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/dispatching-parallel-agents) | A skill pattern for dispatching parallel AI agents to independently investigate ... | Antigravity Skills | 🟢 Active | 91 | 2026-05-04 | ai-ml | `ai-coding-pattern`, `parallel-agents`, `test-fixing` |
+| 43 | [drizzle-orm-expert](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/drizzle-orm-expert) | Expert guidance for building type-safe database layers with Drizzle ORM in TypeS... | Antigravity Skills | 🟢 Active | 91 | 2026-05-04 | database | `drizzle-orm`, `typescript`, `database` |
+| 44 | [agents-md](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agents-md) | A skill for creating and maintaining minimal, high-signal AGENTS.md documentatio... | Antigravity Skills | 🟢 Active | 90 | 2026-05-04 | ai-ml | `agent-documentation`, `mcp-skill`, `coding-agent` |
+| 45 | [conductor-revert](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/conductor-revert) | Git-aware undo skill for reverting changes by logical work unit (track, phase, o... | Antigravity Skills | 🟢 Active | 90 | 2026-05-04 | tooling | `git`, `undo`, `revert` |
+| 46 | [pptx](https://github.com/anthropics/skills/tree/main/skills/pptx) | A skill for creating, reading, editing, and QA-checking .pptx presentations with... | Anthropic Official | 🟢 Active | 90 | 2026-05-03 | ai-ml | `pptx`, `presentation`, `slide-deck` |
+| 47 | [web-artifacts-builder](https://github.com/anthropics/skills/tree/main/skills/web-artifacts-builder) | Tool suite for building complex HTML artifacts for claude.ai using React, Tailwi... | Anthropic Official | 🟢 Active | 90 | 2026-05-03 | frontend | `react`, `tailwind-css`, `shadcn-ui` |
+| 48 | [architecture-decision-records](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/architecture-decision-records) | Patterns and templates for documenting architectural decisions with ADRs. | Antigravity Skills | 🟢 Active | 89 | 2026-05-04 | tooling | `architecture-decision-records`, `adr-templates`, `documentation` |
+| 49 | [ai-md](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-md) | Converts human-written CLAUDE.md into structured labels for better AI compliance... | Antigravity Skills | 🟢 Active | 88 | 2026-05-04 | ai-ml | `claude-md`, `prompt-optimization`, `structured-labels` |
+| 50 | [ai-native-cli](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-native-cli) | Design specification with 98 rules for building AI-agent-safe CLI tools. | Antigravity Skills | 🟢 Active | 88 | 2026-05-04 | ai-ml | `cli-design-spec`, `ai-agent-compatibility`, `developer-tools` |
+| 51 | [ask-questions-if-underspecified](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ask-questions-if-underspecified) | A behavioral guideline for AI assistants to clarify requirements before implemen... | Antigravity Skills | 🟢 Active | 88 | 2026-05-04 | tooling | `ai-assistant-skill`, `requirements-clarification`, `coding-workflow` |
+| 52 | [azure-maps-search-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-maps-search-dotnet) | Azure Maps SDK for .NET providing location-based services including geocoding, r... | Antigravity Skills | 🟢 Active | 88 | 2026-05-04 | devops | `azure-maps`, `dotnet-sdk`, `geocoding` |
+| 53 | [azure-mgmt-applicationinsights-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-mgmt-applicationinsights-dotnet) | Azure Resource Manager SDK for .NET to manage Application Insights monitoring re... | Antigravity Skills | 🟢 Active | 88 | 2026-05-04 | devops | `azure-sdk`, `application-insights`, `dotnet` |
+| 54 | [azure-resource-manager-redis-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-resource-manager-redis-dotnet) | Azure Resource Manager SDK for provisioning and managing Azure Cache for Redis i... | Antigravity Skills | 🟢 Active | 88 | 2026-05-04 | devops | `azure-sdk`, `redis`, `dotnet` |
+| 55 | [azure-search-documents-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-search-documents-dotnet) | Azure AI Search SDK for .NET enabling full-text, vector, semantic, and hybrid se... | Antigravity Skills | 🟢 Active | 88 | 2026-05-04 | devops | `azure-search`, `dotnet-sdk`, `vector-search` |
+| 56 | [azure-security-keyvault-keys-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-security-keyvault-keys-dotnet) | Azure Key Vault Keys SDK for .NET to manage and use cryptographic keys. | Antigravity Skills | 🟢 Active | 88 | 2026-05-04 | devops | `azure-key-vault`, `dotnet-sdk`, `cryptography` |
+| 57 | [azure-security-keyvault-keys-java](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-security-keyvault-keys-java) | Azure Key Vault Keys Java SDK for managing cryptographic keys and performing enc... | Antigravity Skills | 🟢 Active | 88 | 2026-05-04 | devops | `azure-key-vault`, `java-sdk`, `cryptographic-keys` |
+| 58 | [backend-dev-guidelines](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/backend-dev-guidelines) | Production-grade Node.js backend development guidelines with layered architectur... | Antigravity Skills | 🟢 Active | 88 | 2026-05-04 | backend | `backend-guidelines`, `node-js`, `express` |
+| 59 | [comfyui-gateway](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/comfyui-gateway) | Production-grade REST API gateway for ComfyUI with workflow management, job queu... | Antigravity Skills | 🟢 Active | 88 | 2026-05-04 | backend | `comfyui`, `api-gateway`, `image-generation` |
+| 60 | [commit](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/commit) | AI skill that enforces Sentry-style conventional commits with branch safety and ... | Antigravity Skills | 🟢 Active | 88 | 2026-05-04 | tooling | `git`, `commit-conventions`, `sentry` |
+| 61 | [slack-gif-creator](https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator) | Toolkit for creating Slack-optimized animated GIFs with Python and PIL. | Anthropic Official | 🟢 Active | 88 | 2026-05-03 | ai-ml | `gif-creation`, `slack-integration`, `animation-tools` |
+| 62 | [xlsx](https://github.com/anthropics/skills/tree/main/skills/xlsx) | AI coding skill for creating, editing, and analyzing spreadsheet files (.xlsx, .... | Anthropic Official | 🟢 Active | 88 | 2026-05-03 | tooling | `spreadsheet`, `excel`, `python` |
+| 63 | [adhx](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/adhx) | API to convert X/Twitter posts into structured JSON for LLM consumption. | Antigravity Skills | 🟢 Active | 87 | 2026-05-04 | tooling | `x-twitter-api`, `json-converter`, `llm-tool` |
+| 64 | [aegisops-ai](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/aegisops-ai) | Autonomous DevSecOps & FinOps guardrails orchestrating Gemini 3 Flash for kernel... | Antigravity Skills | 🟢 Active | 87 | 2026-05-04 | devops | `devsecops`, `finops`, `kubernetes` |
+| 65 | [astropy](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/astropy) | Core Python package for astronomy with units, coordinates, FITS, cosmology, and ... | Antigravity Skills | 🟢 Active | 87 | 2026-05-04 | ai-ml | `astronomy`, `python-package`, `scientific-computing` |
+| 66 | [blueprint](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/blueprint) | Generates step-by-step construction plans for AI coding agents from a one-line o... | Antigravity Skills | 🟢 Active | 87 | 2026-05-04 | tooling | `mcp-server`, `planning`, `multi-agent` |
+| 67 | [dropbox-automation](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/dropbox-automation) | Automates Dropbox file operations via Rube MCP and Composio toolkit with detaile... | Antigravity Skills | 🟢 Active | 87 | 2026-05-04 | tooling | `dropbox-automation`, `mcp-server`, `composio` |
+| 68 | [claude-api](https://github.com/anthropics/skills/tree/main/skills/claude-api) | A skill for building, debugging, and optimizing Claude API and Anthropic SDK app... | Anthropic Official | 🟢 Active | 87 | 2026-05-03 | ai-ml | `claude-api`, `anthropic-sdk`, `prompt-caching` |
+| 69 | [ai-product](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-product) | Production-grade patterns and sharp edges for building reliable AI-powered produ... | Antigravity Skills | 🟢 Active | 86 | 2026-05-04 | ai-ml | `llm-integration`, `rag-architecture`, `prompt-engineering` |
+| 70 | [angular-migration](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/angular-migration) | A comprehensive guide for migrating AngularJS (1.x) apps to Angular (2+), coveri... | Antigravity Skills | 🟢 Active | 86 | 2026-05-04 | frontend | `angular-migration`, `angularjs`, `hybrid-apps` |
+| 71 | [angular-state-management](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/angular-state-management) | A comprehensive guide to Angular state management using Signals, NgRx, and RxJS ... | Antigravity Skills | 🟢 Active | 86 | 2026-05-04 | frontend | `angular`, `state-management`, `ngrx` |
+| 72 | [azure-functions](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-functions) | Expert patterns and production best practices for Azure Functions development ac... | Antigravity Skills | 🟢 Active | 86 | 2026-05-04 | devops | `azure-functions`, `serverless`, `durable-functions` |
+| 73 | [azure-mgmt-botservice-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-mgmt-botservice-dotnet) | .NET SDK for managing Azure Bot Service resources via Azure Resource Manager. | Antigravity Skills | 🟢 Active | 86 | 2026-05-04 | devops | `azure-sdk`, `bot-service`, `dotnet` |
+| 74 | [azure-resource-manager-mysql-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-resource-manager-mysql-dotnet) | Azure .NET SDK for managing MySQL Flexible Server deployments programmatically. | Antigravity Skills | 🟢 Active | 86 | 2026-05-04 | devops | `azure-sdk`, `mysql-flexible-server`, `dotnet` |
+| 75 | [brooks-lint](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/brooks-lint) | AI code reviewer that applies principles from 12 classic software engineering bo... | Antigravity Skills | 🟢 Active | 86 | 2026-05-04 | tooling | `code-review`, `architecture-analysis`, `design-smells` |
+| 76 | [clarity-gate](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/clarity-gate) | Pre-ingestion verification tool for epistemic quality in RAG systems, ensuring d... | Antigravity Skills | 🟢 Active | 86 | 2026-05-04 | database | `rag`, `document-verification`, `epistemic-quality` |
+| 77 | [clerk-auth](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/clerk-auth) | Expert patterns for implementing Clerk authentication in Next.js applications. | Antigravity Skills | 🟢 Active | 86 | 2026-05-04 | tooling | `clerk-auth`, `nextjs`, `authentication` |
+| 78 | [code-refactoring-tech-debt](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/code-refactoring-tech-debt) | A structured prompt for AI to analyze, quantify, and prioritize technical debt i... | Antigravity Skills | 🟢 Active | 86 | 2026-05-04 | tooling | `technical-debt`, `code-refactoring`, `code-quality` |
+| 79 | [codebase-cleanup-tech-debt](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/codebase-cleanup-tech-debt) | A structured prompt for AI assistants to analyze, quantify, and prioritize techn... | Antigravity Skills | 🟢 Active | 86 | 2026-05-04 | tooling | `technical-debt`, `code-quality`, `refactoring` |
+| 80 | [constant-time-analysis](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/constant-time-analysis) | Static analysis tool to detect timing side-channel leaks in cryptographic code a... | Antigravity Skills | 🟢 Active | 86 | 2026-05-04 | security | `static-analysis`, `cryptography`, `side-channel` |
+| 81 | [cred-omega](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/cred-omega) | Enterprise credential security engine for discovering, classifying, protecting, ... | Antigravity Skills | 🟢 Active | 86 | 2026-05-04 | security | `credential-management`, `secret-scanning`, `security-audit` |
+| 82 | [devcontainer-setup](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/devcontainer-setup) | Generates pre-configured devcontainers with Claude Code and multi-language tooli... | Antigravity Skills | 🟢 Active | 86 | 2026-05-04 | tooling | `devcontainer`, `claude-code`, `development-environment` |
+| 83 | [differential-review](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/differential-review) | Security-focused code review skill for PRs, commits, and diffs with risk-based m... | Antigravity Skills | 🟢 Active | 86 | 2026-05-04 | security | `security-review`, `code-review`, `pr-review` |
+| 84 | [dotnet-architect](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/dotnet-architect) | Expert .NET backend architect skill for AI-assisted C# and ASP.NET Core developm... | Antigravity Skills | 🟢 Active | 86 | 2026-05-04 | tooling | `dotnet-architect`, `csharp`, `aspnet-core` |
+| 85 | [algorithmic-art](https://github.com/anthropics/skills/tree/main/skills/algorithmic-art) | A skill for creating generative art using p5.js with seeded randomness and inter... | Anthropic Official | 🟢 Active | 86 | 2026-05-03 | backend | `generative-art`, `p5js`, `algorithmic-art` |
+| 86 | [mcp-builder](https://github.com/anthropics/skills/tree/main/skills/mcp-builder) | Guide for building high-quality MCP servers that enable LLMs to interact with ex... | Anthropic Official | 🟢 Active | 86 | 2026-05-03 | frontend | `mcp-server`, `typescript`, `python` |
+| 87 | [code-documentation](https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/code-documentation) | A guide for writing effective code documentation including API docs, READMEs, in... | Community Curated | 🟢 Active | 86 | 2026-05-03 | documentation | `code-documentation`, `api-docs`, `readme-template` |
+| 88 | [ask-questions-if-underspecified](https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/ask-questions-if-underspecified) | A skill that prompts AI coding agents to ask clarifying questions before impleme... | Community Curated | 🟢 Active | 86 | 2026-05-03 | tooling | `ai-agent-skill`, `requirement-clarification`, `coding-workflow` |
+| 89 | [agent-framework-azure-ai-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agent-framework-azure-ai-py) | Build persistent AI agents on Azure AI Foundry with the Microsoft Agent Framewor... | Antigravity Skills | 🟢 Active | 85 | 2026-05-04 | ai-ml | `azure-ai-foundry`, `agent-framework`, `python-sdk` |
+| 90 | [agentflow](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agentflow) | Turns Kanban boards into autonomous AI development pipelines with multi-worker o... | Antigravity Skills | 🟢 Active | 85 | 2026-05-04 | tooling | `kanban-orchestration`, `ai-pipeline`, `claude-code` |
+| 91 | [agents-v2-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agents-v2-py) | Python SDK guide for creating container-based hosted agents in Azure AI Foundry. | Antigravity Skills | 🟢 Active | 85 | 2026-05-04 | ai-ml | `azure-ai-foundry`, `hosted-agents`, `python-sdk` |
+| 92 | [ai-engineering-toolkit](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-engineering-toolkit) | 6 structured AI engineering workflows for prompt evaluation, RAG design, securit... | Antigravity Skills | 🟢 Active | 85 | 2026-05-04 | database | `prompt-engineering`, `rag`, `ai-security` |
+| 93 | [apify-actorization](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/apify-actorization) | Converts existing software into reusable serverless Docker applications for the ... | Antigravity Skills | 🟢 Active | 85 | 2026-05-04 | tooling | `apify`, `serverless`, `docker` |
+| 94 | [appdeploy](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/appdeploy) | Deploy web apps with backend APIs, database, and file storage via HTTP API. | Antigravity Skills | 🟢 Active | 85 | 2026-05-04 | backend | `app-deployment`, `mcp-server`, `web-app` |
+| 95 | [azd-deployment](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azd-deployment) | Deploy containerized frontend and backend apps to Azure Container Apps using azd... | Antigravity Skills | 🟢 Active | 85 | 2026-05-04 | devops | `azure-container-apps`, `azure-developer-cli`, `bicep` |
+| 96 | [azure-ai-agents-persistent-java](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-agents-persistent-java) | Low-level Java SDK for creating and managing persistent Azure AI agents with thr... | Antigravity Skills | 🟢 Active | 85 | 2026-05-04 | devops | `azure-ai-agents`, `java-sdk`, `persistent-agents` |
+| 97 | [azure-ai-anomalydetector-java](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-anomalydetector-java) | Azure AI Anomaly Detector SDK for Java for univariate/multivariate anomaly detec... | Antigravity Skills | 🟢 Active | 85 | 2026-05-04 | devops | `azure`, `anomaly-detection`, `java-sdk` |
+| 98 | [azure-ai-contentsafety-java](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-contentsafety-java) | Azure AI Content Safety SDK for Java to build content moderation applications. | Antigravity Skills | 🟢 Active | 85 | 2026-05-04 | devops | `content-moderation`, `azure-sdk`, `java-sdk` |
+| 99 | [azure-ai-contentsafety-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-contentsafety-py) | Azure AI Content Safety SDK for Python to detect harmful content in text and ima... | Antigravity Skills | 🟢 Active | 85 | 2026-05-04 | devops | `content-safety`, `azure-sdk`, `python` |
+| 100 | [azure-ai-contentsafety-ts](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-contentsafety-ts) | TypeScript SDK for Azure AI Content Safety to analyze text and images with custo... | Antigravity Skills | 🟢 Active | 85 | 2026-05-04 | devops | `azure-ai`, `content-safety`, `typescript-sdk` |
 
 ## Top 10 — Install Guide
 
 <details>
-<summary>⭐ <strong>MCP Integration</strong> (120.2k★) — Guide for integrating Model Context Protocol (MCP) servers i...</summary>
+<summary>⭐ <strong>docx</strong> — A skill for programmatically creating, editing, and analyzin...</summary>
 
-Guide for integrating Model Context Protocol (MCP) servers into Claude Code plugins to connect with external services and APIs.
+A skill for programmatically creating, editing, and analyzing Word .docx files using JavaScript and XML manipulation.
 
 ```bash
-git clone anthropics/claude-code
+git clone https://github.com/anthropics/skills.git
 ```
+Files: `skills/docx/`
 
-📊 Score: 97 · 🏥 Health: 95 · 🏷️ Tags: `mcp-integration`, `claude-code`, `plugin-development`
-📅 Last active: 2026-05-01 · 📦 Source: Anthropic Official
+📊 Score: 96 · 🏥 Health: 58 · 🏷️ Tags: `docx-generation`, `word-document`, `javascript`
+📅 Last active: 2026-05-03 · 📦 Source: Anthropic Official
 
 </details>
 
 <details>
-<summary>⭐ <strong>skill-creator</strong> — An AI skill for creating, testing, and optimizing other AI s...</summary>
+<summary>⭐ <strong>skill-creator</strong> — A meta-skill for creating, testing, and iteratively improvin...</summary>
 
-An AI skill for creating, testing, and optimizing other AI skills through iterative development and evaluation workflows.
+A meta-skill for creating, testing, and iteratively improving Claude skills with benchmarking and description optimization.
 
 ```bash
 git clone https://github.com/anthropics/skills.git
 ```
 Files: `skills/skill-creator/`
 
-📊 Score: 96 · 🏥 Health: 58 · 🏷️ Tags: `skill-development`, `ai-workflow`, `testing-framework`
+📊 Score: 96 · 🏥 Health: 58 · 🏷️ Tags: `skill-creation`, `benchmarking`, `eval-framework`
 📅 Last active: 2026-05-03 · 📦 Source: Anthropic Official
 
 </details>
 
 <details>
-<summary>⭐ <strong>slack-gif-creator</strong> — A Python toolkit for creating and optimizing animated GIFs s...</summary>
+<summary>⭐ <strong>azure-ai-voicelive-dotnet</strong> (36.3k★) — Azure AI Voice Live SDK for .NET to build real-time bidirect...</summary>
 
-A Python toolkit for creating and optimizing animated GIFs specifically for Slack with utilities for validation, animation, and optimization.
-
-```bash
-git clone https://github.com/anthropics/skills.git
-```
-Files: `skills/slack-gif-creator/`
-
-📊 Score: 96 · 🏥 Health: 58 · 🏷️ Tags: `slack-gif`, `python-animation`, `image-processing`
-📅 Last active: 2026-05-03 · 📦 Source: Anthropic Official
-
-</details>
-
-<details>
-<summary>⭐ <strong>xlsx</strong> — An AI skill for creating, editing, and analyzing spreadsheet...</summary>
-
-An AI skill for creating, editing, and analyzing spreadsheet files (Excel/CSV) with Python libraries and formula recalculation.
-
-```bash
-git clone https://github.com/anthropics/skills.git
-```
-Files: `skills/xlsx/`
-
-📊 Score: 96 · 🏥 Health: 58 · 🏷️ Tags: `spreadsheet`, `excel`, `data-analysis`
-📅 Last active: 2026-05-03 · 📦 Source: Anthropic Official
-
-</details>
-
-<details>
-<summary>⭐ <strong>ui-ux-pro-max</strong> (73.7k★) — A comprehensive AI skill providing UI/UX design intelligence...</summary>
-
-A comprehensive AI skill providing UI/UX design intelligence, guidelines, and CLI tools for generating design systems and code best practices across m
-
-```bash
-git clone nextlevelbuilder/ui-ux-pro-max-skill
-```
-
-📊 Score: 95 · 🏥 Health: 79 · 🏷️ Tags: `ui-ux-design`, `design-system`, `cli-tool`
-📅 Last active: 2026-04-03 · 📦 Source: nextlevelbuilder/ui-ux-pro-max-skill
-
-</details>
-
-<details>
-<summary>⭐ <strong>agent-framework-azure-ai-py</strong> (36.2k★) — Python SDK for building persistent AI agents on Azure AI Fou...</summary>
-
-Python SDK for building persistent AI agents on Azure AI Foundry with hosted tools and conversation threads.
-
-```bash
-git clone https://github.com/sickn33/antigravity-awesome-skills.git
-```
-Files: `skills/agent-framework-azure-ai-py/`
-
-📊 Score: 95 · 🏥 Health: 80 · 🏷️ Tags: `azure-ai`, `agent-framework`, `python-sdk`
-📅 Last active: 2026-05-03 · 📦 Source: Antigravity Skills
-
-</details>
-
-<details>
-<summary>⭐ <strong>agentflow</strong> (36.2k★) — Autonomous AI development pipeline orchestration through Kan...</summary>
-
-Autonomous AI development pipeline orchestration through Kanban boards with multi-agent coordination and quality gates.
-
-```bash
-git clone https://github.com/sickn33/antigravity-awesome-skills.git
-```
-Files: `skills/agentflow/`
-
-📊 Score: 95 · 🏥 Health: 80 · 🏷️ Tags: `ai-orchestration`, `kanban-integration`, `claude-code`
-📅 Last active: 2026-05-03 · 📦 Source: Antigravity Skills
-
-</details>
-
-<details>
-<summary>⭐ <strong>astro</strong> (36.2k★) — A web framework for building fast, content-focused websites ...</summary>
-
-A web framework for building fast, content-focused websites using Islands Architecture to ship zero JavaScript by default.
-
-```bash
-git clone https://github.com/sickn33/antigravity-awesome-skills.git
-```
-Files: `skills/astro/`
-
-📊 Score: 95 · 🏥 Health: 80 · 🏷️ Tags: `web-framework`, `static-site-generator`, `islands-architecture`
-📅 Last active: 2026-05-03 · 📦 Source: Antigravity Skills
-
-</details>
-
-<details>
-<summary>⭐ <strong>aws-serverless</strong> (36.2k★) — A comprehensive guide to building production-ready AWS serve...</summary>
-
-A comprehensive guide to building production-ready AWS serverless applications with patterns, best practices, and troubleshooting.
-
-```bash
-git clone https://github.com/sickn33/antigravity-awesome-skills.git
-```
-Files: `skills/aws-serverless/`
-
-📊 Score: 95 · 🏥 Health: 80 · 🏷️ Tags: `aws-lambda`, `serverless-patterns`, `infrastructure-as-code`
-📅 Last active: 2026-05-03 · 📦 Source: Antigravity Skills
-
-</details>
-
-<details>
-<summary>⭐ <strong>azure-ai-voicelive-dotnet</strong> (36.2k★) — .NET SDK for building real-time, bidirectional voice AI appl...</summary>
-
-.NET SDK for building real-time, bidirectional voice AI applications using Azure AI services.
+Azure AI Voice Live SDK for .NET to build real-time bidirectional voice assistants.
 
 ```bash
 git clone https://github.com/sickn33/antigravity-awesome-skills.git
 ```
 Files: `skills/azure-ai-voicelive-dotnet/`
 
-📊 Score: 95 · 🏥 Health: 80 · 🏷️ Tags: `azure-ai`, `voice-sdk`, `dotnet`
-📅 Last active: 2026-05-03 · 📦 Source: Antigravity Skills
+📊 Score: 95 · 🏥 Health: 80 · 🏷️ Tags: `azure-ai`, `voice-assistant`, `websocket`
+📅 Last active: 2026-05-04 · 📦 Source: Antigravity Skills
+
+</details>
+
+<details>
+<summary>⭐ <strong>azure-eventhub-dotnet</strong> (36.3k★) — Azure Event Hubs .NET SDK for high-throughput event streamin...</summary>
+
+Azure Event Hubs .NET SDK for high-throughput event streaming.
+
+```bash
+git clone https://github.com/sickn33/antigravity-awesome-skills.git
+```
+Files: `skills/azure-eventhub-dotnet/`
+
+📊 Score: 95 · 🏥 Health: 80 · 🏷️ Tags: `azure-event-hubs`, `dotnet-sdk`, `event-streaming`
+📅 Last active: 2026-05-04 · 📦 Source: Antigravity Skills
+
+</details>
+
+<details>
+<summary>⭐ <strong>azure-mgmt-fabric-dotnet</strong> (36.3k★) — .NET SDK for managing Microsoft Fabric capacity resources vi...</summary>
+
+.NET SDK for managing Microsoft Fabric capacity resources via Azure Resource Manager.
+
+```bash
+git clone https://github.com/sickn33/antigravity-awesome-skills.git
+```
+Files: `skills/azure-mgmt-fabric-dotnet/`
+
+📊 Score: 95 · 🏥 Health: 80 · 🏷️ Tags: `azure-sdk`, `microsoft-fabric`, `resource-manager`
+📅 Last active: 2026-05-04 · 📦 Source: Antigravity Skills
+
+</details>
+
+<details>
+<summary>⭐ <strong>azure-resource-manager-durabletask-dotnet</strong> (36.3k★) — .NET SDK for managing Azure Durable Task Scheduler resources...</summary>
+
+.NET SDK for managing Azure Durable Task Scheduler resources via ARM.
+
+```bash
+git clone https://github.com/sickn33/antigravity-awesome-skills.git
+```
+Files: `skills/azure-resource-manager-durabletask-dotnet/`
+
+📊 Score: 95 · 🏥 Health: 80 · 🏷️ Tags: `azure-sdk`, `durable-task`, `resource-manager`
+📅 Last active: 2026-05-04 · 📦 Source: Antigravity Skills
+
+</details>
+
+<details>
+<summary>⭐ <strong>azure-resource-manager-playwright-dotnet</strong> (36.3k★) — .NET SDK for managing Microsoft Playwright Testing workspace...</summary>
+
+.NET SDK for managing Microsoft Playwright Testing workspaces via Azure Resource Manager.
+
+```bash
+git clone https://github.com/sickn33/antigravity-awesome-skills.git
+```
+Files: `skills/azure-resource-manager-playwright-dotnet/`
+
+📊 Score: 95 · 🏥 Health: 80 · 🏷️ Tags: `azure-resource-manager`, `playwright-testing`, `dotnet-sdk`
+📅 Last active: 2026-05-04 · 📦 Source: Antigravity Skills
+
+</details>
+
+<details>
+<summary>⭐ <strong>azure-storage-blob-ts</strong> (36.3k★) — TypeScript SDK for Azure Blob Storage operations including u...</summary>
+
+TypeScript SDK for Azure Blob Storage operations including upload, download, and management.
+
+```bash
+git clone https://github.com/sickn33/antigravity-awesome-skills.git
+```
+Files: `skills/azure-storage-blob-ts/`
+
+📊 Score: 95 · 🏥 Health: 80 · 🏷️ Tags: `azure-storage`, `blob-storage`, `typescript-sdk`
+📅 Last active: 2026-05-04 · 📦 Source: Antigravity Skills
+
+</details>
+
+<details>
+<summary>⭐ <strong>azure-storage-queue-ts</strong> (36.3k★) — TypeScript SDK for Azure Queue Storage message operations wi...</summary>
+
+TypeScript SDK for Azure Queue Storage message operations with authentication and processing patterns.
+
+```bash
+git clone https://github.com/sickn33/antigravity-awesome-skills.git
+```
+Files: `skills/azure-storage-queue-ts/`
+
+📊 Score: 95 · 🏥 Health: 80 · 🏷️ Tags: `azure-sdk`, `queue-storage`, `typescript`
+📅 Last active: 2026-05-04 · 📦 Source: Antigravity Skills
+
+</details>
+
+<details>
+<summary>⭐ <strong>claimable-postgres</strong> (36.3k★) — Provision instant temporary Postgres databases via API, CLI,...</summary>
+
+Provision instant temporary Postgres databases via API, CLI, SDK, or Vite plugin with no signup required.
+
+```bash
+git clone https://github.com/sickn33/antigravity-awesome-skills.git
+```
+Files: `skills/claimable-postgres/`
+
+📊 Score: 95 · 🏥 Health: 80 · 🏷️ Tags: `postgres`, `temporary-database`, `neon`
+📅 Last active: 2026-05-04 · 📦 Source: Antigravity Skills
 
 </details>
 

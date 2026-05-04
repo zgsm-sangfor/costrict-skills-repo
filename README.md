@@ -1,12 +1,12 @@
 <div align="center">
 <img src="assets/logo.png" alt="Everything AI Coding logo" width="600" />
-<p><strong><!-- README_APPROX_COUNT:START -->4100<!-- README_APPROX_COUNT:END -->+ curated AI coding resources — browse, evaluate, install</strong><br/>MCP Servers · Skills · Rules · Prompts</p>
+<p><strong><!-- README_APPROX_COUNT:START -->4200<!-- README_APPROX_COUNT:END -->+ curated AI coding resources — browse, evaluate, install</strong><br/>MCP Servers · Skills · Rules · Prompts</p>
 
 <p>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/stargazers"><img src="https://img.shields.io/github/stars/zgsm-ai/everything-ai-coding?style=flat-square&color=4A90D9" alt="Stars" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zgsm-ai/everything-ai-coding?style=flat-square" alt="License" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/commits/main"><img src="https://img.shields.io/github/last-commit/zgsm-ai/everything-ai-coding?style=flat-square" alt="Last Commit" /></a>
-  <img src="https://img.shields.io/badge/resources-4128-2ECC71?style=flat-square" alt="Resources" />
+  <img src="https://img.shields.io/badge/resources-4252-2ECC71?style=flat-square" alt="Resources" />
 </p>
 
 <p>
@@ -41,29 +41,29 @@ Model Context Protocol servers that connect AI agents to external tools, databas
 <!-- README_TOP5_MCP:START -->
 | Name | ⭐ Stars | Score | Description |
 |------|----------|-------|-------------|
-| [MCP Inspector](https://github.com/modelcontextprotocol/inspector) | 9.2k | 99 | A developer tool for visually testing and debugging Model Context Pro… |
-| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 32.0k | 98 | MCP server for browser automation using Playwright's accessibility tr… |
-| [github/github-mcp-server](https://github.com/github/github-mcp-server) | 29.5k | 98 | An official MCP server that connects AI agents to GitHub for reposito… |
-| [topoteretes/cognee](https://github.com/topoteretes/cognee/tree/dev/cognee-mcp) | 17.0k | 98 | MCP server for AI agent memory management with graph and vector stora… |
+| [MCP Inspector](https://github.com/modelcontextprotocol/inspector) | 9.2k | 99 | A developer tool for testing and debugging MCP servers via UI or CLI. |
 | [IDA Pro MCP](https://github.com/mrexodia/ida-pro-mcp) | 6.7k | 98 | MCP server enabling AI-assisted reverse engineering in IDA Pro. |
+| [Firecrawl](https://github.com/mendableai/firecrawl-mcp-server) | 6.2k | 98 | MCP server for web scraping, search, and data extraction via Firecraw… |
+| [Grafana](https://github.com/grafana/mcp-grafana) | 3.0k | 98 | MCP server for AI-assisted Grafana operations: dashboards, datasource… |
+| [Time](https://github.com/modelcontextprotocol/servers/tree/main/src/time) | 85.0k | 97 | MCP server providing current time and timezone conversion via IANA ti… |
 <!-- README_TOP5_MCP:END -->
 
 [Browse all MCP servers →](./catalog/mcp/) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=mcp)
 
 ---
 
-### [🎯 Skills](./catalog/skills/) — <!-- README_COUNT_SKILL:START -->1683<!-- README_COUNT_SKILL:END --> entries
+### [🎯 Skills](./catalog/skills/) — <!-- README_COUNT_SKILL:START -->1807<!-- README_COUNT_SKILL:END --> entries
 
 Reusable agent capabilities and workflows for AI coding assistants.
 
 <!-- README_TOP5_SKILL:START -->
 | Name | Source | Score | Description |
 |------|--------|-------|-------------|
-| [MCP Integration](https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/mcp-integration) | Anthropic Official | 97 | Guide for integrating Model Context Protocol (MCP) servers into Claud… |
-| [skill-creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator) | Anthropic Official | 96 | An AI skill for creating, testing, and optimizing other AI skills thr… |
-| [slack-gif-creator](https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator) | Anthropic Official | 96 | A Python toolkit for creating and optimizing animated GIFs specifical… |
-| [xlsx](https://github.com/anthropics/skills/tree/main/skills/xlsx) | Anthropic Official | 96 | An AI skill for creating, editing, and analyzing spreadsheet files (E… |
-| [ui-ux-pro-max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/main/.claude/skills/ui-ux-pro-max) | nextlevelbuilder/ui-ux-pro-max-skill | 95 | A comprehensive AI skill providing UI/UX design intelligence, guideli… |
+| [docx](https://github.com/anthropics/skills/tree/main/skills/docx) | Anthropic Official | 96 | A skill for programmatically creating, editing, and analyzing Word .d… |
+| [skill-creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator) | Anthropic Official | 96 | A meta-skill for creating, testing, and iteratively improving Claude… |
+| [azure-ai-voicelive-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-voicelive-dotnet) | Antigravity Skills | 95 | Azure AI Voice Live SDK for .NET to build real-time bidirectional voi… |
+| [azure-eventhub-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-eventhub-dotnet) | Antigravity Skills | 95 | Azure Event Hubs .NET SDK for high-throughput event streaming. |
+| [azure-mgmt-fabric-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-mgmt-fabric-dotnet) | Antigravity Skills | 95 | .NET SDK for managing Microsoft Fabric capacity resources via Azure R… |
 <!-- README_TOP5_SKILL:END -->
 
 [Browse all skills →](./catalog/skills/) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=skill)
@@ -77,11 +77,11 @@ Coding conventions and AI behavior guidelines for consistent development.
 <!-- README_TOP5_RULE:START -->
 | Name | Source | Score | Category |
 |------|--------|-------|----------|
-| [Backend Rules (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/backend-rules.mdc) | Rules 2.1 | 89 | ai-ml |
-| [Feedback Enhanced (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/feedback-enhanced.mdc) | Rules 2.1 | 88 | tooling |
-| [Bug Fix (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/bug-fix.mdc) | Rules 2.1 | 86 | tooling |
-| [Mcp Intelligent Strategy (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/mcp-intelligent-strategy.mdc) | Rules 2.1 | 86 | tooling |
-| [File Generation Safety Rules (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/file-generation-safety-rules.mdc) | Rules 2.1 | 86 | ai-ml |
+| [Flutter & Dart Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/flutter-dart) | Curated | 0 | mobile |
+| [Supabase Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/supabase) | Curated | 0 | database |
+| [Security Audit Rules](https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules) | Curated | 0 | security |
+| [Technical Documentation Rules](https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules) | Curated | 0 | documentation |
+| [Android Jetpack Compose Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/android-jetpack-compose-cursorrules-prompt-file) | CursorRules | 0 | mobile |
 <!-- README_TOP5_RULE:END -->
 
 [Browse all rules →](./catalog/rules/) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=rule)
@@ -95,11 +95,11 @@ Developer-focused prompt templates for common coding tasks.
 <!-- README_TOP5_PROMPT:START -->
 | Name | Source | Score | Category |
 |------|--------|-------|----------|
-| [Comprehensive repository analysis](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#comprehensive-repository-analysis) | prompts.chat | 96 | security |
-| [Rapid Prototyper](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#rapid-prototyper) | prompts.chat | 96 | backend |
-| [Multiplayer 3D Plane Game](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#multiplayer-3d-plane-game) | prompts.chat | 92 | frontend |
-| [Todo List](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#todo-list) | prompts.chat | 92 | frontend |
-| [Django Unit Test Generator for Viewsets](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#django-unit-test-generator-for-viewsets) | prompts.chat | 92 | backend |
+| [Fullstack Software Developer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#fullstack-software-developer) | Curated | 0 | fullstack |
+| [Ethereum Developer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ethereum-developer) | prompts.chat | 0 | ai-ml |
+| [Linux Terminal](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#linux-terminal) | prompts.chat | 0 | tooling |
+| [Job Interviewer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#job-interviewer) | prompts.chat | 0 | tooling |
+| [JavaScript Console](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#javascript-console) | prompts.chat | 0 | frontend |
 <!-- README_TOP5_PROMPT:END -->
 
 [Browse all prompts →](./catalog/prompts/) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=prompt)
