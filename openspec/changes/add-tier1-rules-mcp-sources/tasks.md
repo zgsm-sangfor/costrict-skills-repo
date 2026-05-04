@@ -17,14 +17,14 @@
 
 ## 3. 核心 sync_windsurfrules.py
 
-- [ ] 3.1 新建 `scripts/sync_windsurfrules.py`，参考 sync_skills.py 风格（GitHub API 列目录 + raw fetch 文件）
-- [ ] 3.2 配置两个仓库：SchneiderSam/awesome-windsurfrules + balqaasem/awesome-windsurfrules
-- [ ] 3.3 递归遍历 rules/ 子目录，对每个 .md 文件 fetch raw 内容
-- [ ] 3.4 global_rules 子目录特殊处理（SchneiderSam + balqaasem 两仓库都有，路径形如 `rules/global_rules/<slug>/global_rules.md`）：加 tag `windsurf-global` + category=global
-- [ ] 3.5 frontmatter 解析（含容错）：提取 name/description/category/tags
-- [ ] 3.6 id 生成：`<filename_slug>-<repo_slug>` 保证跨仓库唯一
-- [ ] 3.7 输出 `catalog/rules/windsurfrules_index.json`
-- [ ] 3.8 单元测试 `tests/test_sync_windsurfrules.py`：覆盖标准 rule / global_rule 标记 / frontmatter 容错 / id 跨仓库唯一性
+- [x] 3.1 新建 `scripts/sync_windsurfrules.py`，参考 sync_skills.py 风格（GitHub API 列目录 + raw fetch 文件）
+- [x] 3.2 配置两个仓库：SchneiderSam/awesome-windsurfrules + balqaasem/awesome-windsurfrules
+- [x] 3.3 递归遍历 rules/ 子目录，对每个 .md 文件 fetch raw 内容
+- [x] 3.4 global_rules 子目录特殊处理（SchneiderSam + balqaasem 两仓库都有，路径形如 `rules/global_rules/<slug>/global_rules.md`）：加 tag `windsurf-global` + category=global
+- [x] 3.5 frontmatter 解析（含容错）：提取 name/description/category/tags
+- [x] 3.6 id 生成：`<filename_slug>-<repo_slug>` 保证跨仓库唯一
+- [x] 3.7 输出 `catalog/rules/windsurfrules_index.json`
+- [x] 3.8 单元测试 `tests/test_sync_windsurfrules.py`：覆盖标准 rule / global_rule 标记 / frontmatter 容错 / id 跨仓库唯一性
 
 ## 4. merge_index 整合
 
