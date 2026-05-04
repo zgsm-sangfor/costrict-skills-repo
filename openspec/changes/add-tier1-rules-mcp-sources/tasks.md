@@ -90,7 +90,7 @@
 - [x] 12.4 归档 1.3 的基线报告（在 `docs/tier1_rules_mcp_baseline.md` 文件头加 `> Archived: ...` 标记，保留文件作为历史决策依据）
 - [ ] 12.5 提交 PR：标题 `[feat] 接入 MCP 官方 registry + awesome-windsurfrules（含 cursor/windsurf spike）` — **由用户在 apply-review 完成后决定 PR 时机**
 
-## 13. 上线后观察
+## 13. 上线后观察（deferred — apply-review 阶段不可关闭，PR merge + 首次 CI 跑通后跟进）
 
 - [ ] 13.1 首次 CI 跑通后人工 review docs/coverage_report.md，确认 mcp+rules 期望命中
 - [ ] 13.2 监控 mcp_registry API schema 与 status 字段稳定性
