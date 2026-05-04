@@ -51,19 +51,19 @@
 
 ## 8. 覆盖率审计脚本
 
-- [ ] 8.1 新建 `scripts/popular_skills_expected.yaml`，初版含 7 条期望（obra/superpowers、vercel-labs/agent-skills、vercel-labs/agent-browser、supermemoryai/supermemory、Leonxlnx/taste、Dammyjay93/interface-design、anthropics/skills）
-- [ ] 8.2 新建 `scripts/audit_popular_coverage.py`：加载期望清单，对照 catalog/index.json 检查每条 source_url 的命中状态与来源类型
-- [ ] 8.3 输出 markdown 报告到 `docs/coverage_report.md`，含状态表（`✅ 直接源` / `⚠️ 仅镜像` / `❌ 未收录`）、install_count、按状态分组统计
-- [ ] 8.4 增量 commit 逻辑：报告内容未变化时跳过 commit，避免空提交
-- [ ] 8.5 单元测试：构造 catalog fixture，验证 3 种命中状态判定正确
+- [x] 8.1 新建 `scripts/popular_skills_expected.yaml`，初版含 7 条期望（obra/superpowers、vercel-labs/agent-skills、vercel-labs/agent-browser、supermemoryai/supermemory、Leonxlnx/taste、Dammyjay93/interface-design、anthropics/skills）
+- [x] 8.2 新建 `scripts/audit_popular_coverage.py`：加载期望清单，对照 catalog/index.json 检查每条 source_url 的命中状态与来源类型
+- [x] 8.3 输出 markdown 报告到 `docs/coverage_report.md`，含状态表（`✅ 直接源` / `⚠️ 仅镜像` / `❌ 未收录`）、install_count、按状态分组统计
+- [x] 8.4 增量 commit 逻辑：报告内容未变化时跳过 commit，避免空提交
+- [x] 8.5 单元测试：构造 catalog fixture，验证 3 种命中状态判定正确
 
 ## 9. 测试覆盖
 
-- [ ] 9.1 新建 `tests/test_sync_skills_sh.py`：覆盖正常拉取 / ETag 命中 / scrapedAt 陈旧降级 / 双路径都失败 / 阈值过滤 / id 唯一性
-- [ ] 9.2 新建 `tests/test_popular_coverage_audit.py`：覆盖期望清单 YAML 解析 / 状态判定 / install_count 显示 / 空 commit 跳过
-- [ ] 9.3 扩展 `tests/test_merge_index.py`：补充 source_priority 与去重合并的 5 种场景
-- [ ] 9.4 扩展 `tests/test_scoring_governor.py`：验证 install_popularity 信号默认权重 0 不影响 final_score
-- [ ] 9.5 全部测试通过：`python -m pytest tests/ -v`
+- [x] 9.1 新建 `tests/test_sync_skills_sh.py`：覆盖正常拉取 / ETag 命中 / scrapedAt 陈旧降级 / 双路径都失败 / 阈值过滤 / id 唯一性
+- [x] 9.2 新建 `tests/test_popular_coverage_audit.py`：覆盖期望清单 YAML 解析 / 状态判定 / install_count 显示 / 空 commit 跳过
+- [x] 9.3 扩展 `tests/test_merge_index.py`：补充 source_priority 与去重合并的 5 种场景
+- [x] 9.4 扩展 `tests/test_scoring_governor.py`：验证 install_popularity 信号默认权重 0 不影响 final_score
+- [x] 9.5 全部测试通过：`python -m pytest tests/ -v`
 
 ## 10. 本地验证与 dry-run
 

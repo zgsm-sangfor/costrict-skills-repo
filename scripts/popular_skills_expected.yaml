@@ -1,0 +1,33 @@
+# 期望 catalog 收录的热门 skill 清单，用于覆盖率审计。
+#
+# 字段说明：
+#   - name        : 内部展示用名称（不参与命中判定）
+#   - github_repo : owner/repo（小写比较，用于命中判定）
+#   - reason      : 入选理由（人工维护，便于 review 时判断是否仍然合理）
+#
+# 命中判定逻辑见 scripts/audit_popular_coverage.py：
+#   - "直接源" — catalog 中存在 source_url 落在该 owner/repo 的 entry
+#   - "仅镜像" — 仅以 sickn33/antigravity-awesome-skills 等镜像源形式存在
+#   - "未收录" — catalog 中完全找不到
+expected_skills:
+  - name: superpowers
+    github_repo: obra/superpowers
+    reason: "94K stars, 方法论级 skill 集合，已被 Anthropic 官方 marketplace 接纳"
+  - name: agent-skills
+    github_repo: vercel-labs/agent-skills
+    reason: "26K stars, Vercel 官方旗舰 skill 集合（React/Next.js/web design）"
+  - name: agent-browser
+    github_repo: vercel-labs/agent-browser
+    reason: "14K stars, 浏览器自动化 skill"
+  - name: supermemory
+    github_repo: supermemoryai/supermemory
+    reason: "17K stars, 跨 agent 记忆引擎"
+  - name: taste
+    github_repo: Leonxlnx/taste
+    reason: "13K stars, 第三方设计 skill 标杆"
+  - name: interface-design
+    github_repo: Dammyjay93/interface-design
+    reason: "4.7K stars, UI 一致性 skill"
+  - name: skills
+    github_repo: anthropics/skills
+    reason: "Anthropic 官方 skill 库（含 frontend-design 等 65K stars 级 skill）"
