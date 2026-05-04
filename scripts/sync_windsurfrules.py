@@ -19,6 +19,8 @@ from utils import (  # noqa: E402
 
 CATALOG_DIR = os.path.join(os.path.dirname(__file__), "..", "catalog", "rules")
 OUTPUT_PATH = os.path.join(CATALOG_DIR, "windsurfrules_index.json")
+CACHE_DIR = os.path.join(os.path.dirname(__file__), "..", ".windsurfrules_cache")
+LAST_SYNC_PATH = os.path.join(CACHE_DIR, "last_sync.txt")
 TODAY = date.today().isoformat()
 
 # 两个仓库及其在 id 后缀中使用的 slug
@@ -229,6 +231,7 @@ def parse_repo(repo: str, repo_slug: str) -> list[dict]:
 
 
 def sync() -> int:
+    os.makedirs(CACHE_DIR, exist_ok=True)
     all_entries: list[dict] = []
     failed_repos = 0
     for repo, repo_slug in REPOS:
@@ -247,6 +250,8 @@ def sync() -> int:
 
     all_entries.sort(key=lambda e: e.get("id", ""))
     save_index(all_entries, OUTPUT_PATH)
+    with open(LAST_SYNC_PATH, "w", encoding="utf-8") as f:
+        f.write(TODAY)
     return 0
 
 

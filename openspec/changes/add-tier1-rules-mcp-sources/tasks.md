@@ -43,11 +43,11 @@
 
 ## 6. CI workflow 改造
 
-- [ ] 6.1 修改 `.github/workflows/sync.yml`：sync_mcp 之后插入 sync_mcp_registry step
-- [ ] 6.2 修改 workflow：sync_rules 之后插入 sync_windsurfrules step
-- [ ] 6.3 加 `.mcp_registry_cache/` 与 `.windsurfrules_cache/` 各自独立 weekly cache block（restore-keys 仅本周 stamp 不跨周回退）
-- [ ] 6.4 添加错误兜底：两个 sync 任意失败时输出 ERROR 但 continue-on-error=true，不阻断 merge_index
-- [ ] 6.5 sync_mcp_registry 与 sync_windsurfrules step 加 `timeout-minutes: 10` 防卡死
+- [x] 6.1 修改 `.github/workflows/sync.yml`：sync_mcp 之后插入 sync_mcp_registry step
+- [x] 6.2 修改 workflow：sync_rules 之后插入 sync_windsurfrules step
+- [x] 6.3 加 `.mcp_registry_cache/` 与 `.windsurfrules_cache/` 各自独立 weekly cache block（restore-keys 仅本周 stamp 不跨周回退）
+- [x] 6.4 添加错误兜底：两个 sync 任意失败时输出 ERROR 但 continue-on-error=true，不阻断 merge_index
+- [x] 6.5 sync_mcp_registry 与 sync_windsurfrules step 加 `timeout-minutes: 10` 防卡死
 
 ## 7. 覆盖率审计扩展
 

@@ -59,6 +59,28 @@ jobs:
           restore-keys: |
             skills-sh-cache-${{ steps.week.outputs.stamp }}-
 
+      # MCP registry 缓存独立隔离：restore-keys 仅本周 stamp 前缀，禁止跨周回退
+      - name: Restore MCP registry weekly cache
+        id: cache-restore-mcp-registry
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            .mcp_registry_cache/
+          key: mcp-registry-cache-${{ steps.week.outputs.stamp }}-${{ github.run_number }}
+          restore-keys: |
+            mcp-registry-cache-${{ steps.week.outputs.stamp }}-
+
+      # windsurfrules 缓存独立隔离：同上
+      - name: Restore windsurfrules weekly cache
+        id: cache-restore-windsurfrules
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            .windsurfrules_cache/
+          key: windsurfrules-cache-${{ steps.week.outputs.stamp }}-${{ github.run_number }}
+          restore-keys: |
+            windsurfrules-cache-${{ steps.week.outputs.stamp }}-
+
       - name: Crawl mcp.so (incremental)
         run: python scripts/crawl_mcp_so.py --mode incremental
         timeout-minutes: 15
@@ -70,10 +92,24 @@ jobs:
         run: python scripts/sync_mcp.py
         continue-on-error: true
 
+      - name: Sync MCP registry
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/sync_mcp_registry.py
+        timeout-minutes: 10
+        continue-on-error: true
+
       - name: Sync Rules
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/sync_rules.py
+        continue-on-error: true
+
+      - name: Sync awesome-windsurfrules
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/sync_windsurfrules.py
+        timeout-minutes: 10
         continue-on-error: true
 
       - name: Sync Skills
@@ -184,3 +220,19 @@ jobs:
           path: |
             .skills_sh_cache/
           key: skills-sh-cache-${{ steps.week.outputs.stamp }}-${{ github.run_number }}
+
+      - name: Save MCP registry weekly cache
+        uses: actions/cache/save@v4
+        if: always() && steps.cache-restore-mcp-registry.outputs.cache-hit != 'true'
+        with:
+          path: |
+            .mcp_registry_cache/
+          key: mcp-registry-cache-${{ steps.week.outputs.stamp }}-${{ github.run_number }}
+
+      - name: Save windsurfrules weekly cache
+        uses: actions/cache/save@v4
+        if: always() && steps.cache-restore-windsurfrules.outputs.cache-hit != 'true'
+        with:
+          path: |
+            .windsurfrules_cache/
+          key: windsurfrules-cache-${{ steps.week.outputs.stamp }}-${{ github.run_number }}
