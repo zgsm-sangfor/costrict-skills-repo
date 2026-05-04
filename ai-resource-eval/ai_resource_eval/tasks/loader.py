@@ -19,10 +19,13 @@ logger = logging.getLogger(__name__)
 # Directory containing bundled YAML task configs (sibling to this module).
 _TASKS_DIR = Path(__file__).parent
 
-# install_popularity 默认权重 0：信号采集到 health 输出但不参与 final_score 加权。
+# install_popularity 默认权重 0.05：让 install_count 高的 skills.sh entry 在
+# health_score 中获得轻微加分，避免 LLM 误 reject 高真实使用量条目。仅 skills.sh
+# 派生 entry（含 install_count > 0）受影响；其他 entry 走 excluded path 自动剔除
+# 该信号并按比例分回原权重，结果不变。
 # 通过环境变量 HEALTH_W_INSTALL_POPULARITY 可覆盖（合法范围 [0, 1]）。
 _INSTALL_POPULARITY_ENV = "HEALTH_W_INSTALL_POPULARITY"
-_INSTALL_POPULARITY_DEFAULT_WEIGHT = 0.0
+_INSTALL_POPULARITY_DEFAULT_WEIGHT = 0.05
 
 
 def _resolve_install_popularity_weight() -> float:
