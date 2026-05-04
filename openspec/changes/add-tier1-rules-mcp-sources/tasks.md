@@ -6,14 +6,14 @@
 
 ## 2. 核心 sync_mcp_registry.py
 
-- [ ] 2.1 新建 `scripts/sync_mcp_registry.py`，仅用 Python 标准库（urllib、json、os、hashlib、datetime）
-- [ ] 2.2 实现 `fetch_registry(limit=100)` 生成器：分页拉取 v0/servers，处理 cursor 翻页与 ETag 缓存到 `.mcp_registry_cache/registry.json` + `etag.txt`
-- [ ] 2.3 实现 active+isLatest 过滤：仅保留 `_meta.io.modelcontextprotocol.registry/official.status == "active"` 且 `isLatest == true`
-- [ ] 2.4 实现 `normalize_entry(raw)`：转换为 catalog mcp schema，含 mcp_registry_status / mcp_registry_published_at / mcp_remotes 三个新字段
-- [ ] 2.5 source_url 构造：`https://registry.modelcontextprotocol.io/v0/servers/{encoded_name}`（每条 entry 唯一，避免与 wong2 GitHub URL 错误合并）
-- [ ] 2.6 输出 `catalog/mcp/mcp_registry_index.json`，结构与现有 mcp child index 一致
-- [ ] 2.7 增量 diff 写入 `.mcp_registry_cache/diff.json`：added / status_changed / version_bumped / removed 四类
-- [ ] 2.8 单元测试 `tests/test_sync_mcp_registry.py`：覆盖分页 / ETag 304 / active 过滤 / isLatest 过滤 / id 唯一性 / 字段映射
+- [x] 2.1 新建 `scripts/sync_mcp_registry.py`，仅用 Python 标准库（urllib、json、os、hashlib、datetime）
+- [x] 2.2 实现 `fetch_registry(limit=100)` 生成器：分页拉取 v0/servers，处理 cursor 翻页与 ETag 缓存到 `.mcp_registry_cache/registry.json` + `etag.txt`
+- [x] 2.3 实现 active+isLatest 过滤：仅保留 `_meta.io.modelcontextprotocol.registry/official.status == "active"` 且 `isLatest == true`
+- [x] 2.4 实现 `normalize_entry(raw)`：转换为 catalog mcp schema，含 mcp_registry_status / mcp_registry_published_at / mcp_remotes 三个新字段
+- [x] 2.5 source_url 构造：`https://registry.modelcontextprotocol.io/v0/servers/{encoded_name}`（每条 entry 唯一，避免与 wong2 GitHub URL 错误合并）
+- [x] 2.6 输出 `catalog/mcp/mcp_registry_index.json`，结构与现有 mcp child index 一致
+- [x] 2.7 增量 diff 写入 `.mcp_registry_cache/diff.json`：added / status_changed / version_bumped / removed 四类
+- [x] 2.8 单元测试 `tests/test_sync_mcp_registry.py`：覆盖分页 / ETag 304 / active 过滤 / isLatest 过滤 / id 唯一性 / 字段映射
 
 ## 3. 核心 sync_windsurfrules.py
 
