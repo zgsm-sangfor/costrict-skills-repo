@@ -57,9 +57,9 @@
 
 ## 8. 增量评估保护
 
-- [ ] 8.1 修改 `scripts/eval_bridge.py`：识别 mcp_registry / windsurfrules 派生 entry，复用 skills.sh 同款短路逻辑（diff stable + cache 命中）
-- [ ] 8.2 验证 rubric_version 不变：跑现有测试集确认 mcp_server / rule 两个 task config 没改
-- [ ] 8.3 单元测试：覆盖 mcp_registry stable 短路 + windsurfrules stable 短路
+- [x] 8.1 修改 `scripts/eval_bridge.py`：识别 mcp_registry / windsurfrules 派生 entry，复用 skills.sh 同款短路逻辑（diff stable + cache 命中）
+- [x] 8.2 验证 rubric_version 不变：跑现有测试集确认 mcp_server / rule 两个 task config 没改
+- [x] 8.3 单元测试：覆盖 mcp_registry stable 短路 + windsurfrules stable 短路
 
 ## 9. spike：cursor.directory
 

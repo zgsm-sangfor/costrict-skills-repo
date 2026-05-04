@@ -50,6 +50,15 @@ INSTALL_COUNT_DRIFT_THRESHOLD = 0.20  # ±20% 视为 stable
 
 _DIFF_PATH_DEFAULT = Path(__file__).resolve().parent.parent / ".skills_sh_cache" / "diff.json"
 
+# Section 8: 新增源（mcp_registry / windsurfrules）的短路 sidecar 路径
+_MCP_REGISTRY_DIFF_PATH_DEFAULT = (
+    Path(__file__).resolve().parent.parent / ".mcp_registry_cache" / "diff.json"
+)
+_WINDSURFRULES_REPO_HOSTS = (
+    "schneidersam/awesome-windsurfrules",
+    "balqaasem/awesome-windsurfrules",
+)
+
 # skills.sh raw id 反推：与 sync_skills_sh._sanitize_id_segment / _make_id 同款逻辑
 # 必须与 sync_skills_sh.py 保持一致，否则 short-circuit 与 diff.json 比对不上
 _ID_INVALID_RE = re.compile(r"[^a-z0-9-]+")
@@ -350,6 +359,205 @@ def _select_short_circuit_entries(
 
 
 # ---------------------------------------------------------------------------
+# Section 8: mcp_registry 增量短路
+# ---------------------------------------------------------------------------
+#
+# 设计意图（与 skills.sh 同款，但用 registry 自身的 diff 信号）：
+#   sync_mcp_registry.py 写出 .mcp_registry_cache/diff.json，结构如下：
+#       {
+#         "added":           [<entry_id>, ...],
+#         "removed":         [<entry_id>, ...],
+#         "status_changed":  [{"id": <entry_id>, "old": "...", "new": "..."}, ...],
+#         "version_bumped":  [{"id": <entry_id>, "old": "...", "new": "..."}, ...],
+#         "stable":          <int>,
+#       }
+#
+#   其中 id 即 normalize_entry 生成的 catalog entry id（kebab + sha8）。
+#   这意味着对 registry 主索引中的 entry，diff id 与 entry.id 一一对应；
+#   对 merge 后被高优先级 GitHub 源覆盖的 winner，winner.id 与 registry id
+#   不相等——这些 entry 的 short-circuit 命中率较低（diff 查不到 → 视为
+#   unstable，走完整评估），属于安全 fallback。
+#
+# 触发条件（全部满足才短路）：
+#   1. entry 由 mcp_registry 派生：source_url 是 registry URL，或携带
+#      mcp_registry_status 字段（merge 后 winner 也保留）
+#   2. entry.id 不在 diff 的 added / removed / status_changed.id /
+#      version_bumped.id 集合中（合并集 = unstable）
+#   3. SQLite cache 命中（同款 _lookup_cached_result）
+# ---------------------------------------------------------------------------
+
+
+def load_mcp_registry_diff(diff_path: str | os.PathLike[str] | None = None) -> dict[str, Any]:
+    """读取 .mcp_registry_cache/diff.json；不存在或损坏返回空 dict。"""
+    path = Path(diff_path) if diff_path else _MCP_REGISTRY_DIFF_PATH_DEFAULT
+    if not path.exists():
+        return {}
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if not isinstance(data, dict):
+            return {}
+        return data
+    except (OSError, json.JSONDecodeError) as exc:
+        logger.debug("Failed to read mcp_registry diff at %s: %s", path, exc)
+        return {}
+
+
+def _mcp_registry_unstable_ids(diff: dict[str, Any]) -> set[str]:
+    """从 mcp_registry diff.json 提取「不稳定」entry id 集合。
+
+    合并 added / removed / status_changed[].id / version_bumped[].id 四类。
+    """
+    if not diff:
+        return set()
+    unstable: set[str] = set()
+    unstable.update(diff.get("added") or [])
+    unstable.update(diff.get("removed") or [])
+    for item in diff.get("status_changed") or []:
+        if isinstance(item, dict) and item.get("id"):
+            unstable.add(item["id"])
+    for item in diff.get("version_bumped") or []:
+        if isinstance(item, dict) and item.get("id"):
+            unstable.add(item["id"])
+    return unstable
+
+
+def _is_mcp_registry_derived(entry: dict[str, Any]) -> bool:
+    """判定 entry 是否承载 mcp_registry 派生数据。
+
+    条件（任一满足）：
+      - source == "registry.modelcontextprotocol.io"（registry-only 主索引条目）
+      - source_url 指向 registry.modelcontextprotocol.io
+      - 携带 mcp_registry_status 字段（merge 后 winner 通过 _MCP_REGISTRY_MERGE_FIELDS 保留）
+    """
+    if (entry.get("source") or "") == "registry.modelcontextprotocol.io":
+        return True
+    su = entry.get("source_url") or ""
+    # 只把 source_url 直接落在 registry 的 entry 视为 mcp_registry 派生。
+    # merge 后的 GitHub winner 即使携带 mcp_registry_status 字段也不在此短路
+    # 路径中——因为 registry diff 用 registry id 标记 unstable，winner.id 是
+    # GitHub id，二者不对应；若也短路这类 winner 会在 status_changed 场景下
+    # 误复用旧评分（codex review §8 finding #2）。
+    if "registry.modelcontextprotocol.io" in su:
+        return True
+    return False
+
+
+def _select_mcp_registry_short_circuit_entries(
+    entries: list[dict[str, Any]],
+    cache: Any,
+    diff: dict[str, Any] | None,
+    rubric_version: str | None = None,
+) -> tuple[dict[str, dict[str, Any]], list[dict[str, Any]]]:
+    """对 mcp_registry 派生条目预筛短路。
+
+    返回 (短路命中的 results, 仍需评估的 entries)。
+
+    短路条件（Section 8.1.1）：
+    - entry 是 mcp_registry 派生
+    - entry.id 不在 diff 的 unstable 集合中
+    - cache 命中（rubric_version 匹配 + 未过期）
+
+    注意：merge 后 winner.id 通常 ≠ registry id，diff 查不到 → 视为 unstable，
+    走完整评估，属安全 fallback（不会把不该短路的条目漏评）。
+    """
+    if cache is None:
+        return {}, list(entries)
+
+    unstable = _mcp_registry_unstable_ids(diff or {})
+    short_circuit: dict[str, dict[str, Any]] = {}
+    remaining: list[dict[str, Any]] = []
+
+    for entry in entries:
+        eid = entry.get("id")
+        if not eid:
+            remaining.append(entry)
+            continue
+        if not _is_mcp_registry_derived(entry):
+            remaining.append(entry)
+            continue
+        # 首次 sync 无 diff.json → 全部走完整评估（安全 default）
+        if not diff:
+            remaining.append(entry)
+            continue
+        if eid in unstable:
+            remaining.append(entry)
+            continue
+        cached = _lookup_cached_result(cache, eid, rubric_version=rubric_version)
+        if cached is None:
+            remaining.append(entry)
+            continue
+        short_circuit[eid] = cached
+
+    return short_circuit, remaining
+
+
+# ---------------------------------------------------------------------------
+# Section 8: windsurfrules 增量短路
+# ---------------------------------------------------------------------------
+#
+# 设计意图：
+#   sync_windsurfrules.py 没有写 diff.json（content_hash 由 cache 自动按
+#   runner.evaluate 时算出，rubric_version 升级会自动失效旧 row）。因此
+#   windsurfrules 的短路策略最简：只要 entry 是 windsurfrules 派生 + cache
+#   命中（rubric 匹配 + 未过期），即可复用——底层 EvalCache 的 content_hash
+#   语义保证 README 内容真变了时旧 row 自动 miss（runner 写入新 row 用新 hash）。
+#
+#   触发条件：
+#     1. entry source/source_url 指向 awesome-windsurfrules（两个仓库之一）
+#     2. cache 命中（同款 _lookup_cached_result）
+# ---------------------------------------------------------------------------
+
+
+def _is_windsurfrules_derived(entry: dict[str, Any]) -> bool:
+    """判定 entry 是否承载 windsurfrules 派生数据。
+
+    条件（任一满足）：
+      - source == "awesome-windsurfrules"
+      - source_url owner/repo 命中两个 windsurfrules 镜像之一
+    """
+    if (entry.get("source") or "") == "awesome-windsurfrules":
+        return True
+    su = (entry.get("source_url") or "").lower()
+    if not su:
+        return False
+    for slug in _WINDSURFRULES_REPO_HOSTS:
+        if f"github.com/{slug}/" in su or f"github.com/{slug}#" in su or su.endswith(
+            f"github.com/{slug}"
+        ):
+            return True
+    return False
+
+
+def _select_windsurfrules_short_circuit_entries(
+    entries: list[dict[str, Any]],
+    cache: Any,
+    rubric_version: str | None = None,
+) -> tuple[dict[str, dict[str, Any]], list[dict[str, Any]]]:
+    """对 windsurfrules 派生条目预筛短路。
+
+    返回 (短路命中的 results, 仍需评估的 entries)。
+
+    短路条件（Section 8.1.2）：
+    - entry 是 windsurfrules 派生
+    - cache 命中（rubric_version 匹配 + 未过期 + content_hash 由底层 cache 校验）
+
+    与 skills.sh / mcp_registry 不同：不依赖 diff.json，因为 sync_windsurfrules
+    没有维护 diff，且 EvalCache 的 content_hash 已能识别 README 变更——内容真变
+    了 cache 中的旧 row 不会被 runner 复用（runner 用新 hash 写入新 row），
+    本短路也只会复用同 hash 的历史 row。
+    """
+    # 保守策略（codex review §8 finding #1）：windsurfrules 没有 diff 文件，
+    # _lookup_cached_result 会按 entry_id+rubric_version 命中"任意历史 content_hash"
+    # 的旧 row，可能在上游 README 变更时复用 stale eval。规模又小（~108 条），
+    # 全量重评的成本极低，因此本短路路径直接禁用，所有 windsurfrules 走完整评估。
+    # 待 sync_windsurfrules 引入 content_hash 维护机制后再开启。
+    if cache is None:
+        return {}, list(entries)
+    return {}, list(entries)
+
+
+# ---------------------------------------------------------------------------
 # Result → Entry mapping
 # ---------------------------------------------------------------------------
 
@@ -479,16 +687,25 @@ def run_eval(
     incremental: bool = True,
     concurrency: int = 4,
     skills_sh_diff_path: str | os.PathLike[str] | None = None,
+    mcp_registry_diff_path: str | os.PathLike[str] | None = None,
 ) -> dict[str, dict[str, Any]]:
     """Run the eval harness and return {entry_id: result_dict}.
 
     Groups entries by type and runs each group with its task config.
     Returns only entries that were successfully evaluated.
 
-    Skills.sh 短路（Section 6 + P1/P2-1 修复）：当 ``incremental=True`` 且
-    ``.skills_sh_cache/diff.json`` 存在时，对携带 skills_sh_url 且 raw id
-    不在 unstable 集合的条目，按当前 task 的 rubric_version 查 cache 复用
-    历史 EvalResult；rubric 升级后旧 row 自然 miss，runner 会重评。
+    增量短路（incremental=True 时按顺序应用三种 short-circuit，互不重叠）：
+
+    - Section 6 — skills.sh：``.skills_sh_cache/diff.json`` 存在时，对携带
+      skills_sh_url 且 raw id 不在 unstable 集合的 skill 条目复用 cache。
+    - Section 8 — mcp_registry：``.mcp_registry_cache/diff.json`` 存在时，对
+      registry 派生的 mcp 条目（id 不在 added/removed/status_changed/version_bumped
+      集合）复用 cache。
+    - Section 8 — windsurfrules：无 diff，对 windsurfrules 派生的 rule 条目
+      只要 cache 命中（rubric_version 匹配 + content_hash 一致）即复用。
+
+    任一短路都会按当前 task 的 rubric_version 重建标准 cache_key 校验失效，
+    rubric 升级后旧 row 自然 miss，runner 会重评。
     """
     try:
         from ai_resource_eval.api.types import EvalItem
@@ -509,36 +726,73 @@ def run_eval(
         t = entry.get("type", "skill")
         groups.setdefault(t, []).append(entry)
 
-    # ── Section 6 短路：按 type 计算 rubric_version 后过滤 ──
+    # ── Section 6/8 短路：按 type 计算 rubric_version 后依次应用三种短路 ──
     short_circuit_results: dict[str, dict[str, Any]] = {}
     remaining_by_type: dict[str, list[dict]] = {t: list(g) for t, g in groups.items()}
 
     if incremental:
-        diff = load_skills_sh_diff(skills_sh_diff_path)
-        if diff:
-            cache_path = Path(cache_dir)
-            cache_path.mkdir(parents=True, exist_ok=True)
-            try:
-                pre_cache = EvalCache(db_path=cache_path / "eval_cache.db")
-            except Exception as exc:  # noqa: BLE001
-                logger.debug("Failed to open cache for short-circuit: %s", exc)
-                pre_cache = None
-            if pre_cache is not None:
-                for resource_type, group in groups.items():
-                    task_name = resolve_task_name(resource_type)
-                    rubric_version = _compute_rubric_version_for_task(task_name)
-                    short, remaining = _select_short_circuit_entries(
-                        group, pre_cache, diff, rubric_version=rubric_version
+        skills_sh_diff = load_skills_sh_diff(skills_sh_diff_path)
+        mcp_registry_diff = load_mcp_registry_diff(mcp_registry_diff_path)
+
+        # 任一 sidecar 存在 / windsurfrules 短路（无 diff 也跑）都需要打开 cache
+        cache_path = Path(cache_dir)
+        cache_path.mkdir(parents=True, exist_ok=True)
+        try:
+            pre_cache = EvalCache(db_path=cache_path / "eval_cache.db")
+        except Exception as exc:  # noqa: BLE001
+            logger.debug("Failed to open cache for short-circuit: %s", exc)
+            pre_cache = None
+
+        if pre_cache is not None:
+            skills_sh_hits = 0
+            mcp_registry_hits = 0
+            windsurfrules_hits = 0
+
+            for resource_type, group in groups.items():
+                task_name = resolve_task_name(resource_type)
+                rubric_version = _compute_rubric_version_for_task(task_name)
+                current = list(group)
+
+                # 1. skills.sh 短路（依赖 diff.json）
+                if skills_sh_diff:
+                    short, current = _select_short_circuit_entries(
+                        current, pre_cache, skills_sh_diff, rubric_version=rubric_version
                     )
+                    if short:
+                        short_circuit_results.update(short)
+                        skills_sh_hits += len(short)
+
+                # 2. mcp_registry 短路（依赖 diff.json，仅 mcp 类型典型适用，
+                #    但通用代码不强行限制 type；非 registry 派生的 entry 在
+                #    _is_mcp_registry_derived 内会被过滤掉）
+                if mcp_registry_diff:
+                    short, current = _select_mcp_registry_short_circuit_entries(
+                        current, pre_cache, mcp_registry_diff, rubric_version=rubric_version
+                    )
+                    if short:
+                        short_circuit_results.update(short)
+                        mcp_registry_hits += len(short)
+
+                # 3. windsurfrules 短路（无 diff，仅 cache 命中即复用）
+                short, current = _select_windsurfrules_short_circuit_entries(
+                    current, pre_cache, rubric_version=rubric_version
+                )
+                if short:
                     short_circuit_results.update(short)
-                    remaining_by_type[resource_type] = remaining
-                if short_circuit_results:
-                    total_remaining = sum(len(v) for v in remaining_by_type.values())
-                    logger.info(
-                        "Skills.sh 短路：复用 cache %d 条 / 剩余待评估 %d 条",
-                        len(short_circuit_results),
-                        total_remaining,
-                    )
+                    windsurfrules_hits += len(short)
+
+                remaining_by_type[resource_type] = current
+
+            if short_circuit_results:
+                total_remaining = sum(len(v) for v in remaining_by_type.values())
+                logger.info(
+                    "增量短路：skills.sh=%d / mcp_registry=%d / windsurfrules=%d "
+                    "（剩余待评估 %d 条）",
+                    skills_sh_hits,
+                    mcp_registry_hits,
+                    windsurfrules_hits,
+                    total_remaining,
+                )
 
     # 仍需评估的条目（按 type 已分组）
     remaining_total = sum(len(v) for v in remaining_by_type.values())
@@ -621,12 +875,15 @@ def eval_and_map(
     incremental: bool = True,
     concurrency: int = 4,
     skills_sh_diff_path: str | os.PathLike[str] | None = None,
+    mcp_registry_diff_path: str | os.PathLike[str] | None = None,
 ) -> None:
     """Run eval harness on entries and map results back in-place.
 
     This is the main entry point called from the pipeline.
 
     skills_sh_diff_path 可选：默认读取项目根 ``.skills_sh_cache/diff.json``。
+    mcp_registry_diff_path 可选：默认读取 ``.mcp_registry_cache/diff.json``。
+    windsurfrules 短路无 diff 依赖，自动启用（仅靠 cache 命中）。
     """
     results = run_eval(
         entries,
@@ -634,6 +891,7 @@ def eval_and_map(
         incremental=incremental,
         concurrency=concurrency,
         skills_sh_diff_path=skills_sh_diff_path,
+        mcp_registry_diff_path=mcp_registry_diff_path,
     )
 
     mapped = 0
