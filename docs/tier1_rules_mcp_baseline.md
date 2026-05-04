@@ -1,5 +1,9 @@
 # Tier 1 Rules + MCP 接入基线报告
 
+> **Archived**: 本文档是 `add-tier1-rules-mcp-sources` change 的探针实测报告，
+> 用于决策接入策略。change 已完成实施（§1 探针 → §10 spike）。后续如需新探针
+> 报告，请新建 follow-up change。
+
 > 对应 OpenSpec change：`add-tier1-rules-mcp-sources` 任务 §1
 > 探针时间：2026-05-04
 > 探针环境：本机直连（无 GITHUB_TOKEN，registry API 公开）

@@ -84,11 +84,11 @@
 
 ## 12. 文档与提交
 
-- [ ] 12.1 更新 `CLAUDE.md` "MCP 上游源" 与 "Skills 三层来源" 章节，新增两个源说明
-- [ ] 12.2 更新 `CLAUDE.md` "评估引擎" 章节，新增 mcp_registry 字段
-- [ ] 12.3 更新 `README.md` / `README.zh-CN.md` Sources 表格
-- [ ] 12.4 删除或归档 1.3 的基线报告
-- [ ] 12.5 提交 PR：标题 `[feat] 接入 MCP 官方 registry + awesome-windsurfrules（含 cursor/windsurf spike）`
+- [x] 12.1 更新 `CLAUDE.md` "MCP 上游源" 与 "Skills 三层来源" 章节，新增两个源说明（**注**：CLAUDE.md 是 gitignored 的本地开发指南，更新仅落在本地 working copy；用户可见的源说明已通过 12.3 进入 README 双语表格——这是本 change 的 tracked 文档交付物）
+- [x] 12.2 更新 `CLAUDE.md` "评估引擎" 章节，新增 mcp_registry 字段（同 12.1，本地 working copy 已更新；schema/mcp 字段定义在 catalog/schema.json + tests/test_mcp_registry_optional_fields.py 中已 tracked，用户/reviewer 可直接看代码）
+- [x] 12.3 更新 `README.md` / `README.zh-CN.md` Sources 表格（MCP 行 +registry.modelcontextprotocol.io；Rules 行 +awesome-windsurfrules ×2 镜像）
+- [x] 12.4 归档 1.3 的基线报告（在 `docs/tier1_rules_mcp_baseline.md` 文件头加 `> Archived: ...` 标记，保留文件作为历史决策依据）
+- [ ] 12.5 提交 PR：标题 `[feat] 接入 MCP 官方 registry + awesome-windsurfrules（含 cursor/windsurf spike）` — **由用户在 apply-review 完成后决定 PR 时机**
 
 ## 13. 上线后观察
 
