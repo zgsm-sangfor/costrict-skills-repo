@@ -75,10 +75,10 @@
 
 ## 11. 文档与提交
 
-- [ ] 11.1 更新 `CLAUDE.md` 中的"Skills 三层来源与去重"章节，新增 skills.sh 作为 Tier 1 源说明
-- [ ] 11.2 更新 `CLAUDE.md` 的"评估引擎"章节，新增 `install_popularity` 信号与 `HEALTH_W_INSTALL_POPULARITY` 环境变量
-- [ ] 11.3 更新 `README.md` / `README.zh-CN.md` 的 sync 命令说明，加入 `sync_skills_sh.py`
-- [ ] 11.4 删除或归档 1.3 的基线报告 `docs/skills_sh_baseline.md`
+- [x] 11.1 更新 `CLAUDE.md` 中的"Skills 三层来源与去重"章节，新增 skills.sh 作为 Tier 1 源说明
+- [x] 11.2 更新 `CLAUDE.md` 的"评估引擎"章节，新增 `install_popularity` 信号与 `HEALTH_W_INSTALL_POPULARITY` 环境变量
+- [x] 11.3 更新 `README.md` / `README.zh-CN.md` 的 sync 命令说明，加入 `sync_skills_sh.py`
+- [x] 11.4 删除或归档 1.3 的基线报告 `docs/skills_sh_baseline.md`
 - [ ] 11.5 提交 PR：标题 `[feat] 接入 skills.sh 作为 Tier 1 上游源（含覆盖率审计）`，描述含 baseline 数据 + 新增字段 + CI 增量策略说明
 
 ## 12. 上线后观察
