@@ -83,6 +83,28 @@
         "type": "string",
         "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?Z$",
         "description": "skills.sh 数据抓取时间，ISO 8601 (e.g. 2026-01-30T04:51:07Z 或 .907Z)；optional"
+      },
+      "mcp_registry_status": {
+        "type": "string",
+        "enum": ["active", "inactive", "deprecated"],
+        "description": "MCP 官方 registry status；仅 mcp_registry 数据源会写入，optional"
+      },
+      "mcp_registry_published_at": {
+        "type": "string",
+        "pattern": "^(\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?Z|)$",
+        "description": "MCP registry 收录时间，ISO 8601 或空串（registry 未提供 publishedAt 时占位）；optional"
+      },
+      "mcp_remotes": {
+        "type": "array",
+        "description": "MCP server remote endpoints（含 type 与 url）；optional",
+        "items": {
+          "type": "object",
+          "required": ["type", "url"],
+          "properties": {
+            "type": { "type": "string" },
+            "url": { "type": "string", "format": "uri" }
+          }
+        }
       }
     }
   }

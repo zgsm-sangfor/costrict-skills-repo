@@ -36,10 +36,10 @@
 
 ## 5. catalog schema 增量字段
 
-- [ ] 5.1 更新 `catalog/schema.json`：mcp entry 增加 mcp_registry_status / mcp_registry_published_at / mcp_remotes 三个 optional 字段
-- [ ] 5.2 status 字段加 enum 校验：active / inactive / deprecated
-- [ ] 5.3 mcp_remotes 字段加 sub-schema：array of {type, url}
-- [ ] 5.4 单元测试扩展：4 种 mcp 字段场景（全有 / 全无 / 部分缺 / 类型错）
+- [x] 5.1 更新 `catalog/schema.json`：mcp entry 增加 mcp_registry_status / mcp_registry_published_at / mcp_remotes 三个 optional 字段
+- [x] 5.2 status 字段加 enum 校验：active / inactive / deprecated
+- [x] 5.3 mcp_remotes 字段加 sub-schema：array of {type, url}
+- [x] 5.4 单元测试扩展：4 种 mcp 字段场景（全有 / 全无 / 部分缺 / 类型错）
 
 ## 6. CI workflow 改造
 

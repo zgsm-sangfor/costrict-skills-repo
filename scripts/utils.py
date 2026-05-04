@@ -859,6 +859,96 @@ def validate_skill_optional_fields(entry: dict) -> list[str]:
     return errors
 
 
+# ISO 8601 UTC timestamp pattern accepted by mcp_registry_published_at — same as
+# skills_sh_scraped_at: "2026-01-30T04:51:07Z" 或 "2026-01-30T04:51:07.907Z"
+_MCP_REGISTRY_TS_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?Z$")
+
+_MCP_REGISTRY_STATUS_VALUES = ("active", "inactive", "deprecated")
+
+
+def validate_mcp_registry_fields(entry: dict) -> list[str]:
+    """Validate the three optional registry.modelcontextprotocol.io-contributed
+    fields on an mcp entry.
+
+    All three fields are optional (向后兼容旧条目)，缺失不会报错。
+    若存在则类型必须严格符合 ``catalog/schema.json``：
+
+      - mcp_registry_status        : str, one of ``active`` / ``inactive`` / ``deprecated``
+      - mcp_registry_published_at  : str, ISO 8601 UTC (e.g. ``2026-01-30T04:51:07Z`` 或 ``.907Z``)
+      - mcp_remotes                : list[dict], each item has required str ``type`` + str ``url``
+
+    Returns a list of human-readable error messages (empty list = valid).
+
+    Note: This is the mcp-side sibling of ``validate_skill_optional_fields``.
+    Like that function it is a lightweight ad-hoc check, intended to be cheap
+    enough to call inline from sync / merge pipelines, and does NOT attempt
+    full URI parsing.
+    """
+    errors: list[str] = []
+    eid = entry.get("id", "<unknown>")
+
+    if "mcp_registry_status" in entry:
+        v = entry["mcp_registry_status"]
+        if not isinstance(v, str):
+            errors.append(
+                f'entry "{eid}" mcp_registry_status must be str, got {type(v).__name__}'
+            )
+        elif v not in _MCP_REGISTRY_STATUS_VALUES:
+            errors.append(
+                f'entry "{eid}" mcp_registry_status must be one of '
+                f'{list(_MCP_REGISTRY_STATUS_VALUES)}, got {v!r}'
+            )
+
+    if "mcp_registry_published_at" in entry:
+        v = entry["mcp_registry_published_at"]
+        if not isinstance(v, str):
+            errors.append(
+                f'entry "{eid}" mcp_registry_published_at must be str, '
+                f'got {type(v).__name__}'
+            )
+        # Empty string tolerated as "field present but unset" — mirrors the
+        # tolerance applied to skills_sh_scraped_at.
+        elif v and not _MCP_REGISTRY_TS_RE.match(v):
+            errors.append(
+                f'entry "{eid}" mcp_registry_published_at not ISO 8601, got {v!r}'
+            )
+
+    if "mcp_remotes" in entry:
+        v = entry["mcp_remotes"]
+        if not isinstance(v, list):
+            errors.append(
+                f'entry "{eid}" mcp_remotes must be list, got {type(v).__name__}'
+            )
+        else:
+            for i, item in enumerate(v):
+                if not isinstance(item, dict):
+                    errors.append(
+                        f'entry "{eid}" mcp_remotes[{i}] must be dict, '
+                        f'got {type(item).__name__}'
+                    )
+                    continue
+                if "type" not in item:
+                    errors.append(
+                        f'entry "{eid}" mcp_remotes[{i}] missing required field "type"'
+                    )
+                elif not isinstance(item["type"], str):
+                    errors.append(
+                        f'entry "{eid}" mcp_remotes[{i}].type must be str, '
+                        f'got {type(item["type"]).__name__}'
+                    )
+                if "url" not in item:
+                    errors.append(
+                        f'entry "{eid}" mcp_remotes[{i}] missing required field "url"'
+                    )
+                elif not isinstance(item["url"], str):
+                    errors.append(
+                        f'entry "{eid}" mcp_remotes[{i}].url must be str, '
+                        f'got {type(item["url"]).__name__}'
+                    )
+
+    return errors
+
+
 def _merge_skills_sh_fields(target: dict, donor: dict) -> None:
     """Copy non-empty skills.sh signal fields from donor onto target (target wins ties)."""
     for k in _SKILLS_SH_MERGE_FIELDS:
