@@ -1,4 +1,7 @@
-# 期望 catalog 收录的热门 skill 清单，用于覆盖率审计。
+# 期望 catalog 收录的热门资源清单，用于覆盖率审计。
+#
+# 三个分组：expected_skills / expected_mcp / expected_rules，
+# 分别对应 type=skill / mcp / rule 的命中审计。
 #
 # 字段说明：
 #   - name        : 内部展示用名称（不参与命中判定）
@@ -7,8 +10,11 @@
 #
 # 命中判定逻辑见 scripts/audit_popular_coverage.py：
 #   - "直接源" — catalog 中存在 source_url 落在该 owner/repo 的 entry
-#   - "仅镜像" — 仅以 sickn33/antigravity-awesome-skills 等镜像源形式存在
+#   - "仅镜像" — 仅以 sickn33/antigravity-awesome-skills 等镜像源形式存在（仅 skill）
 #   - "未收录" — catalog 中完全找不到
+#
+# 注：mcp 类型条目 source_url 可能是 registry URL（registry.modelcontextprotocol.io），
+#     这类 entry 不参与 GitHub-based 命中匹配，命中需要靠 wong2 / mcp.so 等 GitHub 源。
 expected_skills:
   - name: superpowers
     github_repo: obra/superpowers
@@ -31,3 +37,43 @@ expected_skills:
   - name: skills
     github_repo: anthropics/skills
     reason: "Anthropic 官方 skill 库（含 frontend-design 等 65K stars 级 skill）"
+
+expected_mcp:
+  - name: modelcontextprotocol/servers
+    github_repo: modelcontextprotocol/servers
+    reason: "MCP 官方 reference servers monorepo（含 fetch / git / time / everything 等核心 server）"
+  - name: microsoft/playwright-mcp
+    github_repo: microsoft/playwright-mcp
+    reason: "微软官方 Playwright MCP，registry 与 wong2 awesome 都收录，浏览器自动化主力"
+  - name: GLips/Figma-Context-MCP
+    github_repo: GLips/Figma-Context-MCP
+    reason: "Figma 设计上下文 MCP，前端设计协作高频 server"
+  - name: github/github-mcp-server
+    github_repo: github/github-mcp-server
+    reason: "GitHub 官方 MCP server，issue/PR/repo 操作全覆盖"
+  - name: cloudflare/mcp-server-cloudflare
+    github_repo: cloudflare/mcp-server-cloudflare
+    reason: "Cloudflare 官方 MCP，覆盖 Workers / R2 / KV 等服务"
+  - name: supabase-community/supabase-mcp
+    github_repo: supabase-community/supabase-mcp
+    reason: "Supabase 社区维护的官方 MCP server"
+  - name: sooperset/mcp-atlassian
+    github_repo: sooperset/mcp-atlassian
+    reason: "Atlassian (Jira/Confluence) MCP，registry 与社区都广泛使用"
+
+expected_rules:
+  - name: PatrickJS/awesome-cursorrules
+    github_repo: PatrickJS/awesome-cursorrules
+    reason: "最权威 Cursor rules 集合，社区事实标准"
+  - name: Mr-Chen-05/rules-2.1-optimized
+    github_repo: Mr-Chen-05/rules-2.1-optimized
+    reason: "rules 2.1 优化集，社区高引用"
+  - name: SchneiderSam/awesome-windsurfrules
+    github_repo: SchneiderSam/awesome-windsurfrules
+    reason: "§3 新接入，Windsurf 系 rules 主源"
+  - name: balqaasem/awesome-windsurfrules
+    github_repo: balqaasem/awesome-windsurfrules
+    reason: "§3 新接入，windsurfrules mirror 仓库"
+  - name: pontusab/directories
+    github_repo: pontusab/directories
+    reason: "cursor.directory 上游数据仓库（spike §9 评估候选）"
