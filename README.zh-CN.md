@@ -1,12 +1,12 @@
 <div align="center">
 <img src="assets/logo.png" alt="Everything AI Coding logo" width="600" />
-<p><strong><!-- README_APPROX_COUNT:START -->4200<!-- README_APPROX_COUNT:END -->+ 精选 AI 编程资源 — 浏览、评估、安装</strong><br/>MCP Servers · Skills · Rules · Prompts</p>
+<p><strong><!-- README_APPROX_COUNT:START -->11400<!-- README_APPROX_COUNT:END -->+ 精选 AI 编程资源 — 浏览、评估、安装</strong><br/>MCP Servers · Skills · Rules · Prompts</p>
 
 <p>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/stargazers"><img src="https://img.shields.io/github/stars/zgsm-ai/everything-ai-coding?style=flat-square&color=4A90D9" alt="Stars" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zgsm-ai/everything-ai-coding?style=flat-square" alt="License" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/commits/main"><img src="https://img.shields.io/github/last-commit/zgsm-ai/everything-ai-coding?style=flat-square" alt="Last Commit" /></a>
-  <img src="https://img.shields.io/badge/resources-4252-2ECC71?style=flat-square" alt="Resources" />
+  <img src="https://img.shields.io/badge/resources-11486-2ECC71?style=flat-square" alt="Resources" />
 </p>
 
 <p>
@@ -34,7 +34,7 @@ Everything AI Coding 是一个**持续更新的知识库**，从 9+ 个上游源
 <a id="knowledge-base"></a>
 ## 📚 知识库
 
-### [🔌 MCP 服务器](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->1630<!-- README_COUNT_MCP:END --> 个条目
+### [🔌 MCP 服务器](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->8746<!-- README_COUNT_MCP:END --> 个条目
 
 将 AI Agent 连接到外部工具、数据库和服务的 Model Context Protocol 服务器。
 
@@ -44,51 +44,51 @@ Everything AI Coding 是一个**持续更新的知识库**，从 9+ 个上游源
 | [MCP Inspector](https://github.com/modelcontextprotocol/inspector) | 9.2k | 99 | 用于测试和调试 MCP 服务器的开发者工具，支持 UI 和 CLI 模式。 |
 | [IDA Pro MCP](https://github.com/mrexodia/ida-pro-mcp) | 6.7k | 98 | 在 IDA Pro 中实现 AI 辅助逆向工程的 MCP 服务器。 |
 | [Firecrawl](https://github.com/mendableai/firecrawl-mcp-server) | 6.2k | 98 | 基于 Firecrawl 的 MCP 服务器，支持网页抓取、搜索与结构化数据提取。 |
-| [Grafana](https://github.com/grafana/mcp-grafana) | 3.0k | 98 | 用于 AI 辅助 Grafana 操作的 MCP 服务器，支持仪表盘、数据源、告警、事件等。 |
-| [Time](https://github.com/modelcontextprotocol/servers/tree/main/src/time) | 85.0k | 97 | 提供当前时间和时区转换功能的 MCP 服务器。 |
+| [Time](https://github.com/modelcontextprotocol/servers/tree/main/src/time) | 85.1k | 97 | 提供当前时间和时区转换功能的 MCP 服务器。 |
+| [Basic Memory](https://github.com/basicmachines-co/basic-memory) | 3.0k | 97 | 本地优先的知识管理，从 Markdown 构建语义图，实现 AI 跨对话持久记忆。 |
 <!-- README_TOP5_MCP:END -->
 
 [浏览全部 MCP 服务器 →](./catalog/mcp/) · [在线浏览 →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=mcp)
 
 ---
 
-### [🎯 Skills 技能](./catalog/skills/) — <!-- README_COUNT_SKILL:START -->1807<!-- README_COUNT_SKILL:END --> 个条目
+### [🎯 Skills 技能](./catalog/skills/) — <!-- README_COUNT_SKILL:START -->1809<!-- README_COUNT_SKILL:END --> 个条目
 
 AI 编程助手的可复用能力和工作流。
 
 <!-- README_TOP5_SKILL:START -->
 | 名称 | 来源 | 评分 | 描述 |
 |------|------|------|------|
+| [Agent Development](https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/agent-development) | Anthropic 官方 | 97 | 为 Claude Code 插件创建自主代理的指南，包含 YAML 前置元数据和系统提示。 |
+| [Skill Development](https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/skill-development) | Anthropic 官方 | 97 | 为 Claude Code 插件创建模块化、自包含技能的开发指南。 |
+| [claude-api](https://github.com/anthropics/skills/tree/main/skills/claude-api) | Anthropic 官方 | 96 | 用于构建、调试和优化 Claude API 及 Anthropic SDK 应用的技能，支持提示缓存和模型迁移。 |
 | [docx](https://github.com/anthropics/skills/tree/main/skills/docx) | Anthropic 官方 | 96 | 通过 JavaScript 和 XML 操作，程序化创建、编辑和分析 Word .docx 文件的技能。 |
 | [skill-creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator) | Anthropic 官方 | 96 | 用于创建、测试和迭代优化 Claude 技能，支持基准测试和描述优化的元技能。 |
-| [azure-ai-voicelive-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-voicelive-dotnet) | Antigravity Skills | 95 | 用于 .NET 的 Azure AI 语音实时 SDK，构建双向语音助手。 |
-| [azure-eventhub-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-eventhub-dotnet) | Antigravity Skills | 95 | 用于高吞吐量事件流的 Azure 事件中心 .NET SDK。 |
-| [azure-mgmt-fabric-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-mgmt-fabric-dotnet) | Antigravity Skills | 95 | 用于通过 Azure Resource Manager 管理 Microsoft Fabric 容量资源的 .NET SDK。 |
 <!-- README_TOP5_SKILL:END -->
 
 [浏览全部 Skills →](./catalog/skills/) · [在线浏览 →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=skill)
 
 ---
 
-### [📋 Rules 规则](./catalog/rules/) — <!-- README_COUNT_RULE:START -->241<!-- README_COUNT_RULE:END --> 个条目
+### [📋 Rules 规则](./catalog/rules/) — <!-- README_COUNT_RULE:START -->355<!-- README_COUNT_RULE:END --> 个条目
 
 编码规范和 AI 行为准则，确保开发一致性。
 
 <!-- README_TOP5_RULE:START -->
 | 名称 | 来源 | 评分 | 分类 |
 |------|------|------|------|
-| [Flutter & Dart Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/flutter-dart) | 手工精选 | 0 | mobile |
-| [Supabase Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/supabase) | 手工精选 | 0 | database |
-| [Security Audit Rules](https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules) | 手工精选 | 0 | security |
-| [Technical Documentation Rules](https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules) | 手工精选 | 0 | documentation |
-| [Android Jetpack Compose Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/android-jetpack-compose-cursorrules-prompt-file) | CursorRules | 0 | mobile |
+| [Momen Cursurrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/momen-cursurrules-prompt-file) | CursorRules | 97 | tooling |
+| [Changelog Management (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/changelog-management.mdc) | Rules 2.1 | 90 | ai-ml |
+| [Beefreesdk Nocode Content Editor Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/beefreeSDK-nocode-content-editor-cursorrules-prompt-file) | CursorRules | 87 | tooling |
+| [Drupal 11 Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/drupal-11-cursorrules-prompt-file) | CursorRules | 87 | tooling |
+| [Nextjs Supabase Shadcn Pwa Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file) | CursorRules | 87 | frontend |
 <!-- README_TOP5_RULE:END -->
 
 [浏览全部 Rules →](./catalog/rules/) · [在线浏览 →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=rule)
 
 ---
 
-### [💡 Prompts 提示词](./catalog/prompts/) — <!-- README_COUNT_PROMPT:START -->574<!-- README_COUNT_PROMPT:END --> 个条目
+### [💡 Prompts 提示词](./catalog/prompts/) — <!-- README_COUNT_PROMPT:START -->576<!-- README_COUNT_PROMPT:END --> 个条目
 
 面向开发者的提示词模板，覆盖常见编码场景。
 

@@ -1,12 +1,32 @@
 [
   {
+    "id": "alpha-skills-quant-factor-research-cursorrule",
+    "name": "Alpha Skills Quant Factor Research Rules",
+    "type": "rule",
+    "description": "Cursor rules for alpha skills quant factor research development",
+    "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/alpha-skills-quant-factor-research",
+    "stars": null,
+    "pushed_at": "2026-05-05T03:14:10Z",
+    "category": "documentation",
+    "tags": [],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/alpha-skills-quant-factor-research/.cursorrules"
+      ]
+    },
+    "source": "awesome-cursorrules",
+    "last_synced": "2026-05-06"
+  },
+  {
     "id": "android-jetpack-compose-cursorrules-prompt-file-cursorrule",
     "name": "Android Jetpack Compose Cursorrules Prompt File Rules",
     "type": "rule",
     "description": "Cursor rules for android jetpack compose cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/android-jetpack-compose-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "mobile",
     "tags": [],
     "tech_stack": [],
@@ -17,7 +37,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "angular-novo-elements-cursorrules-prompt-file-cursorrule",
@@ -26,7 +46,7 @@
     "description": "Angular Novo Elements .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/angular-novo-elements-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "angular"
@@ -39,7 +59,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "angular-typescript-cursorrules-prompt-file-cursorrule",
@@ -48,7 +68,7 @@
     "description": "Angular TypeScript .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/angular-typescript-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "angular",
@@ -62,7 +82,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "ascii-simulation-game-cursorrules-prompt-file-cursorrule",
@@ -71,7 +91,7 @@
     "description": "ASCII Simulation Game .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/ascii-simulation-game-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -82,7 +102,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "aspnet-abp-cursorrules-prompt-file-cursorrule",
@@ -91,7 +111,7 @@
     "description": "ABP framework .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/aspnet-abp-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -102,7 +122,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "astro-typescript-cursorrules-prompt-file-cursorrule",
@@ -111,7 +131,7 @@
     "description": "Astro TypeScript .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/astro-typescript-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "typescript"
@@ -124,7 +144,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "beefreesdk-nocode-content-editor-cursorrules-prompt-file-cursorrule",
@@ -133,7 +153,7 @@
     "description": "Beefree SDK Integration Guide",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/beefreeSDK-nocode-content-editor-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -144,7 +164,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "chrome-extension-dev-js-typescript-cursorrules-pro-cursorrule",
@@ -153,7 +173,7 @@
     "description": "Chrome Extension Dev JS TypeScript .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/chrome-extension-dev-js-typescript-cursorrules-pro",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "typescript"
@@ -166,7 +186,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "cloudflare-email-telegram-cursorrules-prompt-file-cursorrule",
@@ -175,7 +195,7 @@
     "description": "Cloudflare Email to Telegram",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cloudflare-email-telegram-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -186,7 +206,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "code-guidelines-cursorrules-prompt-file-cursorrule",
@@ -195,7 +215,7 @@
     "description": "Code Guidelines .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/code-guidelines-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -206,7 +226,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "code-pair-interviews-cursorrule",
@@ -215,7 +235,7 @@
     "description": "Cursor AI code pair interviews .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/code-pair-interviews",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -226,7 +246,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "code-style-consistency-cursorrules-prompt-file-cursorrule",
@@ -235,7 +255,7 @@
     "description": "Code Style Consistency Prompt",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/code-style-consistency-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -246,7 +266,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "convex-cursorrules-prompt-file-cursorrule",
@@ -255,7 +275,7 @@
     "description": "Cursor rules for convex cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/convex-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -266,7 +286,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "cpp-programming-guidelines-cursorrules-prompt-file-cursorrule",
@@ -275,7 +295,7 @@
     "description": "C++ Programming Guidelines for Cursor AI",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cpp-programming-guidelines-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -286,7 +306,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "cursor-ai-react-typescript-shadcn-ui-cursorrules-p-cursorrule",
@@ -295,7 +315,7 @@
     "description": "Cursor AI React TypeScript Shadcn UI .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cursor-ai-react-typescript-shadcn-ui-cursorrules-p",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react",
@@ -309,7 +329,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "cursor-rules-pack-v2-cursorrules-prompt-file-cursorrule",
@@ -318,7 +338,7 @@
     "description": "Cursor Rules Pack v2 — Sample",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cursor-rules-pack-v2-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -329,7 +349,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "cursorrules-cursor-ai-nextjs-14-tailwind-seo-setup-cursorrule",
@@ -338,7 +358,7 @@
     "description": ".cursorrules Cursor AI Next.js 14 Tailwind SEO setup .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cursorrules-cursor-ai-nextjs-14-tailwind-seo-setup",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "nextjs",
@@ -352,7 +372,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "cursorrules-cursor-ai-wordpress-draft-macos-prompt-cursorrule",
@@ -361,7 +381,7 @@
     "description": ".cursorrules Cursor AI WordPress Draft MacOS prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cursorrules-cursor-ai-wordpress-draft-macos-prompt",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -372,7 +392,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "cursorrules-file-cursor-ai-python-fastapi-api-cursorrule",
@@ -381,7 +401,7 @@
     "description": ".cursorrules file Cursor AI Python FastAPI API",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cursorrules-file-cursor-ai-python-fastapi-api",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "python",
@@ -395,7 +415,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "cypress-accessibility-testing-cursorrules-prompt-file-cursorrule",
@@ -404,7 +424,7 @@
     "description": "Cypress Accessibility Testing .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cypress-accessibility-testing-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "testing",
     "tags": [
       "cypress"
@@ -417,7 +437,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "cypress-api-testing-cursorrules-prompt-file-cursorrule",
@@ -426,7 +446,7 @@
     "description": "Cypress API Testing .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cypress-api-testing-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "testing",
     "tags": [
       "cypress"
@@ -439,7 +459,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "cypress-defect-tracking-cursorrules-prompt-file-cursorrule",
@@ -448,7 +468,7 @@
     "description": "Cypress Defect Tracking .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cypress-defect-tracking-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "testing",
     "tags": [
       "cypress"
@@ -461,7 +481,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "cypress-e2e-testing-cursorrules-prompt-file-cursorrule",
@@ -470,7 +490,7 @@
     "description": "Cypress End-to-End Testing .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cypress-e2e-testing-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "testing",
     "tags": [
       "cypress"
@@ -483,7 +503,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "cypress-integration-testing-cursorrules-prompt-file-cursorrule",
@@ -492,7 +512,7 @@
     "description": "Cypress Integration Testing Prompt",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cypress-integration-testing-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "testing",
     "tags": [
       "cypress"
@@ -505,7 +525,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "deno-integration-techniques-cursorrules-prompt-fil-cursorrule",
@@ -514,7 +534,7 @@
     "description": "Deno Integration Techniques .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/deno-integration-techniques-cursorrules-prompt-fil",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -525,7 +545,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "dragonruby-best-practices-cursorrules-prompt-file-cursorrule",
@@ -534,7 +554,7 @@
     "description": "DragonRuby Best Practices .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/dragonruby-best-practices-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "go",
@@ -548,7 +568,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "drupal-11-cursorrules-prompt-file-cursorrule",
@@ -557,7 +577,7 @@
     "description": "Drupal 11 Awesome CursorRules",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/drupal-11-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -568,7 +588,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "elixir-engineer-guidelines-cursorrules-prompt-file-cursorrule",
@@ -577,7 +597,7 @@
     "description": "Elixir Engineer Guidelines .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/elixir-engineer-guidelines-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [],
     "tech_stack": [],
@@ -588,7 +608,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "elixir-phoenix-docker-setup-cursorrules-prompt-fil-cursorrule",
@@ -597,7 +617,7 @@
     "description": "Elixir Phoenix Docker Setup .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/elixir-phoenix-docker-setup-cursorrules-prompt-fil",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "docker"
@@ -610,7 +630,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "engineering-ticket-template-cursorrules-prompt-file-cursorrule",
@@ -619,7 +639,7 @@
     "description": "Engineering Ticket Template Prompt",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/engineering-ticket-template-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -630,7 +650,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "es-module-nodejs-guidelines-cursorrules-prompt-fil-cursorrule",
@@ -639,7 +659,7 @@
     "description": "ES Module Node.js Guidelines .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/es-module-nodejs-guidelines-cursorrules-prompt-fil",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "nodejs"
@@ -652,7 +672,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "flutter-app-expert-cursorrules-prompt-file-cursorrule",
@@ -661,7 +681,7 @@
     "description": "Cursor rules for flutter app expert cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/flutter-app-expert-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "mobile",
     "tags": [
       "flutter"
@@ -674,7 +694,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "flutter-riverpod-cursorrules-prompt-file-cursorrule",
@@ -683,7 +703,7 @@
     "description": "Cursor rules for flutter riverpod cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/flutter-riverpod-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "mobile",
     "tags": [
       "flutter"
@@ -696,7 +716,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "gherkin-style-testing-cursorrules-prompt-file-cursorrule",
@@ -705,7 +725,7 @@
     "description": "Gherkin Style Testing Prompt",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/gherkin-style-testing-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "testing",
     "tags": [],
     "tech_stack": [],
@@ -716,7 +736,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "git-conventional-commit-messages-cursorrule",
@@ -725,7 +745,7 @@
     "description": "Conventional Commit Messages",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/git-conventional-commit-messages",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [
       "git"
@@ -738,7 +758,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "github-code-quality-cursorrules-prompt-file-cursorrule",
@@ -747,7 +767,7 @@
     "description": "GitHub Code Quality .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/github-code-quality-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [
       "git"
@@ -760,7 +780,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "github-cursorrules-prompt-file-instructions-cursorrule",
@@ -769,7 +789,7 @@
     "description": "GitHub .cursorrules prompt file instructions",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/github-cursorrules-prompt-file-instructions",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [
       "git"
@@ -782,7 +802,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "go-backend-scalability-cursorrules-prompt-file-cursorrule",
@@ -791,7 +811,7 @@
     "description": "Go Backend Scalability .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/go-backend-scalability-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "go"
@@ -804,7 +824,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "go-servemux-rest-api-cursorrules-prompt-file-cursorrule",
@@ -813,7 +833,7 @@
     "description": "Go ServeMux REST API .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/go-servemux-rest-api-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "go",
@@ -827,7 +847,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "go-temporal-dsl-prompt-file-cursorrule",
@@ -836,7 +856,7 @@
     "description": "Cursor rules for go temporal dsl prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/go-temporal-dsl-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "go"
@@ -849,7 +869,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "graphical-apps-development-cursorrules-prompt-file-cursorrule",
@@ -858,7 +878,7 @@
     "description": "Graphical Apps Development .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/graphical-apps-development-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -869,7 +889,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "helium-mcp-cursorrules-prompt-file-cursorrule",
@@ -878,7 +898,7 @@
     "description": "Helium MCP - Cursor rules",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/helium-mcp-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -889,7 +909,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "how-to-documentation-cursorrules-prompt-file-cursorrule",
@@ -898,7 +918,7 @@
     "description": "How-To Documentation Prompt",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/how-to-documentation-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "documentation",
     "tags": [],
     "tech_stack": [],
@@ -909,7 +929,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "html-tailwind-css-javascript-cursorrules-prompt-fi-cursorrule",
@@ -918,7 +938,7 @@
     "description": "HTML Tailwind CSS JavaScript .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/html-tailwind-css-javascript-cursorrules-prompt-fi",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "javascript",
@@ -934,7 +954,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "htmx-basic-cursorrules-prompt-file-cursorrule",
@@ -943,7 +963,7 @@
     "description": "Cursor rules for htmx basic cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/htmx-basic-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -954,7 +974,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "htmx-django-cursorrules-prompt-file-cursorrule",
@@ -963,7 +983,7 @@
     "description": "Cursor rules for htmx django cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/htmx-django-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "go",
@@ -977,7 +997,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "htmx-flask-cursorrules-prompt-file-cursorrule",
@@ -986,7 +1006,7 @@
     "description": "Cursor rules for htmx flask cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/htmx-flask-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "flask"
@@ -999,7 +1019,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "htmx-go-basic-cursorrules-prompt-file-cursorrule",
@@ -1008,7 +1028,7 @@
     "description": "Cursor rules for htmx go basic cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/htmx-go-basic-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "go"
@@ -1021,7 +1041,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "htmx-go-fiber-cursorrules-prompt-file-cursorrule",
@@ -1030,7 +1050,7 @@
     "description": "Cursor rules for htmx go fiber cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/htmx-go-fiber-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "go"
@@ -1043,7 +1063,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "java-general-purpose-cursorrules-prompt-file-cursorrule",
@@ -1052,7 +1072,7 @@
     "description": "Cursor rules for java general purpose cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/java-general-purpose-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "java"
@@ -1065,7 +1085,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "java-springboot-jpa-cursorrules-prompt-file-cursorrule",
@@ -1074,7 +1094,7 @@
     "description": "Cursor rules for java springboot jpa cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/java-springboot-jpa-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "java"
@@ -1087,7 +1107,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "javascript-astro-tailwind-css-cursorrules-prompt-f-cursorrule",
@@ -1096,7 +1116,7 @@
     "description": "JavaScript Astro Tailwind CSS .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/javascript-astro-tailwind-css-cursorrules-prompt-f",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "javascript",
@@ -1112,7 +1132,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "javascript-chrome-apis-cursorrules-prompt-file-cursorrule",
@@ -1121,7 +1141,7 @@
     "description": "JavaScript Chrome APIs .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/javascript-chrome-apis-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "javascript",
@@ -1135,7 +1155,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "javascript-typescript-code-quality-cursorrules-pro-cursorrule",
@@ -1144,7 +1164,7 @@
     "description": "JavaScript TypeScript Code Quality .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/javascript-typescript-code-quality-cursorrules-pro",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "typescript",
@@ -1159,7 +1179,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "jest-unit-testing-cursorrules-prompt-file-cursorrule",
@@ -1168,7 +1188,7 @@
     "description": "Jest Unit Testing Prompt",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/jest-unit-testing-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "testing",
     "tags": [
       "jest"
@@ -1181,7 +1201,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "knative-istio-typesense-gpu-cursorrules-prompt-fil-cursorrule",
@@ -1190,7 +1210,7 @@
     "description": "Knative Istio Typesense GPU .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/knative-istio-typesense-gpu-cursorrules-prompt-fil",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -1201,7 +1221,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "kotlin-ktor-development-cursorrules-prompt-file-cursorrule",
@@ -1210,7 +1230,7 @@
     "description": "Cursor rules for kotlin ktor development cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/kotlin-ktor-development-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "mobile",
     "tags": [
       "kotlin"
@@ -1223,7 +1243,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "kotlin-springboot-best-practices-cursorrules-prompt-file-cursorrule",
@@ -1232,7 +1252,7 @@
     "description": "Cursor rules for kotlin springboot best practices cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/kotlin-springboot-best-practices-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "kotlin"
@@ -1245,7 +1265,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "kubernetes-mkdocs-documentation-cursorrules-prompt-cursorrule",
@@ -1254,7 +1274,7 @@
     "description": "Kubernetes MkDocs Documentation .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/kubernetes-mkdocs-documentation-cursorrules-prompt",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "devops",
     "tags": [
       "kubernetes"
@@ -1267,7 +1287,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "laravel-php-83-cursorrules-prompt-file-cursorrule",
@@ -1276,7 +1296,7 @@
     "description": "Laravel PHP 8.3 .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/laravel-php-83-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "php"
@@ -1289,7 +1309,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "laravel-tall-stack-best-practices-cursorrules-prom-cursorrule",
@@ -1298,7 +1318,7 @@
     "description": "Laravel TALL Stack Best Practices .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/laravel-tall-stack-best-practices-cursorrules-prom",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [],
     "tech_stack": [],
@@ -1309,7 +1329,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "linux-nvidia-cuda-python-cursorrules-prompt-file-cursorrule",
@@ -1318,7 +1338,7 @@
     "description": "Linux NVIDIA CUDA Python .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/linux-nvidia-cuda-python-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "python"
@@ -1331,7 +1351,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "manifest-yaml-cursorrules-prompt-file-cursorrule",
@@ -1340,7 +1360,7 @@
     "description": "Manifest Backend .manifestrules Prompt",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/manifest-yaml-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -1351,7 +1371,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "medusa-cursorrules-cursorrule",
@@ -1360,7 +1380,7 @@
     "description": "Cursor rules for medusa cursorrules development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/medusa-cursorrules",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -1371,7 +1391,27 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
+  },
+  {
+    "id": "momen-cursurrules-prompt-file-cursorrule",
+    "name": "Momen Cursurrules Prompt File Rules",
+    "type": "rule",
+    "description": "Momen Cursor Rules - Build Custom Frontends with Momen Backend-as-a-Service",
+    "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/momen-cursurrules-prompt-file",
+    "stars": null,
+    "pushed_at": "2026-05-05T03:14:10Z",
+    "category": "tooling",
+    "tags": [],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/momen-cursurrules-prompt-file/.cursorrules"
+      ]
+    },
+    "source": "awesome-cursorrules",
+    "last_synced": "2026-05-06"
   },
   {
     "id": "nativescript-cursorrules-prompt-file-cursorrule",
@@ -1380,7 +1420,7 @@
     "description": "Cursor rules for nativescript cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nativescript-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -1391,7 +1431,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "netlify-official-cursorrules-prompt-file-cursorrule",
@@ -1400,7 +1440,7 @@
     "description": "Cursor rules for netlify official cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/netlify-official-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -1411,7 +1451,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "next-type-llm-cursorrule",
@@ -1420,7 +1460,7 @@
     "description": "What you can build",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/next-type-llm",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -1431,7 +1471,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "nextjs-app-router-cursorrules-prompt-file-cursorrule",
@@ -1440,7 +1480,7 @@
     "description": "Cursor rules for nextjs app router cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-app-router-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "nextjs"
@@ -1453,7 +1493,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "nextjs-material-ui-tailwind-css-cursorrules-prompt-cursorrule",
@@ -1462,7 +1502,7 @@
     "description": "Next.js Material UI Tailwind CSS .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-material-ui-tailwind-css-cursorrules-prompt",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "nextjs",
@@ -1477,7 +1517,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "nextjs-react-tailwind-cursorrules-prompt-file-cursorrule",
@@ -1486,7 +1526,7 @@
     "description": "Next.js React Tailwind .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-react-tailwind-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react",
@@ -1501,7 +1541,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "nextjs-react-typescript-cursorrules-prompt-file-cursorrule",
@@ -1510,7 +1550,7 @@
     "description": "Next.js React TypeScript .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-react-typescript-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react",
@@ -1525,7 +1565,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "nextjs-seo-dev-cursorrules-prompt-file-cursorrule",
@@ -1534,7 +1574,7 @@
     "description": "Next.js SEO Dev .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-seo-dev-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "nextjs"
@@ -1547,7 +1587,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "nextjs-supabase-shadcn-pwa-cursorrules-prompt-file-cursorrule",
@@ -1556,7 +1596,7 @@
     "description": "Cursor Rules for Project Context Management",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "nextjs",
@@ -1570,7 +1610,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "nextjs-supabase-todo-app-cursorrules-prompt-file-cursorrule",
@@ -1579,7 +1619,7 @@
     "description": "Next.js Supabase Todo App .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-supabase-todo-app-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "nextjs",
@@ -1593,7 +1633,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "nextjs-tailwind-typescript-apps-cursorrules-prompt-cursorrule",
@@ -1602,7 +1642,7 @@
     "description": "Next.JS Tailwind TypeScript Apps .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-tailwind-typescript-apps-cursorrules-prompt",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "nextjs",
@@ -1617,7 +1657,29 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
+  },
+  {
+    "id": "nextjs-tanstack-query-cursorrules-prompt-file-cursorrule",
+    "name": "Nextjs Tanstack Query Cursorrules Prompt File Rules",
+    "type": "rule",
+    "description": "Next.js App Router + TanStack Query v5 Cursor Rules",
+    "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-tanstack-query-cursorrules-prompt-file",
+    "stars": null,
+    "pushed_at": "2026-05-05T03:14:10Z",
+    "category": "frontend",
+    "tags": [
+      "nextjs"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/nextjs-tanstack-query-cursorrules-prompt-file/.cursorrules"
+      ]
+    },
+    "source": "awesome-cursorrules",
+    "last_synced": "2026-05-06"
   },
   {
     "id": "nextjs-typescript-app-cursorrules-prompt-file-cursorrule",
@@ -1626,7 +1688,7 @@
     "description": "Next.js TypeScript App .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-typescript-app-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "nextjs",
@@ -1640,7 +1702,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "nextjs-typescript-cursorrules-prompt-file-cursorrule",
@@ -1649,7 +1711,7 @@
     "description": "Next.js TypeScript .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-typescript-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "nextjs",
@@ -1663,7 +1725,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "nextjs-typescript-tailwind-cursorrules-prompt-file-cursorrule",
@@ -1672,7 +1734,7 @@
     "description": "Next.js TypeScript Tailwind .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-typescript-tailwind-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "nextjs",
@@ -1687,7 +1749,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "nextjs-vercel-supabase-cursorrules-prompt-file-cursorrule",
@@ -1696,7 +1758,7 @@
     "description": "Next.js Vercel Supabase .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-vercel-supabase-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "nextjs",
@@ -1710,7 +1772,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "nextjs-vercel-typescript-cursorrules-prompt-file-cursorrule",
@@ -1719,7 +1781,7 @@
     "description": "Next.js Vercel TypeScript .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-vercel-typescript-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "nextjs",
@@ -1733,7 +1795,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "nextjs15-react19-vercelai-tailwind-cursorrules-prompt-file-cursorrule",
@@ -1742,7 +1804,7 @@
     "description": "Next.js 15, React 19, Vercel AI SDK, Tailwind CSS .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs15-react19-vercelai-tailwind-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react",
@@ -1758,7 +1820,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "nodejs-mongodb-cursorrules-prompt-file-tutorial-cursorrule",
@@ -1767,7 +1829,7 @@
     "description": "Node.js MongoDB .cursorrules prompt file tutorial",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nodejs-mongodb-cursorrules-prompt-file-tutorial",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "go",
@@ -1782,7 +1844,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "nodejs-mongodb-jwt-express-react-cursorrules-promp-cursorrule",
@@ -1791,7 +1853,7 @@
     "description": "Node.js MongoDB JWT Express React .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nodejs-mongodb-jwt-express-react-cursorrules-promp",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react",
@@ -1808,7 +1870,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "optimize-dry-solid-principles-cursorrules-prompt-f-cursorrule",
@@ -1817,7 +1879,7 @@
     "description": "Optimize DRY SOLID Principles .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/optimize-dry-solid-principles-cursorrules-prompt-f",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -1828,7 +1890,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "optimize-rell-blockchain-code-cursorrules-prompt-f-cursorrule",
@@ -1837,7 +1899,7 @@
     "description": "Optimize Rell Blockchain Code .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/optimize-rell-blockchain-code-cursorrules-prompt-f",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "ai-ml",
     "tags": [],
     "tech_stack": [],
@@ -1848,7 +1910,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "pandas-scikit-learn-guide-cursorrules-prompt-file-cursorrule",
@@ -1857,7 +1919,7 @@
     "description": "Pandas Scikit-Learn Guide .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/pandas-scikit-learn-guide-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -1868,7 +1930,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "plasticode-telegram-api-cursorrules-prompt-file-cursorrule",
@@ -1877,7 +1939,7 @@
     "description": "Plasticode Telegram API .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/plasticode-telegram-api-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [],
     "tech_stack": [],
@@ -1888,7 +1950,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "playwright-accessibility-testing-cursorrules-prompt-file-cursorrule",
@@ -1897,7 +1959,7 @@
     "description": "Playwright Accessibility Testing Prompt",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-accessibility-testing-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "testing",
     "tags": [
       "playwright"
@@ -1910,7 +1972,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "playwright-api-testing-cursorrules-prompt-file-cursorrule",
@@ -1919,7 +1981,7 @@
     "description": "Playwright API Testing Prompt",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-api-testing-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "testing",
     "tags": [
       "playwright"
@@ -1932,7 +1994,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "playwright-defect-tracking-cursorrules-prompt-file-cursorrule",
@@ -1941,7 +2003,7 @@
     "description": "Playwright Defect Tracking Prompt",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-defect-tracking-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "testing",
     "tags": [
       "playwright"
@@ -1954,7 +2016,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "playwright-e2e-testing-cursorrules-prompt-file-cursorrule",
@@ -1963,7 +2025,7 @@
     "description": "Playwright E2E Testing .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-e2e-testing-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "testing",
     "tags": [
       "playwright"
@@ -1976,7 +2038,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "playwright-integration-testing-cursorrules-prompt-file-cursorrule",
@@ -1985,7 +2047,7 @@
     "description": "Playwright Integration Testing Prompt",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-integration-testing-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "testing",
     "tags": [
       "playwright"
@@ -1998,7 +2060,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "pr-template-cursorrules-prompt-file-cursorrule",
@@ -2007,7 +2069,7 @@
     "description": "PR Template Prompt",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/pr-template-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -2018,7 +2080,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "project-epic-template-cursorrules-prompt-file-cursorrule",
@@ -2027,7 +2089,7 @@
     "description": "Project Epic Template Prompt",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/project-epic-template-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -2038,7 +2100,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "py-fast-api-cursorrule",
@@ -2047,7 +2109,7 @@
     "description": "What you can build",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/py-fast-api",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [],
     "tech_stack": [],
@@ -2058,7 +2120,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "pyqt6-eeg-processing-cursorrules-prompt-file-cursorrule",
@@ -2067,7 +2129,7 @@
     "description": "PyQt6 EEG Processing .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/pyqt6-eeg-processing-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -2078,7 +2140,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "python-typescript-guide-cursorrules-prompt-file-cursorrule",
@@ -2087,7 +2149,7 @@
     "description": "Python & Typescript Guide .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python--typescript-guide-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "typescript",
@@ -2101,7 +2163,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "python-312-fastapi-best-practices-cursorrules-prom-cursorrule",
@@ -2110,7 +2172,7 @@
     "description": "Python 3.12 FastAPI Best Practices .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-312-fastapi-best-practices-cursorrules-prom",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "python",
@@ -2124,7 +2186,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "python-containerization-cursorrules-prompt-file-cursorrule",
@@ -2133,7 +2195,7 @@
     "description": "Python Containerization .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-containerization-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "python"
@@ -2146,7 +2208,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "python-cursorrules-prompt-file-best-practices-cursorrule",
@@ -2155,7 +2217,7 @@
     "description": "Python .cursorrules prompt file best practices",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-cursorrules-prompt-file-best-practices",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "python"
@@ -2168,7 +2230,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "python-developer-cursorrules-prompt-file-cursorrule",
@@ -2177,7 +2239,7 @@
     "description": "Python Developer .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-developer-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "python"
@@ -2190,7 +2252,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "python-django-best-practices-cursorrules-prompt-fi-cursorrule",
@@ -2199,7 +2261,7 @@
     "description": "Python Django Best Practices .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-django-best-practices-cursorrules-prompt-fi",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "python",
@@ -2214,7 +2276,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "python-fastapi-best-practices-cursorrules-prompt-f-cursorrule",
@@ -2223,7 +2285,7 @@
     "description": "Python FastAPI Best Practices .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-fastapi-best-practices-cursorrules-prompt-f",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "python",
@@ -2237,7 +2299,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "python-fastapi-cursorrules-prompt-file-cursorrule",
@@ -2246,7 +2308,7 @@
     "description": "Cursor rules for python fastapi cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-fastapi-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "python",
@@ -2260,7 +2322,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "python-fastapi-scalable-api-cursorrules-prompt-fil-cursorrule",
@@ -2269,7 +2331,7 @@
     "description": "Python FastAPI Scalable API .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-fastapi-scalable-api-cursorrules-prompt-fil",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "python",
@@ -2283,7 +2345,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "python-flask-json-guide-cursorrules-prompt-file-cursorrule",
@@ -2292,7 +2354,7 @@
     "description": "Python Flask JSON Guide .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-flask-json-guide-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "python",
@@ -2306,7 +2368,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "python-github-setup-cursorrules-prompt-file-cursorrule",
@@ -2315,7 +2377,7 @@
     "description": "Python GitHub Setup .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-github-setup-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "python",
@@ -2329,7 +2391,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "python-llm-ml-workflow-cursorrules-prompt-file-cursorrule",
@@ -2338,7 +2400,7 @@
     "description": "Python LLM & ML Workflow .cursorrules Prompt File",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-llm-ml-workflow-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "python"
@@ -2351,7 +2413,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "python-projects-guide-cursorrules-prompt-file-cursorrule",
@@ -2360,7 +2422,7 @@
     "description": "Python Projects Guide .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-projects-guide-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "python"
@@ -2373,7 +2435,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "pytorch-scikit-learn-cursorrules-prompt-file-cursorrule",
@@ -2382,7 +2444,7 @@
     "description": "PyTorch Scikit-learn .cursorrules Prompt File",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/pytorch-scikit-learn-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -2393,7 +2455,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "qa-bug-report-cursorrules-prompt-file-cursorrule",
@@ -2402,7 +2464,7 @@
     "description": "QA Bug Report Prompt",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/qa-bug-report-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -2413,7 +2475,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "qwik-basic-cursorrules-prompt-file-cursorrule",
@@ -2422,7 +2484,7 @@
     "description": "Cursor rules for qwik basic cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/qwik-basic-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -2433,7 +2495,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "qwik-tailwind-cursorrules-prompt-file-cursorrule",
@@ -2442,7 +2504,7 @@
     "description": "Cursor rules for qwik tailwind cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/qwik-tailwind-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "tailwind"
@@ -2455,7 +2517,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "r-cursorrules-prompt-file-best-practices-cursorrule",
@@ -2464,7 +2526,7 @@
     "description": "Cursor rules for r cursorrules prompt file best practices development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/r-cursorrules-prompt-file-best-practices",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -2475,7 +2537,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "rails-cursorrules-prompt-file-cursorrule",
@@ -2484,7 +2546,7 @@
     "description": "Rails 8 (Basic Setup)",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/rails-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [],
     "tech_stack": [],
@@ -2495,7 +2557,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "react-chakra-ui-cursorrules-prompt-file-cursorrule",
@@ -2504,7 +2566,7 @@
     "description": "Cursor rules for react chakra ui cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-chakra-ui-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react"
@@ -2517,7 +2579,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "react-components-creation-cursorrules-prompt-file-cursorrule",
@@ -2526,7 +2588,7 @@
     "description": "React Components Creation .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-components-creation-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react"
@@ -2539,7 +2601,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "react-formengine-ai-form-builder-cursorrules-prompt-file-cursorrule",
@@ -2548,7 +2610,7 @@
     "description": "Cursor rules for react formengine ai form builder cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-formengine-ai-form-builder-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react"
@@ -2561,7 +2623,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "react-graphql-apollo-client-cursorrules-prompt-file-cursorrule",
@@ -2570,7 +2632,7 @@
     "description": "Cursor rules for react graphql apollo client cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-graphql-apollo-client-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react",
@@ -2584,7 +2646,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "react-mobx-cursorrules-prompt-file-cursorrule",
@@ -2593,7 +2655,7 @@
     "description": "Cursor rules for react mobx cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-mobx-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react"
@@ -2606,7 +2668,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "react-native-expo-cursorrules-prompt-file-cursorrule",
@@ -2615,7 +2677,7 @@
     "description": "Cursor rules for react native expo cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-native-expo-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react"
@@ -2628,7 +2690,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "react-native-expo-router-typescript-windows-cursorrules-prompt-file-cursorrule",
@@ -2637,7 +2699,7 @@
     "description": "Cursor rules for react native expo router typescript windows cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-native-expo-router-typescript-windows-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react",
@@ -2651,7 +2713,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "react-nextjs-ui-development-cursorrules-prompt-fil-cursorrule",
@@ -2660,7 +2722,7 @@
     "description": "React NextJS UI development .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-nextjs-ui-development-cursorrules-prompt-fil",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react",
@@ -2674,7 +2736,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "react-query-cursorrules-prompt-file-cursorrule",
@@ -2683,7 +2745,7 @@
     "description": "Cursor rules for react query cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-query-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react"
@@ -2696,7 +2758,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "react-redux-typescript-cursorrules-prompt-file-cursorrule",
@@ -2705,7 +2767,7 @@
     "description": "Cursor rules for react redux typescript cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-redux-typescript-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react",
@@ -2719,7 +2781,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "react-styled-components-cursorrules-prompt-file-cursorrule",
@@ -2728,7 +2790,7 @@
     "description": "Cursor rules for react styled components cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-styled-components-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react"
@@ -2741,7 +2803,29 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
+  },
+  {
+    "id": "react-tanstack-router-query-cursorrules-prompt-file-cursorrule",
+    "name": "React Tanstack Router Query Cursorrules Prompt File Rules",
+    "type": "rule",
+    "description": "React + TanStack Router + TanStack Query Cursor Rules",
+    "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-tanstack-router-query-cursorrules-prompt-file",
+    "stars": null,
+    "pushed_at": "2026-05-05T03:14:10Z",
+    "category": "frontend",
+    "tags": [
+      "react"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/react-tanstack-router-query-cursorrules-prompt-file/.cursorrules"
+      ]
+    },
+    "source": "awesome-cursorrules",
+    "last_synced": "2026-05-06"
   },
   {
     "id": "react-typescript-nextjs-nodejs-cursorrules-prompt-cursorrule",
@@ -2750,7 +2834,7 @@
     "description": "React TypeScript Next.js Node.js .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-typescript-nextjs-nodejs-cursorrules-prompt-",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react",
@@ -2766,7 +2850,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "react-typescript-symfony-cursorrules-prompt-file-cursorrule",
@@ -2775,7 +2859,7 @@
     "description": "React TypeScript Symfony .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-typescript-symfony-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react",
@@ -2789,7 +2873,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "rtl-right-to-left-i18n-cursorrules-prompt-file-cursorrule",
@@ -2798,7 +2882,7 @@
     "description": "Cursor rules for rtl right to left i18n cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/rtl-right-to-left-i18n-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -2809,7 +2893,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "salesforce-apex-cursorrules-prompt-file-cursorrule",
@@ -2818,7 +2902,7 @@
     "description": "Salesforce Apex .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/salesforce-apex-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -2829,7 +2913,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "scala-kafka-cursorrules-prompt-file-cursorrule",
@@ -2838,7 +2922,7 @@
     "description": "Cursor rules for scala kafka cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/scala-kafka-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -2849,7 +2933,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "solidity-foundry-cursorrules-prompt-file-cursorrule",
@@ -2858,7 +2942,7 @@
     "description": "Solidity Foundry .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/solidity-foundry-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -2869,7 +2953,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "solidity-hardhat-cursorrules-prompt-file-cursorrule",
@@ -2878,7 +2962,7 @@
     "description": "Solidity Hardhat .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/solidity-hardhat-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -2889,7 +2973,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "solidity-react-blockchain-apps-cursorrules-prompt-cursorrule",
@@ -2898,7 +2982,7 @@
     "description": "Solidity React Blockchain Apps .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/solidity-react-blockchain-apps-cursorrules-prompt-",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react"
@@ -2911,7 +2995,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "solidjs-basic-cursorrules-prompt-file-cursorrule",
@@ -2920,7 +3004,7 @@
     "description": "Cursor rules for solidjs basic cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/solidjs-basic-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -2931,7 +3015,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "solidjs-tailwind-cursorrules-prompt-file-cursorrule",
@@ -2940,7 +3024,7 @@
     "description": "Cursor rules for solidjs tailwind cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/solidjs-tailwind-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "tailwind"
@@ -2953,7 +3037,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "solidjs-typescript-cursorrules-prompt-file-cursorrule",
@@ -2962,7 +3046,7 @@
     "description": "Cursor rules for solidjs typescript cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/solidjs-typescript-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "typescript"
@@ -2975,7 +3059,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "svelte-5-vs-svelte-4-cursorrules-prompt-file-cursorrule",
@@ -2984,7 +3068,7 @@
     "description": "Svelte 5 vs Svelte 4 .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "svelte"
@@ -2997,7 +3081,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "sveltekit-restful-api-tailwind-css-cursorrules-pro-cursorrule",
@@ -3006,7 +3090,7 @@
     "description": "SvelteKit RESTful API Tailwind CSS .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/sveltekit-restful-api-tailwind-css-cursorrules-pro",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "svelte",
@@ -3022,7 +3106,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "sveltekit-tailwindcss-typescript-cursorrules-promp-cursorrule",
@@ -3031,7 +3115,7 @@
     "description": "SvelteKit TailwindCSS TypeScript .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/sveltekit-tailwindcss-typescript-cursorrules-promp",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "svelte",
@@ -3047,7 +3131,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "sveltekit-typescript-guide-cursorrules-prompt-file-cursorrule",
@@ -3056,7 +3140,7 @@
     "description": "SvelteKit TypeScript Guide .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/sveltekit-typescript-guide-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "svelte",
@@ -3070,7 +3154,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "swift-uikit-cursorrules-prompt-file-cursorrule",
@@ -3079,7 +3163,7 @@
     "description": "Cursor rules for swift uikit cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/swift-uikit-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "mobile",
     "tags": [
       "swift"
@@ -3092,7 +3176,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "swiftui-guidelines-cursorrules-prompt-file-cursorrule",
@@ -3101,7 +3185,7 @@
     "description": "SwiftUI guidelines .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/swiftui-guidelines-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "mobile",
     "tags": [
       "swift"
@@ -3114,7 +3198,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "tailwind-css-nextjs-guide-cursorrules-prompt-file-cursorrule",
@@ -3123,7 +3207,7 @@
     "description": "Tailwind CSS Next.js Guide .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/tailwind-css-nextjs-guide-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "nextjs",
@@ -3138,7 +3222,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "tailwind-react-firebase-cursorrules-prompt-file-cursorrule",
@@ -3147,7 +3231,7 @@
     "description": "Tailwind React Firebase .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/tailwind-react-firebase-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react",
@@ -3161,7 +3245,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "tailwind-shadcn-ui-integration-cursorrules-prompt-cursorrule",
@@ -3170,7 +3254,7 @@
     "description": "Tailwind Shadcn UI Integration .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/tailwind-shadcn-ui-integration-cursorrules-prompt-",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "tailwind"
@@ -3183,7 +3267,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "tauri-svelte-typescript-guide-cursorrules-prompt-f-cursorrule",
@@ -3192,7 +3276,7 @@
     "description": "Tauri Svelte TypeScript Guide .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/tauri-svelte-typescript-guide-cursorrules-prompt-f",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "svelte",
@@ -3206,7 +3290,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "temporal-python-cursorrules-cursorrule",
@@ -3215,7 +3299,7 @@
     "description": "Cursor rules for temporal python cursorrules development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/temporal-python-cursorrules",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "python"
@@ -3228,7 +3312,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "testrail-test-case-cursorrules-prompt-file-cursorrule",
@@ -3237,7 +3321,7 @@
     "description": "TestRail Test Case Prompt",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/testrail-test-case-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "testing",
     "tags": [],
     "tech_stack": [],
@@ -3248,7 +3332,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "typescript-axios-cursorrules-prompt-file-cursorrule",
@@ -3257,7 +3341,7 @@
     "description": "TypeScript axios .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-axios-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "typescript"
@@ -3270,7 +3354,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "typescript-clasp-cursorrules-prompt-file-cursorrule",
@@ -3279,7 +3363,7 @@
     "description": "TypeScript Google Apps Script .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-clasp-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "typescript",
@@ -3293,7 +3377,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "typescript-code-convention-cursorrules-prompt-file-cursorrule",
@@ -3302,7 +3386,7 @@
     "description": "TypeScript Code Convention .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-code-convention-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "typescript"
@@ -3315,7 +3399,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "typescript-expo-jest-detox-cursorrules-prompt-file-cursorrule",
@@ -3324,7 +3408,7 @@
     "description": "TypeScript Expo Jest Detox .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-expo-jest-detox-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "typescript",
@@ -3338,7 +3422,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "typescript-llm-tech-stack-cursorrules-prompt-file-cursorrule",
@@ -3347,7 +3431,7 @@
     "description": "TypeScript LLM Tech Stack .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-llm-tech-stack-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "typescript"
@@ -3360,7 +3444,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "typescript-nestjs-best-practices-cursorrules-promp-cursorrule",
@@ -3369,7 +3453,7 @@
     "description": "TypeScript NestJS best practices .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-nestjs-best-practices-cursorrules-promp",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "typescript"
@@ -3382,7 +3466,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "typescript-nextjs-cursorrules-prompt-file-cursorrule",
@@ -3391,7 +3475,7 @@
     "description": "TypeScript Next.js .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-nextjs-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "nextjs",
@@ -3405,7 +3489,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "typescript-nextjs-react-cursorrules-prompt-file-cursorrule",
@@ -3414,7 +3498,7 @@
     "description": "TypeScript Next.js React .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-nextjs-react-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react",
@@ -3429,7 +3513,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "typescript-nextjs-react-tailwind-supabase-cursorru-cursorrule",
@@ -3438,7 +3522,7 @@
     "description": "TypeScript Next.js React Tailwind Supabase .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-nextjs-react-tailwind-supabase-cursorru",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react",
@@ -3455,7 +3539,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "typescript-nextjs-supabase-cursorrules-prompt-file-cursorrule",
@@ -3464,7 +3548,7 @@
     "description": "TypeScript Next.js Supabase .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-nextjs-supabase-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "nextjs",
@@ -3479,7 +3563,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "typescript-nodejs-nextjs-ai-cursorrules-prompt-fil-cursorrule",
@@ -3488,7 +3572,7 @@
     "description": "TypeScript Node.js Next.js AI .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-nodejs-nextjs-ai-cursorrules-prompt-fil",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "nextjs",
@@ -3503,7 +3587,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "typescript-nodejs-nextjs-app-cursorrules-prompt-fi-cursorrule",
@@ -3512,7 +3596,7 @@
     "description": "TypeScript Node.js Next.js App .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-nodejs-nextjs-app-cursorrules-prompt-fi",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "nextjs",
@@ -3527,7 +3611,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "typescript-nodejs-nextjs-react-ui-css-cursorrules-cursorrule",
@@ -3536,7 +3620,7 @@
     "description": "TypeScript Node.js Next.js React UI CSS .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-nodejs-nextjs-react-ui-css-cursorrules-",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react",
@@ -3553,7 +3637,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "typescript-nodejs-react-vite-cursorrules-prompt-fi-cursorrule",
@@ -3562,7 +3646,7 @@
     "description": "TypeScript Node.js React Vite .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-nodejs-react-vite-cursorrules-prompt-fi",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react",
@@ -3577,7 +3661,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "typescript-react-cursorrules-prompt-file-cursorrule",
@@ -3586,7 +3670,7 @@
     "description": "Cursor rules for typescript react cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-react-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react",
@@ -3600,7 +3684,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "typescript-react-nextjs-cloudflare-cursorrules-pro-cursorrule",
@@ -3609,7 +3693,7 @@
     "description": "TypeScript React Next.js Cloudflare .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-react-nextjs-cloudflare-cursorrules-pro",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react",
@@ -3624,7 +3708,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "typescript-react-nextui-supabase-cursorrules-promp-cursorrule",
@@ -3633,7 +3717,7 @@
     "description": "TypeScript React NextUI Supabase .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-react-nextui-supabase-cursorrules-promp",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "react",
@@ -3648,7 +3732,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "typescript-shadcn-ui-nextjs-cursorrules-prompt-fil-cursorrule",
@@ -3657,7 +3741,7 @@
     "description": "TypeScript Shadcn UI Next.js .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-shadcn-ui-nextjs-cursorrules-prompt-fil",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "nextjs",
@@ -3671,7 +3755,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "typescript-vite-tailwind-cursorrules-prompt-file-cursorrule",
@@ -3680,7 +3764,7 @@
     "description": "TypeScript Vite Tailwind .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-vite-tailwind-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "typescript",
@@ -3694,7 +3778,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "typescript-vuejs-cursorrules-prompt-file-cursorrule",
@@ -3703,7 +3787,7 @@
     "description": "TypeScript Vue.js .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-vuejs-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "vue",
@@ -3717,7 +3801,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "typescript-zod-tailwind-nextjs-cursorrules-prompt-cursorrule",
@@ -3726,7 +3810,7 @@
     "description": "TypeScript Zod Tailwind Next.js .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-zod-tailwind-nextjs-cursorrules-prompt-",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "nextjs",
@@ -3741,7 +3825,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "typo3cms-extension-cursorrules-prompt-file-cursorrule",
@@ -3750,7 +3834,7 @@
     "description": "TYPO3 CMS Extension Cursorrules Prompt",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typo3cms-extension-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -3761,7 +3845,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "uikit-guidelines-cursorrules-prompt-file-cursorrule",
@@ -3770,7 +3854,7 @@
     "description": "UIKit Guidelines .cursorrules Prompt File",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/uikit-guidelines-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -3781,7 +3865,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "unity-cursor-ai-c-cursorrules-prompt-file-cursorrule",
@@ -3790,7 +3874,7 @@
     "description": "Unity Cursor AI C# .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/unity-cursor-ai-c-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [],
     "tech_stack": [],
@@ -3801,7 +3885,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "vitest-unit-testing-cursorrules-prompt-file-cursorrule",
@@ -3810,7 +3894,7 @@
     "description": "Vitest Unit Testing Prompt",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/vitest-unit-testing-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "testing",
     "tags": [],
     "tech_stack": [],
@@ -3821,7 +3905,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "vscode-extension-dev-typescript-cursorrules-prompt-file-cursorrule",
@@ -3830,7 +3914,7 @@
     "description": "Cursor rules for vscode extension dev typescript cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/vscode-extension-dev-typescript-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "typescript"
@@ -3843,7 +3927,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "vue-3-nuxt-3-development-cursorrules-prompt-file-cursorrule",
@@ -3852,7 +3936,7 @@
     "description": "Vue 3 Nuxt 3 Development .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/vue-3-nuxt-3-development-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "vue"
@@ -3865,7 +3949,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "vue-3-nuxt-3-typescript-cursorrules-prompt-file-cursorrule",
@@ -3874,7 +3958,7 @@
     "description": "Vue 3 Nuxt 3 TypeScript .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/vue-3-nuxt-3-typescript-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "vue",
@@ -3888,7 +3972,29 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
+  },
+  {
+    "id": "vue-claude-stack-cursorrule",
+    "name": "Vue Claude Stack Rules",
+    "type": "rule",
+    "description": "Cursor rules for vue claude stack development",
+    "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/vue-claude-stack",
+    "stars": null,
+    "pushed_at": "2026-05-05T03:14:10Z",
+    "category": "frontend",
+    "tags": [
+      "vue"
+    ],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/vue-claude-stack/.cursorrules"
+      ]
+    },
+    "source": "awesome-cursorrules",
+    "last_synced": "2026-05-06"
   },
   {
     "id": "vue3-composition-api-cursorrules-prompt-file-cursorrule",
@@ -3897,7 +4003,7 @@
     "description": "Cursor rules for vue3 composition api cursorrules prompt file development",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/vue3-composition-api-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "frontend",
     "tags": [
       "vue"
@@ -3910,7 +4016,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "web-app-optimization-cursorrules-prompt-file-cursorrule",
@@ -3919,7 +4025,7 @@
     "description": "Web App Optimization .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/web-app-optimization-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -3930,7 +4036,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "webassembly-z80-cellular-automata-cursorrules-prom-cursorrule",
@@ -3939,7 +4045,7 @@
     "description": "WebAssembly Z80 Cellular Automata .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/webassembly-z80-cellular-automata-cursorrules-prom",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -3950,7 +4056,27 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
+  },
+  {
+    "id": "wordpress-claude-stack-cursorrule",
+    "name": "Wordpress Claude Stack Rules",
+    "type": "rule",
+    "description": "Cursor rules for wordpress claude stack development",
+    "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/wordpress-claude-stack",
+    "stars": null,
+    "pushed_at": "2026-05-05T03:14:10Z",
+    "category": "tooling",
+    "tags": [],
+    "tech_stack": [],
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/wordpress-claude-stack/.cursorrules"
+      ]
+    },
+    "source": "awesome-cursorrules",
+    "last_synced": "2026-05-06"
   },
   {
     "id": "wordpress-php-guzzle-gutenberg-cursorrules-prompt-cursorrule",
@@ -3959,7 +4085,7 @@
     "description": "WordPress PHP Guzzle Gutenberg .cursorrules prompt file",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/wordpress-php-guzzle-gutenberg-cursorrules-prompt-",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "backend",
     "tags": [
       "php"
@@ -3972,7 +4098,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "xian-smart-contracts-cursor-rules-prompt-file-cursorrule",
@@ -3981,7 +4107,7 @@
     "description": "Xian Smart Contracts",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/xian-smart-contracts-cursor-rules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "tooling",
     "tags": [],
     "tech_stack": [],
@@ -3992,7 +4118,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "xray-test-case-cursorrules-prompt-file-cursorrule",
@@ -4001,7 +4127,7 @@
     "description": "Xray Test Case Prompt",
     "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/xray-test-case-cursorrules-prompt-file",
     "stars": null,
-    "pushed_at": "2026-05-02T06:06:04Z",
+    "pushed_at": "2026-05-05T03:14:10Z",
     "category": "testing",
     "tags": [],
     "tech_stack": [],
@@ -4012,7 +4138,7 @@
       ]
     },
     "source": "awesome-cursorrules",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "ai-powered-code-review-rule21",
@@ -4034,7 +4160,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "analyze-issue-rule21",
@@ -4057,7 +4183,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "backend-dev-rule21",
@@ -4082,7 +4208,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "bug-fix-rule21",
@@ -4104,7 +4230,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "changelog-management-rule21",
@@ -4126,7 +4252,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "code-quality-check-rule21",
@@ -4148,7 +4274,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "code-review-rule21",
@@ -4170,7 +4296,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "commit-rule21",
@@ -4192,7 +4318,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "context-loader-rule21",
@@ -4214,7 +4340,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "create-docs-rule21",
@@ -4236,7 +4362,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "custom-command-builder-rule21",
@@ -4258,7 +4384,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "feedback-enhanced-rule21",
@@ -4280,7 +4406,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "frontend-dev-rule21",
@@ -4305,7 +4431,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "implement-task-rule21",
@@ -4327,7 +4453,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "intelligent-project-management-rule21",
@@ -4349,7 +4475,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "intelligent-workflow-orchestration-rule21",
@@ -4371,7 +4497,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "mcp-debugging-enhanced-rule21",
@@ -4393,7 +4519,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "mcp-intelligent-strategy-rule21",
@@ -4415,7 +4541,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "mcp-unified-management-rule21",
@@ -4437,7 +4563,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "mcp-zero-config-detection-rule21",
@@ -4459,7 +4585,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "mermaid-rule21",
@@ -4481,7 +4607,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "root-cause-analysis-rule21",
@@ -4503,7 +4629,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "systematic-debugging-rule21",
@@ -4525,7 +4651,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "ai-agent-intelligence-core-rule21",
@@ -4547,7 +4673,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "ai-ethical-boundaries-rule21",
@@ -4569,7 +4695,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "ai-thinking-protocol-rule21",
@@ -4591,7 +4717,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "audit-logging-system-rule21",
@@ -4613,7 +4739,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "backend-rules-rule21",
@@ -4635,7 +4761,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "brain-recorder-integration-rule21",
@@ -4657,7 +4783,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "context-recorder-advanced-rule21",
@@ -4679,7 +4805,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "context-recorder-core-rule21",
@@ -4701,7 +4827,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "context-recorder-edge-cases-rule21",
@@ -4723,7 +4849,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "context-recorder-system-rule21",
@@ -4745,7 +4871,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "context-recorder-templates-rule21",
@@ -4767,7 +4893,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "context-systems-integration-rule21",
@@ -4789,7 +4915,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "context7-preload-standard-rule21",
@@ -4811,7 +4937,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "disaster-recovery-plan-rule21",
@@ -4833,7 +4959,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "dynamic-thinking-depth-regulation-rule21",
@@ -4855,7 +4981,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "error-recovery-system-rule21",
@@ -4877,7 +5003,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "file-generation-safety-rules-rule21",
@@ -4899,7 +5025,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "frontend-rules-rule21",
@@ -4921,7 +5047,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "human-ai-collaboration-optimization-rule21",
@@ -4943,7 +5069,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "intelligent-recommendation-engine-rule21",
@@ -4965,7 +5091,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "knowledge-creation-discovery-framework-rule21",
@@ -4987,7 +5113,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "memory-system-integration-rule21",
@@ -5009,7 +5135,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "multimodal-interaction-framework-rule21",
@@ -5031,7 +5157,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "performance-monitoring-system-rule21",
@@ -5053,7 +5179,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "permission-control-system-rule21",
@@ -5075,7 +5201,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "rule-conflict-resolution-rule21",
@@ -5097,7 +5223,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "rule-hot-reload-system-rule21",
@@ -5119,7 +5245,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "super-brain-system-rule21",
@@ -5141,7 +5267,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "system-diagnostics-rule21",
@@ -5163,7 +5289,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "system-integration-config-rule21",
@@ -5185,7 +5311,7 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   },
   {
     "id": "unified-rules-base-rule21",
@@ -5207,6 +5333,6 @@
       ]
     },
     "source": "rules-2.1-optimized",
-    "last_synced": "2026-05-04"
+    "last_synced": "2026-05-06"
   }
 ]

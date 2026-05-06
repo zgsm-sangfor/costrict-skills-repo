@@ -1,12 +1,12 @@
 <div align="center">
 <img src="assets/logo.png" alt="Everything AI Coding logo" width="600" />
-<p><strong><!-- README_APPROX_COUNT:START -->4200<!-- README_APPROX_COUNT:END -->+ curated AI coding resources — browse, evaluate, install</strong><br/>MCP Servers · Skills · Rules · Prompts</p>
+<p><strong><!-- README_APPROX_COUNT:START -->11400<!-- README_APPROX_COUNT:END -->+ curated AI coding resources — browse, evaluate, install</strong><br/>MCP Servers · Skills · Rules · Prompts</p>
 
 <p>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/stargazers"><img src="https://img.shields.io/github/stars/zgsm-ai/everything-ai-coding?style=flat-square&color=4A90D9" alt="Stars" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zgsm-ai/everything-ai-coding?style=flat-square" alt="License" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/commits/main"><img src="https://img.shields.io/github/last-commit/zgsm-ai/everything-ai-coding?style=flat-square" alt="Last Commit" /></a>
-  <img src="https://img.shields.io/badge/resources-4252-2ECC71?style=flat-square" alt="Resources" />
+  <img src="https://img.shields.io/badge/resources-11486-2ECC71?style=flat-square" alt="Resources" />
 </p>
 
 <p>
@@ -34,7 +34,7 @@ Everything AI Coding is a **curated knowledge base** that continuously collects,
 <a id="knowledge-base"></a>
 ## 📚 Knowledge Base
 
-### [🔌 MCP Servers](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->1630<!-- README_COUNT_MCP:END --> entries
+### [🔌 MCP Servers](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->8746<!-- README_COUNT_MCP:END --> entries
 
 Model Context Protocol servers that connect AI agents to external tools, databases, and services.
 
@@ -44,51 +44,51 @@ Model Context Protocol servers that connect AI agents to external tools, databas
 | [MCP Inspector](https://github.com/modelcontextprotocol/inspector) | 9.2k | 99 | A developer tool for testing and debugging MCP servers via UI or CLI. |
 | [IDA Pro MCP](https://github.com/mrexodia/ida-pro-mcp) | 6.7k | 98 | MCP server enabling AI-assisted reverse engineering in IDA Pro. |
 | [Firecrawl](https://github.com/mendableai/firecrawl-mcp-server) | 6.2k | 98 | MCP server for web scraping, search, and data extraction via Firecraw… |
-| [Grafana](https://github.com/grafana/mcp-grafana) | 3.0k | 98 | MCP server for AI-assisted Grafana operations: dashboards, datasource… |
-| [Time](https://github.com/modelcontextprotocol/servers/tree/main/src/time) | 85.0k | 97 | MCP server providing current time and timezone conversion via IANA ti… |
+| [Time](https://github.com/modelcontextprotocol/servers/tree/main/src/time) | 85.1k | 97 | MCP server providing current time and timezone conversion via IANA ti… |
+| [Basic Memory](https://github.com/basicmachines-co/basic-memory) | 3.0k | 97 | Local-first knowledge management system that builds semantic graphs f… |
 <!-- README_TOP5_MCP:END -->
 
 [Browse all MCP servers →](./catalog/mcp/) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=mcp)
 
 ---
 
-### [🎯 Skills](./catalog/skills/) — <!-- README_COUNT_SKILL:START -->1807<!-- README_COUNT_SKILL:END --> entries
+### [🎯 Skills](./catalog/skills/) — <!-- README_COUNT_SKILL:START -->1809<!-- README_COUNT_SKILL:END --> entries
 
 Reusable agent capabilities and workflows for AI coding assistants.
 
 <!-- README_TOP5_SKILL:START -->
 | Name | Source | Score | Description |
 |------|--------|-------|-------------|
+| [Agent Development](https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/agent-development) | Anthropic Official | 97 | Guide for creating autonomous agents with YAML frontmatter and system… |
+| [Skill Development](https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/skill-development) | Anthropic Official | 97 | Guidance for creating modular, self-contained skills that extend Clau… |
+| [claude-api](https://github.com/anthropics/skills/tree/main/skills/claude-api) | Anthropic Official | 96 | A skill for building, debugging, and optimizing Claude API and Anthro… |
 | [docx](https://github.com/anthropics/skills/tree/main/skills/docx) | Anthropic Official | 96 | A skill for programmatically creating, editing, and analyzing Word .d… |
 | [skill-creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator) | Anthropic Official | 96 | A meta-skill for creating, testing, and iteratively improving Claude… |
-| [azure-ai-voicelive-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-voicelive-dotnet) | Antigravity Skills | 95 | Azure AI Voice Live SDK for .NET to build real-time bidirectional voi… |
-| [azure-eventhub-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-eventhub-dotnet) | Antigravity Skills | 95 | Azure Event Hubs .NET SDK for high-throughput event streaming. |
-| [azure-mgmt-fabric-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-mgmt-fabric-dotnet) | Antigravity Skills | 95 | .NET SDK for managing Microsoft Fabric capacity resources via Azure R… |
 <!-- README_TOP5_SKILL:END -->
 
 [Browse all skills →](./catalog/skills/) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=skill)
 
 ---
 
-### [📋 Rules](./catalog/rules/) — <!-- README_COUNT_RULE:START -->241<!-- README_COUNT_RULE:END --> entries
+### [📋 Rules](./catalog/rules/) — <!-- README_COUNT_RULE:START -->355<!-- README_COUNT_RULE:END --> entries
 
 Coding conventions and AI behavior guidelines for consistent development.
 
 <!-- README_TOP5_RULE:START -->
 | Name | Source | Score | Category |
 |------|--------|-------|----------|
-| [Flutter & Dart Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/flutter-dart) | Curated | 0 | mobile |
-| [Supabase Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/supabase) | Curated | 0 | database |
-| [Security Audit Rules](https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules) | Curated | 0 | security |
-| [Technical Documentation Rules](https://github.com/Mr-chen-05/rules-2.1-optimized/tree/master/project-rules) | Curated | 0 | documentation |
-| [Android Jetpack Compose Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/android-jetpack-compose-cursorrules-prompt-file) | CursorRules | 0 | mobile |
+| [Momen Cursurrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/momen-cursurrules-prompt-file) | CursorRules | 97 | tooling |
+| [Changelog Management (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/changelog-management.mdc) | Rules 2.1 | 90 | ai-ml |
+| [Beefreesdk Nocode Content Editor Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/beefreeSDK-nocode-content-editor-cursorrules-prompt-file) | CursorRules | 87 | tooling |
+| [Drupal 11 Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/drupal-11-cursorrules-prompt-file) | CursorRules | 87 | tooling |
+| [Nextjs Supabase Shadcn Pwa Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file) | CursorRules | 87 | frontend |
 <!-- README_TOP5_RULE:END -->
 
 [Browse all rules →](./catalog/rules/) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=rule)
 
 ---
 
-### [💡 Prompts](./catalog/prompts/) — <!-- README_COUNT_PROMPT:START -->574<!-- README_COUNT_PROMPT:END --> entries
+### [💡 Prompts](./catalog/prompts/) — <!-- README_COUNT_PROMPT:START -->576<!-- README_COUNT_PROMPT:END --> entries
 
 Developer-focused prompt templates for common coding tasks.
 
