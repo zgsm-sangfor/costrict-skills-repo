@@ -296,6 +296,23 @@ def merge():
             if pa:
                 entry["pushed_at"] = pa
                 overlayed += 1
+
+    # mcp_registry 派生条目复用 mcp_registry_published_at 作为 pushed_at，
+    # 避免对 6000+ registry 条目逐个打 GitHub API（首次接入时 6h CI 超时根因）。
+    # registry publishedAt 是 registry 端打包时间，对 freshness 信号是合理近似。
+    registry_overlayed = 0
+    for entry in deduped:
+        if not entry.get("pushed_at"):
+            rpa = entry.get("mcp_registry_published_at")
+            if rpa:
+                entry["pushed_at"] = rpa
+                registry_overlayed += 1
+    if registry_overlayed:
+        logger.info(
+            f"Overlayed pushed_at for {registry_overlayed} entries "
+            f"from mcp_registry_published_at"
+        )
+
     still_missing = [e for e in deduped if not e.get("pushed_at") and e.get("source_url", "").startswith("https://github.com/")]
     if still_missing:
         logger.info(f"Backfilling pushed_at for {len(still_missing)} new entries via GitHub API (overlayed {overlayed} from prior output)")

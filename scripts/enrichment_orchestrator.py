@@ -25,12 +25,21 @@ def enrich_entries(entries: list[dict[str, Any]]) -> None:
     # Run eval harness (evaluation + enrichment in a single LLM call)
     incremental = os.environ.get("EVAL_INCREMENTAL", "true").lower() == "true"
     try:
+        concurrency = int(os.environ.get("EVAL_CONCURRENCY", "4"))
+    except ValueError:
+        concurrency = 4
+    try:
         from eval_bridge import eval_and_map
-        logger.info("Running eval harness (incremental=%s)...", incremental)
+        logger.info(
+            "Running eval harness (incremental=%s, concurrency=%d)...",
+            incremental,
+            concurrency,
+        )
         eval_and_map(
             entries,
             cache_dir=str(Path(__file__).resolve().parent.parent / ".eval_cache"),
             incremental=incremental,
+            concurrency=concurrency,
         )
     except ImportError:
         logger.warning("eval_bridge not available, skipping evaluation + enrichment")

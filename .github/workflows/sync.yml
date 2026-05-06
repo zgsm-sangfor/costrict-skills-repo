@@ -157,6 +157,7 @@ jobs:
           LLM_MODEL: ${{ secrets.LLM_MODEL }}
           EVAL_DRY_RUN: ${{ vars.EVAL_DRY_RUN || 'true' }}
           EVAL_INCREMENTAL: "true"
+          EVAL_CONCURRENCY: ${{ vars.EVAL_CONCURRENCY || '16' }}
         run: python scripts/merge_index.py
         continue-on-error: true
 
