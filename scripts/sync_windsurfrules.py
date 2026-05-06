@@ -69,6 +69,7 @@ def parse_frontmatter(content: str) -> tuple[dict, str]:
 
 
 def _first_meaningful_line(body: str, limit: int = 200) -> str:
+    """Deprecated: 保留以备旧调用点，新代码请用 _extract_description。"""
     for raw in (body or "").splitlines():
         line = raw.strip().strip("#").strip()
         if not line:
@@ -79,6 +80,61 @@ def _first_meaningful_line(body: str, limit: int = 200) -> str:
             continue
         return line[:limit]
     return ""
+
+
+def _extract_description(body: str, limit: int = 300) -> str:
+    """Extract description from awesome-list README body.
+
+    §14 修复 C：awesome-windsurfrules 的真实规则内容写在第一段 ``` ``` ```
+    code block 内（如 ``` ```js ... ``` ```），上一版 _first_meaningful_line
+    会跳过 fence 行而把文件名占位符当成描述（≤50 字符），导致 LLM 误评。
+
+    Strategy:
+    1. 第一行的 H1 (``# Title``) 作为前缀
+    2. 抓第一个 code block 的内容；只要其中非空就用它（截断到 limit）
+    3. 无 code block → 退回到第一段非图片/非链接的纯文本行拼接
+    4. 都没有 → 返回 H1 标题 / 空字符串
+    """
+    if not body:
+        return ""
+    lines = body.splitlines()
+    title = ""
+    in_code_block = False
+    code_lines: list[str] = []
+    paragraph_lines: list[str] = []
+    code_block_done = False
+    for raw in lines:
+        stripped = raw.strip()
+        if not title and stripped.startswith("# "):
+            title = stripped.lstrip("#").strip()
+            continue
+        if stripped.startswith("```"):
+            if in_code_block:
+                # 第一个 code block 结束 → 已收集到内容，停止后续处理
+                in_code_block = False
+                if code_lines:
+                    code_block_done = True
+                    break
+            else:
+                in_code_block = True
+            continue
+        if in_code_block:
+            code_lines.append(raw)
+        elif stripped and not stripped.startswith(("!", "[", "---")):
+            paragraph_lines.append(stripped)
+
+    body_text = ""
+    if code_block_done and code_lines:
+        body_text = "\n".join(code_lines).strip()
+    elif paragraph_lines:
+        body_text = " ".join(paragraph_lines).strip()
+
+    if not body_text:
+        return title[:limit]
+    if title:
+        combined = f"{title}: {body_text}"
+        return combined[:limit]
+    return body_text[:limit]
 
 
 def _extract_slug_from_path(path: str) -> str:
@@ -136,7 +192,7 @@ def _build_entry(repo: str, repo_slug: str, branch: str, path: str,
     if isinstance(desc_fm, str) and desc_fm.strip():
         description = desc_fm.strip()[:300]
     if not description:
-        description = _first_meaningful_line(body)
+        description = _extract_description(body)
     if not description:
         description = f"Windsurf rules for {slug.replace('-', ' ')}"
 

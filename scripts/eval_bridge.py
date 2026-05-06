@@ -425,22 +425,19 @@ def _mcp_registry_unstable_ids(diff: dict[str, Any]) -> set[str]:
 def _is_mcp_registry_derived(entry: dict[str, Any]) -> bool:
     """判定 entry 是否承载 mcp_registry 派生数据。
 
-    条件（任一满足）：
-      - source == "registry.modelcontextprotocol.io"（registry-only 主索引条目）
-      - source_url 指向 registry.modelcontextprotocol.io
-      - 携带 mcp_registry_status 字段（merge 后 winner 通过 _MCP_REGISTRY_MERGE_FIELDS 保留）
+    §14 修复 A 后：sync_mcp_registry 优先用 server.repository.url 写 source_url
+    （GitHub URL），所以不能再单纯以 source_url 含 ``registry.modelcontextprotocol.io``
+    判别。改用 ``entry.get("source") == "registry.modelcontextprotocol.io"``，
+    sync_mcp_registry 始终把 source 字段写为该值——这才是稳定的派生标识。
+
+    条件：source == "registry.modelcontextprotocol.io"。
+
+    merge 后的 GitHub winner 即使携带 mcp_registry_status 字段也不算 mcp_registry
+    派生——因为 registry diff 用 registry id 标记 unstable，winner.id 是 GitHub id，
+    二者不对应；若也短路这类 winner 会在 status_changed 场景下误复用旧评分
+    （codex review §8 finding #2）。
     """
-    if (entry.get("source") or "") == "registry.modelcontextprotocol.io":
-        return True
-    su = entry.get("source_url") or ""
-    # 只把 source_url 直接落在 registry 的 entry 视为 mcp_registry 派生。
-    # merge 后的 GitHub winner 即使携带 mcp_registry_status 字段也不在此短路
-    # 路径中——因为 registry diff 用 registry id 标记 unstable，winner.id 是
-    # GitHub id，二者不对应；若也短路这类 winner 会在 status_changed 场景下
-    # 误复用旧评分（codex review §8 finding #2）。
-    if "registry.modelcontextprotocol.io" in su:
-        return True
-    return False
+    return (entry.get("source") or "") == "registry.modelcontextprotocol.io"
 
 
 def _select_mcp_registry_short_circuit_entries(

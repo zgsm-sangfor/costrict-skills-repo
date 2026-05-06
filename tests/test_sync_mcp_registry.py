@@ -56,16 +56,24 @@ def _make_response(body: bytes, etag: str = ""):
 
 def _raw_entry(name, version="1.0.0", status="active", is_latest=True,
                title=None, description="desc", remotes=None,
-               published_at="2026-04-01T00:00:00Z"):
+               published_at="2026-04-01T00:00:00Z",
+               repository=None, packages=None, website_url=None):
     """构造一条 registry raw entry。"""
+    server: dict = {
+        "name": name,
+        "title": title or name,
+        "description": description,
+        "version": version,
+        "remotes": remotes or [],
+    }
+    if repository is not None:
+        server["repository"] = repository
+    if packages is not None:
+        server["packages"] = packages
+    if website_url is not None:
+        server["websiteUrl"] = website_url
     return {
-        "server": {
-            "name": name,
-            "title": title or name,
-            "description": description,
-            "version": version,
-            "remotes": remotes or [],
-        },
+        "server": server,
         "_meta": {
             smr.META_KEY: {
                 "status": status,
@@ -338,10 +346,133 @@ class TestNormalizeEntry(unittest.TestCase):
         self.assertEqual(e["mcp_remotes"][0]["url"], "https://foo.example/mcp")
 
     def test_source_url_uses_registry_base(self):
+        """无 repository 字段 → 退回 registry URL fallback。"""
         raw = _raw_entry("io.github.foo/bar")
         e = smr.normalize_entry(raw)
         self.assertTrue(e["source_url"].startswith(smr.REGISTRY_BASE + "/"))
         self.assertIn("io.github.foo", e["source_url"])
+
+    # --- §14 修复 A：source_url 优先用 server.repository.url ---
+
+    def test_source_url_uses_github_when_repository_present(self):
+        """含 repository.source=github + url → 直接落到 GitHub URL，不走 registry。"""
+        raw = _raw_entry(
+            "io.github.foo/bar",
+            repository={
+                "source": "github",
+                "url": "https://github.com/foo/bar",
+            },
+        )
+        e = smr.normalize_entry(raw)
+        self.assertEqual(e["source_url"], "https://github.com/foo/bar")
+        self.assertNotIn("registry.modelcontextprotocol.io", e["source_url"])
+
+    def test_source_url_includes_subfolder_for_monorepo(self):
+        """monorepo: repository.subfolder 存在 → URL 含 ``/tree/HEAD/<subfolder>``。"""
+        raw = _raw_entry(
+            "io.github.foo/bar",
+            repository={
+                "source": "github",
+                "url": "https://github.com/foo/bar",
+                "subfolder": "packages/lona-mcp-server",
+            },
+        )
+        e = smr.normalize_entry(raw)
+        self.assertEqual(
+            e["source_url"],
+            "https://github.com/foo/bar/tree/HEAD/packages/lona-mcp-server",
+        )
+
+    def test_source_url_falls_back_to_registry_when_no_github_repo(self):
+        """无 repository（典型 SaaS / 商业 server）→ source_url 退回 registry URL。"""
+        raw = _raw_entry("ac.inference.sh/mcp")
+        e = smr.normalize_entry(raw)
+        self.assertTrue(e["source_url"].startswith(smr.REGISTRY_BASE + "/"))
+
+    def test_source_url_falls_back_when_repository_source_not_github(self):
+        """repository.source != github（如 gitlab）→ 走 fallback。"""
+        raw = _raw_entry(
+            "com.example/svc",
+            repository={
+                "source": "gitlab",
+                "url": "https://gitlab.com/foo/bar",
+            },
+        )
+        e = smr.normalize_entry(raw)
+        self.assertTrue(e["source_url"].startswith(smr.REGISTRY_BASE + "/"))
+
+    def test_source_url_strips_trailing_slash(self):
+        """repository.url 末尾 / 应被去掉，避免 ``//tree/HEAD/...``。"""
+        raw = _raw_entry(
+            "io.github.foo/bar",
+            repository={
+                "source": "github",
+                "url": "https://github.com/foo/bar/",
+            },
+        )
+        e = smr.normalize_entry(raw)
+        self.assertEqual(e["source_url"], "https://github.com/foo/bar")
+
+    # --- §14 修复 B：install.config 解析 server.packages[] ---
+
+    def test_install_config_for_npm_package(self):
+        raw = _raw_entry(
+            "io.github.foo/bar",
+            packages=[{
+                "registryType": "npm",
+                "identifier": "@foo/bar-mcp",
+                "version": "1.5.2",
+                "transport": {"type": "stdio"},
+            }],
+        )
+        e = smr.normalize_entry(raw)
+        self.assertEqual(e["install"]["method"], "manual")
+        cfg = e["install"]["config"]
+        self.assertEqual(cfg["registry_type"], "npm")
+        self.assertEqual(cfg["identifier"], "@foo/bar-mcp")
+        self.assertEqual(cfg["version"], "1.5.2")
+        self.assertEqual(cfg["command"], "npx -y @foo/bar-mcp@1.5.2")
+
+    def test_install_config_for_pypi_package(self):
+        raw = _raw_entry(
+            "io.github.foo/bar",
+            packages=[{
+                "registryType": "pypi",
+                "identifier": "foo-mcp",
+                "version": "0.3.0",
+            }],
+        )
+        e = smr.normalize_entry(raw)
+        cfg = e["install"]["config"]
+        self.assertEqual(cfg["command"], "pipx run foo-mcp==0.3.0")
+
+    def test_install_config_for_npm_package_no_version(self):
+        """无 version 字段 → 命令省略版本号，不留 trailing @。"""
+        raw = _raw_entry(
+            "io.github.foo/bar",
+            packages=[{
+                "registryType": "npm",
+                "identifier": "@foo/bar-mcp",
+            }],
+        )
+        e = smr.normalize_entry(raw)
+        self.assertEqual(e["install"]["config"]["command"], "npx -y @foo/bar-mcp")
+
+    def test_install_falls_back_to_manual_when_no_packages(self):
+        """无 packages → install 不含 config 字段，行为保持原样。"""
+        raw = _raw_entry("io.github.foo/bar")
+        e = smr.normalize_entry(raw)
+        self.assertEqual(e["install"]["method"], "manual")
+        self.assertNotIn("config", e["install"])
+        self.assertEqual(e["install"]["remotes"], [])
+
+    def test_website_url_preserved_when_present(self):
+        raw = _raw_entry(
+            "io.github.foo/bar",
+            website_url="https://foo.example.com",
+        )
+        e = smr.normalize_entry(raw)
+        self.assertEqual(e["website_url"], "https://foo.example.com")
 
     def test_source_url_url_encodes_special_chars(self):
         """server.name 的 / 等字符 SHALL 被 URL-encoded。"""

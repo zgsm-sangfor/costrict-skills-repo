@@ -267,21 +267,43 @@ def _make_id(server_name: str) -> str:
     return f"{sk}-{h}"
 
 
-def _build_source_url(server_name: str) -> str:
-    """每条 entry 唯一 source_url：registry URL + URL-encoded name。"""
+def _registry_fallback_url(server_name: str) -> str:
+    """无 GitHub repository 时的 fallback：registry URL + URL-encoded name。"""
     encoded = urllib.parse.quote(server_name or "", safe="")
     return f"{REGISTRY_BASE}/{encoded}"
 
 
-def normalize_entry(raw: dict) -> dict:
-    """将 registry server entry 转换为 catalog mcp schema。"""
-    server = (raw or {}).get("server") or {}
-    official = _get_official_meta(raw)
+def _build_source_url(server: dict, registry_name: str) -> str:
+    """优先使用 server.repository.url（GitHub 真实仓库），fallback 到 registry URL。
 
-    server_name = server.get("name") or ""
-    title = server.get("title") or server_name
-    description = server.get("description") or ""
-    version = server.get("version") or ""
+    规则（§14 修复 A）：
+    - server.repository.source == "github" 且 url 非空 → 用 repo URL
+    - 含 subfolder（monorepo）→ 拼接 ``/tree/HEAD/<subfolder>``
+    - 否则（SaaS / 商业 server 无 GitHub repo）→ registry URL fallback
+
+    这样去重 / health 信号 / LLM 评估都能拿到真实 GitHub 链接，避免所有 entry
+    的 source_url 都落在 registry.modelcontextprotocol.io 上。
+    """
+    repo = (server or {}).get("repository") or {}
+    if isinstance(repo, dict) and (repo.get("source") or "").lower() == "github":
+        url = (repo.get("url") or "").rstrip("/")
+        if url:
+            subfolder = (repo.get("subfolder") or "").strip("/")
+            if subfolder:
+                return f"{url}/tree/HEAD/{subfolder}"
+            return url
+    return _registry_fallback_url(registry_name)
+
+
+def _build_install(server: dict) -> dict:
+    """根据 server.packages[] 构建 install 字典；无 packages 时退化为 manual。
+
+    §14 修复 B：把 npm/pypi/cargo/oci 等真实安装信息塞入 install.config，
+    供消费者 / LLM 看到具体命令而非空 manual。catalog schema 仍要求
+    install.method ∈ {mcp_config|mcp_config_template|manual|git_clone|download_file}，
+    所以保持 "manual" 不变；config 是任意 object，安全嵌入扩展字段。
+    """
+    packages = server.get("packages") or []
     remotes_raw = server.get("remotes") or []
 
     # mcp_remotes 字段：array of {type, url}
@@ -295,24 +317,67 @@ def normalize_entry(raw: dict) -> dict:
             continue
         mcp_remotes.append({"type": rtype, "url": rurl})
 
+    if isinstance(packages, list) and packages:
+        pkg = packages[0] if isinstance(packages[0], dict) else {}
+        registry_type = (pkg.get("registryType") or "").lower()
+        ident = pkg.get("identifier") or ""
+        ver = pkg.get("version") or ""
+
+        if registry_type == "npm":
+            cmd = f"npx -y {ident}@{ver}" if ver else f"npx -y {ident}"
+        elif registry_type == "pypi":
+            cmd = f"pipx run {ident}=={ver}" if ver else f"pipx run {ident}"
+        elif registry_type == "cargo":
+            cmd = f"cargo install {ident}@{ver}" if ver else f"cargo install {ident}"
+        elif registry_type == "oci":
+            cmd = f"docker run {ident}:{ver}" if ver else f"docker run {ident}"
+        elif registry_type and ident:
+            cmd = f"{registry_type}: {ident}@{ver}" if ver else f"{registry_type}: {ident}"
+        else:
+            cmd = ""
+
+        config: dict = {
+            "registry_type": registry_type,
+            "identifier": ident,
+            "version": ver,
+        }
+        if cmd:
+            config["command"] = cmd
+
+        return {
+            "method": "manual",
+            "config": config,
+            "remotes": mcp_remotes,
+        }
+
+    return {"method": "manual", "remotes": mcp_remotes}
+
+
+def normalize_entry(raw: dict) -> dict:
+    """将 registry server entry 转换为 catalog mcp schema。"""
+    server = (raw or {}).get("server") or {}
+    official = _get_official_meta(raw)
+
+    server_name = server.get("name") or ""
+    title = server.get("title") or server_name
+    description = server.get("description") or ""
+    version = server.get("version") or ""
+    website_url = server.get("websiteUrl") or ""
+
+    install = _build_install(server)
+    mcp_remotes = install.get("remotes") or []
+
     entry: dict = {
         "id": _make_id(server_name),
         "name": title,
         "type": "mcp",
         "description": description,
-        "source_url": _build_source_url(server_name),
+        "source_url": _build_source_url(server, server_name),
         "stars": None,
         "category": "tooling",
         "tags": [],
         "tech_stack": [],
-        "install": {
-            # catalog schema 仅接受 mcp_config | mcp_config_template | manual |
-            # git_clone | download_file。registry 主要提供 remote URL，需用户手动
-            # 复制到 MCP 客户端配置，因此映射为 "manual"。remotes 列表保留在
-            # mcp_remotes 字段中供消费者读取。
-            "method": "manual",
-            "remotes": mcp_remotes,
-        },
+        "install": install,
         "source": SOURCE_NAME,
         "last_synced": TODAY,
         # 三个新字段
@@ -321,6 +386,8 @@ def normalize_entry(raw: dict) -> dict:
         "mcp_registry_published_at": official.get("publishedAt") or "",
         "mcp_remotes": mcp_remotes,
     }
+    if website_url:
+        entry["website_url"] = website_url
     return entry
 
 
@@ -452,7 +519,8 @@ def main() -> int:
         seen: set = set()
         for r in raw_list:
             entry = normalize_entry(r)
-            if not entry["id"] or not (entry.get("source_url") or "").startswith(REGISTRY_BASE):
+            # source_url 现在可能是 GitHub URL（修复 A 后），仅校验非空 + 有 id
+            if not entry["id"] or not entry.get("source_url"):
                 _log(f"WARNING: skipped invalid entry id={entry.get('id')}")
                 continue
             if entry["id"] in seen:

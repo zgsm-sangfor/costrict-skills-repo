@@ -168,10 +168,26 @@ class TestMcpRegistryDerived:
             {"source": "registry.modelcontextprotocol.io"}
         )
 
-    def test_source_url_match(self):
+    def test_source_match_with_github_source_url(self):
+        """§14 修复 A 后：registry 派生 entry 的 source_url 可以是 GitHub URL，
+        但 source 字段始终是 ``registry.modelcontextprotocol.io``——这是稳定的
+        派生标识。"""
         from eval_bridge import _is_mcp_registry_derived
 
         assert _is_mcp_registry_derived(
+            {
+                "source": "registry.modelcontextprotocol.io",
+                "source_url": "https://github.com/foo/bar",
+            }
+        )
+
+    def test_source_url_alone_no_longer_qualifies(self):
+        """§14 修复 D：source_url 含 registry 域名但 source 字段不是 registry，
+        不再视为 mcp_registry 派生。新版判定只看 ``entry.source``——这避免了
+        被覆盖到 GitHub source 的 winner 误命中短路。"""
+        from eval_bridge import _is_mcp_registry_derived
+
+        assert not _is_mcp_registry_derived(
             {
                 "source": "awesome-mcp-servers",  # 不同 source
                 "source_url": (

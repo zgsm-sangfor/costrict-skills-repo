@@ -81,6 +81,69 @@ class TestParseFrontmatter(unittest.TestCase):
         self.assertEqual(body, "")
 
 
+class TestExtractDescription(unittest.TestCase):
+    """§14 修复 C：awesome-list README 风格描述提取。"""
+
+    def test_h1_plus_code_block(self):
+        body = (
+            "# Angular Novo Elements\n\n"
+            "Some intro line.\n\n"
+            "```js\n"
+            "// You are an expert in Angular ...\n"
+            "// Always prefer reactive forms ...\n"
+            "```\n\n"
+            "More text afterwards.\n"
+        )
+        out = sw._extract_description(body, limit=300)
+        self.assertIn("Angular Novo Elements", out)
+        self.assertIn("expert in Angular", out)
+        self.assertIn("reactive forms", out)
+        self.assertGreater(len(out), 50)
+
+    def test_h1_only_no_code_block(self):
+        """无 code block → fallback 到第一段非图片/非链接的纯文本行。"""
+        body = (
+            "# My Rule\n\n"
+            "First paragraph line.\n"
+            "Second paragraph line.\n"
+        )
+        out = sw._extract_description(body)
+        self.assertTrue(out.startswith("My Rule:"))
+        self.assertIn("First paragraph line", out)
+
+    def test_code_block_no_h1(self):
+        """无 H1 仅 code block → 返回 code block 内容截断。"""
+        body = (
+            "```\n"
+            "rule line one\n"
+            "rule line two\n"
+            "```\n"
+        )
+        out = sw._extract_description(body, limit=200)
+        self.assertIn("rule line one", out)
+        self.assertNotIn(":", out[:1])  # 无 title 前缀
+
+    def test_empty_body(self):
+        self.assertEqual(sw._extract_description(""), "")
+        self.assertEqual(sw._extract_description(None), "")
+
+    def test_skips_image_and_link_only_lines(self):
+        body = (
+            "# Title\n\n"
+            "![banner](x.png)\n"
+            "[link](y)\n"
+            "Real description text.\n"
+        )
+        out = sw._extract_description(body)
+        self.assertIn("Real description text", out)
+        self.assertNotIn("banner", out)
+
+    def test_truncates_to_limit(self):
+        body = "# T\n\n```\n" + ("x" * 1000) + "\n```\n"
+        out = sw._extract_description(body, limit=100)
+        self.assertEqual(len(out), 100)
+
+
 class TestBuildEntry(unittest.TestCase):
     def test_standard_rule(self):
         path = "rules/windsurfrules/react-windsurfrules-prompt-file/README.md"
@@ -164,6 +227,28 @@ class TestBuildEntry(unittest.TestCase):
         # 损坏 frontmatter → 走 body 第一段
         self.assertTrue(entry["description"])
         self.assertNotEqual(entry["description"], "")
+
+    def test_description_uses_code_block_for_awesome_list_style(self):
+        """awesome-windsurfrules 风格 README：真实规则在第一段 code block 内。
+
+        修复前 _first_meaningful_line 跳过 fence 行 → 描述只剩 H1（≤50 字符）；
+        修复后必须把 code block 内容拼到描述里，让 LLM 看到真实规则文本。
+        """
+        path = "rules/windsurfrules/angular-novo-elements/README.md"
+        content = (
+            "# Angular Novo Elements .windsurfrules prompt file\n\n"
+            "```js\n"
+            "// You are an expert in Angular, TypeScript and Novo Elements.\n"
+            "// Use reactive forms over template forms when possible.\n"
+            "// Prefer signal-based state.\n"
+            "```\n"
+        )
+        entry = sw._build_entry(
+            "SchneiderSam/awesome-windsurfrules", "schneidersam", "main",
+            path, content,
+        )
+        self.assertGreater(len(entry["description"]), 50)
+        self.assertIn("expert in Angular", entry["description"])
 
     def test_no_content_uses_placeholder(self):
         path = "rules/windsurfrules/empty/README.md"
