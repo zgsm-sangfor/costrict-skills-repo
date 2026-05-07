@@ -1,0 +1,165 @@
+[
+  {
+    "id": "anthropic-frontend-design",
+    "layout": {
+      "is_plugin": true,
+      "skills_count": 1,
+      "agents_count": 0,
+      "commands_count": 0,
+      "skills_namespaces": [
+        "frontend-design:frontend-design"
+      ],
+      "fetch_error": null
+    },
+    "content_bytes": 4582,
+    "final_score": 89.70114073819602,
+    "decision": "accept",
+    "_all_keys": [
+      "entry_id",
+      "metrics",
+      "enrichment",
+      "health",
+      "llm_score",
+      "final_score",
+      "decision",
+      "star_weight",
+      "content_hash",
+      "rubric_version",
+      "model_id",
+      "evaluated_at"
+    ],
+    "summary": "Skill for creating distinctive, production-grade frontend interfaces with bold aesthetics and creative design choices.",
+    "summary_zh": "用于生成具有独特美学和创意设计的生产级前端界面的技能。",
+    "tags": [
+      "frontend-design",
+      "ui-ux",
+      "aesthetic-guidelines",
+      "claude-plugin",
+      "web-development"
+    ],
+    "tech_stack": [
+      "html",
+      "css",
+      "javascript",
+      "react",
+      "vue",
+      "motion-library"
+    ],
+    "highlights": [
+      "避免通用AI审美，独特美学方向",
+      "支持 HTML/CSS/JS, React, Vue",
+      "注重排版、色彩、动效和空间构图"
+    ]
+  },
+  {
+    "id": "mongodb-agent-skills",
+    "layout": {
+      "is_plugin": true,
+      "skills_count": 7,
+      "agents_count": 0,
+      "commands_count": 0,
+      "skills_namespaces": [
+        "mongodb:atlas-stream-processing",
+        "mongodb:mongodb-connection",
+        "mongodb:mongodb-mcp-setup",
+        "mongodb:mongodb-natural-language-querying",
+        "mongodb:mongodb-query-optimizer"
+      ],
+      "fetch_error": null
+    },
+    "content_bytes": 85086,
+    "final_score": 48.762874945799766,
+    "decision": "review",
+    "_all_keys": [
+      "entry_id",
+      "metrics",
+      "enrichment",
+      "health",
+      "llm_score",
+      "final_score",
+      "decision",
+      "star_weight",
+      "content_hash",
+      "rubric_version",
+      "model_id",
+      "evaluated_at"
+    ],
+    "summary": "Bundle of AI agent skills for MongoDB, covering stream processing, connection optimization, query generation, schema design, and search.",
+    "summary_zh": "MongoDB 代理技能包，提供流处理、查询优化、模式设计、搜索等 AI 代理能力。",
+    "tags": [
+      "mongodb",
+      "mcp-server",
+      "database-skills",
+      "atlas-stream-processing",
+      "query-optimization"
+    ],
+    "tech_stack": [
+      "mongodb",
+      "mcp",
+      "node.js",
+      "python",
+      "docker"
+    ],
+    "highlights": [
+      "包含流处理、连接优化、查询生成等 7 个技能",
+      "支持 Atlas 流处理全生命周期管理",
+      "集成 MCP 服务器实现智能数据库交互"
+    ]
+  },
+  {
+    "id": "obra-superpowers",
+    "layout": {
+      "is_plugin": true,
+      "skills_count": 14,
+      "agents_count": 0,
+      "commands_count": 0,
+      "skills_namespaces": [
+        "superpowers:brainstorming",
+        "superpowers:dispatching-parallel-agents",
+        "superpowers:executing-plans",
+        "superpowers:finishing-a-development-branch",
+        "superpowers:receiving-code-review"
+      ],
+      "fetch_error": null
+    },
+    "content_bytes": 115146,
+    "final_score": 66.23712505420023,
+    "decision": "accept",
+    "_all_keys": [
+      "entry_id",
+      "metrics",
+      "enrichment",
+      "health",
+      "llm_score",
+      "final_score",
+      "decision",
+      "star_weight",
+      "content_hash",
+      "rubric_version",
+      "model_id",
+      "evaluated_at"
+    ],
+    "summary": "A skills library for AI coding agents covering TDD, debugging, brainstorming, planning, code review, and collaboration patterns.",
+    "summary_zh": "AI编程助手技能库，涵盖TDD、调试、头脑风暴、代码审查与协作模式。",
+    "tags": [
+      "skills-library",
+      "tdd",
+      "debugging",
+      "collaboration",
+      "ai-workflows"
+    ],
+    "tech_stack": [
+      "typescript",
+      "python",
+      "git",
+      "node.js",
+      "rust",
+      "go"
+    ],
+    "highlights": [
+      "支持 TDD 与调试最佳实践",
+      "提供头脑风暴与设计流程",
+      "包含代码审查与并行代理"
+    ]
+  }
+]
