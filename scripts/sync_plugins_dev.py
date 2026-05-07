@@ -85,8 +85,13 @@ API_BASE = "https://claude-plugins.dev/api/plugins"
 # response body as ``limit``) to drive the offset increment.
 PAGE_SIZE = 200
 SERVER_LIMIT_FALLBACK = 100  # observed cap as of the SPIKE (task 7.1)
-DEFAULT_MAX_PAGES = 100  # Safety cap → up to 10,000 plugins at 100/page.
-MIN_STARS = 5
+DEFAULT_MAX_PAGES = 200  # Safety cap → up to 20,000 plugins at 100/page.
+# 实测：API 把热门 plugin 都塞前 ~100 页，stars≥5000 的 plugin 全部位于前 100 页内。
+# max_pages=200 留缓冲，未来高星新 plugin 不会漏；继续提高对收录无增益（后段都是 stars<5）。
+MIN_STARS = 5000
+# 实测全量 stars 分布：≥5 共 11,369 / ≥1000 共 1,573 / ≥3000 共 823 / ≥5000 共 711。
+# 目标"~1000 条最终入选"，stars≥5000 + official 190 = 901 条（下限）。
+# 提高阈值是质量门槛：一个 plugin 装载的 marketplace repo 至少 5k 星才算头部精选。
 
 SOURCE_ID = "claude-plugins-dev"
 SOURCE_PRIORITY = 700
@@ -210,6 +215,26 @@ def _compute_manifest_completeness(plugin: dict) -> float:
 # Per-plugin entry construction
 # ---------------------------------------------------------------------------
 
+def _normalize_pushed_at(value) -> Optional[str]:
+    """dev API 的 updatedAt 形态多变（空格分隔 / 已带 Z / null），统一成 ISO 8601 带 Z。
+
+    runner._compute_freshness 会做 ``.replace("Z", "+00:00")``，所以只要返回
+    形如 ``2026-02-08T01:48:36Z`` 即可。失败时返回 None（freshness 信号自动
+    走 excluded 路径）。
+    """
+    if not value or not isinstance(value, str):
+        return None
+    s = value.strip()
+    if not s:
+        return None
+    # 把空格分隔形态（"2026-02-08 01:48:36"）转成 T 分隔；保留已经是 ISO 的。
+    if " " in s and "T" not in s:
+        s = s.replace(" ", "T", 1)
+    if not s.endswith("Z") and "+" not in s and "T" in s:
+        s = s + "Z"
+    return s
+
+
 def _entry_from_plugin(plugin: dict, last_synced_iso: str) -> Optional[dict]:
     """Convert one claude-plugins.dev API plugin into a catalog entry.
 
@@ -299,6 +324,7 @@ def _entry_from_plugin(plugin: dict, last_synced_iso: str) -> Optional[dict]:
         "manifest_completeness": completeness,
         "last_synced": last_synced_iso,
         "stars": stars_int,
+        "pushed_at": _normalize_pushed_at(plugin.get("updatedAt")),
         "version": version,
         # Extra signals useful for downstream health/popularity ranking.
         # Intentionally additive — schema in catalog/plugins/index.json

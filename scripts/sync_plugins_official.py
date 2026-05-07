@@ -136,6 +136,59 @@ def _http_get_json(url: str, timeout: int = 30) -> Optional[dict | list]:
 
 
 # ---------------------------------------------------------------------------
+# GitHub repo metadata fetcher (stars + pushed_at)
+# ---------------------------------------------------------------------------
+
+# In-memory cache: 同一 marketplace 里多个 plugin 常共享 owner/repo（subfolder
+# 形态），避免重复打 API 浪费 rate limit。
+_repo_meta_cache: dict[str, dict] = {}
+
+
+def _parse_github_owner_repo(url: str) -> Optional[tuple[str, str]]:
+    """从各种 GitHub URL 形态里提取 (owner, repo)。
+
+    支持形态：
+      - https://github.com/owner/repo
+      - https://github.com/owner/repo.git
+      - https://github.com/owner/repo/tree/main/...
+      - https://github.com/owner/repo/blob/main/...
+    """
+    m = re.match(
+        r"https?://github\.com/([^/]+)/([^/?#.]+?)(?:\.git)?(?:[/?#]|$)",
+        url,
+    )
+    if not m:
+        return None
+    return m.group(1), m.group(2)
+
+
+def _fetch_repo_meta(source_url: str) -> dict:
+    """通过 GitHub API 抓 stars + pushed_at，缺省返回空 dict（不阻塞 entry 生成）。
+
+    rate limit：authenticated 5,000 calls/h，190 个 official plugin 单 sync 跑下
+    来远不到上限。同 owner/repo 跨 plugin 复用 cache。
+    """
+    parsed = _parse_github_owner_repo(source_url)
+    if not parsed:
+        return {}
+    owner, repo = parsed
+    key = f"{owner.lower()}/{repo.lower()}"
+    if key in _repo_meta_cache:
+        return _repo_meta_cache[key]
+    api_url = f"https://api.github.com/repos/{owner}/{repo}"
+    data = _http_get_json(api_url)
+    if not isinstance(data, dict):
+        _repo_meta_cache[key] = {}
+        return {}
+    meta = {
+        "stars": data.get("stargazers_count"),
+        "pushed_at": data.get("pushed_at"),
+    }
+    _repo_meta_cache[key] = meta
+    return meta
+
+
+# ---------------------------------------------------------------------------
 # URL builders
 # ---------------------------------------------------------------------------
 
@@ -407,6 +460,10 @@ def _entry_from_plugin(
     source_url = _resolve_source_url(plugin_entry, repo_slug, branch)
     marketplace_url = _marketplace_url(repo_slug)
 
+    # 补抓 GitHub repo stars + pushed_at（marketplace.json 不提供，但 evaluation
+    # 的 popularity / freshness 信号需要）。同 owner/repo 跨 plugin 复用 cache。
+    repo_meta = _fetch_repo_meta(source_url)
+
     # Tags / category — pass marketplace-supplied values through `categorize`
     # / `extract_tags` so plugin entries follow the same enrichment heuristics
     # as the existing types. Upstream tags are preserved verbatim.
@@ -450,9 +507,11 @@ def _entry_from_plugin(
         "bundle": bundle,
         "manifest_completeness": completeness,
         "last_synced": last_synced_iso,
-        # Health pipeline reads these; they're populated later by the
-        # enrichment / health stages (kept here as null/defaults for shape).
-        "stars": None,
+        # Health pipeline reads these; stars / pushed_at 由 GitHub API 补抓
+        # （marketplace.json 不提供）。失败时为 None，evaluation 走 excluded
+        # 信号路径不拖累分数。
+        "stars": repo_meta.get("stars"),
+        "pushed_at": repo_meta.get("pushed_at"),
         "version": version,
     }
     return entry

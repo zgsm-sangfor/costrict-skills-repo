@@ -33,6 +33,14 @@ sys.path.insert(
 import sync_plugins_dev as spd  # noqa: E402
 
 
+# 模块默认 MIN_STARS=5000（生产阈值，让 dev 收录稳定在 ~700 条精选）。
+# 测试 fixture 用的小 stars（10/100/42 等）在生产阈值下会全部被过滤；
+# autouse fixture 把阈值降到 5，让"语义过滤逻辑"测试维持原意。
+@pytest.fixture(autouse=True)
+def _relax_min_stars_for_tests(monkeypatch):
+    monkeypatch.setattr(spd, "MIN_STARS", 5)
+
+
 # ---------------------------------------------------------------------------
 # Fixture builders
 # ---------------------------------------------------------------------------
