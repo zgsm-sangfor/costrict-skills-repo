@@ -3,7 +3,12 @@
 注意：本测试**真打 MiMo LLM**（不 mock），需要 LLM_API_KEY / LLM_BASE_URL / LLM_MODEL
 环境变量。无凭证时 LLM 相关测试自动 skip。
 
-Layout / bundle 测试不依赖 LLM，但仍需要网络（GitHub Tree API + raw fetch）。
+Layout / bundle 测试不依赖 LLM，但仍需要网络（GitHub Tree API + raw fetch），且
+fixture 是 spike 阶段对 20 个真实 plugin 的快照估计 — 真实仓库随时演进
+（renames、skill 增减、plugin.json 缺失），fixture 必然漂移。CI 环境跳过整个文件，
+仅本地 run-on-demand 用作脚手架验证。生产代码测试见
+``ai-resource-eval/tests/test_plugin_content_fetcher.py`` 与
+``tests/test_sync_plugins_bundle_substance.py``。
 """
 
 from __future__ import annotations
@@ -22,6 +27,15 @@ import plugin_content_spike as spike  # noqa: E402
 
 # 是否有 LLM 凭证
 HAS_LLM = all(os.environ.get(k) for k in ("LLM_API_KEY", "LLM_BASE_URL", "LLM_MODEL"))
+
+
+# CI 环境跳过整个 spike 测试文件 — 这些是 throwaway 的活仓库验证 fixture，
+# 不应该挡 CI。本地需要时通过 ``unset CI && pytest tests/test_plugin_content_spike.py``。
+pytestmark = pytest.mark.skipif(
+    os.environ.get("CI") == "true",
+    reason="Spike fixture tests use live GitHub state and drift; production "
+           "coverage lives in ai-resource-eval/tests/test_plugin_content_fetcher.py",
+)
 
 
 # ───────────────────────────────────────────────────────────────────
