@@ -37,6 +37,13 @@ class GitHubFetcher:
 
     def __init__(self, content_paths: list[str] | None = None) -> None:
         self._content_paths = content_paths or list(_DEFAULT_CONTENT_PATHS)
+        # In-memory cache of (source_url) → (content, content_hash) | None。
+        # 同 fetcher 实例内，相同 source_url 不重复打 GitHub raw。这对
+        # plugin 类型尤其关键：50+ 个 anthropic plugin 共享同一 marketplace
+        # repo，没 cache 时每条都拉一次 README → 50× 浪费。
+        # None 值标记"已尝试但 404"，避免 cache miss 回头重试浪费。
+        # GIL 保证 dict[k]=v 原子，并发 set 最坏"最后一个赢"，无需 lock。
+        self._url_cache: dict[str, tuple[str, str] | None] = {}
 
     # ------------------------------------------------------------------
     # Internal helpers
@@ -78,7 +85,8 @@ class GitHubFetcher:
         """Fetch content from a GitHub repository.
 
         Derives ``raw.githubusercontent.com`` URLs from *source_url* and tries
-        each path in ``content_paths`` in order.
+        each path in ``content_paths`` in order. Repeat calls for the same
+        ``source_url`` are served from in-memory cache.
 
         Returns
         -------
@@ -86,8 +94,13 @@ class GitHubFetcher:
             ``(content, content_hash)`` on success, or ``None`` when all paths
             return non-200 responses or the URL is not a GitHub URL.
         """
+        # In-memory cache hit (含 None 表示"已尝试 404"，避免重试)
+        if source_url in self._url_cache:
+            return self._url_cache[source_url]
+
         parsed = self._extract_owner_repo(source_url)
         if parsed is None:
+            self._url_cache[source_url] = None
             return None
 
         owner, repo, ref, subpath = parsed
@@ -118,9 +131,12 @@ class GitHubFetcher:
                             section = self._extract_section(content, fragment)
                             if section:
                                 content = section
-                        return content, self._content_hash(content)
+                        result = content, self._content_hash(content)
+                        self._url_cache[source_url] = result
+                        return result
             except httpx.HTTPError:
                 pass
+            self._url_cache[source_url] = None
             return None
 
         if subpath:
@@ -140,8 +156,11 @@ class GitHubFetcher:
                         section = self._extract_section(content, fragment)
                         if section:
                             content = section
-                    return content, self._content_hash(content)
+                    result = content, self._content_hash(content)
+                    self._url_cache[source_url] = result
+                    return result
 
+        self._url_cache[source_url] = None
         return None
 
     # ------------------------------------------------------------------
