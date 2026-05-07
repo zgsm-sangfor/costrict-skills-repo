@@ -46,8 +46,93 @@ except ImportError:
     )
 
 CATALOG_DIR = os.path.join(os.path.dirname(__file__), "..", "catalog")
-TYPES = ["mcp", "skills", "rules", "prompts"]
+# Resource-type sub-directories under catalog/. Entry-level `type` values are
+# singular (mcp / skill / rule / prompt / plugin); these directory names are
+# plural to match the on-disk layout (catalog/<dir>/index.json + curated.json).
+TYPES = ["mcp", "skills", "rules", "prompts", "plugins"]
 TODAY = date.today().isoformat()
+
+
+def _apply_bundled_in_annotations(entries: list[dict], log=logger) -> list[dict]:
+    """Soft-annotate skill entries that are bundled by a plugin entry.
+
+    For each entry whose ``type == "plugin"``, scan ``bundle.skills_namespaces``
+    (a list of ``"<plugin-name>:<skill-name>"`` strings, per the plugin manifest
+    contract). For every namespace string, locate a matching skill entry and
+    set ``bundled_in: <plugin-id>`` on it.
+
+    Match resolution (first hit wins, in this order):
+      1. Skill ``namespace`` field equals the namespace string verbatim
+         (e.g. ``superpowers:brainstorming``). This is the canonical match.
+      2. Skill ``id`` equals the namespace string verbatim.
+      3. Slugified fallback: skill ``id`` equals ``<plugin-name>-<skill-name>``
+         derived by replacing ``:`` with ``-`` (handles the common case where
+         skills are stored as ``superpowers-brainstorming``).
+
+    Mutates ``entries`` in place and also returns it. Logs a single summary
+    line per spec plugin-bundle-dedup §"Dedup correctness logging" and a
+    WARNING per orphan namespace.
+    """
+    plugin_entries = [e for e in entries if (e.get("type") or "") == "plugin"]
+    skill_entries = [e for e in entries if (e.get("type") or "") == "skill"]
+
+    skills_by_namespace: dict[str, dict] = {}
+    skills_by_id: dict[str, dict] = {}
+    for s in skill_entries:
+        ns = s.get("namespace")
+        if isinstance(ns, str) and ns:
+            skills_by_namespace.setdefault(ns, s)
+        sid = s.get("id")
+        if isinstance(sid, str) and sid:
+            skills_by_id.setdefault(sid, s)
+
+    annotated = 0
+    orphan_count = 0
+    for plugin in plugin_entries:
+        plugin_id = plugin.get("id") or ""
+        bundle = plugin.get("bundle") or {}
+        namespaces = bundle.get("skills_namespaces")
+        if not namespaces:
+            log.debug(
+                "post-merge: plugin %s has no skills_namespaces; skipping",
+                plugin_id or "<unknown>",
+            )
+            continue
+        if not isinstance(namespaces, list):
+            log.debug(
+                "post-merge: plugin %s skills_namespaces is not a list (%s); skipping",
+                plugin_id or "<unknown>",
+                type(namespaces).__name__,
+            )
+            continue
+        for ns in namespaces:
+            if not isinstance(ns, str) or not ns:
+                continue
+            target = skills_by_namespace.get(ns) or skills_by_id.get(ns)
+            if target is None and ":" in ns:
+                slug_id = ns.replace(":", "-")
+                target = skills_by_id.get(slug_id)
+            if target is None:
+                orphan_count += 1
+                log.warning(
+                    "post-merge: plugin %s declares orphan namespace %r "
+                    "(no matching skill in catalog)",
+                    plugin_id or "<unknown>",
+                    ns,
+                )
+                continue
+            if plugin_id:
+                target["bundled_in"] = plugin_id
+                annotated += 1
+
+    log.info(
+        "post-merge: scanned %d plugins, annotated %d skills with bundled_in, "
+        "found %d orphan namespaces",
+        len(plugin_entries),
+        annotated,
+        orphan_count,
+    )
+    return entries
 
 
 def overlay_curated_fields(entries: list) -> list:
@@ -325,6 +410,13 @@ def merge():
         logger.info(f"Backfilled pushed_at for {filled}/{len(still_missing)} entries")
     elif overlayed:
         logger.info(f"Overlayed pushed_at for {overlayed} entries from prior output, 0 new API calls")
+
+    # --- Post-merge soft annotation: bundled_in on skills bundled by plugins ---
+    # Runs AFTER deduplicate()/overlay_curated_fields() and BEFORE enrichment so
+    # downstream stages (governance / lifecycle / featured / readme) can read the
+    # bundled_in field. Per spec plugin-bundle-dedup §"Post-merge bundled_in
+    # soft annotation" (`openspec/changes/add-plugins-category`).
+    _apply_bundled_in_annotations(deduped)
 
     # --- Layer 2: Enrichment (tags, translation, LLM evaluation, signals) ---
     enrich_entries(deduped)

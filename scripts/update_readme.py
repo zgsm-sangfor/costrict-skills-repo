@@ -21,6 +21,7 @@ COUNT_MARKERS: dict[str, str] = {
     "prompt": "README_COUNT_PROMPT",
     "rule": "README_COUNT_RULE",
     "skill": "README_COUNT_SKILL",
+    "plugin": "README_COUNT_PLUGIN",
 }
 
 TOP5_MARKERS: dict[str, str] = {
@@ -28,6 +29,7 @@ TOP5_MARKERS: dict[str, str] = {
     "skill": "README_TOP5_SKILL",
     "rule": "README_TOP5_RULE",
     "prompt": "README_TOP5_PROMPT",
+    "plugin": "README_TOP5_PLUGIN",
 }
 
 TOP5_LIMIT = 5
@@ -47,6 +49,9 @@ SOURCE_LABELS_EN: dict[str, str] = {
     "prompts-chat": "prompts.chat",
     "wonderful-prompts": "wonderful-prompts",
     "davila7/claude-code-templates": "Claude Code Templates",
+    "claude-plugins-official": "Anthropic Official",
+    "superpowers-marketplace": "Superpowers",
+    "claude-plugins-dev": "claude-plugins.dev",
     "curated": "Curated",
 }
 
@@ -64,6 +69,9 @@ SOURCE_LABELS_ZH: dict[str, str] = {
     "prompts-chat": "prompts.chat",
     "wonderful-prompts": "精彩提示词",
     "davila7/claude-code-templates": "Claude Code 模板",
+    "claude-plugins-official": "Anthropic 官方",
+    "superpowers-marketplace": "Superpowers",
+    "claude-plugins-dev": "claude-plugins.dev",
     "curated": "手工精选",
 }
 
@@ -94,7 +102,13 @@ def load_entries(index_path: Path = INDEX_PATH) -> list[CatalogEntry]:
 def compute_stats(entries: list[CatalogEntry]) -> dict[str, int]:
     total = len(entries)
     approx = math.floor(total / 100) * 100
-    by_type: dict[str, int] = {"mcp": 0, "prompt": 0, "rule": 0, "skill": 0}
+    by_type: dict[str, int] = {
+        "mcp": 0,
+        "prompt": 0,
+        "rule": 0,
+        "skill": 0,
+        "plugin": 0,
+    }
 
     for entry in entries:
         entry_type_value = entry.get("type")
@@ -145,6 +159,10 @@ def _select_top5(entries: list[CatalogEntry], type_: str) -> list[CatalogEntry]:
         freshness = entry.get("freshness_label") or "active"
         if freshness == "abandoned":
             continue
+        # Default-filter skill entries that are bundled inside a plugin —
+        # the plugin section already represents them in aggregate.
+        if type_ == "skill" and entry.get("bundled_in"):
+            continue
         candidates.append(entry)
 
     def sort_key(e: CatalogEntry) -> tuple[float, int]:
@@ -177,6 +195,13 @@ def _render_top5_table(entries: list[CatalogEntry], type_: str, zh: bool) -> str
         else:
             header = "| Name | Source | Score | Description |"
             sep = "|------|--------|-------|-------------|"
+    elif type_ == "plugin":
+        if zh:
+            header = "| 名称 | 来源 | 评分 | 描述 |"
+            sep = "|------|------|------|------|"
+        else:
+            header = "| Name | Source | Score | Description |"
+            sep = "|------|--------|-------|-------------|"
     else:
         if zh:
             header = "| 名称 | 来源 | 评分 | 分类 |"
@@ -199,6 +224,9 @@ def _render_top5_table(entries: list[CatalogEntry], type_: str, zh: bool) -> str
             stars_cell = _format_stars(entry.get("stars"))
             rows.append(f"| {name} | {stars_cell} | {score_cell} | {desc_cell} |")
         elif type_ == "skill":
+            source_cell = _source_label(entry, zh)
+            rows.append(f"| {name} | {source_cell} | {score_cell} | {desc_cell} |")
+        elif type_ == "plugin":
             source_cell = _source_label(entry, zh)
             rows.append(f"| {name} | {source_cell} | {score_cell} | {desc_cell} |")
         else:
@@ -233,7 +261,9 @@ def update_single_readme(
     content = _replace_between_markers(
         content, COUNT_MARKERS["approx"], str(stats["approx"])
     )
-    for key in ("mcp", "prompt", "rule", "skill"):
+    for key in ("mcp", "prompt", "rule", "skill", "plugin"):
+        if f"<!-- {COUNT_MARKERS[key]}:START -->" not in content:
+            continue
         content = _replace_between_markers(content, COUNT_MARKERS[key], str(stats[key]))
 
     content = RESOURCE_BADGE_PATTERN.sub(f"resources-{stats['total']}-2ECC71", content)

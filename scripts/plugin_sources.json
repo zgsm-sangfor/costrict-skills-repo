@@ -1,0 +1,8 @@
+{
+  "_comment": "Hand-curated list of upstream Claude Code plugin / plugin-marketplace repositories. Sync scripts (scripts/sync_skills.py, scripts/sync_mcp.py, scripts/sync_skills_sh.py, scripts/sync_mcp_registry.py, scripts/sync_windsurfrules.py) read this file to skip individual skill / MCP entries that come bundled inside a plugin, so the plugin appears once in the catalog (category=plugins) instead of being shredded into many separate per-skill / per-mcp entries. URLs MUST be canonical GitHub repo URLs with no trailing slash. See openspec/changes/add-plugins-category/specs/plugin-bundle-dedup/spec.md for the contract.",
+  "repos": [
+    "https://github.com/obra/superpowers",
+    "https://github.com/obra/superpowers-marketplace",
+    "https://github.com/anthropics/claude-plugins-official"
+  ]
+}

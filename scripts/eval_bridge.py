@@ -72,6 +72,8 @@ _TYPE_TO_TASK = {
     "skill": "skill",
     "rule": "rule",
     "prompt": "prompt",
+    # plugin 类型走 health-only task config（无 LLM 维度，4 健康信号 + enrichment）
+    "plugin": "plugin",
 }
 
 

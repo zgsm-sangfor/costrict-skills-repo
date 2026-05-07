@@ -1,6 +1,6 @@
 <div align="center">
 <img src="assets/logo.png" alt="Everything AI Coding logo" width="600" />
-<p><strong><!-- README_APPROX_COUNT:START -->11400<!-- README_APPROX_COUNT:END -->+ curated AI coding resources — browse, evaluate, install</strong><br/>MCP Servers · Skills · Rules · Prompts</p>
+<p><strong><!-- README_APPROX_COUNT:START -->11400<!-- README_APPROX_COUNT:END -->+ curated AI coding resources — browse, evaluate, install</strong><br/>MCP Servers · Skills · Rules · Prompts · Plugins</p>
 
 <p>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/stargazers"><img src="https://img.shields.io/github/stars/zgsm-ai/everything-ai-coding?style=flat-square&color=4A90D9" alt="Stars" /></a>
@@ -103,6 +103,20 @@ Developer-focused prompt templates for common coding tasks.
 <!-- README_TOP5_PROMPT:END -->
 
 [Browse all prompts →](./catalog/prompts/) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=prompt)
+
+---
+
+### [🧩 Plugins](./catalog/plugins/) — <!-- README_COUNT_PLUGIN:START -->0<!-- README_COUNT_PLUGIN:END --> entries
+
+Bundled marketplace plugins (skills + commands + agents + MCP servers).
+
+> Primarily for Claude Code; opencode partially compatible (npm); cursor / windsurf / costrict have no equivalent mechanism.
+
+<!-- README_TOP5_PLUGIN:START -->
+
+<!-- README_TOP5_PLUGIN:END -->
+
+[Browse all plugins →](./catalog/plugins/) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=plugin)
 
 ---
 

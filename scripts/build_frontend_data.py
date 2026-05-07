@@ -26,6 +26,11 @@ def save_json(path, data):
 def build_stats(items):
     by_type = Counter(i["type"] for i in items)
     by_category = Counter(i.get("category", "other") for i in items)
+    # Ensure all known types are present (with zero) so the frontend can rely
+    # on stable keys even before the corresponding sync source has populated
+    # the catalog.
+    for known_type in ("mcp", "skill", "rule", "prompt", "plugin"):
+        by_type.setdefault(known_type, 0)
     return {
         "total": len(items),
         "byType": dict(by_type),
@@ -34,21 +39,35 @@ def build_stats(items):
 
 
 def build_type_files(items):
-    """Split items into per-type JSON files with fields needed for browse cards."""
+    """Split items into per-type JSON files with fields needed for browse cards.
+
+    By default, ``skills.json`` excludes entries with a non-empty ``bundled_in``
+    field — those skills are already represented by their parent plugin entry,
+    and surfacing both in browse views causes confusing duplicates. The full
+    ``search-index.json`` retains them so client-side search stays complete.
+    """
     type_map = {}
     for item in items:
         t = item["type"]
+        if t == "skill" and item.get("bundled_in"):
+            # Skip bundled-in skills from per-type listing (search-index keeps them).
+            continue
         type_map.setdefault(t, []).append(slim_item(item))
+    # Ensure plugins.json is always emitted (even empty) so consumers can rely
+    # on a stable URL.
+    type_map.setdefault("plugin", [])
     for t, arr in type_map.items():
         arr.sort(key=lambda x: -(x.get("final_score") or 0))
-        fname = f"{t}s.json" if t in ("skill", "rule", "prompt") else f"{t}.json"
+        fname = (
+            f"{t}s.json" if t in ("skill", "rule", "prompt", "plugin") else f"{t}.json"
+        )
         save_json(os.path.join(OUT, fname), arr)
         print(f"  {fname}: {len(arr)} items")
 
 
 def slim_item(item):
     """Keep only fields needed for browse cards to reduce file size."""
-    return {
+    slim = {
         "id": item["id"],
         "name": item["name"],
         "type": item["type"],
@@ -69,6 +88,18 @@ def slim_item(item):
         "pushed_at": item.get("pushed_at"),
         "highlights": item.get("highlights"),
     }
+    # Plugin-specific fields (only present on plugin entries).
+    if item.get("type") == "plugin":
+        for key in ("marketplace_url", "platforms", "bundle", "manifest_completeness"):
+            value = item.get(key)
+            if value is not None:
+                slim[key] = value
+    # Carry bundled_in onto skill entries when present (currently excluded from
+    # per-type skills.json by build_type_files but kept in the search index).
+    bundled_in = item.get("bundled_in")
+    if bundled_in:
+        slim["bundled_in"] = bundled_in
+    return slim
 
 
 EMOJI_TYPE = {"🔌": "mcp", "🎯": "skill", "📋": "rule", "💡": "prompt"}

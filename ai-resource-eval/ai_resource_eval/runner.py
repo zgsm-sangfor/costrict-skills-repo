@@ -269,6 +269,11 @@ class EvalRunner:
 
         Returns None when the entry should be skipped (fetch failure with
         on_fail='skip' or queued).
+
+        health-only 路径（plugin task：``self._metrics == []``）：
+        跳过 metric LLM 调用与 ``compute_final_score``；若 ``enrichment=True``
+        仍发起一次 enrichment-only LLM 调用以获得 summary / tags 等字段；
+        ``final_score = health_score``。
         """
         # 1. Fetch content
         fetch_result = self._fetch_content(entry)
@@ -283,34 +288,61 @@ class EvalRunner:
             if cached is not None:
                 return cached
 
-        # 3. Build user prompt
-        user_prompt = self._build_user_prompt(entry, content)
+        metric_results: dict[str, MetricResult] = {}
+        enrichment: EnrichmentData | None = None
+        llm_score: float | None = None
+        judge_result: JudgeResult | None = None
 
-        # 4. Call judge
-        judge_result = self._judge.judge(
-            system_prompt=self._system_prompt,
-            user_prompt=user_prompt,
-            schema=self._output_schema,
-            pydantic_model=LLMEvalResponse,
-        )
+        if self._metrics:
+            # 3. Build user prompt
+            user_prompt = self._build_user_prompt(entry, content)
 
-        # Accumulate cost
-        self._total_cost_usd += judge_result.cost_usd
-
-        # 5. Parse LLM response into MetricResults + enrichment
-        parsed = self._parse_metrics(judge_result)
-        if parsed is None:
-            logger.warning(
-                "Failed to parse LLM response for %s, skipping", entry.id
+            # 4. Call judge
+            judge_result = self._judge.judge(
+                system_prompt=self._system_prompt,
+                user_prompt=user_prompt,
+                schema=self._output_schema,
+                pydantic_model=LLMEvalResponse,
             )
-            return None
 
-        metric_results, enrichment = parsed
+            # Accumulate cost
+            self._total_cost_usd += judge_result.cost_usd
 
-        # 6. Compute LLM score via ScoringGovernor
-        llm_score = ScoringGovernor.compute_final_score(
-            metric_results, self._metric_weights
-        )
+            # 5. Parse LLM response into MetricResults + enrichment
+            parsed = self._parse_metrics(judge_result)
+            if parsed is None:
+                logger.warning(
+                    "Failed to parse LLM response for %s, skipping", entry.id
+                )
+                return None
+
+            metric_results, enrichment = parsed
+
+            # 6. Compute LLM score via ScoringGovernor
+            llm_score = ScoringGovernor.compute_final_score(
+                metric_results, self._metric_weights
+            )
+        elif self._enrichment:
+            # health-only + enrichment：发起 enrichment-only LLM 调用，仅产出
+            # summary / summary_zh / tags / tech_stack / search_terms / highlights。
+            # 失败时 enrichment 留空（不阻塞 health-only final_score）。
+            user_prompt = self._build_user_prompt(entry, content)
+            try:
+                judge_result = self._judge.judge(
+                    system_prompt=self._system_prompt,
+                    user_prompt=user_prompt,
+                    schema=self._output_schema,
+                    pydantic_model=LLMEvalResponse,
+                )
+                self._total_cost_usd += judge_result.cost_usd
+                parsed = self._parse_metrics(judge_result)
+                if parsed is not None:
+                    _, enrichment = parsed
+            except Exception:
+                logger.debug(
+                    "Enrichment-only LLM call failed for %s, continuing without it",
+                    entry.id,
+                )
 
         # 7. Compute health signals from entry metadata
         health = self._compute_health_signals(entry)
@@ -328,13 +360,19 @@ class EvalRunner:
                 self._task_config.heuristic_signals,
                 excluded_signals=excluded_signals,
             )
-            final_score = ScoringGovernor.compute_blended_score(
-                llm_score,
-                health_score,
-                alpha=self._task_config.health_blend_alpha,
-            )
+            if llm_score is None:
+                # health-only：直接用 health_score 作为 final_score
+                final_score = health_score
+            else:
+                final_score = ScoringGovernor.compute_blended_score(
+                    llm_score,
+                    health_score,
+                    alpha=self._task_config.health_blend_alpha,
+                )
         else:
-            final_score = llm_score
+            # 既无 heuristic signals 又无 LLM 维度：兜底用 0 分（理论上不会发生，
+            # validate_weights 保证至少一侧非空）
+            final_score = llm_score if llm_score is not None else 0.0
 
         # 10. Make decision via judge_decision
         coding_relevance_score = metric_results.get(
@@ -358,11 +396,25 @@ class EvalRunner:
             star_weight=star_weight,
             content_hash=content_hash,
             rubric_version=self._rubric_version,
-            model_id=judge_result.model_id,
+            # health-only + 无 enrichment 时 judge_result 为 None，model_id 留空
+            model_id=judge_result.model_id if judge_result is not None else None,
             evaluated_at=datetime.now(timezone.utc),
         )
 
-        # 12. Cache result
+        # 12. Cache result（health-only 无 LLM 调用时 judge_result 为 None，
+        # 用占位 JudgeResult 保留 cache 写入语义；后续短路 lookup 仍可命中）
+        if judge_result is None:
+            from ai_resource_eval.api.judge import JudgeResult as _JR
+
+            judge_result = _JR(
+                content="",
+                cost_usd=0.0,
+                prompt_tokens=0,
+                completion_tokens=0,
+                latency_ms=0,
+                model_id="",
+                structured=None,
+            )
         self._cache_result(eval_result, content_hash, judge_result)
 
         return eval_result
@@ -390,6 +442,15 @@ class EvalRunner:
         install_count = getattr(entry, "install_count", None)
         if install_count is None or install_count <= 0:
             excluded.add("install_popularity")
+        # manifest_completeness 信号仅 plugin 类型可信（由 sync_plugins_official
+        # 写入 entry.manifest_completeness）。非 plugin entry 没有该字段——等价于
+        # weight=0 + 按比例分回原 3 信号（freshness / popularity / source_trust）。
+        # 与 install_popularity 同款 excluded 路径。
+        if (
+            getattr(entry, "type", None) != "plugin"
+            or getattr(entry, "manifest_completeness", None) is None
+        ):
+            excluded.add("manifest_completeness")
         return excluded
 
     # Source → trust score mapping (0-100).
@@ -403,20 +464,30 @@ class EvalRunner:
         "anthropics-skills": 75,
         "prompts-chat": 50,
         "rules-2.1-optimized": 50,
+        # plugin 源（add-plugins-category 决策 4）：marketplace 官方源 100，
+        # superpowers-marketplace 95，社区 registry 70，curated 80，awesome list 50。
+        "claude-plugins-official": 100,
+        "anthropics/claude-plugins-official": 100,
+        "superpowers-marketplace": 95,
+        "obra/superpowers-marketplace": 95,
+        "claude-plugins.dev": 70,
+        "awesome-claude-plugins": 50,
     }
     _SOURCE_TRUST_DEFAULT = 40  # unknown sources
 
     def _compute_health_signals(self, entry: EvalItem) -> HealthSignals:
-        """Compute freshness / popularity / source_trust / install_popularity from entry metadata."""
+        """Compute freshness / popularity / source_trust / install_popularity / manifest_completeness from entry metadata."""
         freshness = self._compute_freshness(entry)
         popularity = self._compute_popularity(entry)
         source_trust = self._compute_source_trust(entry)
         install_popularity = self._compute_install_popularity(entry)
+        manifest_completeness = self._compute_manifest_completeness(entry)
         return HealthSignals(
             freshness=freshness,
             popularity=popularity,
             source_trust=source_trust,
             install_popularity=install_popularity,
+            manifest_completeness=manifest_completeness,
         )
 
     @staticmethod
@@ -458,6 +529,30 @@ class EvalRunner:
         """Score 0-100 based on source field."""
         source = getattr(entry, "source", None) or ""
         return self._SOURCE_TRUST.get(source, self._SOURCE_TRUST_DEFAULT)
+
+    @staticmethod
+    def _compute_manifest_completeness(entry: EvalItem) -> float:
+        """Score 0-100 from entry.manifest_completeness (0.0–1.0).
+
+        plugin 类型条目由 sync_plugins_official.py 计算 manifest_completeness
+        字段（0.0 / 0.3 / 0.7 / 1.0 阶梯，详见 specs/plugins-category/spec.md
+        Manifest completeness signal computation）。
+
+        非 plugin 类型 entry 没有该字段——返回默认 100（满分），与 runner 的
+        ``excluded_signals`` 路径配合使该信号在权重表中被剔除并按比例分回，
+        与「该信号不存在」的语义等价。
+        """
+        mc = getattr(entry, "manifest_completeness", None)
+        if mc is None:
+            return 100.0
+        try:
+            v = float(mc)
+        except (TypeError, ValueError):
+            return 100.0
+        # entry.manifest_completeness 约定为 0.0–1.0；放宽一点容错（如 0–100 直填）
+        if v <= 1.0:
+            v = v * 100.0
+        return max(0.0, min(100.0, v))
 
     @staticmethod
     def _compute_install_popularity(entry: EvalItem) -> float:
@@ -676,6 +771,22 @@ class EvalRunner:
         """
         if judge_result.structured is None:
             return None
+
+        # health-only + enrichment 路径：metric_names 为空，跳过 metrics 解析，
+        # 直接尝试解析 enrichment 字段。
+        if not self._metric_names:
+            metrics: dict[str, MetricResult] = {}
+            enrichment: EnrichmentData | None = None
+            if self._enrichment:
+                raw_enrichment = judge_result.structured.get("enrichment")
+                if raw_enrichment and isinstance(raw_enrichment, dict):
+                    try:
+                        enrichment = EnrichmentData.model_validate(raw_enrichment)
+                    except Exception:
+                        logger.debug(
+                            "Failed to parse enrichment (health-only), continuing without it"
+                        )
+            return metrics, enrichment
 
         raw_metrics = judge_result.structured.get("metrics")
         if not isinstance(raw_metrics, dict):

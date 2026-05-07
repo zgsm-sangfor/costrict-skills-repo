@@ -21,6 +21,8 @@ try:
         save_index,
         load_index,
         deduplicate,
+        is_plugin_source,
+        load_plugin_sources,
         logger,
         list_repo_files,
     )
@@ -42,6 +44,8 @@ except ImportError:
         save_index,
         load_index,
         deduplicate,
+        is_plugin_source,
+        load_plugin_sources,
         logger,
         list_repo_files,
     )
@@ -742,6 +746,7 @@ def deterministic_tier2_filter(candidates: list[dict[str, Any]]) -> list[dict[st
 
 
 def sync():
+    load_plugin_sources()  # warm cache; warns once if missing/unparseable
     # === Tier 1: Full inclusion, no filtering ===
     tier1_entries = []
     tier1_entries.extend(parse_anthropic_skills())
@@ -783,6 +788,20 @@ def sync():
 
     # === Merge: Tier 1 takes priority ===
     all_entries = tier1_entries + tier2_entries
+
+    # Filter plugin-bundled entries (entries whose source_url falls inside a
+    # repo listed in plugin_sources.json) — those plugins are ingested as a
+    # single entry under category=plugins by sync_plugins_official.py instead.
+    filtered_entries = []
+    for entry in all_entries:
+        if is_plugin_source(entry.get("source_url", "")):
+            logger.debug(
+                f"skipping {entry.get('id', '<unknown>')}: in plugin_sources.json"
+            )
+            continue
+        filtered_entries.append(entry)
+    all_entries = filtered_entries
+
     all_entries = deduplicate(all_entries)
 
     output_path = os.path.join(CATALOG_DIR, "index.json")

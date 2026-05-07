@@ -24,6 +24,9 @@ import urllib.parse
 import urllib.request
 from datetime import date
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from utils import is_plugin_source, load_plugin_sources, logger  # noqa: E402
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
 CACHE_DIR = os.path.join(REPO_ROOT, ".mcp_registry_cache")
@@ -495,6 +498,7 @@ def _save_diff_baseline(entries: list) -> None:
 # ---------------------------------------------------------------------------
 
 def main() -> int:
+    load_plugin_sources()  # warm cache; warns once if missing/unparseable
     _log(f"INFO: fetching {REGISTRY_BASE} (limit={DEFAULT_LIMIT})")
 
     try:
@@ -526,6 +530,18 @@ def main() -> int:
             if entry["id"] in seen:
                 _log(
                     f"WARNING: duplicate id={entry['id']} (server.name={r.get('server', {}).get('name')}), skipping"
+                )
+                continue
+            # plugin_sources.json skip — match either the (possibly GitHub)
+            # source_url or the reverse-DNS server name `io.github.owner/repo`
+            # (is_plugin_source rewrites the latter to canonical GitHub form).
+            server_name = (r.get("server") or {}).get("name") or ""
+            if (
+                is_plugin_source(entry.get("source_url", ""))
+                or is_plugin_source(server_name)
+            ):
+                logger.debug(
+                    f"skipping {entry.get('id', '<unknown>')}: in plugin_sources.json"
                 )
                 continue
             seen.add(entry["id"])

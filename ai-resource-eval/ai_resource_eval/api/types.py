@@ -62,6 +62,11 @@ class EvalItem(BaseModel):
     # skills.sh Tier 1 源新增字段：install_count 用于派生 install_popularity 信号
     install_count: int | None = None
 
+    # plugin 类型专属：sync_plugins_official.py 计算的 plugin.json manifest 完整度
+    # （0.0–1.0），仅对 type == "plugin" 的 entry 有意义；其他类型缺失 / None
+    # 表示「不参与该信号」，runner 会从权重表剔除。
+    manifest_completeness: float | None = None
+
     # Existing evaluation / health data (from upstream catalog) — ignored by
     # this harness but accepted so we can round-trip catalog JSON.
     evaluation: dict[str, Any] | None = None
@@ -121,6 +126,11 @@ class HealthSignals(BaseModel):
     source_trust: float = Field(0.0, ge=0, le=100)
     # 由 skills.sh 提供的 install_count 派生而来，仅做信号采集；默认权重 0 不参与 final_score
     install_popularity: float = Field(0.0, ge=0, le=100)
+    # plugin 类型专属：plugin.json manifest 完整度（0-100，由 sync_plugins_official.py
+    # 写入 entry.manifest_completeness，0.0-1.0 区间映射到 0-100）。非 plugin 类型
+    # 默认 100（完整），由 runner._get_excluded_signals 自动从权重表剔除以保持
+    # 与原 3 信号 health_score 等价。
+    manifest_completeness: float = Field(100.0, ge=0, le=100)
 
 
 class EnrichmentData(BaseModel):
@@ -259,7 +269,9 @@ class TaskConfig(BaseModel):
     content_paths: list[str] = Field(default_factory=lambda: ["README.md"])
     content_fallback: str = "description"
 
-    metrics: list[MetricWeight]
+    # 允许 metrics 为空：health-only 评估（如 plugin task）不依赖 LLM 维度，
+    # 仅靠 heuristic_signals 计算 final_score。详见 plugin.yaml。
+    metrics: list[MetricWeight] = Field(default_factory=list)
     heuristic_signals: list[HeuristicSignalWeight] = Field(default_factory=list)
 
     star_routing: StarRoutingConfig = Field(default_factory=StarRoutingConfig)
@@ -278,12 +290,17 @@ class TaskConfig(BaseModel):
 
     @model_validator(mode="after")
     def validate_weights(self) -> TaskConfig:
-        """Ensure metric weights and heuristic signal weights each sum to 1.0."""
-        metric_sum = sum(m.weight for m in self.metrics)
-        if abs(metric_sum - 1.0) > 0.001:
-            raise ValueError(
-                f"Metric weights must sum to 1.0 (±0.001), got {metric_sum:.4f}"
-            )
+        """Ensure metric weights and heuristic signal weights each sum to 1.0.
+
+        当 ``metrics`` 为空（health-only 任务，如 plugin）时跳过 metric 权重校验；
+        runner 会在 metrics 为空时直接走 ``final_score = health_score`` 路径。
+        """
+        if self.metrics:
+            metric_sum = sum(m.weight for m in self.metrics)
+            if abs(metric_sum - 1.0) > 0.001:
+                raise ValueError(
+                    f"Metric weights must sum to 1.0 (±0.001), got {metric_sum:.4f}"
+                )
 
         if self.heuristic_signals:
             # 跳过 weight=0 的信号（如 install_popularity 默认）：仅采集不计入综合分

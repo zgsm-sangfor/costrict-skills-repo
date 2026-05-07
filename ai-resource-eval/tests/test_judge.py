@@ -1187,3 +1187,191 @@ class TestTransientRetry:
 
         assert result.structured == {"score": 5}
         assert mock_post.call_count == 3
+
+
+class TestCapabilityCache:
+    """Test the (base_url, model) capability cache that avoids re-sending
+    response_format=json_schema to endpoints already known to reject it.
+
+    See spec ``judge-backend-capability-cache``.
+    """
+
+    def setup_method(self) -> None:
+        # 防 test 间 ClassVar 泄漏 — design risk[3] 已注明
+        OpenAICompatJudge._capability_cache.clear()
+
+    def teardown_method(self) -> None:
+        OpenAICompatJudge._capability_cache.clear()
+
+    def _make_judge(
+        self,
+        base_url: str = "https://api.example.com",
+        model: str = "test-model",
+    ) -> OpenAICompatJudge:
+        return OpenAICompatJudge(
+            base_url=base_url,
+            api_key="sk-test",
+            model=model,
+        )
+
+    @staticmethod
+    def _resp_400() -> MagicMock:
+        r = MagicMock(spec=httpx.Response)
+        r.status_code = 400
+        return r
+
+    @staticmethod
+    def _resp_200(content: str = '{"score": 4}') -> MagicMock:
+        body = _make_openai_response(content=content)
+        return _make_mock_response(body)
+
+    # ------------------------------------------------------------------
+    # 2.2 — first 400 writes cache + falls back
+    # ------------------------------------------------------------------
+    @patch("ai_resource_eval.judges.openai_compat.httpx.post")
+    def test_first_call_400_writes_cache_and_falls_back(
+        self, mock_post: MagicMock
+    ) -> None:
+        """First call: backend returns 400 → cache marked False, fallback succeeds."""
+        mock_post.side_effect = [self._resp_400(), self._resp_200()]
+
+        judge = self._make_judge()
+        schema = {"type": "object", "properties": {"score": {"type": "integer"}}}
+        result = judge.judge("system", "user", schema=schema)
+
+        assert result.structured == {"score": 4}
+        assert mock_post.call_count == 2
+        # Cache 被写为 False
+        assert OpenAICompatJudge._capability_cache[
+            ("https://api.example.com", "test-model")
+        ] is False
+
+    # ------------------------------------------------------------------
+    # 2.3 — cache hit skips response_format entirely (1 call only)
+    # ------------------------------------------------------------------
+    @patch("ai_resource_eval.judges.openai_compat.httpx.post")
+    def test_cache_hit_skips_response_format(self, mock_post: MagicMock) -> None:
+        """Cache says False → request sent without response_format → 1 call."""
+        OpenAICompatJudge._capability_cache[
+            ("https://api.example.com", "test-model")
+        ] = False
+        mock_post.return_value = self._resp_200()
+
+        judge = self._make_judge()
+        schema = {"type": "object", "properties": {"score": {"type": "integer"}}}
+        judge.judge("system", "user", schema=schema)
+
+        assert mock_post.call_count == 1
+        sent = mock_post.call_args.kwargs.get("json") or mock_post.call_args[1].get("json")
+        assert "response_format" not in sent
+
+    # ------------------------------------------------------------------
+    # 2.4 — different base_url isolated
+    # ------------------------------------------------------------------
+    @patch("ai_resource_eval.judges.openai_compat.httpx.post")
+    def test_different_base_url_isolated(self, mock_post: MagicMock) -> None:
+        """url1 写入 False 不影响 url2 (cache miss → 走原版 with response_format)。"""
+        OpenAICompatJudge._capability_cache[
+            ("https://url1.example.com", "test-model")
+        ] = False
+        mock_post.return_value = self._resp_200()
+
+        judge = self._make_judge(base_url="https://url2.example.com")
+        schema = {"type": "object", "properties": {"score": {"type": "integer"}}}
+        judge.judge("system", "user", schema=schema)
+
+        sent = mock_post.call_args.kwargs.get("json") or mock_post.call_args[1].get("json")
+        assert "response_format" in sent  # url2 cache miss → 默认 True → 带原版
+
+    # ------------------------------------------------------------------
+    # 2.5 — different model isolated
+    # ------------------------------------------------------------------
+    @patch("ai_resource_eval.judges.openai_compat.httpx.post")
+    def test_different_model_isolated(self, mock_post: MagicMock) -> None:
+        """model_a False 不影响 model_b。"""
+        OpenAICompatJudge._capability_cache[
+            ("https://api.example.com", "model-a")
+        ] = False
+        mock_post.return_value = self._resp_200()
+
+        judge = self._make_judge(model="model-b")
+        schema = {"type": "object", "properties": {"score": {"type": "integer"}}}
+        judge.judge("system", "user", schema=schema)
+
+        sent = mock_post.call_args.kwargs.get("json") or mock_post.call_args[1].get("json")
+        assert "response_format" in sent
+
+    # ------------------------------------------------------------------
+    # 2.6 — native support keeps cache empty / default True
+    # ------------------------------------------------------------------
+    @patch("ai_resource_eval.judges.openai_compat.httpx.post")
+    def test_native_support_keeps_cache_default_true(
+        self, mock_post: MagicMock
+    ) -> None:
+        """直接 200（OpenAI / Azure 类原生支持）→ cache 不写负记录。"""
+        mock_post.return_value = self._resp_200()
+
+        judge = self._make_judge()
+        schema = {"type": "object", "properties": {"score": {"type": "integer"}}}
+        judge.judge("system", "user", schema=schema)
+
+        # cache 中无该 key（或默认 True）
+        cache_value = OpenAICompatJudge._capability_cache.get(
+            ("https://api.example.com", "test-model"), True
+        )
+        assert cache_value is True
+        # payload 仍带原版 response_format
+        sent = mock_post.call_args.kwargs.get("json") or mock_post.call_args[1].get("json")
+        assert "response_format" in sent
+
+    # ------------------------------------------------------------------
+    # 2.7 — schema=None: cache 读写都不发生
+    # ------------------------------------------------------------------
+    @patch("ai_resource_eval.judges.openai_compat.httpx.post")
+    def test_schema_none_cache_unchanged(self, mock_post: MagicMock) -> None:
+        """schema=None：cache 状态不被读取也不被写入。"""
+        OpenAICompatJudge._capability_cache[
+            ("https://api.example.com", "test-model")
+        ] = False
+        mock_post.return_value = self._resp_200()
+
+        before = dict(OpenAICompatJudge._capability_cache)
+        judge = self._make_judge()
+        judge.judge("system", "user")  # schema=None
+        after = dict(OpenAICompatJudge._capability_cache)
+
+        assert before == after  # cache 字典完全未变
+        # payload 也不应有 response_format（无 schema 时本来就不该有）
+        sent = mock_post.call_args.kwargs.get("json") or mock_post.call_args[1].get("json")
+        assert "response_format" not in sent
+
+    # ------------------------------------------------------------------
+    # 2.8 — same class, different instances share cache
+    # ------------------------------------------------------------------
+    @patch("ai_resource_eval.judges.openai_compat.httpx.post")
+    def test_cache_persists_across_instances_same_class(
+        self, mock_post: MagicMock
+    ) -> None:
+        """实例 A 撞 400 写 cache 后，实例 B 用同一 (base_url, model) 直接走简化版。"""
+        # A: 第一次调用 → 400 + fallback 200 → 写 cache
+        # B: 第二次调用 → cache hit → 1 call without response_format
+        mock_post.side_effect = [
+            self._resp_400(),    # A 首次原版
+            self._resp_200(),    # A fallback
+            self._resp_200(),    # B 一次直接简化版
+        ]
+
+        judge_a = self._make_judge()
+        judge_b = self._make_judge()  # 同 base_url + model
+        schema = {"type": "object", "properties": {"score": {"type": "integer"}}}
+
+        judge_a.judge("system", "user", schema=schema)
+        judge_b.judge("system", "user", schema=schema)
+
+        assert mock_post.call_count == 3  # A 用了 2 次，B 用了 1 次
+        # B 的请求（第 3 次）不该带 response_format
+        third_payload = (
+            mock_post.call_args_list[2].kwargs.get("json")
+            or mock_post.call_args_list[2][1].get("json")
+        )
+        assert "response_format" not in third_payload

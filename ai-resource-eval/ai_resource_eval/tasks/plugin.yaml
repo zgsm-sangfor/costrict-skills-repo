@@ -1,0 +1,38 @@
+task: plugin
+content_source: readme
+content_paths:
+  - README.md
+  - .claude-plugin/plugin.json
+content_fallback: description
+
+# Plugin 评估走 health-only：无 LLM 维度，仅靠 4 个健康信号 + 1 次 enrichment-only
+# LLM 调用产出 summary / summary_zh / tags / highlights。详见
+# openspec/changes/add-plugins-category/design.md 决策 3。
+metrics: []
+
+heuristic_signals:
+  - signal: freshness
+    weight: 0.30
+  - signal: popularity
+    weight: 0.30
+  - signal: source_trust
+    weight: 0.30
+  - signal: manifest_completeness
+    weight: 0.10
+
+star_routing:
+  zero_weight_sources: []
+  monorepo_threshold: 5
+
+thresholds:
+  accept: 60
+  review: 40
+
+# v1: 首次引入 plugin task config（health-only），rubric_version "1.0" 对应
+# rubric_major_version=1（runner 会拼成 "1.<sha8>"）。
+rubric_major_version: 1
+enrichment: true
+
+# health-only：final_score = health_score（无 LLM 项参与混合）。
+# health_blend_alpha 在 metrics 为空时不再参与计算（runner 跳过混合分支）。
+health_blend_alpha: 0.0

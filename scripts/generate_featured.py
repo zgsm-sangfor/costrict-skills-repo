@@ -24,7 +24,10 @@ TYPE_EMOJI: dict[str, str] = {
     "skill": "🎯",
     "rule": "📋",
     "prompt": "💡",
+    "plugin": "🧩",
 }
+
+PLUGINS_SECTION_LIMIT = 8
 
 SCENE_CATEGORIES: list[SceneDefinition] = [
     (
@@ -164,6 +167,9 @@ SOURCE_LABELS: dict[Language, dict[str, str]] = {
         "awesome-cursorrules": "CursorRules",
         "prompts-chat": "prompts.chat",
         "wonderful-prompts": "wonderful-prompts",
+        "claude-plugins-official": "Anthropic official",
+        "superpowers-marketplace": "Superpowers",
+        "claude-plugins-dev": "claude-plugins.dev",
     },
     "zh": {
         "anthropics-skills": "Anthropic 官方",
@@ -173,6 +179,9 @@ SOURCE_LABELS: dict[Language, dict[str, str]] = {
         "awesome-cursorrules": "CursorRules",
         "prompts-chat": "prompts.chat",
         "wonderful-prompts": "wonderful-prompts",
+        "claude-plugins-official": "Anthropic 官方",
+        "superpowers-marketplace": "Superpowers",
+        "claude-plugins-dev": "claude-plugins.dev",
     },
 }
 
@@ -184,7 +193,12 @@ LANGUAGE_CONFIG: dict[Language, dict[str, str]] = {
             "`/eac:search` to explore the full index or `/eac:recommend` "
             "for project-aware suggestions."
         ),
-        "legend": "> Legend: 🔌 MCP Server · 🎯 Skill · 📋 Rule · 💡 Prompt",
+        "legend": "> Legend: 🔌 MCP Server · 🎯 Skill · 📋 Rule · 💡 Prompt · 🧩 Plugin",
+        "plugins_title": "### 🧩 Plugins",
+        "plugins_note": (
+            "> Primarily for Claude Code; opencode partially compatible (npm); "
+            "cursor / windsurf / costrict have no equivalent mechanism."
+        ),
     },
     "zh": {
         "title": "## ⭐ 精选推荐",
@@ -192,7 +206,12 @@ LANGUAGE_CONFIG: dict[Language, dict[str, str]] = {
             "> 从 {total}+ 资源中按使用场景精选。安装后可使用 `/eac:search` "
             "搜索完整索引，或通过 `/eac:recommend` 获取项目级推荐。"
         ),
-        "legend": "> 图例：🔌 MCP Server · 🎯 Skill · 📋 Rule · 💡 Prompt",
+        "legend": "> 图例：🔌 MCP Server · 🎯 Skill · 📋 Rule · 💡 Prompt · 🧩 Plugin",
+        "plugins_title": "### 🧩 Plugins 插件",
+        "plugins_note": (
+            "> 主要适用 Claude Code，opencode 部分兼容（npm），"
+            "cursor / windsurf / costrict 暂无等价机制。"
+        ),
     },
 }
 
@@ -330,8 +349,10 @@ def select_top_items(catalog: list[CatalogEntry]) -> dict[str, list[CatalogEntry
     )
 
     skill_priority = {"curated": 0, "anthropics-skills": 1, "ai-agent-skills": 2}
+    # Default-filter skills bundled inside a plugin — the dedicated Plugins
+    # section already represents them in aggregate.
     skill_items = sorted(
-        by_type["skill"],
+        [item for item in by_type["skill"] if not item.get("bundled_in")],
         key=lambda item: (
             skill_priority.get(get_text(item, "source"), 99),
             get_text(item, "name"),
@@ -415,6 +436,28 @@ def render_bullet(item: CatalogEntry, lang: Language) -> str:
     return f"- {emoji} **[{name}]({url})** — {desc} {tail}"
 
 
+def select_plugins(
+    catalog: list[CatalogEntry], limit: int = PLUGINS_SECTION_LIMIT
+) -> list[CatalogEntry]:
+    """Plugins are presented as their own section, sorted by final_score."""
+
+    candidates: list[CatalogEntry] = []
+    for item in catalog:
+        if get_text(item, "type") != "plugin":
+            continue
+        decision_value = item.get("decision")
+        if isinstance(decision_value, str) and decision_value.lower() == "reject":
+            continue
+        candidates.append(item)
+
+    def score_key(item: CatalogEntry) -> float:
+        score = item.get("final_score")
+        return float(score) if isinstance(score, (int, float)) else 0.0
+
+    candidates.sort(key=score_key, reverse=True)
+    return candidates[:limit]
+
+
 def generate_featured_section(
     lang: Language = "en", catalog: list[CatalogEntry] | None = None
 ) -> str:
@@ -435,6 +478,16 @@ def generate_featured_section(
         lines.append(f"### {labels[lang]}")
         lines.append("")
         for item in items:
+            lines.append(render_bullet(item, lang))
+        lines.append("")
+
+    plugin_items = select_plugins(catalog_entries)
+    if plugin_items:
+        lines.append(config["plugins_title"])
+        lines.append("")
+        lines.append(config["plugins_note"])
+        lines.append("")
+        for item in plugin_items:
             lines.append(render_bullet(item, lang))
         lines.append("")
 

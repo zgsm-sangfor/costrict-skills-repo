@@ -10,6 +10,30 @@
 
 ---
 
+## 适用范围（Supported types）
+
+| Type | evo 支持 | 备注 |
+|------|---------|------|
+| skill | ✅ | 走 7 维 rubric |
+| prompt | ✅ | 走 4 维简化 rubric |
+| rule | ✅ | 走 4 维简化 rubric |
+| mcp | ❌ | 配置型资源，无可编辑正文 |
+| **plugin** | ❌ | **分发容器，内容由上游 marketplace 维护** |
+
+### Plugin 类型不在 evo 范围
+
+`/eac:evo <id>` **不支持** `type: "plugin"` 的 catalog 条目。Plugin 是分发容器（marketplace bundle），其 skill / command / agent / mcp 子内容由上游 marketplace 拥有；安装时从 marketplace 拉取最新版，本机改动在下次安装时会被覆盖，因此本地"演化"没有意义。
+
+要修改一个 plugin 的内容，请：
+1. 找到该 plugin 的上游源仓库（catalog 条目里的 `source_url` 或 `marketplace_url`）
+2. 向源仓库或 marketplace 的 `marketplace.json` 提 PR
+
+**evo 命令行为**：在 Step 2 解析出 `type` 后立即检测 — 命中 `plugin` 时输出双语错误提示并退出，不读写任何本机文件，不调用 LLM。详见 4 个平台 evo 命令文件 `Step 2 — Resolve type via search index` 段落里的 plugin 分支。
+
+The `/eac:evo <id>` command **does not support** `type: "plugin"` catalog entries. Plugins are distribution containers (marketplace bundles); their skill / command / agent / mcp contents are owned upstream and re-fetched from the marketplace on every install, so local edits would be overwritten — local "evolution" is meaningless. To change a plugin, file a PR against its upstream source repo or the marketplace's `marketplace.json`. The evo command short-circuits immediately after resolving `type == "plugin"`, before reading or writing any local file.
+
+---
+
 ## Skill 类型 — 7 维 rubric（总分 100）
 
 | # | 维度（英文 key） | 中文 | 权重 | 评估对象 |

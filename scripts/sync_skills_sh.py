@@ -24,6 +24,9 @@ import urllib.error
 import urllib.request
 from datetime import date, datetime, timezone
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from utils import is_plugin_source, load_plugin_sources, logger  # noqa: E402
+
 # 路径常量
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
@@ -482,6 +485,7 @@ def compute_diff(prev_entries: list, new_entries: list) -> dict:
 # ---------------------------------------------------------------------------
 
 def main() -> int:
+    load_plugin_sources()  # warm cache; warns once if missing/unparseable
     min_installs = DEFAULT_MIN_INSTALLS
     print(f"INFO: SKILLS_SH_MIN_INSTALLS={min_installs}")
     print(f"INFO: SKILLS_SH_FALLBACK_DAYS={DEFAULT_FALLBACK_DAYS}")
@@ -531,6 +535,11 @@ def main() -> int:
             print(
                 f"WARNING: duplicate id={entry['id']} "
                 f"(skillId={raw.get('skillId')}, owner={raw.get('owner')}), skipping"
+            )
+            continue
+        if is_plugin_source(entry.get("source_url", "")):
+            logger.debug(
+                f"skipping {entry.get('id', '<unknown>')}: in plugin_sources.json"
             )
             continue
         seen_ids.add(entry["id"])
