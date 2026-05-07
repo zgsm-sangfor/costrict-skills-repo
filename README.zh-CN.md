@@ -1,6 +1,6 @@
 <div align="center">
 <img src="assets/logo.png" alt="Everything AI Coding logo" width="600" />
-<p><strong><!-- README_APPROX_COUNT:START -->4200<!-- README_APPROX_COUNT:END -->+ 精选 AI 编程资源 — 浏览、评估、安装</strong><br/>MCP Servers · Skills · Rules · Prompts</p>
+<p><strong><!-- README_APPROX_COUNT:START -->4200<!-- README_APPROX_COUNT:END -->+ 精选 AI 编程资源 — 浏览、评估、安装</strong><br/>MCP Servers · Skills · Rules · Prompts · Plugins</p>
 
 <p>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/stargazers"><img src="https://img.shields.io/github/stars/zgsm-ai/everything-ai-coding?style=flat-square&color=4A90D9" alt="Stars" /></a>
@@ -103,6 +103,20 @@ AI 编程助手的可复用能力和工作流。
 <!-- README_TOP5_PROMPT:END -->
 
 [浏览全部 Prompts →](./catalog/prompts/) · [在线浏览 →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=prompt)
+
+---
+
+### [🧩 Plugins 插件](./catalog/plugins/) — <!-- README_COUNT_PLUGIN:START -->0<!-- README_COUNT_PLUGIN:END --> 个条目
+
+打包发布的市场插件（含 skills + commands + agents + MCP servers）。
+
+> 主要适用 Claude Code，opencode 部分兼容（npm），cursor / windsurf / costrict 暂无等价机制。
+
+<!-- README_TOP5_PLUGIN:START -->
+
+<!-- README_TOP5_PLUGIN:END -->
+
+[浏览全部 Plugins →](./catalog/plugins/) · [在线浏览 →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=plugin)
 
 ---
 
