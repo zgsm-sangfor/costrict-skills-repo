@@ -87,6 +87,18 @@ _ENRICHMENT_SECTION = (
 )
 
 
+_ENRICHMENT_ONLY_PREAMBLE = (
+    "You are an expert evaluator of AI coding resources. You will be given a "
+    "README (and optionally a catalog description) for a coding resource. "
+    "Produce ONLY the enrichment fields described below — no metric scores.\n"
+    "\n"
+    "Return your output as a JSON object with a top-level key 'enrichment' "
+    "(plus an empty 'metrics' object for schema compliance).\n"
+    "\n"
+    "---\n\n"
+)
+
+
 def build_system_prompt(
     metrics: list[BaseMetric],
     *,
@@ -97,7 +109,9 @@ def build_system_prompt(
     Parameters
     ----------
     metrics:
-        List of metric instances whose rubrics should be included.
+        List of metric instances whose rubrics should be included.  When the
+        list is empty and ``enrichment`` is True, an enrichment-only preamble
+        is used (no metric rubric sections).
     enrichment:
         When True, append the enrichment section to the prompt.
 
@@ -106,6 +120,13 @@ def build_system_prompt(
     str
         A complete system prompt ready to send to the LLM.
     """
+    if not metrics:
+        # health-only + enrichment（如 plugin task）：跳过 metric 介绍，
+        # 直接给 enrichment 指令。无 metrics 又无 enrichment 的退化路径
+        # 仍输出 preamble，避免 prompt 为空字符串。
+        if enrichment:
+            return _ENRICHMENT_ONLY_PREAMBLE + _ENRICHMENT_SECTION
+        return _SYSTEM_PREAMBLE
     parts = [_SYSTEM_PREAMBLE]
     for metric in metrics:
         parts.append(metric.build_rubric())

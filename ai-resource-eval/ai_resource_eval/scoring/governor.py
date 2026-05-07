@@ -118,6 +118,10 @@ class ScoringGovernor:
             "source_trust": signals.source_trust,
             # install_popularity 默认权重 0，仅在 task config 配置非零权重时纳入
             "install_popularity": signals.install_popularity,
+            # manifest_completeness：plugin task 专属信号，权重 0.10。其他 task 不
+            # 在 heuristic_signals 中声明，所以不会出现在 weight_map；runner 会
+            # 通过 excluded_signals 在 plugin 之外的 entry 上剔除并按比例分回。
+            "manifest_completeness": signals.manifest_completeness,
         }
 
         return sum(
