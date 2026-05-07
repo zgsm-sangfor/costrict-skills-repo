@@ -37,12 +37,12 @@
 
 ## 5. 渐进式发布 — 三 PR 切片
 
-- [ ] 5.1 PR 1：核心 fetcher 引入但不激活（§2 完成 + plugin.yaml 仍是 readme）。CI 跑一次确认 plugin 评估走 GitHubFetcher 不变、新代码 import 正确、所有现有测试通过。
-- [ ] 5.2 PR 2：激活 PluginContentFetcher（plugin.yaml content_source 改 plugin_bundle）。CI 跑一次确认 901 plugin 全跑通、新 enrichment 质量提升、token cost 在预期。
-- [ ] 5.3 PR 3：sync 阶段填 bundle 字段（§4 完成）。CI 跑一次确认 `_apply_bundled_in_annotations` 实数生效、bundled_in 在 catalog/index.json 中数百条 skill 上出现、README/featured 正确过滤 bundled_in 非空 skill。
+- [x] 5.1 PR 1：核心 fetcher 引入但不激活——单 PR 集成路径替代，本地 LLM 3-sample 验证替代独立 PR 1 验证。
+- [x] 5.2 PR 2：激活 PluginContentFetcher——Weekly Sync 25503674781 1h55m 完成，901 plugin 全跑通。
+- [x] 5.3 PR 3：sync 阶段填 bundle 字段——CI 跑出 221 plugin 含 bundle，加 source_url 路径回退后 1301 skill 含 bundled_in。
 
 ## 6. 文档与归档
 
-- [ ] 6.1 在 `ai-resource-eval/CHANGELOG.md` Unreleased 段追加 PluginContentFetcher 说明。
-- [ ] 6.2 验收：CI 三轮跑完后 `python -c "import json; e=json.load(open('catalog/index.json')); print('plugin bundle non-zero:', sum(1 for x in e if x.get('type')=='plugin' and x.get('bundle',{}).get('skills_count',0)>0))"` 输出 ≥ 200（vs 现状 48）；`bundled_in` 非空 skill 数 ≥ 100（vs 现状 0）。
+- [x] 6.1 在 `ai-resource-eval/CHANGELOG.md` Unreleased 段追加 PluginContentFetcher 说明。
+- [x] 6.2 验收：plugin bundle non-zero=221 (target ≥ 200) ✓；bundled_in 非空 skill=1301 (target ≥ 100) ✓。
 - [ ] 6.3 通过 `/opsx:archive improve-plugin-content-substance` 归档；将 `specs/plugin-content-fetcher/spec.md` 迁入 `openspec/specs/`、对 `plugins-category` 和 `plugin-bundle-dedup` 应用 MODIFIED delta。
