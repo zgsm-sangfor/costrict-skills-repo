@@ -7,7 +7,7 @@ target DeepSeek, local vLLM, Together AI, etc.
 from __future__ import annotations
 
 import time
-from typing import Any
+from typing import Any, ClassVar
 
 import httpx
 
@@ -32,7 +32,29 @@ class OpenAICompatJudge(BaseJudge):
         USD cost per 1 000 completion tokens (default 0).
     timeout:
         HTTP timeout in seconds (default 120).
+
+    Notes
+    -----
+    `_capability_cache`：进程级共享 ``(base_url, model) → bool`` 缓存，自动避免
+    对已知不支持 ``response_format=json_schema`` 的 endpoint 重复发起会被 400
+    拒绝的请求。OpenAI / Azure 等原生支持后端行为不变；DeepSeek 等不支持的
+    后端首次撞 400 后写入缓存，后续调用直接走简化版。详见 CHANGELOG.md。
     """
+
+    # Endpoint capability cache, keyed by ``(base_url, model)``.
+    #
+    # value 含义：``True`` 视作支持 ``response_format=json_schema`` 协议
+    # （OpenAI 2024-08 Structured Outputs），``False`` 视作不支持。
+    # ClassVar 让同一进程内所有 OpenAICompatJudge 实例共享一次探测结果，
+    # CI 16 worker 并发时首次撞 400 后剩余 worker 立即受益。
+    #
+    # cache 默认值（未命中）：``True``（按原协议带 response_format 发起请求），
+    # 这样 OpenAI / Azure 等原生支持 Structured Outputs 的后端完全不受影响。
+    # 第一次撞 400 fallback 时写入 ``False``，后续同 (base_url, model) 调用
+    # 直接发简化版（不带 response_format）。
+    #
+    # 进程退出即丢失（非持久化）；fallback 路径仍然保留作为冷启动兜底。
+    _capability_cache: ClassVar[dict[tuple[str, str], bool]] = {}
 
     def __init__(
         self,
@@ -86,8 +108,14 @@ class OpenAICompatJudge(BaseJudge):
             "temperature": self.temperature,
         }
 
-        # Request structured JSON output when a schema is provided
-        if schema is not None:
+        # Request structured JSON output when a schema is provided AND the
+        # endpoint hasn't been previously observed to reject `response_format`.
+        # 见 design.md decision 1/2：cache key 为 (base_url, model)，
+        # cache miss 时默认假设支持（True），让 OpenAI/Azure 等原生支持后端
+        # 不受影响；首次 400 fallback 后写入 False，避免重复白发。
+        cache_key = (self.base_url, self.model)
+        supports_schema = self._capability_cache.get(cache_key, True)
+        if schema is not None and supports_schema:
             payload["response_format"] = {
                 "type": "json_schema",
                 "json_schema": {
@@ -117,11 +145,15 @@ class OpenAICompatJudge(BaseJudge):
 
         # If the backend rejects response_format with a 400, retry without it
         # so BaseJudge's freetext JSON-extraction fallback can handle the response.
+        # 在 fallback 之前先把 (base_url, model) 标为不支持 json_schema —— 后续
+        # 同一 endpoint 的调用会直接走简化版，不再重复白发原版被 400。保留
+        # fallback 路径作为冷启动 / 缓存失效兜底（design decision 6）。
         if (
             response.status_code == 400
             and schema is not None
             and "response_format" in payload
         ):
+            self._capability_cache[cache_key] = False
             payload.pop("response_format")
             start = time.monotonic()
             response = httpx.post(
