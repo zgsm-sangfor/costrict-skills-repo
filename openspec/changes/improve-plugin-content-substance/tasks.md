@@ -11,13 +11,13 @@
 
 ## 2. 生产代码 — 新增 PluginContentFetcher
 
-- [ ] 2.1 在 `ai-resource-eval/ai_resource_eval/fetcher/` 新增 `plugin.py`，实现 `PluginContentFetcher` 类（搬迁 spike 验证过的 layout detector + content normalizer + size_cap fallback）。
-- [ ] 2.2 实现 `detect_plugin_layout(repo: str, plugin_root: str = "") -> PluginLayout`：返回 plugin file paths（不抓内容），含 plugin_json_path / skill_paths / agent_paths / command_paths / skills_namespaces / is_plugin。
-- [ ] 2.3 实现 `fetch(source_url: str) -> tuple[content, content_hash] | None`：调 detect_plugin_layout + 拉文件 + 归一化拼接 + size_cap fallback。
-- [ ] 2.4 实现实例属性 cache：`_tree_cache: dict[(repo, ref), dict]` 和 `_raw_cache: dict[url, str|None]`。GIL 保护并发读写。
-- [ ] 2.5 实现 fallback：layout detector 返 is_plugin=False 时 `fetch` 返 None，调用方走现行 GitHubFetcher。
-- [ ] 2.6 在 `ai-resource-eval/ai_resource_eval/fetcher/__init__.py` 暴露 PluginContentFetcher。
-- [ ] 2.7 编写单测 `ai-resource-eval/tests/test_plugin_content_fetcher.py`：覆盖 layout detection（5 种 layout 各 1 sample）、size_cap fallback、shadow directory 排除、tree cache 跨 plugin 复用、raw cache 命中、fallback to None for non-plugin layout。
+- [x] 2.1 在 `ai-resource-eval/ai_resource_eval/fetcher/` 新增 `plugin.py`，实现 `PluginContentFetcher` 类（搬迁 spike 验证过的 layout detector + content normalizer + size_cap fallback）。
+- [x] 2.2 实现 `detect_plugin_layout(repo: str, plugin_root: str = "") -> PluginLayout`：返回 plugin file paths（不抓内容），含 plugin_json_path / skill_paths / agent_paths / command_paths / skills_namespaces / is_plugin。
+- [x] 2.3 实现 `fetch(source_url: str) -> tuple[content, content_hash] | None`：调 detect_plugin_layout + 拉文件 + 归一化拼接 + size_cap fallback。
+- [x] 2.4 实现实例属性 cache：`_tree_cache: dict[(repo, ref), dict]` 和 `_raw_cache: dict[url, str|None]`。GIL 保护并发读写。
+- [x] 2.5 实现 fallback：layout detector 返 is_plugin=False 时 `fetch` 返 None，调用方走现行 GitHubFetcher。
+- [x] 2.6 在 `ai-resource-eval/ai_resource_eval/fetcher/__init__.py` 暴露 PluginContentFetcher。
+- [x] 2.7 编写单测 `ai-resource-eval/tests/test_plugin_content_fetcher.py`：覆盖 layout detection（5 种 layout 各 1 sample）、size_cap fallback、shadow directory 排除、tree cache 跨 plugin 复用、raw cache 命中、fallback to None for non-plugin layout。
 
 ## 3. Runner 路由 + plugin task config 切换
 
