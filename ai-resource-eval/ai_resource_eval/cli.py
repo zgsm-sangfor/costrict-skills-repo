@@ -245,6 +245,18 @@ def _create_judge(
     from ai_resource_eval.judges.deepseek import DeepSeekJudge, judge_registry
     from ai_resource_eval.judges.openai_compat import OpenAICompatJudge
 
+    # Per-call HTTP timeout (LLM_TIMEOUT env hook). MiMo (mimo-v2.5-pro) 等慢
+    # 模型在长 prompt 下单调用偶尔 >120s，default 太紧导致 BaseJudge 3 retry
+    # 全部 ReadTimeout。env 可覆盖（需要 cast 成 float）。仅 OpenAI-compatible
+    # endpoint 支持；DeepSeekJudge 走自己的默认。
+    timeout_env = os.environ.get("LLM_TIMEOUT")
+    timeout_kwargs: dict = {}
+    if timeout_env:
+        try:
+            timeout_kwargs["timeout"] = float(timeout_env)
+        except ValueError:
+            pass
+
     if judge_name == "deepseek":
         kwargs: dict = {"api_key": api_key}
         if model:
@@ -262,6 +274,7 @@ def _create_judge(
             base_url=base_url,
             api_key=api_key,
             model=model or "gpt-4o-mini",
+            **timeout_kwargs,
         )
 
     # Try the judge registry for custom providers
@@ -277,6 +290,7 @@ def _create_judge(
             base_url=base_url,
             api_key=api_key,
             model=model or judge_name,
+            **timeout_kwargs,
         )
 
     raise typer.BadParameter(
