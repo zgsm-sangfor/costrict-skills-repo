@@ -1,12 +1,12 @@
 <div align="center">
 <img src="assets/logo.png" alt="Everything AI Coding logo" width="600" />
-<p><strong><!-- README_APPROX_COUNT:START -->11400<!-- README_APPROX_COUNT:END -->+ curated AI coding resources — browse, evaluate, install</strong><br/>MCP Servers · Skills · Rules · Prompts · Plugins</p>
+<p><strong><!-- README_APPROX_COUNT:START -->12600<!-- README_APPROX_COUNT:END -->+ curated AI coding resources — browse, evaluate, install</strong><br/>MCP Servers · Skills · Rules · Prompts · Plugins</p>
 
 <p>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/stargazers"><img src="https://img.shields.io/github/stars/zgsm-ai/everything-ai-coding?style=flat-square&color=4A90D9" alt="Stars" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zgsm-ai/everything-ai-coding?style=flat-square" alt="License" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/commits/main"><img src="https://img.shields.io/github/last-commit/zgsm-ai/everything-ai-coding?style=flat-square" alt="Last Commit" /></a>
-  <img src="https://img.shields.io/badge/resources-11486-2ECC71?style=flat-square" alt="Resources" />
+  <img src="https://img.shields.io/badge/resources-12645-2ECC71?style=flat-square" alt="Resources" />
 </p>
 
 <p>
@@ -34,7 +34,7 @@ Everything AI Coding is a **curated knowledge base** that continuously collects,
 <a id="knowledge-base"></a>
 ## 📚 Knowledge Base
 
-### [🔌 MCP Servers](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->8746<!-- README_COUNT_MCP:END --> entries
+### [🔌 MCP Servers](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->9019<!-- README_COUNT_MCP:END --> entries
 
 Model Context Protocol servers that connect AI agents to external tools, databases, and services.
 
@@ -42,17 +42,17 @@ Model Context Protocol servers that connect AI agents to external tools, databas
 | Name | ⭐ Stars | Score | Description |
 |------|----------|-------|-------------|
 | [MCP Inspector](https://github.com/modelcontextprotocol/inspector) | 9.2k | 99 | A developer tool for testing and debugging MCP servers via UI or CLI. |
+| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 32.1k | 98 | Microsoft's official MCP server for AI-driven browser automation usin… |
+| [AWS MCP Servers](https://github.com/awslabs/mcp) | 8.6k | 98 | A suite of MCP servers that integrate AWS services into AI coding ass… |
 | [IDA Pro MCP](https://github.com/mrexodia/ida-pro-mcp) | 6.7k | 98 | MCP server enabling AI-assisted reverse engineering in IDA Pro. |
 | [Firecrawl](https://github.com/mendableai/firecrawl-mcp-server) | 6.2k | 98 | MCP server for web scraping, search, and data extraction via Firecraw… |
-| [Time](https://github.com/modelcontextprotocol/servers/tree/main/src/time) | 85.1k | 97 | MCP server providing current time and timezone conversion via IANA ti… |
-| [Basic Memory](https://github.com/basicmachines-co/basic-memory) | 3.0k | 97 | Local-first knowledge management system that builds semantic graphs f… |
 <!-- README_TOP5_MCP:END -->
 
 [Browse all MCP servers →](./catalog/mcp/) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=mcp)
 
 ---
 
-### [🎯 Skills](./catalog/skills/) — <!-- README_COUNT_SKILL:START -->1809<!-- README_COUNT_SKILL:END --> entries
+### [🎯 Skills](./catalog/skills/) — <!-- README_COUNT_SKILL:START -->1795<!-- README_COUNT_SKILL:END --> entries
 
 Reusable agent capabilities and workflows for AI coding assistants.
 
@@ -61,9 +61,9 @@ Reusable agent capabilities and workflows for AI coding assistants.
 |------|--------|-------|-------------|
 | [Agent Development](https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/agent-development) | Anthropic Official | 97 | Guide for creating autonomous agents with YAML frontmatter and system… |
 | [Skill Development](https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/skill-development) | Anthropic Official | 97 | Guidance for creating modular, self-contained skills that extend Clau… |
-| [claude-api](https://github.com/anthropics/skills/tree/main/skills/claude-api) | Anthropic Official | 96 | A skill for building, debugging, and optimizing Claude API and Anthro… |
 | [docx](https://github.com/anthropics/skills/tree/main/skills/docx) | Anthropic Official | 96 | A skill for programmatically creating, editing, and analyzing Word .d… |
 | [skill-creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator) | Anthropic Official | 96 | A meta-skill for creating, testing, and iteratively improving Claude… |
+| [azure-ai-voicelive-dotnet](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/azure-ai-voicelive-dotnet) | Antigravity Skills | 95 | Azure AI Voice Live SDK for .NET to build real-time bidirectional voi… |
 <!-- README_TOP5_SKILL:END -->
 
 [Browse all skills →](./catalog/skills/) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=skill)
@@ -88,32 +88,38 @@ Coding conventions and AI behavior guidelines for consistent development.
 
 ---
 
-### [💡 Prompts](./catalog/prompts/) — <!-- README_COUNT_PROMPT:START -->576<!-- README_COUNT_PROMPT:END --> entries
+### [💡 Prompts](./catalog/prompts/) — <!-- README_COUNT_PROMPT:START -->575<!-- README_COUNT_PROMPT:END --> entries
 
 Developer-focused prompt templates for common coding tasks.
 
 <!-- README_TOP5_PROMPT:START -->
 | Name | Source | Score | Category |
 |------|--------|-------|----------|
-| [Fullstack Software Developer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#fullstack-software-developer) | Curated | 0 | fullstack |
-| [Ethereum Developer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ethereum-developer) | prompts.chat | 0 | ai-ml |
-| [Linux Terminal](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#linux-terminal) | prompts.chat | 0 | tooling |
-| [Job Interviewer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#job-interviewer) | prompts.chat | 0 | tooling |
-| [JavaScript Console](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#javascript-console) | prompts.chat | 0 | frontend |
+| [Comprehensive repository analysis](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#comprehensive-repository-analysis) | prompts.chat | 96 | security |
+| [Frontend Developer Skill](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#frontend-developer-skill) | prompts.chat | 96 | frontend |
+| [AI Engineer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ai-engineer) | prompts.chat | 96 | ai-ml |
+| [Backend Architect](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#backend-architect) | prompts.chat | 96 | database |
+| [Frontend Developer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#frontend-developer) | prompts.chat | 96 | frontend |
 <!-- README_TOP5_PROMPT:END -->
 
 [Browse all prompts →](./catalog/prompts/) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=prompt)
 
 ---
 
-### [🧩 Plugins](./catalog/plugins/) — <!-- README_COUNT_PLUGIN:START -->0<!-- README_COUNT_PLUGIN:END --> entries
+### [🧩 Plugins](./catalog/plugins/) — <!-- README_COUNT_PLUGIN:START -->901<!-- README_COUNT_PLUGIN:END --> entries
 
 Bundled marketplace plugins (skills + commands + agents + MCP servers).
 
 > Primarily for Claude Code; opencode partially compatible (npm); cursor / windsurf / costrict have no equivalent mechanism.
 
 <!-- README_TOP5_PLUGIN:START -->
-
+| Name | Source | Score | Description |
+|------|--------|-------|-------------|
+| [clangd-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/clangd-lsp) | Anthropic Official | 100 | A C/C++ language server plugin providing code intelligence, diagnosti… |
+| [claude-code-setup](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup) | Anthropic Official | 100 | Analyzes codebases to recommend tailored Claude Code automations like… |
+| [claude-md-management](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management) | Anthropic Official | 100 | Plugin for auditing and updating CLAUDE.md files to maintain project… |
+| [code-simplifier](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier) | Anthropic Official | 100 | An AI agent plugin that simplifies and refines recently modified code… |
+| [csharp-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/csharp-lsp) | Anthropic Official | 100 | C# language server for code intelligence |
 <!-- README_TOP5_PLUGIN:END -->
 
 [Browse all plugins →](./catalog/plugins/) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=plugin)

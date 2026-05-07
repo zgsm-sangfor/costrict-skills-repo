@@ -255,4 +255,4 @@ AI文件生成安全规则，强制用户确认机制防止未经授权的文件
 
 ---
 
-*自动生成 [catalog/index.json](../index.json). 最后更新: 2026-05-06*
+*自动生成 [catalog/index.json](../index.json). 最后更新: 2026-05-07*
