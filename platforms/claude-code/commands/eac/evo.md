@@ -38,7 +38,9 @@ Every bare `(Y/n/edit)` or `(all/numbers/skip)` MUST be expanded at render time.
 This command operates ONLY on resources already installed locally. It does NOT touch the catalog index, does NOT open upstream PRs, and does NOT persist any data outside the user's home configuration directory.
 
 Supported resource types: **skill**, **prompt**, **rule**.
-**Refused type**: **mcp** (configuration-only, no textual body to improve).
+**Refused types**:
+- **mcp** (configuration-only, no textual body to improve)
+- **plugin** (distribution container; contents are owned by the upstream marketplace and re-fetched on install — local edits would be discarded)
 
 ## Data Sources
 
@@ -74,6 +76,12 @@ Extract resource ID from `$ARGUMENTS` (strip `lang:*` parameter if present). If 
 
 **If type is `mcp`**, stop immediately with a message:
 > Evo does not apply to MCP servers — MCP resources are configuration-only and have no textual body to improve. To reconfigure, edit `.claude/settings.json` or reinstall via `/eac:install <id>`.
+
+**If type is `plugin`**, stop immediately with a bilingual message and exit BEFORE locating any local file or invoking the LLM. Do NOT read or modify any files on disk.
+> evo does not support plugin entries.
+> evo 不支持 plugin 类型条目。
+> Plugins are distribution containers maintained by the upstream marketplace — please file changes via the upstream marketplace (e.g. open a PR against the plugin's source repo / `marketplace.json`). Local modifications would be overwritten on the next install.
+> Plugin 是分发容器，由上游 marketplace 维护——请向上游 marketplace（如插件源仓库或 `marketplace.json`）提 PR 修改；本机改动会在下次安装时被覆盖。
 
 ### Step 3 — Locate local copy
 
