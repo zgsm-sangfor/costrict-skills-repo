@@ -6,7 +6,7 @@
   <a href="https://github.com/zgsm-ai/everything-ai-coding/stargazers"><img src="https://img.shields.io/github/stars/zgsm-ai/everything-ai-coding?style=flat-square&color=4A90D9" alt="Stars" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zgsm-ai/everything-ai-coding?style=flat-square" alt="License" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/commits/main"><img src="https://img.shields.io/github/last-commit/zgsm-ai/everything-ai-coding?style=flat-square" alt="Last Commit" /></a>
-  <img src="https://img.shields.io/badge/resources-12645-2ECC71?style=flat-square" alt="Resources" />
+  <img src="https://img.shields.io/badge/resources-12651-2ECC71?style=flat-square" alt="Resources" />
 </p>
 
 <p>
@@ -34,7 +34,7 @@ Everything AI Coding 是一个**持续更新的知识库**，从 9+ 个上游源
 <a id="knowledge-base"></a>
 ## 📚 知识库
 
-### [🔌 MCP 服务器](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->9019<!-- README_COUNT_MCP:END --> 个条目
+### [🔌 MCP 服务器](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->9025<!-- README_COUNT_MCP:END --> 个条目
 
 将 AI Agent 连接到外部工具、数据库和服务的 Model Context Protocol 服务器。
 
@@ -116,9 +116,9 @@ AI 编程助手的可复用能力和工作流。
 | 名称 | 来源 | 评分 | 描述 |
 |------|------|------|------|
 | [clangd-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/clangd-lsp) | Anthropic 官方 | 100 | 为Claude Code提供C/C++代码智能、诊断和格式化的语言服务器插件。 |
-| [claude-code-setup](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup) | Anthropic 官方 | 100 | 分析代码库，推荐定制化的 Claude Code 自动化方案，如钩子、技能和 MCP 服务器。 |
-| [claude-md-management](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management) | Anthropic 官方 | 100 | 用于审计和更新 CLAUDE.md 文件的插件，以维护项目记忆并捕获会话学习内容。 |
-| [code-simplifier](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier) | Anthropic 官方 | 100 | 一个AI代理插件，用于简化和优化最近修改的代码，提升清晰度和可维护性。 |
+| [claude-code-setup](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup) | Anthropic 官方 | 100 | 分析代码库并推荐定制的Claude Code自动化方案，如钩子、技能、MCP服务器和子代理。 |
+| [claude-md-management](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management) | Anthropic 官方 | 100 | 审计并优化 CLAUDE.md 文件，以提升 Claude Code 的项目上下文与记忆质量。 |
+| [code-simplifier](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier) | Anthropic 官方 | 100 | 自动简化和优化近期修改的代码，提升清晰度和可维护性，同时保持功能不变。 |
 | [csharp-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/csharp-lsp) | Anthropic 官方 | 100 | — |
 <!-- README_TOP5_PLUGIN:END -->
 
