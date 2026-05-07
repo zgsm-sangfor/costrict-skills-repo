@@ -77,6 +77,7 @@ class PluginLayout:
     agent_paths: list[str] = field(default_factory=list)
     command_paths: list[str] = field(default_factory=list)
     skills_namespaces: list[str] = field(default_factory=list)
+    fetch_error: str | None = None  # Tree API failure reason (HTTP code / exception); is_plugin=False with this set means "could not detect" (transient), not "no plugin.json"
 
 
 # ---------------------------------------------------------------------------
@@ -146,6 +147,7 @@ class PluginContentFetcher:
         plugin_root = plugin_root.strip("/")
 
         tree_data = self._fetch_tree(repo, ref=ref)
+        fetch_error = tree_data.get("error")
         tree_paths = [
             item["path"]
             for item in tree_data.get("tree", [])
@@ -171,7 +173,11 @@ class PluginContentFetcher:
             all_plugin_roots.add(root)
 
         if plugin_root not in all_plugin_roots:
-            return PluginLayout(is_plugin=False, plugin_root=plugin_root)
+            return PluginLayout(
+                is_plugin=False,
+                plugin_root=plugin_root,
+                fetch_error=str(fetch_error) if fetch_error is not None else None,
+            )
 
         plugin_json_path = (
             (plugin_root + "/" if plugin_root else "") + _PLUGIN_JSON_MARKER

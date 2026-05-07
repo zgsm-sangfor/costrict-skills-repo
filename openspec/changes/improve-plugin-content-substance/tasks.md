@@ -29,11 +29,11 @@
 
 ## 4. Sync 阶段填充 bundle 字段
 
-- [ ] 4.1 修改 `scripts/sync_plugins_official.py`：每个 plugin entry 生成时调 `PluginContentFetcher.detect_plugin_layout(repo, plugin_root)`（不抓内容），用结果填 `bundle.skills_count` / `agents_count` / `commands_count` / `skills_namespaces`。
-- [ ] 4.2 修改 `scripts/sync_plugins_dev.py`：同上策略。dev API 返回的 `skills` 数组保留作 hint，但以 layout detector 为准（layout detector 更准确）。
-- [ ] 4.3 sync 阶段的 PluginContentFetcher 实例与 evaluation 阶段 isolation：每次 sync 跑独立实例，复用 tree cache 跨 plugin。
-- [ ] 4.4 layout detector 失败（GitHub Tree API 错 / repo 不存在）时，sync 不阻塞：保持 `bundle = {0,0,0,[]}` 占位写入，next sync 重试。
-- [ ] 4.5 编写集成测试 `tests/test_sync_plugins_bundle_substance.py`：mock GitHub API 返回 fixture tree，验证 sync 写出的 entry `bundle.skills_count` 不为 0、`skills_namespaces` 含合理 namespace。
+- [x] 4.1 修改 `scripts/sync_plugins_official.py`：每个 plugin entry 生成时调 `PluginContentFetcher.detect_plugin_layout(repo, plugin_root)`（不抓内容），用结果填 `bundle.skills_count` / `agents_count` / `commands_count` / `skills_namespaces`。
+- [x] 4.2 修改 `scripts/sync_plugins_dev.py`：同上策略。dev API 返回的 `skills` 数组保留作 hint，但以 layout detector 为准（layout detector 更准确）。
+- [x] 4.3 sync 阶段的 PluginContentFetcher 实例与 evaluation 阶段 isolation：每次 sync 跑独立实例，复用 tree cache 跨 plugin。
+- [x] 4.4 layout detector 失败（GitHub Tree API 错 / repo 不存在）时，sync 不阻塞：保持 `bundle = {0,0,0,[]}` 占位写入，next sync 重试。
+- [x] 4.5 编写集成测试 `tests/test_sync_plugins_bundle_substance.py`：mock GitHub API 返回 fixture tree，验证 sync 写出的 entry `bundle.skills_count` 不为 0、`skills_namespaces` 含合理 namespace。
 
 ## 5. 渐进式发布 — 三 PR 切片
 

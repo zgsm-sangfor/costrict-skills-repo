@@ -46,6 +46,14 @@ try:
 except ImportError:  # pragma: no cover - script-style invocation
     from utils import categorize, extract_tags, save_index  # type: ignore
 
+# PluginContentFetcher comes from the (pip install -e'd) ai-resource-eval
+# package. Importing lazily inside helpers would force every test to wire it
+# up; module-level import keeps things simple and matches eval_bridge.py.
+try:
+    from ai_resource_eval.fetcher import PluginContentFetcher  # type: ignore
+except Exception:  # noqa: BLE001 - keep sync resilient if package missing
+    PluginContentFetcher = None  # type: ignore
+
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -307,6 +315,154 @@ def compute_manifest_completeness(manifest: Optional[dict]) -> float:
 # Bundle counting
 # ---------------------------------------------------------------------------
 
+def _resolve_layout_repo_and_root(
+    plugin_entry: dict, marketplace_repo: str
+) -> Optional[tuple[str, str, str]]:
+    """Return ``(repo, ref, plugin_root)`` for layout detection.
+
+    Mirrors the matrix handled by ``_resolve_source_url``:
+
+      * ``"./plugins/foo"`` → marketplace repo, plugin_root="plugins/foo", ref="HEAD"
+      * ``"github:owner/repo"`` → external repo, plugin_root="", ref="HEAD"
+      * ``"https://github.com/owner/repo[/tree/<ref>/sub]"`` → owner/repo, ref=<ref> or "HEAD", sub
+      * dict with ``{source: "github", repo: "owner/repo"}`` → that repo, ref="HEAD", root=""
+      * missing → marketplace repo root, ref="HEAD"
+
+    Returns ``None`` when the source is non-GitHub (we can't run Tree API on it).
+    """
+    src = plugin_entry.get("source")
+    if isinstance(src, dict):
+        if src.get("source") == "github" and src.get("repo"):
+            return (str(src["repo"]).strip(), "HEAD", "")
+        url = src.get("url")
+        if isinstance(url, str):
+            src = url
+        else:
+            src = ""
+
+    if isinstance(src, str) and src:
+        if src.startswith("./") or src.startswith("/"):
+            sub = src.lstrip("./").lstrip("/").rstrip("/")
+            return (marketplace_repo, "HEAD", sub)
+        if src.startswith("github:"):
+            return (src[len("github:"):].strip(), "HEAD", "")
+        if src.startswith("git+"):
+            src = src[len("git+"):]
+        if src.startswith("https://github.com/") or src.startswith(
+            "http://github.com/"
+        ):
+            m = re.match(
+                r"https?://github\.com/([^/]+)/([^/?#.]+?)(?:\.git)?"
+                r"(?:/(?:tree|blob)/([^/]+)(?:/(.+))?)?(?:[/?#]|$)",
+                src,
+            )
+            if m:
+                owner, repo = m.group(1), m.group(2)
+                ref = (m.group(3) or "HEAD").strip() or "HEAD"
+                sub = (m.group(4) or "").strip("/")
+                return (f"{owner}/{repo}", ref, sub)
+            return None
+        # Unknown scheme.
+        return None
+    # No source field → marketplace repo root.
+    return (marketplace_repo, "HEAD", "")
+
+
+def _build_bundle_from_layout(
+    fetcher,
+    repo: Optional[str],
+    plugin_root: str,
+    manifest: Optional[dict],
+    plugin_name: str,
+    ref: str = "HEAD",
+) -> dict:
+    """Layout-detector-first bundle builder with manifest fallback.
+
+    Strategy:
+
+      1. If a fetcher + repo are available, call
+         ``detect_plugin_layout(repo, plugin_root, ref)``. When ``is_plugin`` is
+         True, use the path counts as the source of truth (most accurate).
+      2. When the layout detector reports a ``fetch_error`` (Tree API 4xx/5xx /
+         network exception), keep the bundle at zeros so the next sync retries
+         instead of publishing manifest-derived counts that may be stale or
+         contradict reality (task 4.4 — failure path stays zero).
+      3. When the target legitimately lacks ``.claude-plugin/plugin.json`` (no
+         fetch error, just no marker file) and the manifest carries explicit
+         counts, fall back to ``_build_bundle(manifest, …)`` so legacy
+         README-only plugin shells still get manifest-derived counts.
+      4. On any exception, log WARNING and return zeros.
+    """
+    zero_bundle = {
+        "skills_count": 0,
+        "commands_count": 0,
+        "agents_count": 0,
+        "mcp_servers_count": 0,
+        "skills_namespaces": [],
+    }
+
+    if fetcher is not None and repo:
+        try:
+            layout = fetcher.detect_plugin_layout(repo, plugin_root, ref=ref)
+        except Exception as e:  # noqa: BLE001
+            logger.warning(
+                "detect_plugin_layout failed for %s/%s@%s (plugin=%s): %s",
+                repo,
+                plugin_root or "<root>",
+                ref,
+                plugin_name,
+                e,
+            )
+            return zero_bundle
+
+        if layout.is_plugin:
+            return {
+                "skills_count": len(layout.skill_paths),
+                "commands_count": len(layout.command_paths),
+                "agents_count": len(layout.agent_paths),
+                "mcp_servers_count": _count_manifest_value(
+                    (manifest or {}).get("mcpServers")
+                    or (manifest or {}).get("mcp_servers")
+                ),
+                "skills_namespaces": list(layout.skills_namespaces),
+            }
+
+        if layout.fetch_error is not None:
+            logger.warning(
+                "Tree API failure detecting layout for %s/%s@%s (plugin=%s): %s. "
+                "Keeping zero bundle for retry on next sync.",
+                repo,
+                plugin_root or "<root>",
+                ref,
+                plugin_name,
+                layout.fetch_error,
+            )
+            return zero_bundle
+
+        logger.info(
+            "Layout detector found no plugin.json at %s/%s@%s (plugin=%s); "
+            "falling back to manifest counts.",
+            repo,
+            plugin_root or "<root>",
+            ref,
+            plugin_name,
+        )
+
+    # Final fallback: manifest-derived counts (existing behaviour).
+    return _build_bundle(manifest, plugin_name)
+
+
+def _count_manifest_value(value) -> int:
+    """Helper used by ``_build_bundle_from_layout`` for non-skill counts."""
+    if isinstance(value, list):
+        return len(value)
+    if isinstance(value, dict):
+        return len(value)
+    if isinstance(value, int):
+        return value
+    return 0
+
+
 def _build_bundle(manifest: Optional[dict], plugin_name: str) -> dict:
     """Best-effort bundle stats from plugin.json.
 
@@ -399,6 +555,7 @@ def _entry_from_plugin(
     plugin_entry: dict,
     source_cfg: dict,
     last_synced_iso: str,
+    layout_fetcher=None,
 ) -> Optional[dict]:
     """Convert one marketplace plugin definition into a catalog entry.
 
@@ -447,7 +604,19 @@ def _entry_from_plugin(
         manifest_for_score = manifest
 
     completeness = compute_manifest_completeness(manifest_for_score)
-    bundle = _build_bundle(manifest, name)
+    layout_target = _resolve_layout_repo_and_root(plugin_entry, repo_slug)
+    if layout_target is None:
+        layout_repo, layout_ref, layout_plugin_root = None, "HEAD", ""
+    else:
+        layout_repo, layout_ref, layout_plugin_root = layout_target
+    bundle = _build_bundle_from_layout(
+        layout_fetcher,
+        layout_repo,
+        layout_plugin_root,
+        manifest,
+        name,
+        ref=layout_ref,
+    )
 
     # Description fallback: marketplace > manifest > "".
     if not description and isinstance(manifest, dict):
@@ -521,7 +690,11 @@ def _entry_from_plugin(
 # Per-source sync (with isolation)
 # ---------------------------------------------------------------------------
 
-def sync_one_source(source_cfg: dict, last_synced_iso: str) -> list[dict]:
+def sync_one_source(
+    source_cfg: dict,
+    last_synced_iso: str,
+    layout_fetcher=None,
+) -> list[dict]:
     """Sync a single marketplace source.
 
     Returns the list of catalog entries from this source. On any failure
@@ -579,7 +752,9 @@ def sync_one_source(source_cfg: dict, last_synced_iso: str) -> list[dict]:
                 )
                 continue
             try:
-                entry = _entry_from_plugin(raw, source_cfg, last_synced_iso)
+                entry = _entry_from_plugin(
+                    raw, source_cfg, last_synced_iso, layout_fetcher
+                )
             except Exception as e:  # noqa: BLE001 - never let one entry kill the source
                 logger.warning(
                     "Failed to build entry for plugin %r in source=%s: %s",
@@ -637,11 +812,28 @@ def main(argv: Optional[list[str]] = None) -> int:
     all_entries: list[dict] = []
     failed_sources: list[str] = []
 
-    for source_cfg in SOURCES:
-        entries = sync_one_source(source_cfg, last_synced_iso)
-        if not entries:
-            failed_sources.append(source_cfg["id"])
-        all_entries.extend(entries)
+    # One fetcher per sync run — its tree cache lets the entire marketplace
+    # monorepo (50+ plugins) share a single GitHub Tree API call (Decision 5).
+    if PluginContentFetcher is not None:
+        layout_fetcher = PluginContentFetcher()
+    else:  # pragma: no cover - package always installed in CI
+        logger.warning(
+            "ai-resource-eval not importable; bundle fields will be zeros."
+        )
+        layout_fetcher = None
+
+    try:
+        for source_cfg in SOURCES:
+            entries = sync_one_source(source_cfg, last_synced_iso, layout_fetcher)
+            if not entries:
+                failed_sources.append(source_cfg["id"])
+            all_entries.extend(entries)
+    finally:
+        if layout_fetcher is not None:
+            try:
+                layout_fetcher.close()
+            except Exception:  # noqa: BLE001
+                pass
 
     # Stable ordering: by id, so diffs in git remain readable.
     all_entries.sort(key=lambda e: e.get("id", ""))

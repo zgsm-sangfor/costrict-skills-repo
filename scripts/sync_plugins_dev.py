@@ -67,6 +67,11 @@ except ImportError:  # pragma: no cover - script-style invocation
         save_index,
     )
 
+try:
+    from ai_resource_eval.fetcher import PluginContentFetcher  # type: ignore
+except Exception:  # noqa: BLE001 - keep sync resilient if package missing
+    PluginContentFetcher = None  # type: ignore
+
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -235,7 +240,105 @@ def _normalize_pushed_at(value) -> Optional[str]:
     return s
 
 
-def _entry_from_plugin(plugin: dict, last_synced_iso: str) -> Optional[dict]:
+def _parse_git_url_for_layout(git_url: str) -> Optional[tuple[str, str, str]]:
+    """Extract ``(repo, ref, plugin_root)`` from the dev API's ``gitUrl`` field.
+
+    Most ``gitUrl`` values look like ``https://github.com/owner/repo`` (root
+    plugin); some include a ``/tree/<ref>/<sub>`` segment for monorepo
+    sub-paths. Non-GitHub values return ``None``.
+    """
+    if not isinstance(git_url, str) or not git_url:
+        return None
+    m = re.match(
+        r"https?://github\.com/([^/]+)/([^/?#.]+?)(?:\.git)?"
+        r"(?:/(?:tree|blob)/([^/]+)(?:/(.+))?)?(?:[/?#]|$)",
+        git_url,
+    )
+    if not m:
+        return None
+    owner, repo = m.group(1), m.group(2)
+    ref = (m.group(3) or "HEAD").strip() or "HEAD"
+    sub = (m.group(4) or "").strip("/")
+    return (f"{owner}/{repo}", ref, sub)
+
+
+def _build_bundle_from_layout_dev(
+    fetcher,
+    git_url: str,
+    api_skills: list,
+    plugin_name: str,
+) -> dict:
+    """Layout-detector-first bundle builder; trust API skills only as fallback.
+
+    The dev API's ``skills`` array is a coarse hint (often missing commands /
+    agents and sometimes stale on skill counts). When the layout detector
+    succeeds we use its counts as the source of truth. When the detector hits
+    a Tree API failure we keep zeros (no false-positive bundles). Only the
+    legitimate "no plugin.json" path falls back to the API hint (Task 4.2).
+    """
+    fallback_namespaces = [
+        f"{plugin_name}:{s}" for s in api_skills if isinstance(s, str) and s
+    ]
+    fallback_bundle = {
+        "skills_count": len(fallback_namespaces),
+        "commands_count": 0,
+        "agents_count": 0,
+        "mcp_servers_count": 0,
+        "skills_namespaces": fallback_namespaces,
+    }
+    zero_bundle = {
+        "skills_count": 0,
+        "commands_count": 0,
+        "agents_count": 0,
+        "mcp_servers_count": 0,
+        "skills_namespaces": [],
+    }
+
+    if fetcher is None:
+        return fallback_bundle
+
+    target = _parse_git_url_for_layout(git_url)
+    if target is None:
+        return fallback_bundle
+    repo, ref, plugin_root = target
+
+    try:
+        layout = fetcher.detect_plugin_layout(repo, plugin_root, ref=ref)
+    except Exception as e:  # noqa: BLE001 - Task 4.4: never block sync.
+        logger.warning(
+            "detect_plugin_layout failed for %s/%s@%s (plugin=%s): %s",
+            repo, plugin_root or "<root>", ref, plugin_name, e,
+        )
+        return zero_bundle
+
+    if layout.is_plugin:
+        return {
+            "skills_count": len(layout.skill_paths),
+            "commands_count": len(layout.command_paths),
+            "agents_count": len(layout.agent_paths),
+            "mcp_servers_count": 0,  # not exposed via Tree API, kept at 0
+            "skills_namespaces": list(layout.skills_namespaces),
+        }
+
+    if layout.fetch_error is not None:
+        # Transient Tree API failure — don't publish API-hint bundles that may
+        # contradict reality. Next sync will retry.
+        logger.warning(
+            "Tree API failure for %s/%s@%s (plugin=%s): %s. "
+            "Keeping zero bundle for retry.",
+            repo, plugin_root or "<root>", ref, plugin_name, layout.fetch_error,
+        )
+        return zero_bundle
+
+    # Legitimate "no plugin.json" → trust the API hint.
+    return fallback_bundle
+
+
+def _entry_from_plugin(
+    plugin: dict,
+    last_synced_iso: str,
+    layout_fetcher=None,
+) -> Optional[dict]:
     """Convert one claude-plugins.dev API plugin into a catalog entry.
 
     Returns ``None`` if the plugin is too malformed (missing name) or below
@@ -288,15 +391,9 @@ def _entry_from_plugin(plugin: dict, last_synced_iso: str) -> Optional[dict]:
         upstream_category=upstream_category,
     )
 
-    bundle = {
-        "skills_count": len(skills_arr),
-        "commands_count": 0,  # not exposed by claude-plugins.dev API
-        "agents_count": 0,
-        "mcp_servers_count": 0,
-        "skills_namespaces": [
-            f"{name}:{s}" for s in skills_arr if isinstance(s, str) and s
-        ],
-    }
+    bundle = _build_bundle_from_layout_dev(
+        layout_fetcher, git_url, skills_arr, name
+    )
 
     completeness = _compute_manifest_completeness(plugin)
 
@@ -578,18 +675,37 @@ def main(argv: Optional[list[str]] = None) -> int:
         return 0
 
     # 2. Convert to catalog entries.
-    new_entries: list[dict] = []
-    for raw in raw_plugins:
-        try:
-            entry = _entry_from_plugin(raw, last_synced)
-        except Exception as e:  # noqa: BLE001 - one bad row mustn't kill all
-            logger.warning(
-                "Failed to build entry for plugin name=%r: %s",
-                raw.get("name"), e,
-            )
-            continue
-        if entry is not None:
-            new_entries.append(entry)
+    # One PluginContentFetcher per sync run; instance tree cache is shared
+    # across plugins that live in the same repo (e.g., multiple plugins
+    # inside one monorepo trigger only one Tree API call total — Task 4.3).
+    if PluginContentFetcher is not None:
+        layout_fetcher = PluginContentFetcher()
+    else:  # pragma: no cover - package always installed in CI
+        logger.warning(
+            "ai-resource-eval not importable; bundle fields will use API "
+            "skills hint only."
+        )
+        layout_fetcher = None
+
+    try:
+        new_entries: list[dict] = []
+        for raw in raw_plugins:
+            try:
+                entry = _entry_from_plugin(raw, last_synced, layout_fetcher)
+            except Exception as e:  # noqa: BLE001 - one bad row mustn't kill all
+                logger.warning(
+                    "Failed to build entry for plugin name=%r: %s",
+                    raw.get("name"), e,
+                )
+                continue
+            if entry is not None:
+                new_entries.append(entry)
+    finally:
+        if layout_fetcher is not None:
+            try:
+                layout_fetcher.close()
+            except Exception:  # noqa: BLE001
+                pass
     logger.info(
         "Built %d catalog entries from %d raw plugins",
         len(new_entries), len(raw_plugins),

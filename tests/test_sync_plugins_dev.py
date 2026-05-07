@@ -426,6 +426,10 @@ def test_entry_shape_basic(monkeypatch, tmp_path):
     )
     _install_paged_http(monkeypatch, [_api_response([plugin], limit=100)])
 
+    # Disable the live PluginContentFetcher so this test stays offline; the
+    # entry-shape assertions below cover the API-hint fallback path.
+    monkeypatch.setattr(spd, "PluginContentFetcher", None)
+
     output_path = tmp_path / "plugins" / "index.json"
     rc = spd.main(["--output", str(output_path)])
     assert rc == 0
