@@ -8,6 +8,32 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- `PluginContentFetcher` (`ai_resource_eval/fetcher/plugin.py`) — plugin-typed
+  content fetcher used by `EvalRunner` when `entry.type == "plugin"`. Identifies
+  plugin boundary via `.claude-plugin/plugin.json` (uniform across L1 marketplace
+  subdir / L2 root plugin / L3 root with many SKILLs / L4 dev monorepo), pulls
+  `plugin.json` + all `SKILL.md` + `agents/*.md` + `commands/*.md`, normalizes
+  with `## <path>` section headers, applies a 600KB `size_cap` fallback
+  (frontmatter + first 800 chars per file beyond the first 5 of each category).
+  Exposes `detect_plugin_layout(repo, plugin_root, ref)` for sync-stage callers
+  that only need path counts. Two instance caches:
+  - `_tree_cache: dict[(repo, ref), tree_json]` — one Tree API call per
+    `(repo, ref)` pair, marketplace monorepos with N plugins trigger 1 call total
+  - `_raw_cache: dict[url, str|None]` — repeat fetches of the same blob URL
+    serve from memory
+  - `PluginLayout.fetch_error: str | None` distinguishes "no plugin.json" (legit
+    fallback) from "Tree API 4xx/5xx" (transient, callers should not publish
+    fallback data)
+- `ContentSource.plugin_bundle` enum value (`api/types.py`).
+- `tasks/plugin.yaml` — `content_source: plugin_bundle` (was `readme`); when
+  the fetcher returns `None`, `EvalRunner._fetch_content` falls back to
+  `GitHubFetcher` so behavior matches prior plugin evaluation.
+- `tests/test_plugin_content_fetcher.py` — 15 tests covering 5 layouts, shadow
+  directory exclusion (`.codex/` `.gemini/` `.github/`), tree truncation
+  warning, tree+raw cache reuse, size_cap, fallback-to-None, manifest-name
+  derived namespace.
+- `tests/test_runner_plugin_routing.py` — 7 tests covering plugin routing +
+  fallback to GitHubFetcher + non-plugin entries unchanged.
 - `OpenAICompatJudge._capability_cache` — process-level (ClassVar) capability
   cache keyed by `(base_url, model)`, recording whether each endpoint accepts
   the OpenAI 2024-08 `response_format={"type":"json_schema",...}` Structured
