@@ -21,6 +21,8 @@ try:
         to_kebab_case,
         save_index,
         load_index,
+        is_plugin_source,
+        load_plugin_sources,
         logger,
     )
     from .catalog_lifecycle import overlay_added_at, backfill_missing_added_at
@@ -35,6 +37,8 @@ except ImportError:
         to_kebab_case,
         save_index,
         load_index,
+        is_plugin_source,
+        load_plugin_sources,
         logger,
     )
     from catalog_lifecycle import overlay_added_at, backfill_missing_added_at
@@ -318,6 +322,11 @@ def merge_three_sources(
             norm_url = normalize_github_url(entry.get("source_url", ""))
             if not norm_url:
                 continue
+            if is_plugin_source(entry.get("source_url", "")):
+                logger.debug(
+                    f"skipping {entry.get('id', '<unknown>')}: in plugin_sources.json"
+                )
+                continue
 
             if norm_url in url_map:
                 # Already have a higher-priority entry
@@ -475,6 +484,7 @@ def _backfill_seed_stars(seed: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 
 def sync():
+    load_plugin_sources()  # warm cache; warns once if missing/unparseable
     # Load three sources
     seed = load_seed()
     if not GITHUB_TOKEN:

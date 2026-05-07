@@ -7,7 +7,7 @@
     "properties": {
       "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
       "name": { "type": "string" },
-      "type": { "type": "string", "enum": ["mcp", "skill", "rule", "prompt"] },
+      "type": { "type": "string", "enum": ["mcp", "skill", "rule", "prompt", "plugin"] },
       "description": { "type": "string" },
       "source_url": { "type": "string", "format": "uri" },
       "stars": { "type": ["integer", "null"] },
@@ -36,7 +36,7 @@
         "type": "object",
         "required": ["method"],
         "properties": {
-          "method": { "type": "string", "enum": ["mcp_config", "mcp_config_template", "manual", "git_clone", "download_file"] },
+          "method": { "type": "string", "enum": ["mcp_config", "mcp_config_template", "manual", "git_clone", "download_file", "plugin_marketplace", "npm"] },
           "config": { "type": "object" },
           "placeholder_hints": {
             "type": "object",
@@ -105,6 +105,36 @@
             "url": { "type": "string", "format": "uri" }
           }
         }
+      },
+      "marketplace_url": {
+        "type": "string",
+        "format": "uri",
+        "description": "Plugin marketplace 仓库 URL（如 https://github.com/obra/superpowers-marketplace）；仅 plugin 类型 entry 写入，optional"
+      },
+      "bundle": {
+        "type": "object",
+        "description": "Plugin 打包内容统计；plugin 类型 entry 必填，其他类型不出现",
+        "properties": {
+          "skills_count": { "type": "integer", "minimum": 0 },
+          "commands_count": { "type": "integer", "minimum": 0 },
+          "agents_count": { "type": "integer", "minimum": 0 },
+          "mcp_servers_count": { "type": "integer", "minimum": 0 },
+          "skills_namespaces": {
+            "type": "array",
+            "description": "<plugin-name>:<skill-name> 形式的 skill namespace 列表，供 merge_index.py 软标注",
+            "items": { "type": "string" }
+          }
+        }
+      },
+      "manifest_completeness": {
+        "type": "number",
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "description": "上游 plugin.json manifest 完整度：1.0=name+version+description+author 齐全；0.7=缺 description 或 version；0.3=无 manifest；optional"
+      },
+      "bundled_in": {
+        "type": "string",
+        "description": "若该 skill entry 被某 plugin 打包，写入对应的 plugin id；merge_index.py post-merge 软标注，optional"
       }
     }
   }

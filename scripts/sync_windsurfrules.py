@@ -14,6 +14,8 @@ from utils import (  # noqa: E402
     extract_tags,
     to_kebab_case,
     save_index,
+    is_plugin_source,
+    load_plugin_sources,
     logger,
 )
 
@@ -278,6 +280,11 @@ def parse_repo(repo: str, repo_slug: str) -> list[dict]:
         entry = _build_entry(repo, repo_slug, branch, p, content)
         if not entry:
             continue
+        if is_plugin_source(entry.get("source_url", "")):
+            logger.debug(
+                f"skipping {entry.get('id', '<unknown>')}: in plugin_sources.json"
+            )
+            continue
         entry["pushed_at"] = pushed_at
         entry["stars"] = stars
         entries.append(entry)
@@ -288,6 +295,7 @@ def parse_repo(repo: str, repo_slug: str) -> list[dict]:
 
 def sync() -> int:
     os.makedirs(CACHE_DIR, exist_ok=True)
+    load_plugin_sources()  # warm cache; warns once if missing/unparseable
     all_entries: list[dict] = []
     failed_repos = 0
     for repo, repo_slug in REPOS:

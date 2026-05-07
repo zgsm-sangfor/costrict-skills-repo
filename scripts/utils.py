@@ -212,6 +212,11 @@ CATEGORY_MAP = {
     "linting": "tooling",
     "cli": "tooling",
     "vscode": "tooling",
+    # Plugin / bundle keywords — plugin entries (type="plugin") default to
+    # "tooling" so they share the catalog's existing tooling category bucket.
+    "plugin": "tooling",
+    "bundle": "tooling",
+    "marketplace": "tooling",
 }
 
 # Spam patterns for skill filtering (case-insensitive)
@@ -556,6 +561,129 @@ def normalize_source_url(url: str) -> str:
     if url.endswith(".git"):
         url = url[:-4]
     return url
+
+
+# --- Plugin sources skip list ---------------------------------------------
+
+# Cache the parsed skip list within a single sync-script process so repeated
+# is_plugin_source() lookups avoid re-reading the file. Cleared by callers via
+# load_plugin_sources(force_reload=True) when a test wants to bypass the cache.
+_plugin_sources_cache: Optional[set[str]] = None
+
+
+def _normalize_plugin_url(url: str) -> str:
+    """Normalize a candidate URL for plugin-skip-list comparison.
+
+    Lowercases, strips trailing slashes / `.git`, drops a leading `https://www.`
+    prefix variant, and accepts reverse-DNS forms used by the MCP registry
+    (e.g. ``io.github.<owner>/<repo>``) by rewriting them to the canonical
+    ``https://github.com/<owner>/<repo>`` form before normalizing.
+    """
+    if not url:
+        return ""
+    url = url.strip()
+    # Reverse-DNS form from registry.modelcontextprotocol.io server names.
+    rev_dns = re.match(r"^io\.github\.([^/]+)/([^/?#]+)$", url, re.IGNORECASE)
+    if rev_dns:
+        url = f"https://github.com/{rev_dns.group(1)}/{rev_dns.group(2)}"
+    url = url.lower()
+    if url.startswith("https://www."):
+        url = "https://" + url[len("https://www."):]
+    elif url.startswith("http://www."):
+        url = "http://" + url[len("http://www."):]
+    # Drop query string and fragment before suffix normalization so callers
+    # like skills.sh (which appends `#skill=foo`) still match the skip list.
+    if "?" in url:
+        url = url.split("?", 1)[0]
+    if "#" in url:
+        url = url.split("#", 1)[0]
+    url = url.rstrip("/")
+    if url.endswith(".git"):
+        url = url[:-4]
+    return url
+
+
+def load_plugin_sources(
+    force_reload: bool = False,
+    _path_override: Optional[str] = None,
+) -> set[str]:
+    """Load and normalize the plugin source skip list.
+
+    Reads ``scripts/plugin_sources.json`` (resolved relative to this utils.py
+    file) and returns a set of normalized canonical URLs from the ``repos``
+    array. On missing file or parse error, logs a WARNING and returns an
+    empty set so sync scripts can continue running without crashing.
+
+    ``_path_override`` is a private testing hook — pass an absolute path to
+    bypass the default ``scripts/plugin_sources.json`` location. When set,
+    the cache is also bypassed so each call re-reads the override target.
+    """
+    global _plugin_sources_cache
+    if _path_override is None and _plugin_sources_cache is not None and not force_reload:
+        return _plugin_sources_cache
+
+    if _path_override is not None:
+        path = _path_override
+    else:
+        path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                            "plugin_sources.json")
+    if not os.path.exists(path):
+        logger.warning(
+            "plugin_sources.json not found at %s; plugin skip list disabled",
+            path,
+        )
+        _plugin_sources_cache = set()
+        return _plugin_sources_cache
+
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except (json.JSONDecodeError, IOError, OSError) as e:
+        logger.warning(
+            "Failed to parse plugin_sources.json (%s); plugin skip list disabled",
+            e,
+        )
+        _plugin_sources_cache = set()
+        return _plugin_sources_cache
+
+    repos = data.get("repos") if isinstance(data, dict) else None
+    if not isinstance(repos, list):
+        logger.warning(
+            "plugin_sources.json missing 'repos' array; plugin skip list disabled"
+        )
+        _plugin_sources_cache = set()
+        return _plugin_sources_cache
+
+    _plugin_sources_cache = {
+        _normalize_plugin_url(u) for u in repos if isinstance(u, str) and u
+    }
+    return _plugin_sources_cache
+
+
+def is_plugin_source(candidate_url: str) -> bool:
+    """Return True if candidate_url matches an entry in plugin_sources.json.
+
+    Matching is tolerant of trailing slashes, `.git` suffixes, www. prefixes,
+    case differences, and reverse-DNS server names (``io.github.owner/repo``).
+    A candidate URL also matches if it points at a sub-path within a listed
+    plugin repo (e.g. ``https://github.com/obra/superpowers/tree/main/skills/foo``
+    matches the listed root ``https://github.com/obra/superpowers``).
+    """
+    if not candidate_url:
+        return False
+    norm = _normalize_plugin_url(candidate_url)
+    if not norm:
+        return False
+    skip_set = load_plugin_sources()
+    if not skip_set:
+        return False
+    if norm in skip_set:
+        return True
+    # Sub-path containment: candidate is `<plugin-repo>/<path>`.
+    for plugin_url in skip_set:
+        if plugin_url and norm.startswith(plugin_url + "/"):
+            return True
+    return False
 
 
 # --- Source priority & cross-source skill dedup ---------------------------
@@ -1096,7 +1224,13 @@ def deduplicate(entries: list) -> list:
     seen_ids: dict[str, dict] = {}
     seen_urls: dict[str, dict] = {}
     result: list = []
-    url_dedup_skip_types = {"rule", "prompt"}
+    # Types excluded from cross-entry URL dedup. Multiple distinct entries
+    # legitimately share a single source repo URL:
+    #   - rule / prompt: many rules or prompts live in a single awesome-list repo
+    #   - plugin: marketplaces (e.g. awslabs/agent-plugins, obra/superpowers-marketplace)
+    #     publish many independent plugins under one git URL
+    # These types still get pass-0 dedup by id and (for plugin) per-type identity keys.
+    url_dedup_skip_types = {"rule", "prompt", "plugin"}
     for entry in after_identity:
         eid = entry.get("id", "")
         if eid and eid in seen_ids:
