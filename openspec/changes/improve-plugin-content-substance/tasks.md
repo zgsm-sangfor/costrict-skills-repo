@@ -21,11 +21,11 @@
 
 ## 3. Runner 路由 + plugin task config 切换
 
-- [ ] 3.1 修改 `ai-resource-eval/ai_resource_eval/runner.py:_fetch_content`：对 `entry.type == "plugin"` 调 `PluginContentFetcher.fetch`，否则走现行 `GitHubFetcher.fetch`。
-- [ ] 3.2 PluginContentFetcher 返 None 时（fallback case）回退到 `GitHubFetcher` 拉 README，行为跟现行 plugin 评估等价。
-- [ ] 3.3 修改 `ai-resource-eval/ai_resource_eval/api/types.py`：`ContentSource` 枚举加 `plugin_bundle`（如必要）。
-- [ ] 3.4 修改 `ai-resource-eval/ai_resource_eval/tasks/plugin.yaml`：`content_source` 从 `readme` 改为 `plugin_bundle`。
-- [ ] 3.5 编写 runner 路由测试 `ai-resource-eval/tests/test_runner_plugin_routing.py`：验证 plugin entry → PluginContentFetcher，其他 type → GitHubFetcher。
+- [x] 3.1 修改 `ai-resource-eval/ai_resource_eval/runner.py:_fetch_content`：对 `entry.type == "plugin"` 调 `PluginContentFetcher.fetch`，否则走现行 `GitHubFetcher.fetch`。
+- [x] 3.2 PluginContentFetcher 返 None 时（fallback case）回退到 `GitHubFetcher` 拉 README，行为跟现行 plugin 评估等价。
+- [x] 3.3 修改 `ai-resource-eval/ai_resource_eval/api/types.py`：`ContentSource` 枚举加 `plugin_bundle`（如必要）。
+- [x] 3.4 修改 `ai-resource-eval/ai_resource_eval/tasks/plugin.yaml`：`content_source` 从 `readme` 改为 `plugin_bundle`。
+- [x] 3.5 编写 runner 路由测试 `ai-resource-eval/tests/test_runner_plugin_routing.py`：验证 plugin entry → PluginContentFetcher，其他 type → GitHubFetcher。
 
 ## 4. Sync 阶段填充 bundle 字段
 

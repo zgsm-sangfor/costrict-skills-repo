@@ -1,5 +1,5 @@
 task: plugin
-content_source: readme
+content_source: plugin_bundle
 content_paths:
   - README.md
   - .claude-plugin/plugin.json

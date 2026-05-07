@@ -27,6 +27,11 @@ class ContentSource(str, Enum):
 
     readme = "readme"
     description = "description"
+    # plugin_bundle: 由 PluginContentFetcher 提供，将 .claude-plugin/plugin.json
+    # + skills/<n>/SKILL.md + agents/*.md + commands/*.md 拼接成单个 LLM 评估串。
+    # 仅 plugin task config 使用；非 plugin entry 命中此 content_source 时 runner
+    # 会自动降级到 GitHubFetcher (README) 路径。
+    plugin_bundle = "plugin_bundle"
 
 
 # ---------------------------------------------------------------------------

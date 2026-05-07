@@ -31,7 +31,11 @@ from ai_resource_eval.api.types import (
     TaskConfig,
 )
 from ai_resource_eval.cache import EvalCache
-from ai_resource_eval.fetcher import GitHubFetcher, InteractiveFetcher
+from ai_resource_eval.fetcher import (
+    GitHubFetcher,
+    InteractiveFetcher,
+    PluginContentFetcher,
+)
 from ai_resource_eval.judges.base import BaseJudge
 from ai_resource_eval.metrics.prompt_builder import (
     LLMEvalResponse,
@@ -126,6 +130,11 @@ class EvalRunner:
         self._github_fetcher = GitHubFetcher(
             content_paths=task_config.content_paths,
         )
+        # Plugin bundle fetcher：用于 entry.type == "plugin" 的条目，将 plugin.json
+        # + skills/agents/commands 拼成单个评估串。Layout 检测失败（无
+        # .claude-plugin/plugin.json）时返 None，runner 会自动降级到
+        # GitHubFetcher 走 README 评估，行为与现行 plugin task 等价。
+        self._plugin_fetcher: PluginContentFetcher = PluginContentFetcher()
 
         # Star router
         self._star_router = StarRouter(task_config.star_routing)
@@ -587,15 +596,44 @@ class EvalRunner:
     def _fetch_content(self, entry: EvalItem) -> tuple[str, str] | None:
         """Attempt to fetch content for an entry.
 
-        Tries GitHubFetcher first.  If that fails and interactive mode is
-        enabled, falls back to InteractiveFetcher.  If the entry has a
-        description and no source_url, uses the description as content.
+        Routing:
+
+        1. ``entry.type == "plugin"`` and has a source_url → try
+           ``PluginContentFetcher`` first. When it returns ``None`` (no
+           ``.claude-plugin/plugin.json`` at the target sub-path), fall through
+           to ``GitHubFetcher`` so behaviour matches the legacy README-mode
+           plugin evaluation.
+        2. All other entries → ``GitHubFetcher`` directly.
+
+        Tries GitHubFetcher first (or after plugin fallback).  If that fails
+        and interactive mode is enabled, falls back to InteractiveFetcher.
+        If the entry has a description and no source_url, uses the
+        description as content.
 
         For monorepo entries where the fetched README is the shared repo-level
         README (not specific to this entry), the description is prepended to
         give the LLM entry-specific context.
         """
         github_content: str | None = None
+
+        # Plugin routing: try plugin bundle fetch first, fall through to
+        # GitHubFetcher when no plugin.json is found at the target.
+        if entry.source_url and getattr(entry, "type", None) == "plugin":
+            plugin_result = self._plugin_fetcher.fetch(entry.source_url)
+            if plugin_result is not None:
+                content, _ = plugin_result
+                # Apply same monorepo-description-prepend logic as the GitHub
+                # branch so plugin entries from monorepos (50+ plugins per
+                # marketplace repo) get entry-specific context too.
+                if self._is_monorepo_entry(entry) and entry.description:
+                    content = (
+                        f"## Resource Description\n{entry.description}\n\n"
+                        f"## Plugin Bundle\n{content}"
+                    )
+                    return content, EvalCache.content_hash(content)
+                return plugin_result
+            # else: layout detector returned is_plugin=False → fall through
+            # to GitHubFetcher path below for README-mode evaluation.
 
         # Try GitHub fetch if there is a source URL
         if entry.source_url:
