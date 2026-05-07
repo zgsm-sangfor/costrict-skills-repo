@@ -78,6 +78,13 @@ def _apply_bundled_in_annotations(entries: list[dict], log=logger) -> list[dict]
 
     skills_by_namespace: dict[str, dict] = {}
     skills_by_id: dict[str, dict] = {}
+    # Index skills by the trailing path segment of their source_url so we can
+    # match plugin namespaces like "superpowers:brainstorming" against catalog
+    # skills mirrored under different repos (e.g. sickn33/...) whose
+    # source_url ends in /skills/brainstorming. Many skills share names — so
+    # we keep a list and pick the first hit per (plugin_repo, skill_name) pair
+    # below to avoid arbitrary cross-plugin attribution.
+    skills_by_source_skill_name: dict[str, list[dict]] = {}
     for s in skill_entries:
         ns = s.get("namespace")
         if isinstance(ns, str) and ns:
@@ -85,6 +92,24 @@ def _apply_bundled_in_annotations(entries: list[dict], log=logger) -> list[dict]
         sid = s.get("id")
         if isinstance(sid, str) and sid:
             skills_by_id.setdefault(sid, s)
+        url = s.get("source_url")
+        if isinstance(url, str) and "/skills/" in url:
+            # Trailing component after /skills/ — strip /SKILL.md or trailing /
+            tail = url.rstrip("/").rsplit("/skills/", 1)[-1].split("/")[0]
+            if tail and tail != "skills":
+                skills_by_source_skill_name.setdefault(tail, []).append(s)
+
+    def _plugin_source_repo(plugin: dict) -> str:
+        url = plugin.get("source_url") or ""
+        if "github.com" not in url:
+            return ""
+        path = url.replace("https://github.com/", "").replace("http://github.com/", "")
+        # Remove trailing /tree/<ref>/... and .git suffix
+        path = path.split("/tree/")[0].split("/blob/")[0]
+        if path.endswith(".git"):
+            path = path[:-4]
+        parts = path.split("/")
+        return "/".join(parts[:2]) if len(parts) >= 2 else ""
 
     annotated = 0
     orphan_count = 0
@@ -105,6 +130,7 @@ def _apply_bundled_in_annotations(entries: list[dict], log=logger) -> list[dict]
                 type(namespaces).__name__,
             )
             continue
+        plugin_repo = _plugin_source_repo(plugin)
         for ns in namespaces:
             if not isinstance(ns, str) or not ns:
                 continue
@@ -112,6 +138,21 @@ def _apply_bundled_in_annotations(entries: list[dict], log=logger) -> list[dict]
             if target is None and ":" in ns:
                 slug_id = ns.replace(":", "-")
                 target = skills_by_id.get(slug_id)
+            if target is None and ":" in ns:
+                # Source-url-path fallback: look for any catalog skill whose
+                # source_url ends in /skills/<skill-name>. Prefer one whose
+                # source_url contains the plugin's GitHub repo path
+                # (highest-confidence: same-repo mirror); if no same-repo
+                # match exists, fall back to any catalog skill with that
+                # trailing skill-name segment.
+                _, skill_name = ns.split(":", 1)
+                candidates = skills_by_source_skill_name.get(skill_name) or []
+                if candidates:
+                    same_repo = [
+                        c for c in candidates
+                        if plugin_repo and plugin_repo in (c.get("source_url") or "")
+                    ]
+                    target = same_repo[0] if same_repo else candidates[0]
             if target is None:
                 orphan_count += 1
                 log.warning(
