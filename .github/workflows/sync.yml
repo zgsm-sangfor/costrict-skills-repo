@@ -194,7 +194,11 @@ jobs:
           LLM_MODEL: ${{ secrets.LLM_MODEL }}
           EVAL_DRY_RUN: ${{ vars.EVAL_DRY_RUN || 'true' }}
           EVAL_INCREMENTAL: "true"
-          EVAL_CONCURRENCY: ${{ vars.EVAL_CONCURRENCY || '16' }}
+          # MiMo (mimo-v2.5-pro) 实测 16 并发会触发反压（轻过载返 429，重过载
+          # 直接挂连接 → ReadTimeout，BaseJudge 重试 3×120s 仍超时）。本地复现
+          # 16 并发 1/16 直接 429。降到 8 牺牲 ~50% eval 速度换稳定性；切回
+          # DeepSeek 或换更高并发上限的 endpoint 后可通过 vars.EVAL_CONCURRENCY 调回。
+          EVAL_CONCURRENCY: ${{ vars.EVAL_CONCURRENCY || '8' }}
         run: python scripts/merge_index.py
         continue-on-error: true
 
