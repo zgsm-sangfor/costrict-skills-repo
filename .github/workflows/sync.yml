@@ -81,6 +81,28 @@ jobs:
           restore-keys: |
             windsurfrules-cache-${{ steps.week.outputs.stamp }}-
 
+      # plugins (official marketplaces) 缓存独立隔离：同上，仅本周 stamp 前缀
+      - name: Restore plugins-official weekly cache
+        id: cache-restore-plugins-official
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            .plugins_official_cache/
+          key: plugins-official-cache-${{ steps.week.outputs.stamp }}-${{ github.run_number }}
+          restore-keys: |
+            plugins-official-cache-${{ steps.week.outputs.stamp }}-
+
+      # plugins (claude-plugins.dev) 缓存独立隔离：同上，仅本周 stamp 前缀
+      - name: Restore plugins-dev weekly cache
+        id: cache-restore-plugins-dev
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            .plugins_dev_cache/
+          key: plugins-dev-cache-${{ steps.week.outputs.stamp }}-${{ github.run_number }}
+          restore-keys: |
+            plugins-dev-cache-${{ steps.week.outputs.stamp }}-
+
       - name: Crawl mcp.so (incremental)
         run: python scripts/crawl_mcp_so.py --mode incremental
         timeout-minutes: 15
@@ -132,6 +154,21 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/sync_prompts.py
+        continue-on-error: true
+
+      # Plugins 官方 marketplaces：anthropics/claude-plugins-official + obra/superpowers-marketplace
+      # 失败兜底：continue-on-error 保证 merge_index 仍能基于已有 plugins/index.json 跑
+      - name: Sync Plugins (official marketplaces)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/sync_plugins_official.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      # Plugins claude-plugins.dev：分页爬取，本地 cache 每页持久化
+      - name: Sync Plugins (claude-plugins.dev)
+        run: python scripts/sync_plugins_dev.py
+        timeout-minutes: 15
         continue-on-error: true
 
       - name: Verify sync produced data
@@ -237,3 +274,19 @@ jobs:
           path: |
             .windsurfrules_cache/
           key: windsurfrules-cache-${{ steps.week.outputs.stamp }}-${{ github.run_number }}
+
+      - name: Save plugins-official weekly cache
+        uses: actions/cache/save@v4
+        if: always() && steps.cache-restore-plugins-official.outputs.cache-hit != 'true'
+        with:
+          path: |
+            .plugins_official_cache/
+          key: plugins-official-cache-${{ steps.week.outputs.stamp }}-${{ github.run_number }}
+
+      - name: Save plugins-dev weekly cache
+        uses: actions/cache/save@v4
+        if: always() && steps.cache-restore-plugins-dev.outputs.cache-hit != 'true'
+        with:
+          path: |
+            .plugins_dev_cache/
+          key: plugins-dev-cache-${{ steps.week.outputs.stamp }}-${{ github.run_number }}
