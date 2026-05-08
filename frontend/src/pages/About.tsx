@@ -59,6 +59,14 @@ function ClockIcon() {
   )
 }
 
+function CheckIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M20 6L9 17l-5-5" />
+    </svg>
+  )
+}
+
 function TargetIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -85,8 +93,8 @@ const SOURCES = [
 ]
 
 const TRUST_LEVELS = [
-  { score: 5, label: 'Tier 1', sources: ['anthropics-skills', 'curated'], color: '#30d158' },
-  { score: 4, label: 'Tier 2', sources: ['awesome-mcp-servers', 'awesome-cursorrules', 'prompts-chat'], color: '#0071e3' },
+  { score: 5, label: 'Tier 1', sources: ['anthropics-skills', 'curated', 'claude-plugins-official', 'superpowers-marketplace'], color: '#30d158' },
+  { score: 4, label: 'Tier 2', sources: ['awesome-mcp-servers', 'awesome-cursorrules', 'prompts-chat', 'claude-plugins.dev'], color: '#0071e3' },
   { score: 3, label: 'Tier 3', sources: ['ai-agent-skills', 'github-search', 'rules-2.1'], color: '#ff9f0a' },
   { score: 2, label: 'Tier 4', sources: ['mcp.so'], color: '#ff453a' },
 ]
@@ -127,7 +135,7 @@ function WeightBar({ label, weight, color }: { label: string; weight: number; co
 }
 
 export default function About() {
-  const { t } = useI18n()
+  const { t, lang } = useI18n()
 
   const pipelineSteps = [
     {
@@ -177,10 +185,25 @@ export default function About() {
     { label: 'Specificity',      weight: 16, color: '#64d2ff' },
   ]
 
+  // Plugin 用 5 维（剔除 install_clarity — marketplace 安装统一是
+  // /plugin install <name> 流程，该维度对 plugin 是噪声）。0.10 权重并入
+  // doc_completeness（区分度最高的维度）。详见 plugin.yaml v2 注释。
+  const pluginWeights = [
+    { label: 'Coding Relevance', weight: 25, color: '#0071e3' },
+    { label: 'Doc Completeness', weight: 30, color: '#34aadc' },
+    { label: 'Desc Accuracy',    weight: 15, color: '#5ac8fa' },
+    { label: 'Writing Quality',  weight: 15, color: '#30d158' },
+    { label: 'Specificity',      weight: 15, color: '#64d2ff' },
+  ]
+
+  // Default health weights (mcp/skill/rule/prompt 共用 freshness 0.30 +
+  // popularity 0.30 + source_trust 0.40)。Plugin 走 30/30/30/10 + 第 4 维
+  // manifest_completeness（plugin.json 字段完整度阶梯 0/0.3/0.7/1.0）。
   const healthSignals = [
     { icon: <ClockIcon />,   bg: 'bg-sky-50 dark:bg-sky-500/10',       text: 'text-sky-600 dark:text-sky-400',       labelKey: 'about.signal.freshness',     descKey: 'about.signal.freshness.desc',     weight: 30 },
     { icon: <StarIcon />,    bg: 'bg-amber-50 dark:bg-amber-500/10',   text: 'text-amber-600 dark:text-amber-400',   labelKey: 'about.signal.popularity',    descKey: 'about.signal.popularity.desc',    weight: 30 },
     { icon: <TargetIcon />,  bg: 'bg-violet-50 dark:bg-violet-500/10', text: 'text-violet-600 dark:text-violet-400', labelKey: 'about.signal.sourceTrust',   descKey: 'about.signal.sourceTrust.desc',   weight: 40 },
+    { icon: <CheckIcon />,   bg: 'bg-pink-50 dark:bg-pink-500/10',     text: 'text-pink-600 dark:text-pink-400',     labelKey: 'about.signal.manifestCompleteness',     descKey: 'about.signal.manifestCompleteness.desc',     weight: 10, pluginOnly: true },
   ]
 
   const thresholds = [
@@ -266,7 +289,7 @@ export default function About() {
             <code className="bg-gray-100 dark:bg-white/10 px-1.5 py-0.5 rounded text-gray-700 dark:text-gray-300">final_score</code>
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="space-y-2.5">
             <div className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-3">MCP / Skill</div>
             {mcpWeights.map(w => <WeightBar key={w.label} {...w} />)}
@@ -274,6 +297,13 @@ export default function About() {
           <div className="space-y-2.5">
             <div className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-3">Rule / Prompt</div>
             {ruleWeights.map(w => <WeightBar key={w.label} {...w} />)}
+          </div>
+          <div className="space-y-2.5">
+            <div className="text-xs font-semibold uppercase tracking-wider text-pink-500 dark:text-pink-400 mb-3">🧩 Plugin</div>
+            {pluginWeights.map(w => <WeightBar key={w.label} {...w} />)}
+            <div className="text-[10px] text-gray-400 dark:text-gray-500 leading-snug pt-1">
+              {lang === 'zh' ? '剔除 install_clarity（marketplace 安装统一），权重并入 doc_completeness。' : 'install_clarity dropped (marketplace install is uniform); weight folded into doc_completeness.'}
+            </div>
           </div>
         </div>
       </div>
@@ -308,8 +338,15 @@ export default function About() {
               </div>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center justify-between gap-2">
-                  <span className="text-sm font-semibold text-gray-900 dark:text-white">{t(s.labelKey)}</span>
-                  <span className="text-xs font-mono font-bold text-gray-400 dark:text-gray-500">{s.weight}%</span>
+                  <div className="flex items-center gap-1.5 min-w-0">
+                    <span className="text-sm font-semibold text-gray-900 dark:text-white truncate">{t(s.labelKey)}</span>
+                    {s.pluginOnly && (
+                      <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full bg-pink-100 dark:bg-pink-900/40 text-pink-700 dark:text-pink-300 shrink-0">
+                        🧩 plugin
+                      </span>
+                    )}
+                  </div>
+                  <span className="text-xs font-mono font-bold text-gray-400 dark:text-gray-500 shrink-0">{s.weight}%</span>
                 </div>
                 <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5 leading-relaxed">{t(s.descKey)}</div>
               </div>
