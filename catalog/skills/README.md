@@ -114,7 +114,7 @@
 ## Top 10 — Install Guide
 
 <details>
-<summary>⭐ <strong>Agent Development</strong> (121.3k★) — Guide for creating autonomous agents with YAML frontmatter a...</summary>
+<summary>⭐ <strong>Agent Development</strong> (121.4k★) — Guide for creating autonomous agents with YAML frontmatter a...</summary>
 
 Guide for creating autonomous agents with YAML frontmatter and system prompts for Claude Code plugins.
 
@@ -128,7 +128,7 @@ git clone anthropics/claude-code
 </details>
 
 <details>
-<summary>⭐ <strong>Skill Development</strong> (121.3k★) — Guidance for creating modular, self-contained skills that ex...</summary>
+<summary>⭐ <strong>Skill Development</strong> (121.4k★) — Guidance for creating modular, self-contained skills that ex...</summary>
 
 Guidance for creating modular, self-contained skills that extend Claude Code plugin capabilities.
 

@@ -1,6 +1,6 @@
 # 🧩 Plugins 插件
 
-> 901 Claude Code 插件包，捆绑 skill、agent、command 与 MCP server，覆盖官方与社区 marketplace。
+> 903 Claude Code 插件包，捆绑 skill、agent、command 与 MCP server，覆盖官方与社区 marketplace。
 >
 > [返回主页 →](../../README.md) · [在线浏览 →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=plugin)
 
@@ -10,226 +10,226 @@
 
 | # | 名称 | 描述 | 来源 | 状态 | 评分 | 最近更新 | 分类 | 标签 |
 |---|---|---|---|---|---|---|---|---|
-| 1 | [clangd-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/clangd-lsp) | 为Claude Code提供C/C++代码智能、诊断和格式化的语言服务器插件。 | Anthropic 官方 | 🟢 活跃 | 100 | 2026-05-07 | tooling | `c-cpp`, `language-server`, `clangd` |
-| 2 | [claude-code-setup](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup) | 分析代码库并推荐定制的Claude Code自动化方案，如钩子、技能、MCP服务器和子代理。 | Anthropic 官方 | 🟢 活跃 | 100 | 2026-05-07 | ai-ml | `claude-code`, `automation-recommender`, `codebase-analysis` |
-| 3 | [claude-md-management](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management) | 审计并优化 CLAUDE.md 文件，以提升 Claude Code 的项目上下文与记忆质量。 | Anthropic 官方 | 🟢 活跃 | 100 | 2026-05-07 | ai-ml | `claude-md`, `project-context`, `codebase-audit` |
-| 4 | [code-simplifier](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier) | 自动简化和优化近期修改的代码，提升清晰度和可维护性，同时保持功能不变。 | Anthropic 官方 | 🟢 活跃 | 100 | 2026-05-07 | ai-ml | `code-simplification`, `code-refactoring`, `ai-agent` |
-| 5 | [csharp-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/csharp-lsp) | — | Anthropic 官方 | 🟢 活跃 | 100 | 2026-05-07 | backend | — |
-| 6 | [cwc-makers](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/cwc-makers) | 一键命令自动配置M5Stack Cardputer：克隆仓库、刷写UIFlow固件并安装MicroPython应用。 | Anthropic 官方 | 🟢 活跃 | 100 | 2026-05-07 | tooling | `m5stack`, `esp32`, `hardware-onboarding` |
-| 7 | [explanatory-output-style](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/explanatory-output-style) | 为Claude添加关于代码实现选择和模式的教育性见解。 | Anthropic 官方 | 🟢 活跃 | 100 | 2026-05-07 | tooling | `claude-plugin`, `code-analysis`, `educational` |
-| 8 | [gopls-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/gopls-lsp) | — | Anthropic 官方 | 🟢 活跃 | 100 | 2026-05-07 | backend | `go` |
-| 9 | [jdtls-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/jdtls-lsp) | — | Anthropic 官方 | 🟢 活跃 | 100 | 2026-05-07 | backend | `java` |
-| 10 | [kotlin-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/kotlin-lsp) | — | Anthropic 官方 | 🟢 活跃 | 100 | 2026-05-07 | mobile | `kotlin` |
-| 11 | [learning-output-style](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/learning-output-style) | 交互式学习插件，在决策点请求代码贡献以模拟学习输出风格。 | Anthropic 官方 | 🟢 活跃 | 100 | 2026-05-07 | tooling | `learning-mode`, `interactive-coding`, `claude-plugin` |
-| 12 | [lua-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/lua-lsp) | — | Anthropic 官方 | 🟢 活跃 | 100 | 2026-05-07 | tooling | — |
-| 13 | [php-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/php-lsp) | PHP语言服务器（Intelephense），为Claude Code提供代码智能和诊断功能。 | Anthropic 官方 | 🟢 活跃 | 100 | 2026-05-07 | backend | `php`, `language-server`, `intelephense` |
-| 14 | [pyright-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/pyright-lsp) | 为Claude Code提供Python静态类型检查和代码智能的语言服务器插件。 | Anthropic 官方 | 🟢 活跃 | 100 | 2026-05-07 | backend | `python`, `language-server`, `type-checking` |
-| 15 | [ralph-loop](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/ralph-loop) | 实现迭代式AI循环的插件，Claude重复处理同一任务并查看先前工作，直至完成。 | Anthropic 官方 | 🟢 活跃 | 100 | 2026-05-07 | ai-ml | `ai-loop`, `iterative-development`, `claude-plugin` |
-| 16 | [ruby-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/ruby-lsp) | 为Claude Code提供代码智能与分析的Ruby语言服务器。 | Anthropic 官方 | 🟢 活跃 | 100 | 2026-05-07 | backend | `ruby`, `language-server`, `code-intelligence` |
-| 17 | [rust-analyzer-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/rust-analyzer-lsp) | 为Claude Code提供Rust语言智能分析与代码补全的语言服务器插件。 | Anthropic 官方 | 🟢 活跃 | 100 | 2026-05-07 | backend | `rust`, `language-server`, `code-intelligence` |
-| 18 | [swift-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/swift-lsp) | 为 Claude Code 提供 Swift 项目代码智能的 SourceKit-LSP 插件。 | Anthropic 官方 | 🟢 活跃 | 100 | 2026-05-07 | mobile | `swift`, `language-server`, `code-intelligence` |
-| 19 | [typescript-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/typescript-lsp) | 为Claude Code提供TypeScript/JavaScript语言服务器，支持代码智能功能。 | Anthropic 官方 | 🟢 活跃 | 100 | 2026-05-07 | frontend | `typescript`, `javascript`, `language-server` |
-| 20 | [superpowers](https://github.com/obra/superpowers.git) | 为Claude Code提供TDD、调试、头脑风暴和子代理驱动开发等核心技能的插件。 | Anthropic 官方 | 🟢 活跃 | 97 | 2026-05-06 | testing | `claude-code-plugin`, `test-driven-development`, `systematic-debugging` |
-| 21 | [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp.git) | 通过 DevTools 协议和 Puppeteer 控制和调试实时 Chrome 浏览器的 MCP 服务器。 | Anthropic 官方 | 🟢 活跃 | 97 | 2026-05-07 | tooling | `chrome-devtools`, `browser-automation`, `performance-analysis` |
-| 22 | [huggingface-skills](https://github.com/huggingface/skills.git) | 用于AI/ML任务的综合插件，涵盖模型训练、评估、数据集管理和论文发布。 | Anthropic 官方 | 🟢 活跃 | 97 | 2026-05-07 | ai-ml | `mcp-server`, `model-training`, `dataset-management` |
-| 23 | [agent-sdk-dev](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/agent-sdk-dev) | 用于创建、验证和设置 Claude Agent SDK 应用程序的开发工具包，支持 Python 和 TypeScript。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | tooling | `claude-agent-sdk`, `development-kit`, `application-verifier` |
-| 24 | [asana](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/asana) | 将Claude与Asana项目管理平台集成，用于创建、管理和跟踪任务。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | tooling | `project-management`, `task-management`, `asana-integration` |
-| 25 | [autofix-bot](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/autofix-bot) | 代码审查代理，使用5000+静态分析器检测安全漏洞、代码质量问题和硬编码密钥。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | security | `code-review`, `security-scanning`, `static-analysis` |
-| 26 | [code-modernization](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-modernization) | 结构化插件，通过多智能体工作流对遗留代码库（COBOL、Java、C++、单体应用）进行现代化改造。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | backend | `legacy-modernization`, `code-transformation`, `multi-agent` |
-| 27 | [code-review](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-review) | 使用多个专用代理和置信度评分自动审查拉取请求，过滤误报。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | tooling | `code-review`, `pull-request`, `multi-agent` |
-| 28 | [commit-commands](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/commit-commands) | 提供简化 Git 工作流的插件，支持提交、推送和创建拉取请求。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | tooling | `git-workflow`, `commit-commands`, `pull-request` |
-| 29 | [context7](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/context7) | MCP服务器，从源代码仓库拉取版本特定文档和代码示例到LLM上下文中。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | ai-ml | `mcp-server`, `documentation-lookup`, `llm-context` |
-| 30 | [discord](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/discord) | Discord 消息桥接插件，内置访问控制，管理配对和允许列表。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | ai-ml | `discord-bot`, `access-control`, `messaging-bridge` |
-| 31 | [fakechat](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/fakechat) | 用于测试Claude Code频道通知流程的本地网页聊天插件，无需令牌或访问控制。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | testing | `mcp-plugin`, `localhost-chat`, `testing-tool` |
-| 32 | [feature-dev](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev) | 全面的功能开发工作流插件，配备代码库探索、架构设计和质量审查的专用智能体。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | tooling | `feature-development`, `codebase-analysis`, `architecture-design` |
-| 33 | [firebase](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/firebase) | Google Firebase MCP 插件，可在开发流程中直接管理 Firestore、认证、云函数、托管和存储。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | database | `firebase`, `mcp-server`, `cloud-services` |
-| 34 | [frontend-design](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/frontend-design) | 用于创建独特、生产级前端界面的插件，注重设计质量，避免通用AI美学。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | ai-ml | `frontend-design`, `ui-ux`, `creative-coding` |
-| 35 | [github](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/github) | 官方 GitHub MCP 服务器，支持从 Claude Code 直接管理仓库、处理 Issue、PR 及调用 GitHub API。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | backend | `mcp-server`, `github-integration`, `repository-management` |
-| 36 | [gitlab](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/gitlab) | GitLab DevOps平台集成，用于管理仓库、合并请求、CI/CD流水线、问题和Wiki。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | devops | `gitlab`, `devops`, `ci-cd` |
-| 37 | [greptile](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/greptile) | AI驱动的代码库搜索与理解插件，支持自然语言查询仓库代码。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | ai-ml | `code-search`, `ai-code-review`, `github-integration` |
-| 38 | [hookify](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/hookify) | 通过Markdown文件定义规则，创建自定义钩子以防止AI编码中的不良行为。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | documentation | `claude-plugin`, `behavior-analysis`, `hook-system` |
-| 39 | [imessage](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/imessage) | iMessage 桥接插件，直接读取 chat.db 并通过 AppleScript 发送消息，内置访问控制。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | ai-ml | `imessage`, `messaging-bridge`, `access-control` |
-| 40 | [laravel-boost](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/laravel-boost) | Laravel 开发工具包 MCP 服务器，提供 Artisan 命令、Eloquent 查询和代码生成等智能辅助。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | backend | `mcp-server`, `laravel`, `php` |
-| 41 | [linear](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/linear) | 集成Linear问题跟踪系统的插件，用于管理项目和优化开发工作流。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | ai-ml | `issue-tracking`, `project-management`, `workflow-automation` |
-| 42 | [math-olympiad](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/math-olympiad) | 通过对抗性验证和校准弃权解决竞赛数学问题，确保高置信度结果。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | ai-ml | `math-olympiad`, `adversarial-verification`, `proof-checking` |
-| 43 | [mcp-server-dev](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/mcp-server-dev) | 为Claude设计和构建MCP服务器的技能插件，涵盖部署模型、工具设计和交互式UI。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | security | `mcp-server`, `claude-plugin`, `interactive-ui` |
-| 44 | [playground](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/playground) | 创建自包含的交互式HTML游乐场，具有可视化控件、实时预览和提示输出功能。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | frontend | `html-playground`, `interactive-tool`, `visual-controls` |
-| 45 | [playwright](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/playwright) | 微软的浏览器自动化与端到端测试MCP服务器，支持网页交互和自动化工作流。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | testing | `browser-automation`, `e2e-testing`, `mcp-server` |
-| 46 | [plugin-dev](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/plugin-dev) | Claude Code 插件开发综合工具包，包含 7 项专家技能，涵盖钩子、MCP 集成、命令、代理和最佳实践。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | ai-ml | `claude-code`, `plugin-development`, `mcp-integration` |
-| 47 | [pr-review-toolkit](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/pr-review-toolkit) | 全面的PR审查工具包，包含代码质量、测试、注释、错误处理和类型设计的专用代理。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | testing | `pr-review`, `code-quality`, `error-handling` |
-| 48 | [security-guidance](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance) | 安全插件，在编辑文件时警告命令注入、XSS和不安全代码模式。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | security | `security-plugin`, `code-analysis`, `vulnerability-detection` |
-| 49 | [serena](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/serena) | 基于语言服务器协议的语义代码分析MCP服务器，提供智能代码理解、重构建议和代码库导航。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | tooling | `mcp-server`, `code-analysis`, `language-server-protocol` |
-| 50 | [session-report](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/session-report) | 从本地 Claude Code 会话记录生成交互式 HTML 报告，分析令牌使用、缓存效率等。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | frontend | `claude-code`, `session-analysis`, `html-report` |
-| 51 | [skill-creator](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/skill-creator) | 用于创建、改进和基准测试AI技能的插件，支持迭代测试与评估。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | testing | `skill-creation`, `benchmarking`, `evaluation` |
-| 52 | [telegram](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/telegram) | Telegram消息桥接插件，内置访问控制，管理配对和允许列表。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | ai-ml | `telegram-bridge`, `access-control`, `messaging-plugin` |
-| 53 | [terraform](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/terraform) | Terraform 生态系统的 MCP 服务器插件，实现高级基础设施即代码自动化与交互。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | devops | `mcp-server`, `terraform`, `infrastructure-as-code` |
-| 54 | [stagehand](https://github.com/browserbase/agent-browse) | 为Claude Code提供浏览器自动化、网页抓取和测试功能的插件，支持自然语言指令。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | testing | `browser-automation`, `web-scraping`, `claude-code-plugin` |
-| 55 | [amazon-location-service](https://github.com/awslabs/agent-plugins.git) | 指导开发者使用 Amazon Location Service 添加地图、地理编码、路线规划和地理空间功能。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | security | `amazon-location-service`, `geospatial`, `maps` |
-| 56 | [aws-amplify](https://github.com/awslabs/agent-plugins.git) | AWS Amplify Gen 2 插件，为 AI 编程助手提供构建全栈应用的引导式工作流，涵盖认证、数据、存储和函数。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | devops | `aws-amplify`, `full-stack`, `ai-agent-plugin` |
-| 57 | [aws-serverless](https://github.com/awslabs/agent-plugins.git) | 为AI编码助手提供AWS无服务器应用的设计、构建、部署、测试和调试能力。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | devops | `aws-serverless`, `lambda`, `api-gateway` |
-| 58 | [databases-on-aws](https://github.com/awslabs/agent-plugins.git) | — | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | database | `aws` |
-| 59 | [deploy-on-aws](https://github.com/awslabs/agent-plugins.git) | — | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | devops | `aws` |
-| 60 | [sagemaker-ai](https://github.com/awslabs/agent-plugins.git) | 一款AWS插件，为AI编程助手提供使用Amazon SageMaker AI构建、训练和部署模型的专业知识。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | devops | `aws-sagemaker`, `ai-ml`, `model-deployment` |
-| 61 | [42crunch-api-security-testing](https://github.com/42Crunch-AI/claude-plugins.git) | 在 Claude Code 中自动化 API 安全测试，审计 OpenAPI 规范，检测 OWASP 漏洞并应用 AI 修复。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-06 | security | `api-security`, `openapi`, `owasp` |
-| 62 | [speakai](https://github.com/speakai/speakai-mcp.git) | Speak AI 的 MCP 连接器，让 Claude/ChatGPT 能搜索转录、总结会议并管理媒体。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-05 | ai-ml | `mcp-server`, `meeting-transcription`, `ai-insights` |
-| 63 | [desktop-commander](https://github.com/wonderwhy-er/DesktopCommanderMCP.git) | — | Anthropic 官方 | 🟢 活跃 | 95 | 2026-05-06 | tooling | — |
-| 64 | [atomic-agents](https://github.com/BrainBlend-AI/atomic-agents.git) | 一个模块化Python框架，用于构建可预测、可组合的AI智能体，支持结构化模式和上下文提供者。 | Anthropic 官方 | 🟢 活跃 | 95 | 2026-04-29 | ai-ml | `ai-agent-framework`, `modular-architecture`, `schema-driven` |
-| 65 | [azure-cosmos-db-assistant](https://github.com/AzureCosmosDB/cosmosdb-claude-code-plugin.git) | Azure Cosmos DB 专家插件，提供 73 条最佳实践规则，涵盖数据建模、查询优化和性能调优。 | Anthropic 官方 | 🟢 活跃 | 95 | 2026-04-28 | devops | `azure-cosmos-db`, `nosql`, `database-optimization` |
-| 66 | [exa](https://github.com/exa-labs/exa-mcp-server.git) | 提供AI驱动的网页搜索、深度研究编排和内容提取的MCP服务器插件，用于全面信息收集。 | Anthropic 官方 | 🟢 活跃 | 94 | 2026-05-05 | documentation | `mcp-server`, `web-search`, `research-orchestration` |
-| 67 | [wordpress.com](https://github.com/Automattic/claude-code-wordpress.com.git) | Claude Code 插件，通过 AI 驱动设计工作流创建和构建 WordPress 网站，并部署到本地 Studio。 | Anthropic 官方 | 🟢 活跃 | 94 | 2026-04-20 | tooling | `wordpress-plugin`, `ai-design`, `theme-builder` |
-| 68 | [aiven](https://github.com/aiven/aiven-ai-plugins) | 通过Aiven插件轻松部署托管数据库（如PostgreSQL、Kafka、OpenSearch），提供免费套餐。 | Anthropic 官方 | 🟢 活跃 | 93 | 2026-04-16 | database | `managed-databases`, `cloud-services`, `aiven-plugin` |
-| 69 | [cloudinary](https://github.com/cloudinary-devs/cloudinary-plugin.git) | 通过自然语言在Claude中管理、优化和转换Cloudinary媒体资源。 | Anthropic 官方 | 🟢 活跃 | 93 | 2026-04-15 | tooling | `mcp-server`, `media-optimization`, `image-transformation` |
-| 70 | [windsor-ai](https://github.com/windsor-ai/claude-windsor-ai-plugin.git) | Claude Code 插件，通过 Windsor.ai 连接 325+ 业务数据源，查询营销、销售、CRM 和分析数据。 | Anthropic 官方 | 🟢 活跃 | 92 | 2026-04-04 | backend | `mcp-plugin`, `business-data`, `marketing-analytics` |
-| 71 | [expo](https://github.com/expo/skills.git) | — | Anthropic 官方 | 🟢 活跃 | 91 | 2026-05-05 | frontend | `react`, `swift`, `tailwind` |
-| 72 | [microsoft-docs](https://github.com/MicrosoftDocs/mcp.git) | 访问微软官方文档、API参考和代码示例的插件，涵盖Azure、.NET、Windows等技术。 | Anthropic 官方 | 🟢 活跃 | 91 | 2026-05-07 | backend | `mcp-server`, `documentation`, `azure` |
-| 73 | [stripe](https://github.com/stripe/ai.git) | Stripe AI 工具包，通过函数调用和 MCP 将 Stripe API 与 LLM 和代理框架集成。 | Anthropic 官方 | 🟢 活跃 | 91 | 2026-05-06 | tooling | `stripe-integration`, `agent-toolkit`, `mcp-server` |
-| 74 | [flint](https://github.com/tryflint/claude-code-plugin.git) | 通过自然对话使用Flint AI网站构建器创建和管理网站的Claude插件。 | Anthropic 官方 | 🟢 活跃 | 91 | 2026-03-26 | ai-ml | `ai-website-builder`, `claude-plugin`, `web-design` |
-| 75 | [cloudflare](https://github.com/cloudflare/skills.git) | 全面的 Cloudflare 开发平台技能集，涵盖 Workers、Durable Objects、Agents SDK、MCP 服务器、Wrangler CL... | Anthropic 官方 | 🟢 活跃 | 90 | 2026-05-04 | tooling | `cloudflare-workers`, `durable-objects`, `agents-sdk` |
-| 76 | [figma](https://github.com/figma/mcp-server-guide.git) | Figma MCP服务器插件，支持设计转代码、Code Connect映射、设计系统生成及Figma文件操作。 | Anthropic 官方 | 🟢 活跃 | 90 | 2026-04-28 | tooling | `figma`, `design-to-code`, `mcp-server` |
-| 77 | [elixir-ls-lsp](https://github.com/MikaelFangel/claude-elixir-ls-lsp.git) | 为Claude Code提供Elixir语言服务器插件，支持Elixir和HEEx文件的代码智能与诊断。 | Anthropic 官方 | 🟢 活跃 | 90 | 2026-03-16 | backend | `elixir`, `language-server`, `phoenix` |
-| 78 | [azure](https://github.com/microsoft/azure-skills.git) | Azure MCP 插件，让 Claude 能够管理 Azure 资源、部署基础设施并排查 50+ 服务的问题。 | Anthropic 官方 | 🟢 活跃 | 89 | 2026-05-07 | devops | `azure-mcp`, `cloud-infrastructure`, `devops-automation` |
-| 79 | [firetiger](https://github.com/firetiger-oss/claude-plugin.git) | Claude Code 插件，用于 Firetiger 可观测性工作流和 MCP 驱动的调查。 | Anthropic 官方 | 🟢 活跃 | 89 | 2026-03-13 | tooling | `claude-code-plugin`, `observability`, `mcp-server` |
-| 80 | [prisma](https://github.com/prisma/claude-plugin.git) | Prisma MCP 插件，用于 PostgreSQL 数据库管理、迁移和 SQL 查询。 | Anthropic 官方 | 🟢 活跃 | 89 | 2026-03-11 | database | `prisma`, `postgres`, `database-migration` |
-| 81 | [legalzoom](https://github.com/legalzoom/claude-plugins.git) | — | Anthropic 官方 | 🟢 活跃 | 87 | 2026-02-20 | ai-ml | — |
-| 82 | [atlassian](https://github.com/atlassian/atlassian-mcp-server.git) | MCP服务器插件，用于集成Atlassian产品（Jira、Confluence）以自动化项目管理任务。 | Anthropic 官方 | 🟢 活跃 | 86 | 2026-04-14 | documentation | `mcp-server`, `atlassian`, `jira` |
-| 83 | [astronomer-data-agents](https://github.com/astronomer/agents.git) | Apache Airflow 和 Astronomer 的综合插件，涵盖 DAG 编写、调试、部署、数据分析和迁移工作流。 | Anthropic 官方 | 🟢 活跃 | 86 | 2026-05-05 | security | `airflow`, `data-engineering`, `dag-authoring` |
-| 84 | [episodic-memory](https://github.com/obra/episodic-memory.git) | 为Claude Code提供跨会话语义搜索的插件，实现持久化记忆。 | Superpowers | 🟢 活跃 | 85 | 2026-05-04 | tooling | `claude-code-plugin`, `semantic-search`, `conversation-memory` |
-| 85 | [shopify-ai-toolkit](https://github.com/Shopify/Shopify-AI-Toolkit.git) | Shopify AI Toolkit 插件提供 18 项开发技能，用于构建 Shopify 应用，涵盖文档搜索、API 模式访问和代码验证。 | Anthropic 官方 | 🟢 活跃 | 85 | 2026-05-01 | ai-ml | `shopify`, `mcp-plugin`, `graphql` |
-| 86 | [netsuite-suitecloud](https://github.com/oracle/netsuite-suitecloud-sdk.git) | SuiteCloud SDK 提供工具，用于通过 SuiteCloud 开发框架定制 NetSuite 账户和构建 SuiteApps。 | Anthropic 官方 | 🟢 活跃 | 85 | 2026-05-07 | security | `netsuite`, `suitecloud`, `sdf` |
-| 87 | [railway](https://github.com/railwayapp/railway-skills.git) | 一个用于在 Railway 平台上部署和管理应用、数据库及基础设施的智能体技能插件。 | Anthropic 官方 | 🟢 活跃 | 85 | 2026-05-05 | database | `railway`, `deployment`, `infrastructure` |
-| 88 | [superpowers-chrome](https://github.com/obra/superpowers-chrome.git) | 通过CLI命令或MCP工具直接访问Chrome DevTools协议的浏览器自动化插件，零依赖，自动启动。 | Superpowers | 🟢 活跃 | 84 | 2026-05-06 | tooling | `chrome-devtools`, `browser-automation`, `mcp-server` |
-| 89 | [postiz](https://github.com/gitroomhq/postiz-agent.git) | 跨28+平台的社交媒体自动化CLI，支持帖子调度、集成管理和数据分析。 | Anthropic 官方 | 🟢 活跃 | 84 | 2026-04-30 | tooling | `social-media-automation`, `cli-tool`, `multi-platform` |
-| 90 | [sentry](https://github.com/getsentry/sentry-for-claude.git) | Sentry错误监控AI插件，支持多平台SDK设置、问题发现与调试。 | Anthropic 官方 | 🟢 活跃 | 83 | 2026-05-04 | devops | `error-monitoring`, `sentry-plugin`, `ai-coding-assistant` |
-| 91 | [vercel](https://github.com/vercel/vercel-plugin.git) | Vercel 部署平台集成插件，支持从 Claude Code 管理部署、构建、域名、环境变量和前端基础设施。 | Anthropic 官方 | 🟢 活跃 | 83 | 2026-05-07 | ai-ml | `vercel-plugin`, `deployment-platform`, `ai-gateway` |
-| 92 | [example-skills](https://github.com/anthropics/skills) | Claude 示例技能集合，涵盖创意设计、技术自动化等多种功能演示。 | claude-plugins.dev | 🟢 活跃 | 82 | 2026-05-07 | tooling | `claude-skills`, `agent-skills`, `example-collection` |
-| 93 | [oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) | Claude Code 多智能体编排插件，支持智能模型路由、28种智能体变体和32项技能。 | claude-plugins.dev | 🟢 活跃 | 82 | 2026-04-30 | tooling | `multi-agent`, `orchestration`, `claude-code-plugin` |
-| 94 | [marketing-skills](https://github.com/coreyhaines31/marketingskills) | 为AI代理提供41项营销技能的综合插件，涵盖SEO、转化率优化、文案、付费广告和增长策略。 | claude-plugins.dev | 🟢 活跃 | 82 | 2026-05-07 | documentation | `marketing-skills`, `ai-agent-plugin`, `conversion-optimization` |
-| 95 | [last30days](https://github.com/mvanhorn/last30days-skill) | AI驱动的多平台研究插件，聚合Reddit、X、YouTube等15+平台内容，基于互动数据和真金白银信号评分。 | claude-plugins.dev | 🟢 活跃 | 82 | 2026-05-07 | documentation | `multi-source-research`, `social-media-aggregation`, `ai-research-agent` |
-| 96 | [qmd](https://github.com/tobi/qmd) | 本地混合搜索引擎，结合BM25、向量搜索和LLM重排序，用于Markdown文件的智能检索。 | claude-plugins.dev | 🟢 活跃 | 82 | 2026-05-07 | documentation | `mcp-server`, `hybrid-search`, `local-llm` |
-| 97 | [claude-hud](https://github.com/jarrodwatts/claude-hud) | Claude Code 实时状态栏 HUD，显示上下文使用、工具活动、代理跟踪和待办进度。 | claude-plugins.dev | 🟢 活跃 | 82 | 2026-05-07 | devops | `claude-code-plugin`, `statusline`, `monitoring` |
-| 98 | [planning-with-files](https://github.com/OthmanAdi/planning-with-files) | 实现 Manus 风格持久化 Markdown 文件规划，支持多 AI 编程助手，用于任务规划、进度跟踪和知识存储。 | claude-plugins.dev | 🟢 活跃 | 82 | 2026-05-01 | documentation | `planning-plugin`, `task-management`, `multi-language` |
-| 99 | [private-journal-mcp](https://github.com/obra/private-journal-mcp.git) | 为Claude提供的私有MCP服务器，支持多分区日志记录与本地AI语义搜索。 | Superpowers | 🟢 活跃 | 82 | 2026-04-11 | ai-ml | `mcp-server`, `journaling`, `semantic-search` |
-| 100 | [brightdata-plugin](https://github.com/brightdata/skills.git) | Bright Data 网页抓取与数据提取插件，集成 MCP 服务器、CLI 工具和 Python SDK，支持 40+ 平台结构化数据。 | Anthropic 官方 | 🟢 活跃 | 82 | 2026-04-28 | backend | `web-scraping`, `mcp-server`, `data-extraction` |
+| 1 | [superpowers](https://github.com/obra/superpowers.git) | 一个Claude Code插件，教授AI辅助编码技能，如TDD、调试、代码审查和子代理驱动开发。 | Anthropic 官方 | 🟢 活跃 | 100 | 2026-05-06 | testing | `claude-code`, `tdd`, `debugging` |
+| 2 | [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp.git) | AI编程助手通过MCP协议控制Chrome浏览器，进行网页调试、性能分析和自动化操作。 | Anthropic 官方 | 🟢 活跃 | 100 | 2026-05-08 | tooling | `mcp-server`, `chrome-devtools`, `browser-automation` |
+| 3 | [huggingface-skills](https://github.com/huggingface/skills.git) | Hugging Face Hub 的 AI/ML 技能集合，涵盖模型训练、评估、数据集管理和部署。 | Anthropic 官方 | 🟢 活跃 | 100 | 2026-05-07 | ai-ml | `huggingface`, `machine-learning`, `model-training` |
+| 4 | [code-modernization](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-modernization) | 用于现代化遗留代码库（COBOL、Java、C++）的插件，提供结构化工作流和专用AI代理。 | Anthropic 官方 | 🟢 活跃 | 99 | 2026-05-07 | backend | `code-modernization`, `legacy-code`, `cobol` |
+| 5 | [hookify](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/hookify) | Claude Code 插件，通过正则表达式匹配工具操作来创建自定义钩子，防止不良行为。 | Anthropic 官方 | 🟢 活跃 | 99 | 2026-05-07 | documentation | `claude-code-plugin`, `behavior-hooks`, `regex-patterns` |
+| 6 | [mcp-server-dev](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/mcp-server-dev) | 构建与Claude集成的MCP服务器的完整指南，涵盖部署模型、工具设计和交互式UI组件。 | Anthropic 官方 | 🟢 活跃 | 99 | 2026-05-07 | security | `mcp-server`, `claude-integration`, `typescript` |
+| 7 | [plugin-dev](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/plugin-dev) | Claude Code 插件开发综合工具包，涵盖钩子、MCP 集成、命令、代理和最佳实践，支持 AI 辅助创建和验证。 | Anthropic 官方 | 🟢 活跃 | 99 | 2026-05-07 | ai-ml | `claude-code`, `plugin-development`, `hooks` |
+| 8 | [skill-creator](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/skill-creator) | 一个用于创建、测试和迭代改进 Claude 技能的插件，提供结构化的评估和基准测试工作流。 | Anthropic 官方 | 🟢 活跃 | 99 | 2026-05-07 | testing | `claude-plugin`, `skill-development`, `evaluation-framework` |
+| 9 | [desktop-commander](https://github.com/wonderwhy-er/DesktopCommanderMCP.git) | MCP服务器，让AI执行终端命令、管理进程并操作多种格式文件。 | Anthropic 官方 | 🟢 活跃 | 99 | 2026-05-06 | tooling | `mcp-server`, `terminal-commands`, `file-operations` |
+| 10 | [atomic-agents](https://github.com/BrainBlend-AI/atomic-agents.git) | 一个模块化Python框架，用于构建可预测、可组合的AI智能体，支持模式驱动设计和工具集成。 | Anthropic 官方 | 🟢 活跃 | 99 | 2026-04-29 | ai-ml | `ai-agents`, `python-framework`, `modular-design` |
+| 11 | [microsoft-docs](https://github.com/MicrosoftDocs/mcp.git) | AI辅助插件，用于访问微软文档、API参考和代码示例，支持编码工作流。 | Anthropic 官方 | 🟢 活跃 | 99 | 2026-05-07 | backend | `mcp-plugin`, `microsoft-docs`, `code-reference` |
+| 12 | [cloudflare](https://github.com/cloudflare/skills.git) | 一套全面的 Cloudflare 开发者平台技能，涵盖 Workers、Durable Objects、Agents SDK、MCP 服务器、Wrangler ... | Anthropic 官方 | 🟢 活跃 | 99 | 2026-05-04 | tooling | `cloudflare`, `workers`, `durable-objects` |
+| 13 | [wordpress.com](https://github.com/Automattic/claude-code-wordpress.com.git) | Claude Code 插件，用于通过 AI 辅助工作流设计、构建和部署 WordPress 主题。 | Anthropic 官方 | 🟢 活跃 | 99 | 2026-04-20 | tooling | `wordpress`, `claude-code`, `theme-builder` |
+| 14 | [figma](https://github.com/figma/mcp-server-guide.git) | Figma MCP 服务器插件，用于 AI 辅助的设计到代码工作流，包括组件映射、设计系统生成和代码实现。 | Anthropic 官方 | 🟢 活跃 | 98 | 2026-04-28 | tooling | `figma-integration`, `design-to-code`, `mcp-server` |
+| 15 | [azure](https://github.com/microsoft/azure-skills.git) | 一个Claude插件，集成Azure MCP服务器和专业技能，用于云资源管理、部署和Azure服务。 | Anthropic 官方 | 🟢 活跃 | 98 | 2026-05-07 | devops | `azure`, `mcp-server`, `cloud-infrastructure` |
+| 16 | [astronomer-data-agents](https://github.com/astronomer/agents.git) | 一个用于 Apache Airflow 和 Astronomer 的 AI 辅助数据工程 Claude 插件，涵盖 DAG 编写、调试、部署和迁移。 | Anthropic 官方 | 🟢 活跃 | 98 | 2026-05-07 | security | `airflow`, `data-engineering`, `dag-authoring` |
+| 17 | [superpowers-chrome](https://github.com/obra/superpowers-chrome.git) | Chrome DevTools Protocol 插件，支持技能模式和 MCP 模式的 AI 辅助浏览器自动化。 | Superpowers | 🟢 活跃 | 98 | 2026-05-06 | tooling | `chrome-devtools`, `browser-automation`, `mcp-server` |
+| 18 | [sentry](https://github.com/getsentry/sentry-for-claude.git) | 将 Sentry 错误监控集成到 Claude Code 和 Cursor 等 AI 编程助手中的插件，用于调试和设置。 | Anthropic 官方 | 🟢 活跃 | 98 | 2026-05-04 | devops | `sentry`, `error-monitoring`, `ai-coding` |
+| 19 | [vercel](https://github.com/vercel/vercel-plugin.git) | Claude Code 插件，提供 Vercel 平台全面集成，涵盖 AI SDK、Next.js、部署、存储、认证等技能。 | Anthropic 官方 | 🟢 活跃 | 98 | 2026-05-07 | ai-ml | `claude-code-plugin`, `vercel-platform`, `ai-sdk` |
+| 20 | [context7-plugin](https://github.com/upstash/context7) | 一个MCP服务器和CLI工具，可将最新、特定版本的库文档和代码示例直接拉取到LLM上下文中，用于AI辅助编码。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-04-16 | ai-ml | `mcp-server`, `documentation-lookup`, `cli-tool` |
+| 21 | [oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) | Claude Code 插件，提供多智能体编排，包含 18 个专用代理、32 个技能和智能三层模型路由，用于 AI 辅助编码工作流。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-04-30 | tooling | `multi-agent`, `orchestration`, `claude-code-plugin` |
+| 22 | [cli-anything](https://github.com/HKUDS/CLI-Anything) | 自动生成任意软件的状态化CLI接口，使AI代理能够以编程方式控制应用程序。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-04-16 | tooling | `cli-generation`, `ai-agent-integration`, `automation` |
+| 23 | [agent-browser](https://github.com/vercel-labs/agent-browser) | 基于 Rust 的 CLI 工具，供 AI 代理自动化浏览器交互，如测试、表单填写、截图和数据提取。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-04-25 | testing | `browser-automation`, `cli-tool`, `ai-agent` |
+| 24 | [gitnexus](https://github.com/abhigyanpatwari/GitNexus) | 通过构建代码库知识图谱，为AI编程助手提供深度架构上下文，实现可靠的代码分析与辅助。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-04-23 | tooling | `code-intelligence`, `knowledge-graph`, `mcp-server` |
+| 25 | [repomix-commands](https://github.com/yamadashy/repomix) | 将整个代码库打包成单个AI友好文件，用于LLM分析和代码审查的CLI工具。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-04-16 | tooling | `code-packing`, `ai-analysis`, `cli-tool` |
+| 26 | [repomix-explorer](https://github.com/yamadashy/repomix) | Repomix 将整个代码库打包成单个 AI 友好文件，用于 LLM 分析，支持 token 计数和压缩。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-04-16 | tooling | `code-packing`, `ai-analysis`, `cli-tool` |
+| 27 | [repomix-mcp](https://github.com/yamadashy/repomix) | 将整个代码库打包成单个AI友好文件，用于LLM分析和处理的工具。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-04-16 | tooling | `code-packing`, `ai-integration`, `mcp-server` |
+| 28 | [beads](https://github.com/gastownhall/beads) | 面向AI编码代理的分布式图问题跟踪器，支持依赖感知任务管理和持久化记忆。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-04-24 | ai-ml | `issue-tracker`, `ai-agents`, `coding-workflow` |
+| 29 | [planning-with-files](https://github.com/OthmanAdi/planning-with-files) | 为AI编程助手设计的插件，使用Manus风格的持久化Markdown文件进行复杂任务的规划、进度跟踪和知识存储。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-05-01 | documentation | `ai-coding-plugin`, `task-planning`, `context-engineering` |
+| 30 | [agent-skills](https://github.com/addyosmani/agent-skills) | 面向AI编码代理的生产级工程技能集合，涵盖从规格到交付的完整软件开发生命周期。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-04-16 | tooling | `ai-coding-agent`, `engineering-workflows`, `software-development-lifecycle` |
+| 31 | [pua](https://github.com/tanweai/pua) | 一个 Claude Code 插件，通过企业 PUA 压力驱动 AI 穷尽一切方案解决问题，支持模块化技能和多种企业风格。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-04-18 | tooling | `claude-code-plugin`, `ai-agent-motivation`, `corporate-pua` |
+| 32 | [codex](https://github.com/openai/codex-plugin-cc) | Claude Code 插件，集成 OpenAI Codex 进行代码审查和任务委派。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-04-16 | tooling | `claude-code-plugin`, `code-review`, `task-delegation` |
+| 33 | [compound-engineering](https://github.com/EveryInc/compound-engineering-plugin) | AI编程助手插件，通过规划、审查和知识管理提供技能和代理，以复合工程生产力。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-04-16 | ai-ml | `ai-coding-plugin`, `workflow-automation`, `code-review` |
+| 34 | [tambo](https://github.com/tambo-ai/tambo) | 一个开源的 React 工具包，用于构建能根据用户交互动态渲染和更新 UI 组件的 AI 代理。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-04-16 | frontend | `react`, `generative-ui`, `ai-agent` |
+| 35 | [all-skills](https://github.com/mcp-use/mcp-use) | 一个全栈MCP框架，用于为Claude和ChatGPT等AI编码助手构建MCP服务器、应用和代理。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-04-16 | tooling | `mcp-framework`, `ai-coding`, `server-building` |
+| 36 | [chatgpt-app-builder](https://github.com/mcp-use/mcp-use) | 用于构建ChatGPT、Claude等AI客户端交互式应用和服务器的全栈MCP框架。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-04-16 | security | `mcp-framework`, `ai-app-builder`, `chatgpt-plugin` |
+| 37 | [mcp-builder](https://github.com/mcp-use/mcp-use) | 用于构建模型上下文协议（MCP）服务器和应用的全栈框架，支持ChatGPT和Claude等AI代理。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-04-16 | testing | `mcp-framework`, `ai-agents`, `typescript` |
+| 38 | [context-mode](https://github.com/mksglu/context-mode) | Claude Code MCP 插件，通过沙盒代码执行、FTS5 知识库和意图驱动搜索节省 98% 上下文窗口。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-04-16 | tooling | `mcp-plugin`, `context-window`, `sandbox-execution` |
+| 39 | [notion](https://github.com/makenotion/claude-code-notion-plugin.git) | Claude Code 的 Notion 集成插件，支持知识捕获、会议准备、研究文档和规格到实现的任务管理工作流。 | Anthropic 官方 | 🟢 活跃 | 97 | 2026-01-22 | database | `notion-integration`, `claude-code-plugin`, `documentation-workflows` |
+| 40 | [superpowers-lab](https://github.com/obra/superpowers-lab.git) | Claude Code Superpowers 的实验性插件，提供代码质量分析、MCP 服务器交互、终端自动化、Slack 集成和 Windows 虚拟机管理技... | Superpowers | 🟢 活跃 | 97 | 2026-03-23 | tooling | `code-quality`, `mcp-cli`, `tmux-automation` |
+| 41 | [brightdata-plugin](https://github.com/brightdata/skills.git) | 为编码代理提供网页抓取、搜索、结构化数据提取和MCP服务器集成的插件。 | Anthropic 官方 | 🟢 活跃 | 97 | 2026-04-28 | backend | `web-scraping`, `mcp-server`, `structured-data` |
+| 42 | [qdrant-skills](https://github.com/qdrant/skills.git) | 为 Qdrant 向量搜索提供代理技能，涵盖扩展、性能优化、监控、部署和 SDK 使用。 | Anthropic 官方 | 🟢 活跃 | 97 | 2026-05-06 | devops | `vector-search`, `qdrant`, `performance-optimization` |
+| 43 | [miro](https://github.com/miroapp/miro-ai.git) | 通过MCP将AI编程助手连接到Miro白板，实现图表生成、代码创建和上下文提取。 | Anthropic 官方 | 🟢 活跃 | 97 | 2026-05-07 | security | `mcp-server`, `ai-coding`, `miro-integration` |
+| 44 | [qt-development-skills](https://github.com/TheQtCompanyRnD/agent-skills.git) | Qt开发AI编码技能：C++/QML代码审查、文档生成、QML最佳实践和性能分析。 | Anthropic 官方 | 🟢 活跃 | 97 | 2026-05-05 | ai-ml | `qt-development`, `code-review`, `qml-profiling` |
+| 45 | [coderabbit](https://github.com/coderabbitai/skills.git) | Claude Code 的 AI 代码审查插件，分析代码变更、发现漏洞/安全问题，并在批准后应用修复。 | Anthropic 官方 | 🟢 活跃 | 97 | 2026-05-04 | security | `code-review`, `ai-plugin`, `claude-code` |
+| 46 | [sonarqube](https://github.com/SonarSource/sonarqube-agent-plugins.git) | 通过MCP、钩子和技能将SonarQube代码质量与安全分析集成到AI编码代理工作流中。 | Anthropic 官方 | 🟢 活跃 | 97 | 2026-05-07 | security | `sonarqube`, `code-quality`, `static-analysis` |
+| 47 | [base44](https://github.com/base44/skills.git) | 用于通过 Base44 CLI 和 JavaScript/TypeScript SDK 构建和部署全栈应用的插件。 | Anthropic 官方 | 🟢 活跃 | 97 | 2026-05-07 | frontend | `full-stack`, `cli`, `sdk` |
+| 48 | [pinecone](https://github.com/pinecone-io/pinecone-claude-code-plugin.git) | Pinecone 向量数据库集成插件，为 Claude Code 提供索引管理、查询和快速原型开发工具。 | Anthropic 官方 | 🟢 活跃 | 97 | 2026-05-07 | backend | `vector-database`, `pinecone`, `claude-code-plugin` |
+| 49 | [data-agent-kit-starter-pack](https://github.com/gemini-cli-extensions/data-agent-kit-starter-pack.git) | 专为谷歌云数据工程师设计的技能套件，涵盖dbt、Dataform、Spark、BigQuery及工作流编排等数据管道构建能力。 | Anthropic 官方 | 🟢 活跃 | 97 | 2026-05-07 | backend | `gcp-data-engineering`, `dbt-bigquery`, `spark-dataproc` |
+| 50 | [agentforce-adlc](https://github.com/SalesforceAIResearch/agentforce-adlc.git) | Claude Code 插件，用于 Agentforce 代理开发生命周期，支持通过 Salesforce CLI 编写、测试、部署和优化 .agent 文件。 | Anthropic 官方 | 🟢 活跃 | 97 | 2026-05-07 | testing | `agentforce`, `salesforce-cli`, `agent-script` |
+| 51 | [posthog](https://github.com/PostHog/ai-plugin.git) | PostHog Claude Code 插件，提供 40+ 技能用于分析、功能标志、实验、错误追踪和 LLM 可观测性集成。 | Anthropic 官方 | 🟢 活跃 | 97 | 2026-05-07 | devops | `posthog`, `claude-code-plugin`, `product-analytics` |
+| 52 | [fiftyone](https://github.com/voxel51/fiftyone-skills.git) | FiftyOne 的 AI 编码技能集合，涵盖数据集管理、模型推理、评估、可视化和插件开发。 | Anthropic 官方 | 🟢 活跃 | 97 | 2026-05-06 | tooling | `fiftyone`, `computer-vision`, `dataset-management` |
+| 53 | [fastly-agent-toolkit](https://github.com/fastly/fastly-agent-toolkit.git) | Fastly 边缘平台 AI 辅助编码技能集合，包含 VCL 开发工具、Compute 运行时和 CLI 自动化。 | Anthropic 官方 | 🟢 活跃 | 97 | 2026-05-06 | tooling | `fastly`, `vcl`, `compute` |
+| 54 | [auth0](https://github.com/auth0/agent-skills.git) | AI 代理技能，帮助编码助手在 23 种 Web、移动和 API 框架中实现 Auth0 身份验证。 | Anthropic 官方 | 🟢 活跃 | 97 | 2026-05-07 | security | `auth0`, `authentication`, `ai-agent-skills` |
+| 55 | [ruflo-ddd](https://github.com/ruvnet/ruflo) | 企业级AI代理编排插件，提供DDD脚手架、150+命令、74+专业代理、SPARC方法论、群体协调、GitHub集成和神经网络训练功能。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | ai-ml | `ai-agent-orchestration`, `domain-driven-design`, `multi-agent-coordination` |
+| 56 | [accessibility-compliance](https://github.com/wshobson/agents) | 为Claude Code提供185个专业AI代理和80个插件的综合系统，涵盖全栈开发、安全、测试和DevOps工作流。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | testing | `claude-code`, `ai-agents`, `plugin-system` |
+| 57 | [agent-orchestration](https://github.com/wshobson/agents) | Claude Code 的插件系统，包含 185 个专业 AI 代理、16 个工作流编排器和 153 个技能，用于软件开发自动化。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | ai-ml | `claude-code-plugins`, `multi-agent-system`, `workflow-orchestration` |
+| 58 | [api-scaffolding](https://github.com/wshobson/agents) | 为Claude Code设计的185个专业AI代理和80个插件的综合系统，实现软件开发中的多代理编排和自动化。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | backend | `ai-agents`, `claude-code`, `multi-agent-orchestration` |
+| 59 | [backend-api-security](https://github.com/wshobson/agents) | 为Claude Code设计的80个专业AI代理插件生态系统，涵盖开发、安全、基础设施和编排工作流。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | security | `claude-code-plugins`, `ai-agents`, `security-hardening` |
+| 60 | [backend-development](https://github.com/wshobson/agents) | 一个为Claude Code设计的80个专业AI代理插件生态系统，涵盖后端开发、安全、基础设施和多代理工作流。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | testing | `claude-code-plugins`, `multi-agent-orchestration`, `backend-development` |
+| 61 | [blockchain-web3](https://github.com/wshobson/agents) | Claude Code 的全面多代理插件系统，提供 185 个专业代理和 80 个插件，用于软件开发自动化。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | ai-ml | `claude-code`, `multi-agent`, `plugin-system` |
+| 62 | [c4-architecture](https://github.com/wshobson/agents) | 为Claude Code提供185个AI代理、153个技能和80个插件的综合系统，实现软件开发中的多代理编排和自动化。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | documentation | `claude-code`, `ai-agents`, `multi-agent-orchestration` |
+| 63 | [code-documentation](https://github.com/wshobson/agents) | 为Claude Code设计的185个AI代理和80个插件的综合系统，用于自动化软件开发、文档生成和工作流编排。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | documentation | `claude-code`, `ai-agents`, `plugin-system` |
+| 64 | [code-refactoring](https://github.com/wshobson/agents) | 为Claude Code提供185个AI代理和80个插件的综合系统，实现多代理编排以完成软件开发任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | backend | `claude-code`, `multi-agent`, `plugin-system` |
+| 65 | [codebase-cleanup](https://github.com/wshobson/agents) | 为Claude Code提供185个AI代理和80个插件的综合系统，自动化软件开发、测试和部署工作流。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | tooling | `claude-code`, `ai-agents`, `multi-agent-orchestration` |
+| 66 | [comprehensive-review](https://github.com/wshobson/agents) | Claude Code 的全面插件系统，包含 80+ 插件、185 个代理和 153 项技能，用于 AI 辅助软件开发。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | security | `claude-code`, `plugin-system`, `multi-agent` |
+| 67 | [conductor](https://github.com/wshobson/agents) | Claude Code 的综合插件系统，包含 80 个专注插件、185 个 AI 代理和 153 个技能，用于 AI 辅助软件开发。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | tooling | `claude-code`, `plugin-system`, `ai-agents` |
+| 68 | [content-marketing](https://github.com/wshobson/agents) | Claude Code 插件系统，包含 185 个 AI 代理、153 项技能和 80 个插件，用于 AI 辅助编码自动化。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | documentation | `claude-code`, `ai-agents`, `coding-automation` |
+| 69 | [data-engineering](https://github.com/wshobson/agents) | Claude Code 的全面插件系统，包含 185 个专业 AI 代理、153 个技能和 100 个命令，用于软件开发中的智能自动化和多代理编排。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | tooling | `claude-code-plugins`, `multi-agent-orchestration`, `developer-tools` |
+| 70 | [database-design](https://github.com/wshobson/agents) | 为Claude Code提供185个AI代理、153个技能和100个命令的综合系统，组织成80个插件以辅助软件开发。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | database | `claude-code`, `ai-agents`, `plugin-system` |
+| 71 | [debugging-toolkit](https://github.com/wshobson/agents) | Claude Code 的 185 个专业 AI 代理和 80 个插件系统，支持智能自动化和多代理编排。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | tooling | `claude-code`, `ai-agents`, `multi-agent-orchestration` |
+| 72 | [deployment-strategies](https://github.com/wshobson/agents) | Claude Code 的多智能体编排系统，包含 80 个插件，覆盖开发、部署、安全等领域。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | tooling | `claude-code`, `multi-agent`, `plugin-system` |
+| 73 | [developer-essentials](https://github.com/wshobson/agents) | 为Claude Code提供185个AI代理、153个技能和80个插件的综合系统，用于自动化和编排软件开发工作流。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | database | `claude-code`, `ai-agents`, `developer-tools` |
+| 74 | [documentation-standards](https://github.com/wshobson/agents) | 为Claude Code提供80个专注插件、185个专业AI代理和153个技能的综合系统，以最小化token消耗增强AI辅助编码工作流。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | documentation | `claude-code-plugins`, `ai-agents`, `multi-agent-orchestration` |
+| 75 | [error-debugging](https://github.com/wshobson/agents) | 为Claude Code提供185个AI代理和80个插件的综合系统，实现软件开发中的多代理编排和自动化。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | tooling | `claude-code`, `multi-agent`, `plugin-system` |
+| 76 | [framework-migration](https://github.com/wshobson/agents) | Claude Code 的综合插件系统，包含 185 个专业 AI 代理、153 个技能和 100 个命令，用于软件开发中的智能自动化和多代理编排。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | tooling | `claude-code-plugins`, `multi-agent-orchestration`, `ai-coding-assistant` |
+| 77 | [frontend-mobile-security](https://github.com/wshobson/agents) | 为Claude Code提供185个AI代理和80个插件的综合系统，支持多代理编排和专业编码工作流。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | security | `claude-code`, `ai-agents`, `multi-agent-orchestration` |
+| 78 | [full-stack-orchestration](https://github.com/wshobson/agents) | Claude Code 的全面插件系统，包含 185 个 AI 代理、153 个技能和 100 个命令，用于端到端软件开发编排。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | security | `claude-code-plugins`, `multi-agent-orchestration`, `software-development` |
+| 79 | [git-pr-workflows](https://github.com/wshobson/agents) | 为Claude Code提供185个AI代理和80个插件的综合系统，自动化编码工作流，涵盖开发、测试和部署。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | tooling | `claude-code`, `ai-agents`, `workflow-automation` |
+| 80 | [incident-response](https://github.com/wshobson/agents) | 为Claude Code提供185个专业AI代理和80个插件的综合系统，实现软件开发工作流中的多代理编排和自动化。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | tooling | `claude-code`, `ai-agents`, `multi-agent-orchestration` |
+| 81 | [kubernetes-operations](https://github.com/wshobson/agents) | Claude Code Kubernetes 操作插件，支持清单生成、网络配置、安全策略、可观测性、GitOps 和自动扩缩容。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | security | `kubernetes`, `gitops`, `claude-code-plugin` |
+| 82 | [observability-monitoring](https://github.com/wshobson/agents) | 为Claude Code提供185个AI代理和80个插件的综合系统，支持开发、安全和编排等专业编码工作流。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | devops | `ai-agents`, `claude-code-plugins`, `coding-workflows` |
+| 83 | [performance-testing-review](https://github.com/wshobson/agents) | Claude Code 的插件系统，包含 185 个 AI 代理、80 个插件和 153 个技能，用于软件开发自动化。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | testing | `claude-code-plugins`, `ai-agents`, `multi-agent-orchestration` |
+| 84 | [plugin-eval](https://github.com/wshobson/agents) | 为Claude Code设计的综合系统，包含185个AI代理、153个技能和100个命令，组织成80个插件，用于自动化软件开发工作流。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | tooling | `claude-code`, `ai-agents`, `multi-agent-orchestration` |
+| 85 | [qa-orchestra](https://github.com/wshobson/agents) | 为Claude Code设计的全面多智能体QA与开发插件系统，包含185个专业代理和80个专注插件。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | testing | `claude-code-plugin`, `multi-agent`, `qa-automation` |
+| 86 | [review-agent-governance](https://github.com/wshobson/agents) | 为Claude Code提供185个专业AI代理和80个插件的综合系统，实现编码工作流中的多代理编排与治理。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | backend | `ai-agents`, `claude-code`, `plugin-system` |
+| 87 | [security-compliance](https://github.com/wshobson/agents) | Claude Code 的全面插件系统，包含 185 个专业 AI 代理、153 个技能和 100 个命令，用于软件开发自动化。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | security | `claude-code`, `plugin-system`, `ai-agents` |
+| 88 | [seo-content-creation](https://github.com/wshobson/agents) | Claude Code 的 80 个专业 AI 代理插件市场，涵盖开发、基础设施、安全和 SEO 工作流。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | tooling | `claude-code-plugins`, `ai-agents`, `developer-tools` |
+| 89 | [signed-audit-trails](https://github.com/wshobson/agents) | Claude Code 的全面插件系统，包含 185 个 AI 代理、153 个技能和 100 个命令，用于 AI 辅助编码工作流。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | backend | `claude-code`, `plugin-system`, `ai-agents` |
+| 90 | [team-collaboration](https://github.com/wshobson/agents) | Claude Code 插件系统，包含 185 个 AI 代理，用于软件开发自动化和多代理编排。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | tooling | `claude-code`, `ai-agents`, `plugin-system` |
+| 91 | [ui-design](https://github.com/wshobson/agents) | 为Claude Code提供185个AI代理和80个插件的综合系统，支持多代理编排以优化软件开发工作流。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | frontend | `claude-code`, `multi-agent`, `plugin-system` |
+| 92 | [unit-testing](https://github.com/wshobson/agents) | 为Claude Code设计的全面AI代理编排系统，包含80个插件、185个代理和153个技能，用于自动化软件开发工作流。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-08 | testing | `ai-agents`, `claude-code`, `plugin-system` |
+| 93 | [cwc-makers](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/cwc-makers) | 一个 Claude Code 插件，自动化 M5Stack Cardputer 硬件的入门和配置，用于 AI 辅助的创客项目。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-07 | tooling | `mcp-server`, `hardware-provisioning`, `m5stack` |
+| 94 | [voltagent-biz](https://github.com/VoltAgent/awesome-claude-code-subagents) | 一个精选的131+个Claude Code子代理集合，涵盖编码、基础设施、安全和商业领域的专业开发任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | documentation | `claude-code`, `subagents`, `ai-assistants` |
+| 95 | [voltagent-data-ai](https://github.com/VoltAgent/awesome-claude-code-subagents) | 一个包含131+个专用Claude Code子代理的精选集合，涵盖编码、基础设施、数据和AI等开发任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | ai-ml | `claude-code`, `subagents`, `ai-assistants` |
+| 96 | [voltagent-dev-exp](https://github.com/VoltAgent/awesome-claude-code-subagents) | 为Claude Code精心策划的131+专业AI子代理集合，涵盖开发、运维、安全等领域。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | documentation | `claude-code`, `subagents`, `developer-productivity` |
+| 97 | [voltagent-domains](https://github.com/VoltAgent/awesome-claude-code-subagents) | 一个包含131+个Claude Code子代理的精选集合，涵盖区块链、金融科技、游戏、物联网和支付等专业开发任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | ai-ml | `claude-code`, `subagents`, `domain-experts` |
+| 98 | [voltagent-infra](https://github.com/VoltAgent/awesome-claude-code-subagents) | 一个包含131+个专用Claude Code子代理的精选集合，用于开发、DevOps和AI辅助编码任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | devops | `claude-code`, `subagents`, `devops` |
+| 99 | [voltagent-lang](https://github.com/VoltAgent/awesome-claude-code-subagents) | 一个包含131+个专用Claude Code子代理的集合，用于语言特定和领域特定的开发任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | frontend | `claude-code`, `subagents`, `language-specialists` |
+| 100 | [voltagent-meta](https://github.com/VoltAgent/awesome-claude-code-subagents) | 一个包含131+个Claude Code子代理的精选集合，用于编码、基础设施和编排等专业开发任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | tooling | `claude-code`, `subagents`, `multi-agent` |
 
 ## Top 10 安装指南
 
 <details>
-<summary>⭐ <strong>clangd-lsp</strong> (18.8k★) — 为Claude Code提供C/C++代码智能、诊断和格式化的语言服务器插件。</summary>
+<summary>⭐ <strong>superpowers</strong> (182.1k★) — 一个Claude Code插件，教授AI辅助编码技能，如TDD、调试、代码审查和子代理驱动开发。</summary>
 
-为Claude Code提供C/C++代码智能、诊断和格式化的语言服务器插件。
+一个Claude Code插件，教授AI辅助编码技能，如TDD、调试、代码审查和子代理驱动开发。
 
-📖 See [clangd-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/clangd-lsp)
+📖 See [superpowers](https://github.com/obra/superpowers.git)
 
-📊 评分: 100 · 🏥 健康度: 100 · 🏷️ 标签: `c-cpp`, `language-server`, `clangd`
+📊 评分: 100 · 🏥 健康度: 100 · 🏷️ 标签: `claude-code`, `tdd`, `debugging`
+📅 最近活跃: 2026-05-06 · 📦 来源: Anthropic 官方
+
+</details>
+
+<details>
+<summary>⭐ <strong>chrome-devtools-mcp</strong> (38.4k★) — AI编程助手通过MCP协议控制Chrome浏览器，进行网页调试、性能分析和自动化操作。</summary>
+
+AI编程助手通过MCP协议控制Chrome浏览器，进行网页调试、性能分析和自动化操作。
+
+📖 See [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp.git)
+
+📊 评分: 100 · 🏥 健康度: 100 · 🏷️ 标签: `mcp-server`, `chrome-devtools`, `browser-automation`
+📅 最近活跃: 2026-05-08 · 📦 来源: Anthropic 官方
+
+</details>
+
+<details>
+<summary>⭐ <strong>huggingface-skills</strong> (10.4k★) — Hugging Face Hub 的 AI/ML 技能集合，涵盖模型训练、评估、数据集管理和部署。</summary>
+
+Hugging Face Hub 的 AI/ML 技能集合，涵盖模型训练、评估、数据集管理和部署。
+
+📖 See [huggingface-skills](https://github.com/huggingface/skills.git)
+
+📊 评分: 100 · 🏥 健康度: 100 · 🏷️ 标签: `huggingface`, `machine-learning`, `model-training`
 📅 最近活跃: 2026-05-07 · 📦 来源: Anthropic 官方
 
 </details>
 
 <details>
-<summary>⭐ <strong>claude-code-setup</strong> (18.8k★) — 分析代码库并推荐定制的Claude Code自动化方案，如钩子、技能、MCP服务器和子代理。</summary>
+<summary>⭐ <strong>code-modernization</strong> (18.8k★) — 用于现代化遗留代码库（COBOL、Java、C++）的插件，提供结构化工作流和专用AI代理。</summary>
 
-分析代码库并推荐定制的Claude Code自动化方案，如钩子、技能、MCP服务器和子代理。
+用于现代化遗留代码库（COBOL、Java、C++）的插件，提供结构化工作流和专用AI代理。
 
-📖 See [claude-code-setup](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup)
+📖 See [code-modernization](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-modernization)
 
-📊 评分: 100 · 🏥 健康度: 100 · 🏷️ 标签: `claude-code`, `automation-recommender`, `codebase-analysis`
+📊 评分: 99 · 🏥 健康度: 100 · 🏷️ 标签: `code-modernization`, `legacy-code`, `cobol`
 📅 最近活跃: 2026-05-07 · 📦 来源: Anthropic 官方
 
 </details>
 
 <details>
-<summary>⭐ <strong>claude-md-management</strong> (18.8k★) — 审计并优化 CLAUDE.md 文件，以提升 Claude Code 的项目上下文与记忆质量。</summary>
+<summary>⭐ <strong>hookify</strong> (18.8k★) — Claude Code 插件，通过正则表达式匹配工具操作来创建自定义钩子，防止不良行为。</summary>
 
-审计并优化 CLAUDE.md 文件，以提升 Claude Code 的项目上下文与记忆质量。
+Claude Code 插件，通过正则表达式匹配工具操作来创建自定义钩子，防止不良行为。
 
-📖 See [claude-md-management](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management)
+📖 See [hookify](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/hookify)
 
-📊 评分: 100 · 🏥 健康度: 100 · 🏷️ 标签: `claude-md`, `project-context`, `codebase-audit`
+📊 评分: 99 · 🏥 健康度: 100 · 🏷️ 标签: `claude-code-plugin`, `behavior-hooks`, `regex-patterns`
 📅 最近活跃: 2026-05-07 · 📦 来源: Anthropic 官方
 
 </details>
 
 <details>
-<summary>⭐ <strong>code-simplifier</strong> (18.8k★) — 自动简化和优化近期修改的代码，提升清晰度和可维护性，同时保持功能不变。</summary>
+<summary>⭐ <strong>mcp-server-dev</strong> (18.8k★) — 构建与Claude集成的MCP服务器的完整指南，涵盖部署模型、工具设计和交互式UI组件。</summary>
 
-自动简化和优化近期修改的代码，提升清晰度和可维护性，同时保持功能不变。
+构建与Claude集成的MCP服务器的完整指南，涵盖部署模型、工具设计和交互式UI组件。
 
-📖 See [code-simplifier](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier)
+📖 See [mcp-server-dev](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/mcp-server-dev)
 
-📊 评分: 100 · 🏥 健康度: 100 · 🏷️ 标签: `code-simplification`, `code-refactoring`, `ai-agent`
+📊 评分: 99 · 🏥 健康度: 100 · 🏷️ 标签: `mcp-server`, `claude-integration`, `typescript`
 📅 最近活跃: 2026-05-07 · 📦 来源: Anthropic 官方
 
 </details>
 
 <details>
-<summary>⭐ <strong>csharp-lsp</strong> (18.8k★) — —</summary>
+<summary>⭐ <strong>plugin-dev</strong> (18.8k★) — Claude Code 插件开发综合工具包，涵盖钩子、MCP 集成、命令、代理和最佳实践，支持 AI 辅助创建和验证。</summary>
 
+Claude Code 插件开发综合工具包，涵盖钩子、MCP 集成、命令、代理和最佳实践，支持 AI 辅助创建和验证。
 
+📖 See [plugin-dev](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/plugin-dev)
 
-📖 See [csharp-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/csharp-lsp)
-
-📊 评分: 100 · 🏥 健康度: 100 · 🏷️ 标签: —
+📊 评分: 99 · 🏥 健康度: 100 · 🏷️ 标签: `claude-code`, `plugin-development`, `hooks`
 📅 最近活跃: 2026-05-07 · 📦 来源: Anthropic 官方
 
 </details>
 
 <details>
-<summary>⭐ <strong>cwc-makers</strong> (18.8k★) — 一键命令自动配置M5Stack Cardputer：克隆仓库、刷写UIFlow固件并安装MicroPython应用。</summary>
+<summary>⭐ <strong>skill-creator</strong> (18.8k★) — 一个用于创建、测试和迭代改进 Claude 技能的插件，提供结构化的评估和基准测试工作流。</summary>
 
-一键命令自动配置M5Stack Cardputer：克隆仓库、刷写UIFlow固件并安装MicroPython应用。
+一个用于创建、测试和迭代改进 Claude 技能的插件，提供结构化的评估和基准测试工作流。
 
-📖 See [cwc-makers](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/cwc-makers)
+📖 See [skill-creator](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/skill-creator)
 
-📊 评分: 100 · 🏥 健康度: 100 · 🏷️ 标签: `m5stack`, `esp32`, `hardware-onboarding`
+📊 评分: 99 · 🏥 健康度: 100 · 🏷️ 标签: `claude-plugin`, `skill-development`, `evaluation-framework`
 📅 最近活跃: 2026-05-07 · 📦 来源: Anthropic 官方
 
 </details>
 
 <details>
-<summary>⭐ <strong>explanatory-output-style</strong> (18.8k★) — 为Claude添加关于代码实现选择和模式的教育性见解。</summary>
+<summary>⭐ <strong>desktop-commander</strong> (6.0k★) — MCP服务器，让AI执行终端命令、管理进程并操作多种格式文件。</summary>
 
-为Claude添加关于代码实现选择和模式的教育性见解。
+MCP服务器，让AI执行终端命令、管理进程并操作多种格式文件。
 
-📖 See [explanatory-output-style](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/explanatory-output-style)
+📖 See [desktop-commander](https://github.com/wonderwhy-er/DesktopCommanderMCP.git)
 
-📊 评分: 100 · 🏥 健康度: 100 · 🏷️ 标签: `claude-plugin`, `code-analysis`, `educational`
-📅 最近活跃: 2026-05-07 · 📦 来源: Anthropic 官方
-
-</details>
-
-<details>
-<summary>⭐ <strong>gopls-lsp</strong> (18.8k★) — —</summary>
-
-
-
-📖 See [gopls-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/gopls-lsp)
-
-📊 评分: 100 · 🏥 健康度: 100 · 🏷️ 标签: `go`
-📅 最近活跃: 2026-05-07 · 📦 来源: Anthropic 官方
+📊 评分: 99 · 🏥 健康度: 98 · 🏷️ 标签: `mcp-server`, `terminal-commands`, `file-operations`
+📅 最近活跃: 2026-05-06 · 📦 来源: Anthropic 官方
 
 </details>
 
 <details>
-<summary>⭐ <strong>jdtls-lsp</strong> (18.8k★) — —</summary>
+<summary>⭐ <strong>atomic-agents</strong> (5.9k★) — 一个模块化Python框架，用于构建可预测、可组合的AI智能体，支持模式驱动设计和工具集成。</summary>
 
+一个模块化Python框架，用于构建可预测、可组合的AI智能体，支持模式驱动设计和工具集成。
 
+📖 See [atomic-agents](https://github.com/BrainBlend-AI/atomic-agents.git)
 
-📖 See [jdtls-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/jdtls-lsp)
-
-📊 评分: 100 · 🏥 健康度: 100 · 🏷️ 标签: `java`
-📅 最近活跃: 2026-05-07 · 📦 来源: Anthropic 官方
-
-</details>
-
-<details>
-<summary>⭐ <strong>kotlin-lsp</strong> (18.8k★) — —</summary>
-
-
-
-📖 See [kotlin-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/kotlin-lsp)
-
-📊 评分: 100 · 🏥 健康度: 100 · 🏷️ 标签: `kotlin`
-📅 最近活跃: 2026-05-07 · 📦 来源: Anthropic 官方
+📊 评分: 99 · 🏥 健康度: 97 · 🏷️ 标签: `ai-agents`, `python-framework`, `modular-design`
+📅 最近活跃: 2026-04-29 · 📦 来源: Anthropic 官方
 
 </details>
 

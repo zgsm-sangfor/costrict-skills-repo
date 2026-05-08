@@ -114,7 +114,7 @@
 ## Top 10 安装指南
 
 <details>
-<summary>⭐ <strong>Agent Development</strong> (121.3k★) — 为 Claude Code 插件创建自主代理的指南，包含 YAML 前置元数据和系统提示。</summary>
+<summary>⭐ <strong>Agent Development</strong> (121.4k★) — 为 Claude Code 插件创建自主代理的指南，包含 YAML 前置元数据和系统提示。</summary>
 
 为 Claude Code 插件创建自主代理的指南，包含 YAML 前置元数据和系统提示。
 
@@ -128,7 +128,7 @@ git clone anthropics/claude-code
 </details>
 
 <details>
-<summary>⭐ <strong>Skill Development</strong> (121.3k★) — 为 Claude Code 插件创建模块化、自包含技能的开发指南。</summary>
+<summary>⭐ <strong>Skill Development</strong> (121.4k★) — 为 Claude Code 插件创建模块化、自包含技能的开发指南。</summary>
 
 为 Claude Code 插件创建模块化、自包含技能的开发指南。
 

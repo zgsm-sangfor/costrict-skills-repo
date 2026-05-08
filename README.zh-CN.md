@@ -6,7 +6,7 @@
   <a href="https://github.com/zgsm-ai/everything-ai-coding/stargazers"><img src="https://img.shields.io/github/stars/zgsm-ai/everything-ai-coding?style=flat-square&color=4A90D9" alt="Stars" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zgsm-ai/everything-ai-coding?style=flat-square" alt="License" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/commits/main"><img src="https://img.shields.io/github/last-commit/zgsm-ai/everything-ai-coding?style=flat-square" alt="Last Commit" /></a>
-  <img src="https://img.shields.io/badge/resources-12730-2ECC71?style=flat-square" alt="Resources" />
+  <img src="https://img.shields.io/badge/resources-12731-2ECC71?style=flat-square" alt="Resources" />
 </p>
 
 <p>
@@ -34,7 +34,7 @@ Everything AI Coding 是一个**持续更新的知识库**，从 9+ 个上游源
 <a id="knowledge-base"></a>
 ## 📚 知识库
 
-### [🔌 MCP 服务器](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->9102<!-- README_COUNT_MCP:END --> 个条目
+### [🔌 MCP 服务器](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->9103<!-- README_COUNT_MCP:END --> 个条目
 
 将 AI Agent 连接到外部工具、数据库和服务的 Model Context Protocol 服务器。
 
@@ -42,7 +42,7 @@ Everything AI Coding 是一个**持续更新的知识库**，从 9+ 个上游源
 | 名称 | ⭐ Stars | 评分 | 描述 |
 |------|----------|------|------|
 | [MCP Inspector](https://github.com/modelcontextprotocol/inspector) | 9.2k | 99 | 用于测试和调试 MCP 服务器的开发者工具，支持 UI 和 CLI 模式。 |
-| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 32.1k | 98 | 微软官方MCP服务器，通过Playwright无障碍树让AI模型精确控制浏览器自动化。 |
+| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 32.2k | 98 | 微软官方MCP服务器，通过Playwright无障碍树让AI模型精确控制浏览器自动化。 |
 | [googleapis/genai-toolbox](https://github.com/googleapis/genai-toolbox) | 15.0k | 98 | 开源MCP服务器，将AI代理和IDE连接到企业数据库，提供预置工具和自定义工具框架。 |
 | [AWS MCP Servers](https://github.com/awslabs/mcp) | 8.6k | 98 | 一套MCP服务器，将AWS服务集成到AI编码助手中，用于云开发、基础设施管理和工作流自动化。 |
 | [IDA Pro MCP](https://github.com/mrexodia/ida-pro-mcp) | 6.7k | 98 | 在 IDA Pro 中实现 AI 辅助逆向工程的 MCP 服务器。 |
@@ -115,11 +115,11 @@ AI 编程助手的可复用能力和工作流。
 <!-- README_TOP5_PLUGIN:START -->
 | 名称 | 来源 | 评分 | 描述 |
 |------|------|------|------|
-| [clangd-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/clangd-lsp) | Anthropic 官方 | 100 | 为Claude Code提供C/C++代码智能、诊断和格式化的语言服务器插件。 |
-| [claude-code-setup](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup) | Anthropic 官方 | 100 | 分析代码库并推荐定制的Claude Code自动化方案，如钩子、技能、MCP服务器和子代理。 |
-| [claude-md-management](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management) | Anthropic 官方 | 100 | 审计并优化 CLAUDE.md 文件，以提升 Claude Code 的项目上下文与记忆质量。 |
-| [code-simplifier](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier) | Anthropic 官方 | 100 | 自动简化和优化近期修改的代码，提升清晰度和可维护性，同时保持功能不变。 |
-| [csharp-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/csharp-lsp) | Anthropic 官方 | 100 | — |
+| [superpowers](https://github.com/obra/superpowers.git) | Anthropic 官方 | 100 | 一个Claude Code插件，教授AI辅助编码技能，如TDD、调试、代码审查和子代理驱动开发。 |
+| [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp.git) | Anthropic 官方 | 100 | AI编程助手通过MCP协议控制Chrome浏览器，进行网页调试、性能分析和自动化操作。 |
+| [huggingface-skills](https://github.com/huggingface/skills.git) | Anthropic 官方 | 100 | Hugging Face Hub 的 AI/ML 技能集合，涵盖模型训练、评估、数据集管理和部署。 |
+| [code-modernization](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-modernization) | Anthropic 官方 | 99 | 用于现代化遗留代码库（COBOL、Java、C++）的插件，提供结构化工作流和专用AI代理。 |
+| [hookify](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/hookify) | Anthropic 官方 | 99 | Claude Code 插件，通过正则表达式匹配工具操作来创建自定义钩子，防止不良行为。 |
 <!-- README_TOP5_PLUGIN:END -->
 
 [浏览全部 Plugins →](./catalog/plugins/) · [在线浏览 →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=plugin)

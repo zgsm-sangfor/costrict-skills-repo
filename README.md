@@ -6,7 +6,7 @@
   <a href="https://github.com/zgsm-ai/everything-ai-coding/stargazers"><img src="https://img.shields.io/github/stars/zgsm-ai/everything-ai-coding?style=flat-square&color=4A90D9" alt="Stars" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zgsm-ai/everything-ai-coding?style=flat-square" alt="License" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/commits/main"><img src="https://img.shields.io/github/last-commit/zgsm-ai/everything-ai-coding?style=flat-square" alt="Last Commit" /></a>
-  <img src="https://img.shields.io/badge/resources-12730-2ECC71?style=flat-square" alt="Resources" />
+  <img src="https://img.shields.io/badge/resources-12731-2ECC71?style=flat-square" alt="Resources" />
 </p>
 
 <p>
@@ -34,7 +34,7 @@ Everything AI Coding is a **curated knowledge base** that continuously collects,
 <a id="knowledge-base"></a>
 ## 📚 Knowledge Base
 
-### [🔌 MCP Servers](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->9102<!-- README_COUNT_MCP:END --> entries
+### [🔌 MCP Servers](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->9103<!-- README_COUNT_MCP:END --> entries
 
 Model Context Protocol servers that connect AI agents to external tools, databases, and services.
 
@@ -42,7 +42,7 @@ Model Context Protocol servers that connect AI agents to external tools, databas
 | Name | ⭐ Stars | Score | Description |
 |------|----------|-------|-------------|
 | [MCP Inspector](https://github.com/modelcontextprotocol/inspector) | 9.2k | 99 | A developer tool for testing and debugging MCP servers via UI or CLI. |
-| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 32.1k | 98 | Microsoft's official MCP server enabling AI models to automate browse… |
+| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 32.2k | 98 | Microsoft's official MCP server enabling AI models to automate browse… |
 | [googleapis/genai-toolbox](https://github.com/googleapis/genai-toolbox) | 15.0k | 98 | An open-source MCP server that connects AI agents and IDEs to enterpr… |
 | [AWS MCP Servers](https://github.com/awslabs/mcp) | 8.6k | 98 | A suite of MCP servers that integrate AWS services into AI coding ass… |
 | [IDA Pro MCP](https://github.com/mrexodia/ida-pro-mcp) | 6.7k | 98 | MCP server enabling AI-assisted reverse engineering in IDA Pro. |
@@ -115,11 +115,11 @@ Bundled marketplace plugins (skills + commands + agents + MCP servers).
 <!-- README_TOP5_PLUGIN:START -->
 | Name | Source | Score | Description |
 |------|--------|-------|-------------|
-| [clangd-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/clangd-lsp) | Anthropic Official | 100 | A C/C++ language server plugin providing code intelligence, diagnosti… |
-| [claude-code-setup](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup) | Anthropic Official | 100 | Analyzes codebases to recommend tailored Claude Code automations like… |
-| [claude-md-management](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management) | Anthropic Official | 100 | Audits and improves CLAUDE.md files to optimize Claude Code's project… |
-| [code-simplifier](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier) | Anthropic Official | 100 | An AI agent that automatically simplifies and refines recently modifi… |
-| [csharp-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/csharp-lsp) | Anthropic Official | 100 | C# language server for code intelligence |
+| [superpowers](https://github.com/obra/superpowers.git) | Anthropic Official | 100 | A plugin for Claude Code that teaches AI-assisted coding skills like… |
+| [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp.git) | Anthropic Official | 100 | MCP server for AI coding agents to control Chrome browsers, debug web… |
+| [huggingface-skills](https://github.com/huggingface/skills.git) | Anthropic Official | 100 | A comprehensive collection of AI/ML skills for Hugging Face Hub, cove… |
+| [code-modernization](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-modernization) | Anthropic Official | 99 | A plugin for modernizing legacy codebases (COBOL, Java, C++) with a s… |
+| [hookify](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/hookify) | Anthropic Official | 99 | Claude Code plugin for creating custom hooks to prevent unwanted beha… |
 <!-- README_TOP5_PLUGIN:END -->
 
 [Browse all plugins →](./catalog/plugins/) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=plugin)
