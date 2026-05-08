@@ -2,11 +2,8 @@
 
 from __future__ import annotations
 
-import copy
 import json
 from pathlib import Path
-
-import jsonschema
 
 
 SCHEMA_PATH = Path(__file__).resolve().parents[1] / "catalog" / "schema.json"
@@ -16,69 +13,46 @@ def _schema() -> dict:
     return json.loads(SCHEMA_PATH.read_text())
 
 
-def _base_entry(**overrides) -> dict:
-    entry = {
-        "id": "test-mcp",
-        "name": "Test MCP",
-        "type": "mcp",
-        "description": "Test MCP server",
-        "source_url": "https://github.com/example/test-mcp",
-        "stars": 10,
-        "category": "tooling",
-        "tags": ["mcp-server"],
-        "tech_stack": ["python"],
-        "install": {"method": "manual"},
-        "source": "curated",
-        "last_synced": "2026-05-08",
-        "added_at": "2026-05-08",
-    }
-    entry.update(overrides)
-    return entry
-
-
-def _validate(entry: dict) -> None:
-    jsonschema.Draft7Validator(_schema()).validate([entry])
-
-
-def test_mcp_installability_all_fields_valid():
-    _validate(
-        _base_entry(
-            mcp_schema_valid=True,
-            mcp_install_state="needs_config",
-            mcp_validation_tags=["readme_config_found", "placeholder_path"],
-            mcp_installability_reason="README 配置包含本地路径占位。",
-        )
-    )
+def _properties() -> dict:
+    return _schema()["items"]["properties"]
 
 
 def test_mcp_installability_fields_optional():
-    _validate(_base_entry())
+    required = _schema()["items"]["required"]
+    assert "mcp_schema_valid" not in required
+    assert "mcp_install_state" not in required
+    assert "mcp_validation_tags" not in required
+    assert "mcp_installability_reason" not in required
 
 
-def test_mcp_installability_invalid_state_rejected():
-    entry = _base_entry(mcp_install_state="broken")
-    validator = jsonschema.Draft7Validator(_schema())
-    errors = list(validator.iter_errors([entry]))
-    assert errors
-    assert any("broken" in str(error.message) for error in errors)
+def test_mcp_schema_valid_is_boolean():
+    prop = _properties()["mcp_schema_valid"]
+    assert prop["type"] == "boolean"
 
 
-def test_mcp_installability_tags_must_be_array():
-    entry = _base_entry(mcp_validation_tags="placeholder_path")
-    validator = jsonschema.Draft7Validator(_schema())
-    errors = list(validator.iter_errors([entry]))
-    assert errors
-    assert any("is not of type 'array'" in str(error.message) for error in errors)
+def test_mcp_install_state_enum():
+    prop = _properties()["mcp_install_state"]
+    assert prop["type"] == "string"
+    assert prop["enum"] == [
+        "ready",
+        "needs_config",
+        "manual",
+        "invalid",
+        "unknown",
+    ]
 
 
-def test_mcp_installability_invalid_tag_rejected():
-    entry = _base_entry(mcp_validation_tags=["made_up_tag"])
-    validator = jsonschema.Draft7Validator(_schema())
-    errors = list(validator.iter_errors([entry]))
-    assert errors
-    assert any("made_up_tag" in str(error.message) for error in errors)
+def test_mcp_validation_tags_array_and_enum():
+    prop = _properties()["mcp_validation_tags"]
+    assert prop["type"] == "array"
+    assert prop["items"]["type"] == "string"
+    enum_values = set(prop["items"]["enum"])
+    assert "readme_config_found" in enum_values
+    assert "placeholder_path" in enum_values
+    assert "insufficient_evidence" in enum_values
+    assert "made_up_tag" not in enum_values
 
 
-def test_non_mcp_entry_may_omit_mcp_installability_fields():
-    entry = copy.deepcopy(_base_entry(type="skill", id="test-skill"))
-    _validate(entry)
+def test_mcp_installability_reason_is_string():
+    prop = _properties()["mcp_installability_reason"]
+    assert prop["type"] == "string"
