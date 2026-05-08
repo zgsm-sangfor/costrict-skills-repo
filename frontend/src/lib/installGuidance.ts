@@ -34,6 +34,17 @@ type ManualGuidance = {
   copyText: null
 }
 
+type PluginMarketplaceGuidance = {
+  kind: 'plugin_marketplace'
+  marketplace: string
+  pluginName: string
+  // Two slash commands run inside Claude Code: first add the marketplace,
+  // then install the specific plugin scoped to that marketplace.
+  addCommand: string
+  installCommand: string
+  copyText: string  // both commands joined for one-click copy
+}
+
 type UnsupportedGuidance = {
   kind: 'unsupported'
   copyText: null
@@ -45,6 +56,7 @@ export type InstallGuidance =
   | DownloadFileGuidance
   | McpConfigGuidance
   | ManualGuidance
+  | PluginMarketplaceGuidance
   | UnsupportedGuidance
 
 export function buildInstallGuidance(item: CatalogItem, lang: Lang): InstallGuidance {
@@ -63,6 +75,24 @@ export function buildInstallGuidance(item: CatalogItem, lang: Lang): InstallGuid
 
   if (install.method === 'manual') {
     return { kind: 'manual', copyText: null }
+  }
+
+  if (install.method === 'plugin_marketplace') {
+    const marketplace = (install.marketplace || '').trim()
+    const pluginName = (install.plugin_name || '').trim()
+    if (!marketplace || !pluginName) {
+      return { kind: 'unsupported', copyText: null }
+    }
+    const addCommand = `/plugin marketplace add ${marketplace}`
+    const installCommand = `/plugin install ${pluginName}@${marketplace}`
+    return {
+      kind: 'plugin_marketplace',
+      marketplace,
+      pluginName,
+      addCommand,
+      installCommand,
+      copyText: `${addCommand}\n${installCommand}`,
+    }
   }
 
   if (install.method === 'download_file') {

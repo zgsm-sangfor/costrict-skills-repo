@@ -87,6 +87,40 @@ describe('buildInstallGuidance', () => {
     expect(guidance.copyText).toBe('git clone https://github.com/example/repo.git')
   })
 
+  it('builds plugin_marketplace guidance with two slash commands', () => {
+    const item = makeItem({
+      id: 'anthropic-superpowers',
+      type: 'plugin',
+      install: {
+        method: 'plugin_marketplace',
+        marketplace: 'anthropics/claude-plugins-official',
+        plugin_name: 'superpowers',
+      },
+    })
+
+    const guidance = buildInstallGuidance(item, 'en')
+
+    expect(guidance.kind).toBe('plugin_marketplace')
+    if (guidance.kind !== 'plugin_marketplace') {
+      throw new Error(`Expected plugin_marketplace guidance, got ${guidance.kind}`)
+    }
+    expect(guidance.addCommand).toBe('/plugin marketplace add anthropics/claude-plugins-official')
+    expect(guidance.installCommand).toBe('/plugin install superpowers@anthropics/claude-plugins-official')
+    expect(guidance.copyText).toBe(
+      '/plugin marketplace add anthropics/claude-plugins-official\n/plugin install superpowers@anthropics/claude-plugins-official',
+    )
+    expect(guidance.marketplace).toBe('anthropics/claude-plugins-official')
+    expect(guidance.pluginName).toBe('superpowers')
+  })
+
+  it('falls back to unsupported when plugin_marketplace lacks marketplace or plugin_name', () => {
+    const item = makeItem({
+      type: 'plugin',
+      install: { method: 'plugin_marketplace', marketplace: '' },
+    })
+    expect(buildInstallGuidance(item, 'en').kind).toBe('unsupported')
+  })
+
   it('keeps download_file guidance intact', () => {
     const item = makeItem({
       type: 'rule',

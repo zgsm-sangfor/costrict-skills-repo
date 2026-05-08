@@ -307,6 +307,44 @@ export default function Detail() {
               </button>
             </div>
           )}
+          {installGuidance?.kind === 'plugin_marketplace' && (
+            <div className="space-y-3">
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                {lang === 'zh'
+                  ? '在 Claude Code 中依次执行以下两条 slash 命令：'
+                  : 'Run these two slash commands in Claude Code:'}
+              </p>
+              <div className="relative">
+                <pre className="bg-gray-900 text-gray-100 rounded-xl p-4 text-xs overflow-x-auto whitespace-pre-wrap break-all leading-relaxed">{installGuidance.copyText}</pre>
+                <button
+                  onClick={() => handleCopy(installGuidance.copyText)}
+                  className="absolute top-2 right-2 px-2 py-1 rounded-lg bg-white/10 text-white text-xs hover:bg-white/20 border-none cursor-pointer"
+                >
+                  {copied ? t('detail.install.copied') : t('detail.install.copy')}
+                </button>
+              </div>
+              <div className="text-xs text-gray-500 dark:text-gray-400 space-y-1">
+                <p>
+                  <span className="font-medium">{lang === 'zh' ? '步骤 1' : 'Step 1'}:</span>{' '}
+                  {lang === 'zh' ? '注册 marketplace ' : 'Register marketplace '}
+                  <code className="bg-gray-100 dark:bg-gray-700 px-1.5 py-0.5 rounded font-mono">{installGuidance.marketplace}</code>
+                </p>
+                <p>
+                  <span className="font-medium">{lang === 'zh' ? '步骤 2' : 'Step 2'}:</span>{' '}
+                  {lang === 'zh' ? '安装 plugin ' : 'Install plugin '}
+                  <code className="bg-gray-100 dark:bg-gray-700 px-1.5 py-0.5 rounded font-mono">{installGuidance.pluginName}</code>
+                </p>
+              </div>
+              {item.source_url && (
+                <p className="text-xs text-gray-400 dark:text-gray-500">
+                  {lang === 'zh' ? '源码：' : 'Source: '}
+                  <a href={item.source_url} target="_blank" rel="noreferrer" className="text-apple-blue hover:underline break-all">
+                    {item.source_url}
+                  </a>
+                </p>
+              )}
+            </div>
+          )}
           {installGuidance?.kind === 'manual' && item.source_url && (
             <p className="text-sm text-gray-600 dark:text-gray-300">
               {t('detail.install.manual')}:{' '}
