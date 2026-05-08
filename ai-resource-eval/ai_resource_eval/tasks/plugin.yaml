@@ -5,10 +5,24 @@ content_paths:
   - .claude-plugin/plugin.json
 content_fallback: description
 
-# Plugin 评估走 health-only：无 LLM 维度，仅靠 4 个健康信号 + 1 次 enrichment-only
-# LLM 调用产出 summary / summary_zh / tags / highlights。详见
-# openspec/changes/add-plugins-category/design.md 决策 3。
-metrics: []
+# Plugin 6 维 LLM 评分（v2 起激活），由 PluginContentFetcher 抓全 plugin 内容
+# （plugin.json + 全部 SKILL.md / agents / commands）作为 LLM 输入。
+#
+# 跟 skill task 的 6 维相比剔除 install_clarity（plugin 走 marketplace 统一
+# `/plugin install <name>` 流程，install 描述对 plugin 是噪声 —— spike 实测 8
+# 样本里 6 个拿 1 分），那 0.10 权重重分给 doc_completeness（区分度最高的
+# 维度，spike 中 mongodb=5 vs sickn33-water=1 直接拉开两个量级）。
+metrics:
+  - metric: coding_relevance
+    weight: 0.25
+  - metric: doc_completeness
+    weight: 0.30
+  - metric: desc_accuracy
+    weight: 0.15
+  - metric: writing_quality
+    weight: 0.15
+  - metric: specificity
+    weight: 0.15
 
 heuristic_signals:
   - signal: freshness
@@ -25,14 +39,16 @@ star_routing:
   monorepo_threshold: 5
 
 thresholds:
-  accept: 60
-  review: 40
+  accept: 65
+  review: 50
 
-# v1: 首次引入 plugin task config（health-only），rubric_version "1.0" 对应
-# rubric_major_version=1（runner 会拼成 "1.<sha8>"）。
-rubric_major_version: 1
+# v2: 激活 5 维 LLM 评分（剔除 install_clarity）。bump rubric_major_version
+# 强制 v1 全部缓存（health-only）失效，让 901 plugin 全跑一次新评分。
+# 详见 openspec/changes/improve-plugin-content-substance/design.md +
+# tools/spike_plugin_six_dim_scoring.py spike 实测结果。
+rubric_major_version: 2
 enrichment: true
 
-# health-only：final_score = health_score（无 LLM 项参与混合）。
-# health_blend_alpha 在 metrics 为空时不再参与计算（runner 跳过混合分支）。
-health_blend_alpha: 0.0
+# 0.85 LLM-led blend 跟 skill 对齐：α=0.85 LLM × 0.15 health
+# spike 实测此 blend 把 plugin 分数 spread 从 26 提升到 46（区分度近翻倍）
+health_blend_alpha: 0.85

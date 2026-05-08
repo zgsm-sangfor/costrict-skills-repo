@@ -36,23 +36,43 @@ def test_type_to_task_routes_plugin():
 
 
 def test_load_plugin_task_config():
-    """plugin.yaml: metrics=[], 4 health signals, enrichment=true, accept=60/review=40."""
+    """plugin.yaml v2: 5-dim LLM (drops install_clarity), 4 health signals, enrichment=true, accept=65/review=50.
+
+    History: v1 was health-only (metrics=[]) per add-plugins-category decision 3.
+    v2 (improve-plugin-content-substance follow-up) activates 5-dim LLM scoring
+    once PluginContentFetcher provides substantive plugin content as input.
+    install_clarity dropped because plugin marketplace install is uniform
+    `/plugin install <name>` flow — spike showed this dim is noise (6/8 plugins
+    scored 1) so its 0.10 weight redistributed to doc_completeness.
+    """
     from ai_resource_eval.tasks.loader import load_task_config
 
     cfg = load_task_config("plugin")
 
-    # Health-only: no LLM dimensions
-    assert cfg.metrics == []
+    # 5-dim LLM evaluation (no install_clarity).
+    metric_names = {m.metric for m in cfg.metrics}
+    assert metric_names == {
+        "coding_relevance",
+        "doc_completeness",
+        "desc_accuracy",
+        "writing_quality",
+        "specificity",
+    }
+    assert "install_clarity" not in metric_names
+    assert sum(m.weight for m in cfg.metrics) == pytest.approx(1.0)
 
-    # Enrichment still on (single LLM call to produce summary/tags/etc.)
+    # Enrichment still on (LLM call also produces summary/tags/etc.)
     assert cfg.enrichment is True
 
-    # Thresholds tuned for plugin (lower bar than skills; design.md decision 3)
-    assert cfg.thresholds.accept == 60
-    assert cfg.thresholds.review == 40
+    # Thresholds bumped for 5-dim path (was 60/40 in v1 health-only mode).
+    assert cfg.thresholds.accept == 65
+    assert cfg.thresholds.review == 50
 
-    # health_blend_alpha=0.0 → final_score = health_score (verified separately)
-    assert cfg.health_blend_alpha == 0.0
+    # health_blend_alpha=0.85 — LLM-led blend (skill-style mix)
+    assert cfg.health_blend_alpha == pytest.approx(0.85)
+
+    # Rubric major bumped to v2 to invalidate v1 (health-only) cache.
+    assert cfg.rubric_major_version == 2
 
     # 4 health signals: freshness, popularity, source_trust, manifest_completeness
     # (loader.py also auto-injects install_popularity at weight 0.05 by default;

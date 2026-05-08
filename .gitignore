@@ -35,6 +35,8 @@ Thumbs.db
 # 种子提交后 git rm --cached .eval_cache/ 移除跟踪
 .eval_cache/
 .eval_cache_test/
+.eval_cache_validation/
+.eval_cache_plugin_6dim_spike/
 
 # Sync caches (rebuilt by CI)
 catalog/skills/.repo_cache.json

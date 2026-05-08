@@ -6,6 +6,34 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Changed
+
+- `tasks/plugin.yaml` — **plugin task switched from health-only to 5-dim LLM
+  scoring** (rubric_major_version 1 → 2). v1's `metrics: []` was based on the
+  premise that LLM evaluation of a plugin bundle would be too coarse; that
+  premise is invalidated now that `PluginContentFetcher` provides substantive
+  content (`plugin.json` + all `SKILL.md` / agents / commands). Spike on 8
+  representative plugins (`tools/spike_plugin_six_dim_scoring.py`) showed:
+  - score spread widened from 26 → 46 (discrimination ~2× better)
+  - mongodb-agent-skills moved 82 → 92 (LLM detected substance health-only
+    couldn't see)
+  - sickn33-antigravity-bundle (URL-collision water entry) auto-rejected at 46
+  - top-cluster `[100/100/97/96]` spread to `[81/85/80/80]` (no more saturation)
+
+  Active dims: `coding_relevance` 0.25 / `doc_completeness` 0.30 /
+  `desc_accuracy` 0.15 / `writing_quality` 0.15 / `specificity` 0.15.
+  `install_clarity` dropped — plugin marketplace install is a uniform
+  `/plugin install <name>` flow, dim was noise (6/8 spike samples scored 1);
+  its 0.10 weight redistributed to `doc_completeness` (the highest-discrimination
+  dim, mongodb=5 vs sickn33=1). Blend `α = 0.85`, thresholds raised to
+  `accept=65 / review=50`.
+
+  Behavior consequences:
+  - All 901 plugin entries get a fresh LLM evaluation on the next sync (rubric
+    bump invalidates v1 cache).
+  - Many anthropic marketplace plugins drop from artificial 100 to 80–90 range.
+  - Empty/water plugins (no SKILL.md, manifest only) flow into `reject` bucket.
+
 ### Added
 
 - `PluginContentFetcher` (`ai_resource_eval/fetcher/plugin.py`) — plugin-typed
