@@ -15,8 +15,8 @@ export default function Detail() {
   useEffect(() => {
     // Search across all type files to find the item
     Promise.all(
-      ['mcp.json', 'skills.json', 'rules.json', 'prompts.json'].map(f =>
-        fetch(`./api/${f}`).then(r => r.json())
+      ['mcp.json', 'skills.json', 'rules.json', 'prompts.json', 'plugins.json'].map(f =>
+        fetch(`./api/${f}`).then(r => r.ok ? r.json() : []).catch(() => [])
       )
     ).then(arrays => {
       const all: CatalogItem[] = arrays.flat()
@@ -136,6 +136,76 @@ export default function Detail() {
                 {tech}
               </span>
             ))}
+          </div>
+        </div>
+      )}
+
+      {/* Plugin bundle: skills/agents/commands inside this plugin */}
+      {item.type === 'plugin' && item.bundle && (
+        item.bundle.skills_count > 0 ||
+        item.bundle.agents_count > 0 ||
+        item.bundle.commands_count > 0 ||
+        item.bundle.mcp_servers_count > 0
+      ) && (
+        <div className="glass rounded-2xl p-6">
+          <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-4">
+            🧩 {lang === 'zh' ? '插件包内容' : 'Plugin Bundle'}
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+            {item.bundle.skills_count > 0 && (
+              <div className="rounded-xl bg-pink-50 dark:bg-pink-900/30 px-4 py-3">
+                <div className="text-2xl font-bold text-pink-700 dark:text-pink-300">{item.bundle.skills_count}</div>
+                <div className="text-xs text-pink-600/80 dark:text-pink-400/80">{lang === 'zh' ? '技能' : 'Skills'}</div>
+              </div>
+            )}
+            {item.bundle.agents_count > 0 && (
+              <div className="rounded-xl bg-purple-50 dark:bg-purple-900/30 px-4 py-3">
+                <div className="text-2xl font-bold text-purple-700 dark:text-purple-300">{item.bundle.agents_count}</div>
+                <div className="text-xs text-purple-600/80 dark:text-purple-400/80">{lang === 'zh' ? '代理' : 'Agents'}</div>
+              </div>
+            )}
+            {item.bundle.commands_count > 0 && (
+              <div className="rounded-xl bg-blue-50 dark:bg-blue-900/30 px-4 py-3">
+                <div className="text-2xl font-bold text-blue-700 dark:text-blue-300">{item.bundle.commands_count}</div>
+                <div className="text-xs text-blue-600/80 dark:text-blue-400/80">{lang === 'zh' ? '命令' : 'Commands'}</div>
+              </div>
+            )}
+            {item.bundle.mcp_servers_count > 0 && (
+              <div className="rounded-xl bg-emerald-50 dark:bg-emerald-900/30 px-4 py-3">
+                <div className="text-2xl font-bold text-emerald-700 dark:text-emerald-300">{item.bundle.mcp_servers_count}</div>
+                <div className="text-xs text-emerald-600/80 dark:text-emerald-400/80">MCP</div>
+              </div>
+            )}
+          </div>
+          {item.bundle.skills_namespaces && item.bundle.skills_namespaces.length > 0 && (
+            <div>
+              <h4 className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">
+                {lang === 'zh' ? '内含技能' : 'Bundled skills'}
+              </h4>
+              <div className="flex flex-wrap gap-1.5">
+                {item.bundle.skills_namespaces.map(ns => {
+                  const skillName = ns.includes(':') ? ns.split(':', 2)[1] : ns
+                  return (
+                    <span key={ns} className="text-xs px-2 py-0.5 rounded-full bg-pink-50 text-pink-700 dark:bg-pink-900/40 dark:text-pink-300 font-mono">
+                      {skillName}
+                    </span>
+                  )
+                })}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Bundled-in indicator: this skill is bundled by a plugin */}
+      {item.type === 'skill' && item.bundled_in && (
+        <div className="glass rounded-2xl p-4 flex items-center gap-3">
+          <span className="text-xl">🧩</span>
+          <div className="flex-1 text-sm text-gray-600 dark:text-gray-300">
+            {lang === 'zh' ? '此技能被插件捆绑：' : 'Bundled in plugin: '}
+            <Link to={`/detail/${item.bundled_in}`} className="text-apple-blue hover:underline font-medium">
+              {item.bundled_in}
+            </Link>
           </div>
         </div>
       )}

@@ -87,7 +87,9 @@ export default function Home() {
     Promise.all([
       fetch('./api/stats.json').then(r => r.json()),
       fetch('./api/featured.json').then(r => r.json()),
-      ...['mcp.json', 'skills.json'].map(f => fetch(`./api/${f}`).then(r => r.json())),
+      ...['mcp.json', 'skills.json', 'plugins.json'].map(f =>
+        fetch(`./api/${f}`).then(r => r.ok ? r.json() : []).catch(() => [])
+      ),
     ]).then(([s, f, ...typeArrays]) => {
       setStats(s)
       setFeatured(f)
