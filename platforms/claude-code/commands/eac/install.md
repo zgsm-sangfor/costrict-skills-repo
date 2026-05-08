@@ -65,7 +65,11 @@ Structure:
   Prompt: "Confirm install? (Y/n/global)"
 ```
 
-Do NOT show the customization hint for MCP type.
+Do NOT show the customization hint for MCP or plugin types.
+
+For `plugin` type, the `(Y/n/global)` prompt collapses to `(Y/n)` — plugins are always user-global, no project-level scope exists. Render as `(Y = enable in ~/.claude / n = cancel)` in English, `（Y = 启用到 ~/.claude / n = 取消）` in Chinese.
+
+For `plugin` type, the `Target` line should read `~/.claude/settings.json (user-global, plugins have no project scope)`.
 
 5. Execute installation based on user confirmation and resource type:
 
@@ -148,9 +152,40 @@ Structure:
 - Same install logic as Rule
 - Save to `.claude/rules/<id>.md`
 
-6. **Post-Install Customization** (skip for MCP type)
+### Plugin (type == "plugin")
+
+Plugins are upstream-managed distribution containers (bundling skills / commands / agents / MCP servers). They are always user-global, installed by toggling `enabledPlugins` in `~/.claude/settings.json` — Claude Code reads that field at startup, clones the marketplace if needed, and activates the plugin. Do NOT clone marketplaces yourself, do NOT write `~/.claude/plugins/installed_plugins.json` — Claude Code owns that state.
+
+Required `install` fields (per catalog entry):
+- `install.method == "plugin_marketplace"`
+- `install.marketplace` — marketplace repo slug, e.g. `"anthropics/claude-plugins-official"`
+- `install.plugin_name` — bare plugin name, e.g. `"ralph-loop"`
+
+Steps:
+
+1. Derive `marketplace_key` = last path segment of `install.marketplace` (e.g. `anthropics/claude-plugins-official` → `claude-plugins-official`)
+2. Construct `enabled_key = "<install.plugin_name>@<marketplace_key>"`
+3. Read `~/.claude/settings.json`. If the file is missing, create `{}`. If `enabledPlugins` is missing, treat it as `{}`.
+4. **Marketplace registration check** — if `~/.claude/plugins/marketplaces/<marketplace_key>/` already exists on disk, skip this sub-step (the marketplace is already known to Claude Code). Otherwise **merge** an entry into `extraKnownMarketplaces` — do NOT replace the whole field, preserve any existing marketplaces:
+   ```json
+   "extraKnownMarketplaces": {
+     "<marketplace_key>": {
+       "source": { "source": "github", "repo": "<install.marketplace>" }
+     }
+   }
+   ```
+   Claude Code clones the marketplace on next startup.
+5. If `enabledPlugins[<enabled_key>]` already equals `true`, tell the user the plugin is already enabled and stop — do not rewrite the file.
+6. Otherwise set `enabledPlugins[<enabled_key>] = true` and write `~/.claude/settings.json` back, preserving JSON formatting. Verify the result is valid JSON before exiting (`python3 -c "import json; json.load(open('/Users/.../.claude/settings.json'))"`).
+7. After a successful write, tell the user (in detected language): "Plugin enabled. Restart Claude Code for it to take effect." If the marketplace was just registered, also note "The marketplace will be cloned on next startup."
+
+Plugin install does NOT support project-level (`.claude/settings.json`) installation — plugins are user-global by design.
+
+6. **Post-Install Customization** (skip for MCP and plugin types)
 
 After the file is written to disk, offer customization based on resource type. The original file is already saved — customization modifies in place, so the user can always revert.
+
+Plugin entries are upstream-managed and contents are re-fetched by Claude Code on activation; local edits would be discarded. Skip customization entirely for plugins and proceed to step 7.
 
 ### Rules / Prompts (passive ask)
 

@@ -48,6 +48,14 @@ Fetch via Bash: `curl -s <URL>`, on failure use Read on local fallback path.
 - Check project-level `.claude/rules/<id>.md` and global `~/.claude/rules/<id>.md`
 - If found in both levels, let user choose which to uninstall (project / global / all)
 
+### Plugin (type == "plugin")
+- Plugins are user-global only — check `~/.claude/settings.json` (no project-level fallback, no project / global / all prompt)
+- Derive `marketplace_key` = last path segment of `install.marketplace`
+- Construct `enabled_key = "<install.plugin_name>@<marketplace_key>"`
+- Found if `enabledPlugins[<enabled_key>]` is truthy
+- Do NOT delete `~/.claude/plugins/marketplaces/<marketplace_key>/` — other plugins from the same marketplace may still be enabled
+- Do NOT remove the `extraKnownMarketplaces` entry — Claude Code will leave it as a known but inactive marketplace
+
 5. If resource is not installed (not found in any location), inform user and stop
 
 6. Show uninstall preview (in user's language):
@@ -62,7 +70,11 @@ Structure:
   Prompt: "Confirm uninstall? (Y/n)"
 ```
 
-7. Execute uninstall on user confirmation, show result
+For `plugin` type, render `Location` as `~/.claude/settings.json (user-global)` — plugins have no project-level scope.
+
+7. Execute uninstall on user confirmation, show result.
+
+For `plugin` type, execute by deleting the `enabledPlugins[<enabled_key>]` entry entirely (do NOT set it to `false`); verify the resulting JSON is valid; then tell the user "Plugin disabled. Restart Claude Code for the change to take effect." in the detected language.
 
 ## Error Handling
 
