@@ -35,6 +35,9 @@ SOURCE_LABELS = {
     "wonderful-prompts": "wonderful-prompts",
     "davila7/claude-code-templates": "Claude Code Templates",
     "curated": "Curated",
+    "claude-plugins-official": "Anthropic Official",
+    "claude-plugins-dev": "claude-plugins.dev",
+    "superpowers-marketplace": "Superpowers",
 }
 
 SOURCE_LABELS_ZH = {
@@ -52,6 +55,9 @@ SOURCE_LABELS_ZH = {
     "wonderful-prompts": "精彩提示词",
     "davila7/claude-code-templates": "Claude Code 模板",
     "curated": "手工精选",
+    "claude-plugins-official": "Anthropic 官方",
+    "claude-plugins-dev": "claude-plugins.dev",
+    "superpowers-marketplace": "Superpowers",
 }
 
 # --- Type metadata ---
@@ -88,6 +94,14 @@ TYPE_META = {
         "desc_en": "Developer-focused prompt templates for common coding tasks.",
         "desc_zh": "面向开发者的提示词模板，覆盖常见编码场景。",
         "dir": "prompts",
+    },
+    "plugin": {
+        "emoji": "🧩",
+        "title_en": "Plugins",
+        "title_zh": "Plugins 插件",
+        "desc_en": "Claude Code plugin bundles packaging skills, agents, commands, and MCP servers from official and community marketplaces.",
+        "desc_zh": "Claude Code 插件包，捆绑 skill、agent、command 与 MCP server，覆盖官方与社区 marketplace。",
+        "dir": "plugins",
     },
 }
 
@@ -342,11 +356,16 @@ def render_prompt_table(entries: list[dict], zh: bool = False) -> str:
     return _render_table(entries, zh, has_stars=False)
 
 
+def render_plugin_table(entries: list[dict], zh: bool = False) -> str:
+    return _render_table(entries, zh, has_stars=False)
+
+
 TABLE_RENDERERS = {
     "mcp": render_mcp_table,
     "skill": render_skill_table,
     "rule": render_rule_table,
     "prompt": render_prompt_table,
+    "plugin": render_plugin_table,
 }
 
 

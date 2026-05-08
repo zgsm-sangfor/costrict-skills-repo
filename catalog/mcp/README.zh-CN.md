@@ -368,4 +368,4 @@ MCP 服务器，让 AI 助手搜索、下载和阅读 ArXiv 研究论文。
 
 ---
 
-*自动生成 [catalog/index.json](../index.json). 最后更新: 2026-05-07*
+*自动生成 [catalog/index.json](../index.json). 最后更新: 2026-05-08*

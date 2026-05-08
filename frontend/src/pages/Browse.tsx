@@ -6,7 +6,7 @@ import ResourceCard from '../components/ResourceCard'
 import CardSkeleton from '../components/CardSkeleton'
 import type { CatalogItem } from '../types'
 
-const TYPES = ['all', 'mcp', 'skill', 'rule', 'prompt'] as const
+const TYPES = ['all', 'mcp', 'skill', 'rule', 'prompt', 'plugin'] as const
 const CATEGORIES = [
   'all', 'tooling', 'ai-ml', 'backend', 'frontend', 'devops',
   'security', 'documentation', 'testing', 'database', 'mobile', 'fullstack'
@@ -43,9 +43,16 @@ export default function Browse() {
   // Load data by type
   useEffect(() => {
     setLoading(true)
+    const TYPE_FILE_MAP: Record<string, string> = {
+      mcp: 'mcp.json',
+      skill: 'skills.json',
+      rule: 'rules.json',
+      prompt: 'prompts.json',
+      plugin: 'plugins.json',
+    }
     const files = activeType === 'all'
-      ? ['mcp.json', 'skills.json', 'rules.json', 'prompts.json']
-      : [activeType === 'skill' ? 'skills.json' : activeType === 'rule' ? 'rules.json' : activeType === 'prompt' ? 'prompts.json' : 'mcp.json']
+      ? Object.values(TYPE_FILE_MAP)
+      : [TYPE_FILE_MAP[activeType] ?? 'mcp.json']
 
     Promise.all(files.map(f => fetch(`./api/${f}`).then(r => r.json())))
       .then(arrays => {

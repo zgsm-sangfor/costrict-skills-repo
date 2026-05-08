@@ -19,6 +19,7 @@ const translations: Record<string, Record<Lang, string>> = {
   'stats.skill': { en: 'Skills', zh: '技能' },
   'stats.rule': { en: 'Rules', zh: '规则' },
   'stats.prompt': { en: 'Prompts', zh: '提示词' },
+  'stats.plugin': { en: 'Plugins', zh: '插件' },
   'featured.title': { en: 'Featured Picks', zh: '精选推荐' },
   'trending.title': { en: 'Trending', zh: '热门趋势' },
   'browse.all': { en: 'All', zh: '全部' },

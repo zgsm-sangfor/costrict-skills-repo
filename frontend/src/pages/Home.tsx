@@ -11,6 +11,7 @@ const TYPE_ICONS: Record<string, string> = {
   skill: '🎯',
   rule: '📋',
   prompt: '💡',
+  plugin: '🧩',
 }
 
 const INITIAL_SHOW = 4
@@ -153,8 +154,8 @@ export default function Home() {
 
         {/* Stats */}
         {stats && (
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-10 max-w-2xl mx-auto">
-            {(['mcp', 'skill', 'rule', 'prompt'] as const).map(type => (
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 mt-10 max-w-3xl mx-auto">
+            {(['mcp', 'skill', 'rule', 'prompt', 'plugin'] as const).map(type => (
               <div key={type} className="glass rounded-2xl p-4 text-center cursor-pointer hover:scale-105 transition-transform"
                 onClick={() => navigate(`/browse?type=${type}`)}>
                 <div className="text-2xl mb-1">{TYPE_ICONS[type]}</div>

@@ -1,7 +1,7 @@
 export interface CatalogItem {
   id: string
   name: string
-  type: 'mcp' | 'skill' | 'rule' | 'prompt'
+  type: 'mcp' | 'skill' | 'rule' | 'prompt' | 'plugin'
   description: string
   description_zh?: string
   source_url: string
@@ -11,13 +11,23 @@ export interface CatalogItem {
   tags: string[]
   tech_stack: string[]
   install?: {
-    method: 'mcp_config' | 'mcp_config_template' | 'git_clone' | 'manual' | 'download_file'
+    method: 'mcp_config' | 'mcp_config_template' | 'git_clone' | 'manual' | 'download_file' | 'plugin_marketplace'
     config?: Record<string, unknown>
     repo?: string
     files?: string[]
     branch?: string
     path?: string
+    marketplace?: string
+    plugin_name?: string
   }
+  bundle?: {
+    skills_count: number
+    agents_count: number
+    commands_count: number
+    mcp_servers_count: number
+    skills_namespaces: string[]
+  }
+  bundled_in?: string
   source: string
   last_synced: string
   added_at?: string

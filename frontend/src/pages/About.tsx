@@ -79,6 +79,9 @@ const SOURCES = [
   { name: 'Rules 2.1', url: 'https://github.com/Mr-chen-05/rules-2.1-optimized', trust: 3, type: 'Rules' },
   { name: 'prompts.chat', url: 'https://github.com/f/prompts.chat', trust: 4, type: 'Prompts' },
   { name: 'wonderful-prompts', url: 'https://github.com/langgptai/wonderful-prompts', trust: 3, type: 'Prompts' },
+  { name: 'Anthropic Plugins', url: 'https://github.com/anthropics/claude-plugins-official', trust: 5, type: 'Plugins' },
+  { name: 'superpowers-marketplace', url: 'https://github.com/obra/superpowers-marketplace', trust: 4, type: 'Plugins' },
+  { name: 'claude-plugins.dev', url: 'https://claude-plugins.dev', trust: 3, type: 'Plugins' },
 ]
 
 const TRUST_LEVELS = [
@@ -93,6 +96,7 @@ const TYPE_BADGE: Record<string, string> = {
   Skills: 'bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300',
   Rules: 'bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300',
   Prompts: 'bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300',
+  Plugins: 'bg-pink-100 dark:bg-pink-900/40 text-pink-700 dark:text-pink-300',
 }
 
 function TrustDot({ score }: { score: number }) {

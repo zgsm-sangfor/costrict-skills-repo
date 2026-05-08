@@ -7,6 +7,7 @@ const TYPE_COLORS: Record<string, string> = {
   skill: 'bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300',
   rule: 'bg-orange-100 text-orange-700 dark:bg-orange-900/50 dark:text-orange-300',
   prompt: 'bg-purple-100 text-purple-700 dark:bg-purple-900/50 dark:text-purple-300',
+  plugin: 'bg-pink-100 text-pink-700 dark:bg-pink-900/50 dark:text-pink-300',
 }
 
 const TYPE_ICONS: Record<string, string> = {
@@ -14,6 +15,7 @@ const TYPE_ICONS: Record<string, string> = {
   skill: '🎯',
   rule: '📋',
   prompt: '💡',
+  plugin: '🧩',
 }
 
 function formatStars(stars: number | null): string {

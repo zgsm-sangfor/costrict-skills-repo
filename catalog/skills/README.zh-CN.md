@@ -273,4 +273,4 @@ Files: `skills/azure-storage-blob-ts/`
 
 ---
 
-*自动生成 [catalog/index.json](../index.json). 最后更新: 2026-05-07*
+*自动生成 [catalog/index.json](../index.json). 最后更新: 2026-05-08*
