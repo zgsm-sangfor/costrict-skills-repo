@@ -58,7 +58,7 @@
 | 46 | [Writing Hookify Rules](https://github.com/anthropics/claude-code/tree/main/plugins/hookify/skills/writing-rules) | A skill for creating Hookify rules that define patterns to watch for and message... | Anthropic Official | 🟢 Active | 94 | 2026-05-07 | tooling | `hookify-rules`, `claude-code`, `regex-patterns` |
 | 47 | [Command Development](https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/command-development) | Guide for creating slash commands in Claude Code using Markdown files with YAML ... | Anthropic Official | 🟢 Active | 94 | 2026-05-07 | tooling | `claude-code`, `slash-commands`, `markdown-prompts` |
 | 48 | [Hook Development](https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/hook-development) | Event-driven automation hooks for Claude Code plugins to validate, enforce polic... | Anthropic Official | 🟢 Active | 94 | 2026-05-07 | tooling | `claude-code`, `plugin-development`, `event-driven-automation` |
-| 49 | [obsidian-bases](https://github.com/kepano/obsidian-skills/tree/main/skills/obsidian-bases) | Skill for creating database-like views in Obsidian using .base files with filter... | kepano/obsidian-skills | 🟢 Active | 94 | 2026-04-02 | tooling | `obsidian`, `base-files`, `database-views` |
+| 49 | [obsidian-bases](https://github.com/kepano/obsidian-skills/tree/main/skills/obsidian-bases) | Skill for creating database-like views in Obsidian using .base files with filter... | kepano/obsidian-skills | 🟢 Active | 94 | 2026-05-07 | tooling | `obsidian`, `base-files`, `database-views` |
 | 50 | [qa-testing-strategy](https://github.com/vasilyu1983/ai-agents-public/tree/main/frameworks/shared-skills/skills/qa-testing-strategy) | Risk-based test strategy for defining coverage, CI gates, flake management, and ... | Vasilyu Skills | 🟢 Active | 94 | 2026-04-08 | testing | `test-strategy`, `quality-engineering`, `ci-cd-gates` |
 | 51 | [agentic-actions-auditor](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agentic-actions-auditor) | Static security analysis methodology for auditing GitHub Actions workflows that ... | Antigravity Skills | 🟢 Active | 93 | 2026-05-07 | ai-ml | `security-audit`, `github-actions`, `ai-agents` |
 | 52 | [agentmail](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agentmail) | REST API and TypeScript SDK providing email infrastructure for AI agents with ka... | Antigravity Skills | 🟢 Active | 93 | 2026-05-07 | ai-ml | `email-api`, `ai-agents`, `typescript-sdk` |
@@ -114,7 +114,7 @@
 ## Top 10 — Install Guide
 
 <details>
-<summary>⭐ <strong>Agent Development</strong> (121.2k★) — Guide for creating autonomous agents with YAML frontmatter a...</summary>
+<summary>⭐ <strong>Agent Development</strong> (121.3k★) — Guide for creating autonomous agents with YAML frontmatter a...</summary>
 
 Guide for creating autonomous agents with YAML frontmatter and system prompts for Claude Code plugins.
 
@@ -128,7 +128,7 @@ git clone anthropics/claude-code
 </details>
 
 <details>
-<summary>⭐ <strong>Skill Development</strong> (121.2k★) — Guidance for creating modular, self-contained skills that ex...</summary>
+<summary>⭐ <strong>Skill Development</strong> (121.3k★) — Guidance for creating modular, self-contained skills that ex...</summary>
 
 Guidance for creating modular, self-contained skills that extend Claude Code plugin capabilities.
 

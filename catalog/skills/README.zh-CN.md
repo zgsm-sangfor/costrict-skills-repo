@@ -58,7 +58,7 @@
 | 46 | [Writing Hookify Rules](https://github.com/anthropics/claude-code/tree/main/plugins/hookify/skills/writing-rules) | 创建 Hookify 规则的技能，用于定义监控模式和触发消息。 | Anthropic 官方 | 🟢 活跃 | 94 | 2026-05-07 | tooling | `hookify-rules`, `claude-code`, `regex-patterns` |
 | 47 | [Command Development](https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/command-development) | 在 Claude Code 中使用 Markdown 文件和 YAML 前置元数据创建斜杠命令的指南。 | Anthropic 官方 | 🟢 活跃 | 94 | 2026-05-07 | tooling | `claude-code`, `slash-commands`, `markdown-prompts` |
 | 48 | [Hook Development](https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/hook-development) | Claude Code 插件的事件驱动自动化钩子，用于验证、执行策略和集成外部工具。 | Anthropic 官方 | 🟢 活跃 | 94 | 2026-05-07 | tooling | `claude-code`, `plugin-development`, `event-driven-automation` |
-| 49 | [obsidian-bases](https://github.com/kepano/obsidian-skills/tree/main/skills/obsidian-bases) | 在 Obsidian 中创建数据库式视图的技能，支持筛选、公式和汇总。 | kepano/obsidian-skills | 🟢 活跃 | 94 | 2026-04-02 | tooling | `obsidian`, `base-files`, `database-views` |
+| 49 | [obsidian-bases](https://github.com/kepano/obsidian-skills/tree/main/skills/obsidian-bases) | 在 Obsidian 中创建数据库式视图的技能，支持筛选、公式和汇总。 | kepano/obsidian-skills | 🟢 活跃 | 94 | 2026-05-07 | tooling | `obsidian`, `base-files`, `database-views` |
 | 50 | [qa-testing-strategy](https://github.com/vasilyu1983/ai-agents-public/tree/main/frameworks/shared-skills/skills/qa-testing-strategy) | 基于风险的测试策略，用于定义覆盖率、CI门控、不稳定测试管理和发布标准。 | Vasilyu Skills | 🟢 活跃 | 94 | 2026-04-08 | testing | `test-strategy`, `quality-engineering`, `ci-cd-gates` |
 | 51 | [agentic-actions-auditor](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agentic-actions-auditor) | 审计 GitHub Actions 工作流中 AI 编码代理安全性的静态分析方法。 | Antigravity Skills | 🟢 活跃 | 93 | 2026-05-07 | ai-ml | `security-audit`, `github-actions`, `ai-agents` |
 | 52 | [agentmail](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agentmail) | 为AI代理提供带积分系统的REST邮件API和TypeScript SDK。 | Antigravity Skills | 🟢 活跃 | 93 | 2026-05-07 | ai-ml | `email-api`, `ai-agents`, `typescript-sdk` |
@@ -114,7 +114,7 @@
 ## Top 10 安装指南
 
 <details>
-<summary>⭐ <strong>Agent Development</strong> (121.2k★) — 为 Claude Code 插件创建自主代理的指南，包含 YAML 前置元数据和系统提示。</summary>
+<summary>⭐ <strong>Agent Development</strong> (121.3k★) — 为 Claude Code 插件创建自主代理的指南，包含 YAML 前置元数据和系统提示。</summary>
 
 为 Claude Code 插件创建自主代理的指南，包含 YAML 前置元数据和系统提示。
 
@@ -128,7 +128,7 @@ git clone anthropics/claude-code
 </details>
 
 <details>
-<summary>⭐ <strong>Skill Development</strong> (121.2k★) — 为 Claude Code 插件创建模块化、自包含技能的开发指南。</summary>
+<summary>⭐ <strong>Skill Development</strong> (121.3k★) — 为 Claude Code 插件创建模块化、自包含技能的开发指南。</summary>
 
 为 Claude Code 插件创建模块化、自包含技能的开发指南。
 
