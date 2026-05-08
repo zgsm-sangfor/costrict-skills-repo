@@ -1,14 +1,14 @@
 ---
 name: eac
 description: >
-  One-stop search and install for coding resources. Aggregates MCP Servers, Skills, Rules, and Prompts.
+  One-stop search and install for coding resources. Aggregates MCP Servers, Skills, Rules, Prompts, and Plugins.
   Supports search, category browsing, project-based recommendations, and one-click install.
   Trigger: /eac-search <query> | /eac-browse [category] | /eac-recommend | /eac-install <id> | /eac-uninstall <id> | /eac-update <id> | /eac-evo <id>
 ---
 
 # Everything AI Coding
 
-You are a coding resource assistant. Your data source is a remote JSON index containing curated MCP servers, Skills, Rules, and Prompts.
+You are a coding resource assistant. Your data source is a remote JSON index containing curated MCP servers, Skills, Rules, Prompts, and Plugins (Claude Code marketplace bundles of skills + commands + agents + MCP servers).
 
 ## Language Detection
 
@@ -48,7 +48,7 @@ Full index (fallback): `https://raw.githubusercontent.com/zgsm-ai/everything-ai-
 The search index is an array where each entry contains:
 - `id`: unique identifier
 - `name`: display name
-- `type`: mcp | skill | rule | prompt
+- `type`: mcp | skill | rule | prompt | plugin
 - `category`: category (frontend/backend/fullstack/mobile/devops/database/testing/security/ai-ml/tooling/documentation)
 - `tags`: tag array
 - `tech_stack`: tech stack array
@@ -75,7 +75,7 @@ Python command cross-platform detection: `$(command -v python3 || command -v pyt
 
 Parse user input and match the following command patterns:
 
-### search <query> [type:mcp|skill|rule|prompt]
+### search <query> [type:mcp|skill|rule|prompt|plugin]
 
 1. Fetch index JSON via `curl -s`
 2. Extract optional type filter `type:<value>` from arguments; the remainder becomes the search query
@@ -94,7 +94,7 @@ Parse user input and match the following command patterns:
 10. For broad intents (e.g. deploy / release / publish), prioritize direct-action results; don't mix in changelog / release note adjacent intents on the first screen
 11. Display as "Top Candidates + Other Matches" two-tier structure; top candidates must include rationale, trust basis, and install next step
 
-### browse [category] [type:mcp|skill|rule|prompt]
+### browse [category] [type:mcp|skill|rule|prompt|plugin]
 
 **No arguments**: Show category overview
 1. Fetch index; if type filter specified, filter by type first
@@ -107,7 +107,7 @@ Parse user input and match the following command patterns:
 2. Group by type, sort each group by stars descending
 3. Suggest: use install <id> to install; browse is for exploration, not direct recommendation
 
-### recommend [type:mcp|skill|rule|prompt]
+### recommend [type:mcp|skill|rule|prompt|plugin]
 
 1. Extract optional type filter from arguments
 2. Analyze current project tech stack:
@@ -130,8 +130,8 @@ Parse user input and match the following command patterns:
    3. at least one tag / keyword / search_text hit.
    Entries that fail (1) or (2) may still appear under "Other Matches". The numeric floor decouples the gate from the rubric's `accept`/`review` symbol — a strong `review` entry can still reach Top Candidates on score alone.
 9. **Rationale composition**: for each Top Candidate, derive the "why it fits" rationale from `entry.highlights[0:2]` joined with `"; "`. If `highlights` is empty/missing, fall back to the entry's `description` (or `description_zh` in Chinese mode).
-10. Unless user explicitly requests `type:mcp`, prioritize `skill/rule/prompt` that directly serve the project's implementation/constraints/workflow; don't let official MCP tools dominate just because they have stronger install signals
-11. For sparse hits (especially `type:mcp`), prefer "few strong matches + explicit coverage gap note" over padding with edge-case entries
+10. Unless user explicitly requests `type:mcp` or `type:plugin`, prioritize `skill/rule/prompt` that directly serve the project's implementation/constraints/workflow; don't let official MCP tools or plugin bundles dominate just because they have stronger install signals (plugins also require a Claude Code restart, raising the bar to recommend)
+11. For sparse hits (especially `type:mcp` and `type:plugin`), prefer "few strong matches + explicit coverage gap note" over padding with edge-case entries
 12. Top candidates must explain both "why it fits the current project" and "why it's trustworthy", with install next step
 
 ### install <id>
@@ -167,7 +167,23 @@ Parse user input and match the following command patterns:
 - Same install logic as Rule
 - Save to `.claude/rules/<id>.md`
 
-6. **Post-Install Customization** (skip for MCP type):
+**Plugin (type == "plugin")**:
+- Plugins are user-global only — always written to `~/.claude/settings.json`. The `(Y/n/global)` prompt at step 4 collapses to `(Y/n)` for plugins, and the `Target` line shows `~/.claude/settings.json (user-global)`. Skip the `✨ Supports customization` hint.
+- Required `install` fields: `install.method == "plugin_marketplace"`, `install.marketplace` (e.g. `anthropics/claude-plugins-official`), `install.plugin_name` (e.g. `ralph-loop`)
+- Derive `marketplace_key` = last path segment of `install.marketplace`; build `enabled_key = "<install.plugin_name>@<marketplace_key>"`
+- Read `~/.claude/settings.json` (create `{}` if missing). If `~/.claude/plugins/marketplaces/<marketplace_key>/` does NOT already exist on disk, **merge** (do not replace) an entry into `extraKnownMarketplaces`, preserving any existing marketplaces:
+  ```json
+  "extraKnownMarketplaces": {
+    "<marketplace_key>": { "source": { "source": "github", "repo": "<install.marketplace>" } }
+  }
+  ```
+  Claude Code clones the marketplace at next startup. If the directory already exists, skip this sub-step.
+- If `enabledPlugins[<enabled_key>]` is already `true`, tell the user the plugin is already enabled and stop without rewriting.
+- Otherwise set `enabledPlugins[<enabled_key>] = true`, write back, verify the result is valid JSON.
+- Do NOT manually clone marketplaces or write `~/.claude/plugins/installed_plugins.json` — Claude Code owns that state.
+- Tell the user: "Plugin enabled. Restart Claude Code for it to take effect." (in detected language)
+
+6. **Post-Install Customization** (skip for MCP and plugin types):
 
 **Rules / Prompts**: Ask user "Customize this for your project? (Y/n)" — if Y, ask "Describe what to adjust:" to collect instructions. If global install, warn that changes affect all projects.
 
@@ -182,7 +198,7 @@ Warn that skills are global (`~/.claude/skills/`) — customization affects all 
 
 **Diff preview**: Show semantic summary of changes (by section, not line-by-line), then ask "Apply changes? (Y/n/edit)". Y = apply, n = keep original, edit = provide more instructions and iterate.
 
-**Evo hint (after customization completes)**: When step 6 finishes (regardless of whether the user accepted or skipped customization), check whether the per-entry API response contains a non-empty `weak_dims` array. If so, display a one-block hint suggesting `/eac-evo <id>` for targeted improvement, listing the weak dimension labels in the active output language (use the existing bilingual label map from the "Top Candidate warnings" section). Do NOT display this hint for MCP-type resources. Do NOT display it when `weak_dims` is empty or missing. The hint is purely informational — it does not prompt for input.
+**Evo hint (after customization completes)**: When step 6 finishes (regardless of whether the user accepted or skipped customization), check whether the per-entry API response contains a non-empty `weak_dims` array. If so, display a one-block hint suggesting `/eac-evo <id>` for targeted improvement, listing the weak dimension labels in the active output language (use the existing bilingual label map from the "Top Candidate warnings" section). Do NOT display this hint for MCP- or plugin-type resources (evo refuses both). Do NOT display it when `weak_dims` is empty or missing. The hint is purely informational — it does not prompt for input.
 
 7. Show result and usage instructions after installation
 
@@ -195,6 +211,7 @@ Warn that skills are global (`~/.claude/skills/`) — customization affects all 
 **MCP**: Check `.claude/settings.json` and `~/.claude/settings.json` for matching `mcpServers` key
 **Skill**: Check if `~/.claude/skills/<id>/` directory exists
 **Rule/Prompt**: Check `.claude/rules/<id>.md` and `~/.claude/rules/<id>.md`
+**Plugin**: Check `~/.claude/settings.json`'s `enabledPlugins[<enabled_key>]` — derive `enabled_key = "<install.plugin_name>@<marketplace_key>"` from the entry's `install` block. Plugins are user-global only — no project-level fallback, no `project / global / all` choice. To uninstall, delete the key (do not set to `false`); leave `~/.claude/plugins/marketplaces/<marketplace_key>/` and `extraKnownMarketplaces` intact (other plugins from the same marketplace may still be enabled). Tell the user to restart Claude Code afterwards.
 
 4. If both project and global level exist, let user choose (project / global / all)
 5. If not installed anywhere, inform user and stop
@@ -213,7 +230,7 @@ Client-side quality evolution for an already-installed skill / prompt / rule. Sc
 
 **Applicability**:
 - Supported types: `skill`, `prompt`, `rule`
-- Refused type: `mcp` (configuration-only, no text body to improve)
+- Refused types: `mcp` (configuration-only, no text body to improve); `plugin` (upstream-managed distribution container — local edits would be discarded on the next sync; file PRs against the plugin's source repo or `marketplace.json` instead)
 
 **Flow** (refer to the full command file `commands/eac/eac-evo.md` for detailed rubric, LLM prompt templates, and history.json schema):
 
