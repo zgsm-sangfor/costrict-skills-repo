@@ -1,5 +1,5 @@
 ---
-description: 'Search coding resources (MCP/Skills/Rules/Prompts). Usage: /eac-search <query>'
+description: 'Search coding resources (MCP/Skills/Rules/Prompts/Plugins). Usage: /eac-search <query>'
 argument-hint: search keywords
 ---
 
@@ -37,8 +37,8 @@ Full index fallback: `https://raw.githubusercontent.com/zgsm-ai/everything-ai-co
 Extract the search query and optional type filter from $ARGUMENTS, then run Bash pre-filtering. **Note: search hits are NOT recommendations — only gate-verified candidates may be labeled as such.**
 
 1. Extract search keywords and optional type filter from `$ARGUMENTS`
-   - Supports `type:mcp`, `type:skill`, `type:rule`, `type:prompt` filters
-   - Example: `/eac-search typescript type:mcp` — search MCP type only
+   - Supports `type:mcp`, `type:skill`, `type:rule`, `type:prompt`, `type:plugin` filters
+   - Example: `/eac-search typescript type:mcp` — search MCP type only; `/eac-search debugging type:plugin` — search plugins only
    - If `type:<value>` is present, extract it as a filter; the rest becomes the search query
 2. Generate up to 3 retrieval keyword sets for discovery:
    - **Original keywords**: the user's actual query

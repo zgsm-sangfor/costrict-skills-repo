@@ -1,5 +1,5 @@
 ---
-description: 'Recommend coding resources based on current project stack. Usage: /eac:recommend [type:mcp|skill|rule|prompt]'
+description: 'Recommend coding resources based on current project stack. Usage: /eac:recommend [type:mcp|skill|rule|prompt|plugin]'
 ---
 
 # Everything AI Coding - Recommend
@@ -35,8 +35,8 @@ Full index fallback: `https://raw.githubusercontent.com/zgsm-ai/everything-ai-co
 ## Execution Flow
 
 1. Extract optional type filter from `$ARGUMENTS`
-   - Supports `type:mcp`, `type:skill`, `type:rule`, `type:prompt` filters
-   - Example: `/eac:recommend type:mcp` — recommend MCP type only
+   - Supports `type:mcp`, `type:skill`, `type:rule`, `type:prompt`, `type:plugin` filters
+   - Example: `/eac:recommend type:mcp` — recommend MCP type only; `/eac:recommend type:plugin` — plugins only
    - If `type:<value>` is present, extract it as a filter
 2. Analyze current project tech stack:
    - Read `package.json` → extract framework names from dependencies (react, next, vue, express, etc.)
@@ -50,7 +50,7 @@ Full index fallback: `https://raw.githubusercontent.com/zgsm-ai/everything-ai-co
    - Retain detected tech stack tags
    - Compress "framework + task" into index-friendly short terms, e.g. `react performance`, `fastapi docs`, `docker ci-cd`
    - If user provided extra context (e.g. skill-only or mcp-only), preserve that constraint — do not overwrite with rewrites
-   - **Default preference rule**: unless user explicitly specifies `type:mcp`, prioritize `skill`, `rule`, `prompt` that directly serve project implementation/constraints/workflow; only include MCP entries when one is clearly the core workflow tool for the scenario
+   - **Default preference rule**: unless user explicitly specifies `type:mcp` or `type:plugin`, prioritize `skill`, `rule`, `prompt` that directly serve project implementation/constraints/workflow; only include MCP entries when one is clearly the core workflow tool for the scenario, and only include plugin entries when a single bundle delivers a workflow that loose skills/rules cannot match (plugins require a Claude Code restart, so the bar is higher)
 4. Download index to temp file: `curl -sf --compressed <index URL> -o "$TMPDIR/everything-ai-coding-index.json"`, on failure try Fallback URL, then local fallback
 5. Pre-filter with Python (cross-platform: use `$(command -v python3 || command -v python)`):
    - Load JSON file
@@ -71,8 +71,8 @@ Full index fallback: `https://raw.githubusercontent.com/zgsm-ai/everything-ai-co
    - Entries failing (1) or (2) are routed to "Other Matches" — they MUST NOT appear in "Top Candidates".
    - The numeric floor (≥70) decouples the gate from the rubric's `accept`/`review` symbol; a strong `review` entry can still reach Top Candidates on score alone. Treat missing `final_score` as `0` (i.e. not eligible).
    - If no candidate passes the gate, output "project matches" or "worth checking" — never force the label "recommendation".
-   - **Type bias correction**: without `type:mcp` constraint, do not let MCP entries dominate over more project-relevant skill/prompt/rule just because MCP has stronger official/install signals
-   - **Sparse hit rule (especially `type:mcp`)**: if the current stack has no obvious specialized candidates, prefer "2 strong matches + explicit thin-coverage note" over padding the list with edge-case entries
+   - **Type bias correction**: without `type:mcp` / `type:plugin` constraint, do not let MCP or plugin entries dominate over more project-relevant skill/prompt/rule just because they carry stronger official/install signals (plugins from the official marketplace inherit `source_priority: 1000` and could otherwise crowd out lighter resources)
+   - **Sparse hit rule (especially `type:mcp` and `type:plugin`)**: if the current stack has no obvious specialized candidates, prefer "2 strong matches + explicit thin-coverage note" over padding the list with edge-case entries
 8. Format results as "Top Candidates + Other Matches" two-tier output, with these constraints:
    - Top Candidates: default 2-3 items, unless results are very close and hard to distinguish
    - Other Matches: default 2-4 supplementary items, do not expand into a long list

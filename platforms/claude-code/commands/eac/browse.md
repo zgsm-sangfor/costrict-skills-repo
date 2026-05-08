@@ -1,5 +1,5 @@
 ---
-description: 'Browse coding resource categories. Usage: /eac:browse [category] [type:mcp|skill|rule|prompt]'
+description: 'Browse coding resource categories. Usage: /eac:browse [category] [type:mcp|skill|rule|prompt|plugin]'
 ---
 
 # Everything AI Coding - Browse
