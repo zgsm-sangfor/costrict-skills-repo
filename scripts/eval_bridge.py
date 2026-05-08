@@ -606,6 +606,29 @@ def map_result_to_entry(entry: dict[str, Any], result: dict[str, Any] | None) ->
             entry["description_original"] = entry.get("description", "")
             entry["description"] = enrichment["summary"]
 
+    # ── Map MCP installability fields ─────────────────────────────────
+    mcp_installability = result.get("mcp_installability")
+    if entry.get("type") == "mcp":
+        if not isinstance(mcp_installability, dict):
+            mcp_installability = {
+                "mcp_schema_valid": False,
+                "mcp_install_state": "unknown",
+                "mcp_validation_tags": ["insufficient_evidence"],
+                "mcp_installability_reason": "本轮评估未返回有效的 MCP 可用性判断。",
+            }
+        if "mcp_schema_valid" in mcp_installability:
+            entry["mcp_schema_valid"] = mcp_installability["mcp_schema_valid"]
+        if mcp_installability.get("mcp_install_state"):
+            entry["mcp_install_state"] = mcp_installability["mcp_install_state"]
+        if mcp_installability.get("mcp_validation_tags") is not None:
+            entry["mcp_validation_tags"] = mcp_installability[
+                "mcp_validation_tags"
+            ]
+        if mcp_installability.get("mcp_installability_reason"):
+            entry["mcp_installability_reason"] = mcp_installability[
+                "mcp_installability_reason"
+            ]
+
     # ── Map health signals (convert to README-compatible format) ──────
     raw_health = result.get("health")
     if raw_health and isinstance(raw_health, dict):
@@ -672,7 +695,11 @@ def _compute_rubric_version_for_task(task_name: str) -> str | None:
         return None
     try:
         metrics = [metric_registry.get(mw.metric) for mw in cfg.metrics]
-        prompt = build_system_prompt(metrics, enrichment=cfg.enrichment)
+        prompt = build_system_prompt(
+            metrics,
+            enrichment=cfg.enrichment,
+            mcp_installability=getattr(cfg, "mcp_installability", False),
+        )
         sha8 = hashlib.sha256(prompt.encode()).hexdigest()[:8]
         return f"{cfg.rubric_major_version}.{sha8}"
     except Exception as exc:  # noqa: BLE001

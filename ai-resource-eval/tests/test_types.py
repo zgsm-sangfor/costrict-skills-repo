@@ -17,6 +17,9 @@ from ai_resource_eval.api.types import (
     EvalResult,
     HealthSignals,
     HeuristicSignalWeight,
+    McpInstallabilityData,
+    McpInstallState,
+    McpValidationTag,
     MetricResult,
     MetricWeight,
     StarRoutingConfig,
@@ -227,6 +230,55 @@ class TestEnrichmentData:
 
 
 # ===================================================================
+# McpInstallabilityData
+# ===================================================================
+
+
+class TestMcpInstallabilityData:
+    """Tests for MCP installability output model."""
+
+    def test_ready_state(self):
+        data = McpInstallabilityData(
+            mcp_schema_valid=True,
+            mcp_install_state="ready",
+            mcp_validation_tags=[
+                "catalog_config_shape_valid",
+                "self_installing_command",
+            ],
+            mcp_installability_reason="catalog 配置可直接运行。",
+        )
+        assert data.mcp_schema_valid is True
+        assert data.mcp_install_state == McpInstallState.ready
+        assert data.mcp_validation_tags == [
+            McpValidationTag.catalog_config_shape_valid,
+            McpValidationTag.self_installing_command,
+        ]
+
+    def test_invalid_state_rejected(self):
+        with pytest.raises(ValidationError):
+            McpInstallabilityData(
+                mcp_schema_valid=False,
+                mcp_install_state="broken",
+            )
+
+    def test_invalid_tag_rejected(self):
+        with pytest.raises(ValidationError):
+            McpInstallabilityData(
+                mcp_schema_valid=True,
+                mcp_install_state="needs_config",
+                mcp_validation_tags=["made_up_tag"],
+            )
+
+    def test_tags_deduped(self):
+        data = McpInstallabilityData(
+            mcp_schema_valid=True,
+            mcp_install_state="needs_config",
+            mcp_validation_tags=["placeholder_path", "placeholder_path"],
+        )
+        assert data.mcp_validation_tags == [McpValidationTag.placeholder_path]
+
+
+# ===================================================================
 # EvalResult
 # ===================================================================
 
@@ -325,6 +377,18 @@ class TestEvalResult:
         }
         r = EvalResult.model_validate(data)
         assert r.enrichment is None
+        assert r.mcp_installability is None
+
+    def test_mcp_installability_present(self):
+        installability = McpInstallabilityData(
+            mcp_schema_valid=True,
+            mcp_install_state="ready",
+            mcp_validation_tags=["catalog_config_ready"],
+            mcp_installability_reason="配置可直接写入 Claude。",
+        )
+        r = self._make_result(mcp_installability=installability)
+        assert r.mcp_installability is not None
+        assert r.mcp_installability.mcp_install_state == McpInstallState.ready
 
 
 # ===================================================================
@@ -464,3 +528,15 @@ class TestTaskConfig:
     def test_enrichment_explicit_false(self):
         cfg = TaskConfig(task="test", metrics=_valid_metrics(), enrichment=False)
         assert cfg.enrichment is False
+
+    def test_mcp_installability_default_false(self):
+        cfg = TaskConfig(task="test", metrics=_valid_metrics())
+        assert cfg.mcp_installability is False
+
+    def test_mcp_installability_explicit_true(self):
+        cfg = TaskConfig(
+            task="mcp_server",
+            metrics=_valid_metrics(),
+            mcp_installability=True,
+        )
+        assert cfg.mcp_installability is True

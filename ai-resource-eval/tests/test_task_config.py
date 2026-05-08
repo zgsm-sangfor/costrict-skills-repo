@@ -66,9 +66,11 @@ class TestAllYamlFilesValid:
     @pytest.mark.parametrize("task_name", ALL_TASK_NAMES)
     def test_rubric_major_version(self, task_name: str):
         cfg = load_task_config(task_name)
-        # 当前所有 task 同步在 v2（引入 install_popularity 信号后强制失效旧 cache）
         assert cfg.rubric_major_version >= 1
-        assert cfg.rubric_major_version == 2
+        if task_name == "mcp_server":
+            assert cfg.rubric_major_version == 3
+        else:
+            assert cfg.rubric_major_version == 2
 
 
 # ===================================================================
@@ -222,6 +224,12 @@ class TestStarRouting:
             for c in configs
         ]
         assert len(set(signal_tuples)) == 1, "All configs should share the same heuristic_signals"
+
+    def test_only_mcp_server_enables_mcp_installability(self):
+        configs = {name: load_task_config(name) for name in ALL_TASK_NAMES}
+        assert configs["mcp_server"].mcp_installability is True
+        for name in ("skill", "rule", "prompt"):
+            assert configs[name].mcp_installability is False
 
 
 # ===================================================================

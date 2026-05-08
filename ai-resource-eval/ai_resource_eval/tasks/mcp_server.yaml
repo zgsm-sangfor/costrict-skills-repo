@@ -40,6 +40,7 @@ thresholds:
   accept: 65
   review: 50
 
-# v2: 引入 install_popularity 健康信号；强制旧 cache 失效以保持 task 间版本一致
-rubric_major_version: 2
+# v3: 在 MCP 评分调用中新增 mcp_installability 字段；强制旧 MCP cache 失效
+rubric_major_version: 3
 enrichment: true
+mcp_installability: true

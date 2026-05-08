@@ -27,6 +27,7 @@ from ai_resource_eval.api.types import (
     EvalItem,
     EvalResult,
     HealthSignals,
+    McpInstallabilityData,
     MetricResult,
     TaskConfig,
 )
@@ -112,14 +113,19 @@ class EvalRunner:
 
         # Enrichment flag from task config
         self._enrichment = task_config.enrichment
+        self._mcp_installability = task_config.mcp_installability
 
         # Pre-build system prompt and schema (same for all entries)
         self._system_prompt = build_system_prompt(
-            self._metrics, enrichment=self._enrichment
+            self._metrics,
+            enrichment=self._enrichment,
+            mcp_installability=self._mcp_installability,
         )
         self._metric_names = [m.name for m in self._metrics]
         self._output_schema = build_output_schema(
-            self._metric_names, enrichment=self._enrichment
+            self._metric_names,
+            enrichment=self._enrichment,
+            mcp_installability=self._mcp_installability,
         )
 
         # Compute rubric version: "{major}.{sha8}"
@@ -290,6 +296,12 @@ class EvalRunner:
             return self._handle_fetch_failure(entry)
 
         content, content_hash = fetch_result
+        if self._mcp_installability:
+            install_metadata = self._build_install_metadata_block(entry)
+            if install_metadata:
+                content_hash = EvalCache.content_hash(
+                    f"{content}\n\n{install_metadata}"
+                )
 
         # 2. Check cache (incremental mode)
         if self._incremental:
@@ -299,6 +311,7 @@ class EvalRunner:
 
         metric_results: dict[str, MetricResult] = {}
         enrichment: EnrichmentData | None = None
+        mcp_installability: McpInstallabilityData | None = None
         llm_score: float | None = None
         judge_result: JudgeResult | None = None
 
@@ -317,7 +330,7 @@ class EvalRunner:
             # Accumulate cost
             self._total_cost_usd += judge_result.cost_usd
 
-            # 5. Parse LLM response into MetricResults + enrichment
+            # 5. Parse LLM response into MetricResults + enrichment/installability
             parsed = self._parse_metrics(judge_result)
             if parsed is None:
                 logger.warning(
@@ -325,7 +338,7 @@ class EvalRunner:
                 )
                 return None
 
-            metric_results, enrichment = parsed
+            metric_results, enrichment, mcp_installability = parsed
 
             # 6. Compute LLM score via ScoringGovernor
             llm_score = ScoringGovernor.compute_final_score(
@@ -346,7 +359,7 @@ class EvalRunner:
                 self._total_cost_usd += judge_result.cost_usd
                 parsed = self._parse_metrics(judge_result)
                 if parsed is not None:
-                    _, enrichment = parsed
+                    _, enrichment, mcp_installability = parsed
             except Exception:
                 logger.debug(
                     "Enrichment-only LLM call failed for %s, continuing without it",
@@ -398,6 +411,7 @@ class EvalRunner:
             entry_id=entry.id,
             metrics=metric_results,
             enrichment=enrichment,
+            mcp_installability=mcp_installability,
             health=health,
             llm_score=llm_score,
             final_score=final_score,
@@ -788,6 +802,12 @@ class EvalRunner:
             parts.append(f"Stars: {entry.stars}\n")
         if entry.tags:
             parts.append(f"Tags: {', '.join(entry.tags)}\n")
+        if self._mcp_installability:
+            install_metadata = self._build_install_metadata_block(entry)
+            if install_metadata:
+                parts.append("\n")
+                parts.append(install_metadata)
+                parts.append("\n")
 
         parts.append("\n---\n\n")
         parts.append("## README Content\n\n")
@@ -795,16 +815,49 @@ class EvalRunner:
 
         return "".join(parts)
 
+    @staticmethod
+    def _build_install_metadata_block(entry: EvalItem) -> str:
+        """Build structured install metadata for MCP installability prompts."""
+        if not entry.install:
+            return "## Catalog Install Metadata\n\ninstall: null"
+
+        install = entry.install
+        method = install.get("method")
+        config = install.get("config")
+        placeholder_hints = install.get("placeholder_hints")
+
+        parts = ["## Catalog Install Metadata\n\n"]
+        parts.append(f"method: {method if method is not None else 'null'}\n")
+        parts.append("config:\n")
+        parts.append(json.dumps(config, ensure_ascii=False, indent=2, sort_keys=True))
+        parts.append("\n")
+        if placeholder_hints:
+            parts.append("placeholder_hints:\n")
+            parts.append(
+                json.dumps(
+                    placeholder_hints,
+                    ensure_ascii=False,
+                    indent=2,
+                    sort_keys=True,
+                )
+            )
+            parts.append("\n")
+        return "".join(parts).rstrip()
+
     # ------------------------------------------------------------------
     # Response parsing
     # ------------------------------------------------------------------
 
     def _parse_metrics(
         self, judge_result: JudgeResult
-    ) -> tuple[dict[str, MetricResult], EnrichmentData | None] | None:
+    ) -> tuple[
+        dict[str, MetricResult],
+        EnrichmentData | None,
+        McpInstallabilityData | None,
+    ] | None:
         """Parse the LLM response into MetricResult objects and optional enrichment.
 
-        Returns a (metrics, enrichment) tuple, or None if metric parsing fails.
+        Returns a (metrics, enrichment, mcp_installability) tuple, or None if metric parsing fails.
         Enrichment parse failure is non-fatal: returns (metrics, None).
         """
         if judge_result.structured is None:
@@ -815,6 +868,7 @@ class EvalRunner:
         if not self._metric_names:
             metrics: dict[str, MetricResult] = {}
             enrichment: EnrichmentData | None = None
+            mcp_installability = self._parse_mcp_installability(judge_result)
             if self._enrichment:
                 raw_enrichment = judge_result.structured.get("enrichment")
                 if raw_enrichment and isinstance(raw_enrichment, dict):
@@ -824,7 +878,7 @@ class EvalRunner:
                         logger.debug(
                             "Failed to parse enrichment (health-only), continuing without it"
                         )
-            return metrics, enrichment
+            return metrics, enrichment, mcp_installability
 
         raw_metrics = judge_result.structured.get("metrics")
         if not isinstance(raw_metrics, dict):
@@ -851,4 +905,29 @@ class EvalRunner:
                 except Exception:
                     logger.debug("Failed to parse enrichment, continuing without it")
 
-        return metrics, enrichment
+        mcp_installability = self._parse_mcp_installability(judge_result)
+
+        return metrics, enrichment, mcp_installability
+
+    def _parse_mcp_installability(
+        self, judge_result: JudgeResult
+    ) -> McpInstallabilityData | None:
+        """Parse optional MCP installability output."""
+        if not self._mcp_installability or judge_result.structured is None:
+            return None
+        raw = judge_result.structured.get("mcp_installability")
+        if raw and isinstance(raw, dict):
+            try:
+                return McpInstallabilityData.model_validate(raw)
+            except Exception:
+                logger.debug(
+                    "Failed to parse MCP installability, using unknown fallback"
+                )
+        else:
+            logger.debug("Missing MCP installability, using unknown fallback")
+        return McpInstallabilityData(
+            mcp_schema_valid=False,
+            mcp_install_state="unknown",
+            mcp_validation_tags=["insufficient_evidence"],
+            mcp_installability_reason="LLM 未返回有效的 MCP 可用性判断。",
+        )

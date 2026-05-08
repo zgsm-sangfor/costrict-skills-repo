@@ -22,6 +22,52 @@ class Decision(str, Enum):
     reject = "reject"
 
 
+class McpInstallState(str, Enum):
+    """Normalized MCP installability state."""
+
+    ready = "ready"
+    needs_config = "needs_config"
+    manual = "manual"
+    invalid = "invalid"
+    unknown = "unknown"
+
+
+class McpValidationTag(str, Enum):
+    """Fixed MCP validation tag vocabulary."""
+
+    readme_config_found = "readme_config_found"
+    catalog_config_shape_valid = "catalog_config_shape_valid"
+    catalog_config_ready = "catalog_config_ready"
+    catalog_config_template = "catalog_config_template"
+    catalog_config_missing = "catalog_config_missing"
+    catalog_config_wrong = "catalog_config_wrong"
+    wrong_config = "wrong_config"
+    remote_url = "remote_url"
+    local_command = "local_command"
+    self_installing_command = "self_installing_command"
+    placeholder_env = "placeholder_env"
+    placeholder_path = "placeholder_path"
+    placeholder_url = "placeholder_url"
+    placeholder_variable = "placeholder_variable"
+    requires_auth = "requires_auth"
+    requires_local_build = "requires_local_build"
+    requires_local_clone = "requires_local_clone"
+    requires_global_install = "requires_global_install"
+    requires_project_context = "requires_project_context"
+    requires_local_app = "requires_local_app"
+    requires_local_server = "requires_local_server"
+    requires_extension = "requires_extension"
+    requires_daemon = "requires_daemon"
+    missing_config = "missing_config"
+    command_invalid = "command_invalid"
+    args_invalid = "args_invalid"
+    env_invalid = "env_invalid"
+    no_mcp_config_found = "no_mcp_config_found"
+    insufficient_evidence = "insufficient_evidence"
+    sdk_not_server = "sdk_not_server"
+    not_mcp_server = "not_mcp_server"
+
+
 class ContentSource(str, Enum):
     """Primary content source strategy."""
 
@@ -169,6 +215,43 @@ class EnrichmentData(BaseModel):
         return [t.lower().strip() for t in v[:5]]
 
 
+class McpInstallabilityData(BaseModel):
+    """MCP installability fields produced alongside evaluation metrics."""
+
+    mcp_schema_valid: bool = Field(
+        ...,
+        description="Whether a Claude-style MCP config can be derived from catalog install metadata or README evidence",
+    )
+    mcp_install_state: McpInstallState = Field(
+        ...,
+        description="Normalized install state: ready, needs_config, manual, invalid, or unknown",
+    )
+    mcp_validation_tags: list[McpValidationTag] = Field(
+        default_factory=list,
+        description="Fixed validation tags explaining source and blocking reasons",
+    )
+    mcp_installability_reason: str = Field(
+        "",
+        description="Short Chinese reason explaining the installability classification",
+    )
+
+    @field_validator("mcp_validation_tags")
+    @classmethod
+    def dedupe_tags(cls, v: list[McpValidationTag]) -> list[McpValidationTag]:
+        seen: set[McpValidationTag] = set()
+        result: list[McpValidationTag] = []
+        for tag in v:
+            if tag not in seen:
+                seen.add(tag)
+                result.append(tag)
+        return result
+
+    @field_validator("mcp_installability_reason")
+    @classmethod
+    def truncate_reason(cls, v: str) -> str:
+        return v[:240] if len(v) > 240 else v
+
+
 class EvalResult(BaseModel):
     """Complete evaluation result for one catalog entry."""
 
@@ -180,6 +263,10 @@ class EvalResult(BaseModel):
     enrichment: EnrichmentData | None = Field(
         None,
         description="Enrichment fields from single LLM call (optional)",
+    )
+    mcp_installability: McpInstallabilityData | None = Field(
+        None,
+        description="MCP installability fields from single LLM call (optional)",
     )
     health: HealthSignals = Field(default_factory=HealthSignals)
     llm_score: float | None = Field(
@@ -291,6 +378,10 @@ class TaskConfig(BaseModel):
     enrichment: bool = Field(
         True,
         description="When true, LLM prompt includes enrichment section for tags/summary/etc.",
+    )
+    mcp_installability: bool = Field(
+        False,
+        description="When true, LLM prompt includes MCP installability fields.",
     )
 
     @model_validator(mode="after")

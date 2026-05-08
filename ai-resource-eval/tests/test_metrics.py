@@ -8,7 +8,7 @@ import pytest
 from pydantic import ValidationError
 
 from ai_resource_eval.api.metric import BaseMetric
-from ai_resource_eval.api.types import MetricResult
+from ai_resource_eval.api.types import McpInstallState, MetricResult
 from ai_resource_eval.metrics.coding_relevance import CodingRelevance
 from ai_resource_eval.metrics.doc_completeness import DocCompleteness
 from ai_resource_eval.metrics.desc_accuracy import DescAccuracy
@@ -146,11 +146,36 @@ class TestBuildSystemPrompt:
         assert "search_terms" in prompt
         assert "highlights" in prompt
 
+    def test_mcp_installability_true_has_section(self):
+        metrics = [CodingRelevance()]
+        prompt = build_system_prompt(metrics, mcp_installability=True)
+        assert "MCP Installability Fields" in prompt
+        assert "mcp_schema_valid" in prompt
+        assert "ready" in prompt
+        assert "needs_config" in prompt
+        assert "Do not invent" in prompt
+
+    def test_mcp_prompt_mentions_representative_regression_cases(self):
+        prompt = build_system_prompt([CodingRelevance()], mcp_installability=True)
+        for text in (
+            "npx -y",
+            "uvx",
+            "/path/to",
+            "C:\\\\ABSOLUTE\\\\PATH",
+            "Smithery",
+            "local app",
+            "extension",
+            "SDK",
+            "wrong package",
+        ):
+            assert text in prompt
+
     def test_enrichment_default_false(self):
         """Default enrichment=False for backward compatibility."""
         metrics = [CodingRelevance()]
         prompt = build_system_prompt(metrics)
         assert "Enrichment Fields" not in prompt
+        assert "MCP Installability Fields" not in prompt
 
 
 class TestBuildOutputSchema:
@@ -192,6 +217,28 @@ class TestBuildOutputSchema:
 
     def test_schema_with_enrichment_is_json_serialisable(self):
         schema = build_output_schema(["coding_relevance"], enrichment=True)
+        json_str = json.dumps(schema)
+        assert isinstance(json_str, str)
+
+    def test_schema_no_mcp_installability_by_default(self):
+        schema = build_output_schema(["coding_relevance"])
+        assert "mcp_installability" not in schema["properties"]
+        assert "mcp_installability" not in schema["required"]
+
+    def test_schema_with_mcp_installability(self):
+        schema = build_output_schema(
+            ["coding_relevance"], mcp_installability=True
+        )
+        assert "mcp_installability" in schema["properties"]
+        assert "mcp_installability" in schema["required"]
+        assert "McpInstallabilityData" in schema["$defs"]
+        assert "McpInstallState" in schema["$defs"]
+        assert "McpValidationTag" in schema["$defs"]
+
+    def test_schema_with_mcp_installability_is_json_serialisable(self):
+        schema = build_output_schema(
+            ["coding_relevance"], mcp_installability=True
+        )
         json_str = json.dumps(schema)
         assert isinstance(json_str, str)
 
@@ -340,3 +387,18 @@ class TestLLMEvalResponse:
         assert resp.enrichment is not None
         assert resp.enrichment.summary == "A great tool"
         assert resp.enrichment.tags == ["tool"]
+
+    def test_mcp_installability_none_by_default(self, mock_response_data):
+        resp = LLMEvalResponse.model_validate(mock_response_data)
+        assert resp.mcp_installability is None
+
+    def test_mcp_installability_parsed(self, mock_response_data):
+        mock_response_data["mcp_installability"] = {
+            "mcp_schema_valid": True,
+            "mcp_install_state": "needs_config",
+            "mcp_validation_tags": ["readme_config_found", "placeholder_path"],
+            "mcp_installability_reason": "README 配置包含本地路径占位。",
+        }
+        resp = LLMEvalResponse.model_validate(mock_response_data)
+        assert resp.mcp_installability is not None
+        assert resp.mcp_installability.mcp_install_state == McpInstallState.needs_config

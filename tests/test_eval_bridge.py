@@ -44,7 +44,7 @@ _SAMPLE_ENRICHMENT = {
 }
 
 
-def _make_eval_result(entry_id, scores=None, enrichment=None):
+def _make_eval_result(entry_id, scores=None, enrichment=None, mcp_installability=None):
     """Create a mock EvalResult-like dict."""
     default_scores = {
         "coding_relevance": 4,
@@ -70,6 +70,8 @@ def _make_eval_result(entry_id, scores=None, enrichment=None):
     }
     if enrichment is not None:
         result["enrichment"] = enrichment
+    if mcp_installability is not None:
+        result["mcp_installability"] = mcp_installability
     return result
 
 
@@ -192,6 +194,69 @@ class TestEnrichmentMapping:
 
         # Empty lists/strings should not overwrite existing values
         assert entry["tags"] == ["keep-me"]
+
+
+class TestMcpInstallabilityMapping:
+    """Test MCP installability fields mapping from EvalResult to catalog entry."""
+
+    def test_mcp_installability_fields_mapped_for_mcp(self):
+        from eval_bridge import map_result_to_entry
+
+        entry = _make_entries()[0]
+        installability = {
+            "mcp_schema_valid": True,
+            "mcp_install_state": "needs_config",
+            "mcp_validation_tags": ["readme_config_found", "placeholder_path"],
+            "mcp_installability_reason": "README 配置包含本地路径占位。",
+        }
+        result = _make_eval_result(
+            "test-mcp-1", mcp_installability=installability
+        )
+
+        map_result_to_entry(entry, result)
+
+        assert entry["mcp_schema_valid"] is True
+        assert entry["mcp_install_state"] == "needs_config"
+        assert entry["mcp_validation_tags"] == [
+            "readme_config_found",
+            "placeholder_path",
+        ]
+        assert entry["mcp_installability_reason"] == "README 配置包含本地路径占位。"
+
+    def test_mcp_installability_not_mapped_for_non_mcp(self):
+        from eval_bridge import map_result_to_entry
+
+        entry = _make_entries()[1]
+        installability = {
+            "mcp_schema_valid": True,
+            "mcp_install_state": "ready",
+            "mcp_validation_tags": ["catalog_config_ready"],
+            "mcp_installability_reason": "配置可直接运行。",
+        }
+        result = _make_eval_result(
+            "test-skill-1", mcp_installability=installability
+        )
+
+        map_result_to_entry(entry, result)
+
+        assert "mcp_schema_valid" not in entry
+        assert "mcp_install_state" not in entry
+        assert "mcp_validation_tags" not in entry
+        assert "mcp_installability_reason" not in entry
+
+    def test_missing_mcp_installability_sets_unknown_fallback(self):
+        from eval_bridge import map_result_to_entry
+
+        entry = _make_entries()[0]
+        entry["mcp_install_state"] = "manual"
+        result = _make_eval_result("test-mcp-1")
+
+        map_result_to_entry(entry, result)
+
+        assert entry["mcp_schema_valid"] is False
+        assert entry["mcp_install_state"] == "unknown"
+        assert entry["mcp_validation_tags"] == ["insufficient_evidence"]
+        assert entry["mcp_installability_reason"] == "本轮评估未返回有效的 MCP 可用性判断。"
 
 
 class TestHealthFormatConversion:

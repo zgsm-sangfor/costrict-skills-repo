@@ -55,6 +55,13 @@ def _make_task_config() -> TaskConfig:
     )
 
 
+def _make_mcp_task_config() -> TaskConfig:
+    cfg = _make_task_config()
+    cfg.task = "mcp_server"
+    cfg.mcp_installability = True
+    return cfg
+
+
 def _make_entry(
     entry_id: str = "test-entry-1",
     name: str = "Test Resource",
@@ -66,9 +73,17 @@ def _make_entry(
     return EvalItem(
         id=entry_id,
         name=name,
+        type="mcp",
         source_url=source_url,
         description=description,
         stars=stars,
+        install={
+            "method": "mcp_config_template",
+            "config": {
+                "command": "python",
+                "args": ["/path/to/server.py"],
+            },
+        },
     )
 
 
@@ -82,8 +97,19 @@ _SAMPLE_ENRICHMENT = {
 }
 
 
+_SAMPLE_MCP_INSTALLABILITY = {
+    "mcp_schema_valid": True,
+    "mcp_install_state": "needs_config",
+    "mcp_validation_tags": ["readme_config_found", "placeholder_path"],
+    "mcp_installability_reason": "README 给出了配置，但包含本地路径占位。",
+}
+
+
 def _make_llm_metrics_response(
-    score: int = 4, *, include_enrichment: bool = False
+    score: int = 4,
+    *,
+    include_enrichment: bool = False,
+    include_mcp_installability: bool = False,
 ) -> dict[str, Any]:
     """Build a valid LLM response dict with all 6 metrics."""
     metric_names = [
@@ -107,6 +133,8 @@ def _make_llm_metrics_response(
     }
     if include_enrichment:
         result["enrichment"] = dict(_SAMPLE_ENRICHMENT)
+    if include_mcp_installability:
+        result["mcp_installability"] = dict(_SAMPLE_MCP_INSTALLABILITY)
     return result
 
 
@@ -127,10 +155,18 @@ def _make_judge_result(score: int = 4) -> JudgeResult:
 class FakeJudge(BaseJudge):
     """A fake judge for testing that returns pre-configured results."""
 
-    def __init__(self, score: int = 4, *, include_enrichment: bool = False) -> None:
+    def __init__(
+        self,
+        score: int = 4,
+        *,
+        include_enrichment: bool = False,
+        include_mcp_installability: bool = False,
+    ) -> None:
         self._score = score
         self._include_enrichment = include_enrichment
+        self._include_mcp_installability = include_mcp_installability
         self._call_count = 0
+        self.last_user_prompt = ""
         self._lock = threading.Lock()
 
     @property
@@ -146,8 +182,11 @@ class FakeJudge(BaseJudge):
     ) -> tuple[str, int, int, int]:
         with self._lock:
             self._call_count += 1
+            self.last_user_prompt = user_prompt
         response = _make_llm_metrics_response(
-            self._score, include_enrichment=self._include_enrichment
+            self._score,
+            include_enrichment=self._include_enrichment,
+            include_mcp_installability=self._include_mcp_installability,
         )
         return json.dumps(response), 500, 200, 1200
 
@@ -343,6 +382,52 @@ class TestFullPipeline:
         # Cache should have at least 1 entry
         stats = runner.cache.stats()
         assert stats["entries"] >= 1
+
+    @patch("ai_resource_eval.runner.GitHubFetcher.fetch")
+    def test_mcp_installability_carried_to_result(self, mock_fetch, tmp_path):
+        """MCP installability output is parsed and stored on EvalResult."""
+        mock_fetch.return_value = ("# MCP README", "hash123")
+        judge = FakeJudge(score=4, include_mcp_installability=True)
+
+        runner = EvalRunner(
+            task_config=_make_mcp_task_config(),
+            judge=judge,
+            cache_dir=str(tmp_path / "cache"),
+            concurrency=1,
+            interactive=False,
+        )
+
+        results = runner.run([_make_entry()])
+
+        assert len(results) == 1
+        installability = results[0].mcp_installability
+        assert installability is not None
+        assert installability.mcp_schema_valid is True
+        assert installability.mcp_install_state.value == "needs_config"
+        assert [t.value for t in installability.mcp_validation_tags] == [
+            "readme_config_found",
+            "placeholder_path",
+        ]
+
+    @patch("ai_resource_eval.runner.GitHubFetcher.fetch")
+    def test_mcp_install_metadata_in_user_prompt(self, mock_fetch, tmp_path):
+        """MCP install metadata is included in the user prompt."""
+        mock_fetch.return_value = ("# MCP README", "hash123")
+        judge = FakeJudge(score=4, include_mcp_installability=True)
+
+        runner = EvalRunner(
+            task_config=_make_mcp_task_config(),
+            judge=judge,
+            cache_dir=str(tmp_path / "cache"),
+            concurrency=1,
+            interactive=False,
+        )
+
+        runner.run([_make_entry()])
+
+        assert "Catalog Install Metadata" in judge.last_user_prompt
+        assert "mcp_config_template" in judge.last_user_prompt
+        assert "/path/to/server.py" in judge.last_user_prompt
 
 
 # ===================================================================
@@ -910,12 +995,33 @@ class TestMetricParsing:
         parsed = runner._parse_metrics(jr)
 
         assert parsed is not None
-        metrics, enrichment = parsed
+        metrics, enrichment, mcp_installability = parsed
         assert len(metrics) == 6
         assert all(isinstance(v, MetricResult) for v in metrics.values())
         assert metrics["coding_relevance"].score == 4
         # No enrichment in default task_config (enrichment=True but no enrichment in response)
         assert enrichment is None
+        assert mcp_installability is None
+
+    def test_mcp_installability_missing_uses_unknown_fallback(self, tmp_path):
+        """MCP task missing installability should produce unknown fallback."""
+        runner = EvalRunner(
+            task_config=_make_mcp_task_config(),
+            judge=FakeJudge(score=4),
+            cache_dir=str(tmp_path / "cache"),
+        )
+
+        jr = _make_judge_result(score=4)
+        parsed = runner._parse_metrics(jr)
+
+        assert parsed is not None
+        _, _, mcp_installability = parsed
+        assert mcp_installability is not None
+        assert mcp_installability.mcp_schema_valid is False
+        assert mcp_installability.mcp_install_state.value == "unknown"
+        assert [t.value for t in mcp_installability.mcp_validation_tags] == [
+            "insufficient_evidence"
+        ]
 
     def test_parse_none_structured(self, task_config, fake_judge, tmp_path):
         """None structured response returns None."""
@@ -988,11 +1094,12 @@ class TestEnrichmentParsing:
         )
         parsed = runner._parse_metrics(jr)
         assert parsed is not None
-        metrics, enrichment = parsed
+        metrics, enrichment, mcp_installability = parsed
         assert enrichment is not None
         assert enrichment.summary == "A tool for testing"
         assert enrichment.summary_zh == "测试工具"
         assert enrichment.tags == ["testing", "tool"]
+        assert mcp_installability is None
 
     def test_enrichment_none_when_missing(self, task_config, fake_judge, tmp_path):
         """When enrichment is not in response, enrichment=None but metrics parse fine."""
@@ -1014,9 +1121,10 @@ class TestEnrichmentParsing:
         )
         parsed = runner._parse_metrics(jr)
         assert parsed is not None
-        metrics, enrichment = parsed
+        metrics, enrichment, mcp_installability = parsed
         assert len(metrics) == 6
         assert enrichment is None
+        assert mcp_installability is None
 
     def test_enrichment_malformed_degrades_gracefully(self, task_config, fake_judge, tmp_path):
         """Malformed enrichment should not affect metrics parsing."""
@@ -1039,9 +1147,10 @@ class TestEnrichmentParsing:
         )
         parsed = runner._parse_metrics(jr)
         assert parsed is not None
-        metrics, enrichment = parsed
+        metrics, enrichment, mcp_installability = parsed
         assert len(metrics) == 6
         assert enrichment is None
+        assert mcp_installability is None
 
     def test_enrichment_disabled_skips_parsing(self, tmp_path):
         """When enrichment=False in config, enrichment is not parsed."""
@@ -1067,8 +1176,9 @@ class TestEnrichmentParsing:
         )
         parsed = runner._parse_metrics(jr)
         assert parsed is not None
-        _, enrichment = parsed
+        _, enrichment, mcp_installability = parsed
         assert enrichment is None
+        assert mcp_installability is None
 
     @patch("ai_resource_eval.runner.GitHubFetcher.fetch")
     def test_full_pipeline_with_enrichment(self, mock_fetch, task_config, tmp_path):

@@ -106,6 +106,59 @@
           }
         }
       },
+      "mcp_schema_valid": {
+        "type": "boolean",
+        "description": "Whether a Claude-style MCP config can be derived from catalog install metadata or README evidence；MCP optional"
+      },
+      "mcp_install_state": {
+        "type": "string",
+        "enum": ["ready", "needs_config", "manual", "invalid", "unknown"],
+        "description": "LLM-classified MCP installability state；MCP optional"
+      },
+      "mcp_validation_tags": {
+        "type": "array",
+        "description": "Fixed validation tags explaining MCP config source and blocking reasons；MCP optional",
+        "items": {
+          "type": "string",
+          "enum": [
+            "readme_config_found",
+            "catalog_config_shape_valid",
+            "catalog_config_ready",
+            "catalog_config_template",
+            "catalog_config_missing",
+            "catalog_config_wrong",
+            "wrong_config",
+            "remote_url",
+            "local_command",
+            "self_installing_command",
+            "placeholder_env",
+            "placeholder_path",
+            "placeholder_url",
+            "placeholder_variable",
+            "requires_auth",
+            "requires_local_build",
+            "requires_local_clone",
+            "requires_global_install",
+            "requires_project_context",
+            "requires_local_app",
+            "requires_local_server",
+            "requires_extension",
+            "requires_daemon",
+            "missing_config",
+            "command_invalid",
+            "args_invalid",
+            "env_invalid",
+            "no_mcp_config_found",
+            "insufficient_evidence",
+            "sdk_not_server",
+            "not_mcp_server"
+          ]
+        }
+      },
+      "mcp_installability_reason": {
+        "type": "string",
+        "description": "Short reason explaining MCP installability classification；MCP optional"
+      },
       "marketplace_url": {
         "type": "string",
         "format": "uri",

@@ -6,7 +6,11 @@ from pydantic import BaseModel, Field
 
 from ai_resource_eval.api.metric import BaseMetric
 from ai_resource_eval.api.registry import Registry
-from ai_resource_eval.api.types import EnrichmentData, MetricResult
+from ai_resource_eval.api.types import (
+    EnrichmentData,
+    McpInstallabilityData,
+    MetricResult,
+)
 
 from ai_resource_eval.metrics.coding_relevance import CodingRelevance
 from ai_resource_eval.metrics.doc_completeness import DocCompleteness
@@ -36,6 +40,10 @@ class LLMEvalResponse(BaseModel):
     enrichment: EnrichmentData | None = Field(
         None,
         description="Enrichment fields (tags, summary, etc.) when enabled",
+    )
+    mcp_installability: McpInstallabilityData | None = Field(
+        None,
+        description="MCP installability fields when enabled for MCP tasks",
     )
 
 
@@ -99,10 +107,69 @@ _ENRICHMENT_ONLY_PREAMBLE = (
 )
 
 
+_MCP_INSTALLABILITY_SECTION = (
+    "## MCP Installability Fields\n\n"
+    "For MCP server resources, also produce an 'mcp_installability' object at "
+    "the same level as 'metrics' and 'enrichment'. Use ONLY the catalog install "
+    "metadata and README evidence shown in the user prompt. Do not invent or "
+    "infer package names, commands, arguments, or URLs from the resource name, "
+    "repository name, or description.\n\n"
+    "The mcp_installability object MUST contain:\n\n"
+    "- **mcp_schema_valid**: boolean. True means a Claude-style MCP config can "
+    "be derived from catalog install metadata or README evidence. Local stdio "
+    "configs require command:string plus optional args:string[] and env:"
+    "object<string,string>. Remote configs require url:string plus optional "
+    "auth/header fields. This field does NOT mean the server is ready to run.\n"
+    "- **mcp_install_state**: one of 'ready', 'needs_config', 'manual', "
+    "'invalid', 'unknown'.\n"
+    "- **mcp_validation_tags**: list of tags from the fixed vocabulary below.\n"
+    "- **mcp_installability_reason**: one short Chinese sentence explaining "
+    "the classification.\n\n"
+    "State rules:\n"
+    "- ready: concrete config is available and can reasonably run after being "
+    "written to Claude config. Self-installing launchers such as 'npx -y', "
+    "'uvx', and 'bunx' may be ready when no other user-specific setup exists.\n"
+    "- needs_config: config shape is clear, but the user must provide secrets, "
+    "tokens, org IDs, URLs, local paths, variables, project context, local "
+    "clone/build, global install, or a local app, extension, server, or daemon.\n"
+    "- manual: the resource may be usable, but neither catalog metadata nor "
+    "README evidence gives concrete command/args/env or url config. Smithery "
+    "or install-helper instructions alone are manual unless the resulting MCP "
+    "config is shown.\n"
+    "- invalid: evidence shows the entry is not an MCP server, is only an SDK/"
+    "framework/library for building MCP servers, catalog config points to the "
+    "wrong package and README lacks a corrected concrete config, or the config "
+    "field types cannot form a Claude-style MCP config.\n"
+    "- unknown: available evidence is genuinely insufficient to decide.\n\n"
+    "Placeholder handling: if a Claude-style config contains placeholders such "
+    "as '/path/to', 'path/to', 'C:\\\\ABSOLUTE\\\\PATH', '<...>', '{...}', "
+    "'[...]', '{{...}}', 'YOUR_*', 'your_*', or '${VAR}', set "
+    "mcp_schema_valid=true and mcp_install_state='needs_config'.\n\n"
+    "README override rule: README evidence may override a missing or wrong "
+    "catalog config only when it explicitly shows the corrected package, "
+    "command, args, env, or url. If catalog config is wrong and README does "
+    "not show a correction, do not guess a replacement; classify as manual or "
+    "invalid according to the evidence.\n\n"
+    "Fixed mcp_validation_tags vocabulary: readme_config_found, "
+    "catalog_config_shape_valid, catalog_config_ready, catalog_config_template, "
+    "catalog_config_missing, catalog_config_wrong, wrong_config, remote_url, "
+    "local_command, self_installing_command, placeholder_env, placeholder_path, "
+    "placeholder_url, placeholder_variable, requires_auth, requires_local_build, "
+    "requires_local_clone, requires_global_install, requires_project_context, "
+    "requires_local_app, requires_local_server, requires_extension, "
+    "requires_daemon, missing_config, command_invalid, args_invalid, "
+    "env_invalid, no_mcp_config_found, insufficient_evidence, sdk_not_server, "
+    "not_mcp_server.\n"
+    "\n"
+    "---\n\n"
+)
+
+
 def build_system_prompt(
     metrics: list[BaseMetric],
     *,
     enrichment: bool = False,
+    mcp_installability: bool = False,
 ) -> str:
     """Concatenate all metric rubrics into one system prompt.
 
@@ -114,6 +181,8 @@ def build_system_prompt(
         is used (no metric rubric sections).
     enrichment:
         When True, append the enrichment section to the prompt.
+    mcp_installability:
+        When True, append the MCP installability section to the prompt.
 
     Returns
     -------
@@ -125,7 +194,12 @@ def build_system_prompt(
         # 直接给 enrichment 指令。无 metrics 又无 enrichment 的退化路径
         # 仍输出 preamble，避免 prompt 为空字符串。
         if enrichment:
-            return _ENRICHMENT_ONLY_PREAMBLE + _ENRICHMENT_SECTION
+            prompt = _ENRICHMENT_ONLY_PREAMBLE + _ENRICHMENT_SECTION
+            if mcp_installability:
+                prompt += _MCP_INSTALLABILITY_SECTION
+            return prompt
+        if mcp_installability:
+            return _SYSTEM_PREAMBLE + _MCP_INSTALLABILITY_SECTION
         return _SYSTEM_PREAMBLE
     parts = [_SYSTEM_PREAMBLE]
     for metric in metrics:
@@ -133,6 +207,8 @@ def build_system_prompt(
         parts.append("\n---\n\n")
     if enrichment:
         parts.append(_ENRICHMENT_SECTION)
+    if mcp_installability:
+        parts.append(_MCP_INSTALLABILITY_SECTION)
     return "".join(parts)
 
 
@@ -140,6 +216,7 @@ def build_output_schema(
     metric_names: list[str],
     *,
     enrichment: bool = False,
+    mcp_installability: bool = False,
 ) -> dict:
     """Return the JSON schema for the expected LLM evaluation output.
 
@@ -153,6 +230,8 @@ def build_output_schema(
         List of dimension names that the LLM should produce results for.
     enrichment:
         When True, include the enrichment object in the schema.
+    mcp_installability:
+        When True, include the MCP installability object in the schema.
 
     Returns
     -------
@@ -182,6 +261,16 @@ def build_output_schema(
         properties["enrichment"] = {"$ref": "#/$defs/EnrichmentData"}
         required.append("enrichment")
         defs["EnrichmentData"] = enrichment_schema
+
+    if mcp_installability:
+        mcp_installability_schema = McpInstallabilityData.model_json_schema()
+        nested_defs = mcp_installability_schema.pop("$defs", {})
+        defs.update(nested_defs)
+        properties["mcp_installability"] = {
+            "$ref": "#/$defs/McpInstallabilityData"
+        }
+        required.append("mcp_installability")
+        defs["McpInstallabilityData"] = mcp_installability_schema
 
     return {
         "type": "object",
