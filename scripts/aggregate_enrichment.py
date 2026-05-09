@@ -163,6 +163,64 @@ def _build_old_eval_lookup(old_entries: list[dict[str, Any]]) -> dict[str, dict[
     return lookup
 
 
+# Fields that LLM enrichment writes onto the entry top-level (via
+# ``map_result_to_entry``) — distinct from data-layer fields that
+# ``merge_index.py --skip-enrichment`` produces from upstream sync. When the
+# fallback path restores an entry from old catalog, these side-effects must
+# come along too, otherwise README / search-index regress for fallback rows.
+_LLM_DERIVED_SIDE_EFFECT_FIELDS = (
+    "health",
+    "description_zh",
+    "description_original",
+    "search_terms",
+    "highlights",
+    # description is also LLM-rewriteable (enrichment.summary), but the
+    # data layer always supplies a non-empty description from upstream sync,
+    # so only restore description from old catalog if old had description_original
+    # (signal that LLM had rewritten it).
+    # mcp_installability fields — only relevant for type=mcp:
+    "mcp_install_state",
+    "mcp_validation_tags",
+    "mcp_schema_valid",
+    "mcp_installability_reason",
+)
+
+
+def _build_old_full_lookup(old_entries: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+    """Build ``{entry_id: full_old_entry}`` for fallback side-effect overlay.
+
+    Distinct from ``_build_old_eval_lookup``: this returns the entire old entry
+    so the fallback path can copy LLM-derived side-effect fields (health,
+    description_zh, search_terms, mcp_installability...) back onto the
+    data-layer entry. Without this, every fallback row drops those fields.
+    """
+    lookup: dict[str, dict[str, Any]] = {}
+    for entry in old_entries:
+        if not isinstance(entry, dict):
+            continue
+        eid = entry.get("id")
+        if not eid:
+            continue
+        lookup[str(eid)] = entry
+    return lookup
+
+
+def _overlay_old_side_effects(entry: dict[str, Any], old_entry: dict[str, Any]) -> None:
+    """Copy LLM-derived side-effect fields from ``old_entry`` onto ``entry``.
+
+    Used in the fallback path so rows that didn't get re-evaluated this run
+    retain prior health / description_zh / search_terms / highlights / mcp
+    installability info instead of regressing to the data-layer placeholder.
+    """
+    for field in _LLM_DERIVED_SIDE_EFFECT_FIELDS:
+        if field in old_entry and old_entry[field] is not None:
+            entry[field] = old_entry[field]
+    # description: only restore if old was LLM-rewritten (signal: description_original
+    # was present in old catalog). Otherwise the data-layer description is fresher.
+    if old_entry.get("description_original") and old_entry.get("description"):
+        entry["description"] = old_entry["description"]
+
+
 def _load_partial_artifact(path: Path) -> dict[str, Any] | None:
     """Load a single ``<type>.json`` artifact written by ``run_enrichment.py``.
 
@@ -347,9 +405,15 @@ def main(argv: list[str] | None = None) -> int:
         logger.warning("Catalog %s is not a list; aborting aggregate", catalog_path)
         return 0
 
-    # ---- Build old evaluation lookup from git HEAD ----------------------------
+    # ---- Build old evaluation + full-entry lookups from git HEAD --------------
+    # old_eval_by_id: just evaluation field, used as fallback evaluation source.
+    # old_full_by_id: whole old entry, used to overlay LLM-derived side-effect
+    # fields (health / description_zh / search_terms / mcp_installability...) on
+    # the fallback path so rows that didn't get re-evaluated this run don't
+    # regress to the data-layer placeholder.
     old_entries = _load_old_catalog_from_git(catalog_path)
     old_eval_by_id = _build_old_eval_lookup(old_entries)
+    old_full_by_id = _build_old_full_lookup(old_entries)
     logger.info(
         "Loaded %d old evaluations from git HEAD:%s", len(old_eval_by_id), catalog_path
     )
@@ -422,9 +486,22 @@ def main(argv: list[str] | None = None) -> int:
             # Old catalog evaluation is already in flattened form (last run's
             # aggregate output), so assign directly.
             entry["evaluation"] = old_eval_by_id[eid_str]
+            # Also overlay LLM-derived side-effect fields (health,
+            # description_zh, search_terms, highlights, mcp_installability...)
+            # from the old entry — without this, fallback rows lose all those
+            # fields because the data-layer catalog only has upstream sync data.
+            old_entry = old_full_by_id.get(eid_str)
+            if old_entry:
+                _overlay_old_side_effects(entry, old_entry)
             per_type_stats[t]["fallback_old"] += 1
         else:
             entry["evaluation"] = _synthesize_health_only(entry)
+            # Even when there's no old evaluation, an old entry might still
+            # have side-effect fields (e.g. mcp data-layer fields persisted
+            # across runs). Overlay them defensively.
+            old_entry = old_full_by_id.get(eid_str)
+            if old_entry:
+                _overlay_old_side_effects(entry, old_entry)
             per_type_stats[t]["fallback_synth"] += 1
 
         # Promote scoring fields to top level for search/browse/recommend

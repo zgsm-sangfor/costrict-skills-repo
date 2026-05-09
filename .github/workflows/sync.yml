@@ -6,13 +6,18 @@ on:
   workflow_dispatch:  # Manual trigger
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  sync:
+  # ---------------------------------------------------------------------------
+  # Job 1: sync-data
+  # 拉取上游、合并 catalog 数据层（不跑 LLM 富化）。产物上传为 artifact 供
+  # enrich matrix 与 aggregate 消费。这一步不写 main 的 catalog/，由 aggregate
+  # 负责最终 commit + push。
+  # ---------------------------------------------------------------------------
+  sync-data:
     runs-on: ubuntu-latest
-    timeout-minutes: 480
-
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
 
@@ -39,16 +44,12 @@ jobs:
             catalog/skills/.llm_cache.json
             catalog/maintenance/incremental_recrawl_state.json
             scripts/fallback_skill_repos.json
-            .eval_cache/
-          # cache key 含每周时间戳：周一新一轮 sync 时强制失效，避免上游 stale snapshot
           key: sync-caches-${{ steps.week.outputs.stamp }}-${{ github.run_number }}
           restore-keys: |
             sync-caches-${{ steps.week.outputs.stamp }}-
             sync-caches-
 
-      # skills.sh 缓存独立隔离：restore-keys 只含本周 stamp 前缀，禁止跨周回退。
-      # 修复点（P2-2）：sync-caches- 兜底前缀会让新一周首次运行错误恢复上周 .skills_sh_cache/，
-      # 上游 fetch 失败时 sync_skills_sh.py 会复用旧 snapshot，weekly stamp 失效语义被破坏。
+      # skills.sh 缓存独立隔离：restore-keys 仅本周 stamp 前缀，禁止跨周回退。
       - name: Restore skills.sh weekly cache
         id: cache-restore-skills-sh
         uses: actions/cache/restore@v4
@@ -59,7 +60,6 @@ jobs:
           restore-keys: |
             skills-sh-cache-${{ steps.week.outputs.stamp }}-
 
-      # MCP registry 缓存独立隔离：restore-keys 仅本周 stamp 前缀，禁止跨周回退
       - name: Restore MCP registry weekly cache
         id: cache-restore-mcp-registry
         uses: actions/cache/restore@v4
@@ -70,7 +70,6 @@ jobs:
           restore-keys: |
             mcp-registry-cache-${{ steps.week.outputs.stamp }}-
 
-      # windsurfrules 缓存独立隔离：同上
       - name: Restore windsurfrules weekly cache
         id: cache-restore-windsurfrules
         uses: actions/cache/restore@v4
@@ -81,7 +80,6 @@ jobs:
           restore-keys: |
             windsurfrules-cache-${{ steps.week.outputs.stamp }}-
 
-      # plugins (official marketplaces) 缓存独立隔离：同上，仅本周 stamp 前缀
       - name: Restore plugins-official weekly cache
         id: cache-restore-plugins-official
         uses: actions/cache/restore@v4
@@ -92,7 +90,6 @@ jobs:
           restore-keys: |
             plugins-official-cache-${{ steps.week.outputs.stamp }}-
 
-      # plugins (claude-plugins.dev) 缓存独立隔离：同上，仅本周 stamp 前缀
       - name: Restore plugins-dev weekly cache
         id: cache-restore-plugins-dev
         uses: actions/cache/restore@v4
@@ -104,70 +101,77 @@ jobs:
             plugins-dev-cache-${{ steps.week.outputs.stamp }}-
 
       - name: Crawl mcp.so (incremental)
-        run: python scripts/crawl_mcp_so.py --mode incremental
+        run: python -u scripts/crawl_mcp_so.py --mode incremental
+        env:
+          PYTHONUNBUFFERED: "1"
         timeout-minutes: 15
         continue-on-error: true
 
       - name: Sync MCP servers
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/sync_mcp.py
+          PYTHONUNBUFFERED: "1"
+        run: python -u scripts/sync_mcp.py
         continue-on-error: true
 
       - name: Sync MCP registry
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/sync_mcp_registry.py
+          PYTHONUNBUFFERED: "1"
+        run: python -u scripts/sync_mcp_registry.py
         timeout-minutes: 10
         continue-on-error: true
 
       - name: Sync Rules
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/sync_rules.py
+          PYTHONUNBUFFERED: "1"
+        run: python -u scripts/sync_rules.py
         continue-on-error: true
 
       - name: Sync awesome-windsurfrules
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/sync_windsurfrules.py
+          PYTHONUNBUFFERED: "1"
+        run: python -u scripts/sync_windsurfrules.py
         timeout-minutes: 10
         continue-on-error: true
 
       - name: Sync Skills
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/sync_skills.py
+          PYTHONUNBUFFERED: "1"
+        run: python -u scripts/sync_skills.py
         timeout-minutes: 30
         continue-on-error: true
 
-      # skills.sh Tier 1 源：拉取 mastra-ai/skills-api 静态 JSON，零 rate limit
-      # 失败兜底：continue-on-error 保证 merge_index 仍能基于已有 skills_sh_index.json 跑
       - name: Sync skills.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/sync_skills_sh.py
+          PYTHONUNBUFFERED: "1"
+        run: python -u scripts/sync_skills_sh.py
         timeout-minutes: 10
         continue-on-error: true
 
       - name: Sync Prompts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/sync_prompts.py
+          PYTHONUNBUFFERED: "1"
+        run: python -u scripts/sync_prompts.py
         continue-on-error: true
 
-      # Plugins 官方 marketplaces：anthropics/claude-plugins-official + obra/superpowers-marketplace
-      # 失败兜底：continue-on-error 保证 merge_index 仍能基于已有 plugins/index.json 跑
       - name: Sync Plugins (official marketplaces)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/sync_plugins_official.py
+          PYTHONUNBUFFERED: "1"
+        run: python -u scripts/sync_plugins_official.py
         timeout-minutes: 10
         continue-on-error: true
 
-      # Plugins claude-plugins.dev：分页爬取，本地 cache 每页持久化
       - name: Sync Plugins (claude-plugins.dev)
-        run: python scripts/sync_plugins_dev.py
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: python -u scripts/sync_plugins_dev.py
         timeout-minutes: 15
         continue-on-error: true
 
@@ -186,64 +190,23 @@ jobs:
             exit 1
           fi
 
-      - name: Merge indexes
+      # 数据层 merge：跑 dedup / overlay / governance / lifecycle，**不**跑 LLM 富化。
+      # 输出 catalog/index.json 含 evaluation={} 占位，由后续 enrich + aggregate 填充。
+      - name: Merge indexes (data layer only)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
-          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
-          LLM_MODEL: ${{ secrets.LLM_MODEL }}
-          EVAL_DRY_RUN: ${{ vars.EVAL_DRY_RUN || 'true' }}
-          EVAL_INCREMENTAL: "true"
-          # MiMo (mimo-v2.5-pro) 反压式并发控制：实测 16 并发触发 429 + 部分
-          # 挂连接 → ReadTimeout；8 并发仍偶发 ReadTimeout（高负载长 prompt）；
-          # 6 是经验保守值。配合 LLM_TIMEOUT=300 让单次调用宽容到 5min，
-          # BaseJudge 已自动重试 ReadTimeout 3 次，足以兜住偶发抖动。
-          # 切回 DeepSeek 后可通过 vars.EVAL_CONCURRENCY 调回 16。
-          EVAL_CONCURRENCY: ${{ vars.EVAL_CONCURRENCY || '6' }}
-          # OpenAICompatJudge 单次 HTTP 调用 timeout（秒）。MiMo 长 prompt
-          # 单次最长实测 ~30s，但服务端排队时可能延长。300s 留充足余量。
-          LLM_TIMEOUT: ${{ vars.LLM_TIMEOUT || '300' }}
-        run: python scripts/merge_index.py
-        continue-on-error: true
+          PYTHONUNBUFFERED: "1"
+        run: python -u scripts/merge_index.py --skip-enrichment
 
-      - name: Generate catalog sub-directory READMEs
-        run: |
-          if [ -s catalog/index.json ]; then
-            python scripts/generate_catalog_readme.py
-          else
-            echo "Skipping: catalog/index.json missing or empty"
-          fi
-
-      - name: Update bilingual README files
-        run: python scripts/update_readme.py
-
-      # 覆盖率审计：对照 popular_skills_expected.yaml 检查热门 skill 命中状态
-      # 当前脚本尚未实现（Section 8），continue-on-error 保证不阻断主流程
-      - name: Audit popular skill coverage
-        run: |
-          if [ -f scripts/audit_popular_coverage.py ]; then
-            python scripts/audit_popular_coverage.py
-          else
-            echo "INFO: scripts/audit_popular_coverage.py 尚未实现，跳过覆盖率审计"
-          fi
-        continue-on-error: true
-
-      - name: Commit and push if changed
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add catalog/ README.md README.zh-CN.md
-          # docs/coverage_report.md 在 gitignore 中，需要 -f 才能纳入 commit
-          git add -f docs/coverage_report.md 2>/dev/null || true
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "[chore] 每周自动同步上游资源 $(date +%Y-%m-%d)"
-            git stash --include-untracked
-            git pull --rebase
-            git push
-            git stash pop || true
-          fi
+      # catalog-data-only artifact：含 catalog/ 目录全部内容（含 maintenance 子目录）
+      # 供 enrich matrix + aggregate 消费。retention-days 1 默认即可，aggregate 几小时后跑完。
+      - name: Upload catalog data layer
+        uses: actions/upload-artifact@v4
+        with:
+          name: catalog-data-only
+          path: catalog/
+          retention-days: 1
+          if-no-files-found: error
 
       - name: Save sync caches
         uses: actions/cache/save@v4
@@ -254,11 +217,8 @@ jobs:
             catalog/skills/.llm_cache.json
             catalog/maintenance/incremental_recrawl_state.json
             scripts/fallback_skill_repos.json
-            .eval_cache/
-          # 与 restore 一致：含每周时间戳，确保 stale 快照随周失效
           key: sync-caches-${{ steps.week.outputs.stamp }}-${{ github.run_number }}
 
-      # skills.sh 缓存独立 save：与 restore 对齐，仅 weekly stamp 前缀
       - name: Save skills.sh weekly cache
         uses: actions/cache/save@v4
         if: always() && steps.cache-restore-skills-sh.outputs.cache-hit != 'true'
@@ -298,3 +258,365 @@ jobs:
           path: |
             .plugins_dev_cache/
           key: plugins-dev-cache-${{ steps.week.outputs.stamp }}-${{ github.run_number }}
+
+  # ---------------------------------------------------------------------------
+  # Job 2: enrich (matrix per type)
+  # 每个 type 一个独立 cell，6h 配额内能跑完就跑完，跑不完靠 --max-wall-seconds
+  # 主动收口写 partial artifact + checkpoint，下周 cron 接力。
+  # fail-fast: false 让单 type 失败不杀其他 cell。
+  # ---------------------------------------------------------------------------
+  enrich:
+    needs: sync-data
+    runs-on: ubuntu-latest
+    timeout-minutes: 350  # 5h50m，给脚本预算 + artifact upload 留余量
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        type: [mcp, skill, rule, prompt, plugin]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install requests
+          pip install -e ai-resource-eval
+
+      - name: Compute weekly cache stamp
+        id: week
+        run: echo "stamp=$(date -u +%Y-%U)" >> "$GITHUB_OUTPUT"
+
+      # Per-type .eval_cache：每个 cell 独立 cache，避免 5 cell 并发写同 key
+      # 数据丢失。代价：首次切换全部 miss（V3 大跑本来就是这样）。
+      - name: Restore eval cache (per-type)
+        id: cache-restore-eval
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            .eval_cache/
+          key: eval-cache-${{ matrix.type }}-${{ steps.week.outputs.stamp }}-${{ github.run_number }}
+          restore-keys: |
+            eval-cache-${{ matrix.type }}-${{ steps.week.outputs.stamp }}-
+            eval-cache-${{ matrix.type }}-
+
+      - name: Download catalog data layer
+        uses: actions/download-artifact@v4
+        with:
+          name: catalog-data-only
+          path: catalog/
+
+      # 单 cell 富化：脚本预算 19800s = 5h30m，比 step timeout (335min=20100s)
+      # 短 5min，给 artifact upload 留时间避免 runner 硬杀。
+      - name: Run enrichment (type=${{ matrix.type }})
+        timeout-minutes: 335
+        # 单 cell 失败不阻断整个 Weekly Sync——aggregate 用旧 catalog +
+        # health-only 兜底，deploy-pages.yml 看 sync 顶层 conclusion 决定
+        # 是否 publish，不能让单个 type 红就 block 全部。失败信号通过
+        # failure_log 跨周接力。
+        continue-on-error: true
+        env:
+          PYTHONUNBUFFERED: "1"
+          # PluginContentFetcher (matrix.type=plugin) 用 GITHUB_TOKEN 调
+          # GitHub Tree API；其他 type 也偶尔走 GitHubFetcher 拉 README，
+          # 全部传 token 避免 60/h 未授权限流。
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+          # OQ4 实测结论（design.md）：sync-test 16 并发触发限流大批失败，
+          # 保持默认 6 让单周完成度可控。可通过 vars.EVAL_CONCURRENCY 上调。
+          EVAL_CONCURRENCY: ${{ vars.EVAL_CONCURRENCY || '6' }}
+          LLM_TIMEOUT: ${{ vars.LLM_TIMEOUT || '300' }}
+          EVAL_DRY_RUN: ${{ vars.EVAL_DRY_RUN || 'true' }}
+        run: |
+          python -u scripts/run_enrichment.py \
+            --type ${{ matrix.type }} \
+            --max-wall-seconds 19800
+
+      # always() 保证脚本预算 / 异常退出仍能上传 partial artifact 给 aggregate 兜底。
+      - name: Upload enrichment artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: enrichment-${{ matrix.type }}
+          path: |
+            tests/_enrich_output/${{ matrix.type }}.json
+            catalog/maintenance/checkpoints/${{ matrix.type }}.json
+            catalog/maintenance/eval_failures.json
+          retention-days: 1
+          if-no-files-found: warn
+
+      - name: Save eval cache (per-type)
+        uses: actions/cache/save@v4
+        if: always() && steps.cache-restore-eval.outputs.cache-hit != 'true'
+        with:
+          path: |
+            .eval_cache/
+          key: eval-cache-${{ matrix.type }}-${{ steps.week.outputs.stamp }}-${{ github.run_number }}
+
+  # ---------------------------------------------------------------------------
+  # Job 3: aggregate
+  # 合并 5 个 partial artifact 回主 catalog/index.json，对失败 cell 走兜底链
+  # （新评估 > 旧 catalog > health-only 合成），生成 README，commit + push。
+  # if: always() 保证哪怕个别 enrich cell 红了也能 publish。
+  # ---------------------------------------------------------------------------
+  aggregate:
+    needs: [sync-data, enrich]
+    if: always() && needs.sync-data.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install requests
+          pip install -e ai-resource-eval
+
+      # 先拿数据层 catalog（含 evaluation={} 占位）作为 base。
+      - name: Download catalog data layer
+        uses: actions/download-artifact@v4
+        with:
+          name: catalog-data-only
+          path: catalog/
+
+      # 再拿所有 enrichment-* artifact，每个 type 一份 partial output。
+      # 默认下载到 ./enrichment-mcp/, ./enrichment-skill/ 等子目录。
+      - name: Download enrichment artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: enrichment-*
+          path: ./_enrichment_artifacts
+
+      # 把每个 enrichment-{type} 子目录里的 partial output 平铺到
+      # tests/_enrich_output/ 供 aggregate_enrichment.py 消费。同时把每个 cell
+      # 的 checkpoint + 失败台账复制回 catalog/maintenance/ —— 这两份是
+      # 跨周持久化的关键状态，下次 cron 必须能读到。台账 union 在下一个
+      # step 完成（多 cell 各写一份，需要合并）。
+      - name: Stage partial artifacts
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: |
+          mkdir -p tests/_enrich_output
+          mkdir -p catalog/maintenance/checkpoints
+          for type_dir in ./_enrichment_artifacts/enrichment-*; do
+            type_name=$(basename "$type_dir" | sed 's/^enrichment-//')
+            partial="$type_dir/tests/_enrich_output/${type_name}.json"
+            if [ -f "$partial" ]; then
+              cp "$partial" "tests/_enrich_output/${type_name}.json"
+              echo "staged partial for type=$type_name"
+            else
+              echo "WARNING: no partial artifact found for type=$type_name (cell failed)"
+            fi
+            # Per-type checkpoint：每 cell 只写自己 type 的 checkpoint，无冲突。
+            ckpt="$type_dir/catalog/maintenance/checkpoints/${type_name}.json"
+            if [ -f "$ckpt" ]; then
+              cp "$ckpt" "catalog/maintenance/checkpoints/${type_name}.json"
+              echo "staged checkpoint for type=$type_name"
+            fi
+          done
+          ls -la tests/_enrich_output/ catalog/maintenance/checkpoints/ || true
+
+      # 5 个 enrich cell 各写自己工作目录的 catalog/maintenance/eval_failures.json，
+      # 这一步把 5 份 ledger union 成单份并落到 catalog/maintenance/。每个 cell
+      # 只评估自己 type 的 entry，所以 entry_id 在 5 份 ledger 间不冲突；
+      # 防御性 union：若同 id 出现多次，取 attempt_count 最大的那份（更悲观）。
+      - name: Merge failure ledgers
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: |
+          python -u - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          # 先识别本周哪些 cell 上传了自己的 ledger（视为该 type 这一轮的
+          # 权威状态）；这些 type 在 base ledger 中的旧记录应该被丢弃，否则
+          # 上周失败、本周成功的 entry 会被错误地保留 backoff 历史。
+          ledger_paths = sorted(Path("./_enrichment_artifacts").glob(
+              "enrichment-*/catalog/maintenance/eval_failures.json"
+          ))
+          # artifact 路径形如 ./_enrichment_artifacts/enrichment-mcp/catalog/maintenance/eval_failures.json
+          # 倒数第 4 段是 enrichment-{type}
+          covered_types = set()
+          for lp in ledger_paths:
+              parts = lp.parts
+              for p in parts:
+                  if p.startswith("enrichment-"):
+                      covered_types.add(p[len("enrichment-"):])
+                      break
+          print(f"cells uploaded ledger for types: {sorted(covered_types)}")
+
+          # 然后 seed base ledger（catalog-data-only artifact 带回的上周台账）
+          # —— 但仅保留**未被本周 cell 覆盖**的 type 的旧记录；这样某 cell
+          # 整个失败没上传 ledger 时，该 type 上周记录不丢；本周成功 cell 的
+          # 旧失败记录由 cell artifact 决定（缺失 = 已 record_success）。
+          base_path = Path("catalog/maintenance/eval_failures.json")
+          merged = {
+              "schema_version": 1,
+              # NOTE：本字段在 5-cell 架构下并不严谨——每 type 有独立
+              # rubric_version（task_name + sha8），合并为单值会让下周
+              # FailureLog.load() 对其他 4 type 触发 rubric mismatch reset。
+              # 暂用 union 中遇到的第一个非空值兜底；正解需要 schema v2 的
+              # per-type rubric_versions 字段，留作 follow-up。
+              "rubric_version": "",
+              "updated_at": "",
+              "failures": {},
+          }
+          if base_path.exists():
+              try:
+                  base = json.loads(base_path.read_text(encoding="utf-8"))
+                  if isinstance(base, dict):
+                      if base.get("rubric_version"):
+                          merged["rubric_version"] = str(base["rubric_version"])
+                      if base.get("updated_at"):
+                          merged["updated_at"] = str(base["updated_at"])
+                      base_failures = base.get("failures") or {}
+                      kept_from_base = 0
+                      if isinstance(base_failures, dict):
+                          for eid, rec in base_failures.items():
+                              if not isinstance(rec, dict):
+                                  continue
+                              # Drop base records of types whose cell ran this
+                              # week — those cells' ledgers are now authoritative.
+                              if rec.get("type") in covered_types:
+                                  continue
+                              merged["failures"][eid] = rec
+                              kept_from_base += 1
+                      print(
+                          f"seeded {kept_from_base} records from base ledger "
+                          f"(dropped covered-type rows)"
+                      )
+              except Exception as exc:
+                  print(f"WARN: failed to seed from base ledger: {exc}")
+
+          source_count = 0
+          for lp in ledger_paths:
+              try:
+                  data = json.loads(lp.read_text(encoding="utf-8"))
+              except Exception as exc:
+                  print(f"WARN: skip {lp}: {exc}")
+                  continue
+              source_count += 1
+              if not merged["rubric_version"]:
+                  merged["rubric_version"] = str(data.get("rubric_version", ""))
+              if str(data.get("updated_at", "")) > merged["updated_at"]:
+                  merged["updated_at"] = str(data.get("updated_at", ""))
+              for eid, rec in (data.get("failures") or {}).items():
+                  if not isinstance(rec, dict):
+                      continue
+                  prev = merged["failures"].get(eid)
+                  if prev is None:
+                      merged["failures"][eid] = rec
+                  else:
+                      # Conflict: keep the higher attempt_count + later last_failed_at.
+                      if int(rec.get("attempt_count", 0)) > int(prev.get("attempt_count", 0)):
+                          merged["failures"][eid] = rec
+
+          out_path = Path("catalog/maintenance/eval_failures.json")
+          out_path.parent.mkdir(parents=True, exist_ok=True)
+          out_path.write_text(
+              json.dumps(merged, indent=2, ensure_ascii=False, sort_keys=True) + "\n",
+              encoding="utf-8",
+          )
+          print(
+              f"merged {len(merged['failures'])} failure records "
+              f"from {source_count} cells -> {out_path}"
+          )
+          PY
+
+      - name: Aggregate enrichment into catalog
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: python -u scripts/aggregate_enrichment.py
+
+      # 老 merge_index 路径会在 enrichment 后跑 apply_governance 过滤
+      # decision=reject 的 entry。新 aggregate 路径只做 stitching 不过滤，
+      # 这里补一次治理：EVAL_DRY_RUN=true（默认）只标记不删，false 时真删。
+      - name: Apply reject governance
+        env:
+          PYTHONUNBUFFERED: "1"
+          EVAL_DRY_RUN: ${{ vars.EVAL_DRY_RUN || 'true' }}
+        run: |
+          python -u - <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          sys.path.insert(0, "scripts")
+          from scoring_governor import apply_governance
+
+          catalog_path = Path("catalog/index.json")
+          entries = json.loads(catalog_path.read_text(encoding="utf-8"))
+          before = len(entries)
+          # health_only=False 走完整 reject 过滤路径；EVAL_DRY_RUN=true 时
+          # apply_governance 只标记不删，与历史 merge_index 行为一致。
+          entries = apply_governance(entries, health_only=False)
+          after = len(entries)
+          catalog_path.write_text(
+              json.dumps(entries, indent=2, ensure_ascii=False) + "\n",
+              encoding="utf-8",
+          )
+          print(f"governance: {before} -> {after} entries")
+
+          # 当 reject 过滤真的删掉了 entry（EVAL_DRY_RUN=false），aggregate
+          # 之前生成的 search-index.json 仍含被删 entry，需要重生。
+          if after != before:
+              from aggregate_enrichment import _regenerate_search_index
+              _regenerate_search_index(entries, catalog_path)
+              print("regenerated search-index.json after reject filter")
+          PY
+
+      - name: Generate catalog sub-directory READMEs
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: |
+          if [ -s catalog/index.json ]; then
+            python -u scripts/generate_catalog_readme.py
+          else
+            echo "Skipping: catalog/index.json missing or empty"
+          fi
+
+      - name: Update bilingual README files
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: python -u scripts/update_readme.py
+
+      - name: Audit popular skill coverage
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: |
+          if [ -f scripts/audit_popular_coverage.py ]; then
+            python -u scripts/audit_popular_coverage.py
+          else
+            echo "INFO: scripts/audit_popular_coverage.py 尚未实现，跳过覆盖率审计"
+          fi
+        continue-on-error: true
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add catalog/ README.md README.zh-CN.md
+          # docs/coverage_report.md 在 gitignore 中，需要 -f 才能纳入 commit
+          git add -f docs/coverage_report.md 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "[chore] 每周自动同步上游资源 $(date +%Y-%m-%d)"
+            git stash --include-untracked
+            git pull --rebase
+            git push
+            git stash pop || true
+          fi

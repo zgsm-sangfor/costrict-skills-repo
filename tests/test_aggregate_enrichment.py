@@ -558,3 +558,63 @@ def test_search_index_regenerated_with_restored_scores(tmp_path, monkeypatch):
     # Synthesized fallback still gets recorded — score equals health.score.
     assert by_id["y2"]["final_score"] == 33
     assert by_id["y2"]["decision"] == "review"
+
+
+def test_fallback_overlays_llm_side_effect_fields(tmp_path, monkeypatch):
+    """Phase 4 regression guard: when an entry takes the fallback path (cell
+    failed / budget cutoff / quarantined), aggregate must overlay LLM-derived
+    side-effect fields from old catalog onto the data-layer entry. Without this,
+    fallback rows lose health/description_zh/search_terms/etc."""
+    old_catalog = [
+        {
+            "id": "fallback-mcp",
+            "type": "mcp",
+            "name": "Fallback MCP",
+            "description": "rewritten by LLM last week",
+            "description_original": "raw upstream description",
+            "description_zh": "上周的中文摘要",
+            "search_terms": ["foo", "bar"],
+            "highlights": ["one", "two"],
+            "health": {"score": 75, "freshness_label": "active"},
+            "mcp_install_state": "ready",
+            "mcp_validation_tags": ["catalog_config_ready"],
+            "mcp_schema_valid": True,
+            "mcp_installability_reason": "上周判定可直接安装",
+            "evaluation": {"final_score": 80, "decision": "accept"},
+        },
+    ]
+    _stub_git_show(monkeypatch, payload=old_catalog)
+
+    # Data-layer entry: fresh from merge_index --skip-enrichment, no LLM fields.
+    data_entry = _make_entry("fallback-mcp", "mcp", health_score=10)
+    data_entry["description"] = "raw upstream description"
+
+    # Empty partial artifact -> entry must take the old-eval fallback path.
+    partial = _make_partial("mcp", [])
+    out = _run_main(
+        tmp_path,
+        catalog_entries=[data_entry],
+        partials={"mcp": partial},
+        types=["mcp"],
+    )
+    result = _read_json(out)
+    entry = result[0]
+
+    # evaluation came from old catalog
+    assert entry["evaluation"]["final_score"] == 80
+    assert entry["evaluation"]["decision"] == "accept"
+
+    # LLM-derived side-effects overlaid from old catalog
+    assert entry["description_zh"] == "上周的中文摘要"
+    assert entry["search_terms"] == ["foo", "bar"]
+    assert entry["highlights"] == ["one", "two"]
+    assert entry["health"]["score"] == 75
+    assert entry["mcp_install_state"] == "ready"
+    assert entry["mcp_validation_tags"] == ["catalog_config_ready"]
+    assert entry["mcp_schema_valid"] is True
+    assert entry["mcp_installability_reason"] == "上周判定可直接安装"
+
+    # Description: old catalog had description_original (signal of LLM rewrite),
+    # so old description must override the data-layer one.
+    assert entry["description"] == "rewritten by LLM last week"
+    assert entry["description_original"] == "raw upstream description"
