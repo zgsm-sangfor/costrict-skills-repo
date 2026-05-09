@@ -1,0 +1,188 @@
+name: Sync Test (Mock Enrichment)
+
+on:
+  workflow_dispatch:
+    inputs:
+      eval_concurrency:
+        description: '测试并发度 (默认 12，可调到 16-20 实验)'
+        default: '12'
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  test-enrichment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        type: [mcp, skill, rule, prompt, plugin]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ai-resource-eval
+
+      - name: Record start time
+        id: start_time
+        run: echo "epoch=$(date +%s)" >> "$GITHUB_OUTPUT"
+
+      - name: Run enrichment (mock mode)
+        id: run_enrichment
+        env:
+          PYTHONUNBUFFERED: "1"
+          MOCK_FIXTURE_DIR: tests/fixtures/enrichment_mock
+          EVAL_CONCURRENCY: ${{ inputs.eval_concurrency }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+        run: |
+          mkdir -p tests/_test_output
+          python -u scripts/run_enrichment.py \
+            --type ${{ matrix.type }} \
+            --mock-mode \
+            --output tests/_test_output/${{ matrix.type }}.json
+
+      - name: Write step summary
+        if: always()
+        env:
+          MATRIX_TYPE: ${{ matrix.type }}
+          START_EPOCH: ${{ steps.start_time.outputs.epoch }}
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          import os
+          import time
+          from pathlib import Path
+
+          type_ = os.environ["MATRIX_TYPE"]
+          start_epoch = int(os.environ.get("START_EPOCH") or "0")
+          wall_clock = max(0, int(time.time()) - start_epoch) if start_epoch else None
+
+          output_path = Path(f"tests/_test_output/{type_}.json")
+          ledger_path = Path("tests/_test_maintenance/eval_failures.json")
+
+          print(f"## {type_}")
+          print()
+
+          if not output_path.exists():
+              print(f"cell failed before producing artifact (expected at `{output_path}`).")
+              if wall_clock is not None:
+                  print()
+                  print(f"wall_clock_seconds (approx): {wall_clock}")
+              raise SystemExit(0)
+
+          try:
+              data = json.loads(output_path.read_text(encoding="utf-8"))
+          except Exception as exc:  # noqa: BLE001
+              print(f"failed to parse `{output_path}`: {exc}")
+              raise SystemExit(0)
+
+          succeeded = len(data.get("succeeded") or [])
+          failed = len(data.get("failed") or [])
+          skipped_q = len(data.get("skipped_quarantined") or [])
+          skipped_d = len(data.get("skipped_deferred") or [])
+
+          read_timeout_count = 0
+          if ledger_path.exists():
+              try:
+                  ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
+                  # FailureLog.save() writes failures as an object keyed by
+                  # entry_id, so iterate values() to get the records.
+                  failures = ledger.get("failures") or {}
+                  if isinstance(failures, dict):
+                      records = failures.values()
+                  elif isinstance(failures, list):
+                      records = failures
+                  else:
+                      records = []
+                  for record in records:
+                      if not isinstance(record, dict):
+                          continue
+                      if record.get("type") and record.get("type") != type_:
+                          continue
+                      kind = (record.get("last_error_kind") or "").lower()
+                      if "timeout" in kind or kind == "evalrunnerskip":
+                          read_timeout_count += 1
+              except Exception:  # noqa: BLE001
+                  pass
+
+          print("| metric | value |")
+          print("|--------|-------|")
+          print(f"| succeeded | {succeeded} |")
+          print(f"| failed | {failed} |")
+          print(f"| skipped_quarantined | {skipped_q} |")
+          print(f"| skipped_deferred | {skipped_d} |")
+          print(f"| read_timeout_count | {read_timeout_count} |")
+          if wall_clock is not None:
+              print(f"| wall_clock_seconds | {wall_clock} |")
+          print()
+          PY
+
+      - name: Require successful enrichment
+        # Fail the cell if zero entries succeeded — otherwise a missing LLM
+        # secret or an all-failures run would silently produce a "green"
+        # workflow without exercising enrichment, defeating the validator's
+        # purpose. Run BEFORE upload-artifact so artifacts are still uploaded
+        # by `if: always()` on the next step.
+        env:
+          MATRIX_TYPE: ${{ matrix.type }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import sys
+          from pathlib import Path
+
+          type_ = os.environ["MATRIX_TYPE"]
+          output_path = Path(f"tests/_test_output/{type_}.json")
+
+          if not output_path.exists():
+              print(f"::error::cell {type_} produced no artifact at {output_path}")
+              sys.exit(1)
+
+          data = json.loads(output_path.read_text(encoding="utf-8"))
+          succeeded = len(data.get("succeeded") or [])
+          if succeeded == 0:
+              print(
+                  f"::error::cell {type_} produced 0 successful evaluations "
+                  f"(failed={len(data.get('failed') or [])}, "
+                  f"skipped_quarantined={len(data.get('skipped_quarantined') or [])}, "
+                  f"skipped_deferred={len(data.get('skipped_deferred') or [])}). "
+                  "Possible causes: missing LLM_API_KEY secret, judge unreachable, "
+                  "or every entry hit a hard fail."
+              )
+              sys.exit(1)
+          print(f"OK: cell {type_} succeeded={succeeded}")
+          PY
+
+      - name: Upload test artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: enrichment-test-${{ matrix.type }}
+          path: |
+            tests/_test_output/${{ matrix.type }}.json
+            tests/_test_maintenance/checkpoints/${{ matrix.type }}.json
+            tests/_test_maintenance/eval_failures.json
+          if-no-files-found: warn
+
+      - name: Verify catalog untouched
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain catalog/)" ]; then
+            echo "ERROR: catalog/ was modified during sync-test workflow!"
+            git status --porcelain catalog/
+            exit 1
+          fi
+          echo "OK: catalog/ untouched."

@@ -407,9 +407,9 @@ def main(argv: list[str] | None = None) -> int:
                 output_path,
                 type_=type_,
                 rubric_version=rubric_version,
-                succeeded_records=succeeded_records,
-                failed_ids=[
-                    e["id"]
+                succeeded=succeeded_records,
+                failed=[
+                    str(e["id"])
                     for e in pending_entries
                     if e.get("id") not in succeeded_ids and e.get("id") is not None
                 ],
