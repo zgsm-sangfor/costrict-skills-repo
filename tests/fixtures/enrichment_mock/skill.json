@@ -160,6 +160,2602 @@
     "bundled_in": "anthropic-plugin-dev"
   },
   {
+    "id": "plugin-settings-skill",
+    "name": "Plugin Settings",
+    "type": "skill",
+    "description": "Documents the .claude/plugin-name.local.md pattern for per-project plugin configuration with YAML frontmatter.",
+    "source_url": "https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/plugin-settings",
+    "stars": 121372,
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "plugin-configuration",
+      "yaml-frontmatter",
+      "bash-scripting",
+      "project-settings"
+    ],
+    "tech_stack": [
+      "bash",
+      "yaml",
+      "markdown",
+      "sed",
+      "awk",
+      "grep"
+    ],
+    "source": "anthropics/claude-code",
+    "pushed_at": "2026-05-07T23:49:04Z",
+    "added_at": "2026-04-02",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "anthropics/claude-code",
+      "branch": "main",
+      "path": "plugins/plugin-dev/skills/plugin-settings"
+    },
+    "bundled_in": "anthropic-plugin-dev"
+  },
+  {
+    "id": "plugin-structure-skill",
+    "name": "Plugin Structure",
+    "type": "skill",
+    "description": "Guide to Claude Code plugin directory structure, manifest configuration, and component organization.",
+    "source_url": "https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/plugin-structure",
+    "stars": 121372,
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "plugin-development",
+      "plugin-structure",
+      "manifest-configuration",
+      "component-organization"
+    ],
+    "tech_stack": [
+      "json",
+      "markdown",
+      "yaml",
+      "bash",
+      "python",
+      "javascript",
+      "node.js"
+    ],
+    "source": "anthropics/claude-code",
+    "pushed_at": "2026-05-07T23:49:04Z",
+    "added_at": "2026-04-02",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "anthropics/claude-code",
+      "branch": "main",
+      "path": "plugins/plugin-dev/skills/plugin-structure"
+    },
+    "bundled_in": "anthropic-plugin-dev"
+  },
+  {
+    "id": "skill-development-skill",
+    "name": "Skill Development",
+    "type": "skill",
+    "description": "Guidance for creating modular, self-contained skills that extend Claude Code plugin capabilities.",
+    "source_url": "https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/skill-development",
+    "stars": 121372,
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "plugin-development",
+      "skill-development",
+      "progressive-disclosure",
+      "mcp-server"
+    ],
+    "tech_stack": [
+      "yaml",
+      "markdown",
+      "python",
+      "bash",
+      "json"
+    ],
+    "source": "anthropics/claude-code",
+    "pushed_at": "2026-05-07T23:49:04Z",
+    "added_at": "2026-04-02",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "anthropics/claude-code",
+      "branch": "main",
+      "path": "plugins/plugin-dev/skills/skill-development"
+    },
+    "bundled_in": "anthropic-plugin-dev"
+  },
+  {
+    "id": "writing-hookify-rules-skill",
+    "name": "Writing Hookify Rules",
+    "type": "skill",
+    "description": "A skill for creating Hookify rules that define patterns to watch for and messages to show in Claude Code.",
+    "source_url": "https://github.com/anthropics/claude-code/tree/main/plugins/hookify/skills/writing-rules",
+    "stars": 121372,
+    "category": "tooling",
+    "tags": [
+      "hookify-rules",
+      "claude-code",
+      "regex-patterns",
+      "developer-workflow",
+      "code-quality"
+    ],
+    "tech_stack": [
+      "yaml",
+      "markdown",
+      "python",
+      "regex"
+    ],
+    "source": "anthropics/claude-code",
+    "pushed_at": "2026-05-07T23:49:04Z",
+    "added_at": "2026-04-02",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "anthropics/claude-code",
+      "branch": "main",
+      "path": "plugins/hookify/skills/writing-rules"
+    },
+    "bundled_in": "anthropic-hookify"
+  },
+  {
+    "id": "ckmdesign-skill",
+    "name": "ckm:design",
+    "type": "skill",
+    "description": "AI-powered design skill for generating logos, CIP mockups, banners, icons, and social media images via Python scripts and Gemini models.",
+    "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/main/.claude/skills/design",
+    "stars": 75122,
+    "category": "frontend",
+    "tags": [
+      "design-generation",
+      "gemini-ai",
+      "brand-identity",
+      "logo-design",
+      "social-media-images"
+    ],
+    "tech_stack": [
+      "python",
+      "gemini",
+      "tailwind-css",
+      "chart.js",
+      "svg",
+      "html",
+      "css"
+    ],
+    "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+    "pushed_at": "2026-04-03T05:08:19Z",
+    "added_at": "2026-04-02",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "branch": "main",
+      "path": ".claude/skills/design"
+    }
+  },
+  {
+    "id": "007-agskill",
+    "name": "007",
+    "type": "skill",
+    "description": "AI-powered security audit agent for code, infrastructure, APIs, and AI systems with threat modeling and incident response.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/007",
+    "stars": 36743,
+    "category": "security",
+    "tags": [
+      "security-audit",
+      "threat-modeling",
+      "owasp",
+      "incident-response",
+      "hardening"
+    ],
+    "tech_stack": [
+      "python",
+      "node.js",
+      "linux",
+      "windows",
+      "docker",
+      "rest",
+      "graphql",
+      "oauth",
+      "jwt"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/007/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "2d-games-agskill",
+    "name": "2d-games",
+    "type": "skill",
+    "description": "A reference guide covering core 2D game development principles including sprites, tilemaps, physics, and camera systems.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/game-development/2d-games",
+    "stars": 36743,
+    "category": "frontend",
+    "tags": [
+      "2d-game-development",
+      "game-design-principles",
+      "sprite-systems",
+      "tilemap-design",
+      "game-physics"
+    ],
+    "tech_stack": [
+      "godot",
+      "unity"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/game-development/2d-games/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "3d-games-agskill",
+    "name": "3d-games",
+    "type": "skill",
+    "description": "A conceptual reference guide covering core 3D game development principles: rendering, shaders, physics, cameras, lighting, and LOD.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/game-development/3d-games",
+    "stars": 36743,
+    "category": "frontend",
+    "tags": [
+      "3d-game-development",
+      "rendering-pipeline",
+      "shader-programming",
+      "game-physics",
+      "level-of-detail"
+    ],
+    "tech_stack": [
+      "godot",
+      "unity",
+      "unreal"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/game-development/3d-games/"
+      ]
+    }
+  },
+  {
+    "id": "3d-web-experience-agskill",
+    "name": "3d-web-experience",
+    "type": "skill",
+    "description": "Expert skill for building interactive 3D web experiences using Three.js, React Three Fiber, and Spline.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/3d-web-experience",
+    "stars": 36743,
+    "category": "frontend",
+    "tags": [
+      "three-js",
+      "react-three-fiber",
+      "spline",
+      "webgl",
+      "3d-web-experience"
+    ],
+    "tech_stack": [
+      "three.js",
+      "react",
+      "react-three-fiber",
+      "spline",
+      "webgl",
+      "glsl",
+      "gsap",
+      "javascript"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/3d-web-experience/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "acceptance-orchestrator-agskill",
+    "name": "acceptance-orchestrator",
+    "type": "skill",
+    "description": "State machine orchestrator that drives coding tasks from issue intake to verified acceptance with minimal human intervention.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/acceptance-orchestrator",
+    "stars": 36743,
+    "category": "tooling",
+    "tags": [
+      "ci-cd",
+      "state-machine",
+      "acceptance-testing",
+      "workflow-orchestration",
+      "devops"
+    ],
+    "tech_stack": [
+      "git",
+      "lambda",
+      "api"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/acceptance-orchestrator/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "accessibility-compliance-accessibility-audit-agskill",
+    "name": "accessibility-compliance-accessibility-audit",
+    "type": "skill",
+    "description": "AI assistant skill for conducting WCAG accessibility audits and providing remediation guidance.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/accessibility-compliance-accessibility-audit",
+    "stars": 36743,
+    "category": "frontend",
+    "tags": [
+      "accessibility-audit",
+      "wcag-compliance",
+      "inclusive-design",
+      "assistive-technology",
+      "ai-skill"
+    ],
+    "tech_stack": [],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/accessibility-compliance-accessibility-audit/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "active-directory-attacks-agskill",
+    "name": "active-directory-attacks",
+    "type": "skill",
+    "description": "A comprehensive guide for attacking Microsoft Active Directory environments in red team operations.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/active-directory-attacks",
+    "stars": 36743,
+    "category": "security",
+    "tags": [
+      "active-directory",
+      "penetration-testing",
+      "red-team",
+      "kerberos-attacks",
+      "credential-harvesting"
+    ],
+    "tech_stack": [
+      "python",
+      "powershell",
+      "bash",
+      "impacket",
+      "mimikatz",
+      "bloodhound",
+      "rubeus",
+      "crackmapexec"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/active-directory-attacks/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "ad-creative-agskill",
+    "name": "ad-creative",
+    "type": "skill",
+    "description": "Generates and iterates paid ad creative (headlines, descriptions) for major ad platforms at scale.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ad-creative",
+    "stars": 36743,
+    "category": "tooling",
+    "tags": [
+      "ad-creative",
+      "paid-ads",
+      "copywriting",
+      "marketing",
+      "google-ads"
+    ],
+    "tech_stack": [
+      "remotion",
+      "gemini",
+      "flux",
+      "ideogram",
+      "veo",
+      "kling",
+      "runway",
+      "sora",
+      "elevenlabs",
+      "openai-tts"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/ad-creative/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "address-github-comments-agskill",
+    "name": "address-github-comments",
+    "type": "skill",
+    "description": "A skill for systematically addressing GitHub PR review comments using the gh CLI.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/address-github-comments",
+    "stars": 36743,
+    "category": "tooling",
+    "tags": [
+      "github-cli",
+      "pr-review",
+      "code-review",
+      "workflow-automation"
+    ],
+    "tech_stack": [
+      "github-cli",
+      "bash"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/address-github-comments/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "adhx-agskill",
+    "name": "adhx",
+    "type": "skill",
+    "description": "API to convert X/Twitter posts into structured JSON for LLM consumption.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/adhx",
+    "stars": 36743,
+    "category": "tooling",
+    "tags": [
+      "x-twitter-api",
+      "json-converter",
+      "llm-tool",
+      "social-media",
+      "claude-plugin"
+    ],
+    "tech_stack": [
+      "curl",
+      "json",
+      "claude-code"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/adhx/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "advanced-evaluation-agskill",
+    "name": "advanced-evaluation",
+    "type": "skill",
+    "description": "A skill for implementing production-grade LLM-as-judge evaluation systems with bias mitigation and rubric design.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/advanced-evaluation",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "llm-evaluation",
+      "llm-as-judge",
+      "bias-mitigation",
+      "evaluation-pipeline",
+      "rubric-design"
+    ],
+    "tech_stack": [
+      "json",
+      "python"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/advanced-evaluation/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "aegisops-ai-agskill",
+    "name": "aegisops-ai",
+    "type": "skill",
+    "description": "Autonomous DevSecOps & FinOps guardrails orchestrating Gemini 3 Flash for kernel, Terraform, and K8s audits.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/aegisops-ai",
+    "stars": 36743,
+    "category": "devops",
+    "tags": [
+      "devsecops",
+      "finops",
+      "kubernetes",
+      "terraform",
+      "linux-kernel"
+    ],
+    "tech_stack": [
+      "python",
+      "google-genai",
+      "terraform",
+      "kubernetes",
+      "github-actions"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/aegisops-ai/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "agent-evaluation-agskill",
+    "name": "agent-evaluation",
+    "type": "skill",
+    "description": "A framework for testing and benchmarking LLM agents with behavioral, adversarial, and regression evaluation patterns.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agent-evaluation",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "llm-agent-testing",
+      "benchmark-framework",
+      "behavioral-testing",
+      "adversarial-testing",
+      "regression-testing"
+    ],
+    "tech_stack": [
+      "typescript",
+      "llm",
+      "agent"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/agent-evaluation/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "agent-framework-azure-ai-py-agskill",
+    "name": "agent-framework-azure-ai-py",
+    "type": "skill",
+    "description": "Build persistent AI agents on Azure AI Foundry with the Microsoft Agent Framework Python SDK.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agent-framework-azure-ai-py",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "azure-ai-foundry",
+      "agent-framework",
+      "python-sdk",
+      "persistent-agents",
+      "mcp-tools"
+    ],
+    "tech_stack": [
+      "python",
+      "azure",
+      "azure-identity",
+      "pydantic",
+      "mcp"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/agent-framework-azure-ai-py/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "agent-manager-skill-agskill",
+    "name": "agent-manager-skill",
+    "type": "skill",
+    "description": "Manage multiple local CLI agents via tmux sessions with cron scheduling.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agent-manager-skill",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "agent-manager",
+      "tmux",
+      "cli-tools",
+      "cron-scheduling",
+      "linux"
+    ],
+    "tech_stack": [
+      "python",
+      "tmux",
+      "bash"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/agent-manager-skill/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "agent-memory-mcp-agskill",
+    "name": "agent-memory-mcp",
+    "type": "skill",
+    "description": "Persistent, searchable memory bank for AI agents via MCP server.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agent-memory-mcp",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "mcp-server",
+      "memory-management",
+      "knowledge-base",
+      "ai-agent",
+      "nodejs"
+    ],
+    "tech_stack": [
+      "node.js",
+      "mcp"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/agent-memory-mcp/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "agent-memory-systems-agskill",
+    "name": "agent-memory-systems",
+    "type": "skill",
+    "description": "A skill covering agent memory architecture with patterns for short-term, long-term, and cognitive memory systems.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agent-memory-systems",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "agent-memory",
+      "vector-database",
+      "rag-pipeline",
+      "cognitive-architecture",
+      "memory-patterns"
+    ],
+    "tech_stack": [
+      "python",
+      "langchain",
+      "langmem",
+      "pinecone",
+      "qdrant",
+      "weaviate",
+      "chromadb",
+      "postgresql",
+      "openai",
+      "sentence-transformers"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/agent-memory-systems/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "agent-orchestration-improve-agent-agskill",
+    "name": "agent-orchestration-improve-agent",
+    "type": "skill",
+    "description": "A structured workflow for systematically improving existing AI agents through performance analysis, prompt engineering, and iterative testing.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agent-orchestration-improve-agent",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "agent-optimization",
+      "prompt-engineering",
+      "performance-analysis",
+      "ab-testing",
+      "workflow"
+    ],
+    "tech_stack": [
+      "context-manager",
+      "prompt-engineer",
+      "parallel-test-runner"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/agent-orchestration-improve-agent/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "agent-orchestration-multi-agent-optimize-agskill",
+    "name": "agent-orchestration-multi-agent-optimize",
+    "type": "skill",
+    "description": "A framework for profiling, coordinating, and optimizing multi-agent AI systems with cost-aware orchestration.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agent-orchestration-multi-agent-optimize",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "multi-agent",
+      "orchestration",
+      "performance-optimization",
+      "cost-optimization",
+      "profiling"
+    ],
+    "tech_stack": [
+      "python",
+      "concurrent.futures",
+      "gpt-5",
+      "claude-4-sonnet",
+      "claude-4-haiku"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/agent-orchestration-multi-agent-optimize/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "agent-orchestrator-agskill",
+    "name": "agent-orchestrator",
+    "type": "skill",
+    "description": "Meta-skill for orchestrating multi-agent workflows with automatic skill discovery, matching, and coordination.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agent-orchestrator",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "agent-orchestrator",
+      "multi-agent",
+      "workflow-automation",
+      "skill-discovery",
+      "orchestration"
+    ],
+    "tech_stack": [
+      "python",
+      "claude-code",
+      "cursor",
+      "gemini-cli",
+      "codex-cli"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/agent-orchestrator/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "agent-tool-builder-agskill",
+    "name": "agent-tool-builder",
+    "type": "skill",
+    "description": "A skill guide for designing AI agent tools with schema, validation, error handling, and MCP patterns.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agent-tool-builder",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "agent-tools",
+      "function-calling",
+      "mcp-tools",
+      "tool-schema-design",
+      "tool-validation"
+    ],
+    "tech_stack": [
+      "python",
+      "typescript",
+      "json-schema",
+      "anthropic-sdk",
+      "openai-functions",
+      "vercel-ai-sdk",
+      "langchain",
+      "mcp"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/agent-tool-builder/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "agentflow-agskill",
+    "name": "agentflow",
+    "type": "skill",
+    "description": "Turns Kanban boards into autonomous AI development pipelines with multi-worker orchestration and quality gates.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agentflow",
+    "stars": 36743,
+    "category": "tooling",
+    "tags": [
+      "kanban-orchestration",
+      "ai-pipeline",
+      "claude-code",
+      "quality-gates",
+      "cost-tracking"
+    ],
+    "tech_stack": [
+      "claude-code",
+      "asana",
+      "github-projects",
+      "linear",
+      "bash",
+      "crontab"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-04-06",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/agentflow/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "agentfolio-agskill",
+    "name": "agentfolio",
+    "type": "skill",
+    "description": "A skill guide for discovering and researching autonomous AI agents using the AgentFolio directory.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agentfolio",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "agent-discovery",
+      "ai-agents",
+      "research-tool",
+      "ecosystem-mapping"
+    ],
+    "tech_stack": [],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/agentfolio/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "agentic-actions-auditor-agskill",
+    "name": "agentic-actions-auditor",
+    "type": "skill",
+    "description": "Static security analysis methodology for auditing GitHub Actions workflows that invoke AI coding agents.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agentic-actions-auditor",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "security-audit",
+      "github-actions",
+      "ai-agents",
+      "ci-cd-security",
+      "static-analysis"
+    ],
+    "tech_stack": [
+      "yaml",
+      "github-actions",
+      "gh-cli",
+      "bash"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/agentic-actions-auditor/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "agentmail-agskill",
+    "name": "agentmail",
+    "type": "skill",
+    "description": "REST API and TypeScript SDK providing email infrastructure for AI agents with karma-based rate limiting.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agentmail",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "email-api",
+      "ai-agents",
+      "typescript-sdk",
+      "webhooks",
+      "karma-system"
+    ],
+    "tech_stack": [
+      "typescript",
+      "rest-api",
+      "curl"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/agentmail/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "agentphone-agskill",
+    "name": "agentphone",
+    "type": "skill",
+    "description": "API-first telephony platform for building AI phone agents with voice calls and SMS.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agentphone",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "telephony-api",
+      "voice-agents",
+      "sms-api",
+      "ai-agents",
+      "webhook-integration"
+    ],
+    "tech_stack": [
+      "python",
+      "fastapi",
+      "flask",
+      "node.js",
+      "express",
+      "openai",
+      "anthropic",
+      "curl"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-04-06",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/agentphone/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "agents-md-agskill",
+    "name": "agents-md",
+    "type": "skill",
+    "description": "A skill for creating and maintaining minimal, high-signal AGENTS.md documentation for AI coding agents.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agents-md",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "agent-documentation",
+      "mcp-skill",
+      "coding-agent",
+      "project-conventions"
+    ],
+    "tech_stack": [
+      "markdown",
+      "pnpm",
+      "eslint",
+      "jest",
+      "typescript"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/agents-md/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "agents-v2-py-agskill",
+    "name": "agents-v2-py",
+    "type": "skill",
+    "description": "Python SDK guide for creating container-based hosted agents in Azure AI Foundry.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agents-v2-py",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "azure-ai-foundry",
+      "hosted-agents",
+      "python-sdk",
+      "container-images",
+      "mcp-tools"
+    ],
+    "tech_stack": [
+      "python",
+      "azure-ai-projects-sdk",
+      "azure-identity",
+      "azure-container-registry",
+      "docker"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/agents-v2-py/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "ai-agent-development-agskill",
+    "name": "ai-agent-development",
+    "type": "skill",
+    "description": "Workflow for building autonomous AI agents, multi-agent systems, and orchestration using CrewAI and LangGraph.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-agent-development",
+    "stars": 36743,
+    "category": "tooling",
+    "tags": [
+      "ai-agent-development",
+      "multi-agent-systems",
+      "agent-orchestration",
+      "crewai",
+      "langgraph"
+    ],
+    "tech_stack": [
+      "crewai",
+      "langgraph",
+      "python"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/ai-agent-development/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "ai-agents-architect-agskill",
+    "name": "ai-agents-architect",
+    "type": "skill",
+    "description": "Architectural guide for designing autonomous AI agents with memory, planning, and multi-agent patterns.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-agents-architect",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "ai-agents",
+      "agent-architecture",
+      "multi-agent-orchestration",
+      "agent-patterns",
+      "llm-agents"
+    ],
+    "tech_stack": [
+      "llm",
+      "rag",
+      "langchain",
+      "crewai",
+      "autogen",
+      "claude-agent-sdk"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/ai-agents-architect/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "ai-analyzer-agskill",
+    "name": "ai-analyzer",
+    "type": "skill",
+    "description": "AI-powered health analysis system integrating multi-dimensional data for anomaly detection, risk prediction, and personalized recommendations.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-analyzer",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "health-analysis",
+      "risk-prediction",
+      "ai-report",
+      "anomaly-detection",
+      "personalized-recommendations"
+    ],
+    "tech_stack": [
+      "javascript",
+      "python",
+      "echarts",
+      "tailwind-css"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/ai-analyzer/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "ai-dev-jobs-mcp-agskill",
+    "name": "ai-dev-jobs-mcp",
+    "type": "skill",
+    "description": "MCP server providing AI agents with live AI/ML job listings, company data, salary stats, and role matching.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-dev-jobs-mcp",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "mcp-server",
+      "job-search",
+      "ai-jobs",
+      "ml-jobs",
+      "recruiting"
+    ],
+    "tech_stack": [
+      "mcp",
+      "json"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-04-20",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/ai-dev-jobs-mcp/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "ai-engineer-agskill",
+    "name": "ai-engineer",
+    "type": "skill",
+    "description": "A specialized AI engineer skill for building production-grade LLM applications, RAG systems, and intelligent agents.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-engineer",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "llm-application",
+      "rag-system",
+      "ai-agent",
+      "vector-search",
+      "prompt-engineering"
+    ],
+    "tech_stack": [
+      "python",
+      "langchain",
+      "langgraph",
+      "llamaindex",
+      "crewai",
+      "autogen",
+      "openai",
+      "anthropic",
+      "ollama",
+      "vllm",
+      "fastapi",
+      "pinecone",
+      "qdrant",
+      "weaviate",
+      "chroma",
+      "milvus",
+      "pgvector",
+      "apache-airflow",
+      "apache-kafka",
+      "docker"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/ai-engineer/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "ai-engineering-toolkit-agskill",
+    "name": "ai-engineering-toolkit",
+    "type": "skill",
+    "description": "6 structured AI engineering workflows for prompt evaluation, RAG design, security auditing, and more.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-engineering-toolkit",
+    "stars": 36743,
+    "category": "database",
+    "tags": [
+      "prompt-engineering",
+      "rag",
+      "ai-security",
+      "llm-evaluation",
+      "ai-workflows"
+    ],
+    "tech_stack": [
+      "claude",
+      "cursor",
+      "gemini",
+      "copilot"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/ai-engineering-toolkit/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "ai-md-agskill",
+    "name": "ai-md",
+    "type": "skill",
+    "description": "Converts human-written CLAUDE.md into structured labels for better AI compliance and fewer tokens.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-md",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "claude-md",
+      "prompt-optimization",
+      "structured-labels",
+      "llm-compliance",
+      "system-prompt"
+    ],
+    "tech_stack": [
+      "bash",
+      "claude",
+      "gpt",
+      "gemini",
+      "grok"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/ai-md/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "ai-ml-agskill",
+    "name": "ai-ml",
+    "type": "skill",
+    "description": "Orchestrates AI/ML workflows for LLM apps, RAG, agents, and ML pipelines.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-ml",
+    "stars": 36743,
+    "category": "tooling",
+    "tags": [
+      "ai-workflow",
+      "llm-development",
+      "rag-implementation",
+      "agent-architecture",
+      "ml-pipeline"
+    ],
+    "tech_stack": [
+      "langchain",
+      "crewai",
+      "langgraph",
+      "langfuse",
+      "gemini-api"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/ai-ml/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "ai-native-cli-agskill",
+    "name": "ai-native-cli",
+    "type": "skill",
+    "description": "Design specification with 98 rules for building AI-agent-safe CLI tools.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-native-cli",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "cli-design-spec",
+      "ai-agent-compatibility",
+      "developer-tools",
+      "best-practices"
+    ],
+    "tech_stack": [
+      "cli",
+      "json",
+      "yaml"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/ai-native-cli/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "ai-product-agskill",
+    "name": "ai-product",
+    "type": "skill",
+    "description": "Production-grade patterns and sharp edges for building reliable AI-powered products with LLMs.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-product",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "llm-integration",
+      "rag-architecture",
+      "prompt-engineering",
+      "ai-product-development",
+      "production-patterns"
+    ],
+    "tech_stack": [
+      "typescript",
+      "openai",
+      "zod",
+      "tiktoken",
+      "next.js",
+      "vercel-ai-sdk"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/ai-product/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "ai-seo-agskill",
+    "name": "ai-seo",
+    "type": "skill",
+    "description": "A guide for optimizing content to be cited by AI search systems like ChatGPT, Perplexity, and Google AI Overviews.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-seo",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "ai-seo",
+      "content-optimization",
+      "llm-citations",
+      "answer-engine-optimization",
+      "search-visibility"
+    ],
+    "tech_stack": [
+      "schema-markup",
+      "robots.txt",
+      "semrush",
+      "ahrefs",
+      "gsc",
+      "ga4"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/ai-seo/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "ai-studio-image-agskill",
+    "name": "ai-studio-image",
+    "type": "skill",
+    "description": "Generates humanized, realistic images via Google AI Studio (Gemini) for influencer or educational content.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-studio-image",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "image-generation",
+      "google-ai-studio",
+      "gemini",
+      "humanized-photos",
+      "influencer-content"
+    ],
+    "tech_stack": [
+      "python",
+      "gemini",
+      "google-ai-studio",
+      "imagen"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/ai-studio-image/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "ai-wrapper-product-agskill",
+    "name": "ai-wrapper-product",
+    "type": "skill",
+    "description": "A guide for building profitable AI wrapper products with patterns for architecture, cost management, and differentiation.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-wrapper-product",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "ai-wrapper",
+      "product-architecture",
+      "cost-management",
+      "prompt-engineering",
+      "openai"
+    ],
+    "tech_stack": [
+      "javascript",
+      "node.js",
+      "anthropic",
+      "openai",
+      "p-queue"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/ai-wrapper-product/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "airflow-dag-patterns-agskill",
+    "name": "airflow-dag-patterns",
+    "type": "skill",
+    "description": "Production-ready patterns and best practices for Apache Airflow DAG design, operators, testing, and deployment.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/airflow-dag-patterns",
+    "stars": 36743,
+    "category": "tooling",
+    "tags": [
+      "airflow",
+      "dag-patterns",
+      "workflow-orchestration",
+      "data-pipeline",
+      "best-practices"
+    ],
+    "tech_stack": [
+      "apache-airflow",
+      "python"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/airflow-dag-patterns/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "airtable-automation-agskill",
+    "name": "airtable-automation",
+    "type": "skill",
+    "description": "Automate Airtable CRUD operations and schema management via Rube MCP and Composio toolkit.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/airtable-automation",
+    "stars": 36743,
+    "category": "tooling",
+    "tags": [
+      "airtable-automation",
+      "mcp-server",
+      "composio",
+      "crud-operations",
+      "database-management"
+    ],
+    "tech_stack": [
+      "airtable",
+      "composio",
+      "rube-mcp"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/airtable-automation/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "akf-trust-metadata-agskill",
+    "name": "akf-trust-metadata",
+    "type": "skill",
+    "description": "AKF stamps AI-generated files with trust, provenance, and compliance metadata for auditing.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/akf-trust-metadata",
+    "stars": 36743,
+    "category": "tooling",
+    "tags": [
+      "trust-metadata",
+      "provenance",
+      "compliance-auditing",
+      "ai-native-format",
+      "file-stamping"
+    ],
+    "tech_stack": [
+      "python",
+      "rust",
+      "npm"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/akf-trust-metadata/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "algolia-search-agskill",
+    "name": "algolia-search",
+    "type": "skill",
+    "description": "Expert patterns for Algolia search integration with React InstantSearch, indexing, and relevance tuning.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/algolia-search",
+    "stars": 36743,
+    "category": "backend",
+    "tags": [
+      "algolia",
+      "react-instantsearch",
+      "search-indexing",
+      "nextjs-search",
+      "relevance-tuning"
+    ],
+    "tech_stack": [
+      "react",
+      "next.js",
+      "typescript",
+      "algolia",
+      "node.js"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/algolia-search/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "alpha-vantage-agskill",
+    "name": "alpha-vantage",
+    "type": "skill",
+    "description": "A skill to fetch 20+ years of global financial data via the Alpha Vantage API.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/alpha-vantage",
+    "stars": 36743,
+    "category": "database",
+    "tags": [
+      "financial-data",
+      "alpha-vantage",
+      "api-client",
+      "python-skill",
+      "market-data"
+    ],
+    "tech_stack": [
+      "python",
+      "requests",
+      "pandas"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/alpha-vantage/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "amazon-alexa-agskill",
+    "name": "amazon-alexa",
+    "type": "skill",
+    "description": "Complete integration guide for building intelligent Alexa voice skills using Claude as the AI backend with AWS services.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/amazon-alexa",
+    "stars": 36743,
+    "category": "devops",
+    "tags": [
+      "amazon-alexa",
+      "voice-skill",
+      "claude-integration",
+      "aws-lambda",
+      "smart-home"
+    ],
+    "tech_stack": [
+      "python",
+      "aws-lambda",
+      "amazon-dynamodb",
+      "amazon-polly",
+      "amazon-transcribe",
+      "amazon-lex",
+      "anthropic-claude",
+      "ask-sdk",
+      "alexa-presentation-language"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/amazon-alexa/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "amplitude-automation-agskill",
+    "name": "amplitude-automation",
+    "type": "skill",
+    "description": "Automates Amplitude analytics tasks (events, users, cohorts) via Rube MCP and Composio toolkit.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/amplitude-automation",
+    "stars": 36743,
+    "category": "database",
+    "tags": [
+      "amplitude",
+      "mcp-server",
+      "product-analytics",
+      "automation",
+      "composio"
+    ],
+    "tech_stack": [
+      "javascript",
+      "nodejs",
+      "amplitude",
+      "composio",
+      "rube-mcp"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/amplitude-automation/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "analytics-product-agskill",
+    "name": "analytics-product",
+    "type": "skill",
+    "description": "Product analytics skill for event tracking, funnel analysis, cohort retention, and North Star metrics using PostHog and Mixpanel.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/analytics-product",
+    "stars": 36743,
+    "category": "database",
+    "tags": [
+      "product-analytics",
+      "posthog",
+      "event-tracking",
+      "cohort-analysis",
+      "ab-testing"
+    ],
+    "tech_stack": [
+      "python",
+      "posthog",
+      "pandas",
+      "scipy",
+      "sql"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/analytics-product/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "analytics-tracking-agskill",
+    "name": "analytics-tracking",
+    "type": "skill",
+    "description": "A methodology for designing, auditing, and improving analytics tracking systems to produce reliable, decision-ready data.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/analytics-tracking",
+    "stars": 36743,
+    "category": "database",
+    "tags": [
+      "analytics-tracking",
+      "measurement-strategy",
+      "data-quality",
+      "conversion-tracking",
+      "ga4"
+    ],
+    "tech_stack": [
+      "GA4",
+      "GTM",
+      "Mixpanel",
+      "Amplitude"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/analytics-tracking/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "analyze-project-agskill",
+    "name": "analyze-project",
+    "type": "skill",
+    "description": "Forensic root cause analyzer for AI-assisted coding sessions, classifying scope changes and rework patterns.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/analyze-project",
+    "stars": 36743,
+    "category": "tooling",
+    "tags": [
+      "root-cause-analysis",
+      "session-review",
+      "project-health",
+      "antigravity-skill",
+      "postmortem"
+    ],
+    "tech_stack": [
+      "antigravity",
+      "gemini"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/analyze-project/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "andrej-karpathy-agskill",
+    "name": "andrej-karpathy",
+    "type": "skill",
+    "description": "AI agent simulating Andrej Karpathy for deep learning education and coding discussions.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/andrej-karpathy",
+    "stars": 36743,
+    "category": "ai-ml",
+    "tags": [
+      "persona-skill",
+      "deep-learning-education",
+      "ai-expert-simulation",
+      "coding-assistant"
+    ],
+    "tech_stack": [
+      "python",
+      "pytorch",
+      "numpy",
+      "tiktoken"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/andrej-karpathy/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "android-jetpack-compose-expert-agskill",
+    "name": "android-jetpack-compose-expert",
+    "type": "skill",
+    "description": "Expert guide for building production Android UIs with Jetpack Compose, covering state management, navigation, and performance.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/android-jetpack-compose-expert",
+    "stars": 36743,
+    "category": "mobile",
+    "tags": [
+      "android",
+      "jetpack-compose",
+      "kotlin",
+      "mvvm",
+      "ui-development"
+    ],
+    "tech_stack": [
+      "kotlin",
+      "jetpack-compose",
+      "android",
+      "material-design-3",
+      "viewmodel",
+      "stateflow",
+      "navigation-compose"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/android-jetpack-compose-expert/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "android-ui-verification-agskill",
+    "name": "android_ui_verification",
+    "type": "skill",
+    "description": "Automated end-to-end UI testing and verification on Android emulators using ADB commands.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/android_ui_verification",
+    "stars": 36743,
+    "category": "testing",
+    "tags": [
+      "android-testing",
+      "adb",
+      "ui-automation",
+      "react-native",
+      "visual-regression"
+    ],
+    "tech_stack": [
+      "android",
+      "adb",
+      "react-native",
+      "bash"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/android_ui_verification/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "angular-agskill",
+    "name": "angular",
+    "type": "skill",
+    "description": "Modern Angular (v20+) expert skill covering Signals, Standalone Components, Zoneless, SSR/Hydration, and reactive patterns.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/angular",
+    "stars": 36743,
+    "category": "frontend",
+    "tags": [
+      "angular",
+      "signals",
+      "standalone-components",
+      "ssr",
+      "zoneless"
+    ],
+    "tech_stack": [
+      "angular",
+      "typescript",
+      "rxjs",
+      "node.js"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/angular/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "angular-best-practices-agskill",
+    "name": "angular-best-practices",
+    "type": "skill",
+    "description": "Angular performance optimization guide with prioritized rules for change detection, bundles, and rendering.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/angular-best-practices",
+    "stars": 36743,
+    "category": "frontend",
+    "tags": [
+      "angular",
+      "performance-optimization",
+      "best-practices",
+      "ssr",
+      "change-detection"
+    ],
+    "tech_stack": [
+      "angular",
+      "typescript",
+      "rxjs",
+      "node.js"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/angular-best-practices/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "angular-migration-agskill",
+    "name": "angular-migration",
+    "type": "skill",
+    "description": "A comprehensive guide for migrating AngularJS (1.x) apps to Angular (2+), covering hybrid setup, component conversion, DI, and routing.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/angular-migration",
+    "stars": 36743,
+    "category": "frontend",
+    "tags": [
+      "angular-migration",
+      "angularjs",
+      "hybrid-apps",
+      "ngupgrade",
+      "frontend-migration"
+    ],
+    "tech_stack": [
+      "angular",
+      "angularjs",
+      "typescript",
+      "javascript",
+      "rxjs",
+      "httpclient"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/angular-migration/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "angular-state-management-agskill",
+    "name": "angular-state-management",
+    "type": "skill",
+    "description": "A comprehensive guide to Angular state management using Signals, NgRx, and RxJS patterns.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/angular-state-management",
+    "stars": 36743,
+    "category": "frontend",
+    "tags": [
+      "angular",
+      "state-management",
+      "ngrx",
+      "signals",
+      "rxjs"
+    ],
+    "tech_stack": [
+      "angular",
+      "typescript",
+      "ngrx",
+      "rxjs",
+      "signals"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/angular-state-management/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "angular-ui-patterns-agskill",
+    "name": "angular-ui-patterns",
+    "type": "skill",
+    "description": "Angular UI patterns for loading, error, empty, and form states with code examples.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/angular-ui-patterns",
+    "stars": 36743,
+    "category": "frontend",
+    "tags": [
+      "angular",
+      "ui-patterns",
+      "loading-states",
+      "error-handling",
+      "component-design"
+    ],
+    "tech_stack": [
+      "angular",
+      "typescript",
+      "signals",
+      "cdk-dialog"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/angular-ui-patterns/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "animejs-animation-agskill",
+    "name": "animejs-animation",
+    "type": "skill",
+    "description": "Skill for creating complex, high-performance web animations using the Anime.js library.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/animejs-animation",
+    "stars": 36743,
+    "category": "frontend",
+    "tags": [
+      "animejs",
+      "web-animation",
+      "javascript-library",
+      "svg-animation",
+      "ui-ux"
+    ],
+    "tech_stack": [
+      "javascript",
+      "anime.js",
+      "svg",
+      "css",
+      "dom"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/animejs-animation/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "anti-reversing-techniques-agskill",
+    "name": "anti-reversing-techniques",
+    "type": "skill",
+    "description": "A security skill for authorized anti-reversing and anti-debugging analysis.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/anti-reversing-techniques",
+    "stars": 36743,
+    "category": "security",
+    "tags": [
+      "anti-reversing",
+      "anti-debugging",
+      "binary-analysis",
+      "security-research",
+      "malware-analysis"
+    ],
+    "tech_stack": [],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/anti-reversing-techniques/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "antigravity-design-expert-agskill",
+    "name": "antigravity-design-expert",
+    "type": "skill",
+    "description": "A UI/UX engineering skill for building spatial, glassmorphism-based web interfaces with GSAP and 3D CSS.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/antigravity-design-expert",
+    "stars": 36743,
+    "category": "frontend",
+    "tags": [
+      "ui-ux-engineering",
+      "glassmorphism",
+      "gsap-animation",
+      "3d-css",
+      "react-nextjs"
+    ],
+    "tech_stack": [
+      "react",
+      "next.js",
+      "tailwind-css",
+      "gsap",
+      "react-three-fiber",
+      "css"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/antigravity-design-expert/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "antigravity-skill-orchestrator-agskill",
+    "name": "antigravity-skill-orchestrator",
+    "type": "skill",
+    "description": "A meta-skill that intelligently selects and combines specialized skills for complex tasks while preventing overuse on simple ones.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/antigravity-skill-orchestrator",
+    "stars": 36743,
+    "category": "tooling",
+    "tags": [
+      "meta-skill",
+      "orchestration",
+      "agent-memory",
+      "task-evaluation",
+      "skill-selection"
+    ],
+    "tech_stack": [
+      "javascript",
+      "agent-memory-mcp"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/antigravity-skill-orchestrator/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "antigravity-workflows-agskill",
+    "name": "antigravity-workflows",
+    "type": "skill",
+    "description": "Orchestrates multi-step workflows combining Antigravity skills for SaaS, security, AI, and QA tasks.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/antigravity-workflows",
+    "stars": 36743,
+    "category": "tooling",
+    "tags": [
+      "workflow-orchestration",
+      "skill-composition",
+      "saas-mvp",
+      "security-audit",
+      "browser-automation"
+    ],
+    "tech_stack": [
+      "antigravity",
+      "go-playwright"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/antigravity-workflows/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "api-design-principles-agskill",
+    "name": "api-design-principles",
+    "type": "skill",
+    "description": "A skill guide for designing REST and GraphQL APIs with best practices and scope boundaries.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/api-design-principles",
+    "stars": 36743,
+    "category": "backend",
+    "tags": [
+      "api-design",
+      "rest-api",
+      "graphql",
+      "best-practices",
+      "skill-guide"
+    ],
+    "tech_stack": [
+      "rest",
+      "graphql"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/api-design-principles/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "api-documentation-agskill",
+    "name": "api-documentation",
+    "type": "skill",
+    "description": "Workflow for creating comprehensive API documentation including OpenAPI specs and developer guides.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/api-documentation",
+    "stars": 36743,
+    "category": "tooling",
+    "tags": [
+      "api-documentation",
+      "openapi-spec",
+      "developer-guide",
+      "workflow-bundle",
+      "documentation-automation"
+    ],
+    "tech_stack": [
+      "openapi",
+      "swagger",
+      "redoc"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/api-documentation/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "api-documentation-generator-agskill",
+    "name": "api-documentation-generator",
+    "type": "skill",
+    "description": "AI skill that generates comprehensive API documentation from code, including endpoints, examples, and best practices.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/api-documentation-generator",
+    "stars": 36743,
+    "category": "backend",
+    "tags": [
+      "api-documentation",
+      "skill",
+      "rest-api",
+      "graphql",
+      "openapi"
+    ],
+    "tech_stack": [
+      "rest",
+      "graphql",
+      "websocket",
+      "openapi",
+      "swagger",
+      "postman",
+      "curl",
+      "javascript",
+      "python"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/api-documentation-generator/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "api-documenter-agskill",
+    "name": "api-documenter",
+    "type": "skill",
+    "description": "AI-powered skill for creating comprehensive API documentation with OpenAPI 3.1 and SDK generation.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/api-documenter",
+    "stars": 36743,
+    "category": "backend",
+    "tags": [
+      "api-documentation",
+      "openapi",
+      "sdk-generation",
+      "developer-portal",
+      "ai-powered-docs"
+    ],
+    "tech_stack": [
+      "openapi",
+      "asyncapi",
+      "graphql",
+      "json-schema",
+      "swagger-ui",
+      "redoc",
+      "stoplight",
+      "docusaurus",
+      "python",
+      "javascript",
+      "go"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/api-documenter/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "api-endpoint-builder-agskill",
+    "name": "api-endpoint-builder",
+    "type": "skill",
+    "description": "A skill guide for building production-ready REST API endpoints with validation, auth, and documentation.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/api-endpoint-builder",
+    "stars": 36743,
+    "category": "tooling",
+    "tags": [
+      "rest-api",
+      "api-development",
+      "node-js",
+      "backend",
+      "code-generation"
+    ],
+    "tech_stack": [
+      "javascript",
+      "node.js",
+      "express",
+      "fastify",
+      "bcrypt"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/api-endpoint-builder/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
+    "id": "api-fuzzing-bug-bounty-agskill",
+    "name": "api-fuzzing-bug-bounty",
+    "type": "skill",
+    "description": "Comprehensive API fuzzing techniques for bug bounty hunting covering REST, SOAP, and GraphQL.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/api-fuzzing-bug-bounty",
+    "stars": 36743,
+    "category": "backend",
+    "tags": [
+      "api-fuzzing",
+      "bug-bounty",
+      "penetration-testing",
+      "graphql-security",
+      "idor"
+    ],
+    "tech_stack": [
+      "python",
+      "burp-suite",
+      "kiterunner",
+      "inql",
+      "graphql"
+    ],
+    "source": "antigravity-skills",
+    "pushed_at": "2026-05-07T07:01:52Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "files": [
+        "skills/api-fuzzing-bug-bounty/"
+      ]
+    },
+    "bundled_in": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard"
+  },
+  {
     "id": "mock-empty-desc-skill",
     "name": "Empty Desc Test",
     "type": "skill",

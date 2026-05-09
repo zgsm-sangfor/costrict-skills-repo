@@ -651,6 +651,676 @@
     "manifest_completeness": 1.0
   },
   {
+    "id": "vercel-nextjs-cache-components",
+    "name": "cache-components",
+    "type": "plugin",
+    "description": "A Next.js plugin providing expert guidance for Cache Components and Partial Prerendering (PPR).",
+    "source_url": "https://github.com/vercel/next.js",
+    "stars": 138969,
+    "category": "frontend",
+    "tags": [
+      "nextjs",
+      "cache",
+      "ppr",
+      "plugin",
+      "web-framework"
+    ],
+    "tech_stack": [
+      "next.js",
+      "javascript",
+      "react"
+    ],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "platforms": [
+      "claude-code"
+    ],
+    "version": "1.0.0",
+    "pushed_at": "2026-04-16T17:44:21Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@vercel/nextjs",
+      "plugin_name": "cache-components"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": []
+    },
+    "manifest_completeness": 1.0
+  },
+  {
+    "id": "anthropics-anthropic-agent-skills-claude-api",
+    "name": "claude-api",
+    "type": "plugin",
+    "description": "A repository of example skills and a framework for creating custom skills to extend Claude's capabilities via Claude Code, Claude.ai, and the API.",
+    "source_url": "https://github.com/anthropics/skills",
+    "stars": 129792,
+    "category": "ai-ml",
+    "tags": [
+      "claude-skills",
+      "llm-tools",
+      "plugin-system",
+      "api-integration",
+      "custom-skills"
+    ],
+    "tech_stack": [
+      "markdown",
+      "yaml",
+      "claude-api",
+      "claude-code"
+    ],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "platforms": [
+      "claude-code"
+    ],
+    "version": "1.0.0",
+    "pushed_at": "2026-05-08T00:23:44Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@anthropics/anthropic-agent-skills",
+      "plugin_name": "claude-api"
+    },
+    "bundle": {
+      "skills_count": 1,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [
+        "claude-api:claude-api"
+      ]
+    },
+    "manifest_completeness": 1.0
+  },
+  {
+    "id": "anthropics-anthropic-agent-skills-document-skills",
+    "name": "document-skills",
+    "type": "plugin",
+    "description": "A collection of Claude skills for document processing (Excel, Word, PowerPoint, PDF) and other tasks, designed for Claude Code, Claude.ai, and API.",
+    "source_url": "https://github.com/anthropics/skills",
+    "stars": 129792,
+    "category": "tooling",
+    "tags": [
+      "claude-skills",
+      "document-processing",
+      "excel",
+      "word",
+      "pdf"
+    ],
+    "tech_stack": [
+      "markdown",
+      "yaml",
+      "claude-api"
+    ],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "platforms": [
+      "claude-code"
+    ],
+    "version": "1.0.0",
+    "pushed_at": "2026-05-08T00:23:44Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@anthropics/anthropic-agent-skills",
+      "plugin_name": "document-skills"
+    },
+    "bundle": {
+      "skills_count": 4,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [
+        "document-skills:xlsx",
+        "document-skills:docx",
+        "document-skills:pptx",
+        "document-skills:pdf"
+      ]
+    },
+    "manifest_completeness": 1.0
+  },
+  {
+    "id": "anthropics-anthropic-agent-skills-example-skills",
+    "name": "example-skills",
+    "type": "plugin",
+    "description": "A collection of example skills demonstrating Claude's skill system for creative, technical, and enterprise tasks.",
+    "source_url": "https://github.com/anthropics/skills",
+    "stars": 129792,
+    "category": "tooling",
+    "tags": [
+      "claude-skills",
+      "ai-agent",
+      "plugin-system",
+      "example-collection",
+      "document-processing"
+    ],
+    "tech_stack": [
+      "markdown",
+      "yaml",
+      "claude-api"
+    ],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "platforms": [
+      "claude-code"
+    ],
+    "version": "1.0.0",
+    "pushed_at": "2026-05-08T00:23:44Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@anthropics/anthropic-agent-skills",
+      "plugin_name": "example-skills"
+    },
+    "bundle": {
+      "skills_count": 12,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [
+        "example-skills:algorithmic-art",
+        "example-skills:brand-guidelines",
+        "example-skills:canvas-design",
+        "example-skills:doc-coauthoring",
+        "example-skills:frontend-design",
+        "example-skills:internal-comms",
+        "example-skills:mcp-builder",
+        "example-skills:skill-creator",
+        "example-skills:slack-gif-creator",
+        "example-skills:theme-factory",
+        "example-skills:web-artifacts-builder",
+        "example-skills:webapp-testing"
+      ]
+    },
+    "manifest_completeness": 1.0
+  },
+  {
+    "id": "nextlevelbuilder-ui-ux-pro-max-skill-ui-ux-pro-max",
+    "name": "ui-ux-pro-max",
+    "type": "plugin",
+    "description": "A plugin providing UI/UX design databases and guidelines for AI coding assistants across multiple frameworks.",
+    "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+    "stars": 66345,
+    "category": "database",
+    "tags": [
+      "ui-ux-plugin",
+      "design-system",
+      "frontend-frameworks",
+      "ai-coding-assistant",
+      "tailwind-css"
+    ],
+    "tech_stack": [
+      "React",
+      "Next.js",
+      "Vue",
+      "Svelte",
+      "Astro",
+      "SwiftUI",
+      "React Native",
+      "Flutter",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Nuxt",
+      "Jetpack Compose"
+    ],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "platforms": [
+      "claude-code"
+    ],
+    "version": "2.2.1",
+    "pushed_at": "2026-04-16T17:44:21Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@nextlevelbuilder/ui-ux-pro-max-skill",
+      "plugin_name": "ui-ux-pro-max"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": []
+    },
+    "manifest_completeness": 1.0
+  },
+  {
+    "id": "anthropics-claude-code-plugins-agent-sdk-dev",
+    "name": "agent-sdk-dev",
+    "type": "plugin",
+    "description": "An agentic coding tool for terminal, IDE, and GitHub that uses natural language to assist with coding tasks.",
+    "source_url": "https://github.com/anthropics/claude-code",
+    "stars": 65128,
+    "category": "tooling",
+    "tags": [
+      "ai-coding-assistant",
+      "terminal-tool",
+      "ide-integration",
+      "github-integration",
+      "natural-language"
+    ],
+    "tech_stack": [
+      "node.js",
+      "npm",
+      "homebrew",
+      "winget",
+      "powershell",
+      "bash"
+    ],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "platforms": [
+      "claude-code"
+    ],
+    "version": "1.0.0",
+    "pushed_at": "2026-02-08T01:48:36Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@anthropics/claude-code-plugins",
+      "plugin_name": "agent-sdk-dev"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": []
+    },
+    "manifest_completeness": 1.0
+  },
+  {
+    "id": "anthropics-claude-code-plugins-claude-opus-4-5-migration",
+    "name": "claude-opus-4-5-migration",
+    "type": "plugin",
+    "description": "Claude Code is an agentic coding tool for terminal and IDE that helps with code tasks, explanations, and git workflows via natural language.",
+    "source_url": "https://github.com/anthropics/claude-code",
+    "stars": 65128,
+    "category": "tooling",
+    "tags": [
+      "ai-coding-assistant",
+      "terminal-tool",
+      "ide-integration",
+      "git-workflows",
+      "natural-language"
+    ],
+    "tech_stack": [
+      "node.js",
+      "npm",
+      "homebrew",
+      "winget"
+    ],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "platforms": [
+      "claude-code"
+    ],
+    "version": "1.0.0",
+    "pushed_at": "2026-02-08T01:48:36Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@anthropics/claude-code-plugins",
+      "plugin_name": "claude-opus-4-5-migration"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": []
+    },
+    "manifest_completeness": 1.0
+  },
+  {
+    "id": "anthropics-claude-code-plugins-code-review",
+    "name": "code-review",
+    "type": "plugin",
+    "description": "An agentic coding tool for terminal/IDE that automates code review, explains code, and handles git workflows via natural language.",
+    "source_url": "https://github.com/anthropics/claude-code",
+    "stars": 65128,
+    "category": "tooling",
+    "tags": [
+      "code-review",
+      "terminal-tool",
+      "git-workflow",
+      "ai-agent",
+      "cli"
+    ],
+    "tech_stack": [
+      "node.js",
+      "npm",
+      "homebrew",
+      "winget"
+    ],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "platforms": [
+      "claude-code"
+    ],
+    "version": "1.0.0",
+    "pushed_at": "2026-02-08T01:48:36Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@anthropics/claude-code-plugins",
+      "plugin_name": "code-review"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": []
+    },
+    "manifest_completeness": 1.0
+  },
+  {
+    "id": "anthropics-claude-code-plugins-commit-commands",
+    "name": "commit-commands",
+    "type": "plugin",
+    "description": "A Claude Code plugin providing natural language commands for git commit, push, and PR creation workflows.",
+    "source_url": "https://github.com/anthropics/claude-code",
+    "stars": 65128,
+    "category": "tooling",
+    "tags": [
+      "git-workflow",
+      "cli-tool",
+      "ai-assistant",
+      "developer-productivity",
+      "plugin"
+    ],
+    "tech_stack": [
+      "node.js",
+      "npm",
+      "bash",
+      "powershell"
+    ],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "platforms": [
+      "claude-code"
+    ],
+    "version": "1.0.0",
+    "pushed_at": "2026-02-08T01:48:36Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@anthropics/claude-code-plugins",
+      "plugin_name": "commit-commands"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": []
+    },
+    "manifest_completeness": 1.0
+  },
+  {
+    "id": "anthropics-claude-code-plugins-explanatory-output-style",
+    "name": "explanatory-output-style",
+    "type": "plugin",
+    "description": "A Claude Code plugin that provides educational explanations of code implementation choices and patterns.",
+    "source_url": "https://github.com/anthropics/claude-code",
+    "stars": 65128,
+    "category": "tooling",
+    "tags": [
+      "claude-code-plugin",
+      "code-explanation",
+      "developer-tools",
+      "ai-coding"
+    ],
+    "tech_stack": [
+      "node.js",
+      "npm",
+      "claude-code"
+    ],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "platforms": [
+      "claude-code"
+    ],
+    "version": "1.0.0",
+    "pushed_at": "2026-02-08T01:48:36Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@anthropics/claude-code-plugins",
+      "plugin_name": "explanatory-output-style"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": []
+    },
+    "manifest_completeness": 1.0
+  },
+  {
+    "id": "anthropics-claude-code-plugins-feature-dev",
+    "name": "feature-dev",
+    "type": "plugin",
+    "description": "An agentic coding tool for the terminal and IDE that understands codebases and assists with coding tasks via natural language.",
+    "source_url": "https://github.com/anthropics/claude-code",
+    "stars": 65128,
+    "category": "tooling",
+    "tags": [
+      "coding-assistant",
+      "terminal-tool",
+      "ide-integration",
+      "agentic-workflow",
+      "codebase-exploration"
+    ],
+    "tech_stack": [
+      "node.js",
+      "npm",
+      "homebrew",
+      "winget"
+    ],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "platforms": [
+      "claude-code"
+    ],
+    "version": "1.0.0",
+    "pushed_at": "2026-02-08T01:48:36Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@anthropics/claude-code-plugins",
+      "plugin_name": "feature-dev"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": []
+    },
+    "manifest_completeness": 1.0
+  },
+  {
+    "id": "anthropics-claude-code-plugins-frontend-design",
+    "name": "frontend-design",
+    "type": "plugin",
+    "description": "An agentic terminal-based coding tool that helps developers code faster by executing tasks, explaining code, and handling git workflows.",
+    "source_url": "https://github.com/anthropics/claude-code",
+    "stars": 65128,
+    "category": "ai-ml",
+    "tags": [
+      "terminal-tool",
+      "code-generation",
+      "git-workflow",
+      "agentic-coding",
+      "cli"
+    ],
+    "tech_stack": [
+      "node.js",
+      "npm",
+      "homebrew",
+      "winget"
+    ],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "platforms": [
+      "claude-code"
+    ],
+    "version": "1.0.0",
+    "pushed_at": "2026-02-08T01:48:36Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@anthropics/claude-code-plugins",
+      "plugin_name": "frontend-design"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": []
+    },
+    "manifest_completeness": 1.0
+  },
+  {
+    "id": "anthropics-claude-code-plugins-hookify",
+    "name": "hookify",
+    "type": "plugin",
+    "description": "An agentic coding tool for the terminal and IDE that assists with code generation, explanation, and git workflows via natural language.",
+    "source_url": "https://github.com/anthropics/claude-code",
+    "stars": 65128,
+    "category": "documentation",
+    "tags": [
+      "ai-coding-assistant",
+      "terminal-tool",
+      "ide-integration",
+      "natural-language",
+      "git-workflow"
+    ],
+    "tech_stack": [
+      "node.js",
+      "npm",
+      "homebrew",
+      "winget"
+    ],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "platforms": [
+      "claude-code"
+    ],
+    "version": "0.1.0",
+    "pushed_at": "2026-02-08T01:48:36Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@anthropics/claude-code-plugins",
+      "plugin_name": "hookify"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": []
+    },
+    "manifest_completeness": 1.0
+  },
+  {
+    "id": "anthropics-claude-code-plugins-learning-output-style",
+    "name": "learning-output-style",
+    "type": "plugin",
+    "description": "A plugin for Claude Code that adds an interactive learning mode requesting code contributions at decision points.",
+    "source_url": "https://github.com/anthropics/claude-code",
+    "stars": 65128,
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "plugin",
+      "interactive-learning",
+      "code-generation",
+      "terminal-tool"
+    ],
+    "tech_stack": [
+      "node.js",
+      "npm",
+      "homebrew",
+      "winget"
+    ],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "platforms": [
+      "claude-code"
+    ],
+    "version": "1.0.0",
+    "pushed_at": "2026-02-08T01:48:36Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@anthropics/claude-code-plugins",
+      "plugin_name": "learning-output-style"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": []
+    },
+    "manifest_completeness": 1.0
+  },
+  {
+    "id": "anthropics-claude-code-plugins-plugin-dev",
+    "name": "plugin-dev",
+    "type": "plugin",
+    "description": "An agentic coding tool for the terminal and IDE that uses natural language to automate coding tasks, explain code, and manage git workflows.",
+    "source_url": "https://github.com/anthropics/claude-code",
+    "stars": 65128,
+    "category": "ai-ml",
+    "tags": [
+      "agentic-coding",
+      "terminal-tool",
+      "ide-integration",
+      "git-workflow",
+      "natural-language"
+    ],
+    "tech_stack": [
+      "Node.js",
+      "npm",
+      "Homebrew",
+      "WinGet"
+    ],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "platforms": [
+      "claude-code"
+    ],
+    "version": "0.1.0",
+    "pushed_at": "2026-02-08T01:48:36Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@anthropics/claude-code-plugins",
+      "plugin_name": "plugin-dev"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": []
+    },
+    "manifest_completeness": 1.0
+  },
+  {
     "id": "mock-empty-desc-plugin",
     "name": "Empty Desc Test",
     "type": "plugin",

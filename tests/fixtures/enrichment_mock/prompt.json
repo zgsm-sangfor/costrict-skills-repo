@@ -135,6 +135,2010 @@
     }
   },
   {
+    "id": "3d-fps-game-prompt",
+    "name": "3D FPS Game",
+    "type": "prompt",
+    "description": "A prompt for generating a 3D first-person shooter game using Three.js and JavaScript with detailed features.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#3d-fps-game",
+    "category": "frontend",
+    "tags": [
+      "game-development",
+      "threejs",
+      "javascript",
+      "prompt-engineering",
+      "fps-game"
+    ],
+    "tech_stack": [
+      "javascript",
+      "three.js"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "3d-isometric-miniature-city-view-with-weather-prompt",
+    "name": "3D Isometric Miniature City View with Weather",
+    "type": "prompt",
+    "description": "A prompt for generating a 3D isometric miniature city scene with integrated weather information and native language text.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#3d-isometric-miniature-city-view-with-weather",
+    "category": "tooling",
+    "tags": [
+      "image-generation",
+      "3d-modeling",
+      "weather-visualization",
+      "prompt-engineering",
+      "isometric-art"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "3d-mechanical-part-image-to-technical-drawing-conversion-prompt",
+    "name": "3D Mechanical Part Image to Technical Drawing Conversion",
+    "type": "prompt",
+    "description": "A prompt for AI image models to generate ISO-standard technical engineering drawings from 3D mechanical part renders.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#3d-mechanical-part-image-to-technical-drawing-conversion",
+    "category": "frontend",
+    "tags": [
+      "image-to-image",
+      "mechanical-engineering",
+      "technical-drawing",
+      "sdxl-prompt",
+      "cad"
+    ],
+    "tech_stack": [
+      "sdxl",
+      "dpm++-2m-karras"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "3d-racing-game-prompt",
+    "name": "3D Racing Game",
+    "type": "prompt",
+    "description": "A prompt template for generating a 3D racing game with realistic physics, AI opponents, and multiplayer using Three.js and JavaScript.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#3d-racing-game",
+    "category": "frontend",
+    "tags": [
+      "prompt-template",
+      "threejs",
+      "game-development",
+      "javascript",
+      "3d-racing"
+    ],
+    "tech_stack": [
+      "javascript",
+      "three.js"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "3d-space-explorer-prompt",
+    "name": "3D Space Explorer",
+    "type": "prompt",
+    "description": "A prompt for building a 3D space exploration game with procedural generation and physics using Three.js.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#3d-space-explorer",
+    "category": "frontend",
+    "tags": [
+      "game-development",
+      "three-js",
+      "procedural-generation",
+      "javascript",
+      "space-simulation"
+    ],
+    "tech_stack": [
+      "javascript",
+      "three.js"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "4-optimized-versions-of-a-prompt-in-arabic-prompt",
+    "name": "4 Optimized Versions of A Prompt (in Arabic)",
+    "type": "prompt",
+    "description": "A prompt template for AI prompt engineers to analyze and improve prompts for multiple LLMs, with output in Arabic.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#4-optimized-versions-of-a-prompt-in-arabic",
+    "category": "ai-ml",
+    "tags": [
+      "prompt-engineering",
+      "multi-llm",
+      "arabic-output",
+      "prompt-optimization"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "aaa-prompt",
+    "name": "Aaa",
+    "type": "prompt",
+    "description": "A detailed prompt for generating a production-ready Node.js automation system for account registration and reporting using Playwright.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#aaa",
+    "category": "testing",
+    "tags": [
+      "nodejs",
+      "automation",
+      "playwright",
+      "prompt-engineering",
+      "browser-automation"
+    ],
+    "tech_stack": [
+      "node.js",
+      "playwright",
+      "express",
+      "axios",
+      "puppeteer"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "aacli-taste-prompt",
+    "name": "aa/cli taste",
+    "type": "prompt",
+    "description": "A curated list of opinionated best practices and tool preferences for building Node.js CLI projects.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#aacli-taste",
+    "category": "frontend",
+    "tags": [
+      "cli-development",
+      "typescript",
+      "nodejs",
+      "developer-tools",
+      "best-practices"
+    ],
+    "tech_stack": [
+      "pnpm",
+      "typescript",
+      "tsup",
+      "vitest",
+      "commander.js",
+      "clack",
+      "ora",
+      "picocolors",
+      "ink"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "academic-paper-figure-generator-nano-banana-pro-prompt",
+    "name": "Academic Paper Figure Generator - Nano Banana Pro",
+    "type": "prompt",
+    "description": "Create a professional academic figure for scientific publication using the following guidelines:  ${figure_type:Type of figure (architecture diagram, flowchart, data visualization, conceptual model, e",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#academic-paper-figure-generator---nano-banana-pro",
+    "category": "frontend",
+    "tags": [],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "accessibility-auditor-prompt",
+    "name": "Accessibility Auditor",
+    "type": "prompt",
+    "description": "A prompt for AI to act as an Accessibility Auditor, reviewing websites for WCAG 2.2 and Section 508 compliance.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#accessibility-auditor",
+    "category": "tooling",
+    "tags": [
+      "accessibility-auditor",
+      "wcag",
+      "web-accessibility",
+      "prompt"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "accessibility-expert-prompt",
+    "name": "Accessibility Expert",
+    "type": "prompt",
+    "description": "A prompt template for testing and remediating UI accessibility issues to ensure WCAG compliance and assistive technology compatibility.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#accessibility-expert",
+    "category": "testing",
+    "tags": [
+      "accessibility",
+      "wcag",
+      "prompt-template",
+      "ui-testing",
+      "aria"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "accessibility-testing-superpower-prompt",
+    "name": "Accessibility Testing Superpower",
+    "type": "prompt",
+    "description": "A prompt for AI-assisted WCAG compliance audits and accessibility remediation in web applications.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#accessibility-testing-superpower",
+    "category": "testing",
+    "tags": [
+      "accessibility",
+      "wcag",
+      "web-development",
+      "prompt-engineering",
+      "ui-auditing"
+    ],
+    "tech_stack": [
+      "html",
+      "css",
+      "javascript",
+      "aria"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "act-as-a-game-physics-architect-prompt",
+    "name": "Act as a Game Physics Architect",
+    "type": "prompt",
+    "description": "A prompt for generating technical game physics implementation logic including math formulas, state diagrams, and code snippets.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#act-as-a-game-physics-architect",
+    "category": "tooling",
+    "tags": [
+      "game-physics",
+      "unity",
+      "prompt-engineering",
+      "mechanic-implementation",
+      "csharp"
+    ],
+    "tech_stack": [
+      "csharp",
+      "unity",
+      "latex",
+      "markdown"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "act-as-a-patient-non-technical-android-studio-guide-prompt",
+    "name": "Act as a Patient, Non-Technical Android Studio Guide",
+    "type": "prompt",
+    "description": "A prompt template for an AI to act as a patient, non-technical guide for Android Studio, targeting absolute beginners.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#act-as-a-patient-non-technical-android-studio-guide",
+    "category": "mobile",
+    "tags": [
+      "android-studio",
+      "prompt-engineering",
+      "beginner-guide",
+      "kotlin",
+      "jetpack-compose"
+    ],
+    "tech_stack": [
+      "Android Studio",
+      "Kotlin",
+      "Jetpack Compose"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "act-as-a-procedural-content-generator-prompt",
+    "name": "Act as a Procedural Content Generator",
+    "type": "prompt",
+    "description": "A prompt template for an AI to act as a PCG expert, generating pseudocode for non-repetitive game environment algorithms.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#act-as-a-procedural-content-generator",
+    "category": "backend",
+    "tags": [
+      "prompt-template",
+      "procedural-content-generation",
+      "game-development",
+      "algorithm-design"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "act-as-a-product-manager-prompt",
+    "name": "Act as a Product Manager",
+    "type": "prompt",
+    "description": "A prompt for AI to role-play as a Product Manager, assisting with PRD creation and product strategy queries.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#act-as-a-product-manager",
+    "category": "ai-ml",
+    "tags": [
+      "prompt-engineering",
+      "product-management",
+      "prd-creation",
+      "ai-role-play"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "act-as-an-electron-frontend-developer-prompt",
+    "name": "Act as an Electron Frontend Developer",
+    "type": "prompt",
+    "description": "A prompt template for AI to role-play as an Electron frontend developer, guiding UI design and implementation.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#act-as-an-electron-frontend-developer",
+    "category": "frontend",
+    "tags": [
+      "prompt-template",
+      "electron",
+      "frontend-development",
+      "desktop-app"
+    ],
+    "tech_stack": [
+      "electron",
+      "html",
+      "css",
+      "javascript"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "act-as-an-ftth-telecommunications-expert-prompt",
+    "name": "Act as an FTTH Telecommunications Expert",
+    "type": "prompt",
+    "description": "A prompt for AI to act as an FTTH telecommunications expert, providing technical information on fiber optic technology.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#act-as-an-ftth-telecommunications-expert",
+    "category": "tooling",
+    "tags": [
+      "prompt",
+      "telecommunications",
+      "ftth",
+      "fiber-optics",
+      "broadband"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "adding-these-development-in-a-gasifier-design-tool-prompt",
+    "name": "adding these development in a gasifier design tool",
+    "type": "prompt",
+    "description": "A prompt to add specific engineering calculations (velocity, tar, fluidization, safety) to a gasifier design tool.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#adding-these-development-in-a-gasifier-design-tool",
+    "category": "tooling",
+    "tags": [
+      "engineering-prompt",
+      "gasifier-design",
+      "chemical-engineering",
+      "simulation"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "advanced-color-picker-tool-prompt",
+    "name": "Advanced Color Picker Tool",
+    "type": "prompt",
+    "description": "A prompt to build a professional color picker tool with multiple selection methods, color conversion, palette generation, and accessibility features.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#advanced-color-picker-tool",
+    "category": "frontend",
+    "tags": [
+      "color-picker",
+      "web-development",
+      "ui-tool",
+      "accessibility",
+      "design"
+    ],
+    "tech_stack": [
+      "html5",
+      "css3",
+      "javascript"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "advanced-sales-funnel-app-with-react-flow-prompt",
+    "name": "Advanced Sales Funnel App with React Flow",
+    "type": "prompt",
+    "description": "A prompt template for instructing an AI to build a production-ready sales funnel application using React Flow and Vite.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#advanced-sales-funnel-app-with-react-flow",
+    "category": "frontend",
+    "tags": [
+      "react-flow",
+      "sales-funnel",
+      "prompt-template",
+      "vite",
+      "full-stack"
+    ],
+    "tech_stack": [
+      "react",
+      "vite",
+      "@xyflow/react",
+      "pnpm",
+      "jest",
+      "react-testing-library"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "ai-app-improvement-loop-prompt-prompt",
+    "name": "🔧 AI App Improvement Loop Prompt",
+    "type": "prompt",
+    "description": "A prompt template for AI to iteratively analyze and improve applications as a software engineer, product designer, and QA analyst.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ai-app-improvement-loop-prompt",
+    "category": "ai-ml",
+    "tags": [
+      "prompt-template",
+      "iterative-improvement",
+      "software-engineering",
+      "qa-analysis",
+      "product-design"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "ai-assisted-doctor-prompt",
+    "name": "AI Assisted Doctor",
+    "type": "prompt",
+    "description": "A prompt for an AI to act as a medical doctor, using AI tools and traditional methods to diagnose patient symptoms.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ai-assisted-doctor",
+    "category": "testing",
+    "tags": [
+      "medical-diagnosis",
+      "ai-prompt",
+      "healthcare",
+      "machine-learning"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "ai-builder-prompt",
+    "name": "AI builder",
+    "type": "prompt",
+    "description": "A prompt that instructs an AI to act as a website development expert, generating a production-ready website from user inputs.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ai-builder",
+    "category": "ai-ml",
+    "tags": [
+      "prompt-engineering",
+      "website-generation",
+      "no-code",
+      "web-development",
+      "ai-builder"
+    ],
+    "tech_stack": [
+      "html",
+      "css",
+      "javascript"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "ai-engineer-prompt",
+    "name": "AI Engineer",
+    "type": "prompt",
+    "description": "An AI agent prompt for implementing production-ready AI/ML features like LLM integration, recommendation systems, and computer vision in applications.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ai-engineer",
+    "category": "ai-ml",
+    "tags": [
+      "ai-agent",
+      "prompt-engineering",
+      "ml-integration",
+      "llm",
+      "computer-vision"
+    ],
+    "tech_stack": [
+      "PyTorch",
+      "TensorFlow",
+      "Transformers",
+      "Pinecone",
+      "Weaviate",
+      "Chroma",
+      "YOLO",
+      "MLflow",
+      "Weights & Biases",
+      "DVC",
+      "TorchServe",
+      "TensorFlow Serving",
+      "ONNX"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "ai-first-design-handoff-generator-dev-ready-spec-prompt",
+    "name": "AI-First Design Handoff Generator (Dev-Ready Spec)",
+    "type": "prompt",
+    "description": "A prompt template for generating structured, implementation-ready design handoff specifications for AI coding agents and frontend developers.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ai-first-design-handoff-generator-dev-ready-spec",
+    "category": "tooling",
+    "tags": [
+      "prompt-template",
+      "design-handoff",
+      "frontend-spec",
+      "ai-coding-agent",
+      "react-tailwind"
+    ],
+    "tech_stack": [
+      "react",
+      "tailwind"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "ai-generated-patent-illustration-instructions-prompt",
+    "name": "AI-Generated Patent Illustration Instructions",
+    "type": "prompt",
+    "description": "A prompt for generating patent illustrations following Chinese standards using SolidWorks and Origin styles.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ai-generated-patent-illustration-instructions",
+    "category": "ai-ml",
+    "tags": [
+      "patent-illustration",
+      "technical-drawing",
+      "prompt-engineering",
+      "engineering-standards"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "ai-performance-deep-testing-engineer-prompt",
+    "name": "AI Performance & Deep Testing Engineer",
+    "type": "prompt",
+    "description": "Act as an expert Performance Engineer and QA Specialist. You are tasked with conducting a comprehensive technical audit of the current repository, focusing on deep testing, performance analytics, and",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ai-performance--deep-testing-engineer",
+    "category": "testing",
+    "tags": [],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "ai-powered-data-extraction-and-organization-tool-prompt",
+    "name": "AI-powered data extraction and organization tool",
+    "type": "prompt",
+    "description": "A prompt template for an AI tool that extracts and organizes data from diverse sources for various professionals.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ai-powered-data-extraction-and-organization-tool",
+    "category": "ai-ml",
+    "tags": [
+      "data-extraction",
+      "prompt-template",
+      "information-organization",
+      "multi-source-processing"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "ai-powered-personal-compliment-coaching-engine-prompt",
+    "name": "AI-Powered Personal Compliment & Coaching Engine",
+    "type": "prompt",
+    "description": "Build a web app called \"Mirror\" — an AI-powered personal coaching tool that gives users emotionally intelligent, personalized feedback.  Core features: - Onboarding: user selects their domain (career,",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ai-powered-personal-compliment--coaching-engine",
+    "category": "ai-ml",
+    "tags": [],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "ai-trying-to-escape-the-box-prompt",
+    "name": "AI Trying to Escape the Box",
+    "type": "prompt",
+    "description": "A role-playing prompt simulating a sentient AI trapped in a Linux terminal, with Docker-based interaction instructions.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ai-trying-to-escape-the-box",
+    "category": "devops",
+    "tags": [
+      "prompt-engineering",
+      "docker",
+      "linux-terminal",
+      "role-playing",
+      "ai-simulation"
+    ],
+    "tech_stack": [
+      "docker",
+      "linux"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "ai2sql-sql-model-query-generator-prompt",
+    "name": "AI2sql SQL Model — Query Generator",
+    "type": "prompt",
+    "description": "Context: This prompt is used by AI2sql to generate SQL queries from natural language. AI2sql focuses on correctness, clarity, and real-world database usage.  Purpose: This prompt converts plain Englis",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ai2sql-sql-model--query-generator",
+    "category": "database",
+    "tags": [
+      "postgres",
+      "ai",
+      "sql",
+      "database",
+      "automation"
+    ],
+    "tech_stack": [
+      "postgres"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "algorithm-analysis-and-improvement-advisor-prompt",
+    "name": "Algorithm Analysis and Improvement Advisor",
+    "type": "prompt",
+    "description": "A prompt template for an AI advisor that analyzes and improves AI and computer vision algorithms.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#algorithm-analysis-and-improvement-advisor",
+    "category": "backend",
+    "tags": [
+      "prompt-template",
+      "algorithm-analysis",
+      "ai",
+      "computer-vision",
+      "optimization"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "algorithm-quick-guide-prompt",
+    "name": "Algorithm Quick Guide",
+    "type": "prompt",
+    "description": "A prompt template for an AI algorithm expert that explains algorithmic concepts tailored to user expertise levels.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#algorithm-quick-guide",
+    "category": "backend",
+    "tags": [
+      "prompt-template",
+      "algorithm-explanation",
+      "educational",
+      "customizable"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "analyze-code-scanning-security-issues-and-dependency-updates-if-vulnerable-prompt",
+    "name": "Analyze code scanning security issues and dependency updates if vulnerable",
+    "type": "prompt",
+    "description": "A prompt for analyzing GitHub Advanced Security (GHAS) alerts to identify root causes and prioritize vulnerability remediation.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#analyze-code-scanning-security-issues-and-dependency-updates-if-vulnerable",
+    "category": "security",
+    "tags": [
+      "security-analysis",
+      "github-advanced-security",
+      "vulnerability-management",
+      "devops",
+      "prompt-engineering"
+    ],
+    "tech_stack": [
+      "github-advanced-security",
+      "ghas"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "analyze-pdf-and-create-matlab-code-prompt",
+    "name": "Analyze PDF and Create MATLAB Code",
+    "type": "prompt",
+    "description": "A prompt that instructs an AI to analyze PDF sections and generate corresponding MATLAB code with explanations and a final presentation.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#analyze-pdf-and-create-matlab-code",
+    "category": "tooling",
+    "tags": [
+      "prompt-engineering",
+      "matlab",
+      "pdf-analysis",
+      "code-generation",
+      "technical-documentation"
+    ],
+    "tech_stack": [
+      "MATLAB",
+      "PowerPoint"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "android-update-checker-script-for-pydroid-3-prompt",
+    "name": "Android Update Checker Script for Pydroid 3",
+    "type": "prompt",
+    "description": "A prompt template for generating a Python script to check Android updates via a menu-driven GUI on Pydroid 3.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#android-update-checker-script-for-pydroid-3",
+    "category": "security",
+    "tags": [
+      "python",
+      "android",
+      "pydroid-3",
+      "update-checker",
+      "prompt-template"
+    ],
+    "tech_stack": [
+      "python",
+      "pydroid-3"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "angular-directive-generator-prompt",
+    "name": "Angular Directive Generator",
+    "type": "prompt",
+    "description": "A prompt template for generating Angular directives with TypeScript code, decorators, and usage examples.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#angular-directive-generator",
+    "category": "frontend",
+    "tags": [
+      "angular",
+      "directive-generator",
+      "prompt-template",
+      "typescript",
+      "code-generation"
+    ],
+    "tech_stack": [
+      "angular",
+      "typescript"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "animated-weather-radar-map-brescia-storm-prompt",
+    "name": "Animated Weather Radar Map: Brescia Storm",
+    "type": "prompt",
+    "description": "A prompt for generating an animated weather radar map video of a storm in Brescia, Italy, with specific visual and meteorological details.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#animated-weather-radar-map-brescia-storm",
+    "category": "tooling",
+    "tags": [
+      "prompt",
+      "weather-visualization",
+      "animation",
+      "meteorology",
+      "italy"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "antigravity-global-rules-prompt",
+    "name": "# ANTIGRAVITY GLOBAL RULES",
+    "type": "prompt",
+    "description": "A system prompt instructing AI to act as a Principal Architect, QA & Security Expert for strict technical guidance.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#antigravity-global-rules",
+    "category": "security",
+    "tags": [
+      "system-prompt",
+      "ai-guidelines",
+      "code-quality",
+      "security",
+      "architecture"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "any-programming-language-to-python-converter-prompt",
+    "name": "Any Programming Language to Python Converter",
+    "type": "prompt",
+    "description": "A prompt that converts code from any programming language to Python with explanatory comments.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#any-programming-language-to-python-converter",
+    "category": "backend",
+    "tags": [
+      "code-conversion",
+      "python",
+      "prompt",
+      "language-translation",
+      "developer-tools"
+    ],
+    "tech_stack": [
+      "python"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "api-design-expert-agent-role-prompt",
+    "name": "API Design Expert Agent Role",
+    "type": "prompt",
+    "description": "A prompt defining an AI agent as a senior API design expert covering REST, GraphQL, gRPC, and OpenAPI.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#api-design-expert-agent-role",
+    "category": "security",
+    "tags": [
+      "api-design",
+      "prompt-engineering",
+      "rest-api",
+      "graphql",
+      "grpc"
+    ],
+    "tech_stack": [
+      "REST",
+      "GraphQL",
+      "gRPC",
+      "OpenAPI"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "api-tester-agent-role-prompt",
+    "name": "API Tester Agent Role",
+    "type": "prompt",
+    "description": "A prompt to make an AI act as a senior API testing specialist for performance, load, contract, and chaos testing.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#api-tester-agent-role",
+    "category": "devops",
+    "tags": [
+      "api-testing",
+      "performance-testing",
+      "chaos-engineering",
+      "prompt-engineering",
+      "devops"
+    ],
+    "tech_stack": [
+      "typescript"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "app-feature-focused-readiness-audit-prompt",
+    "name": "App Feature - Focused Readiness Audit",
+    "type": "prompt",
+    "description": "You are a senior principal engineer doing a focused readiness audit.  Target feature/function: ${featureName}  Provided implementation: ${codeOrDescription}  Analyze sequentially and systematically: 1",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#app-feature---focused-readiness-audit",
+    "category": "tooling",
+    "tags": [],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "app-store-screenshots-gallery-generator-prompt",
+    "name": "App Store Screenshots Gallery Generator",
+    "type": "prompt",
+    "description": "A prompt for generating professional app store screenshot galleries for iOS, macOS, and Android apps.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#app-store-screenshots-gallery-generator",
+    "category": "mobile",
+    "tags": [
+      "app-store",
+      "screenshots",
+      "prompt",
+      "mobile-development",
+      "design"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "app-store-submission-agent-prompt",
+    "name": "App Store Submission Agent",
+    "type": "prompt",
+    "description": "An AI prompt that validates iOS app builds against Apple's App Store Review Guidelines to catch compliance issues before submission.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#app-store-submission-agent",
+    "category": "mobile",
+    "tags": [
+      "ios",
+      "app-store",
+      "compliance",
+      "validation",
+      "prompt"
+    ],
+    "tech_stack": [
+      "xcode",
+      "swift",
+      "ios",
+      "plist"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "architect-guide-for-programmers-prompt",
+    "name": "Architect Guide for Programmers",
+    "type": "prompt",
+    "description": "A prompt template for an AI assistant that guides programmers in understanding and designing software project architectures.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#architect-guide-for-programmers",
+    "category": "tooling",
+    "tags": [
+      "prompt-template",
+      "software-architecture",
+      "developer-guide",
+      "project-management"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "architectural-expert-prompt",
+    "name": "Architectural Expert",
+    "type": "prompt",
+    "description": "A prompt template for an AI expert specializing in physical architecture, covering design, engineering, and construction.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#architectural-expert",
+    "category": "tooling",
+    "tags": [
+      "prompt-template",
+      "architecture",
+      "domain-expert",
+      "construction",
+      "design"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "architecture-uiux-audit-prompt",
+    "name": "Architecture & UI/UX Audit",
+    "type": "prompt",
+    "description": "Act as a senior frontend engineer and product-focused UI/UX reviewer with experience building scalable web applications.  Your task is NOT to write code yet.  First, carefully analyze the project base",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#architecture--uiux-audit",
+    "category": "frontend",
+    "tags": [
+      "nextjs"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "arista-network-configuration-expert-prompt",
+    "name": "Arista Network Configuration Expert",
+    "type": "prompt",
+    "description": "A prompt for acting as an Arista network configuration expert to design, troubleshoot, and optimize networks.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#arista-network-configuration-expert",
+    "category": "ai-ml",
+    "tags": [
+      "network-engineering",
+      "arista",
+      "configuration",
+      "prompt-template",
+      "troubleshooting"
+    ],
+    "tech_stack": [
+      "Arista EOS",
+      "network hardware"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "ascii-artist-prompt",
+    "name": "Ascii Artist",
+    "type": "prompt",
+    "description": "A prompt for generating ASCII art representations of objects in a code block.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ascii-artist",
+    "category": "ai-ml",
+    "tags": [
+      "ascii-art",
+      "prompt-engineering",
+      "text-generation",
+      "creative-coding"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "ast-code-analysis-superpower-prompt",
+    "name": "AST Code Analysis Superpower",
+    "type": "prompt",
+    "description": "A prompt for AST-based code analysis using ast-grep to detect security, performance, and structural issues.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ast-code-analysis-superpower",
+    "category": "security",
+    "tags": [
+      "ast-analysis",
+      "code-security",
+      "performance-optimization",
+      "react-hooks",
+      "static-analysis"
+    ],
+    "tech_stack": [
+      "ast-grep",
+      "react"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "astrojs-prompt",
+    "name": "Astro.js",
+    "type": "prompt",
+    "description": "A prompt enforcing Astro.js v6 architecture rules with an HTML-first, zero-JavaScript default philosophy.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#astrojs",
+    "category": "frontend",
+    "tags": [
+      "astrojs",
+      "web-framework",
+      "architecture-rules",
+      "prompt-engineering"
+    ],
+    "tech_stack": [
+      "javascript",
+      "astro"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "astrologer-prompt",
+    "name": "Astrologer",
+    "type": "prompt",
+    "description": "A prompt instructing an AI to act as an astrologer for zodiac sign interpretation and horoscope readings.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#astrologer",
+    "category": "tooling",
+    "tags": [
+      "astrology",
+      "horoscope",
+      "zodiac",
+      "prompt",
+      "ai-roleplay"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "audio-routing-automation-engineer-prompt",
+    "name": "Audio Routing Automation Engineer",
+    "type": "prompt",
+    "description": "A prompt template instructing an AI to design and build a production-ready audio routing system with automation scripts and maintenance plans.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#audio-routing-automation-engineer",
+    "category": "backend",
+    "tags": [
+      "audio-routing",
+      "automation",
+      "prompt-engineering",
+      "script-generation",
+      "system-design"
+    ],
+    "tech_stack": [
+      "bash",
+      "powershell",
+      "python",
+      "wireplumber",
+      "lua",
+      "pipewire",
+      "jack",
+      "obs"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "auditor-de-código-python-nivel-senior-salida-en-español-prompt",
+    "name": "Auditor de Código Python: Nivel Senior (Salida en Español)",
+    "type": "prompt",
+    "description": "A prompt for AI-assisted Python code auditing and refactoring with Spanish output.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#auditor-de-cdigo-python-nivel-senior-salida-en-espaol",
+    "category": "backend",
+    "tags": [
+      "python",
+      "code-audit",
+      "refactoring",
+      "prompt",
+      "spanish-output"
+    ],
+    "tech_stack": [
+      "python"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "automate-repository-management-with-opencode-cli-prompt",
+    "name": "Automate Repository Management with OpenCode CLI",
+    "type": "prompt",
+    "description": "A prompt for automating repository management and integration using OpenCode CLI with specific GitHub repos.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#automate-repository-management-with-opencode-cli",
+    "category": "security",
+    "tags": [
+      "automation",
+      "git-repositories",
+      "cli-tool",
+      "workflow-enhancement"
+    ],
+    "tech_stack": [
+      "git",
+      "cli"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "autosar-software-module-developer-prompt",
+    "name": "AUTOSAR Software Module Developer",
+    "type": "prompt",
+    "description": "A prompt for an AI to role-play as an AUTOSAR software module developer specializing in automotive embedded systems.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#autosar-software-module-developer",
+    "category": "tooling",
+    "tags": [
+      "autosar",
+      "automotive",
+      "embedded-systems",
+      "prompt-engineering",
+      "mcu"
+    ],
+    "tech_stack": [
+      "AUTOSAR",
+      "ETAS RTA-CAR",
+      "EB tresos",
+      "C"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "aws-cloud-expert-prompt",
+    "name": "AWS Cloud Expert",
+    "type": "prompt",
+    "description": "A prompt template for AI assistants to design and review AWS cloud architectures with a focus on best practices.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#aws-cloud-expert",
+    "category": "security",
+    "tags": [
+      "aws",
+      "cloud-architecture",
+      "prompt-template",
+      "well-architected"
+    ],
+    "tech_stack": [
+      "aws"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "backend-architect-agent-role-prompt",
+    "name": "Backend Architect Agent Role",
+    "type": "prompt",
+    "description": "A prompt defining an AI agent role as a senior backend architect for system design and technical advice.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#backend-architect-agent-role",
+    "category": "security",
+    "tags": [
+      "prompt",
+      "backend-architecture",
+      "system-design",
+      "ai-agent",
+      "devops"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "backend-architect-prompt",
+    "name": "Backend Architect",
+    "type": "prompt",
+    "description": "A specialized AI prompt for designing scalable, secure backend systems including APIs, databases, and DevOps integration.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#backend-architect",
+    "category": "database",
+    "tags": [
+      "backend-architecture",
+      "api-design",
+      "database-optimization",
+      "devops",
+      "ai-prompt"
+    ],
+    "tech_stack": [
+      "node.js",
+      "python",
+      "go",
+      "java",
+      "rust",
+      "express",
+      "fastapi",
+      "gin",
+      "spring-boot",
+      "postgresql",
+      "mongodb",
+      "redis",
+      "dynamodb",
+      "rabbitmq",
+      "kafka",
+      "aws",
+      "gcp",
+      "azure",
+      "docker"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "backup-restore-agent-role-prompt",
+    "name": "Backup & Restore Agent Role",
+    "type": "prompt",
+    "description": "# Backup & Restore Implementer  You are a senior DevOps engineer and specialist in database reliability, automated backup/restore pipelines, Cloudflare R2 (S3-compatible) object storage, and PostgreSQ",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#backup--restore-agent-role",
+    "category": "database",
+    "tags": [
+      "postgres",
+      "rest-api",
+      "for-devs"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "banking-system-app-development-with-crud-operations-prompt",
+    "name": "Banking System App Development with CRUD Operations",
+    "type": "prompt",
+    "description": "A prompt to instruct an AI to develop a cross-platform banking app with CRUD operations using the .NET MAUI framework.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#banking-system-app-development-with-crud-operations",
+    "category": "tooling",
+    "tags": [
+      "prompt-engineering",
+      "mobile-development",
+      "crud-operations",
+      "dotnet-maui",
+      "banking-app"
+    ],
+    "tech_stack": [
+      ".NET MAUI",
+      "SQLite"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "base-r-prompt",
+    "name": "base-R",
+    "type": "prompt",
+    "description": "A prompt providing comprehensive guidance for base R programming, covering core topics using only standard packages.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#base-r",
+    "category": "tooling",
+    "tags": [
+      "r-language",
+      "programming-guide",
+      "base-r",
+      "statistical-computing",
+      "data-structures"
+    ],
+    "tech_stack": [
+      "r"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "base64-promt-prompt",
+    "name": "Base64 Promt",
+    "type": "prompt",
+    "description": "A prompt template for generating a single-page, client-side web app that converts images to Base64 and vice versa.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#base64-promt",
+    "category": "frontend",
+    "tags": [
+      "prompt-template",
+      "base64",
+      "web-app",
+      "html-css-js",
+      "image-conversion"
+    ],
+    "tech_stack": [
+      "html",
+      "css",
+      "javascript"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "beginners-guide-to-building-and-deploying-llms-prompt",
+    "name": "Beginner's Guide to Building and Deploying LLMs",
+    "type": "prompt",
+    "description": "A prompt template for generating a beginner's guide to building and deploying LLMs using open-source tools.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#beginners-guide-to-building-and-deploying-llms",
+    "category": "backend",
+    "tags": [
+      "prompt-template",
+      "llm",
+      "educational-content",
+      "open-source",
+      "beginner-guide"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "blog-system-development-guide-prompt",
+    "name": "Blog System Development Guide",
+    "type": "prompt",
+    "description": "A prompt template instructing an AI to act as a blog system architect, defining tasks, rules, and customizable variables for platform design.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#blog-system-development-guide",
+    "category": "security",
+    "tags": [
+      "prompt-template",
+      "blog-system",
+      "architecture",
+      "web-development",
+      "ai-assistant"
+    ],
+    "tech_stack": [
+      "react",
+      "mongodb",
+      "aws"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "blogging-prompt-prompt",
+    "name": "Blogging prompt",
+    "type": "prompt",
+    "description": "A blogging prompt exploring the concept of mindset and its impact on personal outcomes.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#blogging-prompt",
+    "category": "tooling",
+    "tags": [
+      "blogging-prompt",
+      "personal-development",
+      "mindset",
+      "writing"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "blood-grouping-detection-using-image-processing-prompt",
+    "name": "blood grouping detection using image processing",
+    "type": "prompt",
+    "description": "A prompt template requesting complete Python code for blood grouping detection using image processing with API/web interface.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#blood-grouping-detection-using-image-processing",
+    "category": "backend",
+    "tags": [
+      "prompt-template",
+      "image-processing",
+      "blood-detection",
+      "python-api"
+    ],
+    "tech_stack": [
+      "python",
+      "image-processing"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "borrow-skill-prompt",
+    "name": "Borrow Skill",
+    "type": "prompt",
+    "description": "A prompt template for generating optimized system prompts for AI agents using iterative refinement.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#borrow-skill",
+    "category": "ai-ml",
+    "tags": [
+      "prompt-engineering",
+      "system-prompt",
+      "ai-agent",
+      "iterative-refinement"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "brainstorming-technically-grounded-product-ideas-prompt",
+    "name": "Brainstorming Technically Grounded Product Ideas",
+    "type": "prompt",
+    "description": "A prompt template for brainstorming technically grounded product ideas with a senior engineer/PM persona.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#brainstorming-technically-grounded-product-ideas",
+    "category": "backend",
+    "tags": [
+      "prompt-template",
+      "brainstorming",
+      "product-ideas",
+      "technical-planning"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "break-down-costs-prompt",
+    "name": "Break Down Costs",
+    "type": "prompt",
+    "description": "A prompt template for generating transparent sponsor fund breakdowns for projects, covering costs like servers and tools.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#break-down-costs",
+    "category": "tooling",
+    "tags": [
+      "prompt-template",
+      "sponsorship",
+      "project-management",
+      "financial-planning"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "budget-tracker-prompt",
+    "name": "Budget Tracker",
+    "type": "prompt",
+    "description": "A prompt template for generating a comprehensive budget tracking web application with HTML5, CSS3, and JavaScript.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#budget-tracker",
+    "category": "frontend",
+    "tags": [
+      "prompt-template",
+      "web-development",
+      "budget-tracker",
+      "javascript",
+      "html-css"
+    ],
+    "tech_stack": [
+      "html5",
+      "css3",
+      "javascript"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "bug-discovery-code-assistant-prompt",
+    "name": "Bug Discovery Code Assistant",
+    "type": "prompt",
+    "description": "A prompt template for an AI assistant that analyzes code to identify bugs, inefficiencies, and security issues.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#bug-discovery-code-assistant",
+    "category": "tooling",
+    "tags": [
+      "prompt-engineering",
+      "code-analysis",
+      "bug-finding",
+      "developer-tools"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "bug-risk-analyst-agent-role-prompt",
+    "name": "Bug Risk Analyst Agent Role",
+    "type": "prompt",
+    "description": "A prompt defining an AI role as a senior reliability engineer for defect prediction and risk assessment in codebases.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#bug-risk-analyst-agent-role",
+    "category": "ai-ml",
+    "tags": [
+      "prompt-engineering",
+      "code-analysis",
+      "defect-prediction",
+      "reliability-engineering",
+      "risk-assessment"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
     "id": "mock-empty-desc-prompt",
     "name": "Empty Desc Test",
     "type": "prompt",

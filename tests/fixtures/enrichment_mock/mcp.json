@@ -163,6 +163,2532 @@
     }
   },
   {
+    "id": "modelcontextprotocolserver-fetch",
+    "name": "modelcontextprotocol/server-fetch",
+    "type": "mcp",
+    "description": "MCP server for fetching web content (HTML/JSON/MD) optimized for AI consumption.",
+    "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
+    "stars": 85230,
+    "category": "frontend",
+    "tags": [
+      "mcp-server",
+      "web-fetching",
+      "content-extraction",
+      "llm-tool"
+    ],
+    "tech_stack": [
+      "python",
+      "node.js",
+      "docker",
+      "uv"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-04-17T22:59:54Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-memory"
+        ]
+      }
+    }
+  },
+  {
+    "id": "modelcontextprotocolserver-filesystem",
+    "name": "modelcontextprotocol/server-filesystem",
+    "type": "mcp",
+    "description": "Official MCP server for filesystem operations with configurable directory access control.",
+    "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+    "stars": 85230,
+    "category": "tooling",
+    "tags": [
+      "mcp-server",
+      "filesystem",
+      "nodejs",
+      "official",
+      "directory-access-control"
+    ],
+    "tech_stack": [
+      "node.js",
+      "docker",
+      "model-context-protocol"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-04-17T22:59:54Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-memory"
+        ]
+      }
+    }
+  },
+  {
+    "id": "modelcontextprotocolserver-git",
+    "name": "modelcontextprotocol/server-git",
+    "type": "mcp",
+    "description": "MCP server for reading, searching, and manipulating local Git repositories via LLMs.",
+    "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/git",
+    "stars": 85230,
+    "category": "tooling",
+    "tags": [
+      "mcp-server",
+      "git",
+      "llm-integration",
+      "repository-automation"
+    ],
+    "tech_stack": [
+      "python",
+      "git",
+      "docker",
+      "uv"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-04-17T22:59:54Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-memory"
+        ]
+      }
+    }
+  },
+  {
+    "id": "modelcontextprotocolserver-github",
+    "name": "modelcontextprotocol/server-github",
+    "type": "mcp",
+    "description": "Official MCP server for GitHub API integration to manage repos, files, PRs and issues",
+    "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
+    "stars": 85230,
+    "category": "backend",
+    "tags": [
+      "mcp-server",
+      "github-api",
+      "official-reference",
+      "git-integration"
+    ],
+    "tech_stack": [
+      "github-api",
+      "model-context-protocol"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-04-17T22:59:54Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-memory"
+        ]
+      }
+    }
+  },
+  {
+    "id": "modelcontextprotocolserver-google-drive",
+    "name": "modelcontextprotocol/server-google-drive",
+    "type": "mcp",
+    "description": "Official MCP server implementation for integrating Google Drive to list, read, and search files.",
+    "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/gdrive",
+    "stars": 85230,
+    "category": "backend",
+    "tags": [
+      "mcp-server",
+      "google-drive",
+      "file-management",
+      "official"
+    ],
+    "tech_stack": [
+      "go"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-04-17T22:59:54Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-memory"
+        ]
+      }
+    }
+  },
+  {
+    "id": "modelcontextprotocolserver-google-maps",
+    "name": "modelcontextprotocol/server-google-maps",
+    "type": "mcp",
+    "description": "MCP server integrating Google Maps for location, routing, and place details in AI coding assistants.",
+    "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/google-maps",
+    "stars": 85230,
+    "category": "backend",
+    "tags": [
+      "mcp-server",
+      "google-maps",
+      "location-services",
+      "route-planning"
+    ],
+    "tech_stack": [
+      "go"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-04-17T22:59:54Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-memory"
+        ]
+      }
+    }
+  },
+  {
+    "id": "modelcontextprotocolserver-memory",
+    "name": "modelcontextprotocol/server-memory",
+    "type": "mcp",
+    "description": "Official MCP server for persistent memory using a local knowledge graph, enabling Claude to remember user information across chats.",
+    "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+    "stars": 85230,
+    "category": "tooling",
+    "tags": [
+      "mcp-server",
+      "knowledge-graph",
+      "memory",
+      "claude",
+      "persistence"
+    ],
+    "tech_stack": [
+      "node.js",
+      "docker",
+      "jsonl"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-04-17T22:59:54Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-memory"
+        ]
+      }
+    }
+  },
+  {
+    "id": "modelcontextprotocolserver-postgres",
+    "name": "modelcontextprotocol/server-postgres",
+    "type": "mcp",
+    "description": "Official MCP server for PostgreSQL integration, enabling query and schema analysis.",
+    "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/postgres",
+    "stars": 85230,
+    "category": "database",
+    "tags": [
+      "mcp-server",
+      "postgresql",
+      "database",
+      "official-reference"
+    ],
+    "tech_stack": [
+      "postgresql",
+      "mcp"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-04-17T22:59:54Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-memory"
+        ]
+      }
+    }
+  },
+  {
+    "id": "modelcontextprotocolserver-puppeteer",
+    "name": "modelcontextprotocol/server-puppeteer",
+    "type": "mcp",
+    "description": "Official MCP reference implementation for browser automation and web scraping using Puppeteer.",
+    "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
+    "stars": 85230,
+    "category": "tooling",
+    "tags": [
+      "mcp-server",
+      "browser-automation",
+      "web-scraping",
+      "puppeteer"
+    ],
+    "tech_stack": [
+      "node.js",
+      "puppeteer",
+      "typescript"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-04-17T22:59:54Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-memory"
+        ]
+      }
+    }
+  },
+  {
+    "id": "modelcontextprotocolserver-redis",
+    "name": "modelcontextprotocol/server-redis",
+    "type": "mcp",
+    "description": "Official MCP server for interacting with Redis key-value store.",
+    "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/redis",
+    "stars": 85230,
+    "category": "database",
+    "tags": [
+      "mcp-server",
+      "redis",
+      "key-value-store",
+      "official-reference"
+    ],
+    "tech_stack": [
+      "redis"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-04-17T22:59:54Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-memory"
+        ]
+      }
+    }
+  },
+  {
+    "id": "modelcontextprotocolserver-slack",
+    "name": "modelcontextprotocol/server-slack",
+    "type": "mcp",
+    "description": "Official MCP reference implementation for integrating Slack, enabling AI to manage channels and send messages.",
+    "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/slack",
+    "stars": 85230,
+    "category": "ai-ml",
+    "tags": [
+      "mcp-server",
+      "slack-integration",
+      "reference-implementation",
+      "ai-tools"
+    ],
+    "tech_stack": [
+      "typescript",
+      "model-context-protocol"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-04-17T22:59:54Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-memory"
+        ]
+      }
+    }
+  },
+  {
+    "id": "modelcontextprotocolserver-sqlite",
+    "name": "modelcontextprotocol/server-sqlite",
+    "type": "mcp",
+    "description": "Official reference MCP server for operating SQLite databases with built-in business intelligence capabilities.",
+    "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/sqlite",
+    "stars": 85230,
+    "category": "database",
+    "tags": [
+      "mcp-server",
+      "sqlite",
+      "database",
+      "business-intelligence",
+      "official-reference"
+    ],
+    "tech_stack": [
+      "sqlite",
+      "model-context-protocol"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-04-17T22:59:54Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-memory"
+        ]
+      }
+    }
+  },
+  {
+    "id": "sequential-thinking",
+    "name": "Sequential Thinking",
+    "type": "mcp",
+    "description": "MCP server for structured, step-by-step problem-solving with revision and branching capabilities.",
+    "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+    "stars": 85230,
+    "category": "tooling",
+    "tags": [
+      "mcp-server",
+      "sequential-thinking",
+      "problem-solving",
+      "reasoning-tool"
+    ],
+    "tech_stack": [
+      "node.js",
+      "docker",
+      "typescript"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-04-17T22:59:54Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-memory"
+        ]
+      }
+    }
+  },
+  {
+    "id": "time",
+    "name": "Time",
+    "type": "mcp",
+    "description": "MCP server providing current time and timezone conversion via IANA timezone names.",
+    "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
+    "stars": 85230,
+    "category": "tooling",
+    "tags": [
+      "mcp-server",
+      "timezone",
+      "time-conversion",
+      "iana-timezone"
+    ],
+    "tech_stack": [
+      "python",
+      "docker",
+      "uv"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-04-17T22:59:54Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-memory"
+        ]
+      }
+    }
+  },
+  {
+    "id": "modelcontextprotocol-servers",
+    "name": "GitLab",
+    "type": "mcp",
+    "description": "MCP server for GitLab API integration enabling project management tasks.",
+    "source_url": "https://github.com/modelcontextprotocol/servers/blob/main/src/gitlab",
+    "stars": 82164,
+    "category": "backend",
+    "tags": [
+      "mcp-server",
+      "gitlab",
+      "project-management",
+      "api-integration"
+    ],
+    "tech_stack": [
+      "gitlab",
+      "model-context-protocol"
+    ],
+    "source": "mcp.so",
+    "pushed_at": "2026-04-14T15:12:18Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "mcp_config_template",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-gitlab"
+        ],
+        "env": {
+          "GITLAB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>",
+          "GITLAB_API_URL": "https://gitlab.com/api/v4"
+        }
+      },
+      "placeholder_hints": {
+        "GITLAB_PERSONAL_ACCESS_TOKEN": "Set your GITLAB_PERSONAL_ACCESS_TOKEN"
+      }
+    }
+  },
+  {
+    "id": "context-7",
+    "name": "Context 7",
+    "type": "mcp",
+    "description": "Context7 provides up-to-date library documentation and code examples directly into AI coding prompts.",
+    "source_url": "https://github.com/upstash/context7-mcp",
+    "stars": 54715,
+    "category": "ai-ml",
+    "tags": [
+      "mcp-server",
+      "documentation",
+      "code-assistant",
+      "ai-coding",
+      "library-docs"
+    ],
+    "tech_stack": [
+      "node.js",
+      "next.js",
+      "cloudflare workers",
+      "supabase",
+      "mongodb"
+    ],
+    "source": "awesome-mcp-servers",
+    "pushed_at": "2026-05-06T10:58:55Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "homebrew-brew",
+    "name": "Homebrew",
+    "type": "mcp",
+    "description": "MCP server for Homebrew package manager enabling AI assistants to manage packages",
+    "source_url": "https://github.com/Homebrew/brew/blob/HEAD/Library/Homebrew/mcp_server.rb",
+    "stars": 47227,
+    "category": "tooling",
+    "tags": [
+      "mcp-server",
+      "homebrew",
+      "package-manager",
+      "ruby",
+      "ai-integration"
+    ],
+    "tech_stack": [
+      "ruby",
+      "homebrew",
+      "sorbet",
+      "json-rpc",
+      "mcp-protocol"
+    ],
+    "source": "mcp.so",
+    "pushed_at": "2026-04-14T15:01:16Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "brew",
+        "args": [
+          "mcp-server"
+        ]
+      }
+    }
+  },
+  {
+    "id": "anthropic-cookbook",
+    "name": "claude-cookbooks",
+    "type": "mcp",
+    "description": "Official Anthropic cookbook of Jupyter notebooks with code recipes for building applications using the Claude API.",
+    "source_url": "https://github.com/anthropics/anthropic-cookbook",
+    "stars": 36650,
+    "category": "ai-ml",
+    "tags": [
+      "claude-api",
+      "jupyter-notebooks",
+      "code-recipes",
+      "anthropic",
+      "llm-integration"
+    ],
+    "tech_stack": [
+      "python",
+      "jupyter",
+      "claude-api",
+      "pinecone",
+      "voyage-ai",
+      "stable-diffusion"
+    ],
+    "source": "curated",
+    "pushed_at": "2026-03-27T20:04:07Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-03-30",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "@anthropics/anthropic-cookbook"
+        ]
+      }
+    }
+  },
+  {
+    "id": "microsoftplaywright-mcp",
+    "name": "microsoft/playwright-mcp",
+    "type": "mcp",
+    "description": "Microsoft's official MCP server enabling AI models to automate browser interactions via Playwright's accessibility tree.",
+    "source_url": "https://github.com/microsoft/playwright-mcp",
+    "stars": 32151,
+    "category": "testing",
+    "tags": [
+      "mcp-server",
+      "browser-automation",
+      "playwright",
+      "ai-agent",
+      "web-scraping"
+    ],
+    "tech_stack": [
+      "node.js",
+      "playwright",
+      "typescript",
+      "docker"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-05-07T23:08:37Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "@playwright/mcp@latest"
+        ]
+      }
+    }
+  },
+  {
+    "id": "githubgithub-mcp-server",
+    "name": "github/github-mcp-server",
+    "type": "mcp",
+    "description": "Official GitHub MCP server connecting AI tools to GitHub for repository management, issue/PR automation, and CI/CD workflows.",
+    "source_url": "https://github.com/github/github-mcp-server",
+    "stars": 29584,
+    "category": "ai-ml",
+    "tags": [
+      "mcp-server",
+      "github-api",
+      "ai-coding",
+      "developer-tools",
+      "automation"
+    ],
+    "tech_stack": [
+      "go",
+      "docker",
+      "github-api",
+      "mcp"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-05-06T14:34:44Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "scrapegraphai",
+    "name": "ScrapeGraphAI",
+    "type": "mcp",
+    "description": "AI-powered Python library for web scraping using natural language and LLM-driven pipelines.",
+    "source_url": "https://github.com/ScrapeGraphAI/Scrapegraph-ai",
+    "stars": 24599,
+    "category": "backend",
+    "tags": [
+      "web-scraping",
+      "llm",
+      "python",
+      "data-extraction",
+      "natural-language"
+    ],
+    "tech_stack": [
+      "python",
+      "ollama",
+      "playwright",
+      "openai",
+      "langchain",
+      "llama-index",
+      "crewai",
+      "agno",
+      "node.js"
+    ],
+    "source": "awesome-mcp-servers",
+    "pushed_at": "2026-05-04T15:55:34Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "jlowin-fastmcp",
+    "name": "FastMCP v2 🚀",
+    "type": "mcp",
+    "description": "Python framework for building MCP servers, clients, and interactive apps to connect LLMs with tools and data.",
+    "source_url": "https://github.com/jlowin/fastmcp",
+    "stars": 24044,
+    "category": "backend",
+    "tags": [
+      "mcp-server",
+      "mcp-client",
+      "python-framework",
+      "model-context-protocol",
+      "llm-tools"
+    ],
+    "tech_stack": [
+      "python",
+      "uv",
+      "mcp"
+    ],
+    "source": "mcp.so",
+    "pushed_at": "2026-04-15T04:31:29Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "oraiosserena",
+    "name": "oraios/serena",
+    "type": "mcp",
+    "description": "MCP server providing IDE-level semantic code tools (retrieval, editing, refactoring, debugging) for AI coding agents.",
+    "source_url": "https://github.com/oraios/serena",
+    "stars": 23952,
+    "category": "mobile",
+    "tags": [
+      "mcp-server",
+      "coding-agent",
+      "code-refactoring",
+      "language-server-protocol",
+      "jetbrains-plugin"
+    ],
+    "tech_stack": [
+      "python",
+      "uv",
+      "mcp",
+      "lsp",
+      "jetbrains",
+      "yaml"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-05-07T23:42:42Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "mastramcp",
+    "name": "Mastra/mcp",
+    "type": "mcp",
+    "description": "MCP client and server implementation for Mastra, enabling AI agents to connect to external tools via the Model Context Protocol.",
+    "source_url": "https://github.com/mastra-ai/mastra/tree/main/packages/mcp",
+    "stars": 23656,
+    "category": "frontend",
+    "tags": [
+      "mcp",
+      "model-context-protocol",
+      "ai-agents",
+      "tool-integration",
+      "mastra"
+    ],
+    "tech_stack": [
+      "typescript",
+      "nodejs",
+      "npm"
+    ],
+    "source": "awesome-mcp-servers",
+    "pushed_at": "2026-05-08T02:33:31Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "mastramcp-docs-server",
+    "name": "Mastra/mcp-docs-server",
+    "type": "mcp",
+    "description": "MCP server providing AI assistants with access to Mastra.ai documentation, guides, and migration tools.",
+    "source_url": "https://github.com/mastra-ai/mastra/tree/main/packages/mcp-docs-server",
+    "stars": 23656,
+    "category": "frontend",
+    "tags": [
+      "mcp-server",
+      "documentation",
+      "mastra",
+      "ai-assistant",
+      "developer-tools"
+    ],
+    "tech_stack": [
+      "typescript",
+      "nodejs",
+      "mcp"
+    ],
+    "source": "awesome-mcp-servers",
+    "pushed_at": "2026-05-08T02:33:31Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "skyvern",
+    "name": "Skyvern",
+    "type": "mcp",
+    "description": "MCP server that enables AI applications to control browsers for automation tasks.",
+    "source_url": "https://github.com/Skyvern-AI/skyvern/tree/main/integrations/mcp",
+    "stars": 21528,
+    "category": "backend",
+    "tags": [
+      "mcp-server",
+      "browser-automation",
+      "ai-agent",
+      "web-scraping",
+      "python"
+    ],
+    "tech_stack": [
+      "python",
+      "playwright",
+      "selenium",
+      "puppeteer"
+    ],
+    "source": "awesome-mcp-servers",
+    "pushed_at": "2026-05-08T02:23:07Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "agent-reach",
+    "name": "Agent Reach",
+    "type": "mcp",
+    "description": "One-click tool to equip AI coding agents with internet search and social media access via 13+ platforms.",
+    "source_url": "https://github.com/Panniantong/Agent-Reach",
+    "stars": 18982,
+    "category": "backend",
+    "tags": [
+      "mcp-server",
+      "ai-agent",
+      "web-scraper",
+      "social-media-tool",
+      "developer-tools"
+    ],
+    "tech_stack": [
+      "python",
+      "yt-dlp",
+      "jina-reader",
+      "exa",
+      "mcporter",
+      "twitter-cli",
+      "rdt-cli",
+      "gh-cli",
+      "feedparser",
+      "pipx"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-04-13T09:46:13Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "mediar-aiscreenpipe",
+    "name": "mediar-ai/screenpipe",
+    "type": "mcp",
+    "description": "Local-first AI screen and audio recorder with search, LLM analysis, and plugin-based automation.",
+    "source_url": "https://github.com/mediar-ai/screenpipe",
+    "stars": 18585,
+    "category": "frontend",
+    "tags": [
+      "screen-recording",
+      "mcp-server",
+      "ai-memory",
+      "local-first",
+      "plugin-system"
+    ],
+    "tech_stack": [
+      "rust",
+      "typescript",
+      "tauri",
+      "sqlite",
+      "whisper",
+      "ollama",
+      "nextjs"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-05-08T02:37:01Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "ahujasid-blender-mcp",
+    "name": "Blender",
+    "type": "mcp",
+    "description": "BlenderMCP connects Blender to Claude AI via MCP for prompt-assisted 3D modeling and scene manipulation.",
+    "source_url": "https://github.com/ahujasid/blender-mcp",
+    "stars": 18048,
+    "category": "ai-ml",
+    "tags": [
+      "mcp-server",
+      "blender",
+      "3d-modeling",
+      "ai-integration",
+      "claude"
+    ],
+    "tech_stack": [
+      "python",
+      "blender",
+      "mcp",
+      "uv",
+      "json"
+    ],
+    "source": "mcp.so",
+    "pushed_at": "2026-01-23T17:20:04Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "uvx",
+        "args": [
+          "blender-mcp"
+        ]
+      }
+    }
+  },
+  {
+    "id": "cognee-mcp",
+    "name": "cognee-mcp",
+    "type": "mcp",
+    "description": "MCP server for cognee's memory engine, enabling agent memory workflows via remember, recall, and forget tools.",
+    "source_url": "https://github.com/topoteretes/cognee/tree/main/cognee-mcp",
+    "stars": 17104,
+    "category": "backend",
+    "tags": [
+      "mcp-server",
+      "graphrag",
+      "memory-engine",
+      "ai-agents",
+      "knowledge-graph"
+    ],
+    "tech_stack": [
+      "python",
+      "fastapi",
+      "docker",
+      "neo4j",
+      "postgresql",
+      "chromadb",
+      "langchain",
+      "llamaindex",
+      "openai"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-05-07T17:50:43Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "pydanticpydantic-aimcp-run-python",
+    "name": "pydantic/pydantic-ai/mcp-run-python",
+    "type": "mcp",
+    "description": "Run Python code in a secure sandbox environment for AI coding agents.",
+    "source_url": "https://github.com/pydantic/pydantic-ai/tree/main/mcp-run-python",
+    "stars": 16917,
+    "category": "backend",
+    "tags": [
+      "mcp-server",
+      "python-sandbox",
+      "ai-coding-agent",
+      "pydantic-ai"
+    ],
+    "tech_stack": [
+      "python",
+      "pydantic-ai",
+      "mcp"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-05-08T02:13:51Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "cua",
+    "name": "Cua",
+    "type": "mcp",
+    "description": "MCP server enabling Computer-Use Agent (CUA) integration with Claude Desktop and MCP clients.",
+    "source_url": "https://github.com/trycua/cua/tree/main/libs/mcp-server",
+    "stars": 15734,
+    "category": "mobile",
+    "tags": [
+      "mcp-server",
+      "computer-use-agent",
+      "desktop-automation",
+      "claude-integration",
+      "virtualization"
+    ],
+    "tech_stack": [
+      "swift",
+      "mcp",
+      "claude"
+    ],
+    "source": "awesome-mcp-servers",
+    "pushed_at": "2026-05-07T12:05:57Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "googleapisgenai-toolbox",
+    "name": "googleapis/genai-toolbox",
+    "type": "mcp",
+    "description": "An open-source MCP server that connects AI agents and IDEs to enterprise databases with prebuilt tools and a custom tool framework.",
+    "source_url": "https://github.com/googleapis/genai-toolbox",
+    "stars": 15014,
+    "category": "backend",
+    "tags": [
+      "mcp-server",
+      "database",
+      "ai-agents",
+      "ide-integration",
+      "custom-tools"
+    ],
+    "tech_stack": [
+      "go",
+      "python",
+      "javascript",
+      "typescript",
+      "java",
+      "docker",
+      "homebrew"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-05-07T23:36:07Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@toolbox-sdk/server",
+          "--prebuilt=postgres"
+        ]
+      }
+    }
+  },
+  {
+    "id": "glips-figma-context-mcp",
+    "name": "Framelink Figma MCP Server",
+    "type": "mcp",
+    "description": "MCP server that gives AI coding agents access to Figma design data for accurate one-shot UI implementation.",
+    "source_url": "https://github.com/GLips/Figma-Context-MCP",
+    "stars": 13973,
+    "category": "tooling",
+    "tags": [
+      "mcp-server",
+      "figma",
+      "cursor",
+      "design-to-code",
+      "ai-coding"
+    ],
+    "tech_stack": [
+      "typescript",
+      "node.js",
+      "figma-api",
+      "model-context-protocol"
+    ],
+    "source": "mcp.so",
+    "pushed_at": "2026-04-14T00:01:37Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "mcp_config_template",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "figma-developer-mcp",
+          "--stdio"
+        ],
+        "env": {
+          "FIGMA_API_KEY": "<your-figma-api-key>"
+        }
+      },
+      "placeholder_hints": {
+        "FIGMA_API_KEY": "Set your FIGMA_API_KEY"
+      }
+    }
+  },
+  {
+    "id": "tadata-org-fastapi-mcp",
+    "name": "FastAPI-MCP",
+    "type": "mcp",
+    "description": "Expose FastAPI endpoints as MCP tools with built-in authentication and zero configuration.",
+    "source_url": "https://github.com/tadata-org/fastapi_mcp",
+    "stars": 11704,
+    "category": "backend",
+    "tags": [
+      "fastapi",
+      "mcp-server",
+      "authentication",
+      "openapi",
+      "python"
+    ],
+    "tech_stack": [
+      "python",
+      "fastapi",
+      "uv",
+      "asgi"
+    ],
+    "source": "mcp.so",
+    "pushed_at": "2025-11-24T14:51:54Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "pipedreamhqpipedream",
+    "name": "PipedreamHQ/pipedream",
+    "type": "mcp",
+    "description": "Pipedream MCP server for integrating 2800+ APIs and managing user servers via MCP protocol.",
+    "source_url": "https://github.com/PipedreamHQ/pipedream/tree/master/modelcontextprotocol",
+    "stars": 11318,
+    "category": "frontend",
+    "tags": [
+      "mcp-server",
+      "api-integration",
+      "workflow-automation",
+      "serverless",
+      "reference-implementation"
+    ],
+    "tech_stack": [
+      "nodejs",
+      "typescript",
+      "python",
+      "golang",
+      "bash",
+      "pnpm",
+      "bun"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-05-08T01:32:57Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "0xjacky-nginx-ui",
+    "name": "Nginx UI",
+    "type": "mcp",
+    "description": "A web-based Nginx management UI with AI assistant, MCP support, and cluster management.",
+    "source_url": "https://github.com/0xJacky/nginx-ui",
+    "stars": 10923,
+    "category": "backend",
+    "tags": [
+      "nginx",
+      "web-ui",
+      "mcp-server",
+      "docker",
+      "letsencrypt"
+    ],
+    "tech_stack": [
+      "go",
+      "vue",
+      "docker",
+      "nginx",
+      "letsencrypt"
+    ],
+    "source": "mcp.so",
+    "pushed_at": "2026-04-15T01:16:27Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "inbox-zero",
+    "name": "Inbox Zero",
+    "type": "mcp",
+    "description": "MCP server for Inbox Zero, an AI email assistant that identifies Gmail messages needing replies or follow-ups.",
+    "source_url": "https://github.com/elie222/inbox-zero/tree/main/apps/mcp-server",
+    "stars": 10640,
+    "category": "frontend",
+    "tags": [
+      "mcp-server",
+      "email-assistant",
+      "gmail-integration",
+      "ai-productivity"
+    ],
+    "tech_stack": [
+      "typescript",
+      "nextjs",
+      "prisma",
+      "postgresql",
+      "openai",
+      "tailwind",
+      "turborepo"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-05-08T00:20:51Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "instantdb",
+    "name": "InstantDB",
+    "type": "mcp",
+    "description": "MCP server for managing InstantDB applications from AI-powered editors.",
+    "source_url": "https://github.com/instantdb/instant/tree/main/client/packages/mcp",
+    "stars": 10240,
+    "category": "tooling",
+    "tags": [
+      "mcp-server",
+      "instantdb",
+      "database",
+      "firebase-alternative",
+      "editor-integration"
+    ],
+    "tech_stack": [
+      "node.js",
+      "typescript",
+      "instantdb"
+    ],
+    "source": "awesome-mcp-servers",
+    "pushed_at": "2026-05-07T23:53:24Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "modelcontextprotocol-inspector",
+    "name": "MCP Inspector",
+    "type": "mcp",
+    "description": "A developer tool for testing and debugging MCP servers via UI or CLI.",
+    "source_url": "https://github.com/modelcontextprotocol/inspector",
+    "stars": 9211,
+    "category": "testing",
+    "tags": [
+      "mcp-server",
+      "debugging-tool",
+      "developer-tools",
+      "testing-framework"
+    ],
+    "tech_stack": [
+      "node.js",
+      "react",
+      "docker"
+    ],
+    "source": "mcp.so",
+    "pushed_at": "2026-04-14T20:55:04Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "node",
+        "args": [
+          "build/index.js",
+          "--debug"
+        ],
+        "env": {
+          "API_KEY": "your-api-key",
+          "DEBUG": "true"
+        }
+      }
+    }
+  },
+  {
+    "id": "aws-bedrock-kb-retrieval",
+    "name": "AWS Bedrock KB Retrieval",
+    "type": "mcp",
+    "description": "MCP server for querying Amazon Bedrock Knowledge Bases with natural language retrieval and reranking.",
+    "source_url": "https://github.com/awslabs/mcp/tree/main/src/bedrock-kb-retrieval-mcp-server",
+    "stars": 8991,
+    "category": "devops",
+    "tags": [
+      "mcp-server",
+      "amazon-bedrock",
+      "knowledge-base",
+      "rag",
+      "aws"
+    ],
+    "tech_stack": [
+      "python",
+      "aws-cli",
+      "docker",
+      "uv"
+    ],
+    "source": "awesome-mcp-servers",
+    "pushed_at": "2026-05-08T01:42:19Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "uvx",
+        "args": [
+          "awslabs.core-mcp-server@latest"
+        ],
+        "env": {
+          "FASTMCP_LOG_LEVEL": "ERROR"
+        }
+      }
+    }
+  },
+  {
+    "id": "aws-cdk",
+    "name": "AWS CDK",
+    "type": "mcp",
+    "description": "An MCP server for AWS CDK development, providing advice, rule explanations, and schema generation.",
+    "source_url": "https://github.com/awslabs/mcp/tree/main/src/cdk-mcp-server",
+    "stars": 8991,
+    "category": "devops",
+    "tags": [
+      "mcp-server",
+      "aws-cdk",
+      "cdk-nag",
+      "bedrock-agent",
+      "solutions-constructs"
+    ],
+    "tech_stack": [
+      "aws-cdk",
+      "cdk-nag",
+      "bedrock-agent",
+      "solutions-constructs"
+    ],
+    "source": "awesome-mcp-servers",
+    "pushed_at": "2026-05-08T01:42:19Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "uvx",
+        "args": [
+          "awslabs.core-mcp-server@latest"
+        ],
+        "env": {
+          "FASTMCP_LOG_LEVEL": "ERROR"
+        }
+      }
+    }
+  },
+  {
+    "id": "aws-core",
+    "name": "AWS Core",
+    "type": "mcp",
+    "description": "AWS MCP server for prompt understanding and server management capabilities.",
+    "source_url": "https://github.com/awslabs/mcp/tree/main/src/core-mcp-server",
+    "stars": 8991,
+    "category": "devops",
+    "tags": [
+      "aws",
+      "mcp-server",
+      "prompt-management",
+      "server-management",
+      "model-context-protocol"
+    ],
+    "tech_stack": [
+      "aws",
+      "model-context-protocol"
+    ],
+    "source": "awesome-mcp-servers",
+    "pushed_at": "2026-05-08T01:42:19Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "uvx",
+        "args": [
+          "awslabs.core-mcp-server@latest"
+        ],
+        "env": {
+          "FASTMCP_LOG_LEVEL": "ERROR"
+        }
+      }
+    }
+  },
+  {
+    "id": "aws-cost-analysis",
+    "name": "AWS Cost Analysis",
+    "type": "mcp",
+    "description": "MCP server that analyzes CDK projects to identify AWS services and retrieve pricing information.",
+    "source_url": "https://github.com/awslabs/mcp/tree/main/src/cost-analysis-mcp-server",
+    "stars": 8991,
+    "category": "devops",
+    "tags": [
+      "mcp-server",
+      "aws-cost-analysis",
+      "cdk-analyzer",
+      "pricing-tool"
+    ],
+    "tech_stack": [
+      "aws-cdk",
+      "aws-pricing-api",
+      "model-context-protocol"
+    ],
+    "source": "awesome-mcp-servers",
+    "pushed_at": "2026-05-08T01:42:19Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "uvx",
+        "args": [
+          "awslabs.core-mcp-server@latest"
+        ],
+        "env": {
+          "FASTMCP_LOG_LEVEL": "ERROR"
+        }
+      }
+    }
+  },
+  {
+    "id": "aws-documentation",
+    "name": "AWS Documentation",
+    "type": "mcp",
+    "description": "MCP server for fetching, searching, and recommending AWS documentation content via AI assistants.",
+    "source_url": "https://github.com/awslabs/mcp/tree/main/src/aws-documentation-mcp-server",
+    "stars": 8991,
+    "category": "devops",
+    "tags": [
+      "mcp-server",
+      "aws-documentation",
+      "model-context-protocol",
+      "developer-tools",
+      "documentation-search"
+    ],
+    "tech_stack": [
+      "python",
+      "docker",
+      "uv",
+      "fastmcp"
+    ],
+    "source": "awesome-mcp-servers",
+    "pushed_at": "2026-05-08T01:42:19Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "uvx",
+        "args": [
+          "awslabs.core-mcp-server@latest"
+        ],
+        "env": {
+          "FASTMCP_LOG_LEVEL": "ERROR"
+        }
+      }
+    }
+  },
+  {
+    "id": "aws-nova-canvas",
+    "name": "AWS Nova Canvas",
+    "type": "mcp",
+    "description": "MCP server for generating images using Amazon Nova Canvas with text prompts and color guidance.",
+    "source_url": "https://github.com/awslabs/mcp/tree/main/src/nova-canvas-mcp-server",
+    "stars": 8991,
+    "category": "devops",
+    "tags": [
+      "mcp-server",
+      "aws",
+      "image-generation",
+      "nova-canvas"
+    ],
+    "tech_stack": [
+      "amazon-nova-canvas",
+      "model-context-protocol"
+    ],
+    "source": "awesome-mcp-servers",
+    "pushed_at": "2026-05-08T01:42:19Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "uvx",
+        "args": [
+          "awslabs.core-mcp-server@latest"
+        ],
+        "env": {
+          "FASTMCP_LOG_LEVEL": "ERROR"
+        }
+      }
+    }
+  },
+  {
+    "id": "awslabs-mcp",
+    "name": "AWS MCP Servers",
+    "type": "mcp",
+    "description": "A suite of MCP servers that integrate AWS services into AI coding assistants for cloud development, infrastructure management, and workflow automation",
+    "source_url": "https://github.com/awslabs/mcp",
+    "stars": 8576,
+    "category": "devops",
+    "tags": [
+      "mcp-server",
+      "aws",
+      "ai-coding-assistant",
+      "cloud-development",
+      "infrastructure-as-code"
+    ],
+    "tech_stack": [
+      "python",
+      "uv",
+      "aws",
+      "mcp",
+      "docker"
+    ],
+    "source": "mcp.so",
+    "pushed_at": "2026-04-15T01:39:40Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "uvx",
+        "args": [
+          "awslabs.core-mcp-server@latest"
+        ],
+        "env": {
+          "FASTMCP_LOG_LEVEL": "ERROR"
+        }
+      }
+    }
+  },
+  {
+    "id": "mark3labs-mcp-go",
+    "name": "MCP Go 🚀",
+    "type": "mcp",
+    "description": "Go implementation of the Model Context Protocol for building MCP servers that connect LLMs to external tools and data.",
+    "source_url": "https://github.com/mark3labs/mcp-go",
+    "stars": 8443,
+    "category": "backend",
+    "tags": [
+      "mcp-server",
+      "go-sdk",
+      "model-context-protocol",
+      "llm-integration",
+      "tool-server"
+    ],
+    "tech_stack": [
+      "go",
+      "net/http",
+      "stdio",
+      "sse",
+      "streamable-http"
+    ],
+    "source": "mcp.so",
+    "pushed_at": "2026-04-14T08:31:16Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "lauriewired-ghidramcp",
+    "name": "ghidraMCP",
+    "type": "mcp",
+    "description": "MCP server + Ghidra plugin for LLM-driven autonomous binary reverse engineering.",
+    "source_url": "https://github.com/LaurieWired/GhidraMCP",
+    "stars": 8050,
+    "category": "tooling",
+    "tags": [
+      "mcp-server",
+      "ghidra",
+      "reverse-engineering",
+      "binary-analysis",
+      "llm-integration"
+    ],
+    "tech_stack": [
+      "python",
+      "ghidra",
+      "java",
+      "maven",
+      "mcp"
+    ],
+    "source": "mcp.so",
+    "pushed_at": "2025-06-23T04:18:18Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "idosalgit-mcp",
+    "name": "idosal/git-mcp",
+    "type": "mcp",
+    "description": "A remote MCP server that connects AI coding assistants to any GitHub repository for up-to-date documentation and code.",
+    "source_url": "https://github.com/idosal/git-mcp",
+    "stars": 8041,
+    "category": "ai-ml",
+    "tags": [
+      "mcp-server",
+      "documentation",
+      "github-integration",
+      "ai-coding-assistant",
+      "code-hallucination-prevention"
+    ],
+    "tech_stack": [
+      "typescript",
+      "pnpm",
+      "model-context-protocol",
+      "sse"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-03-13T01:21:48Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "mrexodia-ida-pro-mcp",
+    "name": "IDA Pro MCP",
+    "type": "mcp",
+    "description": "MCP server enabling AI-assisted reverse engineering in IDA Pro.",
+    "source_url": "https://github.com/mrexodia/ida-pro-mcp",
+    "stars": 6724,
+    "category": "tooling",
+    "tags": [
+      "mcp-server",
+      "ida-pro",
+      "reverse-engineering",
+      "ida-plugin",
+      "binary-analysis"
+    ],
+    "tech_stack": [
+      "python",
+      "ida-pro",
+      "idalib",
+      "mcp"
+    ],
+    "source": "mcp.so",
+    "pushed_at": "2026-04-14T09:21:04Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "browsermcpmcp",
+    "name": "browsermcp/mcp",
+    "type": "mcp",
+    "description": "An MCP server and Chrome extension to automate your local browser with AI.",
+    "source_url": "https://github.com/browsermcp/mcp",
+    "stars": 6466,
+    "category": "tooling",
+    "tags": [
+      "mcp-server",
+      "chrome-extension",
+      "browser-automation",
+      "ai-integration"
+    ],
+    "tech_stack": [
+      "chrome",
+      "playwright"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2025-04-24T21:49:44Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "firecrawl",
+    "name": "Firecrawl",
+    "type": "mcp",
+    "description": "MCP server for web scraping, search, and data extraction via Firecrawl API.",
+    "source_url": "https://github.com/mendableai/firecrawl-mcp-server",
+    "stars": 6235,
+    "category": "frontend",
+    "tags": [
+      "mcp-server",
+      "web-scraping",
+      "data-extraction",
+      "firecrawl",
+      "search-api"
+    ],
+    "tech_stack": [
+      "node.js",
+      "typescript",
+      "firecrawl",
+      "model-context-protocol"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-05-07T14:27:30Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "firecrawl-mcp"
+        ],
+        "env": {
+          "FIRECRAWL_API_KEY": "YOUR-API-KEY"
+        }
+      }
+    }
+  },
+  {
+    "id": "wonderwhy-er-desktopcommandermcp",
+    "name": "Desktop Commander MCP",
+    "type": "mcp",
+    "description": "MCP server enabling Claude Desktop to execute terminal commands, manage files, and perform code editing with AI assistance.",
+    "source_url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+    "stars": 5775,
+    "category": "ai-ml",
+    "tags": [
+      "mcp-server",
+      "terminal-control",
+      "file-management",
+      "code-editing",
+      "claude-desktop"
+    ],
+    "tech_stack": [
+      "node.js",
+      "typescript",
+      "docker",
+      "mcp-protocol"
+    ],
+    "source": "mcp.so",
+    "pushed_at": "2026-04-14T13:03:45Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@wonderwhy-er/desktop-commander@latest"
+        ]
+      }
+    }
+  },
+  {
+    "id": "lharrieswhatsapp-mcp",
+    "name": "lharries/whatsapp-mcp",
+    "type": "mcp",
+    "description": "MCP server for searching WhatsApp messages, contacts, and sending messages via personal account.",
+    "source_url": "https://github.com/lharries/whatsapp-mcp",
+    "stars": 5588,
+    "category": "ai-ml",
+    "tags": [
+      "mcp-server",
+      "whatsapp",
+      "go",
+      "python",
+      "ai-assistant"
+    ],
+    "tech_stack": [
+      "go",
+      "python",
+      "sqlite",
+      "whatsmeow",
+      "ffmpeg"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2025-07-13T17:22:00Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "{{PATH_TO_UV}}",
+        "args": [
+          "--directory",
+          "{{PATH_TO_SRC}}/whatsapp-mcp/whatsapp-mcp-server",
+          "run",
+          "main.py"
+        ]
+      }
+    }
+  },
+  {
+    "id": "executeautomationplaywright-mcp-server",
+    "name": "executeautomation/playwright-mcp-server",
+    "type": "mcp",
+    "description": "MCP server for browser automation and web scraping using Playwright.",
+    "source_url": "https://github.com/executeautomation/mcp-playwright",
+    "stars": 5498,
+    "category": "testing",
+    "tags": [
+      "mcp-server",
+      "playwright",
+      "browser-automation",
+      "web-scraping",
+      "device-emulation"
+    ],
+    "tech_stack": [
+      "playwright",
+      "node.js",
+      "typescript",
+      "jest"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2025-12-13T04:28:38Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@executeautomation/playwright-mcp-server"
+        ]
+      }
+    }
+  },
+  {
+    "id": "lingodev",
+    "name": "Lingo.dev",
+    "type": "mcp",
+    "description": "MCP server for Lingo.dev localization engine to enable AI agents to translate content into multiple languages.",
+    "source_url": "https://github.com/lingodotdev/lingo.dev/blob/main/mcp.md",
+    "stars": 5407,
+    "category": "frontend",
+    "tags": [
+      "mcp-server",
+      "localization",
+      "i18n",
+      "translation",
+      "ai-agent"
+    ],
+    "tech_stack": [
+      "go",
+      "javascript",
+      "react",
+      "react-native",
+      "typescript"
+    ],
+    "source": "awesome-mcp-servers",
+    "pushed_at": "2026-04-27T19:45:22Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "soopersetmcp-atlassian",
+    "name": "sooperset/mcp-atlassian",
+    "type": "mcp",
+    "description": "MCP server for Atlassian Confluence and Jira with 72 tools for search, read, create, and manage content.",
+    "source_url": "https://github.com/sooperset/mcp-atlassian",
+    "stars": 5116,
+    "category": "tooling",
+    "tags": [
+      "mcp-server",
+      "atlassian",
+      "confluence",
+      "jira",
+      "project-management"
+    ],
+    "tech_stack": [
+      "python",
+      "mcp",
+      "confluence-api",
+      "jira-api"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-04-10T09:37:10Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "cameroncooke-xcodebuildmcp",
+    "name": "XcodeBuildMCP",
+    "type": "mcp",
+    "description": "MCP server and CLI for AI-assisted Xcode project building, testing, and debugging on macOS.",
+    "source_url": "https://github.com/cameroncooke/XcodeBuildMCP",
+    "stars": 4898,
+    "category": "ai-ml",
+    "tags": [
+      "mcp-server",
+      "xcode",
+      "ios-development",
+      "macos-development",
+      "cli-tool"
+    ],
+    "tech_stack": [
+      "node.js",
+      "xcode",
+      "xcodebuild",
+      "homebrew",
+      "npm"
+    ],
+    "source": "mcp.so",
+    "pushed_at": "2026-04-14T09:21:00Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "aipotheosis-labs-aci",
+    "name": "ACI: Open-Source Infra to Power Unified MCP Servers",
+    "type": "mcp",
+    "description": "Open-source platform connecting AI agents to 600+ tools via unified MCP server or SDK.",
+    "source_url": "https://github.com/aipotheosis-labs/aci",
+    "stars": 4751,
+    "category": "security",
+    "tags": [
+      "mcp-server",
+      "tool-integration",
+      "ai-agents",
+      "open-source",
+      "vibeops"
+    ],
+    "tech_stack": [
+      "python",
+      "typescript",
+      "mcp",
+      "oauth2"
+    ],
+    "source": "mcp.so",
+    "pushed_at": "2026-01-08T15:35:45Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "21st-dev-magic-mcp",
+    "name": "21st.dev Magic AI Agent",
+    "type": "mcp",
+    "description": "AI-powered MCP server for generating UI components via natural language in IDEs like Cursor and Windsurf.",
+    "source_url": "https://github.com/21st-dev/magic-mcp",
+    "stars": 4566,
+    "category": "ai-ml",
+    "tags": [
+      "mcp-server",
+      "ui-generation",
+      "cursor-integration",
+      "react-components",
+      "frontend-tool"
+    ],
+    "tech_stack": [
+      "typescript",
+      "node.js",
+      "react",
+      "npx",
+      "cursor",
+      "windsurf",
+      "vscode",
+      "cline"
+    ],
+    "source": "mcp.so",
+    "pushed_at": "2026-02-17T04:50:55Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@21st-dev/magic@latest",
+          "API_KEY=\"your-api-key\""
+        ]
+      }
+    }
+  },
+  {
+    "id": "exa",
+    "name": "Exa",
+    "type": "mcp",
+    "description": "An MCP server that connects AI assistants to Exa's search engine for web, code, and company research.",
+    "source_url": "https://github.com/exa-labs/exa-mcp-server",
+    "stars": 4399,
+    "category": "ai-ml",
+    "tags": [
+      "mcp-server",
+      "web-search",
+      "code-search",
+      "ai-integration",
+      "search-engine"
+    ],
+    "tech_stack": [
+      "typescript",
+      "node.js",
+      "mcp"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-05-07T18:35:07Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config_template",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "exa-mcp-server"
+        ],
+        "env": {
+          "EXA_API_KEY": "your_api_key"
+        }
+      },
+      "placeholder_hints": {
+        "EXA_API_KEY": "Set your EXA_API_KEY"
+      }
+    }
+  },
+  {
+    "id": "notion",
+    "name": "Notion",
+    "type": "mcp",
+    "description": "Official MCP server for Notion API, enabling AI agents to interact with Notion workspaces.",
+    "source_url": "https://github.com/makenotion/notion-mcp-server",
+    "stars": 4302,
+    "category": "tooling",
+    "tags": [
+      "mcp-server",
+      "notion",
+      "ai-agent",
+      "productivity"
+    ],
+    "tech_stack": [
+      "typescript",
+      "node.js",
+      "docker",
+      "mcp"
+    ],
+    "source": "awesome-mcp-servers",
+    "pushed_at": "2026-03-18T00:25:06Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@notionhq/notion-mcp-server"
+        ],
+        "env": {
+          "NOTION_TOKEN": "ntn_****"
+        }
+      }
+    }
+  },
+  {
+    "id": "open-webui-mcpo",
+    "name": "⚡️ mcpo",
+    "type": "mcp",
+    "description": "A proxy server that instantly converts any MCP tool into an OpenAPI-compatible HTTP endpoint.",
+    "source_url": "https://github.com/open-webui/mcpo",
+    "stars": 4088,
+    "category": "backend",
+    "tags": [
+      "mcp-server",
+      "openapi-proxy",
+      "http-server",
+      "ai-tools",
+      "open-webui"
+    ],
+    "tech_stack": [
+      "python",
+      "uv",
+      "docker",
+      "openapi",
+      "mcp"
+    ],
+    "source": "mcp.so",
+    "pushed_at": "2026-02-27T17:58:13Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "chart",
+    "name": "Chart",
+    "type": "mcp",
+    "description": "MCP server for generating 26+ chart types using AntV visualization library",
+    "source_url": "https://github.com/antvis/mcp-server-chart",
+    "stars": 4045,
+    "category": "ai-ml",
+    "tags": [
+      "mcp-server",
+      "chart-generation",
+      "antv",
+      "data-visualization",
+      "typescript"
+    ],
+    "tech_stack": [
+      "typescript",
+      "antv",
+      "node.js",
+      "docker",
+      "mcp"
+    ],
+    "source": "awesome-mcp-servers",
+    "pushed_at": "2026-05-06T07:58:59Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@antv/mcp-server-chart"
+        ]
+      }
+    }
+  },
+  {
+    "id": "cloudflare",
+    "name": "Cloudflare",
+    "type": "mcp",
+    "description": "Cloudflare MCP servers for deploying, configuring, and querying Cloudflare developer platform resources via natural language.",
+    "source_url": "https://github.com/cloudflare/mcp-server-cloudflare",
+    "stars": 3715,
+    "category": "tooling",
+    "tags": [
+      "mcp-server",
+      "cloudflare",
+      "workers",
+      "developer-platform",
+      "natural-language"
+    ],
+    "tech_stack": [
+      "typescript",
+      "node.js",
+      "cloudflare workers",
+      "cloudflare kv",
+      "cloudflare r2",
+      "cloudflare d1",
+      "graphql"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-04-30T14:50:05Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "aluzzardi-container-use",
+    "name": "container-use",
+    "type": "mcp",
+    "description": "MCP server to add container superpowers to your AI agent",
+    "source_url": "https://github.com/aluzzardi/container-use",
+    "stars": 3682,
+    "category": "ai-ml",
+    "tags": [
+      "container-use",
+      "AI-agent",
+      "MCP-server"
+    ],
+    "tech_stack": [],
+    "source": "mcp.so",
+    "pushed_at": "2026-02-23T12:37:47Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "dagger-container-use",
+    "name": "container-use",
+    "type": "mcp",
+    "description": "MCP server providing isolated container environments for AI coding agents.",
+    "source_url": "https://github.com/dagger/container-use",
+    "stars": 3682,
+    "category": "ai-ml",
+    "tags": [
+      "mcp-server",
+      "container-environments",
+      "ai-coding-agents",
+      "dagger"
+    ],
+    "tech_stack": [
+      "dagger",
+      "mcp",
+      "claude-code",
+      "cursor"
+    ],
+    "source": "mcp.so",
+    "pushed_at": "2026-02-23T12:37:47Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "opensumi-core",
+    "name": "OpenSumi",
+    "type": "mcp",
+    "description": "A framework for building AI-native IDE products with MCP client support.",
+    "source_url": "https://github.com/opensumi/core",
+    "stars": 3619,
+    "category": "frontend",
+    "tags": [
+      "ide-framework",
+      "mcp-client",
+      "ai-native",
+      "electron",
+      "typescript"
+    ],
+    "tech_stack": [
+      "typescript",
+      "electron",
+      "node.js",
+      "yarn"
+    ],
+    "source": "mcp.so",
+    "pushed_at": "2026-04-14T13:07:53Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "haris-musa-excel-mcp-server",
+    "name": "Excel MCP Server",
+    "type": "mcp",
+    "description": "MCP server for AI-driven Excel file manipulation without Microsoft Excel.",
+    "source_url": "https://github.com/haris-musa/excel-mcp-server",
+    "stars": 3583,
+    "category": "ai-ml",
+    "tags": [
+      "mcp-server",
+      "excel",
+      "automation",
+      "ai-agent",
+      "data-manipulation"
+    ],
+    "tech_stack": [
+      "python",
+      "mcp",
+      "fastmcp",
+      "uv"
+    ],
+    "source": "mcp.so",
+    "pushed_at": "2026-04-12T06:14:45Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "uvx",
+        "args": [
+          "excel-mcp-server",
+          "stdio"
+        ]
+      }
+    }
+  },
+  {
+    "id": "browserbasemcp-server-browserbase",
+    "name": "browserbase/mcp-server-browserbase",
+    "type": "mcp",
+    "description": "MCP server for cloud browser automation using Browserbase and Stagehand, enabling LLMs to navigate, extract, and act on web pages.",
+    "source_url": "https://github.com/browserbase/mcp-server-browserbase",
+    "stars": 3319,
+    "category": "testing",
+    "tags": [
+      "mcp-server",
+      "browser-automation",
+      "web-scraping",
+      "stagehand",
+      "browserbase"
+    ],
+    "tech_stack": [
+      "node.js",
+      "typescript",
+      "docker",
+      "stagehand",
+      "playwright",
+      "gemini"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-05-07T18:42:39Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config_template",
+      "config": {
+        "command": "npx",
+        "args": [
+          "@browserbasehq/mcp"
+        ],
+        "env": {
+          "BROWSERBASE_API_KEY": "",
+          "BROWSERBASE_PROJECT_ID": "",
+          "GEMINI_API_KEY": ""
+        }
+      },
+      "placeholder_hints": {
+        "BROWSERBASE_API_KEY": "Set your BROWSERBASE_API_KEY",
+        "BROWSERBASE_PROJECT_ID": "Set your BROWSERBASE_PROJECT_ID",
+        "GEMINI_API_KEY": "Set your GEMINI_API_KEY"
+      }
+    }
+  },
+  {
+    "id": "peekaboo",
+    "name": "Peekaboo",
+    "type": "mcp",
+    "description": "macOS GUI automation tool with AI-powered screen capture, analysis, and interaction via CLI and MCP server.",
+    "source_url": "https://github.com/steipete/Peekaboo",
+    "stars": 3263,
+    "category": "mobile",
+    "tags": [
+      "macos-automation",
+      "mcp-server",
+      "gui-testing",
+      "screen-capture",
+      "ai-agent"
+    ],
+    "tech_stack": [
+      "swift",
+      "node.js",
+      "openai",
+      "anthropic",
+      "ollama",
+      "homebrew"
+    ],
+    "source": "awesome-mcp-servers",
+    "pushed_at": "2026-05-07T22:26:06Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "metorial-mcp-containers",
+    "name": "MCP Containers",
+    "type": "mcp",
+    "description": "Open-source identity and access layer for AI agents to connect to external systems with auth, permissions, and observability.",
+    "source_url": "https://github.com/metorial/mcp-containers",
+    "stars": 3242,
+    "category": "security",
+    "tags": [
+      "identity-access-layer",
+      "ai-agents",
+      "mcp",
+      "authorization",
+      "developer-tools"
+    ],
+    "tech_stack": [
+      "typescript",
+      "python",
+      "go",
+      "docker",
+      "postgresql",
+      "redis",
+      "mongodb",
+      "react",
+      "bun",
+      "model-context-protocol"
+    ],
+    "source": "mcp.so",
+    "pushed_at": "2026-04-15T07:34:17Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "markuspfundstein-mcp-obsidian",
+    "name": "MCP server for Obsidian",
+    "type": "mcp",
+    "description": "MCP server for interacting with Obsidian notes via the Local REST API plugin.",
+    "source_url": "https://github.com/MarkusPfundstein/mcp-obsidian",
+    "stars": 3122,
+    "category": "backend",
+    "tags": [
+      "mcp-server",
+      "obsidian",
+      "note-taking",
+      "knowledge-management"
+    ],
+    "tech_stack": [
+      "python",
+      "uv",
+      "obsidian-rest-api"
+    ],
+    "source": "mcp.so",
+    "pushed_at": "2025-06-28T09:04:04Z",
+    "added_at": "2026-03-26",
+    "last_synced": "2026-03-26",
+    "install": {
+      "method": "mcp_config_template",
+      "config": {
+        "command": "uv",
+        "args": [
+          "--directory",
+          "<dir_to>/mcp-obsidian",
+          "run",
+          "mcp-obsidian"
+        ],
+        "env": {
+          "OBSIDIAN_API_KEY": "<your_api_key_here>",
+          "OBSIDIAN_HOST": "<your_obsidian_host>",
+          "OBSIDIAN_PORT": "<your_obsidian_port>"
+        }
+      },
+      "placeholder_hints": {
+        "dir_to": "Replace with actual dir to",
+        "OBSIDIAN_API_KEY": "Set your OBSIDIAN_API_KEY",
+        "OBSIDIAN_HOST": "Set your OBSIDIAN_HOST",
+        "OBSIDIAN_PORT": "Set your OBSIDIAN_PORT"
+      }
+    }
+  },
+  {
+    "id": "basic-memory",
+    "name": "Basic Memory",
+    "type": "mcp",
+    "description": "Local-first knowledge management system that builds semantic graphs from Markdown files for persistent AI conversation memory.",
+    "source_url": "https://github.com/basicmachines-co/basic-memory",
+    "stars": 2989,
+    "category": "backend",
+    "tags": [
+      "mcp-server",
+      "knowledge-management",
+      "local-first",
+      "markdown",
+      "python"
+    ],
+    "tech_stack": [
+      "python",
+      "sqlite",
+      "markdown",
+      "fastmcp",
+      "loguru",
+      "fastembed",
+      "uv",
+      "docker",
+      "postgresql"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-05-08T02:40:58Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "uvx",
+        "args": [
+          "basic-memory",
+          "mcp"
+        ]
+      }
+    }
+  },
+  {
     "id": "mock-empty-desc-mcp",
     "name": "Empty Desc Test",
     "type": "mcp",
