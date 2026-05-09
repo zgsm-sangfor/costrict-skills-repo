@@ -1,0 +1,8 @@
+{
+  "repo": "obra/episodic-memory",
+  "commit_sha": "6e48f5cbfc9485bfde9c82e7dc14cce7ec4b073d",
+  "fetched_at_branch": "feat/extend-plugin-bundle-extraction",
+  "has_plugin_json": true,
+  "has_hooks_hooks_json": true,
+  "has_dot_mcp_json": false
+}

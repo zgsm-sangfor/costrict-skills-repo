@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/cli/episodic-memory.js\" sync --background",
+            "async": true
+          }
+        ]
+      }
+    ]
+  }
+}

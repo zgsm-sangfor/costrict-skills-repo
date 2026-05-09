@@ -1,0 +1,8 @@
+{
+  "repo": "Yeachan-Heo/oh-my-claudecode",
+  "commit_sha": "aacde3e19c40e891479e22fb30e6169a8782d7e4",
+  "fetched_at_branch": "feat/extend-plugin-bundle-extraction",
+  "has_plugin_json": true,
+  "has_hooks_hooks_json": true,
+  "has_dot_mcp_json": true
+}

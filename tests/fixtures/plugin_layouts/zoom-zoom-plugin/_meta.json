@@ -1,0 +1,8 @@
+{
+  "repo": "zoom/zoom-plugin",
+  "commit_sha": "ab0f09b2ddc6682a7f69055c7861009ec6062775",
+  "fetched_at_branch": "feat/extend-plugin-bundle-extraction",
+  "has_plugin_json": true,
+  "has_hooks_hooks_json": false,
+  "has_dot_mcp_json": true
+}
