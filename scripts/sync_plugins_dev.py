@@ -279,12 +279,21 @@ def _build_bundle_from_layout_dev(
     fallback_namespaces = [
         f"{plugin_name}:{s}" for s in api_skills if isinstance(s, str) and s
     ]
+    # New extension fields default to empty/zero everywhere — populated only
+    # by the layout-detector branch below.
+    _extension_defaults = {
+        "hooks_count": 0,
+        "hook_events": [],
+        "mcp_server_names": [],
+        "is_marketplace_repo": False,
+    }
     fallback_bundle = {
         "skills_count": len(fallback_namespaces),
         "commands_count": 0,
         "agents_count": 0,
         "mcp_servers_count": 0,
         "skills_namespaces": fallback_namespaces,
+        **_extension_defaults,
     }
     zero_bundle = {
         "skills_count": 0,
@@ -292,6 +301,7 @@ def _build_bundle_from_layout_dev(
         "agents_count": 0,
         "mcp_servers_count": 0,
         "skills_namespaces": [],
+        **_extension_defaults,
     }
 
     if fetcher is None:
@@ -312,12 +322,22 @@ def _build_bundle_from_layout_dev(
         return zero_bundle
 
     if layout.is_plugin:
+        # Marketplace shell — return zeroed bundle plus the marker. Caller
+        # SHALL skip writing an entry for the marketplace itself.
+        if getattr(layout, "is_marketplace_repo", False):
+            marketplace_bundle = dict(zero_bundle)
+            marketplace_bundle["is_marketplace_repo"] = True
+            return marketplace_bundle
         return {
             "skills_count": len(layout.skill_paths),
             "commands_count": len(layout.command_paths),
             "agents_count": len(layout.agent_paths),
-            "mcp_servers_count": 0,  # not exposed via Tree API, kept at 0
+            "mcp_servers_count": len(layout.mcp_server_names),
             "skills_namespaces": list(layout.skills_namespaces),
+            "hooks_count": layout.hooks_count,
+            "hook_events": list(layout.hook_events),
+            "mcp_server_names": list(layout.mcp_server_names),
+            "is_marketplace_repo": False,
         }
 
     if layout.fetch_error is not None:
@@ -394,6 +414,17 @@ def _entry_from_plugin(
     bundle = _build_bundle_from_layout_dev(
         layout_fetcher, git_url, skills_arr, name
     )
+
+    # Marketplace shell — skip writing this as a plugin entry. Nested plugins
+    # under the same repo (if any) are surfaced via separate upstream feed
+    # entries, not by enumerating from this row.
+    if bundle.get("is_marketplace_repo"):
+        logger.info(
+            "Skipping marketplace shell %s (plugin=%s) — nested plugins must "
+            "come through separate upstream entries.",
+            git_url, name,
+        )
+        return None
 
     completeness = _compute_manifest_completeness(plugin)
 
