@@ -6,7 +6,7 @@
   <a href="https://github.com/zgsm-ai/everything-ai-coding/stargazers"><img src="https://img.shields.io/github/stars/zgsm-ai/everything-ai-coding?style=flat-square&color=4A90D9" alt="Stars" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zgsm-ai/everything-ai-coding?style=flat-square" alt="License" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/commits/main"><img src="https://img.shields.io/github/last-commit/zgsm-ai/everything-ai-coding?style=flat-square" alt="Last Commit" /></a>
-  <img src="https://img.shields.io/badge/resources-12731-2ECC71?style=flat-square" alt="Resources" />
+  <img src="https://img.shields.io/badge/resources-12762-2ECC71?style=flat-square" alt="Resources" />
 </p>
 
 <p>
@@ -34,36 +34,36 @@ Everything AI Coding 是一个**持续更新的知识库**，从 9+ 个上游源
 <a id="knowledge-base"></a>
 ## 📚 知识库
 
-### [🔌 MCP 服务器](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->9103<!-- README_COUNT_MCP:END --> 个条目
+### [🔌 MCP 服务器](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->9165<!-- README_COUNT_MCP:END --> 个条目
 
 将 AI Agent 连接到外部工具、数据库和服务的 Model Context Protocol 服务器。
 
 <!-- README_TOP5_MCP:START -->
 | 名称 | ⭐ Stars | 评分 | 描述 |
 |------|----------|------|------|
-| [MCP Inspector](https://github.com/modelcontextprotocol/inspector) | 9.2k | 99 | 用于测试和调试 MCP 服务器的开发者工具，支持 UI 和 CLI 模式。 |
-| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 32.2k | 98 | 微软官方MCP服务器，通过Playwright无障碍树让AI模型精确控制浏览器自动化。 |
-| [googleapis/genai-toolbox](https://github.com/googleapis/genai-toolbox) | 15.0k | 98 | 开源MCP服务器，将AI代理和IDE连接到企业数据库，提供预置工具和自定义工具框架。 |
-| [AWS MCP Servers](https://github.com/awslabs/mcp) | 8.6k | 98 | 一套MCP服务器，将AWS服务集成到AI编码助手中，用于云开发、基础设施管理和工作流自动化。 |
-| [IDA Pro MCP](https://github.com/mrexodia/ida-pro-mcp) | 6.7k | 98 | 在 IDA Pro 中实现 AI 辅助逆向工程的 MCP 服务器。 |
+| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 32.2k | 98 | 微软官方 MCP 服务器，通过 Playwright 让 AI 精确控制浏览器进行网页自动化和数据抓取。 |
+| [github/github-mcp-server](https://github.com/github/github-mcp-server) | 29.6k | 98 | GitHub 官方 MCP 服务器，让 AI 工具通过 API 深度集成 GitHub，实现仓库管理、Issue/PR 自动化和 CI/C… |
+| [googleapis/genai-toolbox](https://github.com/googleapis/genai-toolbox) | 15.1k | 98 | Google官方MCP服务器，将AI代理和IDE连接到企业数据库，提供预构建工具和自定义框架。 |
+| [MCP Inspector](https://github.com/modelcontextprotocol/inspector) | 9.2k | 98 | 用于通过 Web UI 或 CLI 可视化测试和调试 MCP 服务器的开发者工具。 |
+| [AWS MCP Servers](https://github.com/awslabs/mcp) | 8.6k | 98 | 50+个MCP服务器套件，让AI编程助手能够与AWS服务交互，支持基础设施、数据库、AI/ML和开发工作流。 |
 <!-- README_TOP5_MCP:END -->
 
 [浏览全部 MCP 服务器 →](./catalog/mcp/) · [在线浏览 →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=mcp)
 
 ---
 
-### [🎯 Skills 技能](./catalog/skills/) — <!-- README_COUNT_SKILL:START -->1795<!-- README_COUNT_SKILL:END --> 个条目
+### [🎯 Skills 技能](./catalog/skills/) — <!-- README_COUNT_SKILL:START -->1800<!-- README_COUNT_SKILL:END --> 个条目
 
 AI 编程助手的可复用能力和工作流。
 
 <!-- README_TOP5_SKILL:START -->
 | 名称 | 来源 | 评分 | 描述 |
 |------|------|------|------|
-| [crewai-multi-agent](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/agents-crewai) | Claude Code 模板 | 95 | 用于构建自主AI代理团队的多代理编排框架，支持基于角色的协作、记忆和生产工作流。 |
-| [langchain](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/agents-langchain) | Claude Code 模板 | 95 | 用于构建基于LLM的应用程序的框架，支持代理、链和RAG。 |
-| [llamaindex](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/agents-llamaindex) | Claude Code 模板 | 95 | 用于构建 RAG 应用的 LLM 数据框架，支持文档摄取、索引和查询。 |
-| [nemo-evaluator-sdk](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/evaluation-nemo-evaluator) | Claude Code 模板 | 95 | 企业级 LLM 基准测试平台，支持 18+ 测试框架的 100+ 基准测试和多后端执行。 |
-| [peft-fine-tuning](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/fine-tuning-peft) | Claude Code 模板 | 95 | 用于大语言模型的参数高效微调库，支持 LoRA、QLoRA 等 25+ 适配器方法。 |
+| [agent-framework-azure-ai-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agent-framework-azure-ai-py) | Antigravity Skills | 95 | 用于在 Azure AI Foundry 上构建持久化 AI 代理的 Python SDK 技能，支持工具集成和对话管理。 |
+| [agents-v2-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agents-v2-py) | Antigravity Skills | 95 | 使用 Azure AI Projects SDK 在 Azure AI Foundry 中构建基于容器的托管代理。 |
+| [ai-engineering-toolkit](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-engineering-toolkit) | Antigravity Skills | 95 | 一套包含6个结构化AI工程工作流的工具包，用于提示词评估、RAG设计、安全审计等，专为编程助手设计。 |
+| [apify-actor-development](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/apify-actor-development) | Antigravity Skills | 95 | 用于AI辅助开发、测试和部署Apify Actor（无服务器网络爬虫/自动化程序）的综合技能。 |
+| [apify-actorization](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/apify-actorization) | Antigravity Skills | 95 | 将现有软件转换为可在 Apify 平台上运行的可重用、无服务器 Docker 化 Actor 的技能。 |
 <!-- README_TOP5_SKILL:END -->
 
 [浏览全部 Skills →](./catalog/skills/) · [在线浏览 →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=skill)
@@ -77,18 +77,18 @@ AI 编程助手的可复用能力和工作流。
 <!-- README_TOP5_RULE:START -->
 | 名称 | 来源 | 评分 | 分类 |
 |------|------|------|------|
+| [Beefreesdk Nocode Content Editor Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/beefreeSDK-nocode-content-editor-cursorrules-prompt-file) | CursorRules | 97 | tooling |
 | [Momen Cursurrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/momen-cursurrules-prompt-file) | CursorRules | 97 | tooling |
-| [Changelog Management (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/changelog-management.mdc) | Rules 2.1 | 90 | ai-ml |
-| [Beefreesdk Nocode Content Editor Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/beefreeSDK-nocode-content-editor-cursorrules-prompt-file) | CursorRules | 87 | tooling |
-| [Drupal 11 Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/drupal-11-cursorrules-prompt-file) | CursorRules | 87 | tooling |
-| [Nextjs Supabase Shadcn Pwa Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file) | CursorRules | 87 | frontend |
+| [Bug Fix (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/bug-fix.mdc) | Rules 2.1 | 93 | tooling |
+| [Nextjs Supabase Shadcn Pwa Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file) | CursorRules | 90 | frontend |
+| [Frontend Dev (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/frontend-dev.mdc) | Rules 2.1 | 89 | frontend |
 <!-- README_TOP5_RULE:END -->
 
 [浏览全部 Rules →](./catalog/rules/) · [在线浏览 →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=rule)
 
 ---
 
-### [💡 Prompts 提示词](./catalog/prompts/) — <!-- README_COUNT_PROMPT:START -->575<!-- README_COUNT_PROMPT:END --> 个条目
+### [💡 Prompts 提示词](./catalog/prompts/) — <!-- README_COUNT_PROMPT:START -->576<!-- README_COUNT_PROMPT:END --> 个条目
 
 面向开发者的提示词模板，覆盖常见编码场景。
 
@@ -97,16 +97,16 @@ AI 编程助手的可复用能力和工作流。
 |------|------|------|------|
 | [Comprehensive repository analysis](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#comprehensive-repository-analysis) | prompts.chat | 96 | security |
 | [Frontend Developer Skill](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#frontend-developer-skill) | prompts.chat | 96 | frontend |
-| [AI Engineer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ai-engineer) | prompts.chat | 96 | ai-ml |
 | [Backend Architect](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#backend-architect) | prompts.chat | 96 | database |
 | [Frontend Developer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#frontend-developer) | prompts.chat | 96 | frontend |
+| [Mobile App Builder](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#mobile-app-builder) | prompts.chat | 96 | frontend |
 <!-- README_TOP5_PROMPT:END -->
 
 [浏览全部 Prompts →](./catalog/prompts/) · [在线浏览 →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=prompt)
 
 ---
 
-### [🧩 Plugins 插件](./catalog/plugins/) — <!-- README_COUNT_PLUGIN:START -->903<!-- README_COUNT_PLUGIN:END --> 个条目
+### [🧩 Plugins 插件](./catalog/plugins/) — <!-- README_COUNT_PLUGIN:START -->866<!-- README_COUNT_PLUGIN:END --> 个条目
 
 打包发布的市场插件（含 skills + commands + agents + MCP servers）。
 
@@ -115,11 +115,11 @@ AI 编程助手的可复用能力和工作流。
 <!-- README_TOP5_PLUGIN:START -->
 | 名称 | 来源 | 评分 | 描述 |
 |------|------|------|------|
-| [superpowers](https://github.com/obra/superpowers.git) | Anthropic 官方 | 100 | 一个Claude Code插件，教授AI辅助编码技能，如TDD、调试、代码审查和子代理驱动开发。 |
-| [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp.git) | Anthropic 官方 | 100 | AI编程助手通过MCP协议控制Chrome浏览器，进行网页调试、性能分析和自动化操作。 |
-| [huggingface-skills](https://github.com/huggingface/skills.git) | Anthropic 官方 | 100 | Hugging Face Hub 的 AI/ML 技能集合，涵盖模型训练、评估、数据集管理和部署。 |
-| [code-modernization](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-modernization) | Anthropic 官方 | 99 | 用于现代化遗留代码库（COBOL、Java、C++）的插件，提供结构化工作流和专用AI代理。 |
-| [hookify](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/hookify) | Anthropic 官方 | 99 | Claude Code 插件，通过正则表达式匹配工具操作来创建自定义钩子，防止不良行为。 |
+| [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp.git) | Anthropic 官方 | 100 | Chrome DevTools MCP 服务器，供 AI 编程代理通过 CLI 和 MCP 工具调试、自动化和分析网页。 |
+| [claude-code-setup](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup) | Anthropic 官方 | 100 | 分析代码库并推荐定制的 Claude Code 自动化，如钩子、技能、MCP 服务器和子代理。 |
+| [huggingface-skills](https://github.com/huggingface/skills.git) | Anthropic 官方 | 100 | Hugging Face Hub 的 AI 编码技能集合，涵盖模型训练、评估、部署和开发工具。 |
+| [hookify](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/hookify) | Anthropic 官方 | 99 | Claude Code 插件，通过 Markdown 规则文件和正则表达式模式创建自定义钩子，防止不良编码行为。 |
+| [mcp-server-dev](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/mcp-server-dev) | Anthropic 官方 | 99 | 为Claude构建MCP服务器和交互式UI组件的完整指南，涵盖部署模型、工具设计和测试。 |
 <!-- README_TOP5_PLUGIN:END -->
 
 [浏览全部 Plugins →](./catalog/plugins/) · [在线浏览 →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=plugin)

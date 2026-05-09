@@ -6,7 +6,7 @@
   <a href="https://github.com/zgsm-ai/everything-ai-coding/stargazers"><img src="https://img.shields.io/github/stars/zgsm-ai/everything-ai-coding?style=flat-square&color=4A90D9" alt="Stars" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zgsm-ai/everything-ai-coding?style=flat-square" alt="License" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/commits/main"><img src="https://img.shields.io/github/last-commit/zgsm-ai/everything-ai-coding?style=flat-square" alt="Last Commit" /></a>
-  <img src="https://img.shields.io/badge/resources-12731-2ECC71?style=flat-square" alt="Resources" />
+  <img src="https://img.shields.io/badge/resources-12762-2ECC71?style=flat-square" alt="Resources" />
 </p>
 
 <p>
@@ -34,36 +34,36 @@ Everything AI Coding is a **curated knowledge base** that continuously collects,
 <a id="knowledge-base"></a>
 ## 📚 Knowledge Base
 
-### [🔌 MCP Servers](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->9103<!-- README_COUNT_MCP:END --> entries
+### [🔌 MCP Servers](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->9165<!-- README_COUNT_MCP:END --> entries
 
 Model Context Protocol servers that connect AI agents to external tools, databases, and services.
 
 <!-- README_TOP5_MCP:START -->
 | Name | ⭐ Stars | Score | Description |
 |------|----------|-------|-------------|
-| [MCP Inspector](https://github.com/modelcontextprotocol/inspector) | 9.2k | 99 | A developer tool for testing and debugging MCP servers via UI or CLI. |
-| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 32.2k | 98 | Microsoft's official MCP server enabling AI models to automate browse… |
-| [googleapis/genai-toolbox](https://github.com/googleapis/genai-toolbox) | 15.0k | 98 | An open-source MCP server that connects AI agents and IDEs to enterpr… |
-| [AWS MCP Servers](https://github.com/awslabs/mcp) | 8.6k | 98 | A suite of MCP servers that integrate AWS services into AI coding ass… |
-| [IDA Pro MCP](https://github.com/mrexodia/ida-pro-mcp) | 6.7k | 98 | MCP server enabling AI-assisted reverse engineering in IDA Pro. |
+| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 32.2k | 98 | Official Microsoft MCP server enabling AI to control web browsers via… |
+| [github/github-mcp-server](https://github.com/github/github-mcp-server) | 29.6k | 98 | Official GitHub MCP server enabling AI tools to interact with GitHub… |
+| [googleapis/genai-toolbox](https://github.com/googleapis/genai-toolbox) | 15.1k | 98 | Official Google MCP server connecting AI agents and IDEs to enterpris… |
+| [MCP Inspector](https://github.com/modelcontextprotocol/inspector) | 9.2k | 98 | A developer tool for visually testing and debugging MCP servers via a… |
+| [AWS MCP Servers](https://github.com/awslabs/mcp) | 8.6k | 98 | Suite of 50+ MCP servers enabling AI coding assistants to interact wi… |
 <!-- README_TOP5_MCP:END -->
 
 [Browse all MCP servers →](./catalog/mcp/) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=mcp)
 
 ---
 
-### [🎯 Skills](./catalog/skills/) — <!-- README_COUNT_SKILL:START -->1795<!-- README_COUNT_SKILL:END --> entries
+### [🎯 Skills](./catalog/skills/) — <!-- README_COUNT_SKILL:START -->1800<!-- README_COUNT_SKILL:END --> entries
 
 Reusable agent capabilities and workflows for AI coding assistants.
 
 <!-- README_TOP5_SKILL:START -->
 | Name | Source | Score | Description |
 |------|--------|-------|-------------|
-| [crewai-multi-agent](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/agents-crewai) | Claude Code Templates | 95 | Multi-agent orchestration framework for building teams of autonomous… |
-| [langchain](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/agents-langchain) | Claude Code Templates | 95 | Framework for building LLM-powered applications with agents, chains,… |
-| [llamaindex](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/agents-llamaindex) | Claude Code Templates | 95 | Data framework for building LLM applications with RAG, document inges… |
-| [nemo-evaluator-sdk](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/evaluation-nemo-evaluator) | Claude Code Templates | 95 | Enterprise LLM benchmarking platform supporting 100+ benchmarks acros… |
-| [peft-fine-tuning](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/fine-tuning-peft) | Claude Code Templates | 95 | Parameter-efficient fine-tuning library for LLMs using LoRA, QLoRA, a… |
+| [agent-framework-azure-ai-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agent-framework-azure-ai-py) | Antigravity Skills | 95 | A Python SDK skill for building persistent AI agents on Azure AI Foun… |
+| [agents-v2-py](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/agents-v2-py) | Antigravity Skills | 95 | A Python skill for building container-based hosted agents in Azure AI… |
+| [ai-engineering-toolkit](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/ai-engineering-toolkit) | Antigravity Skills | 95 | A collection of 6 structured AI engineering workflows for prompt eval… |
+| [apify-actor-development](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/apify-actor-development) | Antigravity Skills | 95 | A comprehensive skill for AI-assisted development, testing, and deplo… |
+| [apify-actorization](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/apify-actorization) | Antigravity Skills | 95 | A skill for converting existing software into reusable, serverless Do… |
 <!-- README_TOP5_SKILL:END -->
 
 [Browse all skills →](./catalog/skills/) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=skill)
@@ -77,18 +77,18 @@ Coding conventions and AI behavior guidelines for consistent development.
 <!-- README_TOP5_RULE:START -->
 | Name | Source | Score | Category |
 |------|--------|-------|----------|
+| [Beefreesdk Nocode Content Editor Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/beefreeSDK-nocode-content-editor-cursorrules-prompt-file) | CursorRules | 97 | tooling |
 | [Momen Cursurrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/momen-cursurrules-prompt-file) | CursorRules | 97 | tooling |
-| [Changelog Management (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/changelog-management.mdc) | Rules 2.1 | 90 | ai-ml |
-| [Beefreesdk Nocode Content Editor Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/beefreeSDK-nocode-content-editor-cursorrules-prompt-file) | CursorRules | 87 | tooling |
-| [Drupal 11 Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/drupal-11-cursorrules-prompt-file) | CursorRules | 87 | tooling |
-| [Nextjs Supabase Shadcn Pwa Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file) | CursorRules | 87 | frontend |
+| [Bug Fix (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/bug-fix.mdc) | Rules 2.1 | 93 | tooling |
+| [Nextjs Supabase Shadcn Pwa Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file) | CursorRules | 90 | frontend |
+| [Frontend Dev (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/frontend-dev.mdc) | Rules 2.1 | 89 | frontend |
 <!-- README_TOP5_RULE:END -->
 
 [Browse all rules →](./catalog/rules/) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=rule)
 
 ---
 
-### [💡 Prompts](./catalog/prompts/) — <!-- README_COUNT_PROMPT:START -->575<!-- README_COUNT_PROMPT:END --> entries
+### [💡 Prompts](./catalog/prompts/) — <!-- README_COUNT_PROMPT:START -->576<!-- README_COUNT_PROMPT:END --> entries
 
 Developer-focused prompt templates for common coding tasks.
 
@@ -97,16 +97,16 @@ Developer-focused prompt templates for common coding tasks.
 |------|--------|-------|----------|
 | [Comprehensive repository analysis](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#comprehensive-repository-analysis) | prompts.chat | 96 | security |
 | [Frontend Developer Skill](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#frontend-developer-skill) | prompts.chat | 96 | frontend |
-| [AI Engineer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#ai-engineer) | prompts.chat | 96 | ai-ml |
 | [Backend Architect](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#backend-architect) | prompts.chat | 96 | database |
 | [Frontend Developer](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#frontend-developer) | prompts.chat | 96 | frontend |
+| [Mobile App Builder](https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#mobile-app-builder) | prompts.chat | 96 | frontend |
 <!-- README_TOP5_PROMPT:END -->
 
 [Browse all prompts →](./catalog/prompts/) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=prompt)
 
 ---
 
-### [🧩 Plugins](./catalog/plugins/) — <!-- README_COUNT_PLUGIN:START -->903<!-- README_COUNT_PLUGIN:END --> entries
+### [🧩 Plugins](./catalog/plugins/) — <!-- README_COUNT_PLUGIN:START -->866<!-- README_COUNT_PLUGIN:END --> entries
 
 Bundled marketplace plugins (skills + commands + agents + MCP servers).
 
@@ -115,11 +115,11 @@ Bundled marketplace plugins (skills + commands + agents + MCP servers).
 <!-- README_TOP5_PLUGIN:START -->
 | Name | Source | Score | Description |
 |------|--------|-------|-------------|
-| [superpowers](https://github.com/obra/superpowers.git) | Anthropic Official | 100 | A plugin for Claude Code that teaches AI-assisted coding skills like… |
-| [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp.git) | Anthropic Official | 100 | MCP server for AI coding agents to control Chrome browsers, debug web… |
-| [huggingface-skills](https://github.com/huggingface/skills.git) | Anthropic Official | 100 | A comprehensive collection of AI/ML skills for Hugging Face Hub, cove… |
-| [code-modernization](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-modernization) | Anthropic Official | 99 | A plugin for modernizing legacy codebases (COBOL, Java, C++) with a s… |
-| [hookify](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/hookify) | Anthropic Official | 99 | Claude Code plugin for creating custom hooks to prevent unwanted beha… |
+| [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp.git) | Anthropic Official | 100 | Chrome DevTools MCP server for AI coding agents to debug, automate, a… |
+| [claude-code-setup](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup) | Anthropic Official | 100 | A Claude Code plugin that analyzes codebases to recommend tailored au… |
+| [huggingface-skills](https://github.com/huggingface/skills.git) | Anthropic Official | 100 | A comprehensive collection of AI coding skills for Hugging Face Hub,… |
+| [hookify](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/hookify) | Anthropic Official | 99 | Claude Code plugin for creating custom hooks to prevent unwanted codi… |
+| [mcp-server-dev](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/mcp-server-dev) | Anthropic Official | 99 | Comprehensive guide for building MCP servers and interactive UI widge… |
 <!-- README_TOP5_PLUGIN:END -->
 
 [Browse all plugins →](./catalog/plugins/) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=plugin)

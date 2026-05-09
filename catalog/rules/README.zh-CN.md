@@ -10,113 +10,126 @@
 
 | # | 名称 | 描述 | 来源 | 状态 | 评分 | 最近更新 | 分类 | 标签 |
 |---|---|---|---|---|---|---|---|---|
-| 1 | [Momen Cursurrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/momen-cursurrules-prompt-file) | 用于构建 Momen 后端即服务自定义前端的 Cursor 规则集。 | CursorRules | 🟢 活跃 | 97 | 2026-05-05 | tooling | `cursor-rules`, `backend-as-a-service`, `graphql` |
-| 2 | [Changelog Management (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/changelog-management.mdc) | AI驱动的自动化变更日志生成和版本管理系统。 | Rules 2.1 | 🟡 停滞 | 90 | 2025-11-07 | ai-ml | `changelog-management`, `version-tracking`, `ai-automation` |
-| 3 | [Beefreesdk Nocode Content Editor Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/beefreeSDK-nocode-content-editor-cursorrules-prompt-file) | 集成 Beefree SDK 无代码内容编辑器的指南。 | CursorRules | 🟢 活跃 | 87 | 2026-05-05 | tooling | `mcp-server`, `sdk-integration`, `no-code-editor` |
-| 4 | [Drupal 11 Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/drupal-11-cursorrules-prompt-file) | Drupal 11 的 AI 编码规则提示文件。 | CursorRules | 🟢 活跃 | 87 | 2026-05-05 | tooling | `cursorrules`, `drupal-11`, `ai-coding` |
-| 5 | [Nextjs Supabase Shadcn Pwa Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file) | 用于 Next.js/Supabase 项目的 Cursor 规则，维护项目上下文并管理构建笔记。 | CursorRules | 🟢 活跃 | 87 | 2026-05-05 | frontend | `cursor-rules`, `nextjs`, `supabase` |
-| 6 | [Mcp Zero Config Detection (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/mcp-zero-config-detection.mdc) | 检测用户是否缺少MCP配置并主动提醒引导配置。 | Rules 2.1 | 🟡 停滞 | 86 | 2025-11-07 | tooling | `mcp-configuration`, `developer-tools`, `ai-assistant` |
-| 7 | [Context7 Preload Standard (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/context7-preload-standard.mdc) | 修复Bug或启动新项目前预载上下文知识的标准流程，提升开发效率与正确率。 | Rules 2.1 | 🟡 停滞 | 86 | 2025-11-07 | tooling | `knowledge-preload`, `development-workflow`, `bug-fixing` |
-| 8 | [File Generation Safety Rules (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/file-generation-safety-rules.mdc) | AI文件生成安全规则，强制用户确认机制防止未经授权的文件操作 | Rules 2.1 | 🟡 停滞 | 86 | 2025-11-07 | ai-ml | `ai-safety-rules`, `file-generation`, `permission-control` |
-| 9 | [Disaster Recovery Plan (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/disaster-recovery-plan.mdc) | 面向AI编码规则系统的灾难恢复计划，覆盖数据丢失、系统故障和安全事件。 | Rules 2.1 | 🟡 停滞 | 85 | 2025-11-07 | tooling | `disaster-recovery`, `backup-strategy`, `rule-system` |
-| 10 | [Cpp Programming Guidelines Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cpp-programming-guidelines-cursorrules-prompt-file) | 用于 Cursor AI 的 C++ 编程规范 .cursorrules 文件。 | CursorRules | 🟢 活跃 | 83 | 2026-05-05 | ai-ml | `cursorrules`, `c-plus-plus`, `coding-guidelines` |
-| 11 | [Cypress E2E Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cypress-e2e-testing-cursorrules-prompt-file) | 用于生成遵循最佳实践的 Cypress 端到端测试的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 83 | 2026-05-05 | testing | `cypress`, `e2e-testing`, `cursorrules` |
-| 12 | [Nextjs15 React19 Vercelai Tailwind Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs15-react19-vercelai-tailwind-cursorrules-prompt-file) | 为 Cursor IDE 定制的 .cursorrules 提示文件，优化 Next.js 15、React 19、Vercel AI SDK 和 Tailwi... | CursorRules | 🟢 活跃 | 83 | 2026-05-05 | frontend | `cursorrules`, `nextjs`, `react` |
-| 13 | [Playwright Accessibility Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-accessibility-testing-cursorrules-prompt-file) | 用于创建 Playwright 无障碍测试的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 83 | 2026-05-05 | testing | `cursorrules`, `playwright`, `accessibility-testing` |
-| 14 | [Solidity Foundry Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/solidity-foundry-cursorrules-prompt-file) | 用于 Foundry 框架的 Solidity 智能合约安全开发的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 83 | 2026-05-05 | tooling | `cursorrules`, `solidity`, `foundry` |
-| 15 | [Vitest Unit Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/vitest-unit-testing-cursorrules-prompt-file) | 用于创建 Vitest 单元测试的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 83 | 2026-05-05 | testing | `cursorrules`, `unit-testing`, `vitest` |
-| 16 | [Backend Dev (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/backend-dev.mdc) | 支持 Java、Python、Node.js 的后端开发完整工作流，包含命令、模式和最佳实践。 | Rules 2.1 | 🟡 停滞 | 83 | 2025-11-07 | backend | `backend-development`, `workflow`, `java` |
-| 17 | [Bug Fix (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/bug-fix.mdc) | 从问题创建到拉取请求的完整Bug修复工作流，包含命令和模板。 | Rules 2.1 | 🟡 停滞 | 83 | 2025-11-07 | tooling | `bug-fix-workflow`, `project-rules`, `git-workflow` |
-| 18 | [Code Quality Check (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/code-quality-check.mdc) | AI驱动的跨语言代码质量检查系统，支持智能分析和自动修复。 | Rules 2.1 | 🟡 停滞 | 83 | 2025-11-07 | ai-ml | `code-quality`, `code-review`, `static-analysis` |
-| 19 | [Code Review (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/code-review.mdc) | 多角色拉取请求审查清单，确保代码质量和团队协作。 | Rules 2.1 | 🟡 停滞 | 83 | 2025-11-07 | tooling | `code-review`, `pull-request`, `checklist` |
-| 20 | [Commit (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/commit.mdc) | 统一AI驱动提交工作流，支持标准、快速和智能三种模式。 | Rules 2.1 | 🟡 停滞 | 83 | 2025-11-07 | ai-ml | `commit-workflow`, `ai-commit-messages`, `git-hooks` |
-| 21 | [Custom Command Builder (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/custom-command-builder.mdc) | AI驱动的自定义命令构建器，支持智能模板和规则扩展。 | Rules 2.1 | 🟡 停滞 | 83 | 2025-11-07 | ai-ml | `command-builder`, `ai-templates`, `workflow-automation` |
-| 22 | [Frontend Dev (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/frontend-dev.mdc) | 面向 Vue 3、React 18+ 和 TypeScript 的命令驱动前端开发工作流。 | Rules 2.1 | 🟡 停滞 | 83 | 2025-11-07 | frontend | `frontend-workflow`, `vue-3`, `react-18` |
-| 23 | [Mcp Debugging Enhanced (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/mcp-debugging-enhanced.mdc) | AI驱动的MCP服务器调试和诊断系统，提供智能分析和自动修复。 | Rules 2.1 | 🟡 停滞 | 83 | 2025-11-07 | ai-ml | `mcp-debugging`, `diagnostics`, `ai-assisted` |
-| 24 | [Mcp Unified Management (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/mcp-unified-management.mdc) | 整合检测、推荐、配置与同步的MCP统一管理策略，支持20+AI开发工具。 | Rules 2.1 | 🟡 停滞 | 83 | 2025-11-07 | tooling | `mcp-management`, `cross-platform-sync`, `ai-tools` |
-| 25 | [Systematic Debugging (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/systematic-debugging.mdc) | AI驱动的系统化调试规则，集成智能故障诊断和自动化调试流程。 | Rules 2.1 | 🟡 停滞 | 83 | 2025-11-07 | ai-ml | `debugging`, `ai-assisted`, `project-rules` |
-| 26 | [Backend Rules (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/backend-rules.mdc) | 面向后端开发的智能化企业级AI助手规则集，涵盖架构、API、数据库、安全和运维。 | Rules 2.1 | 🟡 停滞 | 83 | 2025-11-07 | ai-ml | `backend-development`, `ai-assistant-rules`, `enterprise-standards` |
-| 27 | [Jest Unit Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/jest-unit-testing-cursorrules-prompt-file) | 为 Cursor IDE 设计的 .cursorrules 提示，用于生成支持 TypeScript 的 Jest 单元测试。 | CursorRules | 🟢 活跃 | 81 | 2026-05-05 | testing | `cursorrules`, `jest`, `unit-testing` |
-| 28 | [Playwright Api Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-api-testing-cursorrules-prompt-file) | 用于 Playwright API 测试的 .cursorrules 提示文件，支持 TypeScript 和 pw-api-plugin。 | CursorRules | 🟢 活跃 | 81 | 2026-05-05 | testing | `cursorrules`, `playwright`, `api-testing` |
-| 29 | [Python Llm Ml Workflow Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-llm-ml-workflow-cursorrules-prompt-file) | 为 Cursor IDE 设计的 .cursorrules 提示文件，提供 Python LLM 和 ML 工作流的编码标准与最佳实践。 | CursorRules | 🟢 活跃 | 81 | 2026-05-05 | backend | `cursorrules`, `python`, `llm` |
-| 30 | [React Typescript Nextjs Nodejs Cursorrules Prompt  Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-typescript-nextjs-nodejs-cursorrules-prompt-) | 用于 React、TypeScript、Next.js 和 Node.js 项目的 AI 辅助编码规则文件。 | CursorRules | 🟢 活跃 | 81 | 2026-05-05 | frontend | `cursorrules`, `react`, `nextjs` |
-| 31 | [Tailwind Css Nextjs Guide Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/tailwind-css-nextjs-guide-cursorrules-prompt-file) | 用于 AI 辅助 Next.js、Tailwind CSS 和 DaisyUI 开发的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 81 | 2026-05-05 | frontend | `cursorrules`, `nextjs`, `tailwindcss` |
-| 32 | [Memory System Integration (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/memory-system-integration.mdc) | AI编程助手的项目记忆系统，支持知识存储、语义检索和跨项目上下文聚合。 | Rules 2.1 | 🟡 停滞 | 81 | 2025-11-07 | tooling | `memory-system`, `knowledge-management`, `semantic-search` |
-| 33 | [Permission Control System (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/permission-control-system.mdc) | 定义用户/AI/系统角色权限和操作审计的权限控制系统。 | Rules 2.1 | 🟡 停滞 | 81 | 2025-11-07 | ai-ml | `permission-control`, `role-based-access`, `audit-system` |
-| 34 | [Rule Conflict Resolution (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/rule-conflict-resolution.mdc) | 一套解决AI编码规则冲突的系统，确保用户指令始终优先。 | Rules 2.1 | 🟡 停滞 | 81 | 2025-11-07 | tooling | `rule-system`, `conflict-resolution`, `priority-management` |
-| 35 | [Nextjs Tanstack Query Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-tanstack-query-cursorrules-prompt-file) | Next.js App Router 与 TanStack Query v5 结合使用的 Cursor 规则。 | CursorRules | 🟢 活跃 | 80 | 2026-05-05 | frontend | `cursor-rules`, `nextjs`, `tanstack-query` |
-| 36 | [React Tanstack Router Query Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-tanstack-router-query-cursorrules-prompt-file) | 用于构建 React 单页应用的 TanStack Router 和 Query 光标规则。 | CursorRules | 🟢 活跃 | 80 | 2026-05-05 | frontend | `cursor-rules`, `react`, `tanstack-router` |
-| 37 | [Salesforce Apex Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/salesforce-apex-cursorrules-prompt-file) | 为 Cursor AI 配置 Salesforce Apex 开发最佳实践和设计模式的规则文件。 | CursorRules | 🟢 活跃 | 80 | 2026-05-05 | tooling | `cursorrules`, `salesforce`, `apex` |
-| 38 | [Code Pair Interviews Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/code-pair-interviews) | 用于 Cursor AI 的 .cursorrules 提示文件，生成符合面试标准的整洁协作代码。 | CursorRules | 🟢 活跃 | 79 | 2026-05-05 | ai-ml | `cursorrules`, `cursor-ai`, `code-interviews` |
-| 39 | [Engineering Ticket Template Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/engineering-ticket-template-cursorrules-prompt-file) | 用于创建标准化工程工单的 .cursorrules 提示模板，包含需求、计划和验收标准。 | CursorRules | 🟢 活跃 | 79 | 2026-05-05 | tooling | `cursorrules`, `engineering-tickets`, `project-management` |
-| 40 | [Playwright E2E Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-e2e-testing-cursorrules-prompt-file) | 用于创建可靠 Playwright 端到端测试的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 79 | 2026-05-05 | testing | `playwright`, `e2e-testing`, `cursorrules` |
-| 41 | [Playwright Integration Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-integration-testing-cursorrules-prompt-file) | 用于创建 Playwright 集成测试的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 79 | 2026-05-05 | testing | `playwright`, `integration-testing`, `cursorrules` |
-| 42 | [Pr Template Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/pr-template-cursorrules-prompt-file) | 用于生成跨平台标准化 Pull Request 模板的 .cursorrules 提示。 | CursorRules | 🟢 活跃 | 79 | 2026-05-05 | tooling | `cursorrules`, `pull-request-template`, `code-review` |
-| 43 | [Qa Bug Report Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/qa-bug-report-cursorrules-prompt-file) | 用于创建标准化错误报告的专用提示，包含严重性评估和复现步骤。 | CursorRules | 🟢 活跃 | 79 | 2026-05-05 | tooling | `cursorrules`, `bug-reporting`, `qa-tools` |
-| 44 | [Ai Powered Code Review (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/ai-powered-code-review.mdc) | 基于机器学习的智能代码审查规则，实现自动化代码质量分析。 | Rules 2.1 | 🟡 停滞 | 79 | 2025-11-07 | ai-ml | `code-review`, `ai-powered`, `quality-analysis` |
-| 45 | [Context Loader (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/context-loader.mdc) | AI驱动的智能项目上下文分析系统，识别技术栈、架构模式并推荐配置。 | Rules 2.1 | 🟡 停滞 | 79 | 2025-11-07 | ai-ml | `project-context`, `code-analysis`, `ai-assistant` |
-| 46 | [Mcp Intelligent Strategy (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/mcp-intelligent-strategy.mdc) | AI助手MCP工具智能使用策略，定义工具优先级和执行流程 | Rules 2.1 | 🟡 停滞 | 79 | 2025-11-07 | tooling | `mcp-tools`, `ai-assistant`, `tool-strategy` |
-| 47 | [Frontend Rules (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/frontend-rules.mdc) | 面向企业级前端开发的AI助手规则集，集成智能MCP工具编排。 | Rules 2.1 | 🟡 停滞 | 79 | 2025-11-07 | ai-ml | `frontend-development`, `ai-assistant-rules`, `mcp-orchestration` |
-| 48 | [Unified Rules Base (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/unified-rules-base.mdc) | 确保不同AI工具编码行为一致的统一规则基准，集成智能需求理解和深度讨论框架。 | Rules 2.1 | 🟡 停滞 | 79 | 2025-11-07 | ai-ml | `global-rules`, `ai-coding`, `workflow-automation` |
-| 49 | [Typescript Zod Tailwind Nextjs Cursorrules Prompt  Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-zod-tailwind-nextjs-cursorrules-prompt-) | 一个用于 TypeScript、Zod、Tailwind 和 Next.js 项目的 .cursorrules 提示文件，强制执行编码规范。 | CursorRules | 🟢 活跃 | 78 | 2026-05-05 | frontend | `cursorrules`, `typescript`, `zod` |
-| 50 | [Analyze Issue (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/analyze-issue.mdc) | 用于分析GitHub问题并创建详细实现规范的规则系统 | Rules 2.1 | 🟡 停滞 | 78 | 2025-11-07 | tooling | `github-issues`, `project-rules`, `issue-analysis` |
-| 51 | [Create Docs (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/create-docs.mdc) | 生成全面结构化项目文档的规则，包含模板和自动化流程。 | Rules 2.1 | 🟡 停滞 | 78 | 2025-11-07 | documentation | `documentation-generation`, `project-rules`, `documentation-templates` |
-| 52 | [Feedback Enhanced (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/feedback-enhanced.mdc) | 面向复杂开发任务的增强反馈机制，支持1小时超时和MCP集成。 | Rules 2.1 | 🟡 停滞 | 78 | 2025-11-07 | tooling | `feedback-system`, `mcp-tool`, `development-workflow` |
-| 53 | [Implement Task (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/implement-task.mdc) | 系统化的软件任务实现方法，涵盖规划、编码、质量保证和交付。 | Rules 2.1 | 🟡 停滞 | 78 | 2025-11-07 | tooling | `task-implementation`, `software-development`, `project-management` |
-| 54 | [Intelligent Project Management (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/intelligent-project-management.mdc) | 整合阶段管理、工作流编排、智能推荐和记忆系统的AI项目管理规则系统 | Rules 2.1 | 🟡 停滞 | 78 | 2025-11-07 | tooling | `project-management`, `workflow-orchestration`, `ai-rules` |
-| 55 | [Mermaid (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/mermaid.mdc) | 基于规则的Mermaid多类型图表生成资源。 | Rules 2.1 | 🟡 停滞 | 78 | 2025-11-07 | ai-ml | `mermaid`, `diagram-generation`, `visualization` |
-| 56 | [Root Cause Analysis (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/root-cause-analysis.mdc) | 基于五个为什么方法论的AI驱动根因分析系统，支持智能问题分类和解决方案推荐。 | Rules 2.1 | 🟡 停滞 | 78 | 2025-11-07 | ai-ml | `root-cause-analysis`, `five-whys`, `ai-analysis` |
-| 57 | [Audit Logging System (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/audit-logging-system.mdc) | 为规则系统提供操作审计、安全事件和性能监控的全面日志系统。 | Rules 2.1 | 🟡 停滞 | 78 | 2025-11-07 | tooling | `audit-logging`, `security-events`, `performance-monitoring` |
-| 58 | [Context Recorder Core (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/context-recorder-core.mdc) | AI编码上下文记录系统，维护项目记忆文档确保跨会话上下文连续性。 | Rules 2.1 | 🟡 停滞 | 78 | 2025-11-07 | tooling | `context-recorder`, `project-memory`, `ai-workflow` |
-| 59 | [Context Recorder Edge Cases (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/context-recorder-edge-cases.mdc) | 为AI编码工作流中的上下文记录器定义边界情况和错误处理规则。 | Rules 2.1 | 🟡 停滞 | 78 | 2025-11-07 | tooling | `global-rules`, `edge-cases`, `error-handling` |
-| 60 | [Context Recorder System (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/context-recorder-system.mdc) | 模块化AI上下文管理系统，用于结构化项目记录和归档 | Rules 2.1 | 🟡 停滞 | 78 | 2025-11-07 | tooling | `context-management`, `ai-assistant`, `project-recording` |
-| 61 | [Error Recovery System (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/error-recovery-system.mdc) | 系统级错误检测与自动恢复策略，提供三层保护机制 | Rules 2.1 | 🟡 停滞 | 78 | 2025-11-07 | tooling | `error-recovery`, `system-stability`, `backup-strategy` |
-| 62 | [Intelligent Recommendation Engine (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/intelligent-recommendation-engine.mdc) | 基于关键词匹配和上下文分析的项目阶段智能推荐系统。 | Rules 2.1 | 🟡 停滞 | 78 | 2025-11-07 | tooling | `recommendation-engine`, `keyword-matching`, `context-analysis` |
-| 63 | [Performance Monitoring System (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/performance-monitoring-system.mdc) | 为AI编码系统定义性能监控规则，涵盖指标、基准和优化。 | Rules 2.1 | 🟡 停滞 | 78 | 2025-11-07 | devops | `performance-monitoring`, `global-rules`, `system-automation` |
-| 64 | [Rule Hot Reload System (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/rule-hot-reload-system.mdc) | 规则热更新系统，实时监控文件变化并动态加载，无需重启。 | Rules 2.1 | 🟡 停滞 | 78 | 2025-11-07 | tooling | `hot-reload`, `rule-engine`, `file-monitoring` |
-| 65 | [System Diagnostics (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/system-diagnostics.mdc) | 一个具有10层诊断架构的全面系统健康检查和故障排查框架。 | Rules 2.1 | 🟡 停滞 | 78 | 2025-11-07 | tooling | `system-diagnostics`, `health-check`, `troubleshooting` |
-| 66 | [Chrome Extension Dev Js Typescript Cursorrules Pro Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/chrome-extension-dev-js-typescript-cursorrules-pro) | 用于 Chrome 扩展开发的 .cursorrules 提示文件，支持 JavaScript 和 TypeScript。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | frontend | `cursorrules`, `chrome-extension`, `typescript` |
-| 67 | [Cursor Ai React Typescript Shadcn Ui Cursorrules P Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cursor-ai-react-typescript-shadcn-ui-cursorrules-p) | 用于 AI 辅助 React/TypeScript 开发的 .cursorrules 提示文件，集成 Shadcn UI 和 Tailwind CSS。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | frontend | `cursorrules`, `react`, `typescript` |
-| 68 | [Cursor Rules Pack V2 Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cursor-rules-pack-v2-cursorrules-prompt-file) | 7 条经过生产测试的 Cursor IDE 规则样本，涵盖依赖管理、错误处理等。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | tooling | `cursor-rules`, `cursor-ide`, `ai-coding-rules` |
-| 69 | [Elixir Engineer Guidelines Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/elixir-engineer-guidelines-cursorrules-prompt-file) | 为使用 AI 编码助手的高级 Elixir 工程师提供的 .cursorrules 提示文件指南。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | backend | `cursorrules`, `elixir`, `phoenix` |
-| 70 | [Go Servemux Rest Api Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/go-servemux-rest-api-cursorrules-prompt-file) | 用于 AI 辅助 Go RESTful API 开发的 .cursorrules 提示文件，基于 net/http 和 ServeMux。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | backend | `cursorrules`, `go`, `rest-api` |
-| 71 | [Nextjs Tailwind Typescript Apps Cursorrules Prompt Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-tailwind-typescript-apps-cursorrules-prompt) | 用于 Next.js、Tailwind CSS 和 TypeScript 项目的 AI 辅助编码提示文件。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | frontend | `cursorrules`, `nextjs`, `tailwind-css` |
-| 72 | [React Typescript Symfony Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-typescript-symfony-cursorrules-prompt-file) | 用于 React、TypeScript、PHP、Symfony 和 Docker 全栈开发的 AI 辅助 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | frontend | `cursorrules`, `react`, `typescript` |
-| 73 | [Typescript Expo Jest Detox Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-expo-jest-detox-cursorrules-prompt-file) | 为 TypeScript、React Native、Expo、Jest 和 Detox 提供编码指南的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | frontend | `cursorrules`, `typescript`, `react-native` |
-| 74 | [Typescript Nextjs React Tailwind Supabase Cursorru Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-nextjs-react-tailwind-supabase-cursorru) | 为 TypeScript、Next.js、React、Tailwind 和 Supabase 项目提供编码规范和优化实践的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | frontend | `cursorrules`, `typescript`, `nextjs` |
-| 75 | [Typescript Nextjs Supabase Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-nextjs-supabase-cursorrules-prompt-file) | 用于 TypeScript、Next.js 和 Supabase 的 AI 辅助编码规则文件。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | frontend | `cursorrules`, `typescript`, `nextjs` |
-| 76 | [Typescript Nodejs Nextjs Ai Cursorrules Prompt Fil Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-nodejs-nextjs-ai-cursorrules-prompt-fil) | 用于 TypeScript、Node.js 和 Next.js 的 AI 辅助编程 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | frontend | `cursorrules`, `typescript`, `nodejs` |
-| 77 | [Typescript Nodejs Nextjs App Cursorrules Prompt Fi Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-nodejs-nextjs-app-cursorrules-prompt-fi) | 一个为 TypeScript、Node.js、Next.js 应用提供编码指南的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | frontend | `cursorrules`, `nextjs`, `typescript` |
-| 78 | [Typescript Nodejs Nextjs React Ui Css Cursorrules  Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-nodejs-nextjs-react-ui-css-cursorrules-) | 一个为 TypeScript、Node.js、Next.js、React 和 UI 开发提供编码指南的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | frontend | `cursorrules`, `nextjs`, `typescript` |
-| 79 | [Typescript React Nextjs Cloudflare Cursorrules Pro Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-react-nextjs-cloudflare-cursorrules-pro) | 用于 TypeScript、React、Next.js 和 Cloudflare 的 AI 辅助编码规则文件。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | frontend | `cursorrules`, `typescript`, `react` |
-| 80 | [Typescript Shadcn Ui Nextjs Cursorrules Prompt Fil Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-shadcn-ui-nextjs-cursorrules-prompt-fil) | 用于 AI 辅助 TypeScript、Shadcn UI 和 Next.js 开发的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | frontend | `cursorrules`, `typescript`, `nextjs` |
-| 81 | [Typescript Vuejs Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/typescript-vuejs-cursorrules-prompt-file) | 为 TypeScript 和 Vue.js 项目提供编码规范的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | frontend | `cursorrules`, `typescript`, `vuejs` |
-| 82 | [Vue 3 Nuxt 3 Typescript Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/vue-3-nuxt-3-typescript-cursorrules-prompt-file) | 针对 Vue 3、Nuxt 3 和 TypeScript 开发的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | frontend | `cursorrules`, `vue-3`, `nuxt-3` |
-| 83 | [Intelligent Workflow Orchestration (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/intelligent-workflow-orchestration.mdc) | 面向大型团队和复杂项目的企业级AI智能工作流编排规则系统。 | Rules 2.1 | 🟡 停滞 | 77 | 2025-11-07 | tooling | `workflow-orchestration`, `enterprise-rules`, `ai-coding-assistant` |
-| 84 | [Cypress Integration Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cypress-integration-testing-cursorrules-prompt-file) | 用于 AI 辅助 Cypress 集成测试的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 76 | 2026-05-05 | testing | `cypress`, `integration-testing`, `cursorrules` |
-| 85 | [Xian Smart Contracts Cursor Rules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/xian-smart-contracts-cursor-rules-prompt-file) | 用于 AI 辅助开发 Xian 智能合约的 Cursor 规则文件。 | CursorRules | 🟢 活跃 | 76 | 2026-05-05 | tooling | `cursor-rules`, `smart-contracts`, `blockchain` |
-| 86 | [Ai Agent Intelligence Core (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/ai-agent-intelligence-core.mdc) | AI代理智能核心规则，定义智能决策引擎和工作流编排系统。 | Rules 2.1 | 🟡 停滞 | 75 | 2025-11-07 | ai-ml | `ai-agent-rules`, `workflow-orchestration`, `decision-engine` |
-| 87 | [Context Systems Integration (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/context-systems-integration.mdc) | 定义 Context Loader、记录员系统和 Context7 在 AI 编码工作流中的集成与分工规则。 | Rules 2.1 | 🟡 停滞 | 75 | 2025-11-07 | tooling | `context-integration`, `ai-coding-workflow`, `system-collaboration` |
-| 88 | [System Integration Config (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/system-integration-config.mdc) | 统一管理多个智能系统（超级大脑、记忆系统、推荐引擎等）集成与协调的配置方案。 | Rules 2.1 | 🟡 停滞 | 75 | 2025-11-07 | tooling | `system-integration`, `ai-coordination`, `mcp-configuration` |
-| 89 | [Angular Typescript Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/angular-typescript-cursorrules-prompt-file) | 用于 Angular TypeScript 开发的 .cursorrules 提示文件，强制执行编码标准和最佳实践。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `angular`, `typescript`, `cursorrules` |
-| 90 | [Code Guidelines Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/code-guidelines-cursorrules-prompt-file) | 用于 AI 辅助协作开发的 .cursorrules 提示文件，包含代码指南。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | tooling | `cursorrules`, `code-guidelines`, `ai-assisted-coding` |
-| 91 | [Cursorrules Cursor Ai Nextjs 14 Tailwind Seo Setup Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cursorrules-cursor-ai-nextjs-14-tailwind-seo-setup) | 用于 Cursor AI 的 .cursorrules 文件，生成 Next.js 14 TypeScript 代码，集成 Tailwind CSS 和 SEO... | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `nextjs`, `tailwind-css` |
-| 92 | [Cursorrules File Cursor Ai Python Fastapi Api Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cursorrules-file-cursor-ai-python-fastapi-api) | 为 Cursor AI 提供的 .cursorrules 文件，包含 Python FastAPI API 开发的指南和最佳实践。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | backend | `cursorrules`, `fastapi`, `python` |
-| 93 | [Javascript Typescript Code Quality Cursorrules Pro Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/javascript-typescript-code-quality-cursorrules-pro) | 一个用于 JavaScript/TypeScript 代码质量的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `code-quality`, `typescript` |
-| 94 | [Nextjs React Tailwind Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-react-tailwind-cursorrules-prompt-file) | 为 Next.js、React、Tailwind 和 TypeScript 项目提供编码规范和最佳实践的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `nextjs`, `react` |
-| 95 | [Python 312 Fastapi Best Practices Cursorrules Prom Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-312-fastapi-best-practices-cursorrules-prom) | 一个针对 Python 3.12 FastAPI 最佳实践的 .cursorrules 提示文件，涵盖认证、缓存等。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | backend | `cursorrules`, `fastapi`, `python` |
-| 96 | [Python Developer Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-developer-cursorrules-prompt-file) | 面向 Python 开发者的 .cursorrules 提示文件，用于构建 CLI 工具和文件操作。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | backend | `cursorrules`, `python`, `cli` |
-| 97 | [Python Fastapi Scalable Api Cursorrules Prompt Fil Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-fastapi-scalable-api-cursorrules-prompt-fil) | 用于 AI 辅助开发可扩展 FastAPI 和 React 应用的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | backend | `cursorrules`, `fastapi`, `python` |
-| 98 | [Python Projects Guide Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-projects-guide-cursorrules-prompt-file) | 一个 .cursorrules 提示文件，指导 AI 在项目结构、测试和 CI/CD 中强制执行 Python 最佳实践。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | backend | `cursorrules`, `python`, `best-practices` |
-| 99 | [Rails Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/rails-cursorrules-prompt-file) | 为 Cursor AI 提供的 Rails 8 项目规则与最佳实践。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | backend | `rails-8`, `cursor-ai`, `best-practices` |
-| 100 | [React Nextjs Ui Development Cursorrules Prompt Fil Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-nextjs-ui-development-cursorrules-prompt-fil) | 用于 AI 辅助 React/Next.js UI 开发的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `react`, `nextjs` |
+| 1 | [Beefreesdk Nocode Content Editor Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/beefreeSDK-nocode-content-editor-cursorrules-prompt-file) | 一份全面的指南，用于将Beefree SDK无代码内容编辑器嵌入Web应用程序，包含代码示例和最佳实践。 | CursorRules | 🟢 活跃 | 97 | 2026-05-05 | tooling | `sdk-integration`, `no-code-editor`, `web-development` |
+| 2 | [Momen Cursurrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/momen-cursurrules-prompt-file) | Momen 后端即服务的 Cursor 规则集，用于 AI 辅助构建自定义前端应用。 | CursorRules | 🟢 活跃 | 97 | 2026-05-05 | tooling | `cursor-rules`, `backend-as-a-service`, `graphql` |
+| 3 | [Bug Fix (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/bug-fix.mdc) | AI辅助Bug修复工作流规则，从问题创建到拉取请求，包含详细步骤和代码示例。 | Rules 2.1 | 🟡 停滞 | 93 | 2025-11-07 | tooling | `bug-fix`, `workflow-rule`, `git-workflow` |
+| 4 | [Nextjs Supabase Shadcn Pwa Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file) | 为 Cursor AI 提供的 .cursorrules 文件，用于管理 Next.js/Supabase/Shadcn/PWA 项目的上下文和编码规范。 | CursorRules | 🟢 活跃 | 90 | 2026-05-05 | frontend | `cursor-rules`, `nextjs`, `supabase` |
+| 5 | [Frontend Dev (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/frontend-dev.mdc) | 专为 Vue 3、React 18+ 和 TypeScript 优化的 AI 辅助前端开发工作流规则，涵盖从需求到部署的完整周期。 | Rules 2.1 | 🟡 停滞 | 89 | 2025-11-07 | frontend | `frontend-workflow`, `vue`, `react` |
+| 6 | [File Generation Safety Rules (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/file-generation-safety-rules.mdc) | 强制AI在生成文件前必须获得用户确认，防止未经授权的代码、配置和文档创建。 | Rules 2.1 | 🟡 停滞 | 88 | 2025-11-07 | ai-ml | `ai-safety-rule`, `file-generation`, `user-confirmation` |
+| 7 | [Playwright Defect Tracking Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-defect-tracking-cursorrules-prompt-file) | 用于创建 Playwright 缺陷跟踪测试的 .cursorrules 提示文件，支持 TypeScript 和案例 ID 标记。 | CursorRules | 🟢 活跃 | 86 | 2026-05-05 | testing | `playwright`, `defect-tracking`, `cursorrules` |
+| 8 | [Code Quality Check (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/code-quality-check.mdc) | 一个AI驱动的跨语言代码质量检查规则，集成提交工作流并提供自动修复功能。 | Rules 2.1 | 🟡 停滞 | 86 | 2025-11-07 | ai-ml | `code-quality`, `static-analysis`, `ai-assistant` |
+| 9 | [Context Loader (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/context-loader.mdc) | AI驱动的项目上下文加载器，分析技术栈、代码结构并提供配置建议。 | Rules 2.1 | 🟡 停滞 | 86 | 2025-11-07 | ai-ml | `project-context`, `ai-analysis`, `code-quality` |
+| 10 | [Mcp Unified Management (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/mcp-unified-management.mdc) | MCP统一管理策略，整合检测、推荐、配置、同步等所有MCP功能，支持跨平台AI工具。 | Rules 2.1 | 🟡 停滞 | 86 | 2025-11-07 | tooling | `mcp-server`, `ai-tools`, `cross-platform` |
+| 11 | [Systematic Debugging (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/systematic-debugging.mdc) | AI驱动的系统化调试规则，提供智能故障诊断、自动化工作流和工具集成。 | Rules 2.1 | 🟡 停滞 | 86 | 2025-11-07 | ai-ml | `debugging-rule`, `ai-assisted-debugging`, `systematic-troubleshooting` |
+| 12 | [Unified Rules Base (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/unified-rules-base.mdc) | 增强统一AI助手规则基准，确保不同工具功能一致，集成智能需求理解与深度讨论框架。 | Rules 2.1 | 🟡 停滞 | 86 | 2025-11-07 | ai-ml | `ai-coding-rules`, `workflow-automation`, `unified-standards` |
+| 13 | [Code Review (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/code-review.mdc) | 多角色拉取请求审查清单规则，用于代码质量、安全性和性能审查。 | Rules 2.1 | 🟡 停滞 | 84 | 2025-11-07 | tooling | `code-review`, `pull-request`, `workflow-rule` |
+| 14 | [Cypress E2E Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cypress-e2e-testing-cursorrules-prompt-file) | 一个 .cursorrules 提示文件，指导 AI 生成可靠的 Cypress 端到端测试，支持 TypeScript 并遵循最佳实践。 | CursorRules | 🟢 活跃 | 83 | 2026-05-05 | testing | `cursorrules`, `cypress`, `e2e-testing` |
+| 15 | [Playwright Api Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-api-testing-cursorrules-prompt-file) | 一个用于生成 Playwright API 测试的 .cursorrules 提示文件，支持 TypeScript 和 pw-api-plugin。 | CursorRules | 🟢 活跃 | 83 | 2026-05-05 | testing | `cursorrules`, `api-testing`, `playwright` |
+| 16 | [Playwright Integration Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-integration-testing-cursorrules-prompt-file) | 一个用于创建 Playwright 集成测试的 .cursorrules 提示文件，支持 TypeScript，专注于 UI-API 交互和关键用户流程。 | CursorRules | 🟢 活跃 | 83 | 2026-05-05 | testing | `playwright`, `integration-testing`, `typescript` |
+| 17 | [Backend Dev (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/backend-dev.mdc) | 一个用于指导AI辅助Java、Python和Node.js后端开发工作流的结构化规则。 | Rules 2.1 | 🟡 停滞 | 83 | 2025-11-07 | backend | `workflow-rule`, `backend-development`, `java` |
+| 18 | [Commit (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/commit.mdc) | 统一Git提交工作流，支持标准、快速和AI模式，集成预提交检查与CI/CD。 | Rules 2.1 | 🟡 停滞 | 83 | 2025-11-07 | ai-ml | `git-workflow`, `commit-conventions`, `ai-assisted` |
+| 19 | [Frontend Rules (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/frontend-rules.mdc) | 一套用于配置AI助手的完整规则，使其专注于现代前端开发工作流、工具链和最佳实践。 | Rules 2.1 | 🟡 停滞 | 83 | 2025-11-07 | ai-ml | `ai-rules`, `frontend-development`, `mcp-tools` |
+| 20 | [Cypress Accessibility Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cypress-accessibility-testing-cursorrules-prompt-file) | 用于生成 Cypress 无障碍测试的 .cursorrules 提示文件，支持 WCAG 合规、键盘导航和屏幕阅读器兼容性。 | CursorRules | 🟢 活跃 | 81 | 2026-05-05 | testing | `cypress`, `accessibility-testing`, `cursorrules` |
+| 21 | [Drupal 11 Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/drupal-11-cursorrules-prompt-file) | 为 Drupal 11 项目提供 .cursorrules 文件，指导 AI 生成符合编码标准和最佳实践的代码。 | CursorRules | 🟢 活跃 | 81 | 2026-05-05 | tooling | `drupal-11`, `cursorrules`, `ai-coding` |
+| 22 | [Playwright Accessibility Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-accessibility-testing-cursorrules-prompt-file) | 一个用于生成 Playwright 无障碍测试的 .cursorrules 提示文件，支持 TypeScript 和 axe-core。 | CursorRules | 🟢 活跃 | 81 | 2026-05-05 | testing | `playwright`, `accessibility-testing`, `typescript` |
+| 23 | [Playwright E2E Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/playwright-e2e-testing-cursorrules-prompt-file) | 一个用于生成 Playwright 端到端测试的 .cursorrules 提示文件，支持 TypeScript 并遵循最佳实践。 | CursorRules | 🟢 活跃 | 81 | 2026-05-05 | testing | `playwright`, `e2e-testing`, `cursorrules` |
+| 24 | [Xian Smart Contracts Cursor Rules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/xian-smart-contracts-cursor-rules-prompt-file) | 用于在 Cursor 中辅助开发 Xian 区块链原生 Python 智能合约的规则文件。 | CursorRules | 🟢 活跃 | 81 | 2026-05-05 | tooling | `cursor-rules`, `smart-contracts`, `blockchain` |
+| 25 | [Changelog Management (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/changelog-management.mdc) | AI驱动的变更日志自动生成与版本跟踪规则，用于软件项目。 | Rules 2.1 | 🟡 停滞 | 81 | 2025-11-07 | ai-ml | `changelog-management`, `version-control`, `ai-automation` |
+| 26 | [Context Recorder Core (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/context-recorder-core.mdc) | 模块化AI项目上下文记录规则系统，确保开发工作流中的记忆连续性。 | Rules 2.1 | 🟡 停滞 | 81 | 2025-11-07 | tooling | `context-recording`, `project-memory`, `ai-rules` |
+| 27 | [Memory System Integration (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/memory-system-integration.mdc) | 为AI编程助手定义的全局规则，实现项目知识存储、语义检索和跨会话上下文管理的记忆系统。 | Rules 2.1 | 🟡 停滞 | 81 | 2025-11-07 | tooling | `ai-coding-rules`, `memory-system`, `project-context` |
+| 28 | [Nextjs Tanstack Query Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-tanstack-query-cursorrules-prompt-file) | 用于集成 Next.js App Router 与 TanStack Query v5 的 AI 编码规则，涵盖数据获取、变更和水合模式。 | CursorRules | 🟢 活跃 | 80 | 2026-05-05 | frontend | `nextjs`, `tanstack-query`, `cursor-rules` |
+| 29 | [Python Llm Ml Workflow Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-llm-ml-workflow-cursorrules-prompt-file) | 为Python AI/ML工程师设计的.cursorrules提示文件，用于Cursor IDE中的编码规范。 | CursorRules | 🟢 活跃 | 80 | 2026-05-05 | backend | `cursorrules`, `python`, `ai-ml` |
+| 30 | [React Tanstack Router Query Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-tanstack-router-query-cursorrules-prompt-file) | 用于构建类型安全的 React SPA 的 Cursor 规则，集成 TanStack Router v1 和 TanStack Query v5。 | CursorRules | 🟢 活跃 | 80 | 2026-05-05 | frontend | `cursor-rules`, `react`, `tanstack-router` |
+| 31 | [Salesforce Apex Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/salesforce-apex-cursorrules-prompt-file) | 一个 .cursorrules 文件，用于配置 Cursor AI 以遵循 Salesforce Apex 开发的最佳实践和设计模式。 | CursorRules | 🟢 活跃 | 80 | 2026-05-05 | tooling | `cursorrules`, `salesforce-apex`, `ai-coding` |
+| 32 | [Feedback Enhanced (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/feedback-enhanced.mdc) | 一个用于AI辅助编码的规则文件，提供增强反馈机制，支持1小时超时的交互式开发讨论。 | Rules 2.1 | 🟡 停滞 | 78 | 2025-11-07 | tooling | `mcp-rule`, `feedback-system`, `development-workflow` |
+| 33 | [Implement Task (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/implement-task.mdc) | 系统化任务实现规则，提供结构化工作流程和模板，用于软件项目中的方法论任务实施。 | Rules 2.1 | 🟡 停滞 | 78 | 2025-11-07 | tooling | `project-rule`, `workflow`, `task-management` |
+| 34 | [Root Cause Analysis (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/root-cause-analysis.mdc) | 基于五个为什么方法的AI驱动根因分析工具，用于软件开发问题。 | Rules 2.1 | 🟡 停滞 | 78 | 2025-11-07 | ai-ml | `root-cause-analysis`, `five-whys`, `ai-analysis` |
+| 35 | [Code Style Consistency Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/code-style-consistency-cursorrules-prompt-file) | 一个用于分析代码库模式的 .cursorrules 提示，确保 AI 生成的代码符合项目风格规范。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | tooling | `cursorrules`, `code-style`, `ai-code-generation` |
+| 36 | [Cpp Programming Guidelines Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cpp-programming-guidelines-cursorrules-prompt-file) | 为 Cursor AI 提供 C++ 编码风格和最佳实践指南的 .cursorrules 文件。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | ai-ml | `cursorrules`, `cpp`, `coding-style` |
+| 37 | [Cursor Rules Pack V2 Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cursor-rules-pack-v2-cursorrules-prompt-file) | 为 Cursor AI 编码编辑器提供的 7 条生产环境测试规则样本，用于强制执行最佳实践。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | tooling | `cursor-rules`, `ai-coding`, `code-quality` |
+| 38 | [Cypress Api Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cypress-api-testing-cursorrules-prompt-file) | 用于 Cypress API 测试的 .cursorrules 提示文件，支持模式验证和 TypeScript。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | testing | `cypress`, `api-testing`, `cursorrules` |
+| 39 | [Cypress Integration Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cypress-integration-testing-cursorrules-prompt-file) | 一个用于创建 Cypress 集成测试的 .cursorrules 提示文件，支持 TypeScript，专注于 UI-API 交互和关键用户流程。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | testing | `cypress`, `integration-testing`, `typescript` |
+| 40 | [Jest Unit Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/jest-unit-testing-cursorrules-prompt-file) | 一个用于 Cursor IDE 的 .cursorrules 提示文件，指导开发者编写全面的 Jest 单元测试并支持 TypeScript。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | testing | `cursorrules`, `jest`, `unit-testing` |
+| 41 | [Manifest Yaml Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/manifest-yaml-cursorrules-prompt-file) | 用于LLM生成Manifest后端配置的提示文件，包含数据模型、关系和策略。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | ai-ml | `mcp-server`, `backend-generation`, `manifest` |
+| 42 | [Nextjs15 React19 Vercelai Tailwind Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs15-react19-vercelai-tailwind-cursorrules-prompt-file) | 一个用于 Cursor IDE 的 .cursorrules 提示文件，指导 AI 使用 Next.js 15、React 19、Vercel AI SDK 和... | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | frontend | `cursorrules`, `nextjs`, `react` |
+| 43 | [Pyqt6 Eeg Processing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/pyqt6-eeg-processing-cursorrules-prompt-file) | 一个 .cursorrules 提示文件，指导 AI 助手构建基于 PyQt6 的 EEG 处理应用，优化 UI/UX 和信号处理。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | tooling | `cursorrules`, `pyqt6`, `eeg-processing` |
+| 44 | [React Nextjs Ui Development Cursorrules Prompt Fil Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-nextjs-ui-development-cursorrules-prompt-fil) | 用于AI辅助React/Next.js开发的.cursorrules提示文件，强调代码可读性、安全性和兼容性。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | frontend | `cursorrules`, `react`, `nextjs` |
+| 45 | [Solidity Foundry Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/solidity-foundry-cursorrules-prompt-file) | 一个用于 Foundry 框架下 Solidity 智能合约开发的 .cursorrules 提示文件，强调安全性和最佳实践。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | tooling | `solidity`, `foundry`, `cursorrules` |
+| 46 | [Sveltekit Tailwindcss Typescript Cursorrules Promp Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/sveltekit-tailwindcss-typescript-cursorrules-promp) | 为 SvelteKit、TailwindCSS 和 TypeScript 项目提供编码标准和最佳实践的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | frontend | `cursorrules`, `sveltekit`, `tailwindcss` |
+| 47 | [Uikit Guidelines Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/uikit-guidelines-cursorrules-prompt-file) | 一个 .cursorrules 提示文件，为使用 Swift、UIKit、SnapKit 和 MVC/MVVM 模式的 iOS 开发提供编码指南。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | tooling | `ios-development`, `swift`, `uikit` |
+| 48 | [Vitest Unit Testing Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/vitest-unit-testing-cursorrules-prompt-file) | 一个用于创建全面Vitest单元测试的.cursorrules提示文件，支持TypeScript和依赖模拟。 | CursorRules | 🟢 活跃 | 77 | 2026-05-05 | testing | `vitest`, `unit-testing`, `cursorrules` |
+| 49 | [Intelligent Workflow Orchestration (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/intelligent-workflow-orchestration.mdc) | 面向大型团队和复杂项目的企业级智能工作流编排规则，专注于AI驱动的规划、执行与监控。 | Rules 2.1 | 🟡 停滞 | 77 | 2025-11-07 | tooling | `workflow-orchestration`, `enterprise-rules`, `ai-agent` |
+| 50 | [Mcp Zero Config Detection (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/mcp-zero-config-detection.mdc) | 检测AI编程工具中缺失的MCP配置，并提供引导式设置建议。 | Rules 2.1 | 🟡 停滞 | 77 | 2025-11-07 | tooling | `mcp-detection`, `ai-coding-tools`, `configuration-guidance` |
+| 51 | [Context7 Preload Standard (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/context7-preload-standard.mdc) | Context7 知识预载标准，用于在修复 Bug 或启动新项目前预加载关键知识，提升开发效率。 | Rules 2.1 | 🟡 停滞 | 77 | 2025-11-07 | tooling | `knowledge-preloading`, `workflow-rule`, `bug-fixing` |
+| 52 | [Backend Rules (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/global-rules/backend-rules.mdc) | 一套全面的AI助手规则，用于指导企业级后端开发工作流，涵盖架构、API设计、测试和部署。 | Rules 2.1 | 🟡 停滞 | 76 | 2025-11-07 | ai-ml | `ai-rules`, `backend-development`, `enterprise-standards` |
+| 53 | [Mcp Debugging Enhanced (Rules 2.1)](https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/project-rules/mcp-debugging-enhanced.mdc) | AI驱动的MCP服务器调试与诊断规则，提供智能分析和自动修复。 | Rules 2.1 | 🟡 停滞 | 75 | 2025-11-07 | ai-ml | `mcp-debugging`, `ai-diagnostics`, `server-monitoring` |
+| 54 | [Angular Novo Elements Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/angular-novo-elements-cursorrules-prompt-file) | 为使用 Novo Elements 的 Angular 开发提供编码标准和原则的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `angular`, `cursorrules`, `coding-standards` |
+| 55 | [Angular Typescript Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/angular-typescript-cursorrules-prompt-file) | 一个用于 Cursor IDE 的 .cursorrules 提示文件，指导 AI 生成遵循最佳实践和代码规范的 Angular TypeScript 代码。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `angular`, `typescript` |
+| 56 | [Chrome Extension Dev Js Typescript Cursorrules Pro Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/chrome-extension-dev-js-typescript-cursorrules-pro) | 一个 .cursorrules 提示文件，为使用 JavaScript 和 TypeScript 构建 Chrome 扩展提供指南和项目创意。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `chrome-extension`, `typescript` |
+| 57 | [Code Guidelines Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/code-guidelines-cursorrules-prompt-file) | 一个用于 Cursor IDE 的 .cursorrules 模板文件，为 AI 辅助开发提供全面的编码指南。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | tooling | `cursor-ide`, `ai-coding`, `code-guidelines` |
+| 58 | [Cursor Ai React Typescript Shadcn Ui Cursorrules P Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cursor-ai-react-typescript-shadcn-ui-cursorrules-p) | 一个 .cursorrules 提示文件，为使用 Shadcn UI 和 Tailwind CSS 的 React 和 TypeScript 开发提供 AI 辅... | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `react`, `typescript` |
+| 59 | [Cursorrules Cursor Ai Nextjs 14 Tailwind Seo Setup Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cursorrules-cursor-ai-nextjs-14-tailwind-seo-setup) | 一个用于 Cursor AI 的 .cursorrules 提示文件，可生成基于 Next.js 14、TypeScript 和 Tailwind CSS 的生... | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `nextjs-14`, `tailwind-css` |
+| 60 | [Cursorrules File Cursor Ai Python Fastapi Api Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/cursorrules-file-cursor-ai-python-fastapi-api) | 一个为 Cursor AI 提供的 .cursorrules 文件，指导使用 Python 和 FastAPI 构建可扩展 API。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | backend | `cursorrules`, `fastapi`, `python` |
+| 61 | [Deno Integration Techniques Cursorrules Prompt Fil Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/deno-integration-techniques-cursorrules-prompt-fil) | 一个 .cursorrules 提示文件，用于重构 Deno 自动化脚本以集成 @findhow 包生态系统。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | tooling | `cursorrules`, `deno`, `automation` |
+| 62 | [Elixir Engineer Guidelines Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/elixir-engineer-guidelines-cursorrules-prompt-file) | 为Elixir工程师提供的.cursorrules提示文件，规范提交信息和可扩展应用开发。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | backend | `elixir`, `phoenix`, `cursorrules` |
+| 63 | [Es Module Nodejs Guidelines Cursorrules Prompt Fil Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/es-module-nodejs-guidelines-cursorrules-prompt-fil) | 一个 .cursorrules 提示文件，为 AI 编程助手提供模块化、安全、敏捷的 ES 模块 Node.js 开发指南。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | backend | `cursorrules`, `es-modules`, `nodejs` |
+| 64 | [Go Backend Scalability Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/go-backend-scalability-cursorrules-prompt-file) | 一个用于AI配对编程助手的.cursorrules提示文件，专注于可扩展的Go后端开发。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | backend | `cursorrules`, `go-backend`, `scalability` |
+| 65 | [Go Servemux Rest Api Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/go-servemux-rest-api-cursorrules-prompt-file) | 一个 .cursorrules 提示文件，为使用 Go 的 ServeMux 和 net/http 包开发 RESTful API 提供 AI 辅助指南。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | backend | `go`, `rest-api`, `cursorrules` |
+| 66 | [Html Tailwind Css Javascript Cursorrules Prompt Fi Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/html-tailwind-css-javascript-cursorrules-prompt-fi) | 一个 .cursorrules 提示文件，用于配置 AI 助手生成 HTML、Tailwind CSS 和原生 JavaScript 代码，遵循最佳实践。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `html`, `tailwind-css` |
+| 67 | [Javascript Astro Tailwind Css Cursorrules Prompt F Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/javascript-astro-tailwind-css-cursorrules-prompt-f) | 一个 .cursorrules 提示文件，为使用 JavaScript、Astro 和 Tailwind CSS 构建静态网站提供 AI 编码指南。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `astro`, `tailwind-css` |
+| 68 | [Javascript Typescript Code Quality Cursorrules Pro Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/javascript-typescript-code-quality-cursorrules-pro) | 一个用于 Cursor IDE 的 .cursorrules 提示文件，强制执行 JavaScript/TypeScript 编码最佳实践，以生成干净、可维护的... | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `code-quality`, `javascript` |
+| 69 | [Laravel Php 83 Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/laravel-php-83-cursorrules-prompt-file) | — | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | backend | `php` |
+| 70 | [Laravel Tall Stack Best Practices Cursorrules Prom Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/laravel-tall-stack-best-practices-cursorrules-prom) | 一个 .cursorrules 提示文件，为使用 Laravel TALL 技术栈（Laravel、Livewire、Alpine.js、Tailwind CS... | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | backend | `laravel`, `tall-stack`, `cursorrules` |
+| 71 | [Nextjs Material Ui Tailwind Css Cursorrules Prompt Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-material-ui-tailwind-css-cursorrules-prompt) | 用于构建Next.js作品集的.cursorrules提示文件，集成TypeScript、Tailwind CSS和Material UI。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `nextjs`, `tailwind-css`, `material-ui` |
+| 72 | [Nextjs React Tailwind Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-react-tailwind-cursorrules-prompt-file) | 一个 .cursorrules 提示文件，为 AI 辅助的 Next.js、React、Tailwind 和 TypeScript 开发提供编码规范和最佳实践。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `nextjs`, `react` |
+| 73 | [Nextjs React Typescript Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-react-typescript-cursorrules-prompt-file) | 一个为 Next.js、React 和 TypeScript 项目提供编码指南的 .cursorrules 提示文件，适用于 Cursor AI IDE。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `nextjs`, `react` |
+| 74 | [Nextjs Supabase Todo App Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-supabase-todo-app-cursorrules-prompt-file) | 用于构建 Next.js Supabase Todo 应用的 .cursorrules 提示文件，提供结构化指南和现代技术栈。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `nextjs`, `supabase` |
+| 75 | [Nextjs Tailwind Typescript Apps Cursorrules Prompt Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-tailwind-typescript-apps-cursorrules-prompt) | 一个 .cursorrules 提示文件，用于指导 AI 助手使用 Next.js、Tailwind CSS 和 TypeScript 构建干净、安全的 Web... | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `nextjs`, `tailwind-css` |
+| 76 | [Nextjs Typescript App Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-typescript-app-cursorrules-prompt-file) | 用于在 Autonomys 网络上使用 Next.js 和 TypeScript 构建去中心化区块浏览器的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `nextjs`, `typescript` |
+| 77 | [Nextjs Typescript Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-typescript-cursorrules-prompt-file) | 一个 .cursorrules 提示文件，用于指导 AI 编程助手在 Next.js 和 TypeScript 项目中的行为，强调最佳实践和结构化响应。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `nextjs`, `typescript` |
+| 78 | [Nextjs Vercel Typescript Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nextjs-vercel-typescript-cursorrules-prompt-file) | 用于构建AI驱动的Next.js应用的.cursorrules提示文件，集成TypeScript、Vercel中间件和KV数据库。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `nextjs`, `typescript`, `cursorrules` |
+| 79 | [Nodejs Mongodb Jwt Express React Cursorrules Promp Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/nodejs-mongodb-jwt-express-react-cursorrules-promp) | 一个用于构建池管理应用的 .cursorrules 提示文件，技术栈包括 Node.js、MongoDB、JWT、Express 和 React。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `full-stack`, `pool-management` |
+| 80 | [Optimize Rell Blockchain Code Cursorrules Prompt F Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/optimize-rell-blockchain-code-cursorrules-prompt-f) | 一个.cursorrules提示文件，用于指导AI助手为Chromia区块链应用生成优化、安全的Rell代码。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | ai-ml | `cursorrules`, `rell`, `blockchain` |
+| 81 | [Pandas Scikit Learn Guide Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/pandas-scikit-learn-guide-cursorrules-prompt-file) | 一个 .cursorrules 提示文件，为使用 Pandas、Scikit-Learn 和可视化库的 AI 辅助数据科学编码提供最佳实践。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | tooling | `cursorrules`, `data-science`, `pandas` |
+| 82 | [Plasticode Telegram Api Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/plasticode-telegram-api-cursorrules-prompt-file) | 一个为Cursor IDE中的PHP、Plasticode CMS和Telegram Bot API开发提供编码规范的.cursorrules文件。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | backend | `cursorrules`, `php`, `plasticode` |
+| 83 | [Python  Typescript Guide Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python--typescript-guide-cursorrules-prompt-file) | 一个用于AI编程助手的.cursorrules提示文件，专注于Python（Django）和TypeScript（React）开发。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `ai-assistant`, `python` |
+| 84 | [Python 312 Fastapi Best Practices Cursorrules Prom Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-312-fastapi-best-practices-cursorrules-prom) | 一个为Python 3.12 FastAPI开发提供最佳实践的.cursorrules文件，用于AI编程助手。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | backend | `cursorrules`, `fastapi`, `python-312` |
+| 85 | [Python Developer Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-developer-cursorrules-prompt-file) | 为 Cursor IDE 定制的 .cursorrules 提示文件，适用于构建命令行工具的 Python 开发者。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | backend | `cursorrules`, `python`, `cli-tools` |
+| 86 | [Python Django Best Practices Cursorrules Prompt Fi Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-django-best-practices-cursorrules-prompt-fi) | 一个为AI辅助Python Django Web开发提供最佳实践的.cursorrules提示文件。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | backend | `cursorrules`, `django`, `python` |
+| 87 | [Python Fastapi Best Practices Cursorrules Prompt F Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-fastapi-best-practices-cursorrules-prompt-f) | 一个 .cursorrules 提示文件，提供使用 Python 和 FastAPI 构建可扩展、可维护 API 的最佳实践。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | backend | `cursorrules`, `fastapi`, `python` |
+| 88 | [Python Projects Guide Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/python-projects-guide-cursorrules-prompt-file) | 一个 .cursorrules 提示文件，指导 AI 助手生成遵循最佳实践的结构化 Python 项目。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | backend | `cursorrules`, `python`, `ai-assistant` |
+| 89 | [Pytorch Scikit Learn Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/pytorch-scikit-learn-cursorrules-prompt-file) | 一个用于AI辅助编码的.cursorrules提示文件，专注于使用PyTorch和scikit-learn开发化学领域机器学习模型。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | tooling | `cursorrules`, `machine-learning`, `chemistry` |
+| 90 | [React Components Creation Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-components-creation-cursorrules-prompt-file) | 用于创建 React 组件的 .cursorrules 提示文件，确保 TypeScript 和 Tailwind CSS 的一致性和项目对齐。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `react`, `typescript` |
+| 91 | [React Typescript Nextjs Nodejs Cursorrules Prompt  Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-typescript-nextjs-nodejs-cursorrules-prompt-) | 一个 .cursorrules 文件，为 Cursor AI 编辑器配置 React、TypeScript、Next.js 和 Node.js 开发的最佳实践。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `ai-coding`, `react` |
+| 92 | [React Typescript Symfony Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/react-typescript-symfony-cursorrules-prompt-file) | 用于 React、TypeScript、Symfony 和 Docker 全栈开发的 .cursorrules 提示文件。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `react`, `typescript` |
+| 93 | [Solidity Hardhat Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/solidity-hardhat-cursorrules-prompt-file) | 针对Solidity和Hardhat开发的.cursorrules提示文件，专注于安全最佳实践和AI辅助编码。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | tooling | `solidity`, `hardhat`, `cursorrules` |
+| 94 | [Solidity React Blockchain Apps Cursorrules Prompt  Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/solidity-react-blockchain-apps-cursorrules-prompt-) | 用于构建安全Solidity智能合约和React区块链应用的.cursorrules提示文件，遵循最佳实践。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `solidity`, `react` |
+| 95 | [Svelte 5 Vs Svelte 4 Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file) | 一个 .cursorrules 提示文件，为从 Svelte 4 迁移到 Svelte 5 提供 AI 编码规则，涵盖语法和功能指导。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `svelte`, `cursorrules`, `migration` |
+| 96 | [Sveltekit Restful Api Tailwind Css Cursorrules Pro Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/sveltekit-restful-api-tailwind-css-cursorrules-pro) | 为SvelteKit、RESTful API和Tailwind CSS项目提供开发指南的.cursorrules提示文件。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `sveltekit`, `rest-api` |
+| 97 | [Sveltekit Typescript Guide Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/sveltekit-typescript-guide-cursorrules-prompt-file) | SvelteKit TypeScript 开发指南的 .cursorrules 提示文件，集成 Supabase 和 Drizzle。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `sveltekit`, `typescript`, `cursorrules` |
+| 98 | [Swiftui Guidelines Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/swiftui-guidelines-cursorrules-prompt-file) | 为 Cursor 编辑器提供的 SwiftUI 架构和设计规范提示文件。 | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | mobile | `swiftui`, `cursorrules`, `ios-development` |
+| 99 | [Tailwind Css Nextjs Guide Cursorrules Prompt File Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/tailwind-css-nextjs-guide-cursorrules-prompt-file) | 一个 .cursorrules 提示文件，为使用 Tailwind CSS、DaisyUI、TypeScript 和 Starknet 的 Next.js 项目... | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `nextjs`, `tailwind-css` |
+| 100 | [Tailwind Shadcn Ui Integration Cursorrules Prompt  Rules](https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/tailwind-shadcn-ui-integration-cursorrules-prompt-) | 一个用于VSCode中AI辅助编码的.cursorrules提示文件，专注于生成使用Tailwind CSS和Shadcn UI的TypeScript Next... | CursorRules | 🟢 活跃 | 74 | 2026-05-05 | frontend | `cursorrules`, `nextjs`, `tailwind` |
 
 ## Top 10 安装指南
 
 <details>
-<summary>⭐ <strong>Momen Cursurrules Prompt File Rules</strong> — 用于构建 Momen 后端即服务自定义前端的 Cursor 规则集。</summary>
+<summary>⭐ <strong>Beefreesdk Nocode Content Editor Cursorrules Prompt File Rules</strong> — 一份全面的指南，用于将Beefree SDK无代码内容编辑器嵌入Web应用程序，包含代码示例和最佳实践。</summary>
 
-用于构建 Momen 后端即服务自定义前端的 Cursor 规则集。
+一份全面的指南，用于将Beefree SDK无代码内容编辑器嵌入Web应用程序，包含代码示例和最佳实践。
+
+**Download**:
+- [.cursorrules](https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/beefreeSDK-nocode-content-editor-cursorrules-prompt-file/.cursorrules)
+
+📊 评分: 97 · 🏥 健康度: 53 · 🏷️ 标签: `sdk-integration`, `no-code-editor`, `web-development`
+📅 最近活跃: 2026-05-05 · 📦 来源: CursorRules
+
+</details>
+
+<details>
+<summary>⭐ <strong>Momen Cursurrules Prompt File Rules</strong> — Momen 后端即服务的 Cursor 规则集，用于 AI 辅助构建自定义前端应用。</summary>
+
+Momen 后端即服务的 Cursor 规则集，用于 AI 辅助构建自定义前端应用。
 
 **Download**:
 - [.cursorrules](https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/momen-cursurrules-prompt-file/.cursorrules)
@@ -127,119 +140,106 @@
 </details>
 
 <details>
-<summary>⭐ <strong>Changelog Management (Rules 2.1)</strong> — AI驱动的自动化变更日志生成和版本管理系统。</summary>
+<summary>⭐ <strong>Bug Fix (Rules 2.1)</strong> — AI辅助Bug修复工作流规则，从问题创建到拉取请求，包含详细步骤和代码示例。</summary>
 
-AI驱动的自动化变更日志生成和版本管理系统。
+AI辅助Bug修复工作流规则，从问题创建到拉取请求，包含详细步骤和代码示例。
 
 **Download**:
-- [changelog-management.mdc](https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/changelog-management.mdc)
+- [bug-fix.mdc](https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/bug-fix.mdc)
 
-📊 评分: 90 · 🏥 健康度: 34 · 🏷️ 标签: `changelog-management`, `version-tracking`, `ai-automation`
+📊 评分: 93 · 🏥 健康度: 33 · 🏷️ 标签: `bug-fix`, `workflow-rule`, `git-workflow`
 📅 最近活跃: 2025-11-07 · 📦 来源: Rules 2.1
 
 </details>
 
 <details>
-<summary>⭐ <strong>Beefreesdk Nocode Content Editor Cursorrules Prompt File Rules</strong> — 集成 Beefree SDK 无代码内容编辑器的指南。</summary>
+<summary>⭐ <strong>Nextjs Supabase Shadcn Pwa Cursorrules Prompt File Rules</strong> — 为 Cursor AI 提供的 .cursorrules 文件，用于管理 Next.js/Supabase/Shadcn...</summary>
 
-集成 Beefree SDK 无代码内容编辑器的指南。
-
-**Download**:
-- [.cursorrules](https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/beefreeSDK-nocode-content-editor-cursorrules-prompt-file/.cursorrules)
-
-📊 评分: 87 · 🏥 健康度: 53 · 🏷️ 标签: `mcp-server`, `sdk-integration`, `no-code-editor`
-📅 最近活跃: 2026-05-05 · 📦 来源: CursorRules
-
-</details>
-
-<details>
-<summary>⭐ <strong>Drupal 11 Cursorrules Prompt File Rules</strong> — Drupal 11 的 AI 编码规则提示文件。</summary>
-
-Drupal 11 的 AI 编码规则提示文件。
-
-**Download**:
-- [.cursorrules](https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/drupal-11-cursorrules-prompt-file/.cursorrules)
-
-📊 评分: 87 · 🏥 健康度: 53 · 🏷️ 标签: `cursorrules`, `drupal-11`, `ai-coding`
-📅 最近活跃: 2026-05-05 · 📦 来源: CursorRules
-
-</details>
-
-<details>
-<summary>⭐ <strong>Nextjs Supabase Shadcn Pwa Cursorrules Prompt File Rules</strong> — 用于 Next.js/Supabase 项目的 Cursor 规则，维护项目上下文并管理构建笔记。</summary>
-
-用于 Next.js/Supabase 项目的 Cursor 规则，维护项目上下文并管理构建笔记。
+为 Cursor AI 提供的 .cursorrules 文件，用于管理 Next.js/Supabase/Shadcn/PWA 项目的上下文和编码规范。
 
 **Download**:
 - [.cursorrules](https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules)
 
-📊 评分: 87 · 🏥 健康度: 53 · 🏷️ 标签: `cursor-rules`, `nextjs`, `supabase`
+📊 评分: 90 · 🏥 健康度: 53 · 🏷️ 标签: `cursor-rules`, `nextjs`, `supabase`
 📅 最近活跃: 2026-05-05 · 📦 来源: CursorRules
 
 </details>
 
 <details>
-<summary>⭐ <strong>Mcp Zero Config Detection (Rules 2.1)</strong> — 检测用户是否缺少MCP配置并主动提醒引导配置。</summary>
+<summary>⭐ <strong>Frontend Dev (Rules 2.1)</strong> — 专为 Vue 3、React 18+ 和 TypeScript 优化的 AI 辅助前端开发工作流规则，涵盖从需求到部署的...</summary>
 
-检测用户是否缺少MCP配置并主动提醒引导配置。
+专为 Vue 3、React 18+ 和 TypeScript 优化的 AI 辅助前端开发工作流规则，涵盖从需求到部署的完整周期。
 
 **Download**:
-- [mcp-zero-config-detection.mdc](https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/mcp-zero-config-detection.mdc)
+- [frontend-dev.mdc](https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/frontend-dev.mdc)
 
-📊 评分: 86 · 🏥 健康度: 34 · 🏷️ 标签: `mcp-configuration`, `developer-tools`, `ai-assistant`
+📊 评分: 89 · 🏥 健康度: 33 · 🏷️ 标签: `frontend-workflow`, `vue`, `react`
 📅 最近活跃: 2025-11-07 · 📦 来源: Rules 2.1
 
 </details>
 
 <details>
-<summary>⭐ <strong>Context7 Preload Standard (Rules 2.1)</strong> — 修复Bug或启动新项目前预载上下文知识的标准流程，提升开发效率与正确率。</summary>
+<summary>⭐ <strong>File Generation Safety Rules (Rules 2.1)</strong> — 强制AI在生成文件前必须获得用户确认，防止未经授权的代码、配置和文档创建。</summary>
 
-修复Bug或启动新项目前预载上下文知识的标准流程，提升开发效率与正确率。
-
-**Download**:
-- [context7-preload-standard.mdc](https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/context7-preload-standard.mdc)
-
-📊 评分: 86 · 🏥 健康度: 34 · 🏷️ 标签: `knowledge-preload`, `development-workflow`, `bug-fixing`
-📅 最近活跃: 2025-11-07 · 📦 来源: Rules 2.1
-
-</details>
-
-<details>
-<summary>⭐ <strong>File Generation Safety Rules (Rules 2.1)</strong> — AI文件生成安全规则，强制用户确认机制防止未经授权的文件操作</summary>
-
-AI文件生成安全规则，强制用户确认机制防止未经授权的文件操作
+强制AI在生成文件前必须获得用户确认，防止未经授权的代码、配置和文档创建。
 
 **Download**:
 - [file-generation-safety-rules.mdc](https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/file-generation-safety-rules.mdc)
 
-📊 评分: 86 · 🏥 健康度: 34 · 🏷️ 标签: `ai-safety-rules`, `file-generation`, `permission-control`
+📊 评分: 88 · 🏥 健康度: 33 · 🏷️ 标签: `ai-safety-rule`, `file-generation`, `user-confirmation`
 📅 最近活跃: 2025-11-07 · 📦 来源: Rules 2.1
 
 </details>
 
 <details>
-<summary>⭐ <strong>Disaster Recovery Plan (Rules 2.1)</strong> — 面向AI编码规则系统的灾难恢复计划，覆盖数据丢失、系统故障和安全事件。</summary>
+<summary>⭐ <strong>Playwright Defect Tracking Cursorrules Prompt File Rules</strong> — 用于创建 Playwright 缺陷跟踪测试的 .cursorrules 提示文件，支持 TypeScript 和案例 ...</summary>
 
-面向AI编码规则系统的灾难恢复计划，覆盖数据丢失、系统故障和安全事件。
-
-**Download**:
-- [disaster-recovery-plan.mdc](https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/global-rules/disaster-recovery-plan.mdc)
-
-📊 评分: 85 · 🏥 健康度: 34 · 🏷️ 标签: `disaster-recovery`, `backup-strategy`, `rule-system`
-📅 最近活跃: 2025-11-07 · 📦 来源: Rules 2.1
-
-</details>
-
-<details>
-<summary>⭐ <strong>Cpp Programming Guidelines Cursorrules Prompt File Rules</strong> — 用于 Cursor AI 的 C++ 编程规范 .cursorrules 文件。</summary>
-
-用于 Cursor AI 的 C++ 编程规范 .cursorrules 文件。
+用于创建 Playwright 缺陷跟踪测试的 .cursorrules 提示文件，支持 TypeScript 和案例 ID 标记。
 
 **Download**:
-- [.cursorrules](https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/cpp-programming-guidelines-cursorrules-prompt-file/.cursorrules)
+- [.cursorrules](https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/playwright-defect-tracking-cursorrules-prompt-file/.cursorrules)
 
-📊 评分: 83 · 🏥 健康度: 53 · 🏷️ 标签: `cursorrules`, `c-plus-plus`, `coding-guidelines`
+📊 评分: 86 · 🏥 健康度: 53 · 🏷️ 标签: `playwright`, `defect-tracking`, `cursorrules`
 📅 最近活跃: 2026-05-05 · 📦 来源: CursorRules
+
+</details>
+
+<details>
+<summary>⭐ <strong>Code Quality Check (Rules 2.1)</strong> — 一个AI驱动的跨语言代码质量检查规则，集成提交工作流并提供自动修复功能。</summary>
+
+一个AI驱动的跨语言代码质量检查规则，集成提交工作流并提供自动修复功能。
+
+**Download**:
+- [code-quality-check.mdc](https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/code-quality-check.mdc)
+
+📊 评分: 86 · 🏥 健康度: 33 · 🏷️ 标签: `code-quality`, `static-analysis`, `ai-assistant`
+📅 最近活跃: 2025-11-07 · 📦 来源: Rules 2.1
+
+</details>
+
+<details>
+<summary>⭐ <strong>Context Loader (Rules 2.1)</strong> — AI驱动的项目上下文加载器，分析技术栈、代码结构并提供配置建议。</summary>
+
+AI驱动的项目上下文加载器，分析技术栈、代码结构并提供配置建议。
+
+**Download**:
+- [context-loader.mdc](https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/context-loader.mdc)
+
+📊 评分: 86 · 🏥 健康度: 33 · 🏷️ 标签: `project-context`, `ai-analysis`, `code-quality`
+📅 最近活跃: 2025-11-07 · 📦 来源: Rules 2.1
+
+</details>
+
+<details>
+<summary>⭐ <strong>Mcp Unified Management (Rules 2.1)</strong> — MCP统一管理策略，整合检测、推荐、配置、同步等所有MCP功能，支持跨平台AI工具。</summary>
+
+MCP统一管理策略，整合检测、推荐、配置、同步等所有MCP功能，支持跨平台AI工具。
+
+**Download**:
+- [mcp-unified-management.mdc](https://raw.githubusercontent.com/Mr-chen-05/rules-2.1-optimized/master/project-rules/mcp-unified-management.mdc)
+
+📊 评分: 86 · 🏥 健康度: 33 · 🏷️ 标签: `mcp-server`, `ai-tools`, `cross-platform`
+📅 最近活跃: 2025-11-07 · 📦 来源: Rules 2.1
 
 </details>
 
@@ -255,4 +255,4 @@ AI文件生成安全规则，强制用户确认机制防止未经授权的文件
 
 ---
 
-*自动生成 [catalog/index.json](../index.json). 最后更新: 2026-05-08*
+*自动生成 [catalog/index.json](../index.json). 最后更新: 2026-05-09*
