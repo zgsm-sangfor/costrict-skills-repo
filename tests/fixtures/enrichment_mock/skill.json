@@ -1,0 +1,171 @@
+[
+  {
+    "id": "agent-development-skill",
+    "name": "Agent Development",
+    "type": "skill",
+    "description": "Guide for creating autonomous agents with YAML frontmatter and system prompts for Claude Code plugins.",
+    "source_url": "https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/agent-development",
+    "stars": 121372,
+    "category": "tooling",
+    "tags": [
+      "agent-development",
+      "claude-code",
+      "plugin-development",
+      "system-prompt-design",
+      "autonomous-agents"
+    ],
+    "tech_stack": [
+      "yaml",
+      "markdown",
+      "claude-code"
+    ],
+    "source": "anthropics/claude-code",
+    "pushed_at": "2026-05-07T23:49:04Z",
+    "added_at": "2026-04-02",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "anthropics/claude-code",
+      "branch": "main",
+      "path": "plugins/plugin-dev/skills/agent-development"
+    },
+    "bundled_in": "anthropic-plugin-dev"
+  },
+  {
+    "id": "claude-opus-4-5-migration-skill",
+    "name": "claude-opus-4-5-migration",
+    "type": "skill",
+    "description": "Guide for migrating code and prompts from older Claude models to Opus 4.5.",
+    "source_url": "https://github.com/anthropics/claude-code/tree/main/plugins/claude-opus-4-5-migration/skills/claude-opus-4-5-migration",
+    "stars": 121372,
+    "category": "ai-ml",
+    "tags": [
+      "model-migration",
+      "claude-opus",
+      "prompt-adjustment",
+      "api-migration"
+    ],
+    "tech_stack": [
+      "python",
+      "anthropic-api",
+      "aws-bedrock",
+      "google-vertex-ai",
+      "azure-ai-foundry"
+    ],
+    "source": "anthropics/claude-code",
+    "pushed_at": "2026-05-07T23:49:04Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "anthropics/claude-code",
+      "branch": "main",
+      "path": "plugins/claude-opus-4-5-migration/skills/claude-opus-4-5-migration"
+    }
+  },
+  {
+    "id": "command-development-skill",
+    "name": "Command Development",
+    "type": "skill",
+    "description": "Guide for creating slash commands in Claude Code using Markdown files with YAML frontmatter.",
+    "source_url": "https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/command-development",
+    "stars": 121372,
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "slash-commands",
+      "markdown-prompts",
+      "plugin-development",
+      "workflow-automation"
+    ],
+    "tech_stack": [
+      "markdown",
+      "yaml",
+      "bash",
+      "node.js"
+    ],
+    "source": "anthropics/claude-code",
+    "pushed_at": "2026-05-07T23:49:04Z",
+    "added_at": "2026-04-02",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "anthropics/claude-code",
+      "branch": "main",
+      "path": "plugins/plugin-dev/skills/command-development"
+    },
+    "bundled_in": "anthropic-plugin-dev"
+  },
+  {
+    "id": "hook-development-skill",
+    "name": "Hook Development",
+    "type": "skill",
+    "description": "Event-driven automation hooks for Claude Code plugins to validate, enforce policies, and integrate external tools.",
+    "source_url": "https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/hook-development",
+    "stars": 121372,
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "plugin-development",
+      "event-driven-automation",
+      "hook-system",
+      "prompt-based-hooks"
+    ],
+    "tech_stack": [
+      "bash",
+      "json",
+      "jq",
+      "claude-code"
+    ],
+    "source": "anthropics/claude-code",
+    "pushed_at": "2026-05-07T23:49:04Z",
+    "added_at": "2026-04-02",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "anthropics/claude-code",
+      "branch": "main",
+      "path": "plugins/plugin-dev/skills/hook-development"
+    },
+    "bundled_in": "anthropic-plugin-dev"
+  },
+  {
+    "id": "mcp-integration-skill",
+    "name": "MCP Integration",
+    "type": "skill",
+    "description": "Guide for integrating Model Context Protocol servers into Claude Code plugins.",
+    "source_url": "https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/mcp-integration",
+    "stars": 121372,
+    "category": "tooling",
+    "tags": [
+      "mcp-integration",
+      "claude-code-plugin",
+      "model-context-protocol",
+      "plugin-development"
+    ],
+    "tech_stack": [
+      "json",
+      "markdown"
+    ],
+    "source": "anthropics/claude-code",
+    "pushed_at": "2026-05-07T23:49:04Z",
+    "added_at": "2026-04-02",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "git_clone",
+      "repo": "anthropics/claude-code",
+      "branch": "main",
+      "path": "plugins/plugin-dev/skills/mcp-integration"
+    },
+    "bundled_in": "anthropic-plugin-dev"
+  },
+  {
+    "id": "mock-empty-desc-skill",
+    "name": "Empty Desc Test",
+    "type": "skill",
+    "description": "",
+    "source_url": "https://example.com/empty-desc",
+    "stars": 0,
+    "source": "mock_fixture"
+  }
+]

@@ -1,0 +1,174 @@
+[
+  {
+    "id": "microsoftmarkitdown",
+    "name": "microsoft/markitdown",
+    "type": "mcp",
+    "description": "MCP server that converts various file formats to Markdown for LLM consumption.",
+    "source_url": "https://github.com/microsoft/markitdown/tree/main/packages/markitdown-mcp",
+    "stars": 121566,
+    "category": "ai-ml",
+    "tags": [
+      "mcp-server",
+      "markdown-conversion",
+      "file-converter",
+      "llm-tool"
+    ],
+    "tech_stack": [
+      "python",
+      "docker",
+      "mcp"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-04-20T17:52:20Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "manual"
+    }
+  },
+  {
+    "id": "aws-kb-retrieval",
+    "name": "AWS KB Retrieval",
+    "type": "mcp",
+    "description": "Official MCP server for retrieving information from AWS Knowledge Bases using Bedrock Agent Runtime.",
+    "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/aws-kb-retrieval-server",
+    "stars": 85230,
+    "category": "devops",
+    "tags": [
+      "mcp-server",
+      "aws",
+      "knowledge-base",
+      "bedrock",
+      "retrieval"
+    ],
+    "tech_stack": [
+      "aws",
+      "bedrock-agent-runtime",
+      "typescript"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-04-17T22:59:54Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-memory"
+        ]
+      }
+    }
+  },
+  {
+    "id": "brave-search",
+    "name": "Brave Search",
+    "type": "mcp",
+    "description": "Official MCP server reference implementation for web and local search using Brave Search API.",
+    "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search",
+    "stars": 85230,
+    "category": "backend",
+    "tags": [
+      "mcp-server",
+      "brave-search",
+      "web-search",
+      "reference-implementation"
+    ],
+    "tech_stack": [
+      "brave-search-api"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-04-17T22:59:54Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-memory"
+        ]
+      }
+    }
+  },
+  {
+    "id": "everart",
+    "name": "EverArt",
+    "type": "mcp",
+    "description": "Official MCP reference server for AI image generation using multiple models.",
+    "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/everart",
+    "stars": 85230,
+    "category": "ai-ml",
+    "tags": [
+      "mcp-server",
+      "image-generation",
+      "ai-models",
+      "reference-implementation"
+    ],
+    "tech_stack": [
+      "typescript",
+      "node.js",
+      "mcp"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-04-17T22:59:54Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-memory"
+        ]
+      }
+    }
+  },
+  {
+    "id": "modelcontextprotocolserver-everything",
+    "name": "modelcontextprotocol/server-everything",
+    "type": "mcp",
+    "description": "MCP test server exercising all protocol features for client builders.",
+    "source_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/everything",
+    "stars": 85230,
+    "category": "tooling",
+    "tags": [
+      "mcp-server",
+      "test-server",
+      "protocol-testing",
+      "model-context-protocol"
+    ],
+    "tech_stack": [
+      "node.js",
+      "typescript",
+      "docker",
+      "mcp-sdk"
+    ],
+    "source": "awesome-mcp-zh",
+    "pushed_at": "2026-04-17T22:59:54Z",
+    "added_at": "2026-03-30",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "mcp_config",
+      "config": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-memory"
+        ]
+      }
+    }
+  },
+  {
+    "id": "mock-empty-desc-mcp",
+    "name": "Empty Desc Test",
+    "type": "mcp",
+    "description": "",
+    "source_url": "https://example.com/empty-desc",
+    "stars": 0,
+    "source": "mock_fixture"
+  }
+]
