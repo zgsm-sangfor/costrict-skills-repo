@@ -399,6 +399,11 @@ def _build_bundle_from_layout(
         "agents_count": 0,
         "mcp_servers_count": 0,
         "skills_namespaces": [],
+        # New extension fields (defaults — no signals available)
+        "hooks_count": 0,
+        "hook_events": [],
+        "mcp_server_names": [],
+        "is_marketplace_repo": False,
     }
 
     if fetcher is not None and repo:
@@ -416,15 +421,22 @@ def _build_bundle_from_layout(
             return zero_bundle
 
         if layout.is_plugin:
+            # Marketplace shells return zeroed counts plus the flag so callers
+            # can short-circuit entry creation.
+            if getattr(layout, "is_marketplace_repo", False):
+                bundle = dict(zero_bundle)
+                bundle["is_marketplace_repo"] = True
+                return bundle
             return {
                 "skills_count": len(layout.skill_paths),
                 "commands_count": len(layout.command_paths),
                 "agents_count": len(layout.agent_paths),
-                "mcp_servers_count": _count_manifest_value(
-                    (manifest or {}).get("mcpServers")
-                    or (manifest or {}).get("mcp_servers")
-                ),
+                "mcp_servers_count": len(layout.mcp_server_names),
                 "skills_namespaces": list(layout.skills_namespaces),
+                "hooks_count": layout.hooks_count,
+                "hook_events": list(layout.hook_events),
+                "mcp_server_names": list(layout.mcp_server_names),
+                "is_marketplace_repo": False,
             }
 
         if layout.fetch_error is not None:
@@ -476,6 +488,10 @@ def _build_bundle(manifest: Optional[dict], plugin_name: str) -> dict:
         "agents_count": 0,
         "mcp_servers_count": 0,
         "skills_namespaces": [],
+        "hooks_count": 0,
+        "hook_events": [],
+        "mcp_server_names": [],
+        "is_marketplace_repo": False,
     }
     if not isinstance(manifest, dict):
         return bundle
@@ -492,9 +508,13 @@ def _build_bundle(manifest: Optional[dict], plugin_name: str) -> dict:
     bundle["skills_count"] = _count(manifest.get("skills"))
     bundle["commands_count"] = _count(manifest.get("commands"))
     bundle["agents_count"] = _count(manifest.get("agents"))
-    bundle["mcp_servers_count"] = _count(
-        manifest.get("mcpServers") or manifest.get("mcp_servers")
-    )
+    mcp_field = manifest.get("mcpServers") or manifest.get("mcp_servers")
+    bundle["mcp_servers_count"] = _count(mcp_field)
+    if isinstance(mcp_field, dict):
+        bundle["mcp_server_names"] = sorted(
+            k for k in mcp_field.keys() if isinstance(k, str)
+        )
+        bundle["mcp_servers_count"] = len(bundle["mcp_server_names"])
 
     skills = manifest.get("skills")
     namespaces: list[str] = []
@@ -617,6 +637,20 @@ def _entry_from_plugin(
         name,
         ref=layout_ref,
     )
+
+    # Marketplace shells SHALL NOT be written as plugin entries.  The sync
+    # layer is expected to iterate plugins/<name>/ subdirectories separately
+    # (existing behaviour for nested-plugin marketplace flows).
+    if bundle.get("is_marketplace_repo"):
+        logger.info(
+            "Skipping marketplace shell at %s/%s@%s (plugin=%s) — nested plugins "
+            "will be enumerated via sub-paths instead.",
+            layout_repo,
+            layout_plugin_root or "<root>",
+            layout_ref,
+            name,
+        )
+        return None
 
     # Description fallback: marketplace > manifest > "".
     if not description and isinstance(manifest, dict):
