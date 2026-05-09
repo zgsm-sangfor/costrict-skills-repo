@@ -598,7 +598,9 @@ class TestWorkflowSkillsShCacheIsolation:
         with open(yml_path, "r", encoding="utf-8") as f:
             wf = yaml.safe_load(f)
 
-        steps = wf["jobs"]["sync"]["steps"]
+        # Phase 4 (harden-merge-pipeline) 把 ``sync`` job 拆成 ``sync-data`` /
+        # ``enrich`` / ``aggregate``。skills.sh cache 隔离仍由 sync-data job 负责。
+        steps = wf["jobs"]["sync-data"]["steps"]
 
         # 找 sync-caches restore step：path 不应再含 .skills_sh_cache/
         sync_restore = next(
