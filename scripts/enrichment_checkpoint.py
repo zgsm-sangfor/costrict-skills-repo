@@ -39,10 +39,19 @@ import logging
 from pathlib import Path
 from typing import TYPE_CHECKING, Any
 
-from scripts.eval_failure_log import _atomic_write_json, _iso, _utcnow
+# Sibling-module import that works whether the caller is running
+# ``python scripts/X.py`` from the repo root (puts ``scripts/`` on sys.path)
+# or importing ``scripts.X`` from the repo root with the package layout.
+try:
+    from eval_failure_log import _atomic_write_json, _iso, _utcnow
+except ImportError:  # pragma: no cover - exercised in tests/explicit package use
+    from scripts.eval_failure_log import _atomic_write_json, _iso, _utcnow  # type: ignore[no-redef]
 
 if TYPE_CHECKING:  # pragma: no cover - typing only
-    from scripts.eval_failure_log import FailureLog
+    try:
+        from eval_failure_log import FailureLog
+    except ImportError:  # pragma: no cover
+        from scripts.eval_failure_log import FailureLog  # type: ignore[no-redef]
 
 logger = logging.getLogger(__name__)
 
