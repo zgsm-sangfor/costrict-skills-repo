@@ -1,0 +1,146 @@
+[
+  {
+    "id": "fullstack-developer-prompt",
+    "name": "Fullstack Software Developer",
+    "type": "prompt",
+    "description": "A prompt template instructing an AI to act as a fullstack developer for web app architecture and code generation.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#fullstack-software-developer",
+    "stars": 143000,
+    "category": "fullstack",
+    "tags": [
+      "prompt-template",
+      "fullstack",
+      "web-development",
+      "golang",
+      "angular"
+    ],
+    "tech_stack": [
+      "golang",
+      "angular",
+      "jwt"
+    ],
+    "source": "curated",
+    "pushed_at": "2026-04-15T04:05:12Z",
+    "last_synced": "2026-03-25",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "12-month-ai-and-computer-vision-roadmap-for-defense-applications-prompt",
+    "name": "12-Month AI and Computer Vision Roadmap for Defense Applications",
+    "type": "prompt",
+    "description": "A structured prompt for generating a personalized 12-month AI and computer vision learning roadmap for defense applications.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#12-month-ai-and-computer-vision-roadmap-for-defense-applications",
+    "category": "backend",
+    "tags": [
+      "learning-roadmap",
+      "computer-vision",
+      "defense-tech",
+      "prompt-template",
+      "career-planning"
+    ],
+    "tech_stack": [
+      "python",
+      "rust",
+      "c++",
+      "opencv",
+      "pytorch",
+      "ros2"
+    ],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "2046-puzzle-game-challenge-prompt",
+    "name": "2046 Puzzle Game Challenge",
+    "type": "prompt",
+    "description": "A prompt for generating a text-based 2046 puzzle game with customizable grid and rules.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#2046-puzzle-game-challenge",
+    "category": "tooling",
+    "tags": [
+      "prompt-engineering",
+      "game-development",
+      "text-based-game",
+      "puzzle-game"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "30-tweet-project-prompt",
+    "name": "30 tweet Project",
+    "type": "prompt",
+    "description": "A prompt for generating 30 high-engagement, binary-question crypto tweets under 250 characters with strict content rules.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#30-tweet-project",
+    "category": "backend",
+    "tags": [
+      "prompt-engineering",
+      "crypto-content",
+      "social-media",
+      "twitter",
+      "content-generation"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "3d-city-prompt-prompt",
+    "name": "3D City Prompt",
+    "type": "prompt",
+    "description": "A prompt for generating hyper-realistic 3D diorama images of cities with fairytale elements.",
+    "source_url": "https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#3d-city-prompt",
+    "category": "ai-ml",
+    "tags": [
+      "image-generation",
+      "prompt-engineering",
+      "3d-diorama",
+      "artistic-prompt"
+    ],
+    "tech_stack": [],
+    "source": "prompts-chat",
+    "pushed_at": "2026-05-07T04:19:31Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/f/prompts.chat/main/prompts.csv"
+      ]
+    }
+  },
+  {
+    "id": "mock-empty-desc-prompt",
+    "name": "Empty Desc Test",
+    "type": "prompt",
+    "description": "",
+    "source_url": "https://example.com/empty-desc",
+    "stars": 0,
+    "source": "mock_fixture"
+  }
+]

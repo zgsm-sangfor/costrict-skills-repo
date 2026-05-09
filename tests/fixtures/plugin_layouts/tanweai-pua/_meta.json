@@ -1,0 +1,8 @@
+{
+  "repo": "tanweai/pua",
+  "commit_sha": "34cf090efa3b45aed181a81791e4eb338064ada6",
+  "fetched_at_branch": "feat/extend-plugin-bundle-extraction",
+  "has_plugin_json": true,
+  "has_hooks_hooks_json": true,
+  "has_dot_mcp_json": false
+}

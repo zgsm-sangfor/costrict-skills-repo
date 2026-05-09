@@ -347,6 +347,10 @@ def test_official_sync_failure_path_uses_zero_bundle(monkeypatch, tmp_path):
         "agents_count": 0,
         "mcp_servers_count": 0,
         "skills_namespaces": [],
+        "hooks_count": 0,
+        "hook_events": [],
+        "mcp_server_names": [],
+        "is_marketplace_repo": False,
     }
 
 

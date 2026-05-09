@@ -1,0 +1,164 @@
+[
+  {
+    "id": "flutter-dart-cursorrule",
+    "name": "Flutter & Dart Rules",
+    "type": "rule",
+    "description": "A set of AI coding assistant rules for Flutter and Dart development, providing best practice guidance within the Cursor editor.",
+    "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/flutter-dart",
+    "stars": 178,
+    "category": "mobile",
+    "tags": [
+      "cursor-rules",
+      "flutter",
+      "dart",
+      "mobile-development",
+      "ai-coding"
+    ],
+    "tech_stack": [
+      "flutter",
+      "dart",
+      "cursor"
+    ],
+    "source": "curated",
+    "pushed_at": "2025-10-24T16:37:26Z",
+    "last_synced": "2026-03-25",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/flutter-dart/.cursorrules"
+      ]
+    }
+  },
+  {
+    "id": "supabase-cursorrule",
+    "name": "Supabase Rules",
+    "type": "rule",
+    "description": "Cursor AI editor rules to enhance code generation for Supabase projects using PostgreSQL and Edge Functions.",
+    "source_url": "https://github.com/PatrickJS/awesome-cursorrules/tree/main/rules/supabase",
+    "stars": 178,
+    "category": "database",
+    "tags": [
+      "cursor-rules",
+      "supabase",
+      "postgresql",
+      "edge-functions",
+      "ai-coding"
+    ],
+    "tech_stack": [
+      "cursor",
+      "supabase",
+      "postgresql",
+      "edge-functions"
+    ],
+    "source": "curated",
+    "pushed_at": "2025-10-24T16:37:26Z",
+    "last_synced": "2026-03-25",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/supabase/.cursorrules"
+      ]
+    }
+  },
+  {
+    "id": "angular-novo-elements-cursorrules-prompt-file-schneidersam",
+    "name": "Angular Novo Elements Cursorrules Prompt File (Windsurf)",
+    "type": "rule",
+    "description": "A .cursorrules prompt file for Angular Novo Elements, providing coding standards and best practices for AI-assisted development.",
+    "source_url": "https://github.com/SchneiderSam/awesome-windsurfrules/blob/main/rules/windsurfrules/angular-novo-elements-cursorrules-prompt-file/README.md",
+    "stars": 71,
+    "category": "frontend",
+    "tags": [
+      "angular",
+      "novo-elements",
+      "cursorrules",
+      "coding-standards",
+      "windsurf"
+    ],
+    "tech_stack": [
+      "angular",
+      "novo-elements"
+    ],
+    "source": "awesome-windsurfrules",
+    "pushed_at": "2025-01-10T08:43:24Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/SchneiderSam/awesome-windsurfrules/main/rules/windsurfrules/angular-novo-elements-cursorrules-prompt-file/README.md"
+      ]
+    }
+  },
+  {
+    "id": "angular-typescript-cursorrules-prompt-file-schneidersam",
+    "name": "Angular Typescript Cursorrules Prompt File (Windsurf)",
+    "type": "rule",
+    "description": "A .cursorrules prompt file for Angular TypeScript development to enforce best practices and code quality.",
+    "source_url": "https://github.com/SchneiderSam/awesome-windsurfrules/blob/main/rules/windsurfrules/angular-typescript-cursorrules-prompt-file/README.md",
+    "stars": 71,
+    "category": "frontend",
+    "tags": [
+      "angular",
+      "typescript",
+      "cursorrules",
+      "code-quality",
+      "windsurf"
+    ],
+    "tech_stack": [
+      "angular",
+      "typescript",
+      "jest",
+      "eslint",
+      "prettier",
+      "htmlhint",
+      "editorconfig"
+    ],
+    "source": "awesome-windsurfrules",
+    "pushed_at": "2025-01-10T08:43:24Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/SchneiderSam/awesome-windsurfrules/main/rules/windsurfrules/angular-typescript-cursorrules-prompt-file/README.md"
+      ]
+    }
+  },
+  {
+    "id": "ascii-simulation-game-cursorrules-prompt-file-schneidersam",
+    "name": "Ascii Simulation Game Cursorrules Prompt File (Windsurf)",
+    "type": "rule",
+    "description": "A .cursorrules prompt file for AI-assisted coding of an ASCII observer-based strategy simulation game.",
+    "source_url": "https://github.com/SchneiderSam/awesome-windsurfrules/blob/main/rules/windsurfrules/ascii-simulation-game-cursorrules-prompt-file/README.md",
+    "stars": 71,
+    "category": "security",
+    "tags": [
+      "cursorrules",
+      "ascii-game",
+      "simulation",
+      "windsurf",
+      "strategy-game"
+    ],
+    "tech_stack": [
+      "ascii",
+      "grid-based simulation"
+    ],
+    "source": "awesome-windsurfrules",
+    "pushed_at": "2025-01-10T08:43:24Z",
+    "last_synced": "2026-05-08",
+    "install": {
+      "method": "download_file",
+      "files": [
+        "https://raw.githubusercontent.com/SchneiderSam/awesome-windsurfrules/main/rules/windsurfrules/ascii-simulation-game-cursorrules-prompt-file/README.md"
+      ]
+    }
+  },
+  {
+    "id": "mock-empty-desc-rule",
+    "name": "Empty Desc Test",
+    "type": "rule",
+    "description": "",
+    "source_url": "https://example.com/empty-desc",
+    "stars": 0,
+    "source": "mock_fixture"
+  }
+]

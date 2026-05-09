@@ -10,9 +10,24 @@ import json
 import logging
 import os
 import re
+import sys
+import time
 from pathlib import Path
-from typing import Any
+from typing import TYPE_CHECKING, Any
 from urllib.parse import urlparse
+
+# Sibling-module imports (work whether the caller invokes ``python scripts/X.py``
+# from the repo root — which puts ``scripts/`` on sys.path — or imports
+# ``scripts.eval_bridge`` from the repo root with the package layout.)
+try:
+    from enrichment_checkpoint import Checkpoint
+    from eval_failure_log import FailureLog
+except ImportError:  # pragma: no cover - exercised in tests/explicit package use
+    from scripts.enrichment_checkpoint import Checkpoint  # type: ignore[no-redef]
+    from scripts.eval_failure_log import FailureLog  # type: ignore[no-redef]
+
+if TYPE_CHECKING:  # pragma: no cover - typing only
+    from ai_resource_eval.runner import EvalRunner
 
 logger = logging.getLogger(__name__)
 
@@ -707,6 +722,163 @@ def _compute_rubric_version_for_task(task_name: str) -> str | None:
         return None
 
 
+def _format_elapsed(seconds: float) -> str:
+    """Format an elapsed-second count as ``{m}m{s}s`` for progress lines."""
+    total = max(0, int(seconds))
+    return f"{total // 60}m{total % 60}s"
+
+
+def _run_runner_with_telemetry(
+    runner: "EvalRunner",
+    eval_items: list[Any],
+    resource_type: str,
+    failure_log: "FailureLog | None" = None,
+    checkpoint: "Checkpoint | None" = None,
+    chunk_size: int = 50,
+) -> list[Any]:
+    """Run ``runner.run`` in chunks while recording telemetry.
+
+    For each chunk:
+      * Call ``runner.run(chunk)`` so the underlying concurrency is preserved.
+      * Successes (entry ids returned by the runner) are recorded via
+        ``failure_log.record_success`` and ``checkpoint.mark_completed``.
+      * Failures (entry ids in the chunk input but absent from the runner's
+        output — the runner's ``on_fail="skip"`` path silently drops these)
+        are written to the ledger as ``error_kind="EvalRunnerSkip"``.
+      * After each chunk, ``failure_log.save()`` and ``checkpoint.flush()``
+        are invoked for durability and a flushed progress line is printed.
+
+    A startup banner is printed once before the loop, and a final summary
+    line is printed once after the loop. ``chunk_size`` defaults to 50 to
+    align with :class:`scripts.enrichment_checkpoint.Checkpoint` flush
+    granularity. When ``failure_log`` or ``checkpoint`` is ``None`` the
+    corresponding bookkeeping is skipped (no-op).
+
+    Returns the aggregated list of ``EvalResult`` objects across all chunks.
+    """
+    n = len(eval_items)
+    start = time.monotonic()
+    print(
+        f"[type={resource_type}] starting: {n} to_evaluate elapsed=0s",
+        flush=True,
+    )
+
+    aggregated: list[Any] = []
+    succeeded = 0
+    failed = 0
+    done = 0
+
+    if n == 0:
+        elapsed = time.monotonic() - start
+        print(
+            f"[type={resource_type}] done: succeeded={succeeded} "
+            f"failed={failed} wall_clock={_format_elapsed(elapsed)}",
+            flush=True,
+        )
+        return aggregated
+
+    chunk = max(1, int(chunk_size))
+    for offset in range(0, n, chunk):
+        batch = eval_items[offset : offset + chunk]
+
+        # Capture the input ids for diff against runner output.
+        input_ids: list[str] = []
+        for item in batch:
+            iid = getattr(item, "id", None)
+            if iid is None and isinstance(item, dict):
+                iid = item.get("id")
+            input_ids.append(str(iid) if iid is not None else "")
+
+        chunk_failed_already_recorded = False
+        try:
+            results = runner.run(batch)
+        except Exception as exc:  # noqa: BLE001 - bubble per-batch failures into ledger
+            logger.warning(
+                "[type=%s] runner.run raised on chunk offset=%d size=%d: %s",
+                resource_type,
+                offset,
+                len(batch),
+                exc,
+            )
+            results = []
+            chunk_failed_already_recorded = True
+            if failure_log is not None:
+                error_message = f"{type(exc).__name__}: {exc}"
+                for iid in input_ids:
+                    if iid:
+                        failure_log.record_failure(
+                            iid,
+                            type_=resource_type,
+                            error_kind="EvalRunnerException",
+                            error_message=error_message,
+                        )
+
+        # Compute success / failure id sets for ledger + checkpoint updates.
+        returned_ids: set[str] = set()
+        for r in results:
+            rd = r.model_dump(mode="json") if hasattr(r, "model_dump") else r
+            rid = rd.get("entry_id") if isinstance(rd, dict) else None
+            if rid:
+                returned_ids.add(str(rid))
+            aggregated.append(r)
+
+        for iid in input_ids:
+            if not iid:
+                continue
+            if iid in returned_ids:
+                if failure_log is not None:
+                    failure_log.record_success(iid)
+                if checkpoint is not None:
+                    checkpoint.mark_completed(iid)
+                succeeded += 1
+            else:
+                # Skip ledger write when the whole-batch exception handler
+                # already recorded this id as EvalRunnerException — otherwise
+                # one batch failure would advance attempt_count by 2.
+                if failure_log is not None and not chunk_failed_already_recorded:
+                    failure_log.record_failure(
+                        iid,
+                        type_=resource_type,
+                        error_kind="EvalRunnerSkip",
+                        error_message="runner returned no result for entry",
+                    )
+                failed += 1
+            done += 1
+
+        # Persist failure ledger + checkpoint after each chunk for durability.
+        if failure_log is not None:
+            try:
+                failure_log.save()
+            except Exception as exc:  # noqa: BLE001
+                logger.warning(
+                    "[type=%s] failure_log.save() failed: %s", resource_type, exc
+                )
+        if checkpoint is not None:
+            try:
+                checkpoint.flush()
+            except Exception as exc:  # noqa: BLE001
+                logger.warning(
+                    "[type=%s] checkpoint.flush() failed: %s", resource_type, exc
+                )
+
+        elapsed = time.monotonic() - start
+        pct = int(done * 100 / n) if n else 100
+        print(
+            f"[type={resource_type}] progress: {done}/{n} ({pct}%) "
+            f"succeeded={succeeded} failed={failed} "
+            f"elapsed={_format_elapsed(elapsed)}",
+            flush=True,
+        )
+
+    elapsed = time.monotonic() - start
+    print(
+        f"[type={resource_type}] done: succeeded={succeeded} failed={failed} "
+        f"wall_clock={_format_elapsed(elapsed)}",
+        flush=True,
+    )
+    return aggregated
+
+
 def run_eval(
     entries: list[dict[str, Any]],
     cache_dir: str = ".eval_cache",
@@ -714,6 +886,8 @@ def run_eval(
     concurrency: int = 4,
     skills_sh_diff_path: str | os.PathLike[str] | None = None,
     mcp_registry_diff_path: str | os.PathLike[str] | None = None,
+    failure_log: "FailureLog | None" = None,
+    checkpoints_by_type: "dict[str, Checkpoint] | None" = None,
 ) -> dict[str, dict[str, Any]]:
     """Run the eval harness and return {entry_id: result_dict}.
 
@@ -820,6 +994,34 @@ def run_eval(
                     total_remaining,
                 )
 
+    # ── 1.11: failure-ledger 过滤（quarantine + backoff 未到期跳过） ──
+    if failure_log is not None:
+        for resource_type in list(remaining_by_type.keys()):
+            kept: list[dict] = []
+            deferred = 0
+            quarantined = 0
+            for entry in remaining_by_type[resource_type]:
+                entry_id = entry.get("id")
+                if entry_id is None:
+                    kept.append(entry)
+                    continue
+                if failure_log.is_quarantined(entry_id):
+                    quarantined += 1
+                    continue
+                if not failure_log.should_retry_now(entry_id):
+                    deferred += 1
+                    continue
+                kept.append(entry)
+            remaining_by_type[resource_type] = kept
+            if deferred or quarantined:
+                logger.info(
+                    "[type=%s] failure-ledger filter: kept=%d deferred=%d quarantined=%d",
+                    resource_type,
+                    len(kept),
+                    deferred,
+                    quarantined,
+                )
+
     # 仍需评估的条目（按 type 已分组）
     remaining_total = sum(len(v) for v in remaining_by_type.values())
 
@@ -864,7 +1066,18 @@ def run_eval(
             on_fail="skip",
         )
 
-        results = runner.run(eval_items)
+        checkpoint = None
+        if checkpoints_by_type is not None:
+            checkpoint = checkpoints_by_type.get(resource_type)
+
+        results = _run_runner_with_telemetry(
+            runner,
+            eval_items,
+            resource_type=resource_type,
+            failure_log=failure_log,
+            checkpoint=checkpoint,
+            chunk_size=50,
+        )
         for r in results:
             rd = r.model_dump(mode="json") if hasattr(r, "model_dump") else r
             all_results[rd["entry_id"]] = rd
@@ -902,6 +1115,8 @@ def eval_and_map(
     concurrency: int = 4,
     skills_sh_diff_path: str | os.PathLike[str] | None = None,
     mcp_registry_diff_path: str | os.PathLike[str] | None = None,
+    failure_log: "FailureLog | None" = None,
+    checkpoints_by_type: "dict[str, Checkpoint] | None" = None,
 ) -> None:
     """Run eval harness on entries and map results back in-place.
 
@@ -910,6 +1125,10 @@ def eval_and_map(
     skills_sh_diff_path 可选：默认读取项目根 ``.skills_sh_cache/diff.json``。
     mcp_registry_diff_path 可选：默认读取 ``.mcp_registry_cache/diff.json``。
     windsurfrules 短路无 diff 依赖，自动启用（仅靠 cache 命中）。
+
+    failure_log / checkpoints_by_type 可选：当传入时启用 1.10/1.11/1.12 行为
+    （EvalRunner 包装层 + should_retry_now 过滤 + 检查点记录）。两者均默认
+    None，保持与既有调用点的向后兼容。
     """
     results = run_eval(
         entries,
@@ -918,6 +1137,8 @@ def eval_and_map(
         concurrency=concurrency,
         skills_sh_diff_path=skills_sh_diff_path,
         mcp_registry_diff_path=mcp_registry_diff_path,
+        failure_log=failure_log,
+        checkpoints_by_type=checkpoints_by_type,
     )
 
     mapped = 0

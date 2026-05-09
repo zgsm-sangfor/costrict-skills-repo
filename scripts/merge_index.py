@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Merge all type-specific indexes and curated files into catalog/index.json."""
 
+import argparse
 import json
 import os
 import sys
@@ -261,7 +262,18 @@ def _load_queue_state(queue_state_path: str) -> dict[str, Any]:
         return {}
 
 
-def merge():
+def merge(skip_enrichment: bool = False):
+    """Merge all source indexes into catalog/index.json.
+
+    Args:
+        skip_enrichment: When True, skip the LLM enrichment + evaluation step
+            (``enrich_entries``) and produce a "data-only" catalog where every
+            entry has ``evaluation == {}`` (empty dict, not missing key) so
+            downstream aggregate jobs can distinguish a deferred-evaluation
+            placeholder from a missing field. Governance still runs in
+            health-only mode (no LLM-derived final_score), assigning safe
+            defaults (final_score=0, decision="review").
+    """
     all_entries = []
 
     for resource_type in TYPES:
@@ -460,18 +472,43 @@ def merge():
     _apply_bundled_in_annotations(deduped)
 
     # --- Layer 2: Enrichment (tags, translation, LLM evaluation, signals) ---
-    enrich_entries(deduped)
-    logger.info(f"Enrichment complete for {len(deduped)} entries")
+    if skip_enrichment:
+        logger.info(
+            "--skip-enrichment: skipping LLM evaluation; "
+            "entries will have evaluation={}"
+        )
+        # Reset evaluation to an empty dict on every entry so downstream
+        # aggregate jobs can distinguish "data layer wrote skip-enrichment
+        # placeholder" from "missing key entirely". Drop _prior_evaluation
+        # too — that overlay is only meaningful when enrichment runs.
+        for entry in deduped:
+            entry["evaluation"] = {}
+            entry.pop("_prior_evaluation", None)
+    else:
+        enrich_entries(deduped)
+        logger.info(f"Enrichment complete for {len(deduped)} entries")
 
     # --- Layer 3: Scoring & Governance (final_score, decision, health, reject filter) ---
-    deduped = apply_governance(deduped)
+    # Only pass health_only when set, so legacy mocks of apply_governance that
+    # accept a single positional arg continue to work.
+    if skip_enrichment:
+        deduped = apply_governance(deduped, health_only=True)
+    else:
+        deduped = apply_governance(deduped)
     logger.info(f"Governance complete: {len(deduped)} entries after filtering")
 
-    # Promote scoring fields to top level for easy consumption by search/browse/recommend
+    # Promote scoring fields to top level for easy consumption by search/browse/recommend.
+    # In skip_enrichment mode, evaluation stays empty ({}) so final_score=0,
+    # decision="review" — aggregate_enrichment will fill these in later.
     for entry in deduped:
         ev = entry.get("evaluation") or {}
-        entry["final_score"] = ev.get("final_score", 0)
-        entry["decision"] = ev.get("decision", "review")
+        if skip_enrichment:
+            entry["evaluation"] = {}
+            entry["final_score"] = 0
+            entry["decision"] = "review"
+        else:
+            entry["final_score"] = ev.get("final_score", 0)
+            entry["decision"] = ev.get("decision", "review")
 
     # --- Lifecycle ---
     existing_output = backfill_missing_added_at(existing_output, today=TODAY)
@@ -559,5 +596,27 @@ def merge():
     logger.info(f"By category: {by_category}")
 
 
+def main(argv: list[str] | None = None) -> None:
+    """CLI entry point. Parses argv and dispatches to merge()."""
+    parser = argparse.ArgumentParser(
+        description=(
+            "Merge type-specific indexes and curated files into "
+            "catalog/index.json."
+        )
+    )
+    parser.add_argument(
+        "--skip-enrichment",
+        action="store_true",
+        default=False,
+        help=(
+            "Skip the LLM enrichment + evaluation step. Produces a "
+            "'data-only' catalog where every entry has evaluation={} "
+            "so a downstream aggregate job can fill it in."
+        ),
+    )
+    args = parser.parse_args(argv)
+    merge(skip_enrichment=args.skip_enrichment)
+
+
 if __name__ == "__main__":
-    merge()
+    main()

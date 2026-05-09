@@ -22,9 +22,43 @@ LLM_DIMENSION_ORDER = (
 )
 
 
-def apply_governance(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    """Verify eval fields, default unevaluated entries, filter rejects."""
+def apply_governance(
+    entries: list[dict[str, Any]],
+    health_only: bool = False,
+) -> list[dict[str, Any]]:
+    """Verify eval fields, default unevaluated entries, filter rejects.
+
+    Args:
+        entries: Catalog entries to govern. Mutated in place.
+        health_only: When True, skip LLM-derived final_score promotion and
+            weak-dim derivation entirely; assigns safe defaults
+            (final_score=0, decision="review") and leaves the
+            ``evaluation`` dict empty. Used by ``merge_index --skip-enrichment``
+            to produce a data-only catalog where the downstream aggregate
+            job fills in evaluation later. No reject filtering occurs in
+            health-only mode (all entries pass through).
+    """
     dry_run = os.environ.get("EVAL_DRY_RUN", "true").lower() not in ("false", "0", "no")
+
+    if health_only:
+        # Data-only mode: aggregate job will fill in evaluation later. We do
+        # not promote any LLM-derived fields, do not derive weak_dims, and
+        # do not run the reject filter. Health/freshness signals (computed
+        # earlier in the pipeline) are still surfaced to the top level.
+        for entry in entries:
+            entry["evaluation"] = {}
+            entry["final_score"] = 0
+            entry["decision"] = "review"
+            entry["weak_dims"] = []
+            health = entry.get("health") or {}
+            if isinstance(health, dict) and "freshness_label" in health:
+                entry["freshness_label"] = health["freshness_label"]
+        logger.info(
+            "Governance (health-only): %d entries → %d kept (no reject filter)",
+            len(entries),
+            len(entries),
+        )
+        return list(entries)
 
     for entry in entries:
         ev = entry.get("evaluation", {})

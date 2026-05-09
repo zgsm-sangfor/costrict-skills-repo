@@ -1,0 +1,20 @@
+{
+  "name": "oh-my-claudecode",
+  "version": "4.13.6",
+  "description": "Multi-agent orchestration system for Claude Code",
+  "author": {
+    "name": "oh-my-claudecode contributors"
+  },
+  "repository": "https://github.com/Yeachan-Heo/oh-my-claudecode",
+  "homepage": "https://github.com/Yeachan-Heo/oh-my-claudecode",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "multi-agent",
+    "orchestration",
+    "automation"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}
