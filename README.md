@@ -6,7 +6,7 @@
   <a href="https://github.com/zgsm-ai/everything-ai-coding/stargazers"><img src="https://img.shields.io/github/stars/zgsm-ai/everything-ai-coding?style=flat-square&color=4A90D9" alt="Stars" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zgsm-ai/everything-ai-coding?style=flat-square" alt="License" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/commits/main"><img src="https://img.shields.io/github/last-commit/zgsm-ai/everything-ai-coding?style=flat-square" alt="Last Commit" /></a>
-  <img src="https://img.shields.io/badge/resources-12762-2ECC71?style=flat-square" alt="Resources" />
+  <img src="https://img.shields.io/badge/resources-12783-2ECC71?style=flat-square" alt="Resources" />
 </p>
 
 <p>
@@ -34,15 +34,15 @@ Everything AI Coding is a **curated knowledge base** that continuously collects,
 <a id="knowledge-base"></a>
 ## 📚 Knowledge Base
 
-### [🔌 MCP Servers](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->9165<!-- README_COUNT_MCP:END --> entries
+### [🔌 MCP Servers](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->9216<!-- README_COUNT_MCP:END --> entries
 
 Model Context Protocol servers that connect AI agents to external tools, databases, and services.
 
 <!-- README_TOP5_MCP:START -->
 | Name | ⭐ Stars | Score | Description |
 |------|----------|-------|-------------|
-| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 32.2k | 98 | Official Microsoft MCP server enabling AI to control web browsers via… |
-| [github/github-mcp-server](https://github.com/github/github-mcp-server) | 29.6k | 98 | Official GitHub MCP server enabling AI tools to interact with GitHub… |
+| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 32.3k | 98 | Official Microsoft MCP server enabling AI to control web browsers via… |
+| [github/github-mcp-server](https://github.com/github/github-mcp-server) | 29.7k | 98 | Official GitHub MCP server enabling AI tools to interact with GitHub… |
 | [googleapis/genai-toolbox](https://github.com/googleapis/genai-toolbox) | 15.1k | 98 | Official Google MCP server connecting AI agents and IDEs to enterpris… |
 | [MCP Inspector](https://github.com/modelcontextprotocol/inspector) | 9.2k | 98 | A developer tool for visually testing and debugging MCP servers via a… |
 | [AWS MCP Servers](https://github.com/awslabs/mcp) | 8.6k | 98 | Suite of 50+ MCP servers enabling AI coding assistants to interact wi… |
@@ -88,7 +88,7 @@ Coding conventions and AI behavior guidelines for consistent development.
 
 ---
 
-### [💡 Prompts](./catalog/prompts/) — <!-- README_COUNT_PROMPT:START -->576<!-- README_COUNT_PROMPT:END --> entries
+### [💡 Prompts](./catalog/prompts/) — <!-- README_COUNT_PROMPT:START -->577<!-- README_COUNT_PROMPT:END --> entries
 
 Developer-focused prompt templates for common coding tasks.
 
@@ -106,7 +106,7 @@ Developer-focused prompt templates for common coding tasks.
 
 ---
 
-### [🧩 Plugins](./catalog/plugins/) — <!-- README_COUNT_PLUGIN:START -->866<!-- README_COUNT_PLUGIN:END --> entries
+### [🧩 Plugins](./catalog/plugins/) — <!-- README_COUNT_PLUGIN:START -->835<!-- README_COUNT_PLUGIN:END --> entries
 
 Bundled marketplace plugins (skills + commands + agents + MCP servers).
 

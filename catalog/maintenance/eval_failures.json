@@ -37,48 +37,48 @@
       "type": "prompt"
     },
     "ai-smithery-bergeramit-bergeramit-hw3-tech-046e6037": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-09T10:01:47.091393+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-09T10:01:47.091393+00:00",
-      "next_retry_after": "2026-05-09T10:01:47.091393+00:00",
+      "last_failed_at": "2026-05-10T10:01:16.867092+00:00",
+      "next_retry_after": "2026-05-17T10:01:16.867092+00:00",
       "type": "mcp"
     },
     "ai-smithery-sebastianall1977-gmail-mcp-a2956f71": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-09T10:08:42.090208+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-09T10:08:42.090208+00:00",
-      "next_retry_after": "2026-05-09T10:08:42.090208+00:00",
+      "last_failed_at": "2026-05-10T10:01:16.867097+00:00",
+      "next_retry_after": "2026-05-17T10:01:16.867097+00:00",
       "type": "mcp"
     },
     "ai-smithery-smithery-ai-cookbook-python-quickstart-3222c712": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-09T10:08:42.090362+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-09T10:08:42.090362+00:00",
-      "next_retry_after": "2026-05-09T10:08:42.090362+00:00",
+      "last_failed_at": "2026-05-10T10:01:16.867103+00:00",
+      "next_retry_after": "2026-05-17T10:01:16.867103+00:00",
       "type": "mcp"
     },
     "ai-smithery-wgong-sqlite-mcp-server-66473a5c": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-09T10:08:42.090872+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-09T10:08:42.090872+00:00",
-      "next_retry_after": "2026-05-09T10:08:42.090872+00:00",
+      "last_failed_at": "2026-05-10T10:01:16.867109+00:00",
+      "next_retry_after": "2026-05-17T10:01:16.867109+00:00",
       "type": "mcp"
     },
     "ai-tinyfish-agent-web-agent-f334d83e": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-09T10:11:50.587897+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-09T10:11:50.587897+00:00",
-      "next_retry_after": "2026-05-09T10:11:50.587897+00:00",
+      "last_failed_at": "2026-05-10T10:01:16.867114+00:00",
+      "next_retry_after": "2026-05-17T10:01:16.867114+00:00",
       "type": "mcp"
     },
     "ai2sql-sql-model-query-generator-prompt": {
@@ -89,15 +89,6 @@
       "last_failed_at": "2026-05-09T07:43:43.443421+00:00",
       "next_retry_after": "2026-05-09T07:43:43.443421+00:00",
       "type": "prompt"
-    },
-    "anaisbettsmcp-youtube": {
-      "attempt_count": 1,
-      "first_failed_at": "2026-05-09T07:52:41.705543+00:00",
-      "last_error_kind": "EvalRunnerSkip",
-      "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-09T07:52:41.705543+00:00",
-      "next_retry_after": "2026-05-09T07:52:41.705543+00:00",
-      "type": "mcp"
     },
     "analytics-tracking-coreyhaines31-marketingskills": {
       "attempt_count": 1,
@@ -154,12 +145,12 @@
       "type": "prompt"
     },
     "app-tradeit-mcp-87da23e4": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-09T10:15:05.434296+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-09T10:15:05.434296+00:00",
-      "next_retry_after": "2026-05-09T10:15:05.434296+00:00",
+      "last_failed_at": "2026-05-10T10:01:16.867120+00:00",
+      "next_retry_after": "2026-05-17T10:01:16.867120+00:00",
       "type": "mcp"
     },
     "architecture-patterns-wshobson-agents": {
@@ -334,12 +325,12 @@
       "type": "skill"
     },
     "com-apify-apify-mcp-server-dafdf10f": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-09T10:21:36.360668+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-09T10:21:36.360668+00:00",
-      "next_retry_after": "2026-05-09T10:21:36.360668+00:00",
+      "last_failed_at": "2026-05-10T10:01:16.867212+00:00",
+      "next_retry_after": "2026-05-17T10:01:16.867212+00:00",
       "type": "mcp"
     },
     "command-creator-softaworks-agent-toolkit": {
@@ -406,12 +397,12 @@
       "type": "skill"
     },
     "ddukbggithub-enterprise-mcp": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-09T09:04:08.027788+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-09T09:04:08.027788+00:00",
-      "next_retry_after": "2026-05-09T09:04:08.027788+00:00",
+      "last_failed_at": "2026-05-10T10:01:16.867050+00:00",
+      "next_retry_after": "2026-05-17T10:01:16.867050+00:00",
       "type": "mcp"
     },
     "dead-code-surgeon-phased-codebase-audit-cleanup-roadmap-prompt": {
@@ -460,12 +451,12 @@
       "type": "skill"
     },
     "dimonsmart-localmcpserver": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-09T09:28:00.036924+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-09T09:28:00.036924+00:00",
-      "next_retry_after": "2026-05-09T09:28:00.036924+00:00",
+      "last_failed_at": "2026-05-10T10:01:16.867068+00:00",
+      "next_retry_after": "2026-05-17T10:01:16.867068+00:00",
       "type": "mcp"
     },
     "doe-framework-directions-template-prompt": {
@@ -613,12 +604,12 @@
       "type": "skill"
     },
     "fredericbarthelet-mcp-server-linkedin": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-09T08:55:32.044622+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-09T08:55:32.044622+00:00",
-      "next_retry_after": "2026-05-09T08:55:32.044622+00:00",
+      "last_failed_at": "2026-05-10T10:01:16.867032+00:00",
+      "next_retry_after": "2026-05-17T10:01:16.867032+00:00",
       "type": "mcp"
     },
     "free-tool-strategy-coreyhaines31-marketingskills": {
@@ -631,12 +622,12 @@
       "type": "skill"
     },
     "garden-stanislav-svelte-llm-svelte-llm-mcp-e3c990c5": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-09T11:07:52.486475+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-09T11:07:52.486475+00:00",
-      "next_retry_after": "2026-05-09T11:07:52.486475+00:00",
+      "last_failed_at": "2026-05-10T10:01:16.867649+00:00",
+      "next_retry_after": "2026-05-17T10:01:16.867649+00:00",
       "type": "mcp"
     },
     "gemini-softaworks-agent-toolkit": {
@@ -694,12 +685,66 @@
       "type": "skill"
     },
     "inercia-mcpshell": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-09T08:33:55.903648+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-09T08:33:55.903648+00:00",
-      "next_retry_after": "2026-05-09T08:33:55.903648+00:00",
+      "last_failed_at": "2026-05-10T10:01:16.867010+00:00",
+      "next_retry_after": "2026-05-17T10:01:16.867010+00:00",
+      "type": "mcp"
+    },
+    "io-github-lexsocket-mcp-ted-963006b2": {
+      "attempt_count": 1,
+      "first_failed_at": "2026-05-10T11:38:47.383854+00:00",
+      "last_error_kind": "EvalRunnerSkip",
+      "last_error_message": "runner returned no result for entry",
+      "last_failed_at": "2026-05-10T11:38:47.383854+00:00",
+      "next_retry_after": "2026-05-10T11:38:47.383854+00:00",
+      "type": "mcp"
+    },
+    "io-github-plagtech-spraay-solana-gateway-795c2d31": {
+      "attempt_count": 1,
+      "first_failed_at": "2026-05-10T13:14:25.481717+00:00",
+      "last_error_kind": "EvalRunnerSkip",
+      "last_error_message": "runner returned no result for entry",
+      "last_failed_at": "2026-05-10T13:14:25.481717+00:00",
+      "next_retry_after": "2026-05-10T13:14:25.481717+00:00",
+      "type": "mcp"
+    },
+    "io-github-ryanjamesstewart-prompt-time-41ae7c3f": {
+      "attempt_count": 1,
+      "first_failed_at": "2026-05-10T13:42:23.216201+00:00",
+      "last_error_kind": "EvalRunnerSkip",
+      "last_error_message": "runner returned no result for entry",
+      "last_failed_at": "2026-05-10T13:42:23.216201+00:00",
+      "next_retry_after": "2026-05-10T13:42:23.216201+00:00",
+      "type": "mcp"
+    },
+    "io-github-serpapi-serpapi-mcp-87d22508": {
+      "attempt_count": 1,
+      "first_failed_at": "2026-05-10T13:57:42.399724+00:00",
+      "last_error_kind": "EvalRunnerSkip",
+      "last_error_message": "runner returned no result for entry",
+      "last_failed_at": "2026-05-10T13:57:42.399724+00:00",
+      "next_retry_after": "2026-05-10T13:57:42.399724+00:00",
+      "type": "mcp"
+    },
+    "io-github-shafarenkacfi-mcp-server-registration-6691c7f0": {
+      "attempt_count": 1,
+      "first_failed_at": "2026-05-10T13:57:42.402618+00:00",
+      "last_error_kind": "EvalRunnerSkip",
+      "last_error_message": "runner returned no result for entry",
+      "last_failed_at": "2026-05-10T13:57:42.402618+00:00",
+      "next_retry_after": "2026-05-10T13:57:42.402618+00:00",
+      "type": "mcp"
+    },
+    "io-github-subotiz-subotiz-dev-mcp-7cc9fded": {
+      "attempt_count": 1,
+      "first_failed_at": "2026-05-10T14:26:03.255478+00:00",
+      "last_error_kind": "EvalRunnerSkip",
+      "last_error_message": "runner returned no result for entry",
+      "last_failed_at": "2026-05-10T14:26:03.255478+00:00",
+      "next_retry_after": "2026-05-10T14:26:03.255478+00:00",
       "type": "mcp"
     },
     "jimliu-baoyu-skills-ai-generation-skills": {
@@ -748,12 +793,12 @@
       "type": "prompt"
     },
     "laubplusco-mpc-webdav-server": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-09T09:28:00.037583+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-09T09:28:00.037583+00:00",
-      "next_retry_after": "2026-05-09T09:28:00.037583+00:00",
+      "last_failed_at": "2026-05-10T10:01:16.867074+00:00",
+      "next_retry_after": "2026-05-17T10:01:16.867074+00:00",
       "type": "mcp"
     },
     "launch-strategy-coreyhaines31-marketingskills": {
@@ -775,12 +820,12 @@
       "type": "prompt"
     },
     "manekinekko-openai-mcp-example": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-09T08:59:37.369133+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-09T08:59:37.369133+00:00",
-      "next_retry_after": "2026-05-09T08:59:37.369133+00:00",
+      "last_failed_at": "2026-05-10T10:01:16.867043+00:00",
+      "next_retry_after": "2026-05-17T10:01:16.867043+00:00",
       "type": "mcp"
     },
     "marketing-ideas-coreyhaines31-marketingskills": {
@@ -982,12 +1027,12 @@
       "type": "skill"
     },
     "piplabs-story-sdk-mcp": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-09T09:24:15.703467+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-09T09:24:15.703467+00:00",
-      "next_retry_after": "2026-05-09T09:24:15.703467+00:00",
+      "last_failed_at": "2026-05-10T10:01:16.867063+00:00",
+      "next_retry_after": "2026-05-17T10:01:16.867063+00:00",
       "type": "mcp"
     },
     "plugin-forge-softaworks-agent-toolkit": {
@@ -1135,12 +1180,12 @@
       "type": "skill"
     },
     "readingdancer-teamwork-mcp": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-09T09:36:14.106493+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-09T09:36:14.106493+00:00",
-      "next_retry_after": "2026-05-09T09:36:14.106493+00:00",
+      "last_failed_at": "2026-05-10T10:01:16.867086+00:00",
+      "next_retry_after": "2026-05-17T10:01:16.867086+00:00",
       "type": "mcp"
     },
     "reducing-entropy-softaworks-agent-toolkit": {
@@ -1234,12 +1279,12 @@
       "type": "prompt"
     },
     "sergiobayona-vector-mcp": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-09T09:36:14.104703+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-09T09:36:14.104703+00:00",
-      "next_retry_after": "2026-05-09T09:36:14.104703+00:00",
+      "last_failed_at": "2026-05-10T10:01:16.867080+00:00",
+      "next_retry_after": "2026-05-17T10:01:16.867080+00:00",
       "type": "mcp"
     },
     "ship-learn-next-softaworks-agent-toolkit": {
@@ -1351,12 +1396,12 @@
       "type": "prompt"
     },
     "tjc-lp-fast-mcp-scala": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-09T09:20:30.630056+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-09T09:20:30.630056+00:00",
-      "next_retry_after": "2026-05-09T09:20:30.630056+00:00",
+      "last_failed_at": "2026-05-10T10:01:16.867056+00:00",
+      "next_retry_after": "2026-05-17T10:01:16.867056+00:00",
       "type": "mcp"
     },
     "trading-investing-simulation-platform-prompt": {
@@ -1470,5 +1515,5 @@
   },
   "rubric_version": "3.b46c05b2",
   "schema_version": 1,
-  "updated_at": "2026-05-09T12:57:11.785342+00:00"
+  "updated_at": "2026-05-10T15:25:06.257217+00:00"
 }
