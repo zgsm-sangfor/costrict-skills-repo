@@ -1,6 +1,6 @@
 # 🧩 Plugins
 
-> 835 Claude Code plugin bundles packaging skills, agents, commands, and MCP servers from official and community marketplaces.
+> 867 Claude Code plugin bundles packaging skills, agents, commands, and MCP servers from official and community marketplaces.
 >
 > [Back to main →](../../README.md) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=plugin)
 
@@ -52,8 +52,8 @@
 | 40 | [claude-seo](https://github.com/AgriciDaniel/claude-seo) | Claude Code plugin with 24 SEO sub-skills for technical audits, content analysis... | claude-plugins.dev | 🟢 Active | 97 | 2026-04-25 | devops | `go` |
 | 41 | [superpowers-lab](https://github.com/obra/superpowers-lab.git) | A plugin for Claude Code Superpowers providing experimental skills for AI-assist... | Superpowers | 🟢 Active | 97 | 2026-03-23 | tooling | — |
 | 42 | [sentry](https://github.com/getsentry/sentry-for-claude.git) | A plugin that integrates Sentry error monitoring into AI coding assistants like ... | Anthropic Official | 🟢 Active | 97 | 2026-05-04 | devops | — |
-| 43 | [qdrant-skills](https://github.com/qdrant/skills.git) | A plugin providing AI agent skills for Qdrant vector database operations, includ... | Anthropic Official | 🟢 Active | 97 | 2026-05-06 | devops | `typescript`, `python`, `go` |
-| 44 | [qt-development-skills](https://github.com/TheQtCompanyRnD/agent-skills.git) | A collection of AI agent skills for Qt development, offering code review, docume... | Anthropic Official | 🟢 Active | 97 | 2026-05-05 | ai-ml | — |
+| 43 | [qt-development-skills](https://github.com/TheQtCompanyRnD/agent-skills.git) | A collection of AI agent skills for Qt development, offering code review, docume... | Anthropic Official | 🟢 Active | 97 | 2026-05-05 | ai-ml | — |
+| 44 | [qdrant-skills](https://github.com/qdrant/skills.git) | A plugin providing AI agent skills for Qdrant vector database operations, includ... | Anthropic Official | 🟢 Active | 97 | 2026-05-06 | devops | `typescript`, `python`, `go` |
 | 45 | [mongodb](https://github.com/mongodb/agent-skills.git) | Official Claude plugin for MongoDB providing AI-assisted database operations, qu... | Anthropic Official | 🟢 Active | 97 | 2026-05-08 | database | `go`, `mongodb` |
 | 46 | [miro](https://github.com/miroapp/miro-ai.git) | Connects AI coding assistants to Miro boards for diagram creation, code generati... | Anthropic Official | 🟢 Active | 97 | 2026-05-08 | security | — |
 | 47 | [sonarqube](https://github.com/SonarSource/sonarqube-agent-plugins.git) | A plugin that integrates SonarQube code quality and security analysis into AI co... | Anthropic Official | 🟢 Active | 97 | 2026-05-07 | security | — |
@@ -114,7 +114,7 @@
 ## Top 10 — Install Guide
 
 <details>
-<summary>⭐ <strong>chrome-devtools-mcp</strong> (39.0k★) — Chrome DevTools MCP server for AI coding agents to debug, au...</summary>
+<summary>⭐ <strong>chrome-devtools-mcp</strong> (39.1k★) — Chrome DevTools MCP server for AI coding agents to debug, au...</summary>
 
 Chrome DevTools MCP server for AI coding agents to debug, automate, and analyze web pages via CLI and MCP tools.
 
@@ -126,7 +126,7 @@ Chrome DevTools MCP server for AI coding agents to debug, automate, and analyze 
 </details>
 
 <details>
-<summary>⭐ <strong>claude-code-setup</strong> (19.0k★) — A Claude Code plugin that analyzes codebases to recommend ta...</summary>
+<summary>⭐ <strong>claude-code-setup</strong> (19.1k★) — A Claude Code plugin that analyzes codebases to recommend ta...</summary>
 
 A Claude Code plugin that analyzes codebases to recommend tailored automations like hooks, skills, MCP servers, and subagents.
 
@@ -150,7 +150,7 @@ A comprehensive collection of AI coding skills for Hugging Face Hub, covering mo
 </details>
 
 <details>
-<summary>⭐ <strong>hookify</strong> (19.0k★) — Claude Code plugin for creating custom hooks to prevent unwa...</summary>
+<summary>⭐ <strong>hookify</strong> (19.1k★) — Claude Code plugin for creating custom hooks to prevent unwa...</summary>
 
 Claude Code plugin for creating custom hooks to prevent unwanted coding behaviors using markdown rule files with regex patterns.
 
@@ -162,7 +162,7 @@ Claude Code plugin for creating custom hooks to prevent unwanted coding behavior
 </details>
 
 <details>
-<summary>⭐ <strong>mcp-server-dev</strong> (19.0k★) — Comprehensive guide for building MCP servers and interactive...</summary>
+<summary>⭐ <strong>mcp-server-dev</strong> (19.1k★) — Comprehensive guide for building MCP servers and interactive...</summary>
 
 Comprehensive guide for building MCP servers and interactive UI widgets for Claude, covering deployment models, tool design, and testing.
 
@@ -174,7 +174,7 @@ Comprehensive guide for building MCP servers and interactive UI widgets for Clau
 </details>
 
 <details>
-<summary>⭐ <strong>plugin-dev</strong> (19.0k★) — A comprehensive toolkit with 7 expert skills for developing ...</summary>
+<summary>⭐ <strong>plugin-dev</strong> (19.1k★) — A comprehensive toolkit with 7 expert skills for developing ...</summary>
 
 A comprehensive toolkit with 7 expert skills for developing Claude Code plugins, covering agents, commands, hooks, MCP integration, and best practices
 
@@ -186,7 +186,7 @@ A comprehensive toolkit with 7 expert skills for developing Claude Code plugins,
 </details>
 
 <details>
-<summary>⭐ <strong>skill-creator</strong> (19.0k★) — A plugin for creating, testing, benchmarking, and optimizing...</summary>
+<summary>⭐ <strong>skill-creator</strong> (19.1k★) — A plugin for creating, testing, benchmarking, and optimizing...</summary>
 
 A plugin for creating, testing, benchmarking, and optimizing Claude skills through an iterative development workflow.
 
@@ -245,4 +245,4 @@ Resources are ranked by a composite score (0-100) combining:
 
 ---
 
-*Auto-generated from [catalog/index.json](../index.json). Last updated: 2026-05-10*
+*Auto-generated from [catalog/index.json](../index.json). Last updated: 2026-05-11*

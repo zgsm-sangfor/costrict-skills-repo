@@ -1,6 +1,6 @@
 # 🔌 MCP Servers
 
-> 9216 Model Context Protocol servers that connect AI agents to external tools, databases, and services.
+> 9278 Model Context Protocol servers that connect AI agents to external tools, databases, and services.
 >
 > [Back to main →](../../README.md) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=mcp)
 
@@ -18,7 +18,7 @@
 | 6 | [idosal/git-mcp](https://github.com/idosal/git-mcp) | A remote MCP server that connects AI coding assistants to GitHub repositories fo... | 8.1k | 🟢 Active | 98 | 2026-05-08 | ai-ml | `git`, `agentic-ai`, `agents` |
 | 7 | [IDA Pro MCP](https://github.com/mrexodia/ida-pro-mcp) | MCP server enabling AI-assisted reverse engineering in IDA Pro with comprehensiv... | 6.7k | 🟢 Active | 98 | 2026-04-14 | tooling | `mcp`, `reverse-engineering`, `ida-pro` |
 | 8 | [Desktop Commander MCP](https://github.com/wonderwhy-er/DesktopCommanderMCP) | MCP server enabling Claude to execute terminal commands, manage files, and perfo... | 5.8k | 🟢 Active | 98 | 2026-04-14 | ai-ml | `agent`, `ai`, `mcp` |
-| 9 | [Peekaboo](https://github.com/steipete/Peekaboo) | A macOS-only MCP server for AI agents to capture screenshots and automate GUI in... | 3.5k | 🟢 Active | 98 | 2026-05-09 | mobile | `ai`, `macos`, `mcp` |
+| 9 | [Peekaboo](https://github.com/steipete/Peekaboo) | A macOS-only MCP server for AI agents to capture screenshots and automate GUI in... | 3.6k | 🟢 Active | 98 | 2026-05-09 | mobile | `ai`, `macos`, `mcp` |
 | 10 | [Godot MCP](https://github.com/Coding-Solo/godot-mcp) | MCP server enabling AI agents to interact with Godot game engine for launching, ... | 2.7k | 🟢 Active | 98 | 2026-03-18 | backend | `ai`, `mcp`, `godot` |
 | 11 | [Supabase MCP Server](https://github.com/supabase-community/supabase-mcp) | MCP server connecting Supabase database services to AI coding assistants for sch... | 2.6k | 🟢 Active | 98 | 2026-04-13 | database | — |
 | 12 | [mcp-proxy](https://github.com/sparfenyuk/mcp-proxy) | MCP transport bridge enabling communication between stdio and SSE/StreamableHTTP... | 2.4k | 🟢 Active | 98 | 2026-04-13 | tooling | `proxy`, `mcp`, `sse` |
@@ -43,13 +43,13 @@
 | 31 | [🪐✨ Jupyter MCP Server](https://github.com/datalayer/jupyter-mcp-server) | MCP server enabling AI to interact with Jupyter notebooks in real-time for code ... | 959 | 🟢 Active | 97 | 2026-04-05 | ai-ml | `tools`, `ai`, `jupyter` |
 | 32 | [MCP Framework](https://github.com/QuantGeekDev/mcp-framework) | A TypeScript framework for building MCP servers with automatic tool discovery, m... | 907 | 🟢 Active | 97 | 2026-04-05 | frontend | `mcp`, `claude`, `llm` |
 | 33 | [Kubectl MCP Tool](https://github.com/rohitg00/kubectl-mcp-server) | MCP server enabling natural language Kubernetes management through AI assistants... | 856 | 🟢 Active | 97 | 2026-04-08 | devops | `kubernetes`, `devops`, `ai` |
-| 34 | [ClickHouse/mcp-clickhouse](https://github.com/ClickHouse/mcp-clickhouse) | Official ClickHouse MCP server enabling SQL queries and schema exploration throu... | 775 | 🟢 Active | 97 | 2026-05-08 | tooling | — |
+| 34 | [ClickHouse/mcp-clickhouse](https://github.com/ClickHouse/mcp-clickhouse) | Official ClickHouse MCP server enabling SQL queries and schema exploration throu... | 776 | 🟢 Active | 97 | 2026-05-08 | tooling | — |
 | 35 | [clojure-mcp](https://github.com/bhauman/clojure-mcp) | MCP server providing REPL integration and Clojure-aware editing tools for AI-ass... | 744 | 🟢 Active | 97 | 2026-04-20 | tooling | `mcp-server`, `clojure`, `repl` |
 | 36 | [sentry-mcp](https://github.com/getsentry/sentry-mcp) | An MCP server that connects Sentry error tracking and performance monitoring to ... | 609 | 🟢 Active | 97 | 2026-04-15 | ai-ml | `tag-production`, `mcp-server` |
-| 37 | [Google Cloud Run](https://github.com/GoogleCloudPlatform/cloud-run-mcp) | Official MCP server enabling AI agents to deploy applications to Google Cloud Ru... | 607 | 🟢 Active | 97 | 2026-05-09 | backend | `go`, `google-cloud`, `google-cloud-run` |
+| 37 | [Google Cloud Run](https://github.com/GoogleCloudPlatform/cloud-run-mcp) | Official MCP server enabling AI agents to deploy applications to Google Cloud Ru... | 606 | 🟢 Active | 97 | 2026-05-09 | backend | `go`, `google-cloud`, `google-cloud-run` |
 | 38 | [Neon](https://github.com/neondatabase/mcp-server-neon) | Official Neon MCP server enabling natural language interaction with Neon Postgre... | 596 | 🟢 Active | 97 | 2026-05-08 | database | `postgres` |
-| 39 | [OpenAPI to MCP Generator (openapi-mcp-generator)](https://github.com/harsha-iiiv/openapi-mcp-generator) | CLI tool that converts OpenAPI 3.0+ specifications into MCP-compatible servers w... | 547 | 🟢 Active | 97 | 2026-03-03 | backend | — |
-| 40 | [SonarQube](https://github.com/SonarSource/sonarqube-mcp-server) | MCP server integrating AI agents with SonarQube for code quality, security analy... | 547 | 🟢 Active | 97 | 2026-05-08 | ai-ml | `agent`, `ai`, `mcp` |
+| 39 | [SonarQube](https://github.com/SonarSource/sonarqube-mcp-server) | MCP server integrating AI agents with SonarQube for code quality, security analy... | 549 | 🟢 Active | 97 | 2026-05-08 | ai-ml | `agent`, `ai`, `mcp` |
+| 40 | [OpenAPI to MCP Generator (openapi-mcp-generator)](https://github.com/harsha-iiiv/openapi-mcp-generator) | CLI tool that converts OpenAPI 3.0+ specifications into MCP-compatible servers w... | 547 | 🟢 Active | 97 | 2026-03-03 | backend | — |
 | 41 | [MCP-NixOS - Because Your AI Assistant Shouldn't Hallucinate About Packages](https://github.com/utensils/mcp-nixos) | MCP server providing AI assistants with real-time NixOS package, option, and con... | 516 | 🟢 Active | 97 | 2026-04-03 | backend | `python`, `nix`, `nixos` |
 | 42 | [🧠 Vibe Check MCP](https://github.com/PV-Bhat/vibe-check-mcp-server) | MCP server providing research-backed AI agent oversight to prevent reasoning err... | 480 | 🟢 Active | 97 | 2026-03-30 | backend | `automation`, `mcp`, `error-handling` |
 | 43 | [MotherDuck's DuckDB MCP Server](https://github.com/motherduckdb/mcp-server-motherduck) | MCP server enabling AI assistants to execute SQL queries and manage DuckDB/Mothe... | 447 | 🟢 Active | 97 | 2026-04-14 | ai-ml | `ai`, `duckdb`, `motherduck` |
@@ -282,7 +282,7 @@ MCP server enabling Claude to execute terminal commands, manage files, and perfo
 </details>
 
 <details>
-<summary>⭐ <strong>Peekaboo</strong> (3.5k★) — A macOS-only MCP server for AI agents to capture screenshots...</summary>
+<summary>⭐ <strong>Peekaboo</strong> (3.6k★) — A macOS-only MCP server for AI agents to capture screenshots...</summary>
 
 A macOS-only MCP server for AI agents to capture screenshots and automate GUI interactions via CLI or MCP.
 
@@ -332,4 +332,4 @@ Resources are ranked by a composite score (0-100) combining:
 
 ---
 
-*Auto-generated from [catalog/index.json](../index.json). Last updated: 2026-05-10*
+*Auto-generated from [catalog/index.json](../index.json). Last updated: 2026-05-11*
