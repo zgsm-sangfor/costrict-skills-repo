@@ -25,7 +25,10 @@ export interface CatalogItem {
     agents_count: number
     commands_count: number
     mcp_servers_count: number
+    hooks_count?: number
     skills_namespaces: string[]
+    hook_events?: string[]
+    mcp_server_names?: string[]
   }
   bundled_in?: string
   // MCP installability (only present when type==='mcp' and entry has been LLM-evaluated)

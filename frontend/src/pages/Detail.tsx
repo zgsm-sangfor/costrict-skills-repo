@@ -141,18 +141,19 @@ export default function Detail() {
         </div>
       )}
 
-      {/* Plugin bundle: skills/agents/commands inside this plugin */}
+      {/* Plugin bundle: skills/agents/commands/mcp_servers/hooks inside this plugin */}
       {item.type === 'plugin' && item.bundle && (
         item.bundle.skills_count > 0 ||
         item.bundle.agents_count > 0 ||
         item.bundle.commands_count > 0 ||
-        item.bundle.mcp_servers_count > 0
+        item.bundle.mcp_servers_count > 0 ||
+        (item.bundle.hooks_count ?? 0) > 0
       ) && (
         <div className="glass rounded-2xl p-6">
           <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-4">
             🧩 {lang === 'zh' ? '插件包内容' : 'Plugin Bundle'}
           </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-4">
             {item.bundle.skills_count > 0 && (
               <div className="rounded-xl bg-pink-50 dark:bg-pink-900/30 px-4 py-3">
                 <div className="text-2xl font-bold text-pink-700 dark:text-pink-300">{item.bundle.skills_count}</div>
@@ -177,9 +178,15 @@ export default function Detail() {
                 <div className="text-xs text-emerald-600/80 dark:text-emerald-400/80">MCP</div>
               </div>
             )}
+            {(item.bundle.hooks_count ?? 0) > 0 && (
+              <div className="rounded-xl bg-amber-50 dark:bg-amber-900/30 px-4 py-3">
+                <div className="text-2xl font-bold text-amber-700 dark:text-amber-300">{item.bundle.hooks_count}</div>
+                <div className="text-xs text-amber-600/80 dark:text-amber-400/80">{lang === 'zh' ? '钩子' : 'Hooks'}</div>
+              </div>
+            )}
           </div>
           {item.bundle.skills_namespaces && item.bundle.skills_namespaces.length > 0 && (
-            <div>
+            <div className="mb-3">
               <h4 className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">
                 {lang === 'zh' ? '内含技能' : 'Bundled skills'}
               </h4>
@@ -192,6 +199,34 @@ export default function Detail() {
                     </span>
                   )
                 })}
+              </div>
+            </div>
+          )}
+          {item.bundle.mcp_server_names && item.bundle.mcp_server_names.length > 0 && (
+            <div className="mb-3">
+              <h4 className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">
+                {lang === 'zh' ? '内含 MCP 服务' : 'Bundled MCP servers'}
+              </h4>
+              <div className="flex flex-wrap gap-1.5">
+                {item.bundle.mcp_server_names.map(name => (
+                  <span key={name} className="text-xs px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300 font-mono">
+                    {name}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+          {item.bundle.hook_events && item.bundle.hook_events.length > 0 && (
+            <div>
+              <h4 className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">
+                {lang === 'zh' ? '触发事件' : 'Hook events'}
+              </h4>
+              <div className="flex flex-wrap gap-1.5">
+                {item.bundle.hook_events.map(evt => (
+                  <span key={evt} className="text-xs px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300 font-mono">
+                    {evt}
+                  </span>
+                ))}
               </div>
             </div>
           )}
