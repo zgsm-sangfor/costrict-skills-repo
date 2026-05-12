@@ -616,7 +616,18 @@ jobs:
           else
             git commit -m "[chore] 每周自动同步上游资源 $(date +%Y-%m-%d)"
             git stash --include-untracked
-            git pull --rebase
-            git push
+            # Use `-X theirs` so our newly-aggregated catalog wins on conflict
+            # when a previous aggregate (e.g. from a cancelled / overlapping
+            # run) raced to push first. Note: in rebase context, "theirs" =
+            # the commit being replayed (this aggregate), NOT upstream.
+            # Catalog / README / search-index / maintenance/eval_failures.json
+            # are deterministic outputs of this run's enrichment artifacts +
+            # union with the base ledger seeded from sync-data; the newer run
+            # has strictly fresher data, so always-prefer-ours is safe.
+            git pull --rebase --strategy-option=theirs
+            # Retry push once in case another aggregate pushed between our
+            # pull --rebase and our push (rare but possible with overlapping
+            # runs).
+            git push || (git pull --rebase --strategy-option=theirs && git push)
             git stash pop || true
           fi
