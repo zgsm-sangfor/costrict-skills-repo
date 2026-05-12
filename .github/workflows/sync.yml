@@ -503,6 +503,18 @@ jobs:
 
           source_count = 0
           for lp in ledger_paths:
+              # Identify which cell type this artifact belongs to so we can
+              # filter cross-type pollution. A cell that happened to load a
+              # base ledger with matching rubric_version (e.g. mcp cell when
+              # base was last published by mcp) will save back the *entire*
+              # ledger including other types' records — those are stale copies
+              # of base, not this run's authoritative state, and must not be
+              # union'd back in.
+              cell_type = None
+              for part in lp.parts:
+                  if part.startswith("enrichment-"):
+                      cell_type = part[len("enrichment-"):]
+                      break
               try:
                   data = json.loads(lp.read_text(encoding="utf-8"))
               except Exception as exc:
@@ -513,8 +525,14 @@ jobs:
                   merged["rubric_version"] = str(data.get("rubric_version", ""))
               if str(data.get("updated_at", "")) > merged["updated_at"]:
                   merged["updated_at"] = str(data.get("updated_at", ""))
+              dropped_cross_type = 0
               for eid, rec in (data.get("failures") or {}).items():
                   if not isinstance(rec, dict):
+                      continue
+                  # Only keep records whose type matches this cell's type.
+                  # Cross-type records here are stale base-ledger leakage.
+                  if cell_type and rec.get("type") != cell_type:
+                      dropped_cross_type += 1
                       continue
                   prev = merged["failures"].get(eid)
                   if prev is None:
@@ -523,6 +541,11 @@ jobs:
                       # Conflict: keep the higher attempt_count + later last_failed_at.
                       if int(rec.get("attempt_count", 0)) > int(prev.get("attempt_count", 0)):
                           merged["failures"][eid] = rec
+              if dropped_cross_type:
+                  print(
+                      f"  cell={cell_type}: dropped {dropped_cross_type} "
+                      f"cross-type records (stale base ledger leakage)"
+                  )
 
           out_path = Path("catalog/maintenance/eval_failures.json")
           out_path.parent.mkdir(parents=True, exist_ok=True)
