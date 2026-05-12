@@ -183,3 +183,94 @@ class TestFetchURLConstruction:
             "https://raw.githubusercontent.com/owner/repo/develop/packages/core/README.md",
             "https://raw.githubusercontent.com/owner/repo/develop/packages/core/SKILL.md",
         ]
+
+
+# ---------------------------------------------------------------------------
+# _slugify_heading + _extract_section
+# ---------------------------------------------------------------------------
+
+
+class TestSlugifyHeading:
+    """GitHub anchor algorithm: per-space → dash, no dash collapse.
+
+    Regression guard for f/prompts.chat headings whose URL fragments contain
+    consecutive dashes derived from ``Foo - Bar`` (literal space-dash-space)
+    or ``Foo & Bar`` (& stripped, surrounding spaces preserved).
+    """
+
+    def test_plain_heading(self) -> None:
+        assert GitHubFetcher._slugify_heading("## Ethereum Developer") == "ethereum-developer"
+
+    def test_heading_with_literal_dash_preserves_triple(self) -> None:
+        # " - " has space-dash-space → "---" per GitHub
+        result = GitHubFetcher._slugify_heading(
+            "## Academic Paper Figure Generator - Nano Banana Pro"
+        )
+        assert result == "academic-paper-figure-generator---nano-banana-pro"
+
+    def test_heading_with_ampersand_preserves_double(self) -> None:
+        # " & " → ampersand stripped, surrounding spaces remain → "--"
+        result = GitHubFetcher._slugify_heading(
+            "## AI Performance & Deep Testing Engineer"
+        )
+        assert result == "ai-performance--deep-testing-engineer"
+
+    def test_heading_with_colon_strips_punct(self) -> None:
+        # ":" stripped, surrounding space → "--"
+        result = GitHubFetcher._slugify_heading("## AI2SQL: SQL Model & Query Generator")
+        assert result == "ai2sql-sql-model--query-generator"
+
+    def test_heading_with_parens(self) -> None:
+        # "(" ")" stripped, surrounding spaces preserved
+        result = GitHubFetcher._slugify_heading("## Foo (Bar)")
+        # " (" → space + stripped paren = 1 space; ")" trailing stripped.
+        # Result: "foo-bar"
+        assert result == "foo-bar"
+
+    def test_existing_dash_in_word_not_doubled(self) -> None:
+        # "AI-Powered" has a single dash inside word — should stay single
+        result = GitHubFetcher._slugify_heading("## AI-Powered Tools")
+        assert result == "ai-powered-tools"
+
+
+class TestExtractSection:
+    """End-to-end: given full PROMPTS.md-style content + a real GitHub anchor
+    slug (with consecutive dashes), extract the matching section."""
+
+    def test_extracts_section_with_triple_dash_anchor(self) -> None:
+        text = (
+            "# Awesome ChatGPT Prompts\n\n"
+            "## Ethereum Developer\n\n"
+            "First section content.\n\n"
+            "## Academic Paper Figure Generator - Nano Banana Pro\n\n"
+            "Target section content here.\n\n"
+            "## Linux Terminal\n\n"
+            "Third section.\n"
+        )
+        result = GitHubFetcher._extract_section(
+            text, "academic-paper-figure-generator---nano-banana-pro"
+        )
+        assert result is not None
+        assert "Academic Paper Figure Generator - Nano Banana Pro" in result
+        assert "Target section content here." in result
+        # Should not bleed into next section
+        assert "Linux Terminal" not in result
+
+    def test_extracts_section_with_double_dash_anchor(self) -> None:
+        text = (
+            "## AI Performance & Deep Testing Engineer\n\n"
+            "Body text.\n\n"
+            "## Next Section\n"
+        )
+        result = GitHubFetcher._extract_section(
+            text, "ai-performance--deep-testing-engineer"
+        )
+        assert result is not None
+        assert "Body text." in result
+
+    def test_missing_anchor_returns_none(self) -> None:
+        text = "## Ethereum Developer\n\nContent.\n"
+        assert (
+            GitHubFetcher._extract_section(text, "nonexistent-slug")
+            is None
+        )

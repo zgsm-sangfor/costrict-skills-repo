@@ -176,6 +176,36 @@ class GitHubFetcher:
         return url[idx + 1 :]
 
     @staticmethod
+    def _slugify_heading(heading: str) -> str:
+        """Convert a Markdown heading line into a GitHub-compatible anchor slug.
+
+        Mirrors jch/html-pipeline's TableOfContentsFilter (the algorithm GitHub
+        actually uses for ``##`` heading anchors):
+
+        1. Lowercase.
+        2. Remove characters that are not word chars, dashes, or spaces
+           (drops punctuation like ``&``, ``(``, ``)``, ``#``, ``:``, ...).
+        3. Replace each space with a dash **per-character**, NOT collapsing
+           consecutive dashes. ``Foo - Bar`` therefore becomes ``foo---bar``
+           (3 dashes), matching the URL fragment GitHub actually emits.
+        4. Strip leading dashes left over from the ``## `` prefix.
+
+        Note: an earlier version collapsed runs of dashes with ``re.sub(r'-+',
+        '-', ...)``, which lost information for headings containing punctuation
+        or literal dashes (e.g. ``Foo & Bar``, ``Foo - Bar``). Real GitHub
+        anchors preserve those extra dashes, so collapse-style slugifiers fail
+        to match for ~10% of f/prompts.chat headings.
+        """
+        s = heading.lower()
+        # ``\w`` is unicode-aware in Python 3 re by default; this keeps CJK and
+        # other unicode word chars while dropping ASCII punctuation. We
+        # explicitly keep ``-`` and `` `` so the per-space replacement below
+        # can preserve dash multiplicity.
+        s = re.sub(r"[^\w\- ]", "", s)
+        s = s.replace(" ", "-")
+        return s.lstrip("-")
+
+    @staticmethod
     def _extract_section(text: str, slug: str) -> str | None:
         """Extract a Markdown section matching *slug* from *text*.
 
@@ -184,16 +214,7 @@ class GitHubFetcher:
         """
         for m in re.finditer(r"^(##\s+.+)$", text, re.MULTILINE):
             heading = m.group(1)
-            # GitHub slug: lowercase, strip non-alnum except spaces/hyphens,
-            # spaces → hyphens
-            h_slug = re.sub(r"[^a-z0-9 -]", "", heading.lower())
-            h_slug = re.sub(r"\s+", "-", h_slug).strip("-")
-            h_slug = re.sub(r"-+", "-", h_slug)
-            # Remove leading "##-" or "## " artifact
-            if h_slug.startswith("--"):
-                h_slug = h_slug.lstrip("-")
-
-            if h_slug == slug:
+            if GitHubFetcher._slugify_heading(heading) == slug:
                 start = m.start()
                 # Find next ## heading
                 rest = text[m.end() :]
