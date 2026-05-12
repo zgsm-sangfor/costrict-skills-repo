@@ -711,33 +711,6 @@
       "next_retry_after": "2026-05-17T10:01:16.867010+00:00",
       "type": "mcp"
     },
-    "io-github-dailyaiagents-cpu-launchd-drift-recovery-2ef92e45": {
-      "attempt_count": 1,
-      "first_failed_at": "2026-05-12T03:25:00.570414+00:00",
-      "last_error_kind": "EvalRunnerSkip",
-      "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-12T03:25:00.570414+00:00",
-      "next_retry_after": "2026-05-12T03:25:00.570414+00:00",
-      "type": "mcp"
-    },
-    "io-github-dailyaiagents-cpu-monthly-burn-cd8e44a3": {
-      "attempt_count": 1,
-      "first_failed_at": "2026-05-12T03:25:00.570760+00:00",
-      "last_error_kind": "EvalRunnerSkip",
-      "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-12T03:25:00.570760+00:00",
-      "next_retry_after": "2026-05-12T03:25:00.570760+00:00",
-      "type": "mcp"
-    },
-    "io-github-dailyaiagents-cpu-stale-gate-janitor-742ead1c": {
-      "attempt_count": 1,
-      "first_failed_at": "2026-05-12T03:25:00.572284+00:00",
-      "last_error_kind": "EvalRunnerSkip",
-      "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-12T03:25:00.572284+00:00",
-      "next_retry_after": "2026-05-12T03:25:00.572284+00:00",
-      "type": "mcp"
-    },
     "io-github-serpapi-serpapi-mcp-87d22508": {
       "attempt_count": 2,
       "first_failed_at": "2026-05-10T13:57:42.399724+00:00",
@@ -1803,5 +1776,5 @@
   },
   "rubric_version": "3.b46c05b2",
   "schema_version": 1,
-  "updated_at": "2026-05-12T04:10:02.406377+00:00"
+  "updated_at": "2026-05-12T05:07:56.284417+00:00"
 }

@@ -40,7 +40,7 @@
 | 28 | [impeccable](https://github.com/pbakaus/impeccable) | A Claude Code plugin providing 23 commands for AI-assisted frontend design fluen... | claude-plugins.dev | 🟢 Active | 97 | 2026-04-28 | tooling | `design`, `frontend`, `ui` |
 | 29 | [beads](https://github.com/gastownhall/beads) | Dolt-powered distributed graph issue tracker designed for AI coding agents with ... | claude-plugins.dev | 🟢 Active | 97 | 2026-04-24 | ai-ml | — |
 | 30 | [planning-with-files](https://github.com/OthmanAdi/planning-with-files) | A plugin for AI coding assistants that uses persistent markdown files for struct... | claude-plugins.dev | 🟢 Active | 97 | 2026-05-01 | documentation | — |
-| 31 | [beads](https://github.com/steveyegge/beads) | A distributed graph issue tracker and persistent memory system for AI coding age... | claude-plugins.dev | 🟢 Active | 97 | 2026-03-25 | ai-ml | `issue-tracker`, `ai-agents`, `developer-tools` |
+| 31 | [beads](https://github.com/steveyegge/beads) | A distributed graph issue tracker and persistent memory system for AI coding age... | claude-plugins.dev | 🟢 Active | 97 | 2026-03-25 | ai-ml | — |
 | 32 | [pua](https://github.com/tanweai/pua) | A Claude Code plugin that enhances AI coding workflows with corporate pressure t... | claude-plugins.dev | 🟢 Active | 97 | 2026-05-09 | security | — |
 | 33 | [agent-skills](https://github.com/addyosmani/agent-skills) | A comprehensive plugin for AI coding agents providing production-grade engineeri... | claude-plugins.dev | 🟢 Active | 97 | 2026-04-16 | tooling | — |
 | 34 | [codex](https://github.com/openai/codex-plugin-cc) | A plugin for Claude Code that integrates OpenAI Codex for code reviews and task ... | claude-plugins.dev | 🟢 Active | 97 | 2026-04-16 | tooling | — |

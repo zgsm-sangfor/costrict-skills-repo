@@ -110,8 +110,8 @@
     },
     "bundle": {
       "skills_count": 528,
-      "commands_count": 278,
-      "agents_count": 189,
+      "commands_count": 280,
+      "agents_count": 191,
       "mcp_servers_count": 6,
       "skills_namespaces": [
         "ecc:agent-introspection-debugging",
@@ -643,7 +643,7 @@
         "ecc:workspace-surface-audit",
         "ecc:x-api"
       ],
-      "hooks_count": 26,
+      "hooks_count": 28,
       "hook_events": [
         "PostToolUse",
         "PostToolUseFailure",
@@ -702,8 +702,8 @@
     },
     "bundle": {
       "skills_count": 528,
-      "commands_count": 278,
-      "agents_count": 189,
+      "commands_count": 280,
+      "agents_count": 191,
       "mcp_servers_count": 6,
       "skills_namespaces": [
         "ecc:agent-introspection-debugging",
@@ -1235,7 +1235,7 @@
         "ecc:workspace-surface-audit",
         "ecc:x-api"
       ],
-      "hooks_count": 26,
+      "hooks_count": 28,
       "hook_events": [
         "PostToolUse",
         "PostToolUseFailure",
@@ -3050,8 +3050,8 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 80,
-    "pushed_at": "2026-05-11T21:20:17Z",
+    "stars": 81,
+    "pushed_at": "2026-05-12T03:45:00Z",
     "version": ""
   },
   {
@@ -3087,7 +3087,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -3451,7 +3451,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -3599,7 +3599,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 664,
+    "stars": 665,
     "pushed_at": "2026-04-14T19:49:59Z",
     "version": ""
   },
@@ -3716,7 +3716,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 570,
+    "stars": 574,
     "pushed_at": "2026-05-11T14:19:41Z",
     "version": ""
   },
@@ -3795,7 +3795,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 570,
+    "stars": 574,
     "pushed_at": "2026-05-11T14:19:41Z",
     "version": ""
   },
@@ -3834,7 +3834,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 570,
+    "stars": 574,
     "pushed_at": "2026-05-11T14:19:41Z",
     "version": ""
   },
@@ -4292,8 +4292,8 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 39266,
-    "pushed_at": "2026-05-11T19:16:54Z",
+    "stars": 39278,
+    "pushed_at": "2026-05-12T04:36:03Z",
     "version": ""
   },
   {
@@ -4368,7 +4368,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -4407,7 +4407,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -4446,7 +4446,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -4588,7 +4588,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 1510,
+    "stars": 1511,
     "pushed_at": "2026-05-04T10:50:16Z",
     "version": ""
   },
@@ -4745,7 +4745,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -4782,7 +4782,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -4819,7 +4819,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -4898,7 +4898,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -4939,7 +4939,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -5028,7 +5028,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -5068,7 +5068,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -5568,7 +5568,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 6028,
+    "stars": 6029,
     "pushed_at": "2026-05-11T11:01:42Z",
     "version": ""
   },
@@ -5610,7 +5610,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "0.0.4"
   },
@@ -5651,7 +5651,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 4412,
+    "stars": 4413,
     "pushed_at": "2026-05-11T17:23:37Z",
     "version": ""
   },
@@ -5690,7 +5690,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -5771,7 +5771,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "0.0.1"
   },
@@ -5853,7 +5853,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -5957,7 +5957,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 1393,
+    "stars": 1394,
     "pushed_at": "2026-04-28T19:01:21Z",
     "version": ""
   },
@@ -5999,7 +5999,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -6084,7 +6084,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -6167,7 +6167,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -6208,7 +6208,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -6247,7 +6247,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -6286,7 +6286,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -6330,7 +6330,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -6385,7 +6385,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 10464,
+    "stars": 10466,
     "pushed_at": "2026-05-11T09:05:11Z",
     "version": ""
   },
@@ -6427,7 +6427,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "0.1.0"
   },
@@ -6510,7 +6510,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -6591,7 +6591,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -6630,7 +6630,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -6669,7 +6669,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -6745,7 +6745,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -6898,7 +6898,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -6937,7 +6937,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -6978,7 +6978,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -7471,7 +7471,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 372,
+    "stars": 373,
     "pushed_at": "2026-01-22T19:21:32Z",
     "version": ""
   },
@@ -7551,7 +7551,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 360,
+    "stars": 362,
     "pushed_at": "2026-05-11T17:03:14Z",
     "version": ""
   },
@@ -7629,7 +7629,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -7805,7 +7805,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -7846,7 +7846,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -7891,7 +7891,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -8100,7 +8100,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -8221,7 +8221,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -8492,7 +8492,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -8647,7 +8647,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -8686,7 +8686,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -8886,7 +8886,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -9001,7 +9001,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -9075,7 +9075,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -9114,7 +9114,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 5,
+    "stars": 6,
     "pushed_at": "2026-04-07T17:39:56Z",
     "version": ""
   },
@@ -9192,7 +9192,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -9605,7 +9605,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 186819,
+    "stars": 186929,
     "pushed_at": "2026-05-12T00:50:01Z",
     "version": ""
   },
@@ -9644,7 +9644,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -9686,7 +9686,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "0.0.6"
   },
@@ -9727,7 +9727,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -9863,7 +9863,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19136,
+    "stars": 19145,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -10065,7 +10065,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 161,
+    "stars": 162,
     "pushed_at": "2026-05-07T21:00:01Z",
     "version": ""
   },
@@ -10609,7 +10609,7 @@
     "stars": 131323,
     "pushed_at": "2026-05-10T09:25:22Z",
     "version": "1.0.0",
-    "downloads": 7573,
+    "downloads": 7574,
     "verified": false
   },
   {
@@ -10702,7 +10702,7 @@
     "stars": 65128,
     "pushed_at": "2026-02-08T01:48:36Z",
     "version": "1.0.0",
-    "downloads": 1225,
+    "downloads": 1226,
     "verified": false
   },
   {
@@ -14317,7 +14317,7 @@
     "stars": 18777,
     "pushed_at": "2026-05-07T18:23:30Z",
     "version": "1.0.0",
-    "downloads": 54,
+    "downloads": 55,
     "verified": false
   },
   {
@@ -17941,7 +17941,7 @@
     "stars": 18777,
     "pushed_at": "2026-05-07T18:23:32Z",
     "version": "1.0.0",
-    "downloads": 158,
+    "downloads": 159,
     "verified": false
   },
   {
@@ -19103,8 +19103,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:46Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -19144,8 +19144,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -19183,8 +19183,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:46Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -19222,8 +19222,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -19263,8 +19263,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:46Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -19302,8 +19302,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -19341,8 +19341,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 20,
     "verified": false
@@ -19380,8 +19380,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:46Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -19419,8 +19419,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -19461,8 +19461,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 3,
     "verified": false
@@ -19500,8 +19500,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -19539,8 +19539,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -19578,8 +19578,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -19617,8 +19617,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 2,
     "verified": false
@@ -19656,8 +19656,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 1,
     "verified": false
@@ -19695,8 +19695,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -19734,8 +19734,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 13,
     "verified": false
@@ -19773,8 +19773,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -19812,8 +19812,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -19851,8 +19851,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 2,
     "verified": false
@@ -19890,8 +19890,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -19929,8 +19929,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:46Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 1,
     "verified": false
@@ -19968,8 +19968,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 12,
     "verified": false
@@ -20007,8 +20007,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -20046,8 +20046,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -20085,8 +20085,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 33,
     "verified": false
@@ -20124,8 +20124,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:46Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -20163,8 +20163,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 4,
     "verified": false
@@ -20202,8 +20202,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -20241,8 +20241,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -20280,8 +20280,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 1,
     "verified": false
@@ -20319,8 +20319,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -20358,8 +20358,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:46Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 2,
     "verified": false
@@ -20397,8 +20397,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -20436,8 +20436,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:46Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -20478,8 +20478,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -20517,8 +20517,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 3,
     "verified": false
@@ -20556,8 +20556,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:46Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -20595,8 +20595,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 4,
     "verified": false
@@ -20634,8 +20634,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 4,
     "verified": false
@@ -20673,8 +20673,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -20712,8 +20712,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:46Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -20751,8 +20751,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -20790,8 +20790,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:46Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -20829,8 +20829,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -20870,8 +20870,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -20909,8 +20909,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 12030,
-    "pushed_at": "2026-05-12T01:26:42Z",
+    "stars": 12032,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -25276,8 +25276,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 27908,
-    "pushed_at": "2026-05-12T02:26:46Z",
+    "stars": 27918,
+    "pushed_at": "2026-05-12T03:26:45Z",
     "version": "1.0.0",
     "downloads": 54,
     "verified": false
@@ -26084,7 +26084,7 @@
     "stars": 8979,
     "pushed_at": "2026-02-16T14:26:42Z",
     "version": "2.34.0",
-    "downloads": 5065,
+    "downloads": 5066,
     "verified": true
   },
   {
@@ -26727,8 +26727,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 30485,
-    "pushed_at": "2026-05-12T01:27:02Z",
+    "stars": 30527,
+    "pushed_at": "2026-05-12T04:26:47Z",
     "version": "1.0.1",
     "downloads": 143,
     "verified": false
@@ -26891,8 +26891,8 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 14187,
-    "pushed_at": "2026-05-12T01:27:06Z",
+    "stars": 14203,
+    "pushed_at": "2026-05-12T04:26:47Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -26918,11 +26918,14 @@
       "plugin_name": "all-skills"
     },
     "bundle": {
-      "skills_count": 0,
+      "skills_count": 2,
       "commands_count": 0,
       "agents_count": 0,
       "mcp_servers_count": 0,
-      "skills_namespaces": [],
+      "skills_namespaces": [
+        "all-skills:mcp-builder",
+        "all-skills:chatgpt-app-builder"
+      ],
       "hooks_count": 0,
       "hook_events": [],
       "mcp_server_names": [],
@@ -26957,11 +26960,13 @@
       "plugin_name": "chatgpt-app-builder"
     },
     "bundle": {
-      "skills_count": 0,
+      "skills_count": 1,
       "commands_count": 0,
       "agents_count": 0,
       "mcp_servers_count": 0,
-      "skills_namespaces": [],
+      "skills_namespaces": [
+        "chatgpt-app-builder:chatgpt-app-builder"
+      ],
       "hooks_count": 0,
       "hook_events": [],
       "mcp_server_names": [],
@@ -26996,11 +27001,13 @@
       "plugin_name": "mcp-builder"
     },
     "bundle": {
-      "skills_count": 0,
+      "skills_count": 1,
       "commands_count": 0,
       "agents_count": 0,
       "mcp_servers_count": 0,
-      "skills_namespaces": [],
+      "skills_namespaces": [
+        "mcp-builder:mcp-builder"
+      ],
       "hooks_count": 0,
       "hook_events": [],
       "mcp_server_names": [],
@@ -27047,9 +27054,9 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 53231,
-    "pushed_at": "2026-04-16T17:43:49.946Z",
-    "version": "0.1.0",
+    "stars": 55442,
+    "pushed_at": "2026-05-12T03:26:48Z",
+    "version": "0.1.2",
     "downloads": 1,
     "verified": false
   },
@@ -27074,14 +27081,18 @@
       "plugin_name": "mempalace"
     },
     "bundle": {
-      "skills_count": 0,
-      "commands_count": 0,
+      "skills_count": 1,
+      "commands_count": 5,
       "agents_count": 0,
-      "mcp_servers_count": 0,
-      "skills_namespaces": [],
+      "mcp_servers_count": 1,
+      "skills_namespaces": [
+        "mempalace:mempalace"
+      ],
       "hooks_count": 0,
       "hook_events": [],
-      "mcp_server_names": [],
+      "mcp_server_names": [
+        "mempalace"
+      ],
       "is_marketplace_repo": false
     },
     "manifest_completeness": 1.0,
@@ -27191,8 +27202,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 14367,
-    "pushed_at": "2026-05-12T01:26:46Z",
+    "stars": 14389,
+    "pushed_at": "2026-05-12T04:26:43Z",
     "version": "1.0.121",
     "downloads": 1,
     "verified": false
@@ -27901,7 +27912,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 186819,
+    "stars": 186929,
     "pushed_at": "2026-05-12T00:50:01Z",
     "version": "5.1.0"
   },
@@ -27996,7 +28007,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 186819,
+    "stars": 186929,
     "pushed_at": "2026-05-12T00:50:01Z",
     "version": "0.0.2026021001"
   },
@@ -29139,9 +29150,9 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 20049,
-    "pushed_at": "2026-05-01T16:57:34Z",
-    "version": "2.36.0",
+    "stars": 20937,
+    "pushed_at": "2026-05-12T03:26:48Z",
+    "version": "2.37.0",
     "downloads": 36,
     "verified": false
   },
@@ -29251,11 +29262,13 @@
       "plugin_name": "impeccable"
     },
     "bundle": {
-      "skills_count": 0,
+      "skills_count": 1,
       "commands_count": 0,
-      "agents_count": 0,
+      "agents_count": 35,
       "mcp_servers_count": 0,
-      "skills_namespaces": [],
+      "skills_namespaces": [
+        "impeccable:impeccable"
+      ],
       "hooks_count": 0,
       "hook_events": [],
       "mcp_server_names": [],
@@ -31116,8 +31129,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 9971,
-    "pushed_at": "2026-05-12T02:26:48Z",
+    "stars": 9972,
+    "pushed_at": "2026-05-12T04:26:47Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -31182,11 +31195,13 @@
       "plugin_name": "slidev"
     },
     "bundle": {
-      "skills_count": 0,
+      "skills_count": 1,
       "commands_count": 0,
       "agents_count": 0,
       "mcp_servers_count": 0,
-      "skills_namespaces": [],
+      "skills_namespaces": [
+        "slidev:slidev"
+      ],
       "hooks_count": 0,
       "hook_events": [],
       "mcp_server_names": [],
@@ -31194,8 +31209,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 46379,
-    "pushed_at": "2026-05-12T01:27:02Z",
+    "stars": 46386,
+    "pushed_at": "2026-05-12T04:26:47Z",
     "version": "1.0.0",
     "downloads": 3,
     "verified": false
@@ -31553,8 +31568,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:52Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.2.0",
     "downloads": 1,
     "verified": false
@@ -31592,8 +31607,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.0.1",
     "downloads": 3,
     "verified": false
@@ -31631,8 +31646,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.1.0",
     "downloads": 2,
     "verified": false
@@ -31670,8 +31685,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.1.1",
     "downloads": 1,
     "verified": false
@@ -31709,8 +31724,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.0.0",
     "downloads": 9,
     "verified": false
@@ -31748,8 +31763,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.1.2",
     "downloads": 0,
     "verified": false
@@ -31787,8 +31802,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.0.0",
     "downloads": 2,
     "verified": false
@@ -31826,8 +31841,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "0.1.0",
     "downloads": 4,
     "verified": false
@@ -31865,8 +31880,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.1.0",
     "downloads": 1,
     "verified": false
@@ -31906,8 +31921,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.0.0",
     "downloads": 1,
     "verified": false
@@ -31945,8 +31960,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "0.2.0",
     "downloads": 1,
     "verified": false
@@ -31986,8 +32001,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.1.0",
     "downloads": 2,
     "verified": false
@@ -32025,8 +32040,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:52Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "3.0.0",
     "downloads": 0,
     "verified": false
@@ -32064,8 +32079,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.0.0",
     "downloads": 1,
     "verified": false
@@ -32105,8 +32120,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.0.0",
     "downloads": 2,
     "verified": false
@@ -32144,8 +32159,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "2.1.0",
     "downloads": 3,
     "verified": false
@@ -32183,8 +32198,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:52Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -32224,8 +32239,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.4.1",
     "downloads": 12,
     "verified": false
@@ -32266,8 +32281,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:52Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.0.0",
     "downloads": 1,
     "verified": false
@@ -32305,8 +32320,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.0.0",
     "downloads": 1,
     "verified": false
@@ -32346,8 +32361,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:52Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.1.1",
     "downloads": 0,
     "verified": false
@@ -32387,8 +32402,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.5.0",
     "downloads": 19,
     "verified": false
@@ -32426,8 +32441,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -32465,8 +32480,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.1.0",
     "downloads": 1,
     "verified": false
@@ -32504,8 +32519,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:52Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -32546,8 +32561,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.6.0",
     "downloads": 1,
     "verified": false
@@ -32585,8 +32600,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.2.0",
     "downloads": 1,
     "verified": false
@@ -32624,8 +32639,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.0.0",
     "downloads": 1,
     "verified": false
@@ -32663,8 +32678,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.1.0",
     "downloads": 2,
     "verified": false
@@ -32702,8 +32717,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:52Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.0.1",
     "downloads": 0,
     "verified": false
@@ -32741,8 +32756,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.1.0",
     "downloads": 1,
     "verified": false
@@ -32780,8 +32795,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.2.1",
     "downloads": 4,
     "verified": false
@@ -32819,8 +32834,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:52Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -32858,8 +32873,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.0.1",
     "downloads": 2,
     "verified": false
@@ -32897,8 +32912,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "0.8.1",
     "downloads": 0,
     "verified": false
@@ -32936,8 +32951,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.0.0",
     "downloads": 4,
     "verified": false
@@ -32975,8 +32990,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:52Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "1.0.1",
     "downloads": 1,
     "verified": false
@@ -33014,8 +33029,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:51Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "2.0.0",
     "downloads": 1,
     "verified": false
@@ -33053,8 +33068,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5122,
-    "pushed_at": "2026-05-12T01:26:52Z",
+    "stars": 5127,
+    "pushed_at": "2026-05-12T03:26:44Z",
     "version": "0.1.0",
     "downloads": 0,
     "verified": false
@@ -33172,8 +33187,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 32710,
-    "pushed_at": "2026-05-12T01:27:02Z",
+    "stars": 32727,
+    "pushed_at": "2026-05-12T04:26:47Z",
     "version": "1.0.0",
     "downloads": 382,
     "verified": false
@@ -35792,7 +35807,7 @@
     "stars": 35062,
     "pushed_at": "2026-05-09T15:24:57Z",
     "version": "1.2.2",
-    "downloads": 1782,
+    "downloads": 1783,
     "verified": false
   },
   {
@@ -36318,7 +36333,7 @@
     "stars": 35062,
     "pushed_at": "2026-05-09T15:24:57Z",
     "version": "1.2.2",
-    "downloads": 2374,
+    "downloads": 2375,
     "verified": false
   },
   {
@@ -37338,11 +37353,18 @@
       "plugin_name": "dx"
     },
     "bundle": {
-      "skills_count": 0,
+      "skills_count": 6,
       "commands_count": 0,
       "agents_count": 0,
       "mcp_servers_count": 0,
-      "skills_namespaces": [],
+      "skills_namespaces": [
+        "dx:clone",
+        "dx:gha",
+        "dx:half-clone",
+        "dx:handoff",
+        "dx:reddit-fetch",
+        "dx:review-claudemd"
+      ],
       "hooks_count": 0,
       "hook_events": [],
       "mcp_server_names": [],
@@ -37395,8 +37417,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 17148,
-    "pushed_at": "2026-05-12T01:27:06Z",
+    "stars": 17168,
+    "pushed_at": "2026-05-12T04:26:47Z",
     "version": "1.0.0",
     "downloads": 7,
     "verified": false

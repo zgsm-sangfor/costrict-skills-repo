@@ -40,7 +40,7 @@
 | 28 | [impeccable](https://github.com/pbakaus/impeccable) | Claude Code 插件，提供 23 个命令用于 AI 辅助前端设计，包括评审、审计和优化。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-04-28 | tooling | `design`, `frontend`, `ui` |
 | 29 | [beads](https://github.com/gastownhall/beads) | 基于Dolt的分布式图问题跟踪器，专为AI编码代理设计，支持依赖跟踪和持久化记忆。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-04-24 | ai-ml | — |
 | 30 | [planning-with-files](https://github.com/OthmanAdi/planning-with-files) | 为AI编程助手设计的插件，使用持久化Markdown文件进行结构化任务规划、进度跟踪和知识存储。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-05-01 | documentation | — |
-| 31 | [beads](https://github.com/steveyegge/beads) | AI 编程代理的分布式图谱化问题跟踪器与持久记忆系统，基于 Dolt。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-03-25 | ai-ml | `issue-tracker`, `ai-agents`, `developer-tools` |
+| 31 | [beads](https://github.com/steveyegge/beads) | AI 编程代理的分布式图谱化问题跟踪器与持久记忆系统，基于 Dolt。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-03-25 | ai-ml | — |
 | 32 | [pua](https://github.com/tanweai/pua) | Claude Code 插件，通过企业压力策略、系统化调试和多智能体团队管理增强 AI 编码工作流。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-05-09 | security | — |
 | 33 | [agent-skills](https://github.com/addyosmani/agent-skills) | 为AI编码代理提供覆盖软件开发生命周期的生产级工程技能插件。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-04-16 | tooling | — |
 | 34 | [codex](https://github.com/openai/codex-plugin-cc) | Claude Code 插件，集成 OpenAI Codex 进行代码审查和任务委派。 | claude-plugins.dev | 🟢 活跃 | 97 | 2026-04-16 | tooling | — |
