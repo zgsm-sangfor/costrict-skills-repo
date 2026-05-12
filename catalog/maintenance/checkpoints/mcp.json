@@ -1,5 +1,5 @@
 {
-  "completed_count": 9315,
+  "completed_count": 9316,
   "completed_entry_ids": [
     "0xdaef0fjob-searchoor",
     "0xjacky-nginx-ui",
@@ -4951,6 +4951,7 @@
     "io-github-lars20070-mathematica-mcp-0ccf2368",
     "io-github-larsbaunwall-unlinked-009a04aa",
     "io-github-larscowe-queue-pilot-588aa227",
+    "io-github-larshiensch99-priceparse-011e4175",
     "io-github-las-team-lastest-2a45e090",
     "io-github-lastmanupinc-hub-axis-toolbox-15d81653",
     "io-github-laundromatic-shopgraph-32b8ec9a",
@@ -9317,7 +9318,7 @@
     "zukai-mcp-vercel-api-mcp",
     "zukai-mcp-workos-mcp"
   ],
-  "last_committed_at": "2026-05-12T05:05:40.249480+00:00",
+  "last_committed_at": "2026-05-12T05:35:45.965908+00:00",
   "remaining_entry_ids": [
     "ai-smithery-bergeramit-bergeramit-hw3-tech-046e6037",
     "ai-smithery-sebastianall1977-gmail-mcp-a2956f71",

@@ -1,6 +1,6 @@
 # 🧩 Plugins
 
-> 871 Claude Code plugin bundles packaging skills, agents, commands, and MCP servers from official and community marketplaces.
+> 908 Claude Code plugin bundles packaging skills, agents, commands, and MCP servers from official and community marketplaces.
 >
 > [Back to main →](../../README.md) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=plugin)
 

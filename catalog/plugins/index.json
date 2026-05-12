@@ -109,7 +109,7 @@
       "plugin_name": "ecc"
     },
     "bundle": {
-      "skills_count": 528,
+      "skills_count": 531,
       "commands_count": 280,
       "agents_count": 191,
       "mcp_servers_count": 6,
@@ -558,6 +558,9 @@
         "ecc:mcp-server-patterns",
         "ecc:messages-ops",
         "ecc:mle-workflow",
+        "ecc:motion-advanced",
+        "ecc:motion-foundations",
+        "ecc:motion-patterns",
         "ecc:motion-ui",
         "ecc:mysql-patterns",
         "ecc:nanoclaw-repl",
@@ -701,7 +704,7 @@
       "plugin_name": "everything-claude-code"
     },
     "bundle": {
-      "skills_count": 528,
+      "skills_count": 531,
       "commands_count": 280,
       "agents_count": 191,
       "mcp_servers_count": 6,
@@ -1150,6 +1153,9 @@
         "ecc:mcp-server-patterns",
         "ecc:messages-ops",
         "ecc:mle-workflow",
+        "ecc:motion-advanced",
+        "ecc:motion-foundations",
+        "ecc:motion-patterns",
         "ecc:motion-ui",
         "ecc:mysql-patterns",
         "ecc:nanoclaw-repl",
@@ -3087,7 +3093,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -3451,7 +3457,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -3987,7 +3993,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 907,
+    "stars": 908,
     "pushed_at": "2026-05-11T15:19:39Z",
     "version": ""
   },
@@ -4292,7 +4298,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 39278,
+    "stars": 39279,
     "pushed_at": "2026-05-12T04:36:03Z",
     "version": ""
   },
@@ -4368,7 +4374,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -4407,7 +4413,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -4446,7 +4452,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -4745,7 +4751,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -4782,7 +4788,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -4819,7 +4825,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -4898,7 +4904,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -4939,7 +4945,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -5028,7 +5034,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -5068,7 +5074,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -5262,7 +5268,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 45,
+    "stars": 46,
     "pushed_at": "2026-05-11T07:44:44Z",
     "version": ""
   },
@@ -5610,7 +5616,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "0.0.4"
   },
@@ -5690,7 +5696,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -5771,7 +5777,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "0.0.1"
   },
@@ -5853,7 +5859,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -5957,7 +5963,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 1394,
+    "stars": 1395,
     "pushed_at": "2026-04-28T19:01:21Z",
     "version": ""
   },
@@ -5999,7 +6005,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -6084,7 +6090,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -6167,7 +6173,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -6208,7 +6214,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -6247,7 +6253,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -6286,7 +6292,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -6330,7 +6336,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -6385,7 +6391,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 10466,
+    "stars": 10465,
     "pushed_at": "2026-05-11T09:05:11Z",
     "version": ""
   },
@@ -6427,7 +6433,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "0.1.0"
   },
@@ -6510,7 +6516,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -6591,7 +6597,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -6630,7 +6636,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -6669,7 +6675,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -6745,7 +6751,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -6898,7 +6904,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -6937,7 +6943,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -6978,7 +6984,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -7629,7 +7635,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -7805,7 +7811,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -7846,7 +7852,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -7891,7 +7897,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -8100,7 +8106,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -8221,7 +8227,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -8492,7 +8498,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -8647,7 +8653,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -8686,7 +8692,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -8886,7 +8892,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -9001,7 +9007,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -9075,7 +9081,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -9192,7 +9198,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -9605,7 +9611,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 186929,
+    "stars": 186954,
     "pushed_at": "2026-05-12T00:50:01Z",
     "version": ""
   },
@@ -9644,7 +9650,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -9686,7 +9692,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "0.0.6"
   },
@@ -9727,7 +9733,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": ""
   },
@@ -9863,7 +9869,7 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 19145,
+    "stars": 19148,
     "pushed_at": "2026-05-11T23:46:05Z",
     "version": "1.0.0"
   },
@@ -17902,7 +17908,7 @@
     "stars": 18777,
     "pushed_at": "2026-05-07T18:23:32Z",
     "version": "1.0.0",
-    "downloads": 41,
+    "downloads": 42,
     "verified": false
   },
   {
@@ -25276,8 +25282,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 27918,
-    "pushed_at": "2026-05-12T03:26:45Z",
+    "stars": 27933,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.0.0",
     "downloads": 54,
     "verified": false
@@ -25814,7 +25820,7 @@
     "stars": 20118,
     "pushed_at": "2026-02-11T20:09:45Z",
     "version": "1.0.0",
-    "downloads": 181,
+    "downloads": 182,
     "verified": false
   },
   {
@@ -26208,13 +26214,11 @@
       "plugin_name": "andrej-karpathy-skills"
     },
     "bundle": {
-      "skills_count": 1,
+      "skills_count": 0,
       "commands_count": 0,
       "agents_count": 0,
       "mcp_servers_count": 0,
-      "skills_namespaces": [
-        "andrej-karpathy-skills:karpathy-guidelines"
-      ],
+      "skills_namespaces": [],
       "hooks_count": 0,
       "hook_events": [],
       "mcp_server_names": [],
@@ -26395,8 +26399,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 22389,
-    "pushed_at": "2026-05-11T21:26:36Z",
+    "stars": 22425,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.0.0",
     "downloads": 28,
     "verified": false
@@ -26618,24 +26622,11 @@
       "plugin_name": "caveman"
     },
     "bundle": {
-      "skills_count": 12,
-      "commands_count": 5,
-      "agents_count": 6,
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
       "mcp_servers_count": 0,
-      "skills_namespaces": [
-        "caveman:cavecrew",
-        "caveman:cavecrew",
-        "caveman:caveman-compress",
-        "caveman:caveman-stats",
-        "caveman:caveman",
-        "caveman:cavecrew",
-        "caveman:caveman-commit",
-        "caveman:caveman-compress",
-        "caveman:caveman-help",
-        "caveman:caveman-review",
-        "caveman:caveman-stats",
-        "caveman:caveman"
-      ],
+      "skills_namespaces": [],
       "hooks_count": 0,
       "hook_events": [],
       "mcp_server_names": [],
@@ -26918,14 +26909,11 @@
       "plugin_name": "all-skills"
     },
     "bundle": {
-      "skills_count": 2,
+      "skills_count": 0,
       "commands_count": 0,
       "agents_count": 0,
       "mcp_servers_count": 0,
-      "skills_namespaces": [
-        "all-skills:mcp-builder",
-        "all-skills:chatgpt-app-builder"
-      ],
+      "skills_namespaces": [],
       "hooks_count": 0,
       "hook_events": [],
       "mcp_server_names": [],
@@ -26960,13 +26948,11 @@
       "plugin_name": "chatgpt-app-builder"
     },
     "bundle": {
-      "skills_count": 1,
+      "skills_count": 0,
       "commands_count": 0,
       "agents_count": 0,
       "mcp_servers_count": 0,
-      "skills_namespaces": [
-        "chatgpt-app-builder:chatgpt-app-builder"
-      ],
+      "skills_namespaces": [],
       "hooks_count": 0,
       "hook_events": [],
       "mcp_server_names": [],
@@ -27001,13 +26987,11 @@
       "plugin_name": "mcp-builder"
     },
     "bundle": {
-      "skills_count": 1,
+      "skills_count": 0,
       "commands_count": 0,
       "agents_count": 0,
       "mcp_servers_count": 0,
-      "skills_namespaces": [
-        "mcp-builder:mcp-builder"
-      ],
+      "skills_namespaces": [],
       "hooks_count": 0,
       "hook_events": [],
       "mcp_server_names": [],
@@ -27081,18 +27065,14 @@
       "plugin_name": "mempalace"
     },
     "bundle": {
-      "skills_count": 1,
-      "commands_count": 5,
+      "skills_count": 0,
+      "commands_count": 0,
       "agents_count": 0,
-      "mcp_servers_count": 1,
-      "skills_namespaces": [
-        "mempalace:mempalace"
-      ],
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
       "hooks_count": 0,
       "hook_events": [],
-      "mcp_server_names": [
-        "mempalace"
-      ],
+      "mcp_server_names": [],
       "is_marketplace_repo": false
     },
     "manifest_completeness": 1.0,
@@ -27912,7 +27892,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 186929,
+    "stars": 186954,
     "pushed_at": "2026-05-12T00:50:01Z",
     "version": "5.1.0"
   },
@@ -28007,7 +27987,7 @@
     },
     "manifest_completeness": 0.7,
     "last_synced": "2026-05-12",
-    "stars": 186929,
+    "stars": 186954,
     "pushed_at": "2026-05-12T00:50:01Z",
     "version": "0.0.2026021001"
   },
@@ -29189,8 +29169,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 42333,
-    "pushed_at": "2026-05-12T02:26:44Z",
+    "stars": 42336,
+    "pushed_at": "2026-05-12T05:26:35Z",
     "version": "0.0.1",
     "downloads": 29,
     "verified": false
@@ -29262,13 +29242,11 @@
       "plugin_name": "impeccable"
     },
     "bundle": {
-      "skills_count": 1,
+      "skills_count": 0,
       "commands_count": 0,
-      "agents_count": 35,
+      "agents_count": 0,
       "mcp_servers_count": 0,
-      "skills_namespaces": [
-        "impeccable:impeccable"
-      ],
+      "skills_namespaces": [],
       "hooks_count": 0,
       "hook_events": [],
       "mcp_server_names": [],
@@ -31087,6 +31065,1677 @@
     "verified": false
   },
   {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-awesome-skills",
+    "name": "antigravity-awesome-skills",
+    "type": "plugin",
+    "description": "Expose the plugin-safe Claude Code subset of Antigravity Awesome Skills through a single marketplace entry.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "agentic-skills",
+      "plugin",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-awesome-skills"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-agent-architect",
+    "name": "antigravity-bundle-agent-architect",
+    "type": "plugin",
+    "description": "Install the \"Agent Architect\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "agent-architect",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-agent-architect"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-apple-platform-design",
+    "name": "antigravity-bundle-apple-platform-design",
+    "type": "plugin",
+    "description": "Install the \"Apple Platform Design\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "apple-platform-design",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-apple-platform-design"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-architecture-design",
+    "name": "antigravity-bundle-architecture-design",
+    "type": "plugin",
+    "description": "Install the \"Architecture & Design\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "architecture-design",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-architecture-design"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-automation-builder",
+    "name": "antigravity-bundle-automation-builder",
+    "type": "plugin",
+    "description": "Install the \"Automation Builder\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "automation-builder",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-automation-builder"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-azure-ai-cloud",
+    "name": "antigravity-bundle-azure-ai-cloud",
+    "type": "plugin",
+    "description": "Install the \"Azure AI & Cloud\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "devops",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "azure-ai-cloud",
+      "marketplace",
+      "azure"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-azure-ai-cloud"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-business-analyst",
+    "name": "antigravity-bundle-business-analyst",
+    "type": "plugin",
+    "description": "Install the \"Business Analyst\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "business-analyst",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-business-analyst"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 6,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-commerce-payments",
+    "name": "antigravity-bundle-commerce-payments",
+    "type": "plugin",
+    "description": "Install the \"Commerce & Payments\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "commerce-payments",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-commerce-payments"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-creative-director",
+    "name": "antigravity-bundle-creative-director",
+    "type": "plugin",
+    "description": "Install the \"Creative Director\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "creative-director",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-creative-director"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-data-analytics",
+    "name": "antigravity-bundle-data-analytics",
+    "type": "plugin",
+    "description": "Install the \"Data & Analytics\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "data-analytics",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-data-analytics"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-data-engineering",
+    "name": "antigravity-bundle-data-engineering",
+    "type": "plugin",
+    "description": "Install the \"Data Engineering\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "data-engineering",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-data-engineering"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-ddd-evented-architecture",
+    "name": "antigravity-bundle-ddd-evented-architecture",
+    "type": "plugin",
+    "description": "Install the \"DDD & Evented Architecture\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "ddd-evented-architecture",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-ddd-evented-architecture"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-devops-cloud",
+    "name": "antigravity-bundle-devops-cloud",
+    "type": "plugin",
+    "description": "Install the \"DevOps & Cloud\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "devops-cloud",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-devops-cloud"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 1,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-documents-presentations",
+    "name": "antigravity-bundle-documents-presentations",
+    "type": "plugin",
+    "description": "Install the \"Documents & Presentations\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "documents-presentations",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-documents-presentations"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-essentials",
+    "name": "antigravity-bundle-essentials",
+    "type": "plugin",
+    "description": "Install the \"Essentials\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "essentials",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-essentials"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-expo-react-native",
+    "name": "antigravity-bundle-expo-react-native",
+    "type": "plugin",
+    "description": "Install the \"Expo & React Native\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "frontend",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "expo-react-native",
+      "marketplace",
+      "react"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-expo-react-native"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-full-stack-developer",
+    "name": "antigravity-bundle-full-stack-developer",
+    "type": "plugin",
+    "description": "Install the \"Full-Stack Developer\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "fullstack",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "full-stack-developer",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-full-stack-developer"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 1,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-indie-game-dev",
+    "name": "antigravity-bundle-indie-game-dev",
+    "type": "plugin",
+    "description": "Install the \"Indie Game Dev\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "indie-game-dev",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-indie-game-dev"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-integration-apis",
+    "name": "antigravity-bundle-integration-apis",
+    "type": "plugin",
+    "description": "Install the \"Integration & APIs\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "backend",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "integration-apis",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-integration-apis"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-llm-application-developer",
+    "name": "antigravity-bundle-llm-application-developer",
+    "type": "plugin",
+    "description": "Install the \"LLM Application Developer\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "ai-ml",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "llm-application-developer",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-llm-application-developer"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-makepad-builder",
+    "name": "antigravity-bundle-makepad-builder",
+    "type": "plugin",
+    "description": "Install the \"Makepad Builder\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "makepad-builder",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-makepad-builder"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-marketing-growth",
+    "name": "antigravity-bundle-marketing-growth",
+    "type": "plugin",
+    "description": "Install the \"Marketing & Growth\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "marketing-growth",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-marketing-growth"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-mobile-developer",
+    "name": "antigravity-bundle-mobile-developer",
+    "type": "plugin",
+    "description": "Install the \"Mobile Developer\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "mobile-developer",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-mobile-developer"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-observability-monitoring",
+    "name": "antigravity-bundle-observability-monitoring",
+    "type": "plugin",
+    "description": "Install the \"Observability & Monitoring\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "devops",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "observability-monitoring",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-observability-monitoring"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-odoo-erp",
+    "name": "antigravity-bundle-odoo-erp",
+    "type": "plugin",
+    "description": "Install the \"Odoo ERP\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "odoo-erp",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-odoo-erp"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-oss-maintainer",
+    "name": "antigravity-bundle-oss-maintainer",
+    "type": "plugin",
+    "description": "Install the \"OSS Maintainer\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "ai-ml",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "oss-maintainer",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-oss-maintainer"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-python-pro",
+    "name": "antigravity-bundle-python-pro",
+    "type": "plugin",
+    "description": "Install the \"Python Pro\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "backend",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "python-pro",
+      "marketplace",
+      "python"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-python-pro"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 2,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-qa-testing",
+    "name": "antigravity-bundle-qa-testing",
+    "type": "plugin",
+    "description": "Install the \"QA & Testing\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "testing",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "qa-testing",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-qa-testing"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-revops-crm-automation",
+    "name": "antigravity-bundle-revops-crm-automation",
+    "type": "plugin",
+    "description": "Install the \"RevOps & CRM Automation\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "revops-crm-automation",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-revops-crm-automation"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-security-developer",
+    "name": "antigravity-bundle-security-developer",
+    "type": "plugin",
+    "description": "Install the \"Security Developer\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "security",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "security-developer",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-security-developer"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-security-engineer",
+    "name": "antigravity-bundle-security-engineer",
+    "type": "plugin",
+    "description": "Install the \"Security Engineer\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "security",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "security-engineer",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-security-engineer"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-seo-specialist",
+    "name": "antigravity-bundle-seo-specialist",
+    "type": "plugin",
+    "description": "Install the \"SEO Specialist\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "seo-specialist",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-seo-specialist"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 1,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-startup-founder",
+    "name": "antigravity-bundle-startup-founder",
+    "type": "plugin",
+    "description": "Install the \"Startup Founder\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "startup-founder",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-startup-founder"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-systems-programming",
+    "name": "antigravity-bundle-systems-programming",
+    "type": "plugin",
+    "description": "Install the \"Systems Programming\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "systems-programming",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-systems-programming"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 1,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-typescript-javascript",
+    "name": "antigravity-bundle-typescript-javascript",
+    "type": "plugin",
+    "description": "Install the \"TypeScript & JavaScript\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "frontend",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "typescript-javascript",
+      "marketplace",
+      "typescript",
+      "javascript",
+      "java"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-typescript-javascript"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-designer",
+    "name": "antigravity-bundle-web-designer",
+    "type": "plugin",
+    "description": "Install the \"Web Designer\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "web-designer",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-web-designer"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 1,
+    "verified": false
+  },
+  {
+    "id": "sickn33-antigravity-awesome-skills-antigravity-bundle-web-wizard",
+    "name": "antigravity-bundle-web-wizard",
+    "type": "plugin",
+    "description": "Install the \"Web Wizard\" editorial skill bundle for Claude Code.",
+    "source_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "category": "tooling",
+    "tags": [
+      "claude-code",
+      "skills",
+      "bundle",
+      "web-wizard",
+      "marketplace"
+    ],
+    "tech_stack": [],
+    "source": "claude-plugins-dev",
+    "source_priority": 700,
+    "marketplace_url": null,
+    "platforms": [
+      "claude-code"
+    ],
+    "install": {
+      "method": "plugin_marketplace",
+      "marketplace": "@sickn33/antigravity-awesome-skills",
+      "plugin_name": "antigravity-bundle-web-wizard"
+    },
+    "bundle": {
+      "skills_count": 0,
+      "commands_count": 0,
+      "agents_count": 0,
+      "mcp_servers_count": 0,
+      "skills_namespaces": [],
+      "hooks_count": 0,
+      "hook_events": [],
+      "mcp_server_names": [],
+      "is_marketplace_repo": false
+    },
+    "manifest_completeness": 1.0,
+    "last_synced": "2026-05-12",
+    "stars": 36294,
+    "pushed_at": "2026-05-04T17:00:13Z",
+    "version": "10.10.0",
+    "downloads": 0,
+    "verified": false
+  },
+  {
     "id": "skypilot-org-skypilot-skypilot",
     "name": "skypilot",
     "type": "plugin",
@@ -31195,13 +32844,11 @@
       "plugin_name": "slidev"
     },
     "bundle": {
-      "skills_count": 1,
+      "skills_count": 0,
       "commands_count": 0,
       "agents_count": 0,
       "mcp_servers_count": 0,
-      "skills_namespaces": [
-        "slidev:slidev"
-      ],
+      "skills_namespaces": [],
       "hooks_count": 0,
       "hook_events": [],
       "mcp_server_names": [],
@@ -31568,8 +33215,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.2.0",
     "downloads": 1,
     "verified": false
@@ -31607,8 +33254,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.0.1",
     "downloads": 3,
     "verified": false
@@ -31646,8 +33293,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.1.0",
     "downloads": 2,
     "verified": false
@@ -31685,8 +33332,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.1.1",
     "downloads": 1,
     "verified": false
@@ -31724,8 +33371,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.0.0",
     "downloads": 9,
     "verified": false
@@ -31763,8 +33410,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.1.2",
     "downloads": 0,
     "verified": false
@@ -31802,8 +33449,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.0.0",
     "downloads": 2,
     "verified": false
@@ -31841,8 +33488,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "0.1.0",
     "downloads": 4,
     "verified": false
@@ -31880,8 +33527,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.1.0",
     "downloads": 1,
     "verified": false
@@ -31921,8 +33568,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.0.0",
     "downloads": 1,
     "verified": false
@@ -31960,8 +33607,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "0.2.0",
     "downloads": 1,
     "verified": false
@@ -32001,8 +33648,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.1.0",
     "downloads": 2,
     "verified": false
@@ -32040,8 +33687,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "3.0.0",
     "downloads": 0,
     "verified": false
@@ -32079,8 +33726,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.0.0",
     "downloads": 1,
     "verified": false
@@ -32120,8 +33767,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.0.0",
     "downloads": 2,
     "verified": false
@@ -32159,8 +33806,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "2.1.0",
     "downloads": 3,
     "verified": false
@@ -32198,8 +33845,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -32239,8 +33886,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.4.1",
     "downloads": 12,
     "verified": false
@@ -32281,8 +33928,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.0.0",
     "downloads": 1,
     "verified": false
@@ -32320,8 +33967,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.0.0",
     "downloads": 1,
     "verified": false
@@ -32361,8 +34008,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.1.1",
     "downloads": 0,
     "verified": false
@@ -32402,8 +34049,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.5.0",
     "downloads": 19,
     "verified": false
@@ -32441,8 +34088,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -32480,8 +34127,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.1.0",
     "downloads": 1,
     "verified": false
@@ -32519,8 +34166,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -32561,8 +34208,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.6.0",
     "downloads": 1,
     "verified": false
@@ -32600,8 +34247,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.2.0",
     "downloads": 1,
     "verified": false
@@ -32639,8 +34286,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.0.0",
     "downloads": 1,
     "verified": false
@@ -32678,8 +34325,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.1.0",
     "downloads": 2,
     "verified": false
@@ -32717,8 +34364,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.0.1",
     "downloads": 0,
     "verified": false
@@ -32756,8 +34403,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.1.0",
     "downloads": 1,
     "verified": false
@@ -32795,8 +34442,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.2.1",
     "downloads": 4,
     "verified": false
@@ -32834,8 +34481,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.0.0",
     "downloads": 0,
     "verified": false
@@ -32873,8 +34520,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.0.1",
     "downloads": 2,
     "verified": false
@@ -32912,8 +34559,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "0.8.1",
     "downloads": 0,
     "verified": false
@@ -32951,8 +34598,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.0.0",
     "downloads": 4,
     "verified": false
@@ -32990,8 +34637,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "1.0.1",
     "downloads": 1,
     "verified": false
@@ -33029,8 +34676,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "2.0.0",
     "downloads": 1,
     "verified": false
@@ -33068,8 +34715,8 @@
     },
     "manifest_completeness": 1.0,
     "last_synced": "2026-05-12",
-    "stars": 5127,
-    "pushed_at": "2026-05-12T03:26:44Z",
+    "stars": 5129,
+    "pushed_at": "2026-05-12T05:26:37Z",
     "version": "0.1.0",
     "downloads": 0,
     "verified": false
@@ -34096,7 +35743,7 @@
     "stars": 35062,
     "pushed_at": "2026-05-09T15:24:57Z",
     "version": "1.3.1",
-    "downloads": 2089,
+    "downloads": 2090,
     "verified": false
   },
   {
@@ -37353,18 +39000,11 @@
       "plugin_name": "dx"
     },
     "bundle": {
-      "skills_count": 6,
+      "skills_count": 0,
       "commands_count": 0,
       "agents_count": 0,
       "mcp_servers_count": 0,
-      "skills_namespaces": [
-        "dx:clone",
-        "dx:gha",
-        "dx:half-clone",
-        "dx:handoff",
-        "dx:reddit-fetch",
-        "dx:review-claudemd"
-      ],
+      "skills_namespaces": [],
       "hooks_count": 0,
       "hook_events": [],
       "mcp_server_names": [],
