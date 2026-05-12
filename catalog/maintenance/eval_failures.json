@@ -18,6 +18,15 @@
       "next_retry_after": "2026-05-09T08:58:05.782642+00:00",
       "type": "prompt"
     },
+    "affaan-m-ecc-ecc": {
+      "attempt_count": 1,
+      "first_failed_at": "2026-05-12T03:27:15.710168+00:00",
+      "last_error_kind": "EvalRunnerSkip",
+      "last_error_message": "runner returned no result for entry",
+      "last_failed_at": "2026-05-12T03:27:15.710168+00:00",
+      "next_retry_after": "2026-05-12T03:27:15.710168+00:00",
+      "type": "plugin"
+    },
     "ai-performance-deep-testing-engineer-prompt": {
       "attempt_count": 1,
       "first_failed_at": "2026-05-09T08:58:05.782634+00:00",
@@ -107,6 +116,15 @@
       "last_failed_at": "2026-05-09T09:46:50.346663+00:00",
       "next_retry_after": "2026-05-09T09:46:50.346663+00:00",
       "type": "skill"
+    },
+    "anthropic-sap-cds-mcp": {
+      "attempt_count": 1,
+      "first_failed_at": "2026-05-12T03:27:15.710317+00:00",
+      "last_error_kind": "EvalRunnerSkip",
+      "last_error_message": "runner returned no result for entry",
+      "last_failed_at": "2026-05-12T03:27:15.710317+00:00",
+      "next_retry_after": "2026-05-12T03:27:15.710317+00:00",
+      "type": "plugin"
     },
     "anthropics-claude-plugins-official-adlc": {
       "attempt_count": 1,
@@ -331,15 +349,6 @@
       "last_error_message": "runner returned no result for entry",
       "last_failed_at": "2026-05-10T10:01:16.867212+00:00",
       "next_retry_after": "2026-05-17T10:01:16.867212+00:00",
-      "type": "mcp"
-    },
-    "com-naxytra-xytara-mcp-executor-5820fc13": {
-      "attempt_count": 1,
-      "first_failed_at": "2026-05-11T07:19:52.423470+00:00",
-      "last_error_kind": "EvalRunnerSkip",
-      "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:19:52.423470+00:00",
-      "next_retry_after": "2026-05-11T07:19:52.423470+00:00",
       "type": "mcp"
     },
     "command-creator-softaworks-agent-toolkit": {
@@ -702,6 +711,33 @@
       "next_retry_after": "2026-05-17T10:01:16.867010+00:00",
       "type": "mcp"
     },
+    "io-github-dailyaiagents-cpu-launchd-drift-recovery-2ef92e45": {
+      "attempt_count": 1,
+      "first_failed_at": "2026-05-12T03:25:00.570414+00:00",
+      "last_error_kind": "EvalRunnerSkip",
+      "last_error_message": "runner returned no result for entry",
+      "last_failed_at": "2026-05-12T03:25:00.570414+00:00",
+      "next_retry_after": "2026-05-12T03:25:00.570414+00:00",
+      "type": "mcp"
+    },
+    "io-github-dailyaiagents-cpu-monthly-burn-cd8e44a3": {
+      "attempt_count": 1,
+      "first_failed_at": "2026-05-12T03:25:00.570760+00:00",
+      "last_error_kind": "EvalRunnerSkip",
+      "last_error_message": "runner returned no result for entry",
+      "last_failed_at": "2026-05-12T03:25:00.570760+00:00",
+      "next_retry_after": "2026-05-12T03:25:00.570760+00:00",
+      "type": "mcp"
+    },
+    "io-github-dailyaiagents-cpu-stale-gate-janitor-742ead1c": {
+      "attempt_count": 1,
+      "first_failed_at": "2026-05-12T03:25:00.572284+00:00",
+      "last_error_kind": "EvalRunnerSkip",
+      "last_error_message": "runner returned no result for entry",
+      "last_failed_at": "2026-05-12T03:25:00.572284+00:00",
+      "next_retry_after": "2026-05-12T03:25:00.572284+00:00",
+      "type": "mcp"
+    },
     "io-github-serpapi-serpapi-mcp-87d22508": {
       "attempt_count": 2,
       "first_failed_at": "2026-05-10T13:57:42.399724+00:00",
@@ -718,15 +754,6 @@
       "last_error_message": "runner returned no result for entry",
       "last_failed_at": "2026-05-11T07:23:57.339236+00:00",
       "next_retry_after": "2026-05-18T07:23:57.339236+00:00",
-      "type": "mcp"
-    },
-    "io-studiomeyer-geo-d6bc1551": {
-      "attempt_count": 1,
-      "first_failed_at": "2026-05-11T07:40:23.466681+00:00",
-      "last_error_kind": "EvalRunnerSkip",
-      "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:40:23.466681+00:00",
-      "next_retry_after": "2026-05-11T07:40:23.466681+00:00",
       "type": "mcp"
     },
     "jimliu-baoyu-skills-ai-generation-skills": {
@@ -802,273 +829,273 @@
       "type": "prompt"
     },
     "live-alpic-linkup-company-resea-2df3e8e8-linkup-company-research-29be4a0a": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:49:04.471869+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:49:04.471869+00:00",
-      "next_retry_after": "2026-05-11T07:49:04.471869+00:00",
+      "last_failed_at": "2026-05-12T03:28:39.614571+00:00",
+      "next_retry_after": "2026-05-19T03:28:39.614571+00:00",
       "type": "mcp"
     },
     "live-alpic-mcp-server-template-7860f7d3-mcp-server-template-python-c464ef32": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:49:04.471890+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:49:04.471890+00:00",
-      "next_retry_after": "2026-05-11T07:49:04.471890+00:00",
+      "last_failed_at": "2026-05-12T03:28:39.614595+00:00",
+      "next_retry_after": "2026-05-19T03:28:39.614595+00:00",
       "type": "mcp"
     },
     "live-alpic-mcp-server-template-d2d1b3b5-mcp-server-template-xmcp-c75f916c": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:49:04.471897+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:49:04.471897+00:00",
-      "next_retry_after": "2026-05-11T07:49:04.471897+00:00",
+      "last_failed_at": "2026-05-12T03:28:39.614604+00:00",
+      "next_retry_after": "2026-05-19T03:28:39.614604+00:00",
       "type": "mcp"
     },
     "live-alpic-mcpimmo-10e693d9-mcpimmo-49e13aa2": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:49:04.471903+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:49:04.471903+00:00",
-      "next_retry_after": "2026-05-11T07:49:04.471903+00:00",
+      "last_failed_at": "2026-05-12T03:28:39.614611+00:00",
+      "next_retry_after": "2026-05-19T03:28:39.614611+00:00",
       "type": "mcp"
     },
     "live-alpic-node-email-mcp-b25f10ec-node-email-mcp-21860847": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:49:04.472096+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:49:04.472096+00:00",
-      "next_retry_after": "2026-05-11T07:49:04.472096+00:00",
+      "last_failed_at": "2026-05-12T03:28:39.614617+00:00",
+      "next_retry_after": "2026-05-19T03:28:39.614617+00:00",
       "type": "mcp"
     },
     "live-alpic-node-mcp-3a40efc5-node-mcp-41e348c9": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:49:04.472105+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:49:04.472105+00:00",
-      "next_retry_after": "2026-05-11T07:49:04.472105+00:00",
+      "last_failed_at": "2026-05-12T03:28:39.614623+00:00",
+      "next_retry_after": "2026-05-19T03:28:39.614623+00:00",
       "type": "mcp"
     },
     "live-alpic-send-email-49a8d7ee-send-email-e41956b1": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:49:04.472269+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:49:04.472269+00:00",
-      "next_retry_after": "2026-05-11T07:49:04.472269+00:00",
+      "last_failed_at": "2026-05-12T03:28:39.614628+00:00",
+      "next_retry_after": "2026-05-19T03:28:39.614628+00:00",
       "type": "mcp"
     },
     "live-alpic-staging-alpic-poc-frontend-c68d130f-alpic-poc-frontend-5b3aca31": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:49:04.472434+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:49:04.472434+00:00",
-      "next_retry_after": "2026-05-11T07:49:04.472434+00:00",
+      "last_failed_at": "2026-05-12T03:28:39.614633+00:00",
+      "next_retry_after": "2026-05-19T03:28:39.614633+00:00",
       "type": "mcp"
     },
     "live-alpic-staging-demo-81c8a122-demo-685af919": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:49:04.472439+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:49:04.472439+00:00",
-      "next_retry_after": "2026-05-11T07:49:04.472439+00:00",
+      "last_failed_at": "2026-05-12T03:28:39.614639+00:00",
+      "next_retry_after": "2026-05-19T03:28:39.614639+00:00",
       "type": "mcp"
     },
     "live-alpic-staging-everything-app-ce82911c-everything-app-e2941691": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:49:04.473264+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:49:04.473264+00:00",
-      "next_retry_after": "2026-05-11T07:49:04.473264+00:00",
+      "last_failed_at": "2026-05-12T03:28:39.614645+00:00",
+      "next_retry_after": "2026-05-19T03:28:39.614645+00:00",
       "type": "mcp"
     },
     "live-alpic-staging-mcp-server-6283dc54-mcp-server-53e09bdc": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:49:04.473271+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:49:04.473271+00:00",
-      "next_retry_after": "2026-05-11T07:49:04.473271+00:00",
+      "last_failed_at": "2026-05-12T03:28:39.614650+00:00",
+      "next_retry_after": "2026-05-19T03:28:39.614650+00:00",
       "type": "mcp"
     },
     "live-alpic-staging-mcp-server-a2d17427-mcp-server-e840d8ca": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:49:04.473275+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:49:04.473275+00:00",
-      "next_retry_after": "2026-05-11T07:49:04.473275+00:00",
+      "last_failed_at": "2026-05-12T03:28:39.614655+00:00",
+      "next_retry_after": "2026-05-19T03:28:39.614655+00:00",
       "type": "mcp"
     },
     "live-alpic-staging-mcp-server-template-1488dac2-mcp-server-template-nodejs-fc917dc0": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:49:04.473279+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:49:04.473279+00:00",
-      "next_retry_after": "2026-05-11T07:49:04.473279+00:00",
+      "last_failed_at": "2026-05-12T03:28:39.614661+00:00",
+      "next_retry_after": "2026-05-19T03:28:39.614661+00:00",
       "type": "mcp"
     },
     "live-alpic-staging-mcp-server-template-43874b8f-db1e64d6": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:49:04.473283+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:49:04.473283+00:00",
-      "next_retry_after": "2026-05-11T07:49:04.473283+00:00",
+      "last_failed_at": "2026-05-12T03:29:52.317435+00:00",
+      "next_retry_after": "2026-05-19T03:29:52.317435+00:00",
       "type": "mcp"
     },
     "live-alpic-staging-mcp-server-template-5eacc5c3-mcp-server-template-324108df": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:49:04.473287+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:49:04.473287+00:00",
-      "next_retry_after": "2026-05-11T07:49:04.473287+00:00",
+      "last_failed_at": "2026-05-12T03:29:52.317455+00:00",
+      "next_retry_after": "2026-05-19T03:29:52.317455+00:00",
       "type": "mcp"
     },
     "live-alpic-staging-mcp-server-template-8068f74b-mcp-server-template-e2541dde": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:49:04.473457+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:49:04.473457+00:00",
-      "next_retry_after": "2026-05-11T07:49:04.473457+00:00",
+      "last_failed_at": "2026-05-12T03:29:52.317464+00:00",
+      "next_retry_after": "2026-05-19T03:29:52.317464+00:00",
       "type": "mcp"
     },
     "live-alpic-staging-mcp-server-template-de51cc9a-1cc742b2": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:49:04.473779+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:49:04.473779+00:00",
-      "next_retry_after": "2026-05-11T07:49:04.473779+00:00",
+      "last_failed_at": "2026-05-12T03:29:52.317471+00:00",
+      "next_retry_after": "2026-05-19T03:29:52.317471+00:00",
       "type": "mcp"
     },
     "live-alpic-staging-mcp-template-e37c5898-mcp-template-020cd21d": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:49:04.473785+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:49:04.473785+00:00",
-      "next_retry_after": "2026-05-11T07:49:04.473785+00:00",
+      "last_failed_at": "2026-05-12T03:29:52.317477+00:00",
+      "next_retry_after": "2026-05-19T03:29:52.317477+00:00",
       "type": "mcp"
     },
     "live-alpic-staging-node-email-mcp-731b03b7-node-email-mcp-81ed7b4e": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:49:04.474146+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:49:04.474146+00:00",
-      "next_retry_after": "2026-05-11T07:49:04.474146+00:00",
+      "last_failed_at": "2026-05-12T03:29:52.317482+00:00",
+      "next_retry_after": "2026-05-19T03:29:52.317482+00:00",
       "type": "mcp"
     },
     "live-alpic-staging-node-email-mcp-a629b9bc-node-email-mcp-dc32543c": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:49:04.474153+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:49:04.474153+00:00",
-      "next_retry_after": "2026-05-11T07:49:04.474153+00:00",
+      "last_failed_at": "2026-05-12T03:29:52.317487+00:00",
+      "next_retry_after": "2026-05-19T03:29:52.317487+00:00",
       "type": "mcp"
     },
     "live-alpic-staging-node-email-mcp-ea33e576-f6905e7e": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:49:04.474158+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:49:04.474158+00:00",
-      "next_retry_after": "2026-05-11T07:49:04.474158+00:00",
+      "last_failed_at": "2026-05-12T03:29:52.317492+00:00",
+      "next_retry_after": "2026-05-19T03:29:52.317492+00:00",
       "type": "mcp"
     },
     "live-alpic-staging-python-email-mcp-f5c8e0a7-python-email-mcp-22516ac1": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:53:03.603920+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:53:03.603920+00:00",
-      "next_retry_after": "2026-05-11T07:53:03.603920+00:00",
+      "last_failed_at": "2026-05-12T03:29:52.317498+00:00",
+      "next_retry_after": "2026-05-19T03:29:52.317498+00:00",
       "type": "mcp"
     },
     "live-alpic-staging-send-email-mcp-04d3fdca-send-email-mcp-e2e8606e": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:53:03.604125+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:53:03.604125+00:00",
-      "next_retry_after": "2026-05-11T07:53:03.604125+00:00",
+      "last_failed_at": "2026-05-12T03:29:52.317503+00:00",
+      "next_retry_after": "2026-05-19T03:29:52.317503+00:00",
       "type": "mcp"
     },
     "live-alpic-staging-server-template-3b6131fe-server-template-da62856a": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:53:03.604133+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:53:03.604133+00:00",
-      "next_retry_after": "2026-05-11T07:53:03.604133+00:00",
+      "last_failed_at": "2026-05-12T03:29:52.317508+00:00",
+      "next_retry_after": "2026-05-19T03:29:52.317508+00:00",
       "type": "mcp"
     },
     "live-alpic-staging-system-prompts-of-ai-987eba72-my-mcp-server-388a584e": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:53:03.604299+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:53:03.604299+00:00",
-      "next_retry_after": "2026-05-11T07:53:03.604299+00:00",
+      "last_failed_at": "2026-05-12T03:29:52.317513+00:00",
+      "next_retry_after": "2026-05-19T03:29:52.317513+00:00",
       "type": "mcp"
     },
     "live-alpic-staging-template-0f352e26-template-2f430b11": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:53:03.604305+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:53:03.604305+00:00",
-      "next_retry_after": "2026-05-11T07:53:03.604305+00:00",
+      "last_failed_at": "2026-05-12T03:29:52.317518+00:00",
+      "next_retry_after": "2026-05-19T03:29:52.317518+00:00",
       "type": "mcp"
     },
     "live-alpic-staging-template-nodejs-d3cd3099-template-nodejs-9ecd2902": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:53:03.604309+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:53:03.604309+00:00",
-      "next_retry_after": "2026-05-11T07:53:03.604309+00:00",
+      "last_failed_at": "2026-05-12T03:29:52.317524+00:00",
+      "next_retry_after": "2026-05-19T03:29:52.317524+00:00",
       "type": "mcp"
     },
     "live-alpic-staging-test-server-c945a459": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:53:03.604314+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:53:03.604314+00:00",
-      "next_retry_after": "2026-05-11T07:53:03.604314+00:00",
+      "last_failed_at": "2026-05-12T03:29:52.317529+00:00",
+      "next_retry_after": "2026-05-19T03:29:52.317529+00:00",
       "type": "mcp"
     },
     "live-alpic-template-server-8e74ee32-template-server-514f5d31": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:53:03.604481+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:53:03.604481+00:00",
-      "next_retry_after": "2026-05-11T07:53:03.604481+00:00",
+      "last_failed_at": "2026-05-12T03:29:52.317534+00:00",
+      "next_retry_after": "2026-05-19T03:29:52.317534+00:00",
       "type": "mcp"
     },
     "live-alpic-template-server-ed7df515-template-server-23f07146": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:53:03.604486+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:53:03.604486+00:00",
-      "next_retry_after": "2026-05-11T07:53:03.604486+00:00",
+      "last_failed_at": "2026-05-12T03:29:52.317539+00:00",
+      "next_retry_after": "2026-05-19T03:29:52.317539+00:00",
       "type": "mcp"
     },
     "manekinekko-openai-mcp-example": {
@@ -1169,15 +1196,6 @@
       "last_failed_at": "2026-05-09T08:09:34.482876+00:00",
       "next_retry_after": "2026-05-09T08:09:34.482876+00:00",
       "type": "prompt"
-    },
-    "net-ascendgtm-gateway-d72d36a1": {
-      "attempt_count": 1,
-      "first_failed_at": "2026-05-11T07:53:03.608478+00:00",
-      "last_error_kind": "EvalRunnerSkip",
-      "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:53:03.608478+00:00",
-      "next_retry_after": "2026-05-11T07:53:03.608478+00:00",
-      "type": "mcp"
     },
     "next-cache-components-vercel-labs-next-skills": {
       "attempt_count": 1,
@@ -1549,12 +1567,12 @@
       "type": "mcp"
     },
     "sh-sparkforge-sparkforge-d8dcc4f1": {
-      "attempt_count": 1,
+      "attempt_count": 2,
       "first_failed_at": "2026-05-11T07:58:00.546873+00:00",
       "last_error_kind": "EvalRunnerSkip",
       "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T07:58:00.546873+00:00",
-      "next_retry_after": "2026-05-11T07:58:00.546873+00:00",
+      "last_failed_at": "2026-05-12T03:29:52.317943+00:00",
+      "next_retry_after": "2026-05-19T03:29:52.317943+00:00",
       "type": "mcp"
     },
     "ship-learn-next-softaworks-agent-toolkit": {
@@ -1655,15 +1673,6 @@
       "last_failed_at": "2026-05-09T08:09:34.482871+00:00",
       "next_retry_after": "2026-05-09T08:09:34.482871+00:00",
       "type": "prompt"
-    },
-    "technology-draup-api-server-842f44f8": {
-      "attempt_count": 1,
-      "first_failed_at": "2026-05-11T08:04:03.443855+00:00",
-      "last_error_kind": "EvalRunnerSkip",
-      "last_error_message": "runner returned no result for entry",
-      "last_failed_at": "2026-05-11T08:04:03.443855+00:00",
-      "next_retry_after": "2026-05-11T08:04:03.443855+00:00",
-      "type": "mcp"
     },
     "the-architect-hacker-protector-viral-engineer-prompt": {
       "attempt_count": 1,
@@ -1794,5 +1803,5 @@
   },
   "rubric_version": "3.b46c05b2",
   "schema_version": 1,
-  "updated_at": "2026-05-11T08:13:49.491062+00:00"
+  "updated_at": "2026-05-12T04:10:02.406377+00:00"
 }

@@ -255,4 +255,4 @@
 
 ---
 
-*自动生成 [catalog/index.json](../index.json). 最后更新: 2026-05-11*
+*自动生成 [catalog/index.json](../index.json). 最后更新: 2026-05-12*

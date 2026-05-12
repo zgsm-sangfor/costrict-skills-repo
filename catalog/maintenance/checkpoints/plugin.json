@@ -1,5 +1,5 @@
 {
-  "completed_count": 858,
+  "completed_count": 861,
   "completed_entry_ids": [
     "abhigyanpatwari-gitnexus-marketplace-gitnexus",
     "addyosmani-addy-agent-skills-agent-skills",
@@ -46,6 +46,7 @@
     "anthropic-agentforce-adlc",
     "anthropic-ai-plugins",
     "anthropic-aikido",
+    "anthropic-airtable",
     "anthropic-alloydb",
     "anthropic-amazon-location-service",
     "anthropic-amplitude",
@@ -132,6 +133,7 @@
     "anthropic-lua-lsp",
     "anthropic-math-olympiad",
     "anthropic-mcp-server-dev",
+    "anthropic-mercadopago",
     "anthropic-microsoft-docs",
     "anthropic-mintlify",
     "anthropic-miro",
@@ -711,6 +713,7 @@
     "slavingia-minimalist-entrepreneur-minimalist-entrepreneur",
     "slidevjs-slidev-plugins-slidev",
     "slint-ui-slint-slint",
+    "steveyegge-beads-marketplace-beads",
     "tambo-ai-tambo-marketplace-tambo",
     "tanweai-pua-skills-pua",
     "thedotmack-thedotmack-claude-mem",
@@ -860,8 +863,10 @@
     "ykdojo-ykdojo-dx",
     "zarazhangrui-frontend-slides-frontend-slides"
   ],
-  "last_committed_at": "2026-05-11T07:15:36.356560+00:00",
+  "last_committed_at": "2026-05-12T03:27:15.715943+00:00",
   "remaining_entry_ids": [
+    "affaan-m-ecc-ecc",
+    "anthropic-sap-cds-mcp",
     "anthropics-claude-plugins-official-adlc",
     "anthropics-claude-plugins-official-data",
     "anthropics-claude-plugins-official-sanity-plugin",
@@ -869,7 +874,6 @@
     "everyinc-every-marketplace-compound-engineering",
     "kieranklaassen-every-marketplace-compound-engineering",
     "mcp-use-mcp-use-mcp-builder",
-    "steveyegge-beads-marketplace-beads",
     "yamadashy-repomix-repository-explorer"
   ],
   "rubric_version": "2.85974ec3",
