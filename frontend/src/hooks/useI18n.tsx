@@ -90,6 +90,15 @@ const translations: Record<string, Record<Lang, string>> = {
   'eval.specificity': { en: 'Specificity', zh: '专业度' },
   'eval.install_clarity': { en: 'Install Clarity', zh: '安装清晰度' },
   'eval.evaluator': { en: 'Evaluator', zh: '评估模型' },
+  // MCP installability banner
+  'mcp.installability.state.ready': { en: 'Ready to install', zh: '可直接安装' },
+  'mcp.installability.state.needs_config': { en: 'Needs configuration', zh: '需要配置' },
+  'mcp.installability.state.manual': { en: 'Manual setup', zh: '手动安装' },
+  'mcp.installability.state.invalid': { en: 'Invalid config', zh: '配置无效' },
+  'mcp.installability.state.unknown': { en: 'Unknown', zh: '未判定' },
+  'mcp.installability.diagnostics': { en: 'Diagnostic details', zh: '查看诊断详情' },
+  'mcp.installability.schemaValid': { en: 'schema valid', zh: 'schema 合法' },
+  'mcp.installability.schemaInvalid': { en: 'schema invalid', zh: 'schema 不合法' },
   // Category labels
   'cat.tooling': { en: 'Tooling', zh: '工具' },
   'cat.ai-ml': { en: 'AI & ML', zh: 'AI & 机器学习' },

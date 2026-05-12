@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router'
 import { useI18n } from '../hooks/useI18n'
 import RadarChart from '../components/RadarChart'
+import McpInstallabilityBanner from '../components/McpInstallabilityBanner'
 import type { CatalogItem } from '../types'
 import { buildInstallGuidance } from '../lib/installGuidance'
 
@@ -263,6 +264,8 @@ export default function Detail() {
       {item.install && (
         <div className="glass rounded-2xl p-6">
           <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-4">{t('detail.install')}</h3>
+          {/* MCP installability pre-check: only renders when type=mcp + entry has install_state */}
+          {item.type === 'mcp' && <McpInstallabilityBanner item={item} />}
           {installGuidance?.kind === 'mcp_config' && item.install.config && (
             <div className="relative">
               <pre className="bg-gray-900 text-gray-100 rounded-xl p-4 text-xs overflow-x-auto">

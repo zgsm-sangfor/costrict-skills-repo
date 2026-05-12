@@ -28,6 +28,11 @@ export interface CatalogItem {
     skills_namespaces: string[]
   }
   bundled_in?: string
+  // MCP installability (only present when type==='mcp' and entry has been LLM-evaluated)
+  mcp_schema_valid?: boolean
+  mcp_install_state?: 'ready' | 'needs_config' | 'manual' | 'invalid' | 'unknown'
+  mcp_validation_tags?: string[]
+  mcp_installability_reason?: string
   source: string
   last_synced: string
   added_at?: string

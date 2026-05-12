@@ -94,6 +94,21 @@ def slim_item(item):
             value = item.get(key)
             if value is not None:
                 slim[key] = value
+    # MCP installability fields — surface eval_bridge.map_result_to_entry()
+    # outputs to the frontend so the Detail page can render an install-readiness
+    # banner. Same pattern as the plugin block above: only carry values that
+    # exist on the source entry, so older catalogs without these fields stay
+    # backward-compatible.
+    if item.get("type") == "mcp":
+        for key in (
+            "mcp_schema_valid",
+            "mcp_install_state",
+            "mcp_validation_tags",
+            "mcp_installability_reason",
+        ):
+            value = item.get(key)
+            if value is not None:
+                slim[key] = value
     # Carry bundled_in onto skill entries when present (currently excluded from
     # per-type skills.json by build_type_files but kept in the search index).
     bundled_in = item.get("bundled_in")
