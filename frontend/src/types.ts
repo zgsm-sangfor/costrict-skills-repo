@@ -29,6 +29,7 @@ export interface CatalogItem {
     skills_namespaces: string[]
     hook_events?: string[]
     mcp_server_names?: string[]
+    bundled_skill_ids?: Array<string | null>
   }
   bundled_in?: string
   // MCP installability (only present when type==='mcp' and entry has been LLM-evaluated)

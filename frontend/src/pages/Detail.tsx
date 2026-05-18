@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router'
 import { useI18n } from '../hooks/useI18n'
 import RadarChart from '../components/RadarChart'
 import McpInstallabilityBanner from '../components/McpInstallabilityBanner'
-import type { CatalogItem } from '../types'
+import type { CatalogItem, SearchIndexItem } from '../types'
 import { buildInstallGuidance } from '../lib/installGuidance'
 
 export default function Detail() {
@@ -14,17 +14,50 @@ export default function Detail() {
   const [copied, setCopied] = useState(false)
 
   useEffect(() => {
-    // Search across all type files to find the item
+    let cancelled = false
+    // Phase 1: search across the 5 per-type files (fast path)
     Promise.all(
       ['mcp.json', 'skills.json', 'rules.json', 'prompts.json', 'plugins.json'].map(f =>
         fetch(`./api/${f}`).then(r => r.ok ? r.json() : []).catch(() => [])
       )
-    ).then(arrays => {
+    ).then(async arrays => {
+      if (cancelled) return
       const all: CatalogItem[] = arrays.flat()
       const found = all.find(i => i.id === id)
-      setItem(found || null)
+      if (found) {
+        setItem(found)
+        setLoading(false)
+        return
+      }
+      // Phase 2: fallback to full search-index.json (covers bundled-only entries)
+      try {
+        const res = await fetch('./api/search-index.json')
+        if (cancelled) return
+        if (res.ok) {
+          const index: SearchIndexItem[] = await res.json()
+          if (cancelled) return
+          const hit = index.find(i => i.id === id)
+          if (hit) {
+            // SearchIndexItem is a slimmer shape; cast into CatalogItem for the
+            // existing render path (missing fields like install/health are all
+            // optional and the render path tolerates their absence).
+            setItem(hit as unknown as CatalogItem)
+            setLoading(false)
+            return
+          }
+        }
+      } catch {
+        // swallow — falls through to not-found below
+      }
+      if (cancelled) return
+      setItem(null)
       setLoading(false)
-    }).catch(() => setLoading(false))
+    }).catch(() => {
+      if (!cancelled) setLoading(false)
+    })
+    return () => {
+      cancelled = true
+    }
   }, [id])
 
   if (loading) {
@@ -191,8 +224,20 @@ export default function Detail() {
                 {lang === 'zh' ? '内含技能' : 'Bundled skills'}
               </h4>
               <div className="flex flex-wrap gap-1.5">
-                {item.bundle.skills_namespaces.map(ns => {
+                {item.bundle.skills_namespaces.map((ns, idx) => {
                   const skillName = ns.includes(':') ? ns.split(':', 2)[1] : ns
+                  const skillId = item.bundle?.bundled_skill_ids?.[idx]
+                  if (skillId) {
+                    return (
+                      <Link
+                        key={ns}
+                        to={`/detail/${skillId}`}
+                        className="text-xs px-2 py-0.5 rounded-full bg-pink-50 text-pink-700 dark:bg-pink-900/40 dark:text-pink-300 font-mono hover:underline"
+                      >
+                        {skillName}
+                      </Link>
+                    )
+                  }
                   return (
                     <span key={ns} className="text-xs px-2 py-0.5 rounded-full bg-pink-50 text-pink-700 dark:bg-pink-900/40 dark:text-pink-300 font-mono">
                       {skillName}
