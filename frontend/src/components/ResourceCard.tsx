@@ -1,4 +1,4 @@
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 import { useI18n } from '../hooks/useI18n'
 import type { CatalogItem } from '../types'
 
@@ -32,8 +32,13 @@ interface Props {
 
 export default function ResourceCard({ item, compact, highlight }: Props) {
   const { lang } = useI18n()
+  const navigate = useNavigate()
   const desc = lang === 'zh' && item.description_zh ? item.description_zh : item.description
   const freshnessLabel = item.health?.freshness_label
+  const bundledIn = item.bundled_in
+  const bundledTooltip = bundledIn
+    ? (lang === 'zh' ? `被插件捆绑：${bundledIn}` : `Bundled in ${bundledIn}`)
+    : ''
 
   return (
     <Link
@@ -55,17 +60,34 @@ export default function ResourceCard({ item, compact, highlight }: Props) {
             </span>
           )}
         </div>
-        {item.stars != null && item.stars > 0 && (
-          <span className="text-xs text-gray-400 whitespace-nowrap">
-            ⭐ {formatStars(item.stars)}
-          </span>
-        )}
-        {/* Rules/Prompts: show source badge instead of stars */}
-        {(item.type === 'rule' || item.type === 'prompt') && (!item.stars || item.stars === 0) && item.source && (
-          <span className="text-xs text-gray-400 whitespace-nowrap truncate max-w-24">
-            {item.source}
-          </span>
-        )}
+        <div className="flex items-center gap-1 shrink-0">
+          {bundledIn && (
+            <button
+              type="button"
+              title={bundledTooltip}
+              aria-label={bundledTooltip}
+              onClick={(e) => {
+                e.preventDefault()
+                e.stopPropagation()
+                navigate(`/detail/${bundledIn}`)
+              }}
+              className="text-[14px] leading-none text-gray-400 hover:text-pink-500 dark:hover:text-pink-300 transition-colors cursor-pointer"
+            >
+              🧩
+            </button>
+          )}
+          {item.stars != null && item.stars > 0 && (
+            <span className="text-xs text-gray-400 whitespace-nowrap">
+              ⭐ {formatStars(item.stars)}
+            </span>
+          )}
+          {/* Rules/Prompts: show source badge instead of stars */}
+          {(item.type === 'rule' || item.type === 'prompt') && (!item.stars || item.stars === 0) && item.source && (
+            <span className="text-xs text-gray-400 whitespace-nowrap truncate max-w-24">
+              {item.source}
+            </span>
+          )}
+        </div>
       </div>
 
       <h3 className="text-sm font-semibold text-gray-900 dark:text-white truncate mb-1">
