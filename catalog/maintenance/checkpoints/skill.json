@@ -1,5 +1,5 @@
 {
-  "completed_count": 1761,
+  "completed_count": 1750,
   "completed_entry_ids": [
     "007-agskill",
     "2d-games-agskill",
@@ -1288,8 +1288,6 @@
     "railway-database-skill",
     "railway-deploy-skill",
     "ralph-tui-create-beads-rust-subsy-ralph-tui",
-    "ralph-tui-create-beads-subsy-ralph-tui",
-    "ralph-tui-create-json-subsy-ralph-tui",
     "ralph-tui-prd-subsy-ralph-tui",
     "rayden-code-agskill",
     "rayden-use-agskill",
@@ -1763,7 +1761,7 @@
     "zoom-automation-agskill",
     "zustand-store-ts-agskill"
   ],
-  "last_committed_at": "2026-05-18T06:44:55.986218+00:00",
+  "last_committed_at": "2026-05-18T07:19:26.715496+00:00",
   "remaining_entry_ids": [
     "ab-test-setup-coreyhaines31-marketingskills",
     "antfu-antfu-skills",
@@ -1803,6 +1801,8 @@
     "plugin-forge-softaworks-agent-toolkit",
     "popup-cro-coreyhaines31-marketingskills",
     "professional-communication-softaworks-agent-toolkit",
+    "ralph-tui-create-beads-subsy-ralph-tui",
+    "ralph-tui-create-json-subsy-ralph-tui",
     "reducing-entropy-softaworks-agent-toolkit",
     "referral-program-coreyhaines31-marketingskills",
     "release-skills-jimliu-baoyu-skills",

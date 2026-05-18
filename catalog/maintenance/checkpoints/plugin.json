@@ -1,5 +1,5 @@
 {
-  "completed_count": 928,
+  "completed_count": 927,
   "completed_entry_ids": [
     "abhigyanpatwari-gitnexus-marketplace-gitnexus",
     "addyosmani-addy-agent-skills-agent-skills",
@@ -643,7 +643,6 @@
     "eventual-inc-eventual-inc-daft",
     "everyinc-compound-engineering-plugin-coding-tutor",
     "everyinc-compound-engineering-plugin-compound-engineering",
-    "everyinc-every-marketplace-coding-tutor",
     "everyinc-every-marketplace-compound-engineering",
     "eyaltoledano-taskmaster-taskmaster",
     "eze-is-web-access-web-access",
@@ -930,13 +929,14 @@
     "yuan1z0825-nature-skills-nature-skills",
     "zarazhangrui-frontend-slides-frontend-slides"
   ],
-  "last_committed_at": "2026-05-18T06:49:10.596831+00:00",
+  "last_committed_at": "2026-05-18T07:20:54.254144+00:00",
   "remaining_entry_ids": [
     "anthropic-sap-cds-mcp",
     "anthropics-claude-plugins-official-adlc",
     "anthropics-claude-plugins-official-data",
     "anthropics-claude-plugins-official-sanity-plugin",
     "anthropics-claude-plugins-official-sap-cds-mcp",
+    "everyinc-every-marketplace-coding-tutor",
     "kieranklaassen-every-marketplace-compound-engineering",
     "mcp-use-mcp-use-mcp-builder",
     "multica-ai-karpathy-skills-andrej-karpathy-skills",

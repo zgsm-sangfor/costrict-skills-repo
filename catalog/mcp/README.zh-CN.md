@@ -1,6 +1,6 @@
 # 🔌 MCP 服务器
 
-> 9932 模型上下文协议服务器，将 AI Agent 连接到外部工具、数据库和服务。
+> 9933 模型上下文协议服务器，将 AI Agent 连接到外部工具、数据库和服务。
 >
 > [返回主页 →](../../README.md) · [在线浏览 →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=mcp)
 
