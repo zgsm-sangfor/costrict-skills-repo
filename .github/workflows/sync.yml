@@ -378,7 +378,12 @@ jobs:
     needs: [sync-data, enrich]
     if: always() && needs.sync-data.result == 'success'
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # 30min 是非 security 路径的预算；add-security-risk-eval 后 aggregate 多了
+    # 一个 Run security scan step：首跑约 13k entries × 6.8s / concurrency=6
+    # ≈ 250min wall clock，往后增量评估命中 cache 后通常 <10min。设 350min
+    # 与 enrich matrix 对齐，留 artifact upload + commit 余量。后续若想缩短
+    # aggregate，可以把 security scan 拆成独立 job 与 README/commit 并行。
+    timeout-minutes: 350
     permissions:
       contents: write
     steps:
