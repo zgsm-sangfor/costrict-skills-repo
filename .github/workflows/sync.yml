@@ -4,6 +4,15 @@ on:
   schedule:
     - cron: "23 3 * * 1"  # Every Monday at 3:23 AM UTC
   workflow_dispatch:  # Manual trigger
+    inputs:
+      security_scan_enabled:
+        description: "Run security_scan stage in aggregate job (true/false). Disable for first-run batching."
+        required: false
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
 
 permissions:
   contents: read
@@ -384,6 +393,10 @@ jobs:
           pip install requests
           pip install -e ai-resource-eval
 
+      - name: Compute weekly cache stamp
+        id: week
+        run: echo "stamp=$(date -u +%Y-%U)" >> "$GITHUB_OUTPUT"
+
       # 先拿数据层 catalog（含 evaluation={} 占位）作为 base。
       - name: Download catalog data layer
         uses: actions/download-artifact@v4
@@ -600,6 +613,90 @@ jobs:
               _regenerate_search_index(entries, catalog_path)
               print("regenerated search-index.json after reject filter")
           PY
+
+      # ----------------------------------------------------------------------
+      # Security scan stage (spec add-security-risk-eval)
+      # ----------------------------------------------------------------------
+      # Runs an independent LLM call per entry to populate the top-level
+      # `security` block (risk_level / verdict / red_flags / permissions /
+      # summary / recommendations + audit fields). Uses its own SQLite cache
+      # namespace ("security") so quality eval cache is untouched. Entries
+      # whose evaluation fails simply lack the security field this cycle and
+      # will be retried on the next run.
+      - name: Restore security eval cache
+        id: cache-restore-security
+        if: ${{ github.event.inputs.security_scan_enabled != 'false' }}
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            .eval_cache/
+          key: security-eval-cache-${{ steps.week.outputs.stamp }}-${{ github.run_number }}
+          restore-keys: |
+            security-eval-cache-${{ steps.week.outputs.stamp }}-
+            security-eval-cache-
+
+      - name: Run security scan
+        if: ${{ github.event.inputs.security_scan_enabled != 'false' }}
+        timeout-minutes: 180
+        continue-on-error: true
+        env:
+          PYTHONUNBUFFERED: "1"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+          EVAL_CONCURRENCY: ${{ vars.EVAL_CONCURRENCY || '6' }}
+          LLM_TIMEOUT: ${{ vars.LLM_TIMEOUT || '300' }}
+          # Spec: SECURITY_SCAN_ENABLED defaults true; SECURITY_SCAN_DRY_RUN
+          # defaults false since risk_level does not affect accept/reject.
+          SECURITY_SCAN_ENABLED: ${{ github.event.inputs.security_scan_enabled || 'true' }}
+          SECURITY_SCAN_DRY_RUN: ${{ vars.SECURITY_SCAN_DRY_RUN || 'false' }}
+        run: |
+          python -u - <<'PY'
+          import json
+          import os
+          import sys
+          from pathlib import Path
+
+          if os.environ.get("SECURITY_SCAN_ENABLED", "true").lower() == "false":
+              print("SECURITY_SCAN_ENABLED=false; skipping security scan", flush=True)
+              sys.exit(0)
+
+          sys.path.insert(0, "scripts")
+          from eval_bridge import security_scan_and_map
+
+          catalog_path = Path("catalog/index.json")
+          entries = json.loads(catalog_path.read_text(encoding="utf-8"))
+          print(f"security_scan: loaded {len(entries)} entries", flush=True)
+
+          try:
+              concurrency = int(os.environ.get("EVAL_CONCURRENCY", "4"))
+          except ValueError:
+              concurrency = 4
+
+          security_scan_and_map(
+              entries,
+              cache_dir=".eval_cache",
+              incremental=True,
+              concurrency=concurrency,
+          )
+
+          got = sum(1 for e in entries if isinstance(e, dict) and e.get("security"))
+          print(f"security_scan: wrote security block on {got}/{len(entries)} entries", flush=True)
+
+          catalog_path.write_text(
+              json.dumps(entries, indent=2, ensure_ascii=False) + "\n",
+              encoding="utf-8",
+          )
+          PY
+
+      - name: Save security eval cache
+        if: ${{ always() && github.event.inputs.security_scan_enabled != 'false' && steps.cache-restore-security.outputs.cache-hit != 'true' }}
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            .eval_cache/
+          key: security-eval-cache-${{ steps.week.outputs.stamp }}-${{ github.run_number }}
 
       - name: Generate catalog sub-directory READMEs
         env:
