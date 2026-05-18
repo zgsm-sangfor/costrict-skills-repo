@@ -69,7 +69,7 @@ def _utcnow_iso() -> str:
 _SEARCH_INDEX_FIELDS = (
     "id", "name", "type", "category", "tags", "tech_stack",
     "stars", "description", "description_zh", "source_url",
-    "final_score", "decision", "freshness_label",
+    "final_score", "decision", "freshness_label", "bundled_in",
 )
 
 

@@ -55,7 +55,8 @@ TODAY = date.today().isoformat()
 
 
 def _apply_bundled_in_annotations(entries: list[dict], log=logger) -> list[dict]:
-    """Soft-annotate skill entries that are bundled by a plugin entry.
+    """Soft-annotate skill entries that are bundled by a plugin entry, and
+    write the reverse mapping (``bundle.bundled_skill_ids``) on plugin entries.
 
     For each entry whose ``type == "plugin"``, scan ``bundle.skills_namespaces``
     (a list of ``"<plugin-name>:<skill-name>"`` strings, per the plugin manifest
@@ -69,6 +70,12 @@ def _apply_bundled_in_annotations(entries: list[dict], log=logger) -> list[dict]
       3. Slugified fallback: skill ``id`` equals ``<plugin-name>-<skill-name>``
          derived by replacing ``:`` with ``-`` (handles the common case where
          skills are stored as ``superpowers-brainstorming``).
+
+    In the same pass, populate ``plugin["bundle"]["bundled_skill_ids"]`` — a
+    list **position-aligned** with ``bundle.skills_namespaces``: element[i] is
+    the matched skill's catalog ``id``, or ``None`` if no skill matched (orphan).
+    Plugins whose ``skills_namespaces`` is missing or empty do NOT get the
+    field written (it stays absent rather than being set to ``[]``).
 
     Mutates ``entries`` in place and also returns it. Logs a single summary
     line per spec plugin-bundle-dedup §"Dedup correctness logging" and a
@@ -132,8 +139,15 @@ def _apply_bundled_in_annotations(entries: list[dict], log=logger) -> list[dict]
             )
             continue
         plugin_repo = _plugin_source_repo(plugin)
+        # Position-aligned reverse mapping: one element per namespace entry
+        # (None for orphans). Written back to plugin["bundle"]["bundled_skill_ids"]
+        # after the namespace loop completes.
+        bundled_skill_ids: list = []
         for ns in namespaces:
             if not isinstance(ns, str) or not ns:
+                # Non-string / empty namespace entries can't be matched; keep
+                # alignment with the input list by recording None.
+                bundled_skill_ids.append(None)
                 continue
             target = skills_by_namespace.get(ns) or skills_by_id.get(ns)
             if target is None and ":" in ns:
@@ -156,6 +170,7 @@ def _apply_bundled_in_annotations(entries: list[dict], log=logger) -> list[dict]
                     target = same_repo[0] if same_repo else candidates[0]
             if target is None:
                 orphan_count += 1
+                bundled_skill_ids.append(None)
                 log.warning(
                     "post-merge: plugin %s declares orphan namespace %r "
                     "(no matching skill in catalog)",
@@ -163,9 +178,16 @@ def _apply_bundled_in_annotations(entries: list[dict], log=logger) -> list[dict]
                     ns,
                 )
                 continue
+            target_id = target.get("id") or None
+            bundled_skill_ids.append(target_id)
             if plugin_id:
                 target["bundled_in"] = plugin_id
                 annotated += 1
+        # Write reverse mapping back onto the plugin entry. We only reach this
+        # point when ``namespaces`` was a non-empty list (the earlier guards
+        # ``continue`` for empty/missing/non-list cases), so per-spec we are
+        # safe to set the field unconditionally here.
+        plugin.setdefault("bundle", {})["bundled_skill_ids"] = bundled_skill_ids
 
     log.info(
         "post-merge: scanned %d plugins, annotated %d skills with bundled_in, "
@@ -551,7 +573,7 @@ def merge(skip_enrichment: bool = False):
     SEARCH_INDEX_FIELDS = (
         "id", "name", "type", "category", "tags", "tech_stack",
         "stars", "description", "description_zh", "source_url",
-        "final_score", "decision", "freshness_label",
+        "final_score", "decision", "freshness_label", "bundled_in",
     )
     search_entries = []
     for entry in deduped:

@@ -349,6 +349,82 @@ class TestMergeIndex(unittest.TestCase):
         self.assertIn("Dedup", log_text)
 
 
+class TestBundledInReverseMapping(unittest.TestCase):
+    """Tests for plugin.bundle.bundled_skill_ids reverse mapping written by
+    ``merge_index._apply_bundled_in_annotations``."""
+
+    def test_apply_bundled_in_writes_reverse_mapping(self):
+        """Plugin with 3 namespaces (2 matched + 1 orphan) gets a
+        position-aligned ``bundled_skill_ids`` list of length 3 where the
+        orphan slot is ``None``."""
+        plugin = _make_entry(
+            "superpowers-plugin",
+            type="plugin",
+            source_url="https://github.com/obra/superpowers",
+        )
+        plugin["bundle"] = {
+            "skills_namespaces": [
+                "superpowers:brainstorming",
+                "superpowers:writing-plans",
+                "superpowers:does-not-exist",
+            ]
+        }
+        skill_a = _make_entry(
+            "superpowers-brainstorming",
+            type="skill",
+            source_url="https://github.com/obra/superpowers/tree/main/skills/brainstorming",
+        )
+        skill_a["namespace"] = "superpowers:brainstorming"
+        skill_b = _make_entry(
+            "superpowers-writing-plans",
+            type="skill",
+            source_url="https://github.com/obra/superpowers/tree/main/skills/writing-plans",
+        )
+        skill_b["namespace"] = "superpowers:writing-plans"
+
+        entries = [plugin, skill_a, skill_b]
+        merge_index._apply_bundled_in_annotations(entries)
+
+        self.assertIn("bundle", plugin)
+        self.assertIn("bundled_skill_ids", plugin["bundle"])
+        self.assertEqual(
+            plugin["bundle"]["bundled_skill_ids"],
+            ["superpowers-brainstorming", "superpowers-writing-plans", None],
+        )
+        self.assertEqual(
+            len(plugin["bundle"]["bundled_skill_ids"]),
+            len(plugin["bundle"]["skills_namespaces"]),
+        )
+
+    def test_apply_bundled_in_skips_empty_namespaces_for_reverse(self):
+        """Plugin with empty/missing ``skills_namespaces`` must NOT have
+        ``bundle.bundled_skill_ids`` set (absent, not ``[]``)."""
+        plugin_empty = _make_entry(
+            "no-skills-plugin",
+            type="plugin",
+            source_url="https://github.com/example/no-skills",
+        )
+        plugin_empty["bundle"] = {"skills_namespaces": []}
+
+        plugin_missing = _make_entry(
+            "no-bundle-plugin",
+            type="plugin",
+            source_url="https://github.com/example/no-bundle",
+        )
+        # No "bundle" key at all.
+
+        entries = [plugin_empty, plugin_missing]
+        merge_index._apply_bundled_in_annotations(entries)
+
+        # Empty list case: bundle dict present (from input), but no reverse field.
+        self.assertIn("bundle", plugin_empty)
+        self.assertNotIn("bundled_skill_ids", plugin_empty["bundle"])
+
+        # Missing bundle case: we must not have manufactured one with the field.
+        bundle = plugin_missing.get("bundle") or {}
+        self.assertNotIn("bundled_skill_ids", bundle)
+
+
 class TestSearchIndex(unittest.TestCase):
     """Tests for lightweight search index generation."""
 
@@ -398,7 +474,7 @@ class TestSearchIndex(unittest.TestCase):
             "id", "name", "type", "category", "tags", "tech_stack",
             "stars", "description", "description_zh", "source_url",
             "install_method", "final_score", "decision", "search_text",
-            "freshness_label",
+            "freshness_label", "bundled_in",
         }
         self.assertEqual(set(result[0].keys()), expected_fields)
 
