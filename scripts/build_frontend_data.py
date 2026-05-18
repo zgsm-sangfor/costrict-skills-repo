@@ -88,6 +88,12 @@ def slim_item(item):
         "pushed_at": item.get("pushed_at"),
         "highlights": item.get("highlights"),
     }
+    # Security scan block (add-security-risk-eval): passed through to frontend
+    # so Detail page banner + ResourceCard shield icon can render. Only present
+    # on entries the LLM successfully evaluated this cycle.
+    security = item.get("security")
+    if security is not None:
+        slim["security"] = security
     # Plugin-specific fields (only present on plugin entries).
     if item.get("type") == "plugin":
         for key in ("marketplace_url", "platforms", "bundle", "manifest_completeness"):
