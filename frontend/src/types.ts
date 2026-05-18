@@ -1,3 +1,23 @@
+export type RiskLevel = 'clean' | 'low' | 'medium' | 'high' | 'extreme'
+export type SecurityVerdict = 'safe' | 'caution' | 'reject'
+
+export interface SecurityScan {
+  risk_level: RiskLevel
+  verdict: SecurityVerdict
+  red_flags: string[]
+  permissions: {
+    files: string[]
+    network: string[]
+    commands: string[]
+  }
+  summary: string
+  recommendations: string[]
+  scan_model?: string
+  rubric_version?: string
+  content_hash?: string
+  scanned_at?: string
+}
+
 export interface CatalogItem {
   id: string
   name: string
@@ -37,6 +57,8 @@ export interface CatalogItem {
   mcp_install_state?: 'ready' | 'needs_config' | 'manual' | 'invalid' | 'unknown'
   mcp_validation_tags?: string[]
   mcp_installability_reason?: string
+  // Security scan result (any type, only when LLM evaluated this entry successfully).
+  security?: SecurityScan
   source: string
   last_synced: string
   added_at?: string

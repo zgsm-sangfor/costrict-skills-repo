@@ -31,7 +31,7 @@ interface Props {
 }
 
 export default function ResourceCard({ item, compact, highlight }: Props) {
-  const { lang } = useI18n()
+  const { lang, t } = useI18n()
   const navigate = useNavigate()
   const desc = lang === 'zh' && item.description_zh ? item.description_zh : item.description
   const freshnessLabel = item.health?.freshness_label
@@ -39,6 +39,17 @@ export default function ResourceCard({ item, compact, highlight }: Props) {
   const bundledTooltip = bundledIn
     ? (lang === 'zh' ? `被插件捆绑：${bundledIn}` : `Bundled in ${bundledIn}`)
     : ''
+  // Surface a small shield icon only when the security review flagged the
+  // entry as worth attention. Clean / low risk stay invisible to avoid
+  // cluttering the ~80% of safe entries.
+  const riskLevel = item.security?.risk_level
+  const showShield = riskLevel === 'medium' || riskLevel === 'high' || riskLevel === 'extreme'
+  const shieldStyle: Record<string, string> = {
+    medium: 'text-amber-500 hover:text-amber-600 dark:text-amber-400 dark:hover:text-amber-300',
+    high: 'text-rose-500 hover:text-rose-600 dark:text-rose-400 dark:hover:text-rose-300',
+    extreme: 'text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300',
+  }
+  const shieldEmoji: Record<string, string> = { medium: '⚠️', high: '🛑', extreme: '☠️' }
 
   return (
     <Link
@@ -61,6 +72,15 @@ export default function ResourceCard({ item, compact, highlight }: Props) {
           )}
         </div>
         <div className="flex items-center gap-1 shrink-0">
+          {showShield && riskLevel && (
+            <span
+              title={t(`security.cardTooltip.${riskLevel}`)}
+              aria-label={t(`security.cardTooltip.${riskLevel}`)}
+              className={`text-[12px] leading-none ${shieldStyle[riskLevel]} cursor-help`}
+            >
+              {shieldEmoji[riskLevel]}
+            </span>
+          )}
           {bundledIn && (
             <button
               type="button"

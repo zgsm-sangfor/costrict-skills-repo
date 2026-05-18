@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router'
 import { useI18n } from '../hooks/useI18n'
 import RadarChart from '../components/RadarChart'
 import McpInstallabilityBanner from '../components/McpInstallabilityBanner'
+import SecurityBanner from '../components/SecurityBanner'
 import type { CatalogItem, SearchIndexItem } from '../types'
 import { buildInstallGuidance } from '../lib/installGuidance'
 
@@ -173,6 +174,9 @@ export default function Detail() {
           </div>
         </div>
       )}
+
+      {/* Security review banner (any type — only renders when entry has been scanned) */}
+      <SecurityBanner item={item} />
 
       {/* Plugin bundle: skills/agents/commands/mcp_servers/hooks inside this plugin */}
       {item.type === 'plugin' && item.bundle && (
