@@ -26,6 +26,7 @@ try:
         overlay_added_at,
         build_incremental_recrawl_candidates,
         backfill_missing_added_at,
+        overlay_preserved_fields,
     )
 except ImportError:
     from utils import (
@@ -44,6 +45,7 @@ except ImportError:
         overlay_added_at,
         build_incremental_recrawl_candidates,
         backfill_missing_added_at,
+        overlay_preserved_fields,
     )
 
 CATALOG_DIR = os.path.join(os.path.dirname(__file__), "..", "catalog")
@@ -441,6 +443,14 @@ def merge(skip_enrichment: bool = False):
             prior_ev = existing_eval_map[eid]
             entry["_prior_evaluation"] = dict(prior_ev)
             entry["evaluation"] = {k: prior_ev[k] for k in _TIMESTAMP_KEYS if k in prior_ev}
+
+    # --- Preserve security block across rebuilds ---
+    # Spec security-risk-eval "catalog_lifecycle 保留 security 字段": old entries'
+    # `security` blocks SHALL survive rebuilds where the security stage is
+    # skipped (SECURITY_SCAN_ENABLED=false) or fails for that entry. Overlay
+    # happens BEFORE enrichment so a fresh security_scan result naturally wins
+    # (it writes into entry["security"] later).
+    overlay_preserved_fields(deduped, existing_output)
 
     # --- Backfill pushed_at: overlay from prior output, API only for new entries ---
     existing_pushed_at = {}

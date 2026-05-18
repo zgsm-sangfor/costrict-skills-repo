@@ -77,6 +77,72 @@ def overlay_added_at(
     return result
 
 
+# Top-level entry fields that lifecycle stages SHALL preserve across rebuild:
+# every key here will be overlayed from the prior catalog when the regenerated
+# entry lacks it. `security` is added by spec add-security-risk-eval so the
+# downstream security block survives weeks where the security stage is skipped
+# (e.g. SECURITY_SCAN_ENABLED=false) or fails for a specific entry.
+PRESERVED_TOP_LEVEL_FIELDS: tuple[str, ...] = ("security",)
+
+
+def overlay_preserved_fields(
+    regenerated: list[dict[str, Any]],
+    existing: list[dict[str, Any]],
+    *,
+    fields: tuple[str, ...] = PRESERVED_TOP_LEVEL_FIELDS,
+) -> list[dict[str, Any]]:
+    """Copy preserved top-level fields (default: ``security``) from existing
+    entries onto regenerated entries that lack them.
+
+    Behaviour:
+
+    * Match by ``id`` (analogous to the existing ``_prior_evaluation`` overlay).
+    * Per field, copy only when the regenerated entry does NOT already have a
+      truthy value — that way a fresh evaluation result wins over the prior
+      one, and the prior block is only re-used as a fallback.
+    * Mutates ``regenerated`` in place (and returns it) for caller convenience.
+
+    This is the spec security-risk-eval "catalog_lifecycle 保留 security 字段"
+    requirement: an old entry's security block SHALL be retained when the
+    current cycle doesn't produce a fresh one.
+    """
+    existing_field_map: dict[str, dict[str, Any]] = {}
+    for entry in existing:
+        eid = entry.get("id")
+        if not eid:
+            continue
+        prior_fields: dict[str, Any] = {}
+        for f in fields:
+            value = entry.get(f)
+            if value:  # only preserve truthy values (skip None / {} / [])
+                prior_fields[f] = value
+        if prior_fields:
+            existing_field_map[eid] = prior_fields
+
+    for entry in regenerated:
+        eid = entry.get("id")
+        if not eid or eid not in existing_field_map:
+            continue
+        prior_fields = existing_field_map[eid]
+        for f in fields:
+            if entry.get(f):
+                continue
+            if f in prior_fields:
+                # Deep-copy via dict()/list() shallow clone to avoid sharing
+                # the same nested object across entries. Security blocks are
+                # JSON-friendly dicts; a shallow copy at the top level is
+                # sufficient for the immutable-read pattern downstream code
+                # uses.
+                value = prior_fields[f]
+                if isinstance(value, dict):
+                    entry[f] = dict(value)
+                elif isinstance(value, list):
+                    entry[f] = list(value)
+                else:
+                    entry[f] = value
+    return regenerated
+
+
 def backfill_missing_added_at(
     entries: list[dict[str, Any]],
     *,
