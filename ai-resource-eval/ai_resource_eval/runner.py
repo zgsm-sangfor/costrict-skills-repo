@@ -29,6 +29,7 @@ from ai_resource_eval.api.types import (
     HealthSignals,
     McpInstallabilityData,
     MetricResult,
+    SecurityScanResult,
     TaskConfig,
 )
 from ai_resource_eval.cache import EvalCache
@@ -43,6 +44,12 @@ from ai_resource_eval.metrics.prompt_builder import (
     build_output_schema,
     build_system_prompt,
     metric_registry,
+)
+from ai_resource_eval.metrics.security_scan_prompt import (
+    LLMSecurityResponse,
+    SECURITY_SCAN_SYSTEM_PROMPT,
+    build_security_output_schema,
+    build_security_user_prompt,
 )
 from ai_resource_eval.scoring.decision import judge_decision
 from ai_resource_eval.scoring.governor import ScoringGovernor
@@ -114,23 +121,36 @@ class EvalRunner:
         # Enrichment flag from task config
         self._enrichment = task_config.enrichment
         self._mcp_installability = task_config.mcp_installability
+        self._security_scan = getattr(task_config, "security_scan", False)
 
-        # Pre-build system prompt and schema (same for all entries)
-        self._system_prompt = build_system_prompt(
-            self._metrics,
-            enrichment=self._enrichment,
-            mcp_installability=self._mcp_installability,
-        )
+        # Pre-build system prompt and schema (same for all entries).
+        # security_scan task uses a dedicated prompt/schema (no metric rubrics,
+        # no enrichment block); it also runs through its own runner branch so
+        # the metric/enrichment prompt is never consulted for that task.
+        if self._security_scan:
+            self._system_prompt = SECURITY_SCAN_SYSTEM_PROMPT
+            self._output_schema = build_security_output_schema()
+        else:
+            self._system_prompt = build_system_prompt(
+                self._metrics,
+                enrichment=self._enrichment,
+                mcp_installability=self._mcp_installability,
+            )
+            self._output_schema = build_output_schema(
+                [m.name for m in self._metrics],
+                enrichment=self._enrichment,
+                mcp_installability=self._mcp_installability,
+            )
         self._metric_names = [m.name for m in self._metrics]
-        self._output_schema = build_output_schema(
-            self._metric_names,
-            enrichment=self._enrichment,
-            mcp_installability=self._mcp_installability,
-        )
 
         # Compute rubric version: "{major}.{sha8}"
         sha8 = hashlib.sha256(self._system_prompt.encode()).hexdigest()[:8]
         self._rubric_version = f"{task_config.rubric_major_version}.{sha8}"
+
+        # Cache namespace: security_scan rows live in a separate namespace so
+        # bumping security rubric_major_version doesn't invalidate quality
+        # cache (and vice versa).
+        self._cache_namespace: str | None = "security" if self._security_scan else None
 
         # Initialise fetcher
         self._github_fetcher = GitHubFetcher(
@@ -303,6 +323,11 @@ class EvalRunner:
                     f"{content}\n\n{install_metadata}"
                 )
 
+        # security_scan task：完整走独立路径（独立 prompt / schema / cache namespace /
+        # failure semantics — 解析失败返 None 不写 result，不影响主管线）。
+        if self._security_scan:
+            return self._eval_one_security(entry, content, content_hash)
+
         # 2. Check cache (incremental mode)
         if self._incremental:
             cached = self._check_cache(entry.id, content_hash)
@@ -440,6 +465,84 @@ class EvalRunner:
             )
         self._cache_result(eval_result, content_hash, judge_result)
 
+        return eval_result
+
+    # ------------------------------------------------------------------
+    # Security scan path
+    # ------------------------------------------------------------------
+
+    def _eval_one_security(
+        self,
+        entry: EvalItem,
+        content: str,
+        content_hash: str,
+    ) -> EvalResult | None:
+        """Run security_scan LLM call for a single entry.
+
+        Returns an :class:`EvalResult` whose ``security`` field is populated and
+        all metric / enrichment / health-derived fields are left at safe defaults
+        (``metrics={}``, ``final_score=0``, ``decision=review``, ``health``
+        defaults). The caller (eval_bridge) only reads ``result.security`` for
+        this task, so the unused fields are inert filler that keeps the shared
+        ``EvalResult`` schema happy.
+
+        Failure modes (LLM error, JSON parse error, verdict↔risk_level mismatch
+        rejected by :class:`SecurityScanResult` validator) all return ``None``
+        without writing a cache row — per spec, missing ``security`` block means
+        "not yet evaluated" and the next run will retry.
+        """
+        # Cache lookup (security namespace)
+        if self._incremental:
+            cached = self._check_cache(entry.id, content_hash)
+            if cached is not None and cached.security is not None:
+                return cached
+
+        user_prompt = build_security_user_prompt(entry, content)
+
+        try:
+            judge_result = self._judge.judge(
+                system_prompt=self._system_prompt,
+                user_prompt=user_prompt,
+                schema=self._output_schema,
+                pydantic_model=LLMSecurityResponse,
+            )
+        except Exception:
+            logger.exception("Security LLM call failed for %s", entry.id)
+            return None
+
+        if judge_result is None or judge_result.structured is None:
+            logger.debug("Security LLM returned unparseable response for %s", entry.id)
+            return None
+
+        self._total_cost_usd += judge_result.cost_usd
+
+        try:
+            security = SecurityScanResult.model_validate(judge_result.structured)
+        except Exception:
+            logger.debug(
+                "Security result for %s rejected by validator (verdict↔risk_level "
+                "mismatch or schema violation); will retry next cycle",
+                entry.id,
+            )
+            return None
+
+        eval_result = EvalResult(
+            entry_id=entry.id,
+            metrics={},
+            enrichment=None,
+            mcp_installability=None,
+            security=security,
+            health=HealthSignals(),
+            llm_score=None,
+            final_score=0.0,
+            decision=Decision.review,
+            star_weight=1.0,
+            content_hash=content_hash,
+            rubric_version=self._rubric_version,
+            model_id=judge_result.model_id,
+            evaluated_at=datetime.now(timezone.utc),
+        )
+        self._cache_result(eval_result, content_hash, judge_result)
         return eval_result
 
     # ------------------------------------------------------------------
@@ -736,6 +839,7 @@ class EvalRunner:
             metric="__full__",
             content_hash=content_hash,
             rubric_version=self._rubric_version,
+            namespace=self._cache_namespace,
         )
         cached = self._cache.get(cache_key)
         if cached is None:
@@ -764,6 +868,7 @@ class EvalRunner:
             metric="__full__",
             content_hash=content_hash,
             rubric_version=self._rubric_version,
+            namespace=self._cache_namespace,
         )
 
         entry = CacheEntry(

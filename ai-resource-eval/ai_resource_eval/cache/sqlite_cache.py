@@ -298,6 +298,7 @@ class EvalCache:
         content_hash: str,
         rubric_version: str,
         config_hash: str | None = None,
+        namespace: str | None = None,
     ) -> str:
         """Derive a deterministic cache key.
 
@@ -309,10 +310,22 @@ class EvalCache:
         ``decision``), the scoring configuration is folded into the key so
         that weight/threshold changes automatically invalidate the entry:
             ``SHA-256(metric + ":" + content_hash + ":" + rubric_version + ":" + config_hash)``
+
+        When *namespace* is provided (task-type isolation, e.g. ``"security"``
+        for the security_scan task), it is prepended to the raw string so the
+        same entry can have multiple independent cache rows that don't
+        invalidate each other when one rubric is bumped:
+            ``SHA-256(namespace + "|" + metric + ":" + content_hash + ":" + rubric_version[ + ":" + config_hash])``
+
+        Omitting *namespace* preserves the legacy hash (and existing cache
+        rows) byte-for-byte; this is the default behaviour for all quality /
+        enrichment / MCP installability paths.
         """
         raw = f"{metric}:{content_hash}:{rubric_version}"
         if config_hash is not None:
             raw = f"{raw}:{config_hash}"
+        if namespace:
+            raw = f"{namespace}|{raw}"
         return hashlib.sha256(raw.encode()).hexdigest()
 
     @staticmethod
