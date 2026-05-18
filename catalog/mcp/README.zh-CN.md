@@ -1,6 +1,6 @@
 # 🔌 MCP 服务器
 
-> 9933 模型上下文协议服务器，将 AI Agent 连接到外部工具、数据库和服务。
+> 9941 模型上下文协议服务器，将 AI Agent 连接到外部工具、数据库和服务。
 >
 > [返回主页 →](../../README.md) · [在线浏览 →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=mcp)
 
@@ -93,7 +93,7 @@
 | 81 | [MCP TypeScript Template 🚀](https://github.com/cyanheads/mcp-ts-template) | 用于构建 MCP 服务器的 TypeScript 框架，支持声明式工具/资源定义、认证、存储和遥测。 | 122 | 🟢 活跃 | 96 | 2026-04-13 | frontend | `template`, `mcp`, `ts` |
 | 82 | [Code Pathfinder](https://github.com/shivasurya/code-pathfinder) | 开源SAST引擎，支持跨文件数据流分析，为AI编程助手提供MCP服务器。 | 114 | 🟢 活跃 | 96 | 2026-04-13 | security | `static-analysis`, `security scanning`, `static code analysis` |
 | 83 | [just-every/mcp-screenshot-website-fast](https://github.com/just-every/mcp-screenshot-website-fast) | MCP服务器，用于快速、AI优化的网页截图捕获，自动分块以适配Claude视觉API。 | 106 | 🟢 活跃 | 96 | 2026-04-05 | ai-ml | `claude`, `codex`, `fast` |
-| 84 | [Trino MCP Server](https://github.com/tuannvm/mcp-trino) | 基于Go的MCP服务器，使AI助手能通过标准化工具查询Trino分布式SQL数据库，支持CLI和OAuth认证。 | 103 | 🟢 活跃 | 96 | 2026-05-04 | database | `go`, `mcp`, `mcp-server` |
+| 84 | [Trino MCP Server](https://github.com/tuannvm/mcp-trino) | 基于Go的MCP服务器，使AI助手能通过标准化工具查询Trino分布式SQL数据库，支持CLI和OAuth认证。 | 104 | 🟢 活跃 | 96 | 2026-05-04 | database | `go`, `mcp`, `mcp-server` |
 | 85 | [ActionMCP](https://github.com/seuros/action_mcp) | 为 Rails 应用添加模型上下文协议 (MCP) 服务器功能的 Ruby gem，用于 AI 集成。 | 98 | 🟢 活跃 | 96 | 2026-04-13 | backend | `ai`, `mcp`, `llm` |
 | 86 | [CircleCI](https://github.com/CircleCI-Public/mcp-server-circleci) | MCP 服务器，让 AI 代理通过自然语言诊断构建失败、分析测试结果、管理 CircleCI 流水线。 | 84 | 🟢 活跃 | 96 | 2026-04-27 | ai-ml | `mcp-server`, `modelcontextprotocol` |
 | 87 | [Unifi MCP Server](https://github.com/enuno/unifi-mcp-server) | 一个MCP服务器，暴露UniFi网络控制器API，让AI代理通过74+工具管理网络基础设施。 | 82 | 🟢 活跃 | 96 | 2026-04-09 | tooling | `unifi`, `network-management`, `server` |

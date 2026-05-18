@@ -1,6 +1,6 @@
 # 🔌 MCP Servers
 
-> 9933 Model Context Protocol servers that connect AI agents to external tools, databases, and services.
+> 9941 Model Context Protocol servers that connect AI agents to external tools, databases, and services.
 >
 > [Back to main →](../../README.md) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=mcp)
 
@@ -93,7 +93,7 @@
 | 81 | [MCP TypeScript Template 🚀](https://github.com/cyanheads/mcp-ts-template) | TypeScript framework for building MCP servers with declarative tool/resource def... | 122 | 🟢 Active | 96 | 2026-04-13 | frontend | `template`, `mcp`, `ts` |
 | 82 | [Code Pathfinder](https://github.com/shivasurya/code-pathfinder) | Open-source SAST engine with cross-file dataflow analysis and MCP server for AI ... | 114 | 🟢 Active | 96 | 2026-04-13 | security | `static-analysis`, `security scanning`, `static code analysis` |
 | 83 | [just-every/mcp-screenshot-website-fast](https://github.com/just-every/mcp-screenshot-website-fast) | MCP server for fast, AI-optimized webpage screenshot capture with automatic tili... | 106 | 🟢 Active | 96 | 2026-04-05 | ai-ml | `claude`, `codex`, `fast` |
-| 84 | [Trino MCP Server](https://github.com/tuannvm/mcp-trino) | Go-based MCP server enabling AI assistants to query Trino distributed SQL databa... | 103 | 🟢 Active | 96 | 2026-05-04 | database | `go`, `mcp`, `mcp-server` |
+| 84 | [Trino MCP Server](https://github.com/tuannvm/mcp-trino) | Go-based MCP server enabling AI assistants to query Trino distributed SQL databa... | 104 | 🟢 Active | 96 | 2026-05-04 | database | `go`, `mcp`, `mcp-server` |
 | 85 | [ActionMCP](https://github.com/seuros/action_mcp) | A Ruby gem that adds Model Context Protocol (MCP) server capabilities to Rails a... | 98 | 🟢 Active | 96 | 2026-04-13 | backend | `ai`, `mcp`, `llm` |
 | 86 | [CircleCI](https://github.com/CircleCI-Public/mcp-server-circleci) | MCP server enabling AI agents to interact with CircleCI for build failure diagno... | 84 | 🟢 Active | 96 | 2026-04-27 | ai-ml | `mcp-server`, `modelcontextprotocol` |
 | 87 | [Unifi MCP Server](https://github.com/enuno/unifi-mcp-server) | An MCP server exposing UniFi Network Controller API for AI agents to manage netw... | 82 | 🟢 Active | 96 | 2026-04-09 | tooling | `unifi`, `network-management`, `server` |
