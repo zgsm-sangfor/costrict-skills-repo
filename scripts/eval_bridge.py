@@ -1149,3 +1149,209 @@ def eval_and_map(
             mapped += 1
 
     logger.info("Eval bridge: mapped %d / %d entries", mapped, len(entries))
+
+
+# ---------------------------------------------------------------------------
+# Security scan pipeline stage (add-security-risk-eval)
+# ---------------------------------------------------------------------------
+
+
+def _build_mcp_security_eval_item(entry: dict[str, Any], EvalItemCls):
+    """Construct an EvalItem for an MCP entry whose evaluation content is the
+    serialized install.config (no remote fetch).
+
+    Per spec, the runner needs to evaluate MCP entries on their install.config
+    JSON rather than a README. We achieve this by:
+
+      * dropping ``source_url`` so the runner's fetcher doesn't try to pull a
+        README from GitHub,
+      * stuffing the serialized install.config into ``description`` so the
+        ``content_fallback: description`` path returns that text,
+      * keeping ``install`` so :func:`build_security_user_prompt` can also
+        surface it inline in the user prompt.
+
+    The content_hash that downstream code reads from the EvalResult is the
+    SHA-256 of this synthesized description (taken automatically by
+    ``EvalCache.content_hash`` via the fetcher's description path).
+    """
+    try:
+        from ai_resource_eval.metrics.security_scan_prompt import (
+            build_security_synth_content_for_mcp,
+        )
+    except ImportError:  # pragma: no cover - only fails if package missing
+        return None
+
+    install = entry.get("install") if isinstance(entry.get("install"), dict) else None
+    synth = build_security_synth_content_for_mcp(install)
+
+    raw = dict(entry)
+    raw["source_url"] = None
+    raw["description"] = synth
+    raw["install"] = install
+    try:
+        return EvalItemCls(**raw)
+    except Exception as exc:  # noqa: BLE001
+        logger.debug("Failed to build MCP security EvalItem for %s: %s", entry.get("id"), exc)
+        return None
+
+
+def _map_security_to_entry(entry: dict[str, Any], result: dict[str, Any] | None) -> None:
+    """Map a security-scan EvalResult onto a catalog entry.
+
+    Writes the entry's top-level ``security`` block with the 6 LLM fields plus
+    audit metadata (``scan_model`` / ``rubric_version`` / ``content_hash`` /
+    ``scanned_at``). On failure the field is left missing — per spec, absent
+    ``security`` means "not yet evaluated this cycle".
+    """
+    if result is None:
+        return
+
+    security = result.get("security")
+    if not isinstance(security, dict):
+        return
+
+    scanned_at = result.get("evaluated_at")
+    if scanned_at is None:
+        from datetime import datetime, timezone
+
+        scanned_at = datetime.now(timezone.utc).isoformat()
+
+    entry["security"] = {
+        "risk_level": security.get("risk_level"),
+        "verdict": security.get("verdict"),
+        "red_flags": security.get("red_flags") or [],
+        "permissions": security.get("permissions")
+        or {"files": [], "network": [], "commands": []},
+        "summary": security.get("summary") or "",
+        "recommendations": security.get("recommendations") or [],
+        "scan_model": result.get("model_id"),
+        "rubric_version": result.get("rubric_version"),
+        "content_hash": result.get("content_hash"),
+        "scanned_at": scanned_at,
+    }
+
+
+def _run_security_scan(
+    entries: list[dict[str, Any]],
+    cache_dir: str = ".eval_cache",
+    incremental: bool = True,
+    concurrency: int = 4,
+) -> dict[str, dict[str, Any]]:
+    """Run the security_scan task across entries and return {entry_id: result}.
+
+    Routing:
+      * MCP entries are pre-processed by :func:`_build_mcp_security_eval_item`
+        so the runner evaluates their install.config JSON (no remote fetch).
+      * skill / rule / prompt / plugin entries are passed through unchanged;
+        the runner's existing fetcher pulls README/SKILL.md and falls back to
+        description if needed (per spec D3, fetcher behaviour is NOT extended
+        for security).
+
+    The same ``security_scan`` task config is used for every type — only the
+    user prompt content differs. Cache namespace ``"security"`` keeps these
+    rows isolated from the quality / enrichment cache.
+    """
+    try:
+        from ai_resource_eval.api.types import EvalItem
+        from ai_resource_eval.runner import EvalRunner
+        from ai_resource_eval.tasks.loader import load_task_config
+    except ImportError:
+        logger.warning(
+            "ai-resource-eval package not found; skipping security scan stage"
+        )
+        return {}
+
+    try:
+        task_config = load_task_config("security_scan")
+    except (FileNotFoundError, ValueError) as exc:
+        logger.warning("Failed to load security_scan task config: %s", exc)
+        return {}
+
+    judge = _build_judge()
+    if judge is None:
+        logger.warning("No LLM API key configured; skipping security scan stage")
+        return {}
+
+    eval_items: list[Any] = []
+    id_for_item: list[str] = []
+    for e in entries:
+        eid = e.get("id")
+        if not eid:
+            continue
+        if e.get("type") == "mcp":
+            item = _build_mcp_security_eval_item(e, EvalItem)
+        else:
+            try:
+                item = EvalItem(**e)
+            except Exception as exc:  # noqa: BLE001
+                logger.debug(
+                    "Skipping entry %s for security scan (EvalItem failed): %s",
+                    eid,
+                    exc,
+                )
+                item = None
+        if item is None:
+            continue
+        eval_items.append(item)
+        id_for_item.append(eid)
+
+    if not eval_items:
+        return {}
+
+    runner = EvalRunner(
+        task_config=task_config,
+        judge=judge,
+        cache_dir=cache_dir,
+        concurrency=concurrency,
+        incremental=incremental,
+        interactive=False,
+        on_fail="skip",
+    )
+
+    try:
+        results = runner.run(eval_items)
+    except Exception as exc:  # noqa: BLE001 - never bubble up from security stage
+        logger.warning("security_scan runner raised: %s", exc)
+        return {}
+
+    out: dict[str, dict[str, Any]] = {}
+    for r in results:
+        rd = r.model_dump(mode="json") if hasattr(r, "model_dump") else r
+        rid = rd.get("entry_id") if isinstance(rd, dict) else None
+        if rid:
+            out[rid] = rd
+    return out
+
+
+def security_scan_and_map(
+    entries: list[dict[str, Any]],
+    cache_dir: str = ".eval_cache",
+    incremental: bool = True,
+    concurrency: int = 4,
+) -> None:
+    """Run security_scan across entries and map results in-place to entry.security.
+
+    Failure-safe: any exception from the security stage is logged but does NOT
+    propagate to the main pipeline. Entries whose evaluation fails simply lack
+    the ``security`` block in the output (per spec D7 — missing means
+    "未评估"; the next cycle will retry).
+    """
+    try:
+        results = _run_security_scan(
+            entries,
+            cache_dir=cache_dir,
+            incremental=incremental,
+            concurrency=concurrency,
+        )
+    except Exception as exc:  # noqa: BLE001
+        logger.warning("Security scan stage failed: %s", exc)
+        return
+
+    mapped = 0
+    for entry in entries:
+        result = results.get(entry.get("id"))
+        _map_security_to_entry(entry, result)
+        if result is not None and entry.get("security") is not None:
+            mapped += 1
+
+    logger.info("Security scan: mapped %d / %d entries", mapped, len(entries))
