@@ -55,7 +55,9 @@ try:
         _normalize_plugin_url,
         categorize,
         extract_tags,
+        is_plugin_blacklisted,
         load_index,
+        load_plugin_blacklist,
         save_index,
     )
 except ImportError:  # pragma: no cover - script-style invocation
@@ -63,7 +65,9 @@ except ImportError:  # pragma: no cover - script-style invocation
         _normalize_plugin_url,
         categorize,
         extract_tags,
+        is_plugin_blacklisted,
         load_index,
+        load_plugin_blacklist,
         save_index,
     )
 
@@ -358,15 +362,26 @@ def _entry_from_plugin(
     plugin: dict,
     last_synced_iso: str,
     layout_fetcher=None,
+    plugin_blacklist: Optional[list] = None,
 ) -> Optional[dict]:
     """Convert one claude-plugins.dev API plugin into a catalog entry.
 
-    Returns ``None`` if the plugin is too malformed (missing name) or below
-    the star threshold to be useful — callers filter on the return value.
+    Returns ``None`` if the plugin is too malformed (missing name), below
+    the star threshold to be useful, or matches the plugin-level blacklist
+    from ``plugin_sources.json`` — callers filter on the return value.
     """
     name = (plugin.get("name") or "").strip()
     if not name:
         logger.debug("Skipping plugin without name: %r", plugin)
+        return None
+
+    if is_plugin_blacklisted(SOURCE_ID, name, plugin_blacklist):
+        logger.debug(
+            "Skipping plugin (source=%s, name=%s): in plugin_sources.json "
+            "plugins blacklist",
+            SOURCE_ID,
+            name,
+        )
         return None
 
     description = (plugin.get("description") or "").strip()
@@ -718,11 +733,23 @@ def main(argv: Optional[list[str]] = None) -> int:
         )
         layout_fetcher = None
 
+    plugin_blacklist = load_plugin_blacklist()
+    if plugin_blacklist:
+        logger.info(
+            "Loaded plugin-level blacklist with %d entries from plugin_sources.json",
+            len(plugin_blacklist),
+        )
+
     try:
         new_entries: list[dict] = []
         for raw in raw_plugins:
             try:
-                entry = _entry_from_plugin(raw, last_synced, layout_fetcher)
+                entry = _entry_from_plugin(
+                    raw,
+                    last_synced,
+                    layout_fetcher,
+                    plugin_blacklist=plugin_blacklist,
+                )
             except Exception as e:  # noqa: BLE001 - one bad row mustn't kill all
                 logger.warning(
                     "Failed to build entry for plugin name=%r: %s",

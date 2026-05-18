@@ -686,6 +686,95 @@ def is_plugin_source(candidate_url: str) -> bool:
     return False
 
 
+def load_plugin_blacklist(
+    _path_override: Optional[str] = None,
+) -> list[dict]:
+    """Load the optional ``plugins`` array from ``scripts/plugin_sources.json``.
+
+    Each element is expected to be a dict with ``source`` and ``plugin_name``
+    string fields, matching the marketplace-entry tuple used by
+    ``sync_plugins_official.py`` and ``sync_plugins_dev.py``.
+
+    Missing file, malformed JSON, or absent ``plugins`` field all degrade to
+    an empty list (logged at DEBUG) so legacy ``plugin_sources.json`` files
+    that only contain ``repos`` continue to work unchanged.
+
+    ``_path_override`` is a private testing hook — pass an absolute path to
+    bypass the default ``scripts/plugin_sources.json`` location.
+    """
+    if _path_override is not None:
+        path = _path_override
+    else:
+        path = os.path.join(
+            os.path.dirname(os.path.abspath(__file__)),
+            "plugin_sources.json",
+        )
+    if not os.path.exists(path):
+        return []
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except (json.JSONDecodeError, IOError, OSError) as e:
+        logger.debug(
+            "Failed to read plugins blacklist from %s: %s", path, e,
+        )
+        return []
+    if not isinstance(data, dict):
+        return []
+    plugins = data.get("plugins")
+    if not isinstance(plugins, list):
+        return []
+    cleaned: list[dict] = []
+    for item in plugins:
+        if not isinstance(item, dict):
+            continue
+        src = item.get("source")
+        name = item.get("plugin_name")
+        if not isinstance(src, str) or not isinstance(name, str):
+            continue
+        if not src.strip() or not name.strip():
+            continue
+        cleaned.append({"source": src, "plugin_name": name})
+    return cleaned
+
+
+def is_plugin_blacklisted(
+    source: str,
+    plugin_name: str,
+    blacklist: Optional[list],
+) -> bool:
+    """Return True when (source, plugin_name) matches any blacklist entry.
+
+    Both inputs and blacklist entries are compared after ``.lower()``
+    normalization (case-insensitive). An empty / ``None`` blacklist always
+    returns False, mirroring the legacy "no plugin filter" behavior so that
+    ``plugin_sources.json`` files lacking a ``plugins`` array do not change
+    sync output.
+
+    The blacklist is expected to be a list of ``{"source": str, "plugin_name":
+    str}`` dicts (typically produced by :func:`load_plugin_blacklist`), but any
+    non-dict / malformed entries are tolerated — they simply never match.
+    """
+    if not blacklist:
+        return False
+    if not isinstance(source, str) or not isinstance(plugin_name, str):
+        return False
+    src_norm = source.strip().lower()
+    name_norm = plugin_name.strip().lower()
+    if not src_norm or not name_norm:
+        return False
+    for item in blacklist:
+        if not isinstance(item, dict):
+            continue
+        bsrc = item.get("source")
+        bname = item.get("plugin_name")
+        if not isinstance(bsrc, str) or not isinstance(bname, str):
+            continue
+        if bsrc.strip().lower() == src_norm and bname.strip().lower() == name_norm:
+            return True
+    return False
+
+
 # --- Source priority & cross-source skill dedup ---------------------------
 
 # Whitelist of "official org" hosts on github.com whose direct sources rank

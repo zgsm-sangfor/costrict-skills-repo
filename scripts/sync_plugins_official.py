@@ -42,9 +42,21 @@ from typing import Optional
 # Allow running both as `python scripts/sync_plugins_official.py` and as a module.
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 try:
-    from .utils import categorize, extract_tags, save_index  # type: ignore
+    from .utils import (  # type: ignore
+        categorize,
+        extract_tags,
+        is_plugin_blacklisted,
+        load_plugin_blacklist,
+        save_index,
+    )
 except ImportError:  # pragma: no cover - script-style invocation
-    from utils import categorize, extract_tags, save_index  # type: ignore
+    from utils import (  # type: ignore
+        categorize,
+        extract_tags,
+        is_plugin_blacklisted,
+        load_plugin_blacklist,
+        save_index,
+    )
 
 # PluginContentFetcher comes from the (pip install -e'd) ai-resource-eval
 # package. Importing lazily inside helpers would force every test to wire it
@@ -576,11 +588,13 @@ def _entry_from_plugin(
     source_cfg: dict,
     last_synced_iso: str,
     layout_fetcher=None,
+    plugin_blacklist: Optional[list] = None,
 ) -> Optional[dict]:
     """Convert one marketplace plugin definition into a catalog entry.
 
     Returns None if the plugin definition is too malformed to produce a
-    usable entry (e.g. missing name).
+    usable entry (e.g. missing name) or if ``(source, name)`` matches the
+    plugin-level blacklist loaded from ``plugin_sources.json``.
     """
     name = (plugin_entry.get("name") or "").strip()
     if not name:
@@ -588,6 +602,15 @@ def _entry_from_plugin(
             "Skipping plugin without a name in source=%s: %r",
             source_cfg["id"],
             plugin_entry,
+        )
+        return None
+
+    if is_plugin_blacklisted(source_cfg["id"], name, plugin_blacklist):
+        logger.debug(
+            "Skipping plugin (source=%s, name=%s): in plugin_sources.json "
+            "plugins blacklist",
+            source_cfg["id"],
+            name,
         )
         return None
 
@@ -728,6 +751,7 @@ def sync_one_source(
     source_cfg: dict,
     last_synced_iso: str,
     layout_fetcher=None,
+    plugin_blacklist: Optional[list] = None,
 ) -> list[dict]:
     """Sync a single marketplace source.
 
@@ -787,7 +811,11 @@ def sync_one_source(
                 continue
             try:
                 entry = _entry_from_plugin(
-                    raw, source_cfg, last_synced_iso, layout_fetcher
+                    raw,
+                    source_cfg,
+                    last_synced_iso,
+                    layout_fetcher,
+                    plugin_blacklist=plugin_blacklist,
                 )
             except Exception as e:  # noqa: BLE001 - never let one entry kill the source
                 logger.warning(
@@ -856,9 +884,21 @@ def main(argv: Optional[list[str]] = None) -> int:
         )
         layout_fetcher = None
 
+    plugin_blacklist = load_plugin_blacklist()
+    if plugin_blacklist:
+        logger.info(
+            "Loaded plugin-level blacklist with %d entries from plugin_sources.json",
+            len(plugin_blacklist),
+        )
+
     try:
         for source_cfg in SOURCES:
-            entries = sync_one_source(source_cfg, last_synced_iso, layout_fetcher)
+            entries = sync_one_source(
+                source_cfg,
+                last_synced_iso,
+                layout_fetcher,
+                plugin_blacklist=plugin_blacklist,
+            )
             if not entries:
                 failed_sources.append(source_cfg["id"])
             all_entries.extend(entries)
