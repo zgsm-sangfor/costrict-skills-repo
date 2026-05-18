@@ -215,6 +215,70 @@ class EnrichmentData(BaseModel):
         return [t.lower().strip() for t in v[:5]]
 
 
+class RiskLevel(str, Enum):
+    """Security risk level (aligned with costrict-web SecurityScan)."""
+
+    clean = "clean"
+    low = "low"
+    medium = "medium"
+    high = "high"
+    extreme = "extreme"
+
+
+class SecurityVerdict(str, Enum):
+    """Security verdict (aligned with costrict-web SecurityScan)."""
+
+    safe = "safe"
+    caution = "caution"
+    reject = "reject"
+
+
+class SecurityPermissions(BaseModel):
+    """Permissions block (aligned with costrict-web SecurityScan.permissions)."""
+
+    files: list[str] = Field(default_factory=list)
+    network: list[str] = Field(default_factory=list)
+    commands: list[str] = Field(default_factory=list)
+
+
+# verdict 必须满足的 risk_level 映射（spec security-risk-eval 强约束）。
+# 把映射表放在模型外便于复用（runner 解析失败检测与文档可读）。
+_VERDICT_FOR_RISK: dict[RiskLevel, SecurityVerdict] = {
+    RiskLevel.clean: SecurityVerdict.safe,
+    RiskLevel.low: SecurityVerdict.safe,
+    RiskLevel.medium: SecurityVerdict.caution,
+    RiskLevel.high: SecurityVerdict.reject,
+    RiskLevel.extreme: SecurityVerdict.reject,
+}
+
+
+class SecurityScanResult(BaseModel):
+    """Security scan output (语义与 costrict-web SecurityScan 模型对齐，仅 6 字段)。
+
+    强约束：``verdict`` MUST 满足 risk_level 映射：
+        clean / low → safe
+        medium → caution
+        high / extreme → reject
+    """
+
+    risk_level: RiskLevel
+    verdict: SecurityVerdict
+    red_flags: list[str] = Field(default_factory=list)
+    permissions: SecurityPermissions = Field(default_factory=SecurityPermissions)
+    summary: str = Field("", description="Concise Chinese summary of the security assessment")
+    recommendations: list[str] = Field(default_factory=list)
+
+    @model_validator(mode="after")
+    def _verdict_matches_risk_level(self) -> SecurityScanResult:
+        expected = _VERDICT_FOR_RISK[self.risk_level]
+        if self.verdict is not expected:
+            raise ValueError(
+                f"verdict={self.verdict.value} does not match risk_level="
+                f"{self.risk_level.value} (expected {expected.value})"
+            )
+        return self
+
+
 class McpInstallabilityData(BaseModel):
     """MCP installability fields produced alongside evaluation metrics."""
 
@@ -267,6 +331,10 @@ class EvalResult(BaseModel):
     mcp_installability: McpInstallabilityData | None = Field(
         None,
         description="MCP installability fields from single LLM call (optional)",
+    )
+    security: SecurityScanResult | None = Field(
+        None,
+        description="Security scan result from independent LLM call (optional)",
     )
     health: HealthSignals = Field(default_factory=HealthSignals)
     llm_score: float | None = Field(
@@ -382,6 +450,14 @@ class TaskConfig(BaseModel):
     mcp_installability: bool = Field(
         False,
         description="When true, LLM prompt includes MCP installability fields.",
+    )
+    security_scan: bool = Field(
+        False,
+        description=(
+            "When true, the runner makes an independent security-scan LLM call "
+            "and attaches a SecurityScanResult to EvalResult.security. metrics "
+            "and heuristic_signals are expected to be empty in this mode."
+        ),
     )
 
     @model_validator(mode="after")

@@ -1,0 +1,34 @@
+# security_scan：LLM 安全审查 task（与 6 维质量评分解耦的独立通道）
+#
+# 输出 6 字段（risk_level / verdict / red_flags / permissions / summary /
+# recommendations），语义对齐 costrict-web SecurityScan 模型。
+#
+# 设计要点：
+#   - metrics=[] + heuristic_signals=[] —— 不复用 6 维评分管线，runner 在
+#     security_scan=true 时走独立的 security-only LLM 调用分支。
+#   - 独立 rubric_major_version：security 提示词演进与质量评分 rubric 互相
+#     解耦，任一升级不影响另一侧的 cache。
+#   - cache namespace 为 ``security``（见 cache/sqlite_cache.py 的
+#     make_key namespace 参数），与质量评分 cache 互不干扰。
+#   - thresholds 字段保留 TaskConfig 默认值（accept=65 / review=40），仅为
+#     满足 pydantic 校验；security 评估不影响 accept/reject 决策，threshold
+#     语义在 security 路径下未被使用。
+task: security_scan
+content_source: readme
+content_paths:
+  - SKILL.md
+  - README.md
+content_fallback: description
+
+metrics: []
+heuristic_signals: []
+
+thresholds:
+  accept: 65
+  review: 40
+
+rubric_major_version: 1
+
+security_scan: true
+enrichment: false
+mcp_installability: false
