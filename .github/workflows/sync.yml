@@ -380,10 +380,12 @@ jobs:
     runs-on: ubuntu-latest
     # 30min 是非 security 路径的预算；add-security-risk-eval 后 aggregate 多了
     # 一个 Run security scan step：首跑约 13k entries × 6.8s / concurrency=6
-    # ≈ 250min wall clock，往后增量评估命中 cache 后通常 <10min。设 350min
-    # 与 enrich matrix 对齐，留 artifact upload + commit 余量。后续若想缩短
-    # aggregate，可以把 security scan 拆成独立 job 与 README/commit 并行。
-    timeout-minutes: 350
+    # ≈ 250min wall clock，且 LLM provider 偶发 transient timeout 会把实际时长
+    # 推到 350-400min（实测）。设 600min（10h）给足余量；Run security scan
+    # step timeout=540min 在此之内并保留 60min 给 save-cache / readme / commit。
+    # 增量评估命中 cache 后通常 <10min，不会真的跑满。
+    # 后续若想缩短 aggregate，可以把 security scan 拆成独立 job 与 README/commit 并行。
+    timeout-minutes: 600
     permissions:
       contents: write
     steps:
@@ -642,7 +644,11 @@ jobs:
 
       - name: Run security scan
         if: ${{ github.event.inputs.security_scan_enabled != 'false' }}
-        timeout-minutes: 180
+        # 540min = 9h. 首跑 13k entries × ~6.8s / concurrency=6 理论 ~250min；
+        # transient LLM 超时 + 重试可能膨胀到 300-400min。9h 给足余量；后续
+        # 增量 run cache 命中后通常 <10min 跑完。step timeout 必须 < aggregate
+        # job timeout(=600min) 至少 30min，给 save-cache + commit/push 留余量。
+        timeout-minutes: 540
         continue-on-error: true
         env:
           PYTHONUNBUFFERED: "1"
@@ -656,6 +662,11 @@ jobs:
           # defaults false since risk_level does not affect accept/reject.
           SECURITY_SCAN_ENABLED: ${{ github.event.inputs.security_scan_enabled || 'true' }}
           SECURITY_SCAN_DRY_RUN: ${{ vars.SECURITY_SCAN_DRY_RUN || 'false' }}
+          # Chunk size for incremental catalog write-back: every N entries
+          # processed, flush catalog/index.json so partial progress survives
+          # a step timeout / cancellation. Smaller chunks = more disk writes
+          # but better durability. 500 ≈ 27 catalog flushes for 13k entries.
+          SECURITY_SCAN_CHUNK_SIZE: ${{ vars.SECURITY_SCAN_CHUNK_SIZE || '500' }}
         run: |
           python -u - <<'PY'
           import json
@@ -678,20 +689,65 @@ jobs:
               concurrency = int(os.environ.get("EVAL_CONCURRENCY", "4"))
           except ValueError:
               concurrency = 4
+          try:
+              chunk_size = int(os.environ.get("SECURITY_SCAN_CHUNK_SIZE", "500"))
+          except ValueError:
+              chunk_size = 500
+          chunk_size = max(1, chunk_size)
 
-          security_scan_and_map(
-              entries,
-              cache_dir=".eval_cache",
-              incremental=True,
-              concurrency=concurrency,
-          )
+          # Chunked write-back: each chunk runs security_scan_and_map then
+          # flushes catalog/index.json to disk, so a step timeout never wipes
+          # the partial result. eval_bridge mutates the entry dicts in-place,
+          # so the slice we hand it is also a slice of `entries` — writing
+          # `entries` back to disk after each chunk captures cumulative
+          # progress, not just the latest chunk.
+          n = len(entries)
+          done = 0
+          chunk_idx = 0
+          total_chunks = (n + chunk_size - 1) // chunk_size
+
+          def flush_catalog() -> None:
+              tmp = catalog_path.with_suffix(".json.tmp")
+              tmp.write_text(
+                  json.dumps(entries, indent=2, ensure_ascii=False) + "\n",
+                  encoding="utf-8",
+              )
+              os.replace(tmp, catalog_path)
+
+          for start in range(0, n, chunk_size):
+              chunk_idx += 1
+              end = min(start + chunk_size, n)
+              chunk = entries[start:end]
+              try:
+                  security_scan_and_map(
+                      chunk,
+                      cache_dir=".eval_cache",
+                      incremental=True,
+                      concurrency=concurrency,
+                  )
+              except Exception as exc:  # never bubble — keep going
+                  print(
+                      f"security_scan: chunk {chunk_idx}/{total_chunks} "
+                      f"({start}:{end}) raised {type(exc).__name__}: {exc}; "
+                      f"continuing",
+                      flush=True,
+                  )
+              done = end
+              flush_catalog()
+              got_so_far = sum(
+                  1 for e in entries if isinstance(e, dict) and e.get("security")
+              )
+              print(
+                  f"security_scan: chunk {chunk_idx}/{total_chunks} done "
+                  f"(processed {done}/{n}, security written so far {got_so_far})",
+                  flush=True,
+              )
 
           got = sum(1 for e in entries if isinstance(e, dict) and e.get("security"))
-          print(f"security_scan: wrote security block on {got}/{len(entries)} entries", flush=True)
-
-          catalog_path.write_text(
-              json.dumps(entries, indent=2, ensure_ascii=False) + "\n",
-              encoding="utf-8",
+          print(
+              f"security_scan: wrote security block on {got}/{n} entries "
+              f"(across {total_chunks} chunks)",
+              flush=True,
           )
           PY
 
