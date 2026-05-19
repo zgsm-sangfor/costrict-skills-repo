@@ -89,6 +89,14 @@ def _regenerate_search_index(entries: list[dict[str, Any]], catalog_path: Path) 
         se["install_method"] = (
             install_obj.get("method") if isinstance(install_obj, dict) else None
         )
+        # For plugin entries carry the marketplace_verified flag in a minimal
+        # install sub-object so list-view cards can render the "unverified"
+        # badge without re-fetching the per-entry JSON. Mirrors the same
+        # passthrough in merge_index._build_search_index.
+        if entry.get("type") == "plugin" and isinstance(install_obj, dict):
+            verified = install_obj.get("marketplace_verified")
+            if isinstance(verified, bool):
+                se["install"] = {"marketplace_verified": verified}
         parts = [
             entry.get("name", ""),
             entry.get("description", ""),
