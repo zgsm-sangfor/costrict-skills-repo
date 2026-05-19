@@ -1,5 +1,5 @@
 {
-  "completed_count": 927,
+  "completed_count": 930,
   "completed_entry_ids": [
     "abhigyanpatwari-gitnexus-marketplace-gitnexus",
     "addyosmani-addy-agent-skills-agent-skills",
@@ -103,6 +103,7 @@
     "anthropic-coderabbit",
     "anthropic-commit-commands",
     "anthropic-context7",
+    "anthropic-convex-backend",
     "anthropic-crowdstrike-falcon-foundry",
     "anthropic-csharp-lsp",
     "anthropic-cwc-makers",
@@ -192,6 +193,7 @@
     "anthropic-sanity",
     "anthropic-sap-fiori-mcp-server",
     "anthropic-sap-mdk-server",
+    "anthropic-save-to-spotify",
     "anthropic-security-guidance",
     "anthropic-semgrep",
     "anthropic-sentry",
@@ -924,12 +926,13 @@
     "yamadashy-repomix-repomix-commands",
     "yamadashy-repomix-repomix-explorer",
     "yamadashy-repomix-repomix-mcp",
+    "yamadashy-repomix-repository-explorer",
     "yeachan-heo-omc-oh-my-claudecode",
     "ykdojo-ykdojo-dx",
     "yuan1z0825-nature-skills-nature-skills",
     "zarazhangrui-frontend-slides-frontend-slides"
   ],
-  "last_committed_at": "2026-05-18T10:41:46.705420+00:00",
+  "last_committed_at": "2026-05-19T01:03:18.875242+00:00",
   "remaining_entry_ids": [
     "anthropic-sap-cds-mcp",
     "anthropics-claude-plugins-official-adlc",
@@ -939,8 +942,7 @@
     "everyinc-every-marketplace-coding-tutor",
     "kieranklaassen-every-marketplace-compound-engineering",
     "mcp-use-mcp-use-mcp-builder",
-    "multica-ai-karpathy-skills-andrej-karpathy-skills",
-    "yamadashy-repomix-repository-explorer"
+    "multica-ai-karpathy-skills-andrej-karpathy-skills"
   ],
   "rubric_version": "2.85974ec3",
   "started_at": "2026-05-09T07:30:41.948272+00:00",

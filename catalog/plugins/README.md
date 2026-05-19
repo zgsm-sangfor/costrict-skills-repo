@@ -1,6 +1,6 @@
 # 🧩 Plugins
 
-> 937 Claude Code plugin bundles packaging skills, agents, commands, and MCP servers from official and community marketplaces.
+> 939 Claude Code plugin bundles packaging skills, agents, commands, and MCP servers from official and community marketplaces.
 >
 > [Back to main →](../../README.md) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=plugin)
 
@@ -38,7 +38,7 @@
 | 26 | [impeccable](https://github.com/pbakaus/impeccable) | A Claude Code plugin providing 23 commands for AI-assisted frontend design fluen... | claude-plugins.dev | 🟢 Active | 97 | 2026-04-28 | tooling | `design`, `frontend`, `ui` |
 | 27 | [repomix-commands](https://github.com/yamadashy/repomix) | — | claude-plugins.dev | 🟢 Active | 97 | 2026-04-16 | tooling | — |
 | 28 | [repomix-explorer](https://github.com/yamadashy/repomix) | — | claude-plugins.dev | 🟢 Active | 97 | 2026-04-16 | tooling | — |
-| 29 | [repomix-mcp](https://github.com/yamadashy/repomix) | A tool that packs entire codebases into single AI-friendly files for LLM analysi... | claude-plugins.dev | 🟢 Active | 97 | 2026-05-13 | tooling | `codebase-packaging`, `ai-integration`, `mcp-server` |
+| 29 | [repomix-mcp](https://github.com/yamadashy/repomix) | — | claude-plugins.dev | 🟢 Active | 97 | 2026-05-13 | tooling | — |
 | 30 | [beads](https://github.com/gastownhall/beads) | Dolt-powered distributed graph issue tracker designed for AI coding agents with ... | claude-plugins.dev | 🟢 Active | 97 | 2026-04-24 | ai-ml | — |
 | 31 | [planning-with-files](https://github.com/OthmanAdi/planning-with-files) | A plugin for AI coding assistants that uses persistent markdown files for struct... | claude-plugins.dev | 🟢 Active | 97 | 2026-05-01 | documentation | — |
 | 32 | [beads](https://github.com/steveyegge/beads) | A distributed graph issue tracker and persistent memory system for AI coding age... | claude-plugins.dev | 🟢 Active | 97 | 2026-03-25 | ai-ml | — |
@@ -126,7 +126,7 @@ Chrome DevTools MCP server for AI coding agents to debug, automate, and analyze 
 </details>
 
 <details>
-<summary>⭐ <strong>claude-code-setup</strong> (19.6k★) — A Claude Code plugin that analyzes codebases to recommend ta...</summary>
+<summary>⭐ <strong>claude-code-setup</strong> (19.7k★) — A Claude Code plugin that analyzes codebases to recommend ta...</summary>
 
 A Claude Code plugin that analyzes codebases to recommend tailored automations like hooks, skills, MCP servers, and subagents.
 
@@ -150,7 +150,7 @@ A comprehensive collection of AI coding skills for Hugging Face Hub, covering mo
 </details>
 
 <details>
-<summary>⭐ <strong>hookify</strong> (19.6k★) — Claude Code plugin for creating custom hooks to prevent unwa...</summary>
+<summary>⭐ <strong>hookify</strong> (19.7k★) — Claude Code plugin for creating custom hooks to prevent unwa...</summary>
 
 Claude Code plugin for creating custom hooks to prevent unwanted coding behaviors using markdown rule files with regex patterns.
 
@@ -162,7 +162,7 @@ Claude Code plugin for creating custom hooks to prevent unwanted coding behavior
 </details>
 
 <details>
-<summary>⭐ <strong>mcp-server-dev</strong> (19.6k★) — Comprehensive guide for building MCP servers and interactive...</summary>
+<summary>⭐ <strong>mcp-server-dev</strong> (19.7k★) — Comprehensive guide for building MCP servers and interactive...</summary>
 
 Comprehensive guide for building MCP servers and interactive UI widgets for Claude, covering deployment models, tool design, and testing.
 
@@ -174,7 +174,7 @@ Comprehensive guide for building MCP servers and interactive UI widgets for Clau
 </details>
 
 <details>
-<summary>⭐ <strong>plugin-dev</strong> (19.6k★) — A comprehensive toolkit with 7 expert skills for developing ...</summary>
+<summary>⭐ <strong>plugin-dev</strong> (19.7k★) — A comprehensive toolkit with 7 expert skills for developing ...</summary>
 
 A comprehensive toolkit with 7 expert skills for developing Claude Code plugins, covering agents, commands, hooks, MCP integration, and best practices
 
@@ -186,7 +186,7 @@ A comprehensive toolkit with 7 expert skills for developing Claude Code plugins,
 </details>
 
 <details>
-<summary>⭐ <strong>skill-creator</strong> (19.6k★) — A plugin for creating, testing, benchmarking, and optimizing...</summary>
+<summary>⭐ <strong>skill-creator</strong> (19.7k★) — A plugin for creating, testing, benchmarking, and optimizing...</summary>
 
 A plugin for creating, testing, benchmarking, and optimizing Claude skills through an iterative development workflow.
 
@@ -245,4 +245,4 @@ Resources are ranked by a composite score (0-100) combining:
 
 ---
 
-*Auto-generated from [catalog/index.json](../index.json). Last updated: 2026-05-18*
+*Auto-generated from [catalog/index.json](../index.json). Last updated: 2026-05-19*
