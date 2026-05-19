@@ -349,6 +349,118 @@ class TestMergeIndex(unittest.TestCase):
         self.assertIn("Dedup", log_text)
 
 
+class TestPluginMarketplaceValidator(unittest.TestCase):
+    """Tests for the merge_index schema validator that drops plugin entries
+    missing required marketplace fields (added by fix-plugin-marketplace-fields).
+    """
+
+    def setUp(self):
+        self.tmpdir = tempfile.mkdtemp()
+        for t in merge_index.TYPES:
+            os.makedirs(os.path.join(self.tmpdir, t), exist_ok=True)
+        self._orig_catalog_dir = merge_index.CATALOG_DIR
+        merge_index.CATALOG_DIR = self.tmpdir
+
+    def tearDown(self):
+        merge_index.CATALOG_DIR = self._orig_catalog_dir
+
+    def _write_plugins(self, entries):
+        path = os.path.join(self.tmpdir, "plugins", "index.json")
+        with open(path, "w") as f:
+            json.dump(entries, f)
+
+    def _read_output(self):
+        with open(os.path.join(self.tmpdir, "index.json")) as f:
+            return json.load(f)
+
+    @staticmethod
+    def _plugin(id, plugin_name, *, repo, verified=True, name="missing"):
+        e = _make_entry(id, type="plugin", source_url=f"https://github.com/{repo}")
+        e["install"] = {
+            "method": "plugin_marketplace",
+            "plugin_name": plugin_name,
+            "marketplace_repo": repo,
+            "marketplace_name": name,
+            "marketplace_verified": verified,
+            "marketplace": repo,
+        }
+        return e
+
+    def test_plugin_missing_marketplace_repo_dropped(self):
+        good = self._plugin(
+            "ok-plugin", "ralph-loop", repo="anthropics/claude-plugins-official",
+        )
+        bad = self._plugin(
+            "bad-plugin", "broken", repo="anthropics/claude-plugins-official",
+        )
+        del bad["install"]["marketplace_repo"]
+
+        self._write_plugins([good, bad])
+
+        with self.assertLogs("utils", level="WARNING") as cm, \
+             unittest.mock.patch("merge_index.enrich_entries") as mock_enrich, \
+             unittest.mock.patch("merge_index.apply_governance") as mock_gov:
+            mock_enrich.side_effect = lambda x: x
+            mock_gov.side_effect = lambda x: x
+            merge_index.merge()
+        result = self._read_output()
+
+        plugins = [r for r in result if r.get("type") == "plugin"]
+        ids = {r["id"] for r in plugins}
+        self.assertEqual(ids, {"ok-plugin"})
+        self.assertTrue(
+            any("marketplace_repo" in line for line in cm.output),
+            f"Expected WARNING mentioning marketplace_repo; got: {cm.output}",
+        )
+
+    def test_plugin_missing_marketplace_verified_dropped(self):
+        good = self._plugin(
+            "ok-plugin", "ralph-loop", repo="anthropics/claude-plugins-official",
+        )
+        bad = self._plugin(
+            "bad-plugin", "broken", repo="anthropics/claude-plugins-official",
+        )
+        del bad["install"]["marketplace_verified"]
+
+        self._write_plugins([good, bad])
+
+        with self.assertLogs("utils", level="WARNING") as cm, \
+             unittest.mock.patch("merge_index.enrich_entries") as mock_enrich, \
+             unittest.mock.patch("merge_index.apply_governance") as mock_gov:
+            mock_enrich.side_effect = lambda x: x
+            mock_gov.side_effect = lambda x: x
+            merge_index.merge()
+        result = self._read_output()
+
+        plugins = [r for r in result if r.get("type") == "plugin"]
+        ids = {r["id"] for r in plugins}
+        self.assertEqual(ids, {"ok-plugin"})
+        self.assertTrue(
+            any("marketplace_verified" in line for line in cm.output),
+            f"Expected WARNING mentioning marketplace_verified; got: {cm.output}",
+        )
+
+    def test_plugin_marketplace_name_null_preserved(self):
+        """marketplace_name=None is allowed (manifest had no `name` field).
+        marketplace_verified must still be present as a bool; here it's False."""
+        e = self._plugin(
+            "unverified-plugin", "x", repo="vercel/next.js",
+            verified=False, name=None,
+        )
+        self._write_plugins([e])
+
+        with unittest.mock.patch("merge_index.enrich_entries") as mock_enrich, \
+             unittest.mock.patch("merge_index.apply_governance") as mock_gov:
+            mock_enrich.side_effect = lambda x: x
+            mock_gov.side_effect = lambda x: x
+            merge_index.merge()
+        result = self._read_output()
+        plugins = [r for r in result if r.get("type") == "plugin"]
+        self.assertEqual(len(plugins), 1)
+        self.assertIs(plugins[0]["install"]["marketplace_verified"], False)
+        self.assertIsNone(plugins[0]["install"]["marketplace_name"])
+
+
 class TestBundledInReverseMapping(unittest.TestCase):
     """Tests for plugin.bundle.bundled_skill_ids reverse mapping written by
     ``merge_index._apply_bundled_in_annotations``."""

@@ -39,6 +39,14 @@ export interface CatalogItem {
     path?: string
     marketplace?: string
     plugin_name?: string
+    // Plugin marketplace metadata added by fix-plugin-marketplace-fields.
+    // marketplace_repo is the canonical GitHub slug; marketplace_name is the
+    // value from marketplace.json::name (used as the suffix in `enabled_key`);
+    // marketplace_verified is false when the catalog could not confirm the
+    // plugin is actually listed in the marketplace manifest.
+    marketplace_repo?: string
+    marketplace_name?: string | null
+    marketplace_verified?: boolean
   }
   bundle?: {
     skills_count: number

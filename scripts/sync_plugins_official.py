@@ -49,6 +49,7 @@ try:
         load_plugin_blacklist,
         save_index,
     )
+    from . import marketplace_verifier  # type: ignore
 except ImportError:  # pragma: no cover - script-style invocation
     from utils import (  # type: ignore
         categorize,
@@ -57,6 +58,7 @@ except ImportError:  # pragma: no cover - script-style invocation
         load_plugin_blacklist,
         save_index,
     )
+    import marketplace_verifier  # type: ignore
 
 # PluginContentFetcher comes from the (pip install -e'd) ai-resource-eval
 # package. Importing lazily inside helpers would force every test to wire it
@@ -74,6 +76,8 @@ except Exception:  # noqa: BLE001 - keep sync resilient if package missing
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
 OUTPUT_PATH = os.path.join(REPO_ROOT, "catalog", "plugins", "index.json")
+CACHE_DIR = os.path.join(REPO_ROOT, ".plugins_official_cache")
+MARKETPLACE_CACHE_PATH = os.path.join(CACHE_DIR, "marketplace_manifests.json")
 
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "").strip()
 USER_AGENT = "everything-ai-coding-plugins-sync"
@@ -589,6 +593,7 @@ def _entry_from_plugin(
     last_synced_iso: str,
     layout_fetcher=None,
     plugin_blacklist: Optional[list] = None,
+    marketplace_cache: Optional[dict] = None,
 ) -> Optional[dict]:
     """Convert one marketplace plugin definition into a catalog entry.
 
@@ -712,6 +717,22 @@ def _entry_from_plugin(
         upstream_category=upstream_category,
     )
 
+    # Marketplace verification: official sources already point at canonical
+    # GitHub repo slugs, but we still fetch the manifest's `name` field so
+    # `enabledPlugins` can be keyed correctly. Cache shared across the sync run.
+    #
+    # When marketplace_cache is None the caller opted out of marketplace
+    # verification entirely (e.g., unit tests that mock just the marketplace.json
+    # fetch). Skip the verifier — the resulting entry will have
+    # marketplace_verified=False, which downstream treats as "needs catalog
+    # refresh / unverified" exactly like a real fetch failure.
+    if marketplace_cache is not None:
+        marketplace_name, marketplace_verified = marketplace_verifier.verify_marketplace(
+            repo_slug, name, marketplace_cache,
+        )
+    else:
+        marketplace_name, marketplace_verified = (None, False)
+
     entry: dict = {
         "id": _build_id(source_cfg["id"], name),
         "name": name,
@@ -727,8 +748,11 @@ def _entry_from_plugin(
         "platforms": ["claude-code"],
         "install": {
             "method": "plugin_marketplace",
-            "marketplace": repo_slug,
             "plugin_name": name,
+            "marketplace_repo": repo_slug,
+            "marketplace_name": marketplace_name,
+            "marketplace_verified": marketplace_verified,
+            "marketplace": repo_slug,  # display-only; retained for UI back-compat
         },
         "bundle": bundle,
         "manifest_completeness": completeness,
@@ -752,6 +776,7 @@ def sync_one_source(
     last_synced_iso: str,
     layout_fetcher=None,
     plugin_blacklist: Optional[list] = None,
+    marketplace_cache: Optional[dict] = None,
 ) -> list[dict]:
     """Sync a single marketplace source.
 
@@ -816,6 +841,7 @@ def sync_one_source(
                     last_synced_iso,
                     layout_fetcher,
                     plugin_blacklist=plugin_blacklist,
+                    marketplace_cache=marketplace_cache,
                 )
             except Exception as e:  # noqa: BLE001 - never let one entry kill the source
                 logger.warning(
@@ -891,6 +917,13 @@ def main(argv: Optional[list[str]] = None) -> int:
             len(plugin_blacklist),
         )
 
+    marketplace_cache = marketplace_verifier.load_cache(MARKETPLACE_CACHE_PATH)
+    if marketplace_cache:
+        logger.info(
+            "Loaded marketplace manifest cache with %d entries from %s",
+            len(marketplace_cache), MARKETPLACE_CACHE_PATH,
+        )
+
     try:
         for source_cfg in SOURCES:
             entries = sync_one_source(
@@ -898,6 +931,7 @@ def main(argv: Optional[list[str]] = None) -> int:
                 last_synced_iso,
                 layout_fetcher,
                 plugin_blacklist=plugin_blacklist,
+                marketplace_cache=marketplace_cache,
             )
             if not entries:
                 failed_sources.append(source_cfg["id"])
@@ -908,6 +942,7 @@ def main(argv: Optional[list[str]] = None) -> int:
                 layout_fetcher.close()
             except Exception:  # noqa: BLE001
                 pass
+        marketplace_verifier.save_cache(MARKETPLACE_CACHE_PATH, marketplace_cache)
 
     # Stable ordering: by id, so diffs in git remain readable.
     all_entries.sort(key=lambda e: e.get("id", ""))

@@ -157,19 +157,24 @@ Plugins are upstream-managed distribution containers (bundling skills / commands
 
 Required `install` fields (per catalog entry):
 - `install.method == "plugin_marketplace"`
-- `install.marketplace` — marketplace repo slug, e.g. `"anthropics/claude-plugins-official"`
 - `install.plugin_name` — bare plugin name, e.g. `"ralph-loop"`
+- `install.marketplace_repo` — canonical GitHub repo slug, e.g. `"anthropics/claude-plugins-official"` (used to register the marketplace with Claude Code)
+- `install.marketplace_name` — value from the marketplace's `marketplace.json::name` field, e.g. `"anthropic-agent-skills"` (used as the suffix in `enabled_key`)
+- `install.marketplace_verified` — boolean. When `false`, the catalog could not verify this plugin is actually listed in the marketplace manifest, so install is refused (see step 0).
+
+If any of `install.marketplace_repo`, `install.marketplace_name`, or `install.marketplace_verified` is missing from the catalog entry, the catalog data is stale — refuse install and tell the user (in the detected language) to refresh catalog data (e.g., "Run `/eac-update` to refresh catalog data, then retry.").
 
 Steps:
 
-1. Derive `marketplace_key` = last path segment of `install.marketplace` (e.g. `anthropics/claude-plugins-official` → `claude-plugins-official`)
-2. Construct `enabled_key = "<install.plugin_name>@<marketplace_key>"`
+0. **Verification check** — if `install.marketplace_verified == false`, refuse install. Print (in detected language) a message containing the entry's `source_url` and noting that the marketplace metadata could not be verified, e.g. "Plugin's marketplace metadata could not be verified automatically. Visit `<source_url>` for upstream install instructions." Do NOT write to `~/.claude/settings.json`.
+1. Use `marketplace_key = install.marketplace_name` (do NOT derive from `install.marketplace` — that field is display-only and may be an npm-style string like `@scope/name`).
+2. Construct `enabled_key = "<install.plugin_name>@<marketplace_key>"`. Example: `claude-api@anthropic-agent-skills` for an entry whose `marketplace_name` is `anthropic-agent-skills`.
 3. Read `~/.claude/settings.json`. If the file is missing, create `{}`. If `enabledPlugins` is missing, treat it as `{}`.
 4. **Marketplace registration check** — if `~/.claude/plugins/marketplaces/<marketplace_key>/` already exists on disk, skip this sub-step (the marketplace is already known to Claude Code). Otherwise **merge** an entry into `extraKnownMarketplaces` — do NOT replace the whole field, preserve any existing marketplaces:
    ```json
    "extraKnownMarketplaces": {
      "<marketplace_key>": {
-       "source": { "source": "github", "repo": "<install.marketplace>" }
+       "source": { "source": "github", "repo": "<install.marketplace_repo>" }
      }
    }
    ```

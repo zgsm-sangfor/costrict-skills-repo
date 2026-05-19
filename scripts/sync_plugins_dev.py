@@ -60,6 +60,7 @@ try:
         load_plugin_blacklist,
         save_index,
     )
+    from . import marketplace_verifier  # type: ignore
 except ImportError:  # pragma: no cover - script-style invocation
     from utils import (  # type: ignore
         _normalize_plugin_url,
@@ -70,6 +71,7 @@ except ImportError:  # pragma: no cover - script-style invocation
         load_plugin_blacklist,
         save_index,
     )
+    import marketplace_verifier  # type: ignore
 
 try:
     from ai_resource_eval.fetcher import PluginContentFetcher  # type: ignore
@@ -85,6 +87,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
 OUTPUT_PATH = os.path.join(REPO_ROOT, "catalog", "plugins", "index.json")
 CACHE_DIR = os.path.join(REPO_ROOT, ".plugins_dev_cache")
+MARKETPLACE_CACHE_PATH = os.path.join(CACHE_DIR, "marketplace_manifests.json")
 
 API_BASE = "https://claude-plugins.dev/api/plugins"
 # Requested page size. The upstream API currently caps responses at 100
@@ -363,6 +366,7 @@ def _entry_from_plugin(
     last_synced_iso: str,
     layout_fetcher=None,
     plugin_blacklist: Optional[list] = None,
+    marketplace_cache: Optional[dict] = None,
 ) -> Optional[dict]:
     """Convert one claude-plugins.dev API plugin into a catalog entry.
 
@@ -443,6 +447,24 @@ def _entry_from_plugin(
 
     completeness = _compute_manifest_completeness(plugin)
 
+    # Reverse-engineer marketplace_repo from gitUrl (canonical GitHub slug).
+    # Falls back to None when source_url isn't a parseable GitHub URL — the
+    # entry is still written, but with marketplace_verified=False.
+    parsed_layout = _parse_git_url_for_layout(git_url)
+    marketplace_repo = parsed_layout[0] if parsed_layout else None
+
+    # When marketplace_cache is None the caller opted out of marketplace
+    # verification entirely (e.g., unit tests that mock just the registry
+    # layer). Skip the verifier — the resulting entry will have
+    # marketplace_verified=False, which downstream treats as "needs catalog
+    # refresh / unverified" exactly like a real fetch failure.
+    if marketplace_cache is not None and marketplace_repo:
+        marketplace_name, marketplace_verified = marketplace_verifier.verify_marketplace(
+            marketplace_repo, name, marketplace_cache,
+        )
+    else:
+        marketplace_name, marketplace_verified = (None, False)
+
     entry: dict = {
         "id": _build_id(namespace, name),
         "name": name,
@@ -460,8 +482,12 @@ def _entry_from_plugin(
         "platforms": ["claude-code"],
         "install": {
             "method": "plugin_marketplace",
-            "marketplace": namespace or "",
             "plugin_name": name,
+            "marketplace_repo": marketplace_repo,
+            "marketplace_name": marketplace_name,
+            "marketplace_verified": marketplace_verified,
+            # Preserved as display-only string (npm-style namespace from upstream).
+            "marketplace": namespace or "",
         },
         "bundle": bundle,
         "manifest_completeness": completeness,
@@ -740,6 +766,13 @@ def main(argv: Optional[list[str]] = None) -> int:
             len(plugin_blacklist),
         )
 
+    marketplace_cache = marketplace_verifier.load_cache(MARKETPLACE_CACHE_PATH)
+    if marketplace_cache:
+        logger.info(
+            "Loaded marketplace manifest cache with %d entries from %s",
+            len(marketplace_cache), MARKETPLACE_CACHE_PATH,
+        )
+
     try:
         new_entries: list[dict] = []
         for raw in raw_plugins:
@@ -749,6 +782,7 @@ def main(argv: Optional[list[str]] = None) -> int:
                     last_synced,
                     layout_fetcher,
                     plugin_blacklist=plugin_blacklist,
+                    marketplace_cache=marketplace_cache,
                 )
             except Exception as e:  # noqa: BLE001 - one bad row mustn't kill all
                 logger.warning(
@@ -764,6 +798,7 @@ def main(argv: Optional[list[str]] = None) -> int:
                 layout_fetcher.close()
             except Exception:  # noqa: BLE001
                 pass
+        marketplace_verifier.save_cache(MARKETPLACE_CACHE_PATH, marketplace_cache)
     logger.info(
         "Built %d catalog entries from %d raw plugins",
         len(new_entries), len(raw_plugins),

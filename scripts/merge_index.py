@@ -380,6 +380,35 @@ def merge(skip_enrichment: bool = False):
 
     deduped = deduplicate(all_entries)
 
+    # Plugin schema validation: drop entries missing the marketplace fields
+    # required by the install command (added by fix-plugin-marketplace-fields).
+    # `marketplace_name` may be null (manifest had no `name` field), so it's not
+    # required here — `marketplace_verified=False` covers that case.
+    plugin_validated: list = []
+    plugin_dropped = 0
+    for entry in deduped:
+        if entry.get("type") == "plugin":
+            install = entry.get("install") or {}
+            missing = []
+            if not isinstance(install.get("marketplace_repo"), str) or not install.get("marketplace_repo"):
+                missing.append("marketplace_repo")
+            if not isinstance(install.get("marketplace_verified"), bool):
+                missing.append("marketplace_verified")
+            if missing:
+                logger.warning(
+                    "Dropping plugin entry id=%s (missing install fields: %s)",
+                    entry.get("id"), ", ".join(missing),
+                )
+                plugin_dropped += 1
+                continue
+        plugin_validated.append(entry)
+    if plugin_dropped:
+        logger.info(
+            "Plugin schema validator dropped %d entries missing required install fields",
+            plugin_dropped,
+        )
+    deduped = plugin_validated
+
     post_dedup_counts = {}
     for entry in deduped:
         t = entry.get("type", "unknown")
@@ -590,6 +619,13 @@ def merge(skip_enrichment: bool = False):
         se = {k: entry.get(k) for k in SEARCH_INDEX_FIELDS}
         install_obj = entry.get("install")
         se["install_method"] = install_obj.get("method") if isinstance(install_obj, dict) else None
+        # For plugin entries, carry the marketplace_verified flag in a minimal
+        # install sub-object so list-view cards can render the "unverified"
+        # badge without re-fetching the per-entry JSON.
+        if entry.get("type") == "plugin" and isinstance(install_obj, dict):
+            verified = install_obj.get("marketplace_verified")
+            if isinstance(verified, bool):
+                se["install"] = {"marketplace_verified": verified}
         # Build search_text: merged field for semantic keyword matching
         parts = [
             entry.get("name", ""),

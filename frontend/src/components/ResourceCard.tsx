@@ -44,6 +44,15 @@ export default function ResourceCard({ item, compact, highlight }: Props) {
   // cluttering the ~80% of safe entries.
   const riskLevel = item.security?.risk_level
   const showShield = riskLevel === 'medium' || riskLevel === 'high' || riskLevel === 'extreme'
+  // Plugin marketplace metadata could not be verified — install action is
+  // unavailable. Surface a small badge so users understand why install CTA
+  // is hidden in the detail view.
+  const showUnverified =
+    item.type === 'plugin' && item.install?.marketplace_verified === false
+  const unverifiedTooltip =
+    lang === 'zh'
+      ? 'marketplace 元数据未验证，自动安装不可用'
+      : 'Marketplace metadata not verified — automated install unavailable'
   const shieldStyle: Record<string, string> = {
     medium: 'text-amber-500 hover:text-amber-600 dark:text-amber-400 dark:hover:text-amber-300',
     high: 'text-rose-500 hover:text-rose-600 dark:text-rose-400 dark:hover:text-rose-300',
@@ -68,6 +77,15 @@ export default function ResourceCard({ item, compact, highlight }: Props) {
               'bg-gray-100 text-gray-500 dark:bg-gray-700 dark:text-gray-400'
             }`}>
               {freshnessLabel}
+            </span>
+          )}
+          {showUnverified && (
+            <span
+              title={unverifiedTooltip}
+              aria-label={unverifiedTooltip}
+              className="text-xs px-1.5 py-0.5 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 cursor-help"
+            >
+              {lang === 'zh' ? '未验证' : 'unverified'}
             </span>
           )}
         </div>

@@ -1192,6 +1192,72 @@ def _merge_mcp_registry_fields(target: dict, donor: dict) -> None:
             target[k] = v
 
 
+# Plugin overlay — when a dev entry duplicates an official entry on the same
+# (marketplace_repo, plugin_name), we drop the lower-priority entry but first
+# pull its enrichment fields onto the kept one. Scalar fields only fill empty
+# slots on target; list fields are union-deduplicated (target order preserved).
+_PLUGIN_OVERLAY_SCALAR_FIELDS = ("description_zh", "summary", "summary_zh")
+_PLUGIN_OVERLAY_LIST_FIELDS = ("tags", "tech_stack", "highlights")
+
+
+def _merge_plugin_enrichment_fields(target: dict, donor: dict) -> None:
+    """Merge enrichment fields from donor onto target (target wins ties).
+
+    Scalars: target's non-empty value wins. Lists: union with target ordering
+    preserved, donor's novel items appended.
+    """
+    for k in _PLUGIN_OVERLAY_SCALAR_FIELDS:
+        if not target.get(k):
+            v = donor.get(k)
+            if isinstance(v, str) and v.strip():
+                target[k] = v
+    for k in _PLUGIN_OVERLAY_LIST_FIELDS:
+        donor_list = donor.get(k)
+        if not isinstance(donor_list, list) or not donor_list:
+            continue
+        target_list = target.get(k)
+        if not isinstance(target_list, list):
+            target[k] = list(donor_list)
+            continue
+        seen = set()
+        merged: list = []
+        for item in list(target_list) + list(donor_list):
+            try:
+                key = item if isinstance(item, (str, int, float, bool, type(None))) else json.dumps(item, sort_keys=True)
+            except (TypeError, ValueError):
+                key = repr(item)
+            if key in seen:
+                continue
+            seen.add(key)
+            merged.append(item)
+        target[k] = merged
+
+
+def plugin_identity_key(entry: dict) -> tuple[str, str, str] | None:
+    """Cross-source identity for a plugin entry.
+
+    Plugin entries from ``claude-plugins-dev`` and ``claude-plugins-official``
+    routinely overlap — the dev community registry includes 198 entries that
+    point at the official marketplace's sub-paths, of which 171 share the
+    plugin_name with an official entry (same plugin, two upstream feeds).
+
+    Returns ``('plugin', marketplace_repo, plugin_name)`` for plugin entries
+    that have both fields populated. Entries missing either field return
+    ``None`` so they pass through identity collapse untouched (they will be
+    rejected separately by the merge validator).
+    """
+    if (entry.get("type") or "") != "plugin":
+        return None
+    install = entry.get("install") or {}
+    repo = install.get("marketplace_repo")
+    plugin_name = install.get("plugin_name")
+    if not isinstance(repo, str) or not repo:
+        return None
+    if not isinstance(plugin_name, str) or not plugin_name:
+        return None
+    return ("plugin", repo, plugin_name)
+
+
 def _identity_key_for_entry(entry: dict):
     """Route an entry to its identity-collapse key by type.
 
@@ -1204,6 +1270,8 @@ def _identity_key_for_entry(entry: dict):
         return mcp_identity_key(entry)
     if etype == "rule":
         return rule_identity_key(entry)
+    if etype == "plugin":
+        return plugin_identity_key(entry)
     return None
 
 
@@ -1284,6 +1352,18 @@ def deduplicate(entries: list) -> list:
                     i,
                 )
             ranked = sorted(idxs, key=_rule_rank)
+        elif group_type == "plugin":
+            # Rank by explicit entry source_priority field (set by sync scripts).
+            # claude-plugins-official = 1000, superpowers-marketplace = 950,
+            # claude-plugins-dev = 700. Falls back to URL-based priority and
+            # input order on ties.
+            def _plugin_rank(i: int) -> tuple:
+                e = entries[i]
+                explicit = e.get("source_priority")
+                if not isinstance(explicit, (int, float)):
+                    explicit = source_priority(e.get("source_url") or "")
+                return (-int(explicit), i)
+            ranked = sorted(idxs, key=_plugin_rank)
         else:
             # Skills (and any future identity-keyed type) — pure source_priority.
             ranked = sorted(
@@ -1301,6 +1381,8 @@ def deduplicate(entries: list) -> list:
                 _merge_skills_sh_fields(winner, entries[j])
             elif group_type == "mcp":
                 _merge_mcp_registry_fields(winner, entries[j])
+            elif group_type == "plugin":
+                _merge_plugin_enrichment_fields(winner, entries[j])
             losers.add(j)
         if group_type == "skill":
             # Idempotent self-merge so winners that already carry skills.sh

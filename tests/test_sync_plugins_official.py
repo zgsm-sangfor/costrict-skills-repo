@@ -32,6 +32,20 @@ sys.path.insert(
 import sync_plugins_official as spo  # noqa: E402
 
 
+# Stub out the marketplace manifest fetch — the sync's `_entry_from_plugin`
+# calls marketplace_verifier.verify_marketplace which would otherwise hit
+# raw.githubusercontent.com. Tests focus on marketplace.json parsing /
+# entry construction, not the verifier's HTTP layer (covered by
+# test_marketplace_verifier.py).
+@pytest.fixture(autouse=True)
+def _stub_marketplace_verifier(monkeypatch):
+    monkeypatch.setattr(
+        spo.marketplace_verifier,
+        "verify_marketplace",
+        lambda repo, plugin_name, cache: (None, False),
+    )
+
+
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------

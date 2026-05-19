@@ -39,6 +39,15 @@ import sync_plugins_dev as spd  # noqa: E402
 @pytest.fixture(autouse=True)
 def _relax_min_stars_for_tests(monkeypatch):
     monkeypatch.setattr(spd, "MIN_STARS", 5)
+    # Stub out the marketplace manifest fetch — the sync's `_entry_from_plugin`
+    # calls marketplace_verifier.verify_marketplace which would otherwise hit
+    # raw.githubusercontent.com. Tests focus on the sync orchestration, not the
+    # verifier's HTTP layer (covered by test_marketplace_verifier.py).
+    monkeypatch.setattr(
+        spd.marketplace_verifier,
+        "verify_marketplace",
+        lambda repo, plugin_name, cache: (None, False),
+    )
 
 
 # ---------------------------------------------------------------------------

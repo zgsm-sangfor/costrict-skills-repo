@@ -440,6 +440,29 @@ export default function Detail() {
               </a>
             </p>
           )}
+          {installGuidance?.kind === 'plugin_unverified' && (
+            <div className="space-y-2 rounded-xl border border-amber-300 bg-amber-50 dark:border-amber-700 dark:bg-amber-900/30 p-4">
+              <p className="text-sm font-medium text-amber-900 dark:text-amber-200">
+                {lang === 'zh' ? '⚠️ marketplace 元数据未验证' : '⚠️ Marketplace metadata not verified'}
+              </p>
+              <p className="text-xs text-amber-800 dark:text-amber-300">
+                {installGuidance.reason === 'missing_fields'
+                  ? lang === 'zh'
+                    ? '该 plugin 缺少安装所需的 marketplace 字段，可能是 catalog 数据陈旧或上游未发布有效 marketplace.json。'
+                    : "This plugin is missing required marketplace fields. Catalog data may be stale, or the upstream hasn't published a valid marketplace.json."
+                  : lang === 'zh'
+                    ? '我们没能在该 plugin 的 marketplace.json 中找到匹配的 plugin 条目。自动安装不可用，请参考源仓库说明。'
+                    : "We couldn't find a matching entry in this plugin's marketplace.json. Automated install is unavailable — please refer to the upstream source for instructions."}
+              </p>
+              {item.source_url && (
+                <p className="text-xs">
+                  <a href={item.source_url} target="_blank" rel="noreferrer" className="text-apple-blue hover:underline break-all">
+                    {item.source_url} →
+                  </a>
+                </p>
+              )}
+            </div>
+          )}
           {installGuidance?.kind === 'download_file' && item.install.files && item.install.files.length > 0 && (() => {
             return (
               <div>

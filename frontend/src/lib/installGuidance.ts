@@ -45,6 +45,15 @@ type PluginMarketplaceGuidance = {
   copyText: string  // both commands joined for one-click copy
 }
 
+type PluginUnverifiedGuidance = {
+  kind: 'plugin_unverified'
+  copyText: null
+  // Reason the catalog couldn't verify this plugin. Surface to user so they
+  // know automated install is unavailable. source_url is rendered separately
+  // by Detail.tsx; we don't repeat it here.
+  reason: 'missing_fields' | 'marketplace_unverified'
+}
+
 type UnsupportedGuidance = {
   kind: 'unsupported'
   copyText: null
@@ -57,6 +66,7 @@ export type InstallGuidance =
   | McpConfigGuidance
   | ManualGuidance
   | PluginMarketplaceGuidance
+  | PluginUnverifiedGuidance
   | UnsupportedGuidance
 
 export function buildInstallGuidance(item: CatalogItem, lang: Lang): InstallGuidance {
@@ -78,16 +88,29 @@ export function buildInstallGuidance(item: CatalogItem, lang: Lang): InstallGuid
   }
 
   if (install.method === 'plugin_marketplace') {
-    const marketplace = (install.marketplace || '').trim()
     const pluginName = (install.plugin_name || '').trim()
-    if (!marketplace || !pluginName) {
-      return { kind: 'unsupported', copyText: null }
+    const marketplaceRepo = (install.marketplace_repo || '').trim()
+    const marketplaceName = (install.marketplace_name || '').trim()
+    const verified = install.marketplace_verified
+
+    // Explicitly unverified by catalog — hide install CTA, surface reason.
+    if (verified === false) {
+      return { kind: 'plugin_unverified', copyText: null, reason: 'marketplace_unverified' }
     }
-    const addCommand = `/plugin marketplace add ${marketplace}`
-    const installCommand = `/plugin install ${pluginName}@${marketplace}`
+
+    // Required marketplace fields missing → catalog likely stale, treat as
+    // unverified rather than render incorrect copy text.
+    if (!pluginName || !marketplaceRepo || !marketplaceName) {
+      return { kind: 'plugin_unverified', copyText: null, reason: 'missing_fields' }
+    }
+
+    // Slash commands use the canonical GitHub repo for marketplace registration
+    // and manifest::name as the suffix in `enabled_key`.
+    const addCommand = `/plugin marketplace add ${marketplaceRepo}`
+    const installCommand = `/plugin install ${pluginName}@${marketplaceName}`
     return {
       kind: 'plugin_marketplace',
-      marketplace,
+      marketplace: marketplaceRepo,
       pluginName,
       addCommand,
       installCommand,
