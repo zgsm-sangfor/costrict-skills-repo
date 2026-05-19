@@ -1,6 +1,6 @@
 # 🔌 MCP Servers
 
-> 10055 Model Context Protocol servers that connect AI agents to external tools, databases, and services.
+> 10083 Model Context Protocol servers that connect AI agents to external tools, databases, and services.
 >
 > [Back to main →](../../README.md) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=mcp)
 
@@ -100,7 +100,7 @@
 | 88 | [Multiverse MCP Server](https://github.com/lamemind/mcp-server-multiverse) | A middleware server enabling multiple isolated instances of the same MCP servers... | 77 | 🟢 Active | 96 | 2026-03-30 | tooling | — |
 | 89 | [alibabacloud-devops-mcp-server](https://github.com/aliyun/alibabacloud-devops-mcp-server) | MCP server enabling AI assistants to interact with Alibaba Cloud's Yunxiao DevOp... | 75 | 🟢 Active | 96 | 2026-04-08 | ai-ml | `devops-mcp`, `alibabacloud-devops` |
 | 90 | [CodeAlive](https://github.com/CodeAlive-AI/codealive-mcp) | MCP server connecting AI coding assistants to CodeAlive's semantic code search a... | 75 | 🟢 Active | 96 | 2026-04-14 | ai-ml | `codealive`, `code-search`, `ai-assistant` |
-| 91 | [Debugg AI](https://github.com/debugg-ai/debugg-ai-mcp) | MCP server enabling AI coding agents to run end-to-end browser tests against web... | 72 | 🟢 Active | 96 | 2026-05-07 | testing | `automation`, `browser`, `end-to-end-testing` |
+| 91 | [Debugg AI](https://github.com/debugg-ai/debugg-ai-mcp) | MCP server enabling AI coding agents to run end-to-end browser tests against web... | 73 | 🟢 Active | 96 | 2026-05-07 | testing | `automation`, `browser`, `end-to-end-testing` |
 | 92 | [Boilerplate MCP Server](https://github.com/aashari/boilerplate-mcp-server) | A TypeScript boilerplate for building custom MCP servers with IP lookup tools, C... | 69 | 🟢 Active | 96 | 2026-03-06 | frontend | `boilerplate`, `typescript`, `tools` |
 | 93 | [Letta MCP Server](https://github.com/oculairmedia/Letta-MCP-server) | High-performance Rust MCP server for Letta AI agent management with 103 operatio... | 67 | 🟢 Active | 96 | 2026-04-13 | tooling | — |
 | 94 | [mcp-shell 🐚](https://github.com/sonirico/mcp-shell) | MCP server enabling AI to execute shell commands securely with audit logging and... | 67 | 🟢 Active | 96 | 2026-03-10 | backend | `go`, `shell`, `bash` |

@@ -1,6 +1,6 @@
 # 🔌 MCP 服务器
 
-> 10055 模型上下文协议服务器，将 AI Agent 连接到外部工具、数据库和服务。
+> 10083 模型上下文协议服务器，将 AI Agent 连接到外部工具、数据库和服务。
 >
 > [返回主页 →](../../README.md) · [在线浏览 →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=mcp)
 
@@ -100,7 +100,7 @@
 | 88 | [Multiverse MCP Server](https://github.com/lamemind/mcp-server-multiverse) | 一个中间件服务器，允许多个相同MCP服务器实例以独立命名空间和配置共存。 | 77 | 🟢 活跃 | 96 | 2026-03-30 | tooling | — |
 | 89 | [alibabacloud-devops-mcp-server](https://github.com/aliyun/alibabacloud-devops-mcp-server) | MCP服务器，使AI助手能与阿里云云效平台交互，管理代码、项目和流水线。 | 75 | 🟢 活跃 | 96 | 2026-04-08 | ai-ml | `devops-mcp`, `alibabacloud-devops` |
 | 90 | [CodeAlive](https://github.com/CodeAlive-AI/codealive-mcp) | MCP服务器，将AI编程助手连接到CodeAlive的语义代码搜索和代码库理解平台。 | 75 | 🟢 活跃 | 96 | 2026-04-14 | ai-ml | `codealive`, `code-search`, `ai-assistant` |
-| 91 | [Debugg AI](https://github.com/debugg-ai/debugg-ai-mcp) | MCP 服务器，让 AI 编码代理能在远程浏览器中对 Web 应用进行端到端测试，返回截图和网络追踪。 | 72 | 🟢 活跃 | 96 | 2026-05-07 | testing | `automation`, `browser`, `end-to-end-testing` |
+| 91 | [Debugg AI](https://github.com/debugg-ai/debugg-ai-mcp) | MCP 服务器，让 AI 编码代理能在远程浏览器中对 Web 应用进行端到端测试，返回截图和网络追踪。 | 73 | 🟢 活跃 | 96 | 2026-05-07 | testing | `automation`, `browser`, `end-to-end-testing` |
 | 92 | [Boilerplate MCP Server](https://github.com/aashari/boilerplate-mcp-server) | TypeScript MCP 服务器样板，提供 IP 查询工具、CLI 支持和可扩展架构，用于 AI 集成。 | 69 | 🟢 活跃 | 96 | 2026-03-06 | frontend | `boilerplate`, `typescript`, `tools` |
 | 93 | [Letta MCP Server](https://github.com/oculairmedia/Letta-MCP-server) | 高性能 Rust MCP 服务器，用于 Letta AI 代理管理，提供 7 个工具共 103 个操作。 | 67 | 🟢 活跃 | 96 | 2026-04-13 | tooling | — |
 | 94 | [mcp-shell 🐚](https://github.com/sonirico/mcp-shell) | MCP服务器，允许AI安全执行Shell命令，支持审计日志和可配置安全策略。 | 67 | 🟢 活跃 | 96 | 2026-03-10 | backend | `go`, `shell`, `bash` |

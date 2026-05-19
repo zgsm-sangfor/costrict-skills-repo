@@ -1,6 +1,6 @@
 # 🧩 Plugins
 
-> 939 Claude Code plugin bundles packaging skills, agents, commands, and MCP servers from official and community marketplaces.
+> 765 Claude Code plugin bundles packaging skills, agents, commands, and MCP servers from official and community marketplaces.
 >
 > [Back to main →](../../README.md) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=plugin)
 
@@ -100,21 +100,21 @@
 | 88 | [tdd-workflows](https://github.com/wshobson/agents) | A comprehensive system of 185 AI agents and 80 plugins for Claude Code, enabling... | claude-plugins.dev | 🟢 Active | 96 | 2026-05-09 | testing | — |
 | 89 | [team-collaboration](https://github.com/wshobson/agents) | A comprehensive system of 185 AI agents and 80 plugins for Claude Code, enabling... | claude-plugins.dev | 🟢 Active | 96 | 2026-05-09 | tooling | — |
 | 90 | [investment-banking](https://github.com/anthropics/financial-services) | AI-powered Claude plugins for financial-services workflows: investment banking, ... | claude-plugins.dev | 🟢 Active | 96 | 2026-05-13 | tooling | — |
-| 91 | [voltagent-core-dev](https://github.com/VoltAgent/awesome-claude-code-subagents) | A curated collection of 131+ specialized Claude Code subagents for development t... | claude-plugins.dev | 🟢 Active | 96 | 2026-04-16 | backend | `backend`, `frontend`, `fullstack` |
-| 92 | [voltagent-data-ai](https://github.com/VoltAgent/awesome-claude-code-subagents) | A curated collection of 131+ specialized Claude Code subagents for development, ... | claude-plugins.dev | 🟢 Active | 96 | 2026-04-16 | ai-ml | `data-engineering`, `machine-learning`, `ai` |
-| 93 | [voltagent-dev-exp](https://github.com/VoltAgent/awesome-claude-code-subagents) | A curated collection of 131+ specialized AI subagents for Claude Code, covering ... | claude-plugins.dev | 🟢 Active | 96 | 2026-04-16 | documentation | `developer-experience`, `cli`, `documentation` |
-| 94 | [voltagent-domains](https://github.com/VoltAgent/awesome-claude-code-subagents) | A curated collection of 131+ specialized Claude Code subagents for domain-specif... | claude-plugins.dev | 🟢 Active | 96 | 2026-04-16 | ai-ml | `blockchain`, `fintech`, `gaming` |
-| 95 | [voltagent-infra](https://github.com/VoltAgent/awesome-claude-code-subagents) | A collection of 131+ specialized Claude Code subagents for development, DevOps, ... | claude-plugins.dev | 🟢 Active | 96 | 2026-04-16 | devops | `devops`, `docker`, `kubernetes` |
-| 96 | [voltagent-lang](https://github.com/VoltAgent/awesome-claude-code-subagents) | A curated collection of 131+ specialized Claude Code subagents for development t... | claude-plugins.dev | 🟢 Active | 96 | 2026-04-16 | frontend | `python`, `typescript`, `golang` |
-| 97 | [voltagent-meta](https://github.com/VoltAgent/awesome-claude-code-subagents) | A curated collection of 131+ specialized Claude Code subagents for development t... | claude-plugins.dev | 🟢 Active | 96 | 2026-04-16 | backend | `multi-agent`, `orchestration`, `workflow` |
-| 98 | [voltagent-qa-sec](https://github.com/VoltAgent/awesome-claude-code-subagents) | A curated collection of 131+ specialized Claude Code subagents for development, ... | claude-plugins.dev | 🟢 Active | 96 | 2026-04-16 | security | `testing`, `security`, `code-review` |
-| 99 | [voltagent-research](https://github.com/VoltAgent/awesome-claude-code-subagents) | A curated collection of 131+ specialized Claude Code subagents for development t... | claude-plugins.dev | 🟢 Active | 96 | 2026-04-16 | documentation | `research`, `analysis`, `market-research` |
-| 100 | [cwc-makers](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/cwc-makers) | A Claude Code plugin for automating M5Stack ESP32 device provisioning, firmware ... | Anthropic Official | 🟢 Active | 96 | 2026-05-08 | tooling | — |
+| 91 | [cwc-makers](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/cwc-makers) | A Claude Code plugin for automating M5Stack ESP32 device provisioning, firmware ... | Anthropic Official | 🟢 Active | 96 | 2026-05-08 | tooling | — |
+| 92 | [voltagent-core-dev](https://github.com/VoltAgent/awesome-claude-code-subagents) | A curated collection of 131+ specialized Claude Code subagents for development t... | claude-plugins.dev | 🟢 Active | 96 | 2026-04-16 | backend | `backend`, `frontend`, `fullstack` |
+| 93 | [voltagent-data-ai](https://github.com/VoltAgent/awesome-claude-code-subagents) | A curated collection of 131+ specialized Claude Code subagents for development, ... | claude-plugins.dev | 🟢 Active | 96 | 2026-04-16 | ai-ml | `data-engineering`, `machine-learning`, `ai` |
+| 94 | [voltagent-dev-exp](https://github.com/VoltAgent/awesome-claude-code-subagents) | A curated collection of 131+ specialized AI subagents for Claude Code, covering ... | claude-plugins.dev | 🟢 Active | 96 | 2026-04-16 | documentation | `developer-experience`, `cli`, `documentation` |
+| 95 | [voltagent-domains](https://github.com/VoltAgent/awesome-claude-code-subagents) | A curated collection of 131+ specialized Claude Code subagents for domain-specif... | claude-plugins.dev | 🟢 Active | 96 | 2026-04-16 | ai-ml | `blockchain`, `fintech`, `gaming` |
+| 96 | [voltagent-infra](https://github.com/VoltAgent/awesome-claude-code-subagents) | A collection of 131+ specialized Claude Code subagents for development, DevOps, ... | claude-plugins.dev | 🟢 Active | 96 | 2026-04-16 | devops | `devops`, `docker`, `kubernetes` |
+| 97 | [voltagent-lang](https://github.com/VoltAgent/awesome-claude-code-subagents) | A curated collection of 131+ specialized Claude Code subagents for development t... | claude-plugins.dev | 🟢 Active | 96 | 2026-04-16 | frontend | `python`, `typescript`, `golang` |
+| 98 | [voltagent-meta](https://github.com/VoltAgent/awesome-claude-code-subagents) | A curated collection of 131+ specialized Claude Code subagents for development t... | claude-plugins.dev | 🟢 Active | 96 | 2026-04-16 | backend | `multi-agent`, `orchestration`, `workflow` |
+| 99 | [voltagent-qa-sec](https://github.com/VoltAgent/awesome-claude-code-subagents) | A curated collection of 131+ specialized Claude Code subagents for development, ... | claude-plugins.dev | 🟢 Active | 96 | 2026-04-16 | security | `testing`, `security`, `code-review` |
+| 100 | [voltagent-research](https://github.com/VoltAgent/awesome-claude-code-subagents) | A curated collection of 131+ specialized Claude Code subagents for development t... | claude-plugins.dev | 🟢 Active | 96 | 2026-04-16 | documentation | `research`, `analysis`, `market-research` |
 
 ## Top 10 — Install Guide
 
 <details>
-<summary>⭐ <strong>chrome-devtools-mcp</strong> (39.9k★) — Chrome DevTools MCP server for AI coding agents to debug, au...</summary>
+<summary>⭐ <strong>chrome-devtools-mcp</strong> (40.0k★) — Chrome DevTools MCP server for AI coding agents to debug, au...</summary>
 
 Chrome DevTools MCP server for AI coding agents to debug, automate, and analyze web pages via CLI and MCP tools.
 

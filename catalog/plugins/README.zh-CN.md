@@ -1,6 +1,6 @@
 # 🧩 Plugins 插件
 
-> 939 Claude Code 插件包，捆绑 skill、agent、command 与 MCP server，覆盖官方与社区 marketplace。
+> 765 Claude Code 插件包，捆绑 skill、agent、command 与 MCP server，覆盖官方与社区 marketplace。
 >
 > [返回主页 →](../../README.md) · [在线浏览 →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=plugin)
 
@@ -100,21 +100,21 @@
 | 88 | [tdd-workflows](https://github.com/wshobson/agents) | 为Claude Code提供185个AI代理和80个插件的综合系统，实现软件开发工作流中的多代理编排和自动化。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-09 | testing | — |
 | 89 | [team-collaboration](https://github.com/wshobson/agents) | 为Claude Code提供185个AI代理和80个插件的综合系统，实现软件开发工作流中的多代理编排与自动化。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-09 | tooling | — |
 | 90 | [investment-banking](https://github.com/anthropics/financial-services) | 为金融服务工作流（投资银行、股票研究、私募股权、财富管理）打造的AI驱动Claude插件。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-05-13 | tooling | — |
-| 91 | [voltagent-core-dev](https://github.com/VoltAgent/awesome-claude-code-subagents) | 一个包含131+个专用Claude Code子代理的精选集合，用于后端、前端和DevOps等开发任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | backend | `backend`, `frontend`, `fullstack` |
-| 92 | [voltagent-data-ai](https://github.com/VoltAgent/awesome-claude-code-subagents) | 一个包含131+个专用Claude Code子代理的精选集合，涵盖开发、数据、AI和DevOps任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | ai-ml | `data-engineering`, `machine-learning`, `ai` |
-| 93 | [voltagent-dev-exp](https://github.com/VoltAgent/awesome-claude-code-subagents) | 为Claude Code策划的131+专业AI子代理集合，涵盖开发、基础设施、质量等领域。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | documentation | `developer-experience`, `cli`, `documentation` |
-| 94 | [voltagent-domains](https://github.com/VoltAgent/awesome-claude-code-subagents) | 一个包含131+个专业Claude Code子代理的精选集合，用于特定领域的开发任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | ai-ml | `blockchain`, `fintech`, `gaming` |
-| 95 | [voltagent-infra](https://github.com/VoltAgent/awesome-claude-code-subagents) | 一个包含131+个专用Claude Code子代理的集合，用于开发、DevOps和AI任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | devops | `devops`, `docker`, `kubernetes` |
-| 96 | [voltagent-lang](https://github.com/VoltAgent/awesome-claude-code-subagents) | 一个包含131+个专用Claude Code子代理的精选集合，用于编码、测试和DevOps等开发任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | frontend | `python`, `typescript`, `golang` |
-| 97 | [voltagent-meta](https://github.com/VoltAgent/awesome-claude-code-subagents) | 一个包含131+个专用Claude Code子代理的集合，涵盖开发、基础设施和编排任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | backend | `multi-agent`, `orchestration`, `workflow` |
-| 98 | [voltagent-qa-sec](https://github.com/VoltAgent/awesome-claude-code-subagents) | 一个包含131+个专用Claude Code子代理的精选集合，用于开发、测试、安全和DevOps任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | security | `testing`, `security`, `code-review` |
-| 99 | [voltagent-research](https://github.com/VoltAgent/awesome-claude-code-subagents) | 一个包含131+个专用Claude Code子代理的精选集合，用于编码、测试和DevOps等开发任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | documentation | `research`, `analysis`, `market-research` |
-| 100 | [cwc-makers](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/cwc-makers) | Claude Code 插件，用于自动化 M5Stack ESP32 设备配置、固件刷写和 MicroPython 应用安装。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-08 | tooling | — |
+| 91 | [cwc-makers](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/cwc-makers) | Claude Code 插件，用于自动化 M5Stack ESP32 设备配置、固件刷写和 MicroPython 应用安装。 | Anthropic 官方 | 🟢 活跃 | 96 | 2026-05-08 | tooling | — |
+| 92 | [voltagent-core-dev](https://github.com/VoltAgent/awesome-claude-code-subagents) | 一个包含131+个专用Claude Code子代理的精选集合，用于后端、前端和DevOps等开发任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | backend | `backend`, `frontend`, `fullstack` |
+| 93 | [voltagent-data-ai](https://github.com/VoltAgent/awesome-claude-code-subagents) | 一个包含131+个专用Claude Code子代理的精选集合，涵盖开发、数据、AI和DevOps任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | ai-ml | `data-engineering`, `machine-learning`, `ai` |
+| 94 | [voltagent-dev-exp](https://github.com/VoltAgent/awesome-claude-code-subagents) | 为Claude Code策划的131+专业AI子代理集合，涵盖开发、基础设施、质量等领域。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | documentation | `developer-experience`, `cli`, `documentation` |
+| 95 | [voltagent-domains](https://github.com/VoltAgent/awesome-claude-code-subagents) | 一个包含131+个专业Claude Code子代理的精选集合，用于特定领域的开发任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | ai-ml | `blockchain`, `fintech`, `gaming` |
+| 96 | [voltagent-infra](https://github.com/VoltAgent/awesome-claude-code-subagents) | 一个包含131+个专用Claude Code子代理的集合，用于开发、DevOps和AI任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | devops | `devops`, `docker`, `kubernetes` |
+| 97 | [voltagent-lang](https://github.com/VoltAgent/awesome-claude-code-subagents) | 一个包含131+个专用Claude Code子代理的精选集合，用于编码、测试和DevOps等开发任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | frontend | `python`, `typescript`, `golang` |
+| 98 | [voltagent-meta](https://github.com/VoltAgent/awesome-claude-code-subagents) | 一个包含131+个专用Claude Code子代理的集合，涵盖开发、基础设施和编排任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | backend | `multi-agent`, `orchestration`, `workflow` |
+| 99 | [voltagent-qa-sec](https://github.com/VoltAgent/awesome-claude-code-subagents) | 一个包含131+个专用Claude Code子代理的精选集合，用于开发、测试、安全和DevOps任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | security | `testing`, `security`, `code-review` |
+| 100 | [voltagent-research](https://github.com/VoltAgent/awesome-claude-code-subagents) | 一个包含131+个专用Claude Code子代理的精选集合，用于编码、测试和DevOps等开发任务。 | claude-plugins.dev | 🟢 活跃 | 96 | 2026-04-16 | documentation | `research`, `analysis`, `market-research` |
 
 ## Top 10 安装指南
 
 <details>
-<summary>⭐ <strong>chrome-devtools-mcp</strong> (39.9k★) — Chrome DevTools MCP 服务器，供 AI 编程代理通过 CLI 和 MCP 工具调试、自动化和分析网页。</summary>
+<summary>⭐ <strong>chrome-devtools-mcp</strong> (40.0k★) — Chrome DevTools MCP 服务器，供 AI 编程代理通过 CLI 和 MCP 工具调试、自动化和分析网页。</summary>
 
 Chrome DevTools MCP 服务器，供 AI 编程代理通过 CLI 和 MCP 工具调试、自动化和分析网页。
 
