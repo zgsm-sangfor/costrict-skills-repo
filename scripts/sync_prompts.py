@@ -34,9 +34,10 @@ def parse_prompts_chat() -> list:
         logger.error("Failed to fetch prompts.chat prompts.csv")
         return []
 
-    # Fetch repo-level pushed_at
+    # Fetch repo-level pushed_at + stars (shared across all prompts in the monorepo)
     repo_info = github_api(f"repos/{REPO}")
     pushed_at = repo_info.get("pushed_at") if repo_info else None
+    stars = repo_info.get("stargazers_count") if repo_info else None
 
     entries = []
     csv.field_size_limit(500000)  # Some prompts are very large
@@ -67,7 +68,7 @@ def parse_prompts_chat() -> list:
             "type": "prompt",
             "description": prompt_text[:200].replace("\n", " ").strip(),
             "source_url": f"https://github.com/f/prompts.chat/blob/HEAD/PROMPTS.md#{to_github_slug(act)}",
-            "stars": None,
+            "stars": stars,
             "pushed_at": pushed_at,
             "category": category,
             "tags": tags + (["for-devs"] if for_devs else []),
@@ -92,9 +93,10 @@ def parse_wonderful_prompts() -> list:
         logger.error("Failed to fetch wonderful-prompts README")
         return []
 
-    # Fetch repo-level pushed_at
+    # Fetch repo-level pushed_at + stars (shared across all prompts in the monorepo)
     repo_info = github_api(f"repos/{REPO}")
     pushed_at = repo_info.get("pushed_at") if repo_info else None
+    stars = repo_info.get("stargazers_count") if repo_info else None
 
     entries = []
     in_programming_section = False
@@ -109,7 +111,7 @@ def parse_wonderful_prompts() -> list:
         elif re.match(r"^##\s+", line) and in_programming_section:
             # Save last entry before leaving section
             if current_name and current_content:
-                _add_wonderful_entry(entries, current_name, current_content, pushed_at)
+                _add_wonderful_entry(entries, current_name, current_content, pushed_at, stars)
             in_programming_section = False
             current_name = ""
             current_content = []
@@ -123,7 +125,7 @@ def parse_wonderful_prompts() -> list:
         if heading_match:
             # Save previous entry
             if current_name and current_content:
-                _add_wonderful_entry(entries, current_name, current_content, pushed_at)
+                _add_wonderful_entry(entries, current_name, current_content, pushed_at, stars)
             current_name = heading_match.group(1).strip()
             current_content = []
         elif current_name:
@@ -137,7 +139,7 @@ def parse_wonderful_prompts() -> list:
     return entries
 
 
-def _add_wonderful_entry(entries: list, name: str, content_lines: list, pushed_at: str | None = None):
+def _add_wonderful_entry(entries: list, name: str, content_lines: list, pushed_at: str | None = None, stars: int | None = None):
     content = "\n".join(content_lines).strip()
     description = content[:200].replace("\n", " ").strip() if content else name
 
@@ -150,7 +152,7 @@ def _add_wonderful_entry(entries: list, name: str, content_lines: list, pushed_a
         "type": "prompt",
         "description": description,
         "source_url": "https://github.com/langgptai/wonderful-prompts",
-        "stars": None,
+        "stars": stars,
         "pushed_at": pushed_at,
         "category": category,
         "tags": tags + ["chinese"],

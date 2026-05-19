@@ -27,9 +27,10 @@ def parse_awesome_cursorrules() -> list:
         logger.error("Failed to fetch awesome-cursorrules rules/ directory")
         return []
 
-    # Fetch repo-level pushed_at
+    # Fetch repo-level pushed_at + stars (shared across all rules in the monorepo)
     repo_info = github_api(f"repos/{REPO}")
     pushed_at = repo_info.get("pushed_at") if repo_info else None
+    stars = repo_info.get("stargazers_count") if repo_info else None
 
     entries = []
     for item in data:
@@ -65,7 +66,7 @@ def parse_awesome_cursorrules() -> list:
             "type": "rule",
             "description": description,
             "source_url": rule_url,
-            "stars": None,
+            "stars": stars,
             "pushed_at": pushed_at,
             "category": category,
             "tags": tags,
@@ -85,8 +86,10 @@ def parse_awesome_cursorrules() -> list:
 def parse_rules_optimized() -> list:
     """Parse Mr-chen-05/rules-2.1-optimized .mdc files."""
     REPO = "Mr-chen-05/rules-2.1-optimized"
+    # Fetch repo-level pushed_at + stars (shared across all rules in the monorepo)
     repo_info = github_api(f"repos/{REPO}")
     pushed_at = repo_info.get("pushed_at") if repo_info else None
+    stars = repo_info.get("stargazers_count") if repo_info else None
 
     entries = []
 
@@ -131,7 +134,7 @@ def parse_rules_optimized() -> list:
                 "type": "rule",
                 "description": description,
                 "source_url": f"https://github.com/Mr-chen-05/rules-2.1-optimized/blob/master/{subdir}/{filename}",
-                "stars": None,
+                "stars": stars,
                 "pushed_at": pushed_at,
                 "category": category,
                 "tags": tags + [subdir.replace("-", " ")],

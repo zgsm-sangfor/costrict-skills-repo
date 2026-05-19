@@ -372,9 +372,10 @@ def parse_anthropic_skills() -> list[dict[str, Any]]:
         logger.error("Failed to fetch anthropics/skills directory")
         return []
 
-    # Fetch repo-level pushed_at
+    # Fetch repo-level pushed_at + stars (shared across all skills in the monorepo)
     repo_info = github_api("repos/anthropics/skills")
     pushed_at = repo_info.get("pushed_at") if repo_info else None
+    stars = repo_info.get("stargazers_count") if repo_info else None
 
     entries = []
     for item in data:
@@ -412,7 +413,7 @@ def parse_anthropic_skills() -> list[dict[str, Any]]:
                 "type": "skill",
                 "description": description,
                 "source_url": f"https://github.com/anthropics/skills/tree/main/skills/{skill_name}",
-                "stars": None,
+                "stars": stars,
                 "pushed_at": pushed_at,
                 "category": category,
                 "tags": tags + ["anthropic", "official"],
@@ -451,9 +452,10 @@ def parse_ai_agent_skills() -> list[dict[str, Any]]:
     if not existing_skills:
         logger.warning(f"No SKILL.md files found in {REPO} via Tree API")
 
-    # Fetch repo-level pushed_at
+    # Fetch repo-level pushed_at + stars (shared across all skills in the monorepo)
     repo_info = github_api(f"repos/{REPO}")
     pushed_at = repo_info.get("pushed_at") if repo_info else None
+    stars = repo_info.get("stargazers_count") if repo_info else None
 
     # Step 2: Parse skills.json for metadata (description, workArea, etc.)
     content = fetch_raw_content(REPO, "skills.json")
@@ -515,7 +517,7 @@ def parse_ai_agent_skills() -> list[dict[str, Any]]:
                 "type": "skill",
                 "description": description,
                 "source_url": f"https://github.com/skillcreatorai/Ai-Agent-Skills/tree/main/skills/{skill_name}",
-                "stars": None,
+                "stars": stars,
                 "pushed_at": pushed_at,
                 "category": category,
                 "tags": tags,
@@ -633,7 +635,7 @@ def parse_openclaw_skills(tier1_entries: list[dict[str, Any]]) -> list[dict[str,
                 "type": "skill",
                 "description": description,
                 "source_url": url,
-                "stars": 0,
+                "stars": stars,
                 "pushed_at": pushed_at,
                 "category": category,
                 "tags": tags,
