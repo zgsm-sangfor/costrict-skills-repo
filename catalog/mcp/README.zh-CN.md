@@ -1,6 +1,6 @@
 # 🔌 MCP 服务器
 
-> 5967 模型上下文协议服务器，将 AI Agent 连接到外部工具、数据库和服务。
+> 5974 模型上下文协议服务器，将 AI Agent 连接到外部工具、数据库和服务。
 >
 > [返回主页 →](../../README.md) · [在线浏览 →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=mcp)
 
@@ -43,7 +43,7 @@
 | 31 | [🪐✨ Jupyter MCP Server](https://github.com/datalayer/jupyter-mcp-server) | MCP 服务器，使 AI 能够实时交互 Jupyter 笔记本，执行代码和管理。 | 959 | 🟢 活跃 | 97 | 2026-04-05 | ai-ml | `tools`, `ai`, `jupyter` |
 | 32 | [MCP Framework](https://github.com/QuantGeekDev/mcp-framework) | 一个用于构建 MCP 服务器的 TypeScript 框架，支持自动工具发现、多种传输协议和内置身份验证。 | 907 | 🟢 活跃 | 97 | 2026-04-05 | frontend | `mcp`, `claude`, `llm` |
 | 33 | [Kubectl MCP Tool](https://github.com/rohitg00/kubectl-mcp-server) | MCP 服务器，通过 Claude、Cursor 等 AI 助手用自然语言管理 Kubernetes 集群，提供 253 个工具。 | 856 | 🟢 活跃 | 97 | 2026-04-08 | devops | `kubernetes`, `devops`, `ai` |
-| 34 | [ClickHouse/mcp-clickhouse](https://github.com/ClickHouse/mcp-clickhouse) | ClickHouse 官方 MCP 服务器，支持通过 Claude Desktop 执行 SQL 查询和模式检查。 | 780 | 🟢 活跃 | 97 | 2026-05-08 | tooling | — |
+| 34 | [ClickHouse/mcp-clickhouse](https://github.com/ClickHouse/mcp-clickhouse) | ClickHouse 官方 MCP 服务器，支持通过 Claude Desktop 执行 SQL 查询和模式检查。 | 781 | 🟢 活跃 | 97 | 2026-05-08 | tooling | — |
 | 35 | [clojure-mcp](https://github.com/bhauman/clojure-mcp) | 为AI辅助Clojure开发提供REPL集成和Clojure感知编辑工具的MCP服务器。 | 752 | 🟢 活跃 | 97 | 2026-04-20 | tooling | `mcp-server`, `clojure`, `repl` |
 | 36 | [sentry-mcp](https://github.com/getsentry/sentry-mcp) | 一个MCP服务器，将Sentry错误跟踪和性能监控连接到LLM驱动的编码代理，用于调试工作流。 | 609 | 🟢 活跃 | 97 | 2026-04-15 | ai-ml | `tag-production`, `mcp-server` |
 | 37 | [Google Cloud Run](https://github.com/GoogleCloudPlatform/cloud-run-mcp) | 官方 MCP 服务器，支持 AI 代理通过工具和提示将应用部署到 Google Cloud Run。 | 608 | 🟢 活跃 | 97 | 2026-05-09 | backend | `go`, `google-cloud`, `google-cloud-run` |

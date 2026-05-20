@@ -1,6 +1,6 @@
 # 🔌 MCP Servers
 
-> 5967 Model Context Protocol servers that connect AI agents to external tools, databases, and services.
+> 5974 Model Context Protocol servers that connect AI agents to external tools, databases, and services.
 >
 > [Back to main →](../../README.md) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=mcp)
 
@@ -43,7 +43,7 @@
 | 31 | [🪐✨ Jupyter MCP Server](https://github.com/datalayer/jupyter-mcp-server) | MCP server enabling AI to interact with Jupyter notebooks in real-time for code ... | 959 | 🟢 Active | 97 | 2026-04-05 | ai-ml | `tools`, `ai`, `jupyter` |
 | 32 | [MCP Framework](https://github.com/QuantGeekDev/mcp-framework) | A TypeScript framework for building MCP servers with automatic tool discovery, m... | 907 | 🟢 Active | 97 | 2026-04-05 | frontend | `mcp`, `claude`, `llm` |
 | 33 | [Kubectl MCP Tool](https://github.com/rohitg00/kubectl-mcp-server) | MCP server enabling natural language Kubernetes management through AI assistants... | 856 | 🟢 Active | 97 | 2026-04-08 | devops | `kubernetes`, `devops`, `ai` |
-| 34 | [ClickHouse/mcp-clickhouse](https://github.com/ClickHouse/mcp-clickhouse) | Official ClickHouse MCP server enabling SQL queries and schema exploration throu... | 780 | 🟢 Active | 97 | 2026-05-08 | tooling | — |
+| 34 | [ClickHouse/mcp-clickhouse](https://github.com/ClickHouse/mcp-clickhouse) | Official ClickHouse MCP server enabling SQL queries and schema exploration throu... | 781 | 🟢 Active | 97 | 2026-05-08 | tooling | — |
 | 35 | [clojure-mcp](https://github.com/bhauman/clojure-mcp) | MCP server providing REPL integration and Clojure-aware editing tools for AI-ass... | 752 | 🟢 Active | 97 | 2026-04-20 | tooling | `mcp-server`, `clojure`, `repl` |
 | 36 | [sentry-mcp](https://github.com/getsentry/sentry-mcp) | An MCP server that connects Sentry error tracking and performance monitoring to ... | 609 | 🟢 Active | 97 | 2026-04-15 | ai-ml | `tag-production`, `mcp-server` |
 | 37 | [Google Cloud Run](https://github.com/GoogleCloudPlatform/cloud-run-mcp) | Official MCP server enabling AI agents to deploy applications to Google Cloud Ru... | 608 | 🟢 Active | 97 | 2026-05-09 | backend | `go`, `google-cloud`, `google-cloud-run` |
