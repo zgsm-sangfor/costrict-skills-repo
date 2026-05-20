@@ -848,8 +848,17 @@ class EvalRunner:
         try:
             result_data = json.loads(cached.result_json)
             result = EvalResult.model_validate(result_data)
-            # Mark as cached
-            result = result.model_copy(update={"model_id": "__cached__"})
+            # Mark as cached. Critical: override entry_id with the CURRENT
+            # query's entry_id, not the cached row's. Cache lookup is keyed
+            # on content_hash, so multiple entries sharing the same content
+            # (e.g. 1000+ MCP entries with install={"method": "manual"})
+            # hit the same row. The downstream pipeline (eval_bridge) maps
+            # results back to entries by entry_id, so a cached entry_id from
+            # a different entry would orphan the result and the current
+            # entry never gets its security block written.
+            result = result.model_copy(
+                update={"model_id": "__cached__", "entry_id": entry_id}
+            )
             return result
         except Exception:
             logger.debug("Cache entry for %s is invalid, re-evaluating", entry_id)

@@ -312,3 +312,55 @@ class TestSecurityRunnerBranch:
         runner.run([_make_skill_entry()])
         assert judge.call_count == 1
         assert "待审查能力项" in judge.last_user_prompt
+
+    def test_cache_hit_carries_current_entry_id(self, tmp_path):
+        """Cache hit must return cached EvalResult with entry_id of the
+        querying entry, not the one that originally produced the cache row.
+
+        Regression: 1000+ MCP entries share install={"method": "manual"} →
+        identical synth content → identical content_hash. The first entry
+        evaluates and caches; subsequent entries hit cache. Without overriding
+        entry_id at lookup, downstream code (eval_bridge) maps results by id
+        and orphans every cached entry — the catalog ends up with security on
+        the first one but not the 1000+ siblings.
+        """
+        cfg = load_task_config("security_scan")
+        # incremental=True so cache lookup is active
+        judge = _FakeSecurityJudge(_VALID_SECURITY_PAYLOAD)
+        runner = EvalRunner(
+            task_config=cfg,
+            judge=judge,
+            cache_dir=str(tmp_path / ".eval_cache"),
+            concurrency=1,
+            incremental=True,
+            interactive=False,
+            on_fail="skip",
+        )
+
+        # Two entries with different ids but identical content (no source_url
+        # so fetcher falls back to description → same hash).
+        entry_a = EvalItem(
+            id="mcp-entry-a",
+            name="entry-a",
+            type="skill",
+            description="same body",
+            source_url=None,
+        )
+        entry_b = EvalItem(
+            id="mcp-entry-b",
+            name="entry-b",
+            type="skill",
+            description="same body",
+            source_url=None,
+        )
+
+        results = runner.run([entry_a, entry_b])
+        assert len(results) == 2
+        # First result: fresh evaluation
+        assert results[0].entry_id == "mcp-entry-a"
+        assert results[0].model_id != "__cached__"
+        # Second result: cache hit, but entry_id is the QUERYING entry's id
+        assert results[1].entry_id == "mcp-entry-b"
+        assert results[1].model_id == "__cached__"
+        # Only one judge call (second was served from cache)
+        assert judge.call_count == 1
