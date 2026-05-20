@@ -2,11 +2,14 @@
 
 from __future__ import annotations
 
+import logging
 from datetime import datetime
 from enum import Enum
 from typing import Any
 
 from pydantic import BaseModel, Field, field_validator, model_validator
+
+logger = logging.getLogger(__name__)
 
 
 # ---------------------------------------------------------------------------
@@ -272,10 +275,14 @@ class SecurityScanResult(BaseModel):
     def _verdict_matches_risk_level(self) -> SecurityScanResult:
         expected = _VERDICT_FOR_RISK[self.risk_level]
         if self.verdict is not expected:
-            raise ValueError(
-                f"verdict={self.verdict.value} does not match risk_level="
-                f"{self.risk_level.value} (expected {expected.value})"
+            logger.warning(
+                "verdict=%s does not match risk_level=%s; coercing to %s "
+                "(risk_level is authoritative)",
+                self.verdict.value,
+                self.risk_level.value,
+                expected.value,
             )
+            object.__setattr__(self, "verdict", expected)
         return self
 
 

@@ -27,7 +27,7 @@ thresholds:
   accept: 65
   review: 40
 
-rubric_major_version: 1
+rubric_major_version: 2
 
 security_scan: true
 enrichment: false

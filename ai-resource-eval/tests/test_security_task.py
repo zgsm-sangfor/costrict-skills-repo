@@ -77,21 +77,32 @@ class TestSecurityScanResultModel:
         assert r.risk_level == RiskLevel.extreme
 
     @pytest.mark.parametrize(
-        ("risk", "wrong_verdict"),
+        ("risk", "wrong_verdict", "expected_verdict"),
         [
-            ("clean", "caution"),
-            ("clean", "reject"),
-            ("low", "caution"),
-            ("low", "reject"),
-            ("medium", "safe"),
-            ("medium", "reject"),
-            ("high", "safe"),
-            ("high", "caution"),
-            ("extreme", "safe"),
-            ("extreme", "caution"),
+            ("clean", "caution", "safe"),
+            ("clean", "reject", "safe"),
+            ("low", "caution", "safe"),
+            ("low", "reject", "safe"),
+            ("medium", "safe", "caution"),
+            ("medium", "reject", "caution"),
+            ("high", "safe", "reject"),
+            ("high", "caution", "reject"),
+            ("extreme", "safe", "reject"),
+            ("extreme", "caution", "reject"),
         ],
     )
-    def test_verdict_risk_mismatch_rejected(self, risk: str, wrong_verdict: str):
+    def test_verdict_risk_mismatch_coerced(
+        self,
+        risk: str,
+        wrong_verdict: str,
+        expected_verdict: str,
+        caplog: pytest.LogCaptureFixture,
+    ):
+        """Mismatched verdict is coerced from risk_level (no raise).
+
+        risk_level 是 5 档细粒度信息，作为权威源；verdict 由 _VERDICT_FOR_RISK
+        自动推导，避免 LLM 偶尔输出矛盾组合时整条评估被丢弃。
+        """
         kw = dict(
             risk_level=risk,
             verdict=wrong_verdict,
@@ -100,8 +111,11 @@ class TestSecurityScanResultModel:
             summary="x",
             recommendations=[],
         )
-        with pytest.raises(ValidationError, match="does not match risk_level"):
-            SecurityScanResult.model_validate(kw)
+        with caplog.at_level("WARNING", logger="ai_resource_eval.api.types"):
+            r = SecurityScanResult.model_validate(kw)
+        assert r.risk_level.value == risk
+        assert r.verdict.value == expected_verdict
+        assert any("does not match risk_level" in rec.message for rec in caplog.records)
 
     def test_invalid_risk_enum_rejected(self):
         kw = self._base_kwargs()
@@ -166,7 +180,7 @@ class TestSecurityScanTaskConfig:
         assert cfg.heuristic_signals == []
         assert cfg.enrichment is False
         assert cfg.mcp_installability is False
-        assert cfg.rubric_major_version == 1
+        assert cfg.rubric_major_version == 2
 
 
 # ---------------------------------------------------------------------------
@@ -261,13 +275,20 @@ class TestSecurityRunnerBranch:
         assert result.metrics == {}  # security path leaves metrics empty
         assert result.enrichment is None
 
-    def test_runner_drops_entry_on_verdict_risk_mismatch(self, tmp_path):
+    def test_runner_coerces_entry_on_verdict_risk_mismatch(self, tmp_path):
+        """Runner now writes a result even when LLM gives a mismatched verdict —
+        the validator coerces verdict from risk_level so the entry isn't dropped
+        and security cache gets a row (avoids repeated retries every CI cycle).
+        """
         judge = _FakeSecurityJudge(_MISMATCHED_SECURITY_PAYLOAD)
         runner = _make_runner(tmp_path, judge)
 
         results = runner.run([_make_skill_entry()])
-        # validator rejects mismatch → runner returns None → result list empty
-        assert results == []
+        assert len(results) == 1
+        sec = results[0].security
+        assert sec is not None
+        assert sec.risk_level.value == "high"
+        assert sec.verdict.value == "reject"  # coerced from "safe"
 
     def test_runner_drops_entry_on_empty_llm_response(self, tmp_path):
         judge = _FakeSecurityJudge(None)
