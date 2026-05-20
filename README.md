@@ -124,6 +124,8 @@ Bundled marketplace plugins (skills + commands + agents + MCP servers).
 
 [Browse all plugins →](./catalog/plugins/) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=plugin)
 
+> **Private-deployment mirror:** the plugin catalog is the upstream data source for [costrict-plugin-marketplace](https://github.com/costrict-plugins-repo/costrict-plugin-marketplace), which bundles every verified plugin as bare git repos for customers running `csc` in air-gapped networks. See that project's README for the bundle format and the client `import.sh` flow.
+
 ---
 
 <a id="data-sources--quality"></a>
