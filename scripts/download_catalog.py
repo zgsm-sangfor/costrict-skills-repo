@@ -6,6 +6,7 @@ Format follows awesome-claude-skills-master conventions:
   mcp/<kebab-name>/.mcp.json
   prompts/<kebab-name>/PROMPT.md
   rules/<kebab-name>/RULE.md   (+ .cursorrules when available)
+  plugins/<kebab-name>/.plugin.json
 """
 
 from __future__ import annotations
@@ -408,6 +409,52 @@ def _download_prompt(entry: dict, output_dir: str, force: bool = False) -> tuple
 
 
 # ---------------------------------------------------------------------------
+# Plugins
+# ---------------------------------------------------------------------------
+
+PLUGIN_REQUIRED_INSTALL_FIELDS = ("plugin_name", "marketplace_name", "marketplace_repo")
+
+
+def _download_plugin(entry: dict, output_dir: str, force: bool = False) -> tuple[str, bool, Optional[str]]:
+    """Emit .plugin.json for a single plugin entry. Returns (kebab_name, success, error_msg).
+
+    Plugins have no remote content to fetch: the file is just a stable, canonical
+    serialization of the catalog's install + bundle blocks so downstream ingest
+    (costrict-web SyncService) can consume it like the other 4 capability types.
+    """
+    name = _kebab_name(entry)
+    plugin_dir = os.path.join(output_dir, "plugins", name)
+    plugin_path = os.path.join(plugin_dir, ".plugin.json")
+
+    install = entry.get("install", {})
+    if not install.get("marketplace_verified"):
+        return name, False, "marketplace_verified is false"
+    missing = [f for f in PLUGIN_REQUIRED_INSTALL_FIELDS if not install.get(f)]
+    if missing:
+        return name, False, f"missing required install fields: {','.join(missing)}"
+
+    if not force and _file_exists(plugin_path):
+        return name, True, None
+
+    # Mirror SKILL.md frontmatter shape: name/description/category/tags live at
+    # the top level so ParserService can populate ParsedItem fields directly
+    # (sync phase), independent of the catalog/index.json backfill phase.
+    payload: dict = {
+        "name": entry.get("name") or install.get("plugin_name", ""),
+        "description": entry.get("description", ""),
+        "category": entry.get("category", ""),
+        "tags": entry.get("tags", []) or [],
+        "install": install,
+    }
+    bundle = entry.get("bundle")
+    if bundle:
+        payload["bundle"] = bundle
+
+    _write_file(plugin_path, json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
+    return name, True, None
+
+
+# ---------------------------------------------------------------------------
 # Orchestration
 # ---------------------------------------------------------------------------
 
@@ -416,6 +463,7 @@ DOWNLOADERS = {
     "mcp": _download_mcp,
     "rule": _download_rule,
     "prompt": _download_prompt,
+    "plugin": _download_plugin,
 }
 
 
@@ -462,7 +510,7 @@ def run(
 ) -> None:
     """Main entry point."""
     os.makedirs(output_dir, exist_ok=True)
-    types = types or ["skills", "mcp", "rules", "prompts"]
+    types = types or ["skills", "mcp", "rules", "prompts", "plugins"]
 
     all_successes: list[str] = []
     all_errors: list[str] = []
@@ -514,7 +562,7 @@ def main():
     )
     parser.add_argument(
         "--types", "-t",
-        default="skills,mcp,rules,prompts",
+        default="skills,mcp,rules,prompts,plugins",
         help="Comma-separated list of types to download (default: all)",
     )
     parser.add_argument(
