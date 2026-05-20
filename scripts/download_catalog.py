@@ -415,20 +415,62 @@ def _download_prompt(entry: dict, output_dir: str, force: bool = False) -> tuple
 PLUGIN_REQUIRED_INSTALL_FIELDS = ("plugin_name", "marketplace_name", "marketplace_repo")
 
 
+def _prepare_plugin_entries(entries: list[dict]) -> list[dict]:
+    """Filter + deduplicate plugin entries before they reach the downloader.
+
+    Upstream `catalog/plugins/index.json` carries the same plugin twice when
+    both `claude-plugins-dev` and `claude-plugins-official` sync sources
+    surfaced it (e.g. anthropic-superpowers + anthropics-claude-plugins-
+    official-superpowers — same (marketplace_repo, plugin_name) but two
+    different `id` values). The merged top-level `catalog/index.json` keeps
+    only the highest `source_priority` copy; emitting both per-plugin files
+    here would make 174 .plugin.json directories unreachable from backfill
+    and leave their security_status / source / experience_score blank.
+
+    This helper mirrors the merge logic so the per-plugin output set lines
+    up 1:1 with the merged catalog: drop unverified rows and pick the
+    highest-priority entry per (repo, plugin_name) pair (id breaks ties
+    deterministically).
+    """
+    by_key: dict[tuple[str, str], dict] = {}
+    for entry in entries:
+        install = entry.get("install", {})
+        if not install.get("marketplace_verified"):
+            continue
+        repo = install.get("marketplace_repo")
+        name = install.get("plugin_name")
+        if not repo or not name:
+            continue
+        key = (repo, name)
+        prev = by_key.get(key)
+        if prev is None:
+            by_key[key] = entry
+            continue
+        prev_priority = prev.get("source_priority", 0)
+        curr_priority = entry.get("source_priority", 0)
+        if curr_priority > prev_priority:
+            by_key[key] = entry
+        elif curr_priority == prev_priority and entry.get("id", "") < prev.get("id", ""):
+            by_key[key] = entry
+    return list(by_key.values())
+
+
 def _download_plugin(entry: dict, output_dir: str, force: bool = False) -> tuple[str, bool, Optional[str]]:
     """Emit .plugin.json for a single plugin entry. Returns (kebab_name, success, error_msg).
 
     Plugins have no remote content to fetch: the file is just a stable, canonical
     serialization of the catalog's install + bundle blocks so downstream ingest
     (costrict-web SyncService) can consume it like the other 4 capability types.
+
+    Filtering + deduplication is handled upstream by _prepare_plugin_entries;
+    this function only validates the required install fields as a defense in
+    depth.
     """
     name = _kebab_name(entry)
     plugin_dir = os.path.join(output_dir, "plugins", name)
     plugin_path = os.path.join(plugin_dir, ".plugin.json")
 
     install = entry.get("install", {})
-    if not install.get("marketplace_verified"):
-        return name, False, "marketplace_verified is false"
     missing = [f for f in PLUGIN_REQUIRED_INSTALL_FIELDS if not install.get(f)]
     if missing:
         return name, False, f"missing required install fields: {','.join(missing)}"
@@ -523,6 +565,14 @@ def run(
 
         with open(index_path, "r", encoding="utf-8") as f:
             entries = json.load(f)
+
+        # Plugins need de-duplication + verified gating before download so the
+        # output set lines up 1:1 with the merged catalog/index.json (see
+        # _prepare_plugin_entries doc for why).
+        if typ == "plugins":
+            before = len(entries)
+            entries = _prepare_plugin_entries(entries)
+            logger.info(f"plugins: filtered {before} → {len(entries)} after verified gate + (repo, plugin_name) dedupe")
 
         # Preload repo trees for skills to avoid duplicate API calls
         repo_tree_cache: Optional[dict] = None
