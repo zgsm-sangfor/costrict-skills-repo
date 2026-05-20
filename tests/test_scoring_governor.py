@@ -149,6 +149,53 @@ class ApplyGovernanceTests(unittest.TestCase):
         result = scoring_governor.apply_governance(entries)
         self.assertNotIn("freshness_label", result[0])
 
+    def test_mcp_registry_strict_accept_default_drops_non_accept(self):
+        """registry.modelcontextprotocol.io entries with decision != accept are dropped by default."""
+        entries = [
+            {
+                "id": "reg-accept",
+                "type": "mcp",
+                "source": "registry.modelcontextprotocol.io",
+                "evaluation": {"final_score": 80.0, "decision": "accept"},
+            },
+            {
+                "id": "reg-review",
+                "type": "mcp",
+                "source": "registry.modelcontextprotocol.io",
+                "evaluation": {"final_score": 60.0, "decision": "review"},
+            },
+            {
+                "id": "other-review",
+                "type": "mcp",
+                "source": "awesome-mcp-servers",
+                "evaluation": {"final_score": 60.0, "decision": "review"},
+            },
+        ]
+        with unittest.mock.patch.dict(os.environ, {"EVAL_DRY_RUN": "true"}, clear=False):
+            result = scoring_governor.apply_governance(entries)
+        ids = [e["id"] for e in result]
+        self.assertIn("reg-accept", ids)
+        self.assertNotIn("reg-review", ids)
+        self.assertIn("other-review", ids)  # non-registry sources unaffected
+
+    def test_mcp_registry_strict_accept_can_be_disabled(self):
+        """MCP_REGISTRY_STRICT_ACCEPT=false keeps all registry entries (legacy behavior)."""
+        entries = [
+            {
+                "id": "reg-review",
+                "type": "mcp",
+                "source": "registry.modelcontextprotocol.io",
+                "evaluation": {"final_score": 60.0, "decision": "review"},
+            },
+        ]
+        with unittest.mock.patch.dict(
+            os.environ,
+            {"MCP_REGISTRY_STRICT_ACCEPT": "false", "EVAL_DRY_RUN": "true"},
+            clear=False,
+        ):
+            result = scoring_governor.apply_governance(entries)
+        self.assertEqual([e["id"] for e in result], ["reg-review"])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -21,6 +21,8 @@ LLM_DIMENSION_ORDER = (
     "install_clarity",
 )
 
+MCP_REGISTRY_SOURCE = "registry.modelcontextprotocol.io"
+
 
 def apply_governance(
     entries: list[dict[str, Any]],
@@ -39,6 +41,13 @@ def apply_governance(
             health-only mode (all entries pass through).
     """
     dry_run = os.environ.get("EVAL_DRY_RUN", "true").lower() not in ("false", "0", "no")
+    # registry.modelcontextprotocol.io 派生 entry 数量爆炸（约 8.4k 条），
+    # 大量是测试/占位/单点用途 server，社区 awesome list 类源已自带 curation。
+    # 默认要求 registry 派生 entry 拿到 decision=='accept' 才纳入最终 catalog，
+    # 把决定权交给已有评估引擎；可通过环境变量关闭以便排查。
+    mcp_registry_strict = os.environ.get(
+        "MCP_REGISTRY_STRICT_ACCEPT", "true"
+    ).lower() not in ("false", "0", "no")
 
     if health_only:
         # Data-only mode: aggregate job will fill in evaluation later. We do
@@ -102,4 +111,27 @@ def apply_governance(
             result.append(entry)
 
     logger.info("Governance: %d entries → %d kept, %d rejected", len(entries), len(result), reject_count)
+
+    # registry.modelcontextprotocol.io strict-accept 二次过滤
+    if mcp_registry_strict:
+        kept: list[dict[str, Any]] = []
+        registry_seen = 0
+        registry_dropped = 0
+        for entry in result:
+            if (entry.get("source") or "") == MCP_REGISTRY_SOURCE:
+                registry_seen += 1
+                if entry.get("decision") != "accept":
+                    registry_dropped += 1
+                    continue
+            kept.append(entry)
+        if registry_seen:
+            logger.info(
+                "MCP registry strict-accept: %d registry entries seen, "
+                "%d dropped (decision != accept), %d kept",
+                registry_seen,
+                registry_dropped,
+                registry_seen - registry_dropped,
+            )
+        result = kept
+
     return result
