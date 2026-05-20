@@ -1,6 +1,6 @@
 # 🎯 Skills 技能
 
-> 1810 AI 编程助手的可复用能力和工作流。
+> 1812 AI 编程助手的可复用能力和工作流。
 >
 > [返回主页 →](../../README.md) · [在线浏览 →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=skill)
 
@@ -101,20 +101,20 @@
 | 89 | [macos-spm-app-packaging](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/macos-spm-app-packaging) | 用于在不使用 Xcode 项目的情况下，搭建、构建、签名和打包 SwiftPM macOS 应用的技能。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-09 | tooling | `swift` |
 | 90 | [makepad-deployment](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/makepad-deployment) | Makepad 应用跨平台打包与部署指南，支持桌面、移动端和 Web。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-09 | tooling | `go`, `git` |
 | 91 | [monte-carlo-validation-notebook](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/monte-carlo-validation-notebook) | 为 dbt PR 变更生成 SQL 验证笔记本，包含前后对比查询以确保数据质量。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-09 | database | — |
-| 92 | [playwright-skill](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/playwright-skill) | 基于 Playwright 的浏览器自动化技能，用于 AI 辅助测试和网页交互工作流。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-09 | testing | `playwright` |
-| 93 | [pptx-official](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/pptx-official) | 用于通过代码和XML操作创建、编辑和分析PowerPoint (.pptx)文件的AI技能。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-09 | documentation | — |
-| 94 | [production-audit](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/production-audit) | 审计已发布代码库的生产就绪性问题，涵盖RLS、Webhook、密钥和部署健康等。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-09 | security | — |
-| 95 | [progressive-web-app](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/progressive-web-app) | 全面的渐进式网络应用开发指南，涵盖离线支持、可安装性和缓存策略。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-09 | frontend | `javascript` |
-| 96 | [pydantic-ai](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/pydantic-ai) | 一个用于构建类型安全、生产就绪AI代理的Python框架，支持结构化输出、工具使用和多模型。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-09 | ai-ml | `python`, `ai`, `llm` |
-| 97 | [python-development-python-scaffold](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/python-development-python-scaffold) | 用于搭建生产就绪Python项目的技能，支持uv、FastAPI和Django等现代工具。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-09 | tooling | `python`, `go`, `fastapi` |
-| 98 | [qiskit](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/qiskit) | Qiskit 是一个开源量子计算框架，用于构建、优化和执行量子电路，支持模拟器和真实硬件。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-09 | ai-ml | `python` |
-| 99 | [radix-ui-design-system](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/radix-ui-design-system) | 使用 Radix UI 原语构建可访问、可定制的 React 设计系统指南。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-09 | frontend | `radix`, `react` |
-| 100 | [remotion](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/remotion) | 使用 Remotion 从 Stitch 应用设计生成带过渡、缩放和文字叠加的专业演练视频。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-09 | documentation | — |
+| 92 | [photopea-embedded-editor](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/photopea-embedded-editor) | 使用 photopea.js JavaScript 库在 Web 应用中嵌入和控制 Photopea 图像编辑器的全面指南与 API 参考。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-20 | tooling | `image-editing`, `javascript-api`, `web-integration` |
+| 93 | [playwright-skill](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/playwright-skill) | 基于 Playwright 的浏览器自动化技能，用于 AI 辅助测试和网页交互工作流。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-09 | testing | `playwright` |
+| 94 | [pptx-official](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/pptx-official) | 用于通过代码和XML操作创建、编辑和分析PowerPoint (.pptx)文件的AI技能。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-09 | documentation | — |
+| 95 | [production-audit](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/production-audit) | 审计已发布代码库的生产就绪性问题，涵盖RLS、Webhook、密钥和部署健康等。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-09 | security | — |
+| 96 | [progressive-web-app](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/progressive-web-app) | 全面的渐进式网络应用开发指南，涵盖离线支持、可安装性和缓存策略。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-09 | frontend | `javascript` |
+| 97 | [pydantic-ai](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/pydantic-ai) | 一个用于构建类型安全、生产就绪AI代理的Python框架，支持结构化输出、工具使用和多模型。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-09 | ai-ml | `python`, `ai`, `llm` |
+| 98 | [python-development-python-scaffold](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/python-development-python-scaffold) | 用于搭建生产就绪Python项目的技能，支持uv、FastAPI和Django等现代工具。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-09 | tooling | `python`, `go`, `fastapi` |
+| 99 | [qiskit](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/qiskit) | Qiskit 是一个开源量子计算框架，用于构建、优化和执行量子电路，支持模拟器和真实硬件。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-09 | ai-ml | `python` |
+| 100 | [radix-ui-design-system](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/radix-ui-design-system) | 使用 Radix UI 原语构建可访问、可定制的 React 设计系统指南。 | Antigravity Skills | 🟢 活跃 | 95 | 2026-05-09 | frontend | `radix`, `react` |
 
 ## Top 10 安装指南
 
 <details>
-<summary>⭐ <strong>claude-api</strong> (137.8k★) — 全面的技能，用于构建、调试和优化Claude API/Anthropic SDK应用，支持提示缓存和模型迁移。</summary>
+<summary>⭐ <strong>claude-api</strong> (137.9k★) — 全面的技能，用于构建、调试和优化Claude API/Anthropic SDK应用，支持提示缓存和模型迁移。</summary>
 
 全面的技能，用于构建、调试和优化Claude API/Anthropic SDK应用，支持提示缓存和模型迁移。
 
@@ -129,7 +129,7 @@ Files: `skills/claude-api/`
 </details>
 
 <details>
-<summary>⭐ <strong>docx</strong> (137.8k★) — 用于通过 JavaScript 和 XML 操作程序化创建、读取、编辑和处理 Word (.docx) 文件的技能。</summary>
+<summary>⭐ <strong>docx</strong> (137.9k★) — 用于通过 JavaScript 和 XML 操作程序化创建、读取、编辑和处理 Word (.docx) 文件的技能。</summary>
 
 用于通过 JavaScript 和 XML 操作程序化创建、读取、编辑和处理 Word (.docx) 文件的技能。
 
@@ -144,7 +144,7 @@ Files: `skills/docx/`
 </details>
 
 <details>
-<summary>⭐ <strong>Writing Hookify Rules</strong> (125.0k★) — 用于创建 Hookify 规则的技能，监控 Claude Code 中的编码模式并触发警告或阻止。</summary>
+<summary>⭐ <strong>Writing Hookify Rules</strong> (125.1k★) — 用于创建 Hookify 规则的技能，监控 Claude Code 中的编码模式并触发警告或阻止。</summary>
 
 用于创建 Hookify 规则的技能，监控 Claude Code 中的编码模式并触发警告或阻止。
 
@@ -158,7 +158,7 @@ git clone anthropics/claude-code
 </details>
 
 <details>
-<summary>⭐ <strong>Hook Development</strong> (125.0k★) — Claude Code 插件钩子开发指南，用于验证、修改和自动化 AI 辅助编码工作流。</summary>
+<summary>⭐ <strong>Hook Development</strong> (125.1k★) — Claude Code 插件钩子开发指南，用于验证、修改和自动化 AI 辅助编码工作流。</summary>
 
 Claude Code 插件钩子开发指南，用于验证、修改和自动化 AI 辅助编码工作流。
 
@@ -172,7 +172,7 @@ git clone anthropics/claude-code
 </details>
 
 <details>
-<summary>⭐ <strong>MCP Integration</strong> (125.0k★) — 全面指南，用于将模型上下文协议（MCP）服务器集成到Claude Code插件中，以连接外部服务作为工具。</summary>
+<summary>⭐ <strong>MCP Integration</strong> (125.1k★) — 全面指南，用于将模型上下文协议（MCP）服务器集成到Claude Code插件中，以连接外部服务作为工具。</summary>
 
 全面指南，用于将模型上下文协议（MCP）服务器集成到Claude Code插件中，以连接外部服务作为工具。
 
@@ -186,7 +186,7 @@ git clone anthropics/claude-code
 </details>
 
 <details>
-<summary>⭐ <strong>Plugin Settings</strong> (125.0k★) — Claude Code 插件技能模式，通过 .local.md 文件中的 YAML 前置数据存储项目配置。</summary>
+<summary>⭐ <strong>Plugin Settings</strong> (125.1k★) — Claude Code 插件技能模式，通过 .local.md 文件中的 YAML 前置数据存储项目配置。</summary>
 
 Claude Code 插件技能模式，通过 .local.md 文件中的 YAML 前置数据存储项目配置。
 
@@ -200,7 +200,7 @@ git clone anthropics/claude-code
 </details>
 
 <details>
-<summary>⭐ <strong>Plugin Structure</strong> (125.0k★) — 用于创建和组织 Claude Code 插件的技能，提供标准化目录结构和清单配置。</summary>
+<summary>⭐ <strong>Plugin Structure</strong> (125.1k★) — 用于创建和组织 Claude Code 插件的技能，提供标准化目录结构和清单配置。</summary>
 
 用于创建和组织 Claude Code 插件的技能，提供标准化目录结构和清单配置。
 
@@ -214,7 +214,7 @@ git clone anthropics/claude-code
 </details>
 
 <details>
-<summary>⭐ <strong>Skill Development</strong> (125.0k★) — 为 Claude Code 插件创建模块化技能的全面指南，涵盖结构、最佳实践和渐进式披露。</summary>
+<summary>⭐ <strong>Skill Development</strong> (125.1k★) — 为 Claude Code 插件创建模块化技能的全面指南，涵盖结构、最佳实践和渐进式披露。</summary>
 
 为 Claude Code 插件创建模块化技能的全面指南，涵盖结构、最佳实践和渐进式披露。
 
@@ -228,7 +228,7 @@ git clone anthropics/claude-code
 </details>
 
 <details>
-<summary>⭐ <strong>skill-creator</strong> (137.8k★) — 一个用于创建、测试和优化AI助手技能的综合工具，支持迭代工作流、评估和基准测试。</summary>
+<summary>⭐ <strong>skill-creator</strong> (137.9k★) — 一个用于创建、测试和优化AI助手技能的综合工具，支持迭代工作流、评估和基准测试。</summary>
 
 一个用于创建、测试和优化AI助手技能的综合工具，支持迭代工作流、评估和基准测试。
 
@@ -243,7 +243,7 @@ Files: `skills/skill-creator/`
 </details>
 
 <details>
-<summary>⭐ <strong>xlsx</strong> (137.8k★) — 一个用于以编程方式创建、编辑和分析Excel及表格文件的Python技能，遵循严格的格式和公式标准。</summary>
+<summary>⭐ <strong>xlsx</strong> (137.9k★) — 一个用于以编程方式创建、编辑和分析Excel及表格文件的Python技能，遵循严格的格式和公式标准。</summary>
 
 一个用于以编程方式创建、编辑和分析Excel及表格文件的Python技能，遵循严格的格式和公式标准。
 

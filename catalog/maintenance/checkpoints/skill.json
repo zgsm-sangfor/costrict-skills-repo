@@ -1,5 +1,5 @@
 {
-  "completed_count": 1759,
+  "completed_count": 1761,
   "completed_entry_ids": [
     "007-agskill",
     "2d-games-agskill",
@@ -1031,6 +1031,7 @@
     "memory-forensics-agskill",
     "memory-safety-patterns-agskill",
     "memory-systems-agskill",
+    "mercury-mcp-agskill",
     "mermaid-diagrams-skill",
     "mermaid-diagrams-softaworks-agent-toolkit",
     "mermaid-expert-agskill",
@@ -1178,6 +1179,7 @@
     "personal-tool-builder-agskill",
     "personal-tool-builder-skill",
     "phase-gated-debugging-agskill",
+    "photopea-embedded-editor-agskill",
     "php-pro-agskill",
     "php-pro-skill",
     "pinecone-skill",
@@ -1761,7 +1763,7 @@
     "zoom-automation-agskill",
     "zustand-store-ts-agskill"
   ],
-  "last_committed_at": "2026-05-20T05:20:29.779954+00:00",
+  "last_committed_at": "2026-05-20T10:19:25.189236+00:00",
   "remaining_entry_ids": [
     "ab-test-setup-coreyhaines31-marketingskills",
     "antfu-antfu-skills",

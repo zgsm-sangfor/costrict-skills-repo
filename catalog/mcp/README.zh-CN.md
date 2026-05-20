@@ -1,6 +1,6 @@
 # 🔌 MCP 服务器
 
-> 10235 模型上下文协议服务器，将 AI Agent 连接到外部工具、数据库和服务。
+> 5967 模型上下文协议服务器，将 AI Agent 连接到外部工具、数据库和服务。
 >
 > [返回主页 →](../../README.md) · [在线浏览 →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=mcp)
 
@@ -10,7 +10,7 @@
 
 | # | 名称 | 描述 | ⭐ Stars | 状态 | 评分 | 最近更新 | 分类 | 标签 |
 |---|---|---|---|---|---|---|---|---|
-| 1 | [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 微软官方 MCP 服务器，通过 Playwright 让 AI 精确控制浏览器进行网页自动化和数据抓取。 | 32.7k | 🟢 活跃 | 98 | 2026-05-09 | testing | `playwright`, `mcp`, `browser` |
+| 1 | [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 微软官方 MCP 服务器，通过 Playwright 让 AI 精确控制浏览器进行网页自动化和数据抓取。 | 32.8k | 🟢 活跃 | 98 | 2026-05-09 | testing | `playwright`, `mcp`, `browser` |
 | 2 | [github/github-mcp-server](https://github.com/github/github-mcp-server) | GitHub 官方 MCP 服务器，让 AI 工具通过 API 深度集成 GitHub，实现仓库管理、Issue/PR 自动化和 CI/CD 工作流。 | 30.0k | 🟢 活跃 | 98 | 2026-05-08 | ai-ml | `git`, `github`, `mcp` |
 | 3 | [googleapis/genai-toolbox](https://github.com/googleapis/genai-toolbox) | Google官方MCP服务器，将AI代理和IDE连接到企业数据库，提供预构建工具和自定义框架。 | 15.3k | 🟢 活跃 | 98 | 2026-05-08 | backend | `go`, `agent`, `agents` |
 | 4 | [MCP Inspector](https://github.com/modelcontextprotocol/inspector) | 用于通过 Web UI 或 CLI 可视化测试和调试 MCP 服务器的开发者工具。 | 9.2k | 🟢 活跃 | 98 | 2026-04-14 | testing | — |
@@ -29,8 +29,8 @@
 | 17 | [MCP Go 🚀](https://github.com/mark3labs/mcp-go) | Go 语言实现的 MCP SDK，用于构建 LLM 与外部工具和数据源集成的服务器。 | 8.4k | 🟢 活跃 | 97 | 2026-04-14 | backend | — |
 | 18 | [21st.dev Magic AI Agent](https://github.com/21st-dev/magic-mcp) | AI驱动的MCP服务器，通过自然语言在Cursor、VSCode等IDE中生成UI组件。 | 4.6k | 🟢 活跃 | 97 | 2026-02-17 | ai-ml | — |
 | 19 | [⚡️ mcpo](https://github.com/open-webui/mcpo) | 将MCP工具暴露为OpenAPI兼容的HTTP端点，实现与AI代理和应用的无缝集成。 | 4.1k | 🟢 活跃 | 97 | 2026-02-27 | backend | `mcp`, `openapi`, `open-webui` |
-| 20 | [CoderGamester/mcp-unity](https://github.com/CoderGamester/mcp-unity) | MCP 服务器，使 AI 编码助手能够与 Unity 编辑器交互，实现游戏开发自动化。 | 1.7k | 🟢 活跃 | 97 | 2026-04-26 | ai-ml | `claudecode`, `codex-cli`, `copilot` |
-| 21 | [Azure DevOps](https://github.com/microsoft/azure-devops-mcp) | Azure DevOps 的 MCP 服务器，让开发者在代码编辑器中直接管理项目、构建、仓库和工作项。 | 1.7k | 🟢 活跃 | 97 | 2026-05-09 | devops | `azure` |
+| 20 | [Azure DevOps](https://github.com/microsoft/azure-devops-mcp) | Azure DevOps 的 MCP 服务器，让开发者在代码编辑器中直接管理项目、构建、仓库和工作项。 | 1.7k | 🟢 活跃 | 97 | 2026-05-09 | devops | `azure` |
+| 21 | [CoderGamester/mcp-unity](https://github.com/CoderGamester/mcp-unity) | MCP 服务器，使 AI 编码助手能够与 Unity 编辑器交互，实现游戏开发自动化。 | 1.7k | 🟢 活跃 | 97 | 2026-04-26 | ai-ml | `claudecode`, `codex-cli`, `copilot` |
 | 22 | [Kubernetes and OpenShift](https://github.com/manusa/kubernetes-mcp-server) | 基于 Go 的 Kubernetes/OpenShift MCP 服务器，提供 CRUD、Pod 管理、Helm、Tekton 和 KubeVirt 工具。 | 1.6k | 🟢 活跃 | 97 | 2026-05-08 | devops | `kubernetes`, `containers`, `context` |
 | 23 | [Stripe](https://github.com/stripe/agent-toolkit) | Stripe 官方 AI 代理集成，支持 LLM 与 Stripe API 交互，处理支付、客户和退款。 | 1.6k | 🟢 活跃 | 97 | 2026-05-08 | frontend | `ai`, `llm`, `llm-agents` |
 | 24 | [Qdrant](https://github.com/qdrant/mcp-server-qdrant/) | 官方 MCP 服务器，基于 Qdrant 向量搜索引擎实现语义记忆层，支持 AI 助手存储和检索信息。 | 1.4k | 🟢 活跃 | 97 | 2026-04-27 | ai-ml | `claude`, `cursor`, `llm` |
@@ -67,14 +67,14 @@
 | 55 | [benborla29/mcp-server-mysql](https://github.com/benborla/mcp-server-mysql) | MySQL数据库MCP服务器，支持SSH隧道和可配置访问控制，用于AI编程助手集成。 | 1.7k | 🟢 活跃 | 96 | 2026-03-10 | backend | `mysql`, `nodejs` |
 | 56 | [Office-PowerPoint-MCP-Server](https://github.com/GongRzhe/Office-PowerPoint-MCP-Server) | 基于 python-pptx 的 MCP 服务器，提供 34 个工具用于通过 MCP 协议创建、编辑和设计 PowerPoint 演示文稿。 | 1.6k | 🟡 停滞 | 96 | 2025-12-31 | backend | — |
 | 57 | [Swiss Army Knife for MCP Servers](https://github.com/f/mcptools) | 一个功能全面的命令行工具，用于与MCP服务器交互，支持多种传输方式、输出格式和服务器模式。 | 1.5k | 🟡 停滞 | 96 | 2025-12-18 | tooling | `mcp`, `mcp-server`, `modelcontextprotocol` |
-| 58 | [FreePeak/db-mcp-server](https://github.com/FreePeak/db-mcp-server) | 基于 Go 的 MCP 服务器，支持 AI 助手通过统一接口操作多种数据库（MySQL、PostgreSQL、SQLite、Oracle、TimescaleDB... | 379 | 🟢 活跃 | 96 | 2026-04-19 | backend | `go`, `mysql`, `database-mcp-server` |
+| 58 | [FreePeak/db-mcp-server](https://github.com/FreePeak/db-mcp-server) | 基于 Go 的 MCP 服务器，支持 AI 助手通过统一接口操作多种数据库（MySQL、PostgreSQL、SQLite、Oracle、TimescaleDB... | 380 | 🟢 活跃 | 96 | 2026-04-19 | backend | `go`, `mysql`, `database-mcp-server` |
 | 59 | [Mcp K8s Go](https://github.com/strowk/mcp-k8s-go) | 基于Golang的MCP服务器，用于AI辅助的Kubernetes集群管理和交互。 | 377 | 🟡 停滞 | 96 | 2025-12-22 | backend | `kubernetes`, `server`, `mcp` |
 | 60 | [Azure DevOps MCP Server](https://github.com/Tiberriver256/azure-devops-mcp) | 一个MCP服务器，使AI助手能够通过标准化协议与Azure DevOps API交互，管理项目、代码和CI/CD工作流。 | 351 | 🟢 活跃 | 96 | 2026-02-05 | devops | — |
 | 61 | [Azure DevOps MCP Server](https://github.com/Tiberriver256/mcp-server-azure-devops) | 一个MCP服务器，使AI助手能够与Azure DevOps API交互，用于项目管理、代码和CI/CD工作流。 | 351 | 🟢 活跃 | 96 | 2026-02-05 | devops | `ai`, `mcp`, `vscode` |
 | 62 | [cyberchitta/llm-context.py](https://github.com/cyberchitta/llm-context.py) | 通过 MCP 或剪贴板与 LLM 共享代码上下文的智能管理工具。 | 300 | 🟢 活跃 | 96 | 2026-04-28 | ai-ml | `claude-desktop`, `cli`, `coding` |
 | 63 | [consult7](https://github.com/szeider/consult7) | MCP服务器，使AI代理能通过OpenRouter、OpenAI或Google AI的高上下文模型分析大型代码库。 | 297 | 🟢 活跃 | 96 | 2026-04-25 | backend | `go`, `openai` |
-| 64 | [admica/FileScopeMCP](https://github.com/admica/FileScopeMCP) | MCP 服务器，分析代码库依赖关系，按重要性排序文件，为 LLM 编程助手提供 AI 驱动的摘要。 | 292 | 🟢 活跃 | 96 | 2026-05-08 | ai-ml | — |
-| 65 | [Apache Doris](https://github.com/apache/doris-mcp-server) | Apache Doris 的 MCP 服务器，支持 AI 辅助数据库交互、查询执行和元数据管理。 | 292 | 🟢 活跃 | 96 | 2026-03-13 | ai-ml | `ai`, `lakehouse`, `mcp` |
+| 64 | [Apache Doris](https://github.com/apache/doris-mcp-server) | Apache Doris 的 MCP 服务器，支持 AI 辅助数据库交互、查询执行和元数据管理。 | 293 | 🟢 活跃 | 96 | 2026-03-13 | ai-ml | `ai`, `lakehouse`, `mcp` |
+| 65 | [admica/FileScopeMCP](https://github.com/admica/FileScopeMCP) | MCP 服务器，分析代码库依赖关系，按重要性排序文件，为 LLM 编程助手提供 AI 驱动的摘要。 | 292 | 🟢 活跃 | 96 | 2026-05-08 | ai-ml | — |
 | 66 | [Elasticsearch/OpenSearch MCP Server](https://github.com/cr7258/elasticsearch-mcp-server) | MCP服务器，使AI助手能够与Elasticsearch和OpenSearch集群交互，执行搜索、索引和管理操作。 | 259 | 🟢 活跃 | 96 | 2026-02-02 | tooling | — |
 | 67 | [OpenAPI MCP Server](https://github.com/ivo-toby/mcp-openapi-server) | 将OpenAPI规范转换为MCP工具的服务器，使LLM能够通过模型上下文协议与REST API交互。 | 243 | 🟢 活跃 | 96 | 2026-03-11 | backend | — |
 | 68 | [Razorpay MCP Server (Official)](https://github.com/razorpay/razorpay-mcp-server) | Razorpay 官方 MCP 服务器，提供 40+ 支付处理工具，支持订单、退款、结账集成，可与 AI 编程助手配合使用。 | 216 | 🟢 活跃 | 96 | 2026-03-26 | tooling | `mcp`, `razorpay`, `mcp-server` |
@@ -114,7 +114,7 @@
 ## Top 10 安装指南
 
 <details>
-<summary>⭐ <strong>microsoft/playwright-mcp</strong> (32.7k★) — 微软官方 MCP 服务器，通过 Playwright 让 AI 精确控制浏览器进行网页自动化和数据抓取。</summary>
+<summary>⭐ <strong>microsoft/playwright-mcp</strong> (32.8k★) — 微软官方 MCP 服务器，通过 Playwright 让 AI 精确控制浏览器进行网页自动化和数据抓取。</summary>
 
 微软官方 MCP 服务器，通过 Playwright 让 AI 精确控制浏览器进行网页自动化和数据抓取。
 

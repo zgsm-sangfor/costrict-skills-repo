@@ -6,7 +6,7 @@
   <a href="https://github.com/zgsm-ai/everything-ai-coding/stargazers"><img src="https://img.shields.io/github/stars/zgsm-ai/everything-ai-coding?style=flat-square&color=4A90D9" alt="Stars" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/blob/main/LICENSE"><img src="https://img.shields.io/github/license/zgsm-ai/everything-ai-coding?style=flat-square" alt="License" /></a>
   <a href="https://github.com/zgsm-ai/everything-ai-coding/commits/main"><img src="https://img.shields.io/github/last-commit/zgsm-ai/everything-ai-coding?style=flat-square" alt="Last Commit" /></a>
-  <img src="https://img.shields.io/badge/resources-9366-2ECC71?style=flat-square" alt="Resources" />
+  <img src="https://img.shields.io/badge/resources-9374-2ECC71?style=flat-square" alt="Resources" />
 </p>
 
 <p>
@@ -34,14 +34,14 @@ Everything AI Coding 是一个**持续更新的知识库**，从 9+ 个上游源
 <a id="knowledge-base"></a>
 ## 📚 知识库
 
-### [🔌 MCP 服务器](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->5961<!-- README_COUNT_MCP:END --> 个条目
+### [🔌 MCP 服务器](./catalog/mcp/) — <!-- README_COUNT_MCP:START -->5967<!-- README_COUNT_MCP:END --> 个条目
 
 将 AI Agent 连接到外部工具、数据库和服务的 Model Context Protocol 服务器。
 
 <!-- README_TOP5_MCP:START -->
 | 名称 | ⭐ Stars | 评分 | 描述 |
 |------|----------|------|------|
-| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 32.7k | 98 | 微软官方 MCP 服务器，通过 Playwright 让 AI 精确控制浏览器进行网页自动化和数据抓取。 |
+| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 32.8k | 98 | 微软官方 MCP 服务器，通过 Playwright 让 AI 精确控制浏览器进行网页自动化和数据抓取。 |
 | [github/github-mcp-server](https://github.com/github/github-mcp-server) | 30.0k | 98 | GitHub 官方 MCP 服务器，让 AI 工具通过 API 深度集成 GitHub，实现仓库管理、Issue/PR 自动化和 CI/C… |
 | [googleapis/genai-toolbox](https://github.com/googleapis/genai-toolbox) | 15.3k | 98 | Google官方MCP服务器，将AI代理和IDE连接到企业数据库，提供预构建工具和自定义框架。 |
 | [MCP Inspector](https://github.com/modelcontextprotocol/inspector) | 9.2k | 98 | 用于通过 Web UI 或 CLI 可视化测试和调试 MCP 服务器的开发者工具。 |
@@ -52,7 +52,7 @@ Everything AI Coding 是一个**持续更新的知识库**，从 9+ 个上游源
 
 ---
 
-### [🎯 Skills 技能](./catalog/skills/) — <!-- README_COUNT_SKILL:START -->1810<!-- README_COUNT_SKILL:END --> 个条目
+### [🎯 Skills 技能](./catalog/skills/) — <!-- README_COUNT_SKILL:START -->1812<!-- README_COUNT_SKILL:END --> 个条目
 
 AI 编程助手的可复用能力和工作流。
 

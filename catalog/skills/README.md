@@ -1,6 +1,6 @@
 # 🎯 Skills
 
-> 1810 Reusable agent capabilities and workflows for AI coding assistants.
+> 1812 Reusable agent capabilities and workflows for AI coding assistants.
 >
 > [Back to main →](../../README.md) · [Browse interactively →](https://zgsm-ai.github.io/everything-ai-coding/#/browse?type=skill)
 
@@ -101,20 +101,20 @@
 | 89 | [macos-spm-app-packaging](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/macos-spm-app-packaging) | A skill for scaffolding, building, signing, and packaging SwiftPM macOS apps wit... | Antigravity Skills | 🟢 Active | 95 | 2026-05-09 | tooling | `swift` |
 | 90 | [makepad-deployment](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/makepad-deployment) | A comprehensive guide for packaging and deploying Makepad (Rust UI framework) ap... | Antigravity Skills | 🟢 Active | 95 | 2026-05-09 | tooling | `go`, `git` |
 | 91 | [monte-carlo-validation-notebook](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/monte-carlo-validation-notebook) | Generates SQL validation notebooks for dbt PR changes with before/after comparis... | Antigravity Skills | 🟢 Active | 95 | 2026-05-09 | database | — |
-| 92 | [playwright-skill](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/playwright-skill) | Playwright-based browser automation skill for AI-assisted testing and web intera... | Antigravity Skills | 🟢 Active | 95 | 2026-05-09 | testing | `playwright` |
-| 93 | [pptx-official](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/pptx-official) | AI skill for programmatically creating, editing, and analyzing PowerPoint (.pptx... | Antigravity Skills | 🟢 Active | 95 | 2026-05-09 | documentation | — |
-| 94 | [production-audit](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/production-audit) | Audits shipped repos for production-readiness gaps like RLS, webhooks, secrets, ... | Antigravity Skills | 🟢 Active | 95 | 2026-05-09 | security | — |
-| 95 | [progressive-web-app](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/progressive-web-app) | A comprehensive guide to building Progressive Web Apps with offline support, ins... | Antigravity Skills | 🟢 Active | 95 | 2026-05-09 | frontend | `javascript` |
-| 96 | [pydantic-ai](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/pydantic-ai) | A Python framework for building type-safe, production-ready AI agents with struc... | Antigravity Skills | 🟢 Active | 95 | 2026-05-09 | ai-ml | `python`, `ai`, `llm` |
-| 97 | [python-development-python-scaffold](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/python-development-python-scaffold) | A skill for scaffolding production-ready Python projects with modern tooling lik... | Antigravity Skills | 🟢 Active | 95 | 2026-05-09 | tooling | `python`, `go`, `fastapi` |
-| 98 | [qiskit](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/qiskit) | Qiskit is an open-source quantum computing framework for building, optimizing, a... | Antigravity Skills | 🟢 Active | 95 | 2026-05-09 | ai-ml | `python` |
-| 99 | [radix-ui-design-system](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/radix-ui-design-system) | A guide to building accessible, customizable design systems using Radix UI primi... | Antigravity Skills | 🟢 Active | 95 | 2026-05-09 | frontend | `radix`, `react` |
-| 100 | [remotion](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/remotion) | A skill for generating professional walkthrough videos from Stitch app designs u... | Antigravity Skills | 🟢 Active | 95 | 2026-05-09 | documentation | — |
+| 92 | [photopea-embedded-editor](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/photopea-embedded-editor) | A comprehensive guide and API reference for embedding and controlling the Photop... | Antigravity Skills | 🟢 Active | 95 | 2026-05-20 | tooling | `image-editing`, `javascript-api`, `web-integration` |
+| 93 | [playwright-skill](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/playwright-skill) | Playwright-based browser automation skill for AI-assisted testing and web intera... | Antigravity Skills | 🟢 Active | 95 | 2026-05-09 | testing | `playwright` |
+| 94 | [pptx-official](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/pptx-official) | AI skill for programmatically creating, editing, and analyzing PowerPoint (.pptx... | Antigravity Skills | 🟢 Active | 95 | 2026-05-09 | documentation | — |
+| 95 | [production-audit](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/production-audit) | Audits shipped repos for production-readiness gaps like RLS, webhooks, secrets, ... | Antigravity Skills | 🟢 Active | 95 | 2026-05-09 | security | — |
+| 96 | [progressive-web-app](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/progressive-web-app) | A comprehensive guide to building Progressive Web Apps with offline support, ins... | Antigravity Skills | 🟢 Active | 95 | 2026-05-09 | frontend | `javascript` |
+| 97 | [pydantic-ai](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/pydantic-ai) | A Python framework for building type-safe, production-ready AI agents with struc... | Antigravity Skills | 🟢 Active | 95 | 2026-05-09 | ai-ml | `python`, `ai`, `llm` |
+| 98 | [python-development-python-scaffold](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/python-development-python-scaffold) | A skill for scaffolding production-ready Python projects with modern tooling lik... | Antigravity Skills | 🟢 Active | 95 | 2026-05-09 | tooling | `python`, `go`, `fastapi` |
+| 99 | [qiskit](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/qiskit) | Qiskit is an open-source quantum computing framework for building, optimizing, a... | Antigravity Skills | 🟢 Active | 95 | 2026-05-09 | ai-ml | `python` |
+| 100 | [radix-ui-design-system](https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/radix-ui-design-system) | A guide to building accessible, customizable design systems using Radix UI primi... | Antigravity Skills | 🟢 Active | 95 | 2026-05-09 | frontend | `radix`, `react` |
 
 ## Top 10 — Install Guide
 
 <details>
-<summary>⭐ <strong>claude-api</strong> (137.8k★) — Comprehensive skill for building, debugging, and optimizing ...</summary>
+<summary>⭐ <strong>claude-api</strong> (137.9k★) — Comprehensive skill for building, debugging, and optimizing ...</summary>
 
 Comprehensive skill for building, debugging, and optimizing Claude API/Anthropic SDK applications with prompt caching and model migration support.
 
@@ -129,7 +129,7 @@ Files: `skills/claude-api/`
 </details>
 
 <details>
-<summary>⭐ <strong>docx</strong> (137.8k★) — A skill for programmatically creating, reading, editing, and...</summary>
+<summary>⭐ <strong>docx</strong> (137.9k★) — A skill for programmatically creating, reading, editing, and...</summary>
 
 A skill for programmatically creating, reading, editing, and manipulating Word (.docx) files using JavaScript and XML manipulation.
 
@@ -144,7 +144,7 @@ Files: `skills/docx/`
 </details>
 
 <details>
-<summary>⭐ <strong>Writing Hookify Rules</strong> (125.0k★) — A skill for creating hookify rules that monitor coding patte...</summary>
+<summary>⭐ <strong>Writing Hookify Rules</strong> (125.1k★) — A skill for creating hookify rules that monitor coding patte...</summary>
 
 A skill for creating hookify rules that monitor coding patterns in Claude Code and trigger warnings or blocks.
 
@@ -158,7 +158,7 @@ git clone anthropics/claude-code
 </details>
 
 <details>
-<summary>⭐ <strong>Hook Development</strong> (125.0k★) — A comprehensive guide for developing event-driven hooks in C...</summary>
+<summary>⭐ <strong>Hook Development</strong> (125.1k★) — A comprehensive guide for developing event-driven hooks in C...</summary>
 
 A comprehensive guide for developing event-driven hooks in Claude Code plugins to validate, modify, and automate AI-assisted coding workflows.
 
@@ -172,7 +172,7 @@ git clone anthropics/claude-code
 </details>
 
 <details>
-<summary>⭐ <strong>MCP Integration</strong> (125.0k★) — Comprehensive guide for integrating Model Context Protocol (...</summary>
+<summary>⭐ <strong>MCP Integration</strong> (125.1k★) — Comprehensive guide for integrating Model Context Protocol (...</summary>
 
 Comprehensive guide for integrating Model Context Protocol (MCP) servers into Claude Code plugins to connect external services as tools.
 
@@ -186,7 +186,7 @@ git clone anthropics/claude-code
 </details>
 
 <details>
-<summary>⭐ <strong>Plugin Settings</strong> (125.0k★) — A skill pattern for Claude Code plugins to store per-project...</summary>
+<summary>⭐ <strong>Plugin Settings</strong> (125.1k★) — A skill pattern for Claude Code plugins to store per-project...</summary>
 
 A skill pattern for Claude Code plugins to store per-project configuration using YAML frontmatter in .local.md files.
 
@@ -200,7 +200,7 @@ git clone anthropics/claude-code
 </details>
 
 <details>
-<summary>⭐ <strong>Plugin Structure</strong> (125.0k★) — A skill for creating and organizing Claude Code plugins with...</summary>
+<summary>⭐ <strong>Plugin Structure</strong> (125.1k★) — A skill for creating and organizing Claude Code plugins with...</summary>
 
 A skill for creating and organizing Claude Code plugins with standardized directory structure and manifest configuration.
 
@@ -214,7 +214,7 @@ git clone anthropics/claude-code
 </details>
 
 <details>
-<summary>⭐ <strong>Skill Development</strong> (125.0k★) — A comprehensive guide for creating modular skills for Claude...</summary>
+<summary>⭐ <strong>Skill Development</strong> (125.1k★) — A comprehensive guide for creating modular skills for Claude...</summary>
 
 A comprehensive guide for creating modular skills for Claude Code plugins, covering structure, best practices, and progressive disclosure.
 
@@ -228,7 +228,7 @@ git clone anthropics/claude-code
 </details>
 
 <details>
-<summary>⭐ <strong>skill-creator</strong> (137.8k★) — A comprehensive skill for creating, testing, and optimizing ...</summary>
+<summary>⭐ <strong>skill-creator</strong> (137.9k★) — A comprehensive skill for creating, testing, and optimizing ...</summary>
 
 A comprehensive skill for creating, testing, and optimizing AI assistant skills through an iterative workflow with evaluation and benchmarking.
 
@@ -243,7 +243,7 @@ Files: `skills/skill-creator/`
 </details>
 
 <details>
-<summary>⭐ <strong>xlsx</strong> (137.8k★) — A Python skill for programmatically creating, editing, and a...</summary>
+<summary>⭐ <strong>xlsx</strong> (137.9k★) — A Python skill for programmatically creating, editing, and a...</summary>
 
 A Python skill for programmatically creating, editing, and analyzing Excel and tabular files with strict formatting and formula standards.
 

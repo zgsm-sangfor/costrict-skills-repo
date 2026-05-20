@@ -19,12 +19,12 @@
 | 7 | [skill-creator](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/skill-creator) | A plugin for creating, testing, benchmarking, and optimizing Claude skills throu... | Anthropic Official | 🟢 Active | 99 | 2026-05-08 | testing | — |
 | 8 | [desktop-commander](https://github.com/wonderwhy-er/DesktopCommanderMCP.git) | MCP server enabling AI to execute terminal commands, manage processes, and perfo... | Anthropic Official | 🟢 Active | 99 | 2026-05-08 | tooling | — |
 | 9 | [atomic-agents](https://github.com/BrainBlend-AI/atomic-agents.git) | A modular Python framework for building predictable AI agents with composable co... | Anthropic Official | 🟢 Active | 99 | 2026-04-29 | ai-ml | `community-managed` |
-| 10 | [mcp-apps](https://github.com/modelcontextprotocol/ext-apps.git) | An SDK and set of Agent Skills for building interactive UIs (charts, forms, dash... | Anthropic Official | 🟢 Active | 99 | 2026-05-15 | tooling | `mcp-apps`, `ui-sdk`, `interactive-ui` |
+| 10 | [mcp-apps](https://github.com/modelcontextprotocol/ext-apps.git) | An SDK and set of Agent Skills for building interactive UIs (charts, forms, dash... | Anthropic Official | 🟢 Active | 99 | 2026-05-15 | tooling | — |
 | 11 | [microsoft-docs](https://github.com/MicrosoftDocs/mcp.git) | An AI coding assistant plugin for accessing Microsoft documentation, API referen... | Anthropic Official | 🟢 Active | 99 | 2026-05-09 | backend | `azure` |
 | 12 | [cloudflare](https://github.com/cloudflare/skills.git) | A comprehensive collection of skills for Cloudflare's developer platform, coveri... | Anthropic Official | 🟢 Active | 99 | 2026-05-04 | tooling | — |
 | 13 | [figma](https://github.com/figma/mcp-server-guide.git) | Figma MCP server plugin for AI-assisted coding, enabling design-to-code translat... | Anthropic Official | 🟢 Active | 98 | 2026-04-28 | tooling | — |
 | 14 | [azure](https://github.com/microsoft/azure-skills.git) | A Claude plugin integrating Azure MCP server and specialized skills for cloud re... | Anthropic Official | 🟢 Active | 98 | 2026-05-08 | devops | `azure` |
-| 15 | [clickhouse-best-practices](https://github.com/ClickHouse/agent-skills.git) | A multi-skill ClickHouse plugin offering best practices, schema design, query op... | Anthropic Official | 🟢 Active | 98 | 2026-05-19 | tooling | `clickhouse`, `database-optimization`, `best-practices` |
+| 15 | [clickhouse-best-practices](https://github.com/ClickHouse/agent-skills.git) | A multi-skill ClickHouse plugin offering best practices, schema design, query op... | Anthropic Official | 🟢 Active | 98 | 2026-05-19 | tooling | — |
 | 16 | [astronomer-data-agents](https://github.com/astronomer/agents.git) | A comprehensive plugin for AI-assisted data engineering with Apache Airflow and ... | Anthropic Official | 🟢 Active | 98 | 2026-05-08 | security | — |
 | 17 | [data](https://github.com/astronomer/agents.git) | A comprehensive AI-assisted coding plugin for Apache Airflow and Astronomer, cov... | Anthropic Official | 🟢 Active | 98 | 2026-05-08 | security | — |
 | 18 | [data-engineering](https://github.com/astronomer/agents.git) | A comprehensive AI-assisted data engineering plugin for Apache Airflow, covering... | Anthropic Official | 🟢 Active | 98 | 2026-05-08 | security | — |
@@ -55,18 +55,18 @@
 | 43 | [claude-seo](https://github.com/AgriciDaniel/claude-seo) | Claude Code plugin with 24 SEO sub-skills for technical audits, content analysis... | claude-plugins.dev | 🟢 Active | 97 | 2026-04-25 | devops | `seo`, `technical-seo`, `e-e-a-t` |
 | 44 | [dev-browser](https://github.com/SawyerHood/dev-browser) | A CLI tool and AI agent plugin for sandboxed browser automation using Playwright... | claude-plugins.dev | 🟢 Active | 97 | 2026-04-16 | testing | `browser`, `playwright`, `automation` |
 | 45 | [plannotator](https://github.com/backnotprop/plannotator) | Interactive plan and code review tool for AI coding agents with visual UI, team ... | claude-plugins.dev | 🟢 Active | 97 | 2026-05-13 | tooling | — |
-| 46 | [n8n-mcp-skills](https://github.com/czlonkowski/n8n-skills) | A comprehensive bundle of 7 expert skills for building n8n workflows with n8n-mc... | claude-plugins.dev | 🟢 Active | 97 | 2026-05-19 | frontend | `n8n`, `workflow-automation`, `mcp-server` |
+| 46 | [n8n-mcp-skills](https://github.com/czlonkowski/n8n-skills) | A comprehensive bundle of 7 expert skills for building n8n workflows with n8n-mc... | claude-plugins.dev | 🟢 Active | 97 | 2026-05-19 | frontend | `n8n`, `workflow`, `mcp` |
 | 47 | [superpowers-lab](https://github.com/obra/superpowers-lab.git) | A plugin for Claude Code Superpowers providing experimental skills for AI-assist... | Superpowers | 🟢 Active | 97 | 2026-03-23 | tooling | — |
 | 48 | [sentry](https://github.com/getsentry/sentry-for-claude.git) | A plugin that integrates Sentry error monitoring into AI coding assistants like ... | Anthropic Official | 🟢 Active | 97 | 2026-05-04 | devops | — |
 | 49 | [qt-development-skills](https://github.com/TheQtCompanyRnD/agent-skills.git) | A collection of AI agent skills for Qt development, offering code review, docume... | Anthropic Official | 🟢 Active | 97 | 2026-05-05 | ai-ml | — |
 | 50 | [qdrant-skills](https://github.com/qdrant/skills.git) | A plugin providing AI agent skills for Qdrant vector database operations, includ... | Anthropic Official | 🟢 Active | 97 | 2026-05-06 | devops | `typescript`, `python`, `go` |
-| 51 | [resend](https://github.com/resend/resend-skills.git) | AI agent skills for Resend email platform covering sending, receiving, templates... | Anthropic Official | 🟢 Active | 97 | 2026-05-04 | frontend | `email-api`, `ai-agent`, `react-email` |
+| 51 | [resend](https://github.com/resend/resend-skills.git) | AI agent skills for Resend email platform covering sending, receiving, templates... | Anthropic Official | 🟢 Active | 97 | 2026-05-04 | frontend | `react` |
 | 52 | [mongodb](https://github.com/mongodb/agent-skills.git) | Official Claude plugin for MongoDB providing AI-assisted database operations, qu... | Anthropic Official | 🟢 Active | 97 | 2026-05-08 | database | `go`, `mongodb` |
-| 53 | [circle-skills](https://github.com/circlefin/skills.git) | AI coding skills and MCP server for building stablecoin apps with USDC payments,... | Anthropic Official | 🟢 Active | 97 | 2026-05-13 | ai-ml | `stablecoin`, `usdc`, `cross-chain` |
+| 53 | [circle-skills](https://github.com/circlefin/skills.git) | AI coding skills and MCP server for building stablecoin apps with USDC payments,... | Anthropic Official | 🟢 Active | 97 | 2026-05-13 | ai-ml | — |
 | 54 | [miro](https://github.com/miroapp/miro-ai.git) | Connects AI coding assistants to Miro boards for diagram creation, code generati... | Anthropic Official | 🟢 Active | 97 | 2026-05-08 | security | — |
 | 55 | [sonarqube](https://github.com/SonarSource/sonarqube-agent-plugins.git) | A plugin that integrates SonarQube code quality and security analysis into AI co... | Anthropic Official | 🟢 Active | 97 | 2026-05-07 | security | — |
 | 56 | [base44](https://github.com/base44/skills.git) | A plugin for building and deploying Base44 full-stack apps with CLI management a... | Anthropic Official | 🟢 Active | 97 | 2026-05-07 | frontend | `typescript`, `javascript`, `java` |
-| 57 | [apollo-skills](https://github.com/apollographql/skills.git) | A comprehensive collection of AI agent skills (instructions/prompts) for Apollo ... | Anthropic Official | 🟢 Active | 97 | 2026-05-14 | mobile | `graphql`, `apollo`, `ai-agent-skills` |
+| 57 | [apollo-skills](https://github.com/apollographql/skills.git) | A comprehensive collection of AI agent skills (instructions/prompts) for Apollo ... | Anthropic Official | 🟢 Active | 97 | 2026-05-14 | mobile | `kotlin`, `graphql` |
 | 58 | [pinecone](https://github.com/pinecone-io/pinecone-claude-code-plugin.git) | A Claude Code plugin for Pinecone vector database integration, offering tools fo... | Anthropic Official | 🟢 Active | 97 | 2026-05-07 | backend | `python` |
 | 59 | [agentforce-adlc](https://github.com/SalesforceAIResearch/agentforce-adlc.git) | Claude Code plugin for Salesforce Agentforce agent development lifecycle with CL... | Anthropic Official | 🟢 Active | 97 | 2026-05-09 | testing | — |
 | 60 | [posthog](https://github.com/PostHog/ai-plugin.git) | A Claude Code plugin for accessing PostHog analytics, feature flags, experiments... | Anthropic Official | 🟢 Active | 97 | 2026-05-08 | devops | — |
@@ -126,7 +126,7 @@ Chrome DevTools MCP server for AI coding agents to debug, automate, and analyze 
 </details>
 
 <details>
-<summary>⭐ <strong>claude-code-setup</strong> (20.3k★) — A Claude Code plugin that analyzes codebases to recommend ta...</summary>
+<summary>⭐ <strong>claude-code-setup</strong> (20.5k★) — A Claude Code plugin that analyzes codebases to recommend ta...</summary>
 
 A Claude Code plugin that analyzes codebases to recommend tailored automations like hooks, skills, MCP servers, and subagents.
 
@@ -150,7 +150,7 @@ A comprehensive collection of AI coding skills for Hugging Face Hub, covering mo
 </details>
 
 <details>
-<summary>⭐ <strong>hookify</strong> (20.3k★) — Claude Code plugin for creating custom hooks to prevent unwa...</summary>
+<summary>⭐ <strong>hookify</strong> (20.5k★) — Claude Code plugin for creating custom hooks to prevent unwa...</summary>
 
 Claude Code plugin for creating custom hooks to prevent unwanted coding behaviors using markdown rule files with regex patterns.
 
@@ -162,7 +162,7 @@ Claude Code plugin for creating custom hooks to prevent unwanted coding behavior
 </details>
 
 <details>
-<summary>⭐ <strong>mcp-server-dev</strong> (20.3k★) — Comprehensive guide for building MCP servers and interactive...</summary>
+<summary>⭐ <strong>mcp-server-dev</strong> (20.5k★) — Comprehensive guide for building MCP servers and interactive...</summary>
 
 Comprehensive guide for building MCP servers and interactive UI widgets for Claude, covering deployment models, tool design, and testing.
 
@@ -174,7 +174,7 @@ Comprehensive guide for building MCP servers and interactive UI widgets for Clau
 </details>
 
 <details>
-<summary>⭐ <strong>plugin-dev</strong> (20.3k★) — A comprehensive toolkit with 7 expert skills for developing ...</summary>
+<summary>⭐ <strong>plugin-dev</strong> (20.5k★) — A comprehensive toolkit with 7 expert skills for developing ...</summary>
 
 A comprehensive toolkit with 7 expert skills for developing Claude Code plugins, covering agents, commands, hooks, MCP integration, and best practices
 
@@ -186,7 +186,7 @@ A comprehensive toolkit with 7 expert skills for developing Claude Code plugins,
 </details>
 
 <details>
-<summary>⭐ <strong>skill-creator</strong> (20.3k★) — A plugin for creating, testing, benchmarking, and optimizing...</summary>
+<summary>⭐ <strong>skill-creator</strong> (20.5k★) — A plugin for creating, testing, benchmarking, and optimizing...</summary>
 
 A plugin for creating, testing, benchmarking, and optimizing Claude skills through an iterative development workflow.
 
@@ -228,7 +228,7 @@ An SDK and set of Agent Skills for building interactive UIs (charts, forms, dash
 
 📖 See [mcp-apps](https://github.com/modelcontextprotocol/ext-apps.git)
 
-📊 Score: 99 · 🏥 Health: 94 · 🏷️ Tags: `mcp-apps`, `ui-sdk`, `interactive-ui`
+📊 Score: 99 · 🏥 Health: 94 · 🏷️ Tags: —
 📅 Last active: 2026-05-15 · 📦 Source: Anthropic Official
 
 </details>
