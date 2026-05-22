@@ -64,6 +64,8 @@ python scripts/download_catalog.py --workers 16
 }
 ```
 
+**install info gating**（自 catalog-bundle 重构起）：`install.config` 既缺 `command` 也缺 `url` 时，**不写文件**直接返回失败（错误信息 `no install info (missing command and url)`）。该 entry 会在末尾 reconciliation pass 中从顶层 `catalog/index.json` 剔除。原因：`registry.modelcontextprotocol.io` 等 source 的 listing 经常只有 server 名字没有 install 命令，硬写成 `mcpServers: {"<name>": {}}` 空 stub 后下游 `costrict-web` 的 `NormalizeMCPMetadata` 会拒收，徒增噪音。
+
 ### Rules — 下载原始规则
 
 根据 `install.files` 中的 `.cursorrules` URL 下载原始内容，同时生成 `RULE.md`（包装为带 frontmatter 的 Markdown 代码块，方便阅读）。
@@ -122,6 +124,25 @@ catalog-download/
 - 若目标文件已存在且大小大于 0，直接跳过。
 - 重复执行脚本不会覆盖已有内容，只会补充新增或上次失败的条目。
 - 使用 `--force` 可强制重新下载全部内容。
+
+## Reconciliation：保证 index.json 与磁盘一致
+
+`run()` 末尾会跑一次 `_filter_top_index_to_downloaded`，做的事：
+
+1. 读现有 `catalog/index.json`（顶层 9000+ entries，由 `merge_index.py` 写入）
+2. 遍历每个 entry，按 `_PRIMARY_FILE_BY_TYPE` 算出预期文件路径
+3. 文件实际存在 → 保留 entry；不存在 → 丢掉
+4. 用过滤后的列表原子重写 `catalog/index.json`
+
+为什么需要这一步：`merge_index.py` 写 index.json 用的是上游各 source 的 listing 元数据，而 `download_catalog.py` 抓单条文件时可能因为 raw 404 / 仓库已删除 / 速率限制 / 我们的 mcp gating 等原因失败。没有这道对账，**catalog-download/ 永远是 index.json 的真子集**，所有下游消费者都要各自重新发现这套孤儿，徒增重复检查。
+
+输出示例：
+
+```
+INFO: Reconciled catalog/index.json: kept 3576 entries with on-disk files, dropped 5805 orphan entries.
+```
+
+**这是写回操作**——会修改 git 跟踪的 `catalog/index.json`。CI 流水线后续 `git commit` 会带上这次过滤。下次 sync 时 `merge_index.py` 又会从源 listing 重新发现这些 entry，所以**单次失败不会永久丢信息**。
 
 ## 错误处理
 

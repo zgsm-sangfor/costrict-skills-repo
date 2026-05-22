@@ -263,7 +263,15 @@ def _download_skill(
 # ---------------------------------------------------------------------------
 
 def _download_mcp(entry: dict, output_dir: str, force: bool = False) -> tuple[str, bool, Optional[str]]:
-    """Generate .mcp.json for a single MCP entry. Returns (kebab_name, success, error_msg)."""
+    """Generate .mcp.json for a single MCP entry. Returns (kebab_name, success, error_msg).
+
+    Refuses to write a .mcp.json whose server config has neither ``command``
+    nor ``url`` — registry.modelcontextprotocol.io commonly lists servers
+    with empty install info, and downstream NormalizeMCPMetadata rejects
+    them anyway. By returning failure here the entry gets dropped from the
+    top-level catalog/index.json during the reconciliation pass, so every
+    consumer downstream sees a clean dataset.
+    """
     name = _kebab_name(entry)
     mcp_dir = os.path.join(output_dir, "mcp", name)
     mcp_path = os.path.join(mcp_dir, ".mcp.json")
@@ -272,7 +280,17 @@ def _download_mcp(entry: dict, output_dir: str, force: bool = False) -> tuple[st
         return name, True, None
 
     install = entry.get("install", {})
-    config = install.get("config", {})
+    config = install.get("config", {}) if isinstance(install, dict) else {}
+    if not isinstance(config, dict):
+        config = {}
+
+    command = config.get("command")
+    url = config.get("url")
+    has_command = isinstance(command, str) and command.strip()
+    has_url = isinstance(url, str) and url.strip()
+    if not has_command and not has_url:
+        return name, False, "no install info (missing command and url)"
+
     display_name = entry.get("name", name)
 
     # Build .mcp.json in the same shape as awesome-claude-skills-master
@@ -544,6 +562,77 @@ def _download_batch(
     return successes, errors
 
 
+# Mapping from index.json `type` to the per-entry primary file under
+# catalog-download/. Mirrors TYPE_DIR_AND_FILE in scripts/build_catalog_bundle.py
+# — keep the two in sync if either changes.
+_PRIMARY_FILE_BY_TYPE = {
+    "skill":  ("skills",  "SKILL.md"),
+    "mcp":    ("mcp",     ".mcp.json"),
+    "rule":   ("rules",   "RULE.md"),
+    "prompt": ("prompts", "PROMPT.md"),
+    "plugin": ("plugins", ".plugin.json"),
+}
+
+
+def _filter_top_index_to_downloaded(output_dir: str) -> tuple[int, int]:
+    """Rewrite catalog/index.json to drop entries whose primary file did
+    not survive the download pass.
+
+    Why: ``merge_index.py`` writes the top-level catalog/index.json from
+    upstream source listings (mcp registry, mastra, antigravity, …). Those
+    listings advertise more entries than ``download_catalog.py`` can
+    actually fetch — repos get deleted, raw 404s, registry stubs without
+    install info, etc. Without this filter the on-disk catalog-download/
+    tree is a strict subset of index.json, and every downstream consumer
+    (build_catalog_bundle.py, aggregate_enrichment.py, costrict-web
+    ingest) has to re-discover the same orphan set independently.
+
+    Returns (kept_count, dropped_count). Best-effort: silently no-ops if
+    the top-level index does not exist (e.g. running download in isolation
+    against a private catalog snapshot).
+    """
+    top_index_path = os.path.normpath(os.path.join(CATALOG_DIR, "index.json"))
+    if not os.path.isfile(top_index_path):
+        return 0, 0
+
+    try:
+        with open(top_index_path, "r", encoding="utf-8") as fh:
+            entries = json.load(fh)
+    except (OSError, json.JSONDecodeError) as err:
+        logger.warning(f"could not read {top_index_path} for filter pass: {err}")
+        return 0, 0
+
+    kept: list[dict] = []
+    dropped = 0
+    for entry in entries:
+        etype = entry.get("type") or ""
+        eid = entry.get("id") or ""
+        spec = _PRIMARY_FILE_BY_TYPE.get(etype)
+        if not spec or not eid:
+            # Unknown type or malformed entry — preserve verbatim so we
+            # don't accidentally drop schema additions made elsewhere.
+            kept.append(entry)
+            continue
+        type_dir, filename = spec
+        primary_path = os.path.join(output_dir, type_dir, eid, filename)
+        if os.path.isfile(primary_path):
+            kept.append(entry)
+        else:
+            dropped += 1
+
+    if dropped == 0:
+        return len(kept), 0
+
+    # Atomic write: tmp file then rename, so a concurrent reader never
+    # observes a half-written index.
+    tmp_path = top_index_path + ".tmp"
+    with open(tmp_path, "w", encoding="utf-8") as fh:
+        json.dump(kept, fh, ensure_ascii=False, indent=2)
+        fh.write("\n")
+    os.replace(tmp_path, top_index_path)
+    return len(kept), dropped
+
+
 def run(
     output_dir: str,
     types: Optional[list[str]] = None,
@@ -595,6 +684,16 @@ def run(
         logger.info(f"Error log written to {log_path}")
 
     logger.info(f"Done. Total: {len(all_successes)} succeeded, {len(all_errors)} failed.")
+
+    # Final reconciliation pass: drop orphan entries from the top-level
+    # catalog/index.json so the on-disk tree and the manifest stay in
+    # sync. See _filter_top_index_to_downloaded() for why.
+    kept, dropped = _filter_top_index_to_downloaded(output_dir)
+    if dropped > 0:
+        logger.info(
+            f"Reconciled catalog/index.json: kept {kept} entries with "
+            f"on-disk files, dropped {dropped} orphan entries."
+        )
 
 
 # ---------------------------------------------------------------------------
