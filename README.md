@@ -157,7 +157,9 @@ Each sub-directory README shows the Top 100 entries ranked by this composite sco
 1. **Sync** — `scripts/sync_*.py` pull from upstream sources weekly
 2. **Merge** — `scripts/merge_index.py` deduplicates across sources, merges metadata
 3. **Evaluate** — Single LLM call: 6-dimension scoring + enrichment (tags, summary, tech_stack) + health signals
-4. **Publish** — GitHub Actions refresh the catalog, generate README tables, and update the web catalog
+4. **Download** — `scripts/download_catalog.py` fetches per-entry files into `catalog-download/` and reconciles `catalog/index.json` with what actually landed ([docs](./scripts/download_catalog.md))
+5. **Bundle** — `scripts/build_catalog_bundle.py` packs `index.json` + `catalog-download/` into `dist/catalog-bundle.tar.gz` for downstream consumers ([docs](./scripts/build_catalog_bundle.md))
+6. **Publish** — GitHub Actions refresh the catalog, generate README tables, and update the web catalog
 
 <details>
 <summary>Repository structure</summary>

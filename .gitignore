@@ -56,3 +56,4 @@ catalog-download/
 # Playwright MCP local data
 .playwright-mcp/
 tests/
+dist/
